@@ -231,7 +231,7 @@
     <!-- https://w3id.org/marine/ns/distribution/Distribution -->
 
     <owl:Class rdf:about="https://w3id.org/marine/ns/distribution/Distribution">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/marine/ns/distribution/hasArea"/>

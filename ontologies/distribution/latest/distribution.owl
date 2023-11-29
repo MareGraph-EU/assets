@@ -179,7 +179,7 @@
     </Declaration>
     <SubClassOf>
         <Class IRI="/Distribution"/>
-        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Distribution"/>
