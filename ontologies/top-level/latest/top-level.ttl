@@ -33,6 +33,15 @@ xsd:gYear rdf:type rdfs:Datatype .
 ### <http://purl.org/dc/terms/source
 <http://purl.org/dc/terms/source> rdf:type owl:ObjectProperty .
 
+### <http://purl.org/dc/terms/relation
+<http://purl.org/dc/terms/relation> rdf:type owl:ObjectProperty .
+
+### <http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:ObjectProperty .
+
+### <http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:ObjectProperty .
+
 
 ###  https://w3id.org/marine/ns/top-level/hasAuthor
 <https://w3id.org/marine/ns/top-level/hasAuthor> rdf:type owl:ObjectProperty ;
@@ -52,12 +61,13 @@ xsd:gYear rdf:type rdfs:Datatype .
                                                rdfs:label "is assigned by"@en , "è assegnato da"@it .
 
 
-###  https://w3id.org/marine/ns/top-level/isClassifiedBy
-<https://w3id.org/marine/ns/top-level/isClassifiedBy> rdf:type owl:ObjectProperty ;
+###  https://w3id.org/marine/ns/top-level/hasType
+<https://w3id.org/marine/ns/top-level/hasType> rdf:type owl:ObjectProperty ;
                                                  rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy> ;
-                                                 rdfs:domain owl:Thing ;
+                                                 rdfs:domain :Identifier ;
+                                                 rdfs:rante :IdentifierType ;
                                                  rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
-                                                 rdfs:label "is classified by"@en , "è classificato da"@it .
+                                                 rdfs:label "has type"@en , "ha tipo"@it .
 
 
 #################################################################
@@ -98,13 +108,47 @@ xsd:gYear rdf:type rdfs:Datatype .
 <https://w3id.org/marine/ns/top-level/Identifier> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/d0.owl#Characteristic> ;
                                              rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty dct:identifier ;
+                                               owl:someValuesFrom rdfs:Literal
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty dct:identifier ;
+                                               owl:AllValuesFrom rdfs:Literal
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :isAssignedBy ;
+                                               owl:AllValuesFrom :System
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasType ;
+                                               owl:AllValuesFrom :IdentifierType
+                                             ] ;
                                              rdfs:label "Identifier"@en , "Identificativo"@it .
+
+###  https://w3id.org/marine/ns/top-level/IdentifierType
+<https://w3id.org/marine/ns/top-level/IdentifierType> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ;
+                                            rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
+                                            rdfs:label "Identifier Type"@en , "Tipo di Identificativo"@it .
 
 
 ###  https://w3id.org/marine/ns/top-level/Name
 <https://w3id.org/marine/ns/top-level/Name> rdf:type owl:Class ;
                                        rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/d0.owl#Characteristic> ;
                                        rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty dct:relation ;
+                                         owl:allValuesFrom <https://w3id.org/marine/ns/top-level/Name>
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :name ;
+                                         owl:someValuesFrom rdfs:Literal
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :name ;
+                                         owl:AllValuesFrom rdfs:Literal
+                                       ] ;
                                        rdfs:label "Name"@en , "Nome"@it .
 
 
@@ -119,9 +163,17 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  https://w3id.org/marine/ns/top-level/System
 <https://w3id.org/marine/ns/top-level/System> rdf:type owl:Class ;
                                          rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty dct:title ;
+                                           owl:someValuesFrom rdfs:Literal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty dct:title ;
+                                           owl:AllValuesFrom rdfs:Literal
+                                         ] ;
                                          rdfs:label "System"@en , "Sistema"@it .
 
-###  https://w3id.org/marine/ns/top-level/System
+###  https://w3id.org/marine/ns/top-level/Source
 <https://w3id.org/marine/ns/top-level/Source> rdf:type owl:Class ;
                                          rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
                                          rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject> ;
@@ -142,7 +194,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 
 ##########################################################
-# Named Invididuals
+# Invididuals
 ##########################################################
 <https://w3id.org/marine/resource/organisation/vliz> rdf:type owl:NamedIndividual , foaf:Organization ;
                                                     rdfs:label "Flanders Marine Institute"@en , "Vlaams Instituut voor de Zee"@nl , "Istituto marino delle Fiandre"@it ;
