@@ -65,7 +65,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 <https://w3id.org/marine/ns/top-level/hasType> rdf:type owl:ObjectProperty ;
                                                  rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy> ;
                                                  rdfs:domain :Identifier ;
-                                                 rdfs:rante :IdentifierType ;
+                                                 rdfs:range :IdentifierType ;
                                                  rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
                                                  rdfs:label "has type"@en , "ha tipo"@it .
 
