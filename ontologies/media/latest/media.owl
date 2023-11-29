@@ -1,0 +1,625 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/marine/ns/media"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/marine/ns/media"
+     versionIRI="https://w3id.org/marine/ns/media/0.1">
+    <Prefix name="" IRI="https://w3id.org/marine/ns/media/"/>
+    <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="prov" IRI="http://www.w3.org/ns/prov#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Import>https://w3id.org/marine/ns/top-level/0.1</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <IRI>https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-08-30</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+        <IRI>http://publications.europa.eu/resource/authority/language/ENG</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+        <IRI>http://publications.europa.eu/resource/authority/language/ITA</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:license"/>
+        <IRI>http://publications.europa.eu/resource/authority/licence/CC_BY_4_0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-11-29</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="it">Questa è l&apos;ontologia degli oggetti multimediali, associati alle specie, della rete di ontologie MAREGRAPH. Essa importa l&apos;ontologia di primo livello MAREGRAPH, riutilizza direttamente diversi elementi Dublin Core ed è allineata a Schema.org.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">This is the multimedia object for the species ontology of the MAREGRAPH network of ontologies. It imports the top-level ontology of MAREGRAPH, it directly reuses several Dublin Core elements and is aligned to Schema.org.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">MAREGRAPH - Media objects ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="it">MAREGRAPH - Ontologia degli oggetti multimediali</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en">Preliminary version 0.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="it">Versione preliminare 0.1</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="dct:LicenseDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dct:MediaTypeOrExtent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://schema.org/MediaObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ImageObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/MediaObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/MediaObjectDistribution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/VideoObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/marine/ns/top-level/Person"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dct:format"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dct:subject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasMediaObjectDistribution"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isMediaObjectDistributionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isSubjectOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/marine/ns/top-level/hasAuthor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dct:description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dct:title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/size"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/marine/resource/organisation/dv"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/marine/resource/organisation/vliz"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="prov:wasDerivedFrom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://schema.org/VideoObject"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Organization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI=""/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:issued"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:modified"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="prov:wasInfluencedBy"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://schema.org/ImageObject"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="/ImageObject"/>
+        <Class IRI="https://schema.org/ImageObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ImageObject"/>
+        <Class IRI="/MediaObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/MediaObject"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/MediaObject"/>
+        <Class IRI="https://schema.org/MediaObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/MediaObject"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="dct:subject"/>
+            <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/MediaObject"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/hasMediaObjectDistribution"/>
+            <Class IRI="/MediaObjectDistribution"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/MediaObject"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="dct:license"/>
+            <Class abbreviatedIRI="dct:LicenseDocument"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/MediaObject"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="dct:subject"/>
+            <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/MediaObject"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/hasMediaObjectDistribution"/>
+            <Class IRI="/MediaObjectDistribution"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/MediaObject"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/marine/ns/top-level/hasAuthor"/>
+            <Class IRI="https://w3id.org/marine/ns/top-level/Person"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/MediaObject"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="dct:title"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/MediaObject"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="dct:description"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/MediaObject"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="dct:title"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/MediaObjectDistribution"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationRealization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/MediaObjectDistribution"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="dct:format"/>
+            <Class abbreviatedIRI="dct:MediaTypeOrExtent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/MediaObjectDistribution"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="/size"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/VideoObject"/>
+        <Class IRI="https://schema.org/VideoObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/VideoObject"/>
+        <Class IRI="/MediaObject"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="/ImageObject"/>
+        <Class IRI="/VideoObject"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Organization"/>
+        <NamedIndividual IRI="https://w3id.org/marine/resource/organisation/dv"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Organization"/>
+        <NamedIndividual IRI="https://w3id.org/marine/resource/organisation/vliz"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="dct:description"/>
+        <NamedIndividual IRI=""/>
+        <Literal xml:lang="it">Questa è l&apos;ontologia degli oggetti multimediali, associati alle specie, della rete di ontologie MAREGRAPH. Essa importa l&apos;ontologia di primo livello MAREGRAPH, riutilizza direttamente diversi elementi Dublin Core ed è allineata a Schema.org.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="dct:description"/>
+        <NamedIndividual IRI=""/>
+        <Literal xml:lang="en">This is the multimedia object for the species ontology of the MAREGRAPH network of ontologies. It imports the top-level ontology of MAREGRAPH, it directly reuses several Dublin Core elements and is aligned to Schema.org.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="dct:title"/>
+        <NamedIndividual IRI=""/>
+        <Literal xml:lang="en">MAREGRAPH - Media objects ontology</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="dct:title"/>
+        <NamedIndividual IRI=""/>
+        <Literal xml:lang="it">MAREGRAPH - Ontologia degli oggetti multimediali</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasMediaObjectDistribution"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRealizedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/isMediaObjectDistributionOf"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#realizes"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/isSubjectOf"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="dct:subject"/>
+        <ObjectProperty IRI="/isSubjectOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasMediaObjectDistribution"/>
+        <ObjectProperty IRI="/isMediaObjectDistributionOf"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasMediaObjectDistribution"/>
+        <Class IRI="/MediaObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isMediaObjectDistributionOf"/>
+        <Class IRI="/MediaObjectDistribution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isSubjectOf"/>
+        <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasMediaObjectDistribution"/>
+        <Class IRI="/MediaObjectDistribution"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isMediaObjectDistributionOf"/>
+        <Class IRI="/MediaObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isSubjectOf"/>
+        <Class IRI="/MediaObject"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="/size"/>
+        <Class IRI="/MediaObjectDistribution"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="/size"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ImageObject</IRI>
+        <Literal xml:lang="it">Questa classe rappresenta uno specifico tipo di oggetto multimediale, ossia l&apos;immagine (e.g., una foto, un disegno).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ImageObject</IRI>
+        <Literal xml:lang="en">This class represents a specific type of media object, namely an image (e.g. a photo, a drawing).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/ImageObject</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ImageObject</IRI>
+        <Literal xml:lang="it">Image Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ImageObject</IRI>
+        <Literal xml:lang="en">Oggetto Multimediale Immagine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/MediaObject</IRI>
+        <Literal xml:lang="it">La classe degli oggetti multimediali (e.g., foto, disegni, video, ecc.) da associare alle specie.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/MediaObject</IRI>
+        <Literal xml:lang="en">The class of the media (e.g., photos, drawings, videos, etc.) to be associated with the species.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/MediaObject</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/MediaObject</IRI>
+        <Literal xml:lang="en">Media Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/MediaObject</IRI>
+        <Literal xml:lang="it">Oggetto Multimediale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/MediaObjectDistribution</IRI>
+        <Literal xml:lang="it">La classe delle specifiche distribuzioni degli oggetti multimediali.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/MediaObjectDistribution</IRI>
+        <Literal xml:lang="en">The class of specific distributions of the media.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/MediaObjectDistribution</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/MediaObjectDistribution</IRI>
+        <Literal xml:lang="it">Distribuzione Oggetto Multimediale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/MediaObjectDistribution</IRI>
+        <Literal xml:lang="en">Media Object Distribution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="prov:wasInfluencedBy"/>
+        <IRI>/MediaObjectDistribution</IRI>
+        <IRI>http://www.w3.org/ns/dcat#Distribution</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/VideoObject</IRI>
+        <Literal xml:lang="it">Questa classe rappresenta uno specifico tipo di oggetto multimediale, ossia il video.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/VideoObject</IRI>
+        <Literal xml:lang="en">This class represents a specific type of media object, namely a video.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/VideoObject</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/VideoObject</IRI>
+        <Literal xml:lang="it">Oggetto Multimediale Video</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/VideoObject</IRI>
+        <Literal xml:lang="en">Video Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasMediaObjectDistribution</IRI>
+        <Literal xml:lang="en">Property used to specify a particular distribution of a media object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasMediaObjectDistribution</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per specificare una particolare distribuzione di un oggetto multimediale.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasMediaObjectDistribution</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasMediaObjectDistribution</IRI>
+        <Literal xml:lang="it">ha distribuzione oggetto multimediale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasMediaObjectDistribution</IRI>
+        <Literal xml:lang="en">has media object distribution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isMediaObjectDistributionOf</IRI>
+        <Literal xml:lang="en">Inverse property of &apos;has media object distribution&apos; used to obtain information on the media object from its distribution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isMediaObjectDistributionOf</IRI>
+        <Literal xml:lang="it">Proprietà inversa di &apos;ha distribuzione oggetto multimediale&apos; usata per ottenere informazioni sull&apos;oggetto multimediale a partire dalla sua distribuzione.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/isMediaObjectDistributionOf</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isMediaObjectDistributionOf</IRI>
+        <Literal xml:lang="en">is media object distribution of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isMediaObjectDistributionOf</IRI>
+        <Literal xml:lang="it">è distribuzione di oggetto multimediale di</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isSubjectOf</IRI>
+        <Literal xml:lang="en">Property used to specify the distribution for a taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isSubjectOf</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per specificare la distribuzione di un taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/isSubjectOf</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isSubjectOf</IRI>
+        <Literal xml:lang="it">ha distribuzione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isSubjectOf</IRI>
+        <Literal xml:lang="en">has distribution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/size</IRI>
+        <Literal xml:lang="en">Property used represent the dimension of the media distribution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/size</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per rappresentare la dimensione della distribuzione dell&apos;oggetto multimediale.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/size</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/size</IRI>
+        <Literal xml:lang="it">dimensione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/size</IRI>
+        <Literal xml:lang="en">size</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+        <Literal xml:lang="nl">Digitaal Vlaanderen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+        <Literal xml:lang="en">Digital Flanders</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+        <Literal xml:lang="nl">Digitaal Vlaanderen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+        <Literal xml:lang="en">Digital Flanders</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <Literal xml:lang="en">Flanders Marine Institute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <Literal xml:lang="it">Istituto marino delle Fiandre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <Literal xml:lang="nl">Vlaams Instituut voor de Zee</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <Literal xml:lang="en">Flanders Marine Institute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <Literal xml:lang="it">Istituto marino delle Fiandre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <Literal xml:lang="nl">Vlaams Instituut voor de Zee</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
