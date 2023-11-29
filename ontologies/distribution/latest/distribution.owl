@@ -1,0 +1,718 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/marine/ns/distribution"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/marine/ns/distribution"
+     versionIRI="https://w3id.org/marine/ns/distribution/0.1">
+    <Prefix name="" IRI="https://w3id.org/marine/ns/distribution/"/>
+    <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="prov" IRI="http://www.w3.org/ns/prov#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Import>https://w3id.org/marine/ns/top-level/0.1</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <IRI>https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <Literal xml:lang="it">Questa è l&apos;ontologia della distribuzione (delle specie) della rete di ontologie MAREGRAPH. Importa l&apos;ontologia di primo livello della rete MAREGRAPH e definisce la distribuzione documentata delle specie come riportata nel database WoRMS. La distribuzione è descritta in base a diverse tipologie di informazioni: la posizione geografica, utilizzando il nome del luogo o la latitudine e la longitudine quando è possibile identificare singoli punti, la fonte da cui è documentata la distribuzione, l&apos;origine della specie, l&apos;invasività della specie, la presenza. È inoltre possibile indicare se la distribuzione è segnalata come &apos;località tipo&apos; della specie. L&apos;ontologia usa l&apos;ontologia delle regioni marine per rappresentare le posizioni geografiche.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <Literal xml:lang="en">This is the (species) distribution ontology of the MAREGRAPH network of ontologies. It imports the top-level ontology of the MAREGRAPH network and it defines the documented distribution of the species as defined in the WoRMS database. The distribution is described according to various information: the geographical location, using the place name or latitude and longitude when single points can be identified, the source from which the distribution is documented, the origin of the species, the invasiveness of the species, the occurrence. It is also possible to indicate whether the distribution is marked as a type locality of the species. The ontology uses the Marine Region ontology for representing geographical locations</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-08-30</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+        <IRI>http://publications.europa.eu/resource/authority/language/ENG</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+        <IRI>http://publications.europa.eu/resource/authority/language/ITA</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:license"/>
+        <IRI>http://publications.europa.eu/resource/authority/licence/CC_BY_4_0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-11-29</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <Literal xml:lang="en">MAREGRAPH - (Species) Distribution ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <Literal xml:lang="it">MAREGRAPH - Ontologia sulla Distribuzione delle Specie</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="it">Questa è l&apos;ontologia della distribuzione (delle specie) della rete di ontologie MAREGRAPH. Importa l&apos;ontologia di primo livello della rete MAREGRAPH e definisce la distribuzione documentata delle specie come riportata nel database WoRMS. La distribuzione è descritta in base a diverse tipologie di informazioni: la posizione geografica, utilizzando il nome del luogo o la latitudine e la longitudine quando è possibile identificare singoli punti, la fonte da cui è documentata la distribuzione, l&apos;origine della specie, l&apos;invasività della specie, la presenza. È inoltre possibile indicare se la distribuzione è segnalata come &apos;località tipo&apos; della specie. L&apos;ontologia usa l&apos;ontologia delle regioni marine per rappresentare le posizioni geografiche.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">This is the (species) distribution ontology of the MAREGRAPH network of ontologies. It imports the top-level ontology of the MAREGRAPH network and it defines the documented distribution of the species as defined in the WoRMS database. The distribution is described according to various information: the geographical location, using the place name or latitude and longitude when single points can be identified, the source from which the distribution is documented, the origin of the species, the invasiveness of the species, the occurrence. It is also possible to indicate whether the distribution is marked as a type locality of the species. The ontology uses the Marine Region ontology for representing geographical locations</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">MAREGRAPH - (Species) Distribution ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="it">MAREGRAPH - Ontologia sulla Distribuzione delle Specie</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en">Preliminary version 0.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="it">Versione preliminare 0.1</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://marineregions.org/ns/ontology#MRGeoObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/locn#Geometry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Distribution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Invasiveness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Occurrence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Origin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/locn#geometry"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasArea"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasDistribution"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasInvasiveness"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasOccurrence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasOrigin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isDistributionOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="skos:note"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/isTypeLocality"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/marine/resource/organisation/dv"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/marine/resource/organisation/vliz"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="prov:wasDerivedFrom"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:license"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Organization"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:issued"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:modified"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="/Distribution"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Distribution"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/hasArea"/>
+            <Class IRI="http://marineregions.org/ns/ontology#MRGeoObject"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Distribution"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/isDistributionOf"/>
+            <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Distribution"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="dct:source"/>
+            <Class IRI="https://w3id.org/marine/ns/top-level/Source"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Distribution"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/locn#geometry"/>
+            <Class IRI="http://www.w3.org/ns/locn#Geometry"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Distribution"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/hasArea"/>
+            <Class IRI="http://marineregions.org/ns/ontology#MRGeoObject"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Distribution"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/hasInvasiveness"/>
+            <Class IRI="/Invasiveness"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Distribution"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/hasOccurrence"/>
+            <Class IRI="/Occurrence"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Distribution"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/hasOrigin"/>
+            <Class IRI="/Origin"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Distribution"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/isDistributionOf"/>
+            <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Distribution"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="skos:note"/>
+            <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Distribution"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="/isTypeLocality"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Invasiveness"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Occurrence"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Origin"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Organization"/>
+        <NamedIndividual IRI="https://w3id.org/marine/resource/organisation/dv"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Organization"/>
+        <NamedIndividual IRI="https://w3id.org/marine/resource/organisation/vliz"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasArea"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasDistribution"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasInvasiveness"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasOccurrence"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasOrigin"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/isDistributionOf"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasDistribution"/>
+        <ObjectProperty IRI="/isDistributionOf"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasArea"/>
+        <Class IRI="/Distribution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasDistribution"/>
+        <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasInvasiveness"/>
+        <Class IRI="/Distribution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasOccurrence"/>
+        <Class IRI="/Distribution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasOrigin"/>
+        <Class IRI="/Distribution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isDistributionOf"/>
+        <Class IRI="/Distribution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasArea"/>
+        <Class IRI="http://marineregions.org/ns/ontology#MRGeoObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasDistribution"/>
+        <Class IRI="/Distribution"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasInvasiveness"/>
+        <Class IRI="/Invasiveness"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasOccurrence"/>
+        <Class IRI="/Occurrence"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasOrigin"/>
+        <Class IRI="/Origin"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isDistributionOf"/>
+        <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/isTypeLocality"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="/isTypeLocality"/>
+        <Class IRI="/Distribution"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="/isTypeLocality"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Distribution</IRI>
+        <Literal xml:lang="it">Distribuzione geografica di presenza di specie marine e vegetali</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Distribution</IRI>
+        <Literal xml:lang="en">Geographical distribution of occurrence of marine and plant species</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Distribution</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Distribution</IRI>
+        <Literal xml:lang="en">Distribution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Distribution</IRI>
+        <Literal xml:lang="it">Distribuzione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="prov:wasDerivedFrom"/>
+        <IRI>/Distribution</IRI>
+        <IRI>http://inspire.ec.europa.eu/theme/sd</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Invasiveness</IRI>
+        <Literal xml:lang="it">Questa classe rappresenta la propensione di una specie introdotta a invadere un ecosistema ricevente. Gli individui di questa classe sono rappresentati dai concetti del relativo vocabolario controllato che sono: Invasiva, Invasività non specificata, Invasività incerta, Gestione registrata, Non invasiva, Preoccupante.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Invasiveness</IRI>
+        <Literal xml:lang="en">This class represents the propensity of an introduced species to invade a recipient ecosystem. The individuals of this class are represented by the concepts of the related controlled vocabulary that are: Invasive, Invasiveness Not Specified, Invasiveness Uncertain, Management recorded, Not invasive, Of concern.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Invasiveness</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Invasiveness</IRI>
+        <Literal xml:lang="en">Invasiveness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Invasiveness</IRI>
+        <Literal xml:lang="it">Invasività</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="prov:wasDerivedFrom"/>
+        <IRI>/Invasiveness</IRI>
+        <AbbreviatedIRI>skos:Concept</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Occurrence</IRI>
+        <Literal xml:lang="it">Questa classe rappresenta la presenza di specie in località di interesse. Gli individui di questa classe sono rappresentati dai concetti del relativo vocabolario controllato.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Occurrence</IRI>
+        <Literal xml:lang="en">This class represents the presence of species at locations of interest. The individuals of this class are represented by the concepts of the related controlled vocabulary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Occurrence</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Occurrence</IRI>
+        <Literal xml:lang="it">Occorrenza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Occurrence</IRI>
+        <Literal xml:lang="en">Occurrence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="prov:wasDerivedFrom"/>
+        <IRI>/Occurrence</IRI>
+        <AbbreviatedIRI>skos:Concept</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Origin</IRI>
+        <Literal xml:lang="it">L&apos;origine della specie introdotta. Gli individui di questa classe sono rappresentati dai concetti del relativo vocabolario controllato che sono: Aliena, Autoctona, Autoctona - Endemica, Autoctona - Non endemica, Origine incerta, Origine sconosciuta.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Origin</IRI>
+        <Literal xml:lang="en">The origin of the introduced species. The individuals of this class are represented by the concepts of the related controlled vocabulary that are: Alien, Native, Native – Endemic, Native - Non-endemic, Origin uncertain, Origin unknown.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Origin</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Origin</IRI>
+        <Literal xml:lang="en">Origin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Origin</IRI>
+        <Literal xml:lang="it">Origine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="prov:wasDerivedFrom"/>
+        <IRI>/Origin</IRI>
+        <AbbreviatedIRI>skos:Concept</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasArea</IRI>
+        <Literal xml:lang="en">Property used to represent the geographical unit of the distribution of the species. The geographical units are specified using the Marine Region gazetteer.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasArea</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per rappresentare l&apos;unità geografica di distribuzione della specie. Le unità geografiche sono specificate utilizzando il glossario delle regioni marine.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasArea</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasArea</IRI>
+        <Literal xml:lang="it">ha area</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasArea</IRI>
+        <Literal xml:lang="en">has area</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasDistribution</IRI>
+        <Literal xml:lang="en">Property used to specify the distribution for a taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasDistribution</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per specificare la distribuzione di un taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasDistribution</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasDistribution</IRI>
+        <Literal xml:lang="it">ha distribuzione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasDistribution</IRI>
+        <Literal xml:lang="en">has distribution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasInvasiveness</IRI>
+        <Literal xml:lang="en">Property used to represent the invasiveness of the species in its documented distribution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasInvasiveness</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per rappresentare la proponsione all&apos;invasività della specie nella sua distribuzione documentata.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasInvasiveness</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasInvasiveness</IRI>
+        <Literal xml:lang="it">ha invasività</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasInvasiveness</IRI>
+        <Literal xml:lang="en">has invasiveness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasOccurrence</IRI>
+        <Literal xml:lang="en">Property used to represent the occurrence of the species in its documented distribution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasOccurrence</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per rappresentare la presenza della specie nella sua distribuzione documentata.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasOccurrence</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasOccurrence</IRI>
+        <Literal xml:lang="it">ha presenza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasOccurrence</IRI>
+        <Literal xml:lang="en">has occurrence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasOrigin</IRI>
+        <Literal xml:lang="en">Property used to represent the origin of the species in its documented distribution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasOrigin</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per rappresentare l&apos;origine della specie nella sua distribuzione documentata.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasOrigin</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasOrigin</IRI>
+        <Literal xml:lang="it">ha origine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasOrigin</IRI>
+        <Literal xml:lang="en">has origin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isDistributionOf</IRI>
+        <Literal xml:lang="en">Inverse property of &apos;has distribution&apos; used to obtain information of the taxon from its distributions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isDistributionOf</IRI>
+        <Literal xml:lang="it">Proprietà inversa di &apos;ha distribuzione&apos; usata per ottenere informazioni sul taxon dalle sue distribuzioni</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/isDistributionOf</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isDistributionOf</IRI>
+        <Literal xml:lang="en">is distribution of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isDistributionOf</IRI>
+        <Literal xml:lang="it">è distribuzione di</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isTypeLocality</IRI>
+        <Literal xml:lang="en">Property used to mark mark a distribution as the type locality of the species.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isTypeLocality</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per contrassegnare una distribuzione come &apos;località tipo&apos; della specie.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/isTypeLocality</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isTypeLocality</IRI>
+        <Literal xml:lang="en">is type locality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isTypeLocality</IRI>
+        <Literal xml:lang="it">è tipo località</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+        <Literal xml:lang="nl">Digitaal Vlaanderen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+        <Literal xml:lang="en">Digital Flanders</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+        <Literal xml:lang="nl">Digitaal Vlaanderen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+        <Literal xml:lang="en">Digital Flanders</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <Literal xml:lang="en">Flanders Marine Institute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <Literal xml:lang="it">Istituto marino delle Fiandre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <Literal xml:lang="nl">Vlaams Instituut voor de Zee</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <Literal xml:lang="en">Flanders Marine Institute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <Literal xml:lang="it">Istituto marino delle Fiandre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <Literal xml:lang="nl">Vlaams Instituut voor de Zee</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

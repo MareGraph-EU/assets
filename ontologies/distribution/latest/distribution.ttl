@@ -1,0 +1,281 @@
+@prefix : <https://w3id.org/marine/ns/distribution/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <https://w3id.org/marine/ns/distribution/> .
+
+<https://w3id.org/marine/ns/distribution> rdf:type owl:Ontology ;
+                                           owl:versionIRI <https://w3id.org/marine/ns/distribution/0.1> ;
+                                           owl:imports <https://w3id.org/marine/ns/top-level/0.1> ;
+                                           dct:creator <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab> ,
+                                                       <https://w3id.org/marine/resource/organisation/dv> ,
+                                                       <https://w3id.org/marine/resource/organisation/vliz> ;
+                                           dct:description "Questa è l'ontologia della distribuzione (delle specie) della rete di ontologie MAREGRAPH. Importa l'ontologia di primo livello della rete MAREGRAPH e definisce la distribuzione documentata delle specie come riportata nel database WoRMS. La distribuzione è descritta in base a diverse tipologie di informazioni: la posizione geografica, utilizzando il nome del luogo o la latitudine e la longitudine quando è possibile identificare singoli punti, la fonte da cui è documentata la distribuzione, l'origine della specie, l'invasività della specie, la presenza. È inoltre possibile indicare se la distribuzione è segnalata come 'località tipo' della specie. L'ontologia usa l'ontologia delle regioni marine per rappresentare le posizioni geografiche."@it ,
+                                                           "This is the (species) distribution ontology of the MAREGRAPH network of ontologies. It imports the top-level ontology of the MAREGRAPH network and it defines the documented distribution of the species as defined in the WoRMS database. The distribution is described according to various information: the geographical location, using the place name or latitude and longitude when single points can be identified, the source from which the distribution is documented, the origin of the species, the invasiveness of the species, the occurrence. It is also possible to indicate whether the distribution is marked as a type locality of the species. The ontology uses the Marine Region ontology for representing geographical locations"@en ;
+                                           dct:issued "2023-08-30"^^xsd:date ;
+                                           dct:language <http://publications.europa.eu/resource/authority/language/ENG> ,
+                                                        <http://publications.europa.eu/resource/authority/language/ITA> ;
+                                           dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                                           dct:modified "2023-11-29"^^xsd:date ;
+                                           dct:title "MAREGRAPH - (Species) Distribution ontology"@en ,
+                                                     "MAREGRAPH - Ontologia sulla Distribuzione delle Specie"@it ;
+                                           rdfs:comment "Questa è l'ontologia della distribuzione (delle specie) della rete di ontologie MAREGRAPH. Importa l'ontologia di primo livello della rete MAREGRAPH e definisce la distribuzione documentata delle specie come riportata nel database WoRMS. La distribuzione è descritta in base a diverse tipologie di informazioni: la posizione geografica, utilizzando il nome del luogo o la latitudine e la longitudine quando è possibile identificare singoli punti, la fonte da cui è documentata la distribuzione, l'origine della specie, l'invasività della specie, la presenza. È inoltre possibile indicare se la distribuzione è segnalata come 'località tipo' della specie. L'ontologia usa l'ontologia delle regioni marine per rappresentare le posizioni geografiche."@it ,
+                                                        "This is the (species) distribution ontology of the MAREGRAPH network of ontologies. It imports the top-level ontology of the MAREGRAPH network and it defines the documented distribution of the species as defined in the WoRMS database. The distribution is described according to various information: the geographical location, using the place name or latitude and longitude when single points can be identified, the source from which the distribution is documented, the origin of the species, the invasiveness of the species, the occurrence. It is also possible to indicate whether the distribution is marked as a type locality of the species. The ontology uses the Marine Region ontology for representing geographical locations"@en ;
+                                           rdfs:label "MAREGRAPH - (Species) Distribution ontology"@en ,
+                                                      "MAREGRAPH - Ontologia sulla Distribuzione delle Specie"@it ;
+                                           owl:versionInfo "Preliminary version 0.1"@en ,
+                                                           "Versione preliminare 0.1"@it .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/language
+dct:language rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+prov:wasDerivedFrom rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3.org/ns/locn#geometry
+<http://www.w3.org/ns/locn#geometry> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/marine/ns/distribution/hasArea
+:hasArea rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+         rdfs:domain :Distribution ;
+         rdfs:range <http://marineregions.org/ns/ontology#MRGeoObject> ;
+         rdfs:comment "Property used to represent the geographical unit of the distribution of the species. The geographical units are specified using the Marine Region gazetteer."@en ,
+                      "Proprietà utilizzata per rappresentare l'unità geografica di distribuzione della specie. Le unità geografiche sono specificate utilizzando il glossario delle regioni marine."@it ;
+         rdfs:isDefinedBy <https://w3id.org/marine/ns/distribution> ;
+         rdfs:label "ha area"@it ,
+                    "has area"@en .
+
+
+###  https://w3id.org/marine/ns/distribution/hasDistribution
+:hasDistribution rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+                 owl:inverseOf :isDistributionOf ;
+                 rdfs:domain <https://w3id.org/marine/ns/taxa-name/Taxon> ;
+                 rdfs:range :Distribution ;
+                 rdfs:comment "Property used to specify the distribution for a taxon."@en ,
+                              "Proprietà utilizzata per specificare la distribuzione di un taxon."@it ;
+                 rdfs:isDefinedBy <https://w3id.org/marine/ns/distribution> ;
+                 rdfs:label "ha distribuzione"@it ,
+                            "has distribution"@en .
+
+
+###  https://w3id.org/marine/ns/distribution/hasInvasiveness
+:hasInvasiveness rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+                 rdfs:domain :Distribution ;
+                 rdfs:range :Invasiveness ;
+                 rdfs:comment "Property used to represent the invasiveness of the species in its documented distribution."@en ,
+                              "Proprietà utilizzata per rappresentare la proponsione all'invasività della specie nella sua distribuzione documentata."@it ;
+                 rdfs:isDefinedBy <https://w3id.org/marine/ns/distribution> ;
+                 rdfs:label "ha invasività"@it ,
+                            "has invasiveness"@en .
+
+
+###  https://w3id.org/marine/ns/distribution/hasOccurrence
+:hasOccurrence rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+               rdfs:domain :Distribution ;
+               rdfs:range :Occurrence ;
+               rdfs:comment "Property used to represent the occurrence of the species in its documented distribution."@en ,
+                            "Proprietà utilizzata per rappresentare la presenza della specie nella sua distribuzione documentata."@it ;
+               rdfs:isDefinedBy <https://w3id.org/marine/ns/distribution> ;
+               rdfs:label "ha presenza"@it ,
+                          "has occurrence"@en .
+
+
+###  https://w3id.org/marine/ns/distribution/hasOrigin
+:hasOrigin rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+           rdfs:domain :Distribution ;
+           rdfs:range :Origin ;
+           rdfs:comment "Property used to represent the origin of the species in its documented distribution."@en ,
+                        "Proprietà utilizzata per rappresentare l'origine della specie nella sua distribuzione documentata."@it ;
+           rdfs:isDefinedBy <https://w3id.org/marine/ns/distribution> ;
+           rdfs:label "ha origine"@it ,
+                      "has origin"@en .
+
+
+###  https://w3id.org/marine/ns/distribution/isDistributionOf
+:isDistributionOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+                  rdfs:domain :Distribution ;
+                  rdfs:range <https://w3id.org/marine/ns/taxa-name/Taxon> ;
+                  rdfs:comment "Inverse property of 'has distribution' used to obtain information of the taxon from its distributions"@en ,
+                               "Proprietà inversa di 'ha distribuzione' usata per ottenere informazioni sul taxon dalle sue distribuzioni"@it ;
+                  rdfs:isDefinedBy <https://w3id.org/marine/ns/distribution> ;
+                  rdfs:label "is distribution of"@en ,
+                             "è distribuzione di"@it .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/marine/ns/distribution/isTypeLocality
+:isTypeLocality rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :Distribution ;
+                rdfs:range xsd:boolean ;
+                rdfs:comment "Property used to mark mark a distribution as the type locality of the species."@en ,
+                             "Proprietà utilizzata per contrassegnare una distribuzione come 'località tipo' della specie."@it ;
+                rdfs:isDefinedBy <https://w3id.org/marine/ns/distribution> ;
+                rdfs:label "is type locality"@en ,
+                           "è tipo località"@it .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://marineregions.org/ns/ontology#MRGeoObject
+<http://marineregions.org/ns/ontology#MRGeoObject> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/locn#Geometry
+<http://www.w3.org/ns/locn#Geometry> rdf:type owl:Class .
+
+
+###  https://w3id.org/marine/ns/distribution/Distribution
+:Distribution rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place> ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasArea ;
+                                owl:someValuesFrom <http://marineregions.org/ns/ontology#MRGeoObject>
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :isDistributionOf ;
+                                owl:someValuesFrom <https://w3id.org/marine/ns/taxa-name/Taxon>
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty dct:source ;
+                                owl:allValuesFrom <https://w3id.org/marine/ns/top-level/Source>
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://www.w3.org/ns/locn#geometry> ;
+                                owl:allValuesFrom <http://www.w3.org/ns/locn#Geometry>
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasArea ;
+                                owl:allValuesFrom <http://marineregions.org/ns/ontology#MRGeoObject>
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasInvasiveness ;
+                                owl:allValuesFrom :Invasiveness
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasOccurrence ;
+                                owl:allValuesFrom :Occurrence
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasOrigin ;
+                                owl:allValuesFrom :Origin
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :isDistributionOf ;
+                                owl:allValuesFrom <https://w3id.org/marine/ns/taxa-name/Taxon>
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty skos:note ;
+                                owl:allValuesFrom rdf:PlainLiteral
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :isTypeLocality ;
+                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:boolean
+                              ] ;
+              rdfs:comment "Distribuzione geografica di presenza di specie marine e vegetali"@it ,
+                           "Geographical distribution of occurrence of marine and plant species"@en ;
+              rdfs:isDefinedBy <https://w3id.org/marine/ns/distribution> ;
+              rdfs:label "Distribution"@en ,
+                         "Distribuzione"@it ;
+              prov:wasDerivedFrom <http://inspire.ec.europa.eu/theme/sd> .
+
+
+###  https://w3id.org/marine/ns/distribution/Invasiveness
+:Invasiveness rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ;
+              rdfs:comment "Questa classe rappresenta la propensione di una specie introdotta a invadere un ecosistema ricevente. Gli individui di questa classe sono rappresentati dai concetti del relativo vocabolario controllato che sono: Invasiva, Invasività non specificata, Invasività incerta, Gestione registrata, Non invasiva, Preoccupante."@it ,
+                           "This class represents the propensity of an introduced species to invade a recipient ecosystem. The individuals of this class are represented by the concepts of the related controlled vocabulary that are: Invasive, Invasiveness Not Specified, Invasiveness Uncertain, Management recorded, Not invasive, Of concern."@en ;
+              rdfs:isDefinedBy <https://w3id.org/marine/ns/distribution> ;
+              rdfs:label "Invasiveness"@en ,
+                         "Invasività"@it ;
+              prov:wasDerivedFrom skos:Concept .
+
+
+###  https://w3id.org/marine/ns/distribution/Occurrence
+:Occurrence rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ;
+            rdfs:comment "Questa classe rappresenta la presenza di specie in località di interesse. Gli individui di questa classe sono rappresentati dai concetti del relativo vocabolario controllato."@it ,
+                         "This class represents the presence of species at locations of interest. The individuals of this class are represented by the concepts of the related controlled vocabulary."@en ;
+            rdfs:isDefinedBy <https://w3id.org/marine/ns/distribution> ;
+            rdfs:label "Occorrenza"@it ,
+                       "Occurrence"@en ;
+            prov:wasDerivedFrom skos:Concept .
+
+
+###  https://w3id.org/marine/ns/distribution/Origin
+:Origin rdf:type owl:Class ;
+        rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ;
+        rdfs:comment "L'origine della specie introdotta. Gli individui di questa classe sono rappresentati dai concetti del relativo vocabolario controllato che sono: Aliena, Autoctona, Autoctona - Endemica, Autoctona - Non endemica, Origine incerta, Origine sconosciuta."@it ,
+                     "The origin of the introduced species. The individuals of this class are represented by the concepts of the related controlled vocabulary that are: Alien, Native, Native – Endemic, Native - Non-endemic, Origin uncertain, Origin unknown."@en ;
+        rdfs:isDefinedBy <https://w3id.org/marine/ns/distribution> ;
+        rdfs:label "Origin"@en ,
+                   "Origine"@it ;
+        prov:wasDerivedFrom skos:Concept .
+
+
+###  https://w3id.org/marine/ns/taxa-name/Taxon
+<https://w3id.org/marine/ns/taxa-name/Taxon> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/marine/resource/organisation/dv
+<https://w3id.org/marine/resource/organisation/dv> rdf:type owl:NamedIndividual ,
+                                                            foaf:Organization ;
+                                                   rdfs:label "Digitaal Vlaanderen"@nl ,
+                                                              "Digital Flanders"@en ;
+                                                   foaf:name "Digitaal Vlaanderen"@nl ,
+                                                             "Digital Flanders"@en .
+
+
+###  https://w3id.org/marine/resource/organisation/vliz
+<https://w3id.org/marine/resource/organisation/vliz> rdf:type owl:NamedIndividual ,
+                                                              foaf:Organization ;
+                                                     rdfs:label "Flanders Marine Institute"@en ,
+                                                                "Istituto marino delle Fiandre"@it ,
+                                                                "Vlaams Instituut voor de Zee"@nl ;
+                                                     foaf:name "Flanders Marine Institute"@en ,
+                                                               "Istituto marino delle Fiandre"@it ,
+                                                               "Vlaams Instituut voor de Zee"@nl .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
