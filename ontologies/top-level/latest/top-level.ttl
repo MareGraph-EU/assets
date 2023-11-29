@@ -114,15 +114,15 @@ xsd:gYear rdf:type rdfs:Datatype .
                                              ] ,
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty dct:identifier ;
-                                               owl:AllValuesFrom rdfs:Literal
+                                               owl:allValuesFrom rdfs:Literal
                                              ] ,
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty :isAssignedBy ;
-                                               owl:AllValuesFrom :System
+                                               owl:allValuesFrom :System
                                              ] ,
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty :hasType ;
-                                               owl:AllValuesFrom :IdentifierType
+                                               owl:allValuesFrom :IdentifierType
                                              ] ;
                                              rdfs:label "Identifier"@en , "Identificativo"@it .
 
@@ -147,7 +147,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                                        ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty :name ;
-                                         owl:AllValuesFrom rdfs:Literal
+                                         owl:allValuesFrom rdfs:Literal
                                        ] ;
                                        rdfs:label "Name"@en , "Nome"@it .
 
@@ -169,7 +169,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty dct:title ;
-                                           owl:AllValuesFrom rdfs:Literal
+                                           owl:allValuesFrom rdfs:Literal
                                          ] ;
                                          rdfs:label "System"@en , "Sistema"@it .
 
