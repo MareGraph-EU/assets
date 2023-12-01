@@ -10,4 +10,11 @@ The following image illustrates, in the graphical notation offered by Graffoo th
     width="70%"
     />
 
+The same diagram in UML is depicted in the following image.
+<img
+    title="Media Ontology of MAREGRAPH"
+    src="./MediaUML.png"  
+    width="70%"
+    />
+
 The latest directory includes always the latest version of the ontology.
