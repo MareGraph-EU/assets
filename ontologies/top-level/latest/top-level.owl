@@ -53,6 +53,12 @@
         <Literal xml:lang="it">Versione preliminare 0.1</Literal>
     </Annotation>
     <Declaration>
+        <Class IRI="http://www.w3.org/ns/person#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Organization"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/Identifier"/>
     </Declaration>
     <Declaration>
@@ -69,6 +75,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="/System"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Type"/>
     </Declaration>
     <Declaration>
         <Class IRI="/UnitOfMeasure"/>
@@ -92,6 +101,12 @@
         <ObjectProperty IRI="/hasType"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="/hasUnitOfMeasure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasValue"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/isAssignedBy"/>
     </Declaration>
     <Declaration>
@@ -104,7 +119,13 @@
         <DataProperty IRI="/name"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/value"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI=""/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="https://w3id.org/marine/resource/organisation/dv"/>
@@ -113,22 +134,16 @@
         <NamedIndividual IRI="https://w3id.org/marine/resource/organisation/vliz"/>
     </Declaration>
     <Declaration>
-        <Datatype abbreviatedIRI="xsd:gYear"/>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dct:description"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI=""/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dct:creator"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty abbreviatedIRI="dct:issued"/>
     </Declaration>
     <Declaration>
-        <Datatype abbreviatedIRI="xsd:date"/>
+        <AnnotationProperty abbreviatedIRI="dct:modified"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="xsd:gYear"/>
@@ -137,13 +152,10 @@
         <AnnotationProperty abbreviatedIRI="foaf:name"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="foaf:Organization"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dct:modified"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.w3.org/ns/person#Person"/>
+        <Datatype abbreviatedIRI="xsd:gYear"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="http://www.ontologydesignpatterns.org/ont/d0.owl#System"/>
@@ -188,6 +200,10 @@
     <SubClassOf>
         <Class IRI="/IdentifierType"/>
         <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/IdentifierType"/>
+        <Class IRI="/Type"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Name"/>
@@ -241,8 +257,25 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/Type"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/Value"/>
         <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Value"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="/hasUnitOfMeasure"/>
+            <Class IRI="/UnitOfMeasure"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Value"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="/value"/>
+        </DataExactCardinality>
     </SubClassOf>
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Organization"/>
@@ -275,6 +308,14 @@
         <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasUnitOfMeasure"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasValue"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="/isAssignedBy"/>
         <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
     </SubObjectPropertyOf>
@@ -288,7 +329,15 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/hasType"/>
-        <Class IRI="/Identifier"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasUnitOfMeasure"/>
+        <Class IRI="/Value"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasValue"/>
+        <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/isAssignedBy"/>
@@ -304,7 +353,15 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/hasType"/>
-        <Class IRI="/IdentifierType"/>
+        <Class IRI="/Type"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasUnitOfMeasure"/>
+        <Class IRI="/UnitOfMeasure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasValue"/>
+        <Class IRI="/Value"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/isAssignedBy"/>
@@ -312,6 +369,10 @@
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="/name"/>
+        <DataProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/value"/>
         <DataProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -323,11 +384,19 @@
         <Class IRI="/Name"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="/value"/>
+        <Class IRI="/Value"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="/year"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="/name"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/value"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <AnnotationAssertion>
@@ -427,6 +496,21 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Type</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Type</IRI>
+        <Literal xml:lang="it">Tipo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Type</IRI>
+        <Literal xml:lang="en">Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/UnitOfMeasure</IRI>
         <IRI></IRI>
     </AnnotationAssertion>
@@ -502,6 +586,36 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasUnitOfMeasure</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasUnitOfMeasure</IRI>
+        <Literal xml:lang="it">ha unità di misura</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasUnitOfMeasure</IRI>
+        <Literal xml:lang="en">has unit of measure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasValue</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasValue</IRI>
+        <Literal xml:lang="it">ha valore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasValue</IRI>
+        <Literal xml:lang="en">has value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/isAssignedBy</IRI>
         <IRI></IRI>
     </AnnotationAssertion>
@@ -529,6 +643,21 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/name</IRI>
         <Literal xml:lang="it">nome</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/value</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/value</IRI>
+        <Literal xml:lang="it">valore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/value</IRI>
+        <Literal xml:lang="en">value</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>

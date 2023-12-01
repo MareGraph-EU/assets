@@ -96,11 +96,31 @@ dct:source rdf:type owl:ObjectProperty .
 ###  https://w3id.org/marine/ns/top-level/hasType
 :hasType rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy> ;
-         rdfs:domain :Identifier ;
-         rdfs:range :IdentifierType ;
+         rdfs:domain owl:Thing ;
+         rdfs:range :Type ;
          rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
          rdfs:label "ha tipo"@it ,
                     "has type"@en .
+
+
+###  https://w3id.org/marine/ns/top-level/hasUnitOfMeasure
+:hasUnitOfMeasure rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy> ;
+                  rdfs:domain :Value ;
+                  rdfs:range :UnitOfMeasure ;
+                  rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
+                  rdfs:label "ha unità di misura"@it ,
+                             "has unit of measure"@en .
+
+
+###  https://w3id.org/marine/ns/top-level/hasValue
+:hasValue rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion> ;
+          rdfs:domain owl:Thing ;
+          rdfs:range :Value ;
+          rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
+          rdfs:label "ha valore"@it ,
+                     "has value"@en .
 
 
 ###  https://w3id.org/marine/ns/top-level/isAssignedBy
@@ -133,6 +153,16 @@ dct:title rdf:type owl:DatatypeProperty .
       rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
       rdfs:label "name"@en ,
                  "nome"@it .
+
+
+###  https://w3id.org/marine/ns/top-level/value
+:value rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue> ;
+       rdfs:domain :Value ;
+       rdfs:range rdfs:Literal ;
+       rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
+       rdfs:label "valore"@it ,
+                  "value"@en .
 
 
 ###  https://w3id.org/marine/ns/top-level/year
@@ -190,7 +220,8 @@ foaf:Organization rdf:type owl:Class .
 
 ###  https://w3id.org/marine/ns/top-level/IdentifierType
 :IdentifierType rdf:type owl:Class ;
-                rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ;
+                rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ,
+                                :Type ;
                 rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
                 rdfs:label "Identifier Type"@en ,
                            "Tipo di Identificativo"@it .
@@ -248,6 +279,14 @@ foaf:Organization rdf:type owl:Class .
                    "System"@en .
 
 
+###  https://w3id.org/marine/ns/top-level/Type
+:Type rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ;
+      rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
+      rdfs:label "Tipo"@it ,
+                 "Type"@en .
+
+
 ###  https://w3id.org/marine/ns/top-level/UnitOfMeasure
 :UnitOfMeasure rdf:type owl:Class ;
                rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
@@ -257,7 +296,16 @@ foaf:Organization rdf:type owl:Class .
 
 ###  https://w3id.org/marine/ns/top-level/Value
 :Value rdf:type owl:Class ;
-       rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region> ;
+       rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region> ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasUnitOfMeasure ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :UnitOfMeasure
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :value ;
+                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                       ] ;
        rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
        rdfs:label "Valore"@it ,
                   "Value"@en .

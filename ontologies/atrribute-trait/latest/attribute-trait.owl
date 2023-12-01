@@ -1,0 +1,932 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/marine/ns/attribute-trait"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/marine/ns/attribute-trait"
+     versionIRI="https://w3id.org/marine/ns/attribute-trait/0.1">
+    <Prefix name="" IRI="https://w3id.org/marine/ns/attribute-trait/"/>
+    <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="prov" IRI="http://www.w3.org/ns/prov#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Import>https://w3id.org/marine/ns/top-level/0.1</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <IRI>https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <Literal xml:lang="nl">Dit is de attribuut- en eigenschapontologie van het MAREGRAPH-ontologienetwerk. Het importeert de ontologie op het hoogste niveau van het MAREGRAPH-netwerk en stelt het gebruik voor van een specifiek ontwerppatroon &apos;Beschrijving&apos; om attributen, eigenschappen en hun contextinformatie te modelleren die mogelijk niet a priori bekend zijn en in de toekomst worden uitgebreid.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <Literal xml:lang="it">Questa è l&apos;ontologia degli attributi e dei tratti (delle specie) della rete di ontologie MAREGRAPH. Importa l&apos;ontologia di primo livello della rete MAREGRAPH e propone l&apos;uso di un ontology design pattern specifico &apos;Descrizione&apos; per poter modellare attributi, tratti e loro informazioni di contesto che potrebbero anche non essere noti a priori ed estesi in futuro.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <Literal xml:lang="en">This is the attribute and trait of species ontology of the MAREGRAPH ontology network. It imports the top-level ontology of the MAREGRAPH network and proposes the use of a specific ontology design pattern &apos;Description&apos; in order to model attributes, traits and their context information that may not even be known a priori and extended in the future.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-08-30</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+        <IRI>http://publications.europa.eu/resource/authority/language/ENG</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+        <IRI>http://publications.europa.eu/resource/authority/language/ITA</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+        <IRI>http://publications.europa.eu/resource/authority/language/NLD</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:license"/>
+        <IRI>http://publications.europa.eu/resource/authority/licence/CC_BY_4_0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-12-01</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <Literal xml:lang="en">MAREGRAPH - (Species) attributes and traits ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <Literal xml:lang="it">MAREGRAPH - Ontologia degli attributi e dei tratti delle specie</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <Literal xml:lang="nl">MAREGRAPH - ontologie van (soort)eigenschappen en kenmerken</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="nl">Dit is de attribuut- en eigenschapontologie van het MAREGRAPH-ontologienetwerk. Het importeert de ontologie op het hoogste niveau van het MAREGRAPH-netwerk en stelt het gebruik voor van een specifiek ontwerppatroon &apos;Beschrijving&apos; om attributen, eigenschappen en hun contextinformatie te modelleren die mogelijk niet a priori bekend zijn en in de toekomst worden uitgebreid.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="it">Questa è l&apos;ontologia degli attributi e dei tratti (delle specie) della rete di ontologie MAREGRAPH. Importa l&apos;ontologia di primo livello della rete MAREGRAPH e propone l&apos;uso di un ontology design pattern specifico &apos;Descrizione&apos; per poter modellare attributi, tratti e loro informazioni di contesto che potrebbero anche non essere noti a priori ed estesi in futuro.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">This is the attribute and trait of species ontology of the MAREGRAPH ontology network. It imports the top-level ontology of the MAREGRAPH network and proposes the use of a specific ontology design pattern &apos;Description&apos; in order to model attributes, traits and their context information that may not even be known a priori and extended in the future.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">MAREGRAPH - (Species) attributes and traits ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="it">MAREGRAPH - Ontologia degli attributi e dei tratti delle specie</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="nl">MAREGRAPH - ontologie van (soort)eigenschappen en kenmerken</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en">Preliminary version 0.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="it">Versione preliminare 0.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="nl">Voorlopige versie 0.1</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="skos:Concept"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://kos.lifewatch.eu/thesauri/fishtraits/c_4"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Attribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Environment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/SpecificationContext"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TaxonCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TaxonDescription"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Trait"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/definesParameter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasAdditionalDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasExtraSpecification"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasHabitat"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasTaxonCharateristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isAdditionalDescriptionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isHabitatOf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/marine/resource/organisation/dv"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/marine/resource/organisation/vliz"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/ENVO_01000739"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="prov:wasDerivedFrom"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="prov:wasInfluencedBy"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="https://kos.lifewatch.eu/thesauri/fishtraits/c_4"/>
+        <Class IRI="/Trait"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="/Attribute"/>
+        <Class abbreviatedIRI="skos:Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Attribute"/>
+        <Class IRI="/TaxonCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Environment"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Environment"/>
+        <Class abbreviatedIRI="skos:Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Environment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/isHabitatOf"/>
+            <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/SpecificationContext"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/SpecificationContext"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/definesParameter"/>
+            <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/SpecificationContext"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/marine/ns/top-level/hasValue"/>
+            <Class IRI="https://w3id.org/marine/ns/top-level/Value"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/SpecificationContext"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/marine/ns/top-level/hasValue"/>
+            <Class IRI="https://w3id.org/marine/ns/top-level/Value"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonCharacteristic"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/d0.owl#Characteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonCharacteristic"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="https://w3id.org/marine/ns/top-level/hasType"/>
+            <Class IRI="https://w3id.org/marine/ns/top-level/Type"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonDescription"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonDescription"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/hasTaxonCharateristic"/>
+            <Class IRI="http://www.ontologydesignpatterns.org/ont/d0.owl#Characteristic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonDescription"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/isAdditionalDescriptionOf"/>
+            <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonDescription"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/marine/ns/top-level/hasValue"/>
+            <Class IRI="https://w3id.org/marine/ns/top-level/Value"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonDescription"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="dct:source"/>
+            <Class IRI="https://w3id.org/marine/ns/top-level/Source"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonDescription"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/hasExtraSpecification"/>
+            <Class IRI="/SpecificationContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonDescription"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/hasTaxonCharateristic"/>
+            <Class IRI="http://www.ontologydesignpatterns.org/ont/d0.owl#Characteristic"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonDescription"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/marine/ns/top-level/hasValue"/>
+            <Class IRI="https://w3id.org/marine/ns/top-level/Value"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Trait"/>
+        <Class abbreviatedIRI="skos:Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Trait"/>
+        <Class IRI="/TaxonCharacteristic"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="/Attribute"/>
+        <Class IRI="/Trait"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Organization"/>
+        <NamedIndividual IRI="https://w3id.org/marine/resource/organisation/dv"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Organization"/>
+        <NamedIndividual IRI="https://w3id.org/marine/resource/organisation/vliz"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/definesParameter"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasAdditionalDescription"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDescribedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasExtraSpecification"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRelatedToDescription"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasHabitat"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasTaxonCharateristic"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/isAdditionalDescriptionOf"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#describes"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/isHabitatOf"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasAdditionalDescription"/>
+        <ObjectProperty IRI="/isAdditionalDescriptionOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasHabitat"/>
+        <ObjectProperty IRI="/isHabitatOf"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/definesParameter"/>
+        <Class IRI="/SpecificationContext"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasAdditionalDescription"/>
+        <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasExtraSpecification"/>
+        <Class IRI="/TaxonDescription"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasHabitat"/>
+        <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasTaxonCharateristic"/>
+        <Class IRI="/TaxonDescription"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isAdditionalDescriptionOf"/>
+        <Class IRI="/TaxonDescription"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isHabitatOf"/>
+        <Class IRI="/Environment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/definesParameter"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasAdditionalDescription"/>
+        <Class IRI="/TaxonDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasExtraSpecification"/>
+        <Class IRI="/SpecificationContext"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasHabitat"/>
+        <Class IRI="/Environment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasTaxonCharateristic"/>
+        <Class IRI="/TaxonCharacteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isAdditionalDescriptionOf"/>
+        <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isHabitatOf"/>
+        <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/ENVO_01000739"/>
+        <AbbreviatedIRI>prov:wasDerivedFrom</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Attribute</IRI>
+        <Literal xml:lang="nl">Deze klasse vertegenwoordigt attributen geassocieerd met een taxon; dat wil zeggen, kwaliteiten of kenmerken waarmee een taxon kan worden onderscheiden. De attributen zijn typisch geassocieerd met categoriale waarden. Voorbeelden zijn: IUCN Rode Lijst Categorie, Ondersteunende structuur &amp; behuizing, AMBI ecologische groep, Seizoensgebondenheid, enz.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Attribute</IRI>
+        <Literal xml:lang="it">Questa classe rappresenta gli attributi associati a un taxon, ossia le qualità o le caratteristiche che permettono di distinguere un taxon. Gli attributi sono tipicamente associati a valori categoriali. Esempi sono: Categoria della Lista Rossa IUCN, Struttura di supporto e involucro, Gruppo ecologico AMBI, Stagionalità, ecc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Attribute</IRI>
+        <Literal xml:lang="en">This class represents attributes associated with a taxon; that is, qualities or characteristics whereby a taxon can be distinguished. The attributes are typically associated with categorial values. Examples are: IUCN Red List Category, Supporting structure &amp; enclosure, AMBI ecological group, Seasonality, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Attribute</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Attribute</IRI>
+        <Literal xml:lang="en">Attribute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Attribute</IRI>
+        <Literal xml:lang="it">Attributo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Attribute</IRI>
+        <Literal xml:lang="nl">Attribuut</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="prov:wasInfluencedBy"/>
+        <IRI>/Attribute</IRI>
+        <IRI>https://kos.lifewatch.eu/thesauri/fishtraits/c_4</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Environment</IRI>
+        <Literal xml:lang="nl">De klasse van de milieus waarvan bekend is dat het taxon er voorkomt. De individuen van deze klasse kunnen concepten zijn van een gecontroleerde woordenlijst van de habitats.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Environment</IRI>
+        <Literal xml:lang="it">La classe degli ambienti in cui il taxon è conosciuto. Gli individui di questa classe possono essere concetti di un vocabolario controllato degli habitat.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Environment</IRI>
+        <Literal xml:lang="en">The class of the environmnets the taxon is known to exist in. The individuals of this class can be concepts of a controlled vocabulary of the habitats.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Environment</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Environment</IRI>
+        <Literal xml:lang="it">Ambiente</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Environment</IRI>
+        <Literal xml:lang="en">Environment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Environment</IRI>
+        <Literal xml:lang="nl">Milieu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/SpecificationContext</IRI>
+        <Literal xml:lang="nl">De klasse voor het representeren van een verdere specificatie van de taxonbeschrijving. De klasse combineert aanvullende parameters en hun waarden die de kenmerken en eigenschappen van de taxonbeschrijving weergeven. Voorbeelden zijn: geslacht, levensstadium enz. met hun toegestane waarden.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/SpecificationContext</IRI>
+        <Literal xml:lang="it">La classe che consente di rappresentare un&apos;ulteriore specifica della descrizione del taxon. La classe unisce parametri aggiuntivi, e relativi valori, che connotano gli attributi e tratti della descrizione del taxon. Esempi includono: il sesso, il stadio di vita, ecc. con i loro valori ammessi.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/SpecificationContext</IRI>
+        <Literal xml:lang="en">The class for representing a further specification of the taxon description. The class combines additional parameters, and their values, that connote the attributes and traits of the taxon description. Examples include: sex, life stage etc. with their permitted values.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/SpecificationContext</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/SpecificationContext</IRI>
+        <Literal xml:lang="it">Specifica di Contesto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/SpecificationContext</IRI>
+        <Literal xml:lang="nl">Specificatie Context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/SpecificationContext</IRI>
+        <Literal xml:lang="en">Specification Context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TaxonCharacteristic</IRI>
+        <Literal xml:lang="nl">Dit is de klasse van de eigenschappen of kenmerken die meetbaar of waarneembaar en categoriaal zijn voor een taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TaxonCharacteristic</IRI>
+        <Literal xml:lang="en">This is the class of the qualities or characteristics measurable or observable and categorial for a taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TaxonCharacteristic</IRI>
+        <Literal xml:lang="it">È la classe delle qualità o caratteristiche misurabili o osservabili e categorizzabili per un taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TaxonCharacteristic</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TaxonCharacteristic</IRI>
+        <Literal xml:lang="it">Caratteristica del Taxon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TaxonCharacteristic</IRI>
+        <Literal xml:lang="en">Taxon Characteristic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TaxonCharacteristic</IRI>
+        <Literal xml:lang="nl">Taxonkenmerk</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TaxonDescription</IRI>
+        <Literal xml:lang="nl">Deze klasse geeft een beschrijving van het taxon in termen van aanvullende kenmerken, met betrekking tot de habitat die al gedefinieerd is in de verwante klasse, en kenmerken met hun waarden.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TaxonDescription</IRI>
+        <Literal xml:lang="it">Questa classe rappresenta una descrizione del taxon in termini di ulteriori attributi, rispetto all&apos;habitat definito con la relativa classe, e di tratti con i valori assunti.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TaxonDescription</IRI>
+        <Literal xml:lang="en">This class represents a description of the taxon in terms of additional attributes, with respect to the habitat already defined in the related class, and traits with their values.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TaxonDescription</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TaxonDescription</IRI>
+        <Literal xml:lang="it">Descrizione del Taxon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TaxonDescription</IRI>
+        <Literal xml:lang="nl">Taxon Beschrijving</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TaxonDescription</IRI>
+        <Literal xml:lang="en">Taxon Description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Trait</IRI>
+        <Literal xml:lang="nl">De klasse van eigenschappen voor een taxon; dat is elk meetbaar of waarneembaar kenmerk van een organisme. In de WoRMS-database is er op dit moment maar één eigenschap; dat is de &apos;lichaamsgrootte&apos;. Individuen van deze klasse kunnen concepten zijn die gedefinieerd zijn in gecontroleerde domeinwoordenboeken (bijv. trait tesauri).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Trait</IRI>
+        <Literal xml:lang="it">La classe dei tratti di un taxon, cioè qualsiasi caratteristica misurabile o osservabile di un organismo. Nel database WoRMS, al momento, c&apos;è solo un tratto, cioè la &apos;dimensione corporea&apos;. Gli individui di questa classe possono essere concetti definiti in vocabolari controllati di dominio (tesauri sui tratti).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Trait</IRI>
+        <Literal xml:lang="en">The class of traits for a taxon; that is, any measurable or observable characteristic of an organism. In the WoRMS database, at the time being, there is only one trait; that is, the &apos;body size&apos;. Individuals of this class can be concepts defined in controlled domain vocabularies (e.g., trait tesauri).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Trait</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Trait</IRI>
+        <Literal xml:lang="nl">Eigenschap</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Trait</IRI>
+        <Literal xml:lang="en">Trait</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Trait</IRI>
+        <Literal xml:lang="it">Tratto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/definesParameter</IRI>
+        <Literal xml:lang="nl">Eigenschap gebruikt om een parameter te specificeren in de extra specificatie bij het beschrijven van kenmerken en eigenschappen. In essentie is het de eigenschap die toelaat om parameters zoals geslacht, geografische eenheid, levensfase enz. aan te duiden voor elk kenmerk en eigenschap.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/definesParameter</IRI>
+        <Literal xml:lang="en">Property used to specify a parameter in the extra specification when describing attributes and traits. In essence, it is the property that allows one to indicate parameter such gender, geographical unit, life stage etc. for each attribute and trait.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/definesParameter</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per specificare un parametro nella specifica aggiuntiva quando si descrivono attributi e tratti delle specie. In sostanza, è la proprietà che consente di indicare parametri quali il sesso, l&apos;unità geografica, lo stadio di vita, ecc. per ogni attributo e tratto.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/definesParameter</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/definesParameter</IRI>
+        <Literal xml:lang="en">defines parameter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/definesParameter</IRI>
+        <Literal xml:lang="nl">definieert parameter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/definesParameter</IRI>
+        <Literal xml:lang="it">definisce parametro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasAdditionalDescription</IRI>
+        <Literal xml:lang="nl">Eigenschap gebruikt om de beschrijving van het taxon weer te geven in termen van kenmerken en eigenschappen, en gerelateerde extra specificaties met parameters zoals geslacht, geografische eenheden, levensfase, enz.).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasAdditionalDescription</IRI>
+        <Literal xml:lang="en">Property used to represent the description of the taxon in terms of attributes and traits, and related extra specifications with parameters such as gender, geographical units, lifestage, etc.).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasAdditionalDescription</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per rappresentare la descrizione del taxon in termini di attributi e tratti, e relative specifiche ulteriori con parametri quali sesso, unità geografiche, stadio di vita, ecc.).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasAdditionalDescription</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasAdditionalDescription</IRI>
+        <Literal xml:lang="it">ha ulteriore descrizione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasAdditionalDescription</IRI>
+        <Literal xml:lang="en">has additional description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasAdditionalDescription</IRI>
+        <Literal xml:lang="nl">heeft aanvullende beschrijving</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasExtraSpecification</IRI>
+        <Literal xml:lang="en">Property used to represent the occurrence of the species in its documented attribute-trait.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasExtraSpecification</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per rappresentare la presenza della specie nella sua distribuzione documentata.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasExtraSpecification</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasExtraSpecification</IRI>
+        <Literal xml:lang="it">ha specifica aggiuntiva</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasExtraSpecification</IRI>
+        <Literal xml:lang="en">has extra specification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasExtraSpecification</IRI>
+        <Literal xml:lang="nl">heeft extra specificatie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasHabitat</IRI>
+        <Literal xml:lang="nl">Eigenschap die wordt gebruikt om de habitat van de soort weer te geven.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasHabitat</IRI>
+        <Literal xml:lang="en">Property used to represent the habitat of the species.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasHabitat</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per rappresentare l&apos;habitat della specie.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasHabitat</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasHabitat</IRI>
+        <Literal xml:lang="it">ha habitat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasHabitat</IRI>
+        <Literal xml:lang="en">has habitat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasHabitat</IRI>
+        <Literal xml:lang="nl">heeft habitat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasTaxonCharateristic</IRI>
+        <Literal xml:lang="nl">Eigenschap die wordt gebruikt om het kenmerk te specificeren dat attributen en eigenschappen zijn.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasTaxonCharateristic</IRI>
+        <Literal xml:lang="en">Property used to specify the characteristic that is attributes and traits.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasTaxonCharateristic</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per specificare le caratteristiche che sono attributi e tratti.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasTaxonCharateristic</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasTaxonCharateristic</IRI>
+        <Literal xml:lang="it">ha caratteristica del taxon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasTaxonCharateristic</IRI>
+        <Literal xml:lang="en">has taxon characteristic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasTaxonCharateristic</IRI>
+        <Literal xml:lang="nl">heeft taxonkenmerk</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isAdditionalDescriptionOf</IRI>
+        <Literal xml:lang="nl">Inverse eigenschap van &apos;heeft aanvullende beschrijving&apos; gebruikt om informatie over het taxon te verkrijgen uit zijn beschrijving in termen van attributen en eigenschappen.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isAdditionalDescriptionOf</IRI>
+        <Literal xml:lang="en">Inverse property of &apos;has additional description&apos; used to get information about the taxon from its description in terms of attributes and traits.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isAdditionalDescriptionOf</IRI>
+        <Literal xml:lang="it">Proprietà inversa di &apos;ha descrizione aggiuntiva&apos;, utilizzata per ottenere informazioni sul taxon dalla sua descrizione in termini di attributi e tratti.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/isAdditionalDescriptionOf</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isAdditionalDescriptionOf</IRI>
+        <Literal xml:lang="en">is additional description of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isAdditionalDescriptionOf</IRI>
+        <Literal xml:lang="nl">is een aanvullende beschrijving van</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isAdditionalDescriptionOf</IRI>
+        <Literal xml:lang="it">è ulteriore descrizione di</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isHabitatOf</IRI>
+        <Literal xml:lang="nl">Inverse eigenschap van &apos;heeft habitat&apos; om informatie over het taxon uit de omgeving te halen.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isHabitatOf</IRI>
+        <Literal xml:lang="en">Inverse property of &apos;has habitat&apos; to get information about the taxon from the environment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isHabitatOf</IRI>
+        <Literal xml:lang="it">Proprietà inversa di &quot;ha un habitat&quot; per ottenere informazioni sul taxon dall&apos;ambiente.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/isHabitatOf</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isHabitatOf</IRI>
+        <Literal xml:lang="nl">is de habitat van</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isHabitatOf</IRI>
+        <Literal xml:lang="en">is habitat of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isHabitatOf</IRI>
+        <Literal xml:lang="it">è habitat di</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+        <Literal xml:lang="nl">Digitaal Vlaanderen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+        <Literal xml:lang="en">Digital Flanders</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+        <Literal xml:lang="nl">Digitaal Vlaanderen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+        <Literal xml:lang="en">Digital Flanders</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <Literal xml:lang="en">Flanders Marine Institute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <Literal xml:lang="it">Istituto marino delle Fiandre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <Literal xml:lang="nl">Vlaams Instituut voor de Zee</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <Literal xml:lang="en">Flanders Marine Institute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <Literal xml:lang="it">Istituto marino delle Fiandre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <Literal xml:lang="nl">Vlaams Instituut voor de Zee</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
