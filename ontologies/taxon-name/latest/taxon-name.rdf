@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/marine/ns/taxa-name/"
-     xml:base="https://w3id.org/marine/ns/taxa-name/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
+<rdf:RDF xmlns="https://aphia.org/ns/taxon-name/"
+     xml:base="https://aphia.org/ns/taxon-name/"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -11,28 +10,28 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-    <owl:Ontology rdf:about="https://w3id.org/marine/ns/taxa-name">
-        <owl:versionIRI rdf:resource="https://w3id.org/marine/ns/taxa-name/0.1"/>
+    <owl:Ontology rdf:about="https://aphia.org/ns/taxon-name">
+        <owl:versionIRI rdf:resource="https://aphia.org/ns/taxon-name/0.2"/>
         <owl:imports rdf:resource="http://www.w3.org/2008/05/skos-xl"/>
-        <owl:imports rdf:resource="https://w3id.org/marine/ns/top-level/0.1"/>
+        <owl:imports rdf:resource="https://aphia.org/ns/top-level"/>
+        <dct:creator rdf:resource="https://aphia.org/resource/organisation/dv"/>
+        <dct:creator rdf:resource="https://ror.org/0496vr396"/>
         <dct:creator rdf:resource="https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab"/>
-        <dct:creator rdf:resource="https://w3id.org/marine/resource/organisation/dv"/>
-        <dct:creator rdf:resource="https://w3id.org/marine/resource/organisation/vliz"/>
-        <dct:description xml:lang="it">Questa è l&apos;ontologia dei nomi dei taxon e di tutte le informazione tassonomiche come disponibili dal sistema WoRMS. Essa importa l&apos;ontologia di primo livello MAREGRAPH ed è allineata a skos-xl.</dct:description>
-        <dct:description xml:lang="en">This is the ontology of taxon names and all taxonomic information as available from the WoRMS system. It imports the MAREGRAPH top-level ontology and is aligned to skos-xl.</dct:description>
+        <dct:description xml:lang="it">Questa è l&apos;ontologia dei nomi dei taxon e di tutte le informazione tassonomiche, come disponibili dal sistema WoRMS. Essa importa l&apos;ontologia di primo livello top-level ed è allineata a skos-xl.</dct:description>
+        <dct:description xml:lang="en">This is the ontology of taxon names and all taxonomic information, as available from the WoRMS system. It imports the top-level ontology of the APHIA network of ontologies, and is aligned to skos-xl.</dct:description>
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-30</dct:issued>
         <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
         <dct:license rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-30</dct:modified>
-        <dct:title xml:lang="it">MAREGRAPH - Ontologia dei nomi dei taxon</dct:title>
-        <dct:title xml:lang="en">MAREGRAPH - Taxa names ontology</dct:title>
-        <rdfs:comment xml:lang="it">Questa è l&apos;ontologia dei nomi dei taxon e di tutte le informazione tassonomiche come disponibili dal sistema WoRMS. Essa importa l&apos;ontologia di primo livello MAREGRAPH ed è allineata a skos-xl.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This is the ontology of taxon names and all taxonomic information as available from the WoRMS system. It imports the MAREGRAPH top-level ontology and is aligned to skos-xl.</rdfs:comment>
-        <rdfs:label xml:lang="it">MAREGRAPH - Ontologia dei nomi dei taxon</rdfs:label>
-        <rdfs:label xml:lang="en">MAREGRAPH - Taxa names ontology</rdfs:label>
-        <owl:versionInfo xml:lang="en">Preliminary version 0.1</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione preliminare 0.1</owl:versionInfo>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-10</dct:modified>
+        <dct:title xml:lang="it">APHIA - Ontologia dei nomi dei taxon</dct:title>
+        <dct:title xml:lang="en">APHIA - Taxon names ontology</dct:title>
+        <rdfs:comment xml:lang="it">Questa è l&apos;ontologia dei nomi dei taxon e di tutte le informazione tassonomiche come disponibili dal sistema WoRMS. Essa importa l&apos;ontologia di primo livello top-level ed è allineata a skos-xl.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the ontology of taxon names and all taxonomic information as available from the WoRMS system. It imports the top-level ontology of the APHIA network of ontologies, and is aligned to skos-xl.</rdfs:comment>
+        <rdfs:label xml:lang="it">APHIA - Ontologia dei nomi dei taxon</rdfs:label>
+        <rdfs:label xml:lang="en">APHIA - Taxon names ontology</rdfs:label>
+        <owl:versionInfo xml:lang="en">Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; changed the name of the ontology from taxa-name to taxon-name; introduced some alignments to Darwin Core for some properties; changed some definitions (e.g., authorship).</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Seconda versione 0.2 - cambiati tutti gli URI da w3id.org/ a aphia.org/; cambiato il nome dell&apos;ontologia da taxa-name a taxon-name; introdotti alcuni allineamenti a Darwin core per alcune proprietà; cambiate alcune definizioni (e.g., authorship).</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -48,6 +47,12 @@
     
 
 
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
     <!-- http://purl.org/dc/terms/language -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/language"/>
@@ -60,6 +65,12 @@
     
 
 
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
     <!-- http://www.w3.org/2002/07/owl#minQualifiedCardinality -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#minQualifiedCardinality"/>
@@ -69,6 +80,29 @@
     <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
     
 
 
@@ -89,190 +123,199 @@
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/denotes -->
+    <!-- http://purl.org/dc/terms/relation -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/marine/ns/taxa-name/denotes">
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/relation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    
+
+
+    <!-- https://aphia.org/ns/taxon-name/denotes -->
+
+    <owl:ObjectProperty rdf:about="https://aphia.org/ns/taxon-name/denotes">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/marine/ns/taxa-name/isDenotedBy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/top-level/Name"/>
-        <rdfs:range rdf:resource="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+        <owl:inverseOf rdf:resource="https://aphia.org/ns/taxon-name/isDenotedBy"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/top-level/Name"/>
+        <rdfs:range rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
         <rdfs:comment xml:lang="en">Property used to represent a name for a taxon.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà utilizzata per definire un nome per un taxon.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="it">definisce/denota</rdfs:label>
         <rdfs:label xml:lang="en">denotes</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/hasAcceptedName -->
+    <!-- https://aphia.org/ns/taxon-name/hasAcceptedName -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/marine/ns/taxa-name/hasAcceptedName">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/marine/ns/taxa-name/isDenotedBy"/>
+    <owl:ObjectProperty rdf:about="https://aphia.org/ns/taxon-name/hasAcceptedName">
+        <rdfs:subPropertyOf rdf:resource="https://aphia.org/ns/taxon-name/isDenotedBy"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/taxa-name/Taxon"/>
-        <rdfs:range rdf:resource="https://w3id.org/marine/ns/taxa-name/TaxonName"/>
-        <rdfs:comment xml:lang="en">Property used to represent the valid/accepted name for a taxon.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Proprietà utilizzata per definire il nome valido/accettato per un taxon.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
+        <rdfs:range rdf:resource="https://aphia.org/ns/taxon-name/TaxonName"/>
+        <rdfs:comment xml:lang="en">Property used to represent the currently valid (zoological) or accepted (botanical) scientific name for a taxon.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Proprietà utilizzata per rappresentare il nome scientifico attualmente valido (zoologico) o accettato (botanico) di un taxon.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="it">ha nome valido/accettato</rdfs:label>
         <rdfs:label xml:lang="en">has accepted name</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/hasAuthorship -->
+    <!-- https://aphia.org/ns/taxon-name/hasChild -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/marine/ns/taxa-name/hasAuthorship">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
-        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/taxa-name/TaxonName"/>
-        <rdfs:range rdf:resource="https://w3id.org/marine/ns/taxa-name/Authorship"/>
-        <rdfs:comment xml:lang="en">Property used to represent the situation of authorship, given by the combination of the author and year, for a taxon name.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Proprietà utilizzata per definire la situazione di paternità, data dalla combinazione di autore e anno, per un nome di taxon.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
-        <rdfs:label xml:lang="it">ha paternità</rdfs:label>
-        <rdfs:label xml:lang="en">has authorship</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/marine/ns/taxa-name/hasChild -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/marine/ns/taxa-name/hasChild">
+    <owl:ObjectProperty rdf:about="https://aphia.org/ns/taxon-name/hasChild">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/marine/ns/taxa-name/hasParent"/>
-        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/taxa-name/Taxon"/>
-        <rdfs:range rdf:resource="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+        <owl:inverseOf rdf:resource="https://aphia.org/ns/taxon-name/hasParent"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
+        <rdfs:range rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
         <rdfs:comment xml:lang="en">Property that allows representing the direct child taxon in a classification.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà che consente di rappresentare il taxon diretto inferiore in una classification.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="it">ha taxon inferiore</rdfs:label>
         <rdfs:label xml:lang="en">has child taxon</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/hasParent -->
+    <!-- https://aphia.org/ns/taxon-name/hasParent -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/marine/ns/taxa-name/hasParent">
+    <owl:ObjectProperty rdf:about="https://aphia.org/ns/taxon-name/hasParent">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/taxa-name/Taxon"/>
-        <rdfs:range rdf:resource="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
+        <rdfs:range rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
         <rdfs:comment xml:lang="en">Property that allows representing the direct parent taxon in a classification. The parent of a species is usually a genus; the parent of a genus is usually a family, and so on.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà che consente di rappresentare il taxon diretto superiore in una classificatione. Il taxon diretto superiore di una specie è di solito il genere, quello del genere è la famiglia e così via.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="it">ha taxon superiore</rdfs:label>
         <rdfs:label xml:lang="en">has parent taxon</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/hasStatus -->
+    <!-- https://aphia.org/ns/taxon-name/hasStatus -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/marine/ns/taxa-name/hasStatus">
+    <owl:ObjectProperty rdf:about="https://aphia.org/ns/taxon-name/hasStatus">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/taxa-name/TaxonName"/>
-        <rdfs:range rdf:resource="https://w3id.org/marine/ns/taxa-name/Status"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/TaxonName"/>
+        <rdfs:range rdf:resource="https://aphia.org/ns/taxon-name/Status"/>
         <rdfs:comment xml:lang="en">Property used to connect the taxon name with its status (e.g., accepted, unaccepted).</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà utilizzata per collegare il nome del taxon con il suo stato (e.g., accettato, non accettato).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="it">ha stato</rdfs:label>
         <rdfs:label xml:lang="en">has status</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/hasSynonym -->
+    <!-- https://aphia.org/ns/taxon-name/hasSynonym -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/marine/ns/taxa-name/hasSynonym">
+    <owl:ObjectProperty rdf:about="https://aphia.org/ns/taxon-name/hasSynonym">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/marine/ns/taxa-name/isSynonymOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/taxa-name/TaxonName"/>
-        <rdfs:range rdf:resource="https://w3id.org/marine/ns/taxa-name/TaxonName"/>
+        <owl:inverseOf rdf:resource="https://aphia.org/ns/taxon-name/isSynonymOf"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/TaxonName"/>
+        <rdfs:range rdf:resource="https://aphia.org/ns/taxon-name/TaxonName"/>
         <rdfs:comment xml:lang="en">Property used to specify synonymity relations between taxon names.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà utilizzata per specificare relazioni di sinonimia tra nomi di taxon.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="it">ha sinonimo</rdfs:label>
         <rdfs:label xml:lang="en">has synonym</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/hasSynonymName -->
+    <!-- https://aphia.org/ns/taxon-name/hasSynonymName -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/marine/ns/taxa-name/hasSynonymName">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/marine/ns/taxa-name/isDenotedBy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/taxa-name/Taxon"/>
-        <rdfs:range rdf:resource="https://w3id.org/marine/ns/taxa-name/TaxonName"/>
+    <owl:ObjectProperty rdf:about="https://aphia.org/ns/taxon-name/hasSynonymName">
+        <rdfs:subPropertyOf rdf:resource="https://aphia.org/ns/taxon-name/isDenotedBy"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
+        <rdfs:range rdf:resource="https://aphia.org/ns/taxon-name/TaxonName"/>
         <rdfs:comment xml:lang="en">Proprietà used to connect the taxon with its names considered synonyms.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà utilizzata per collegare il taxon con i suoi nomi considerati sinonimi.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="it">ha nome sinonimo</rdfs:label>
         <rdfs:label xml:lang="en">has synonym name</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/hasUnacceptedReason -->
+    <!-- https://aphia.org/ns/taxon-name/hasUnacceptedReason -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/marine/ns/taxa-name/hasUnacceptedReason">
+    <owl:ObjectProperty rdf:about="https://aphia.org/ns/taxon-name/hasUnacceptedReason">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
-        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/taxa-name/TaxonName"/>
-        <rdfs:range rdf:resource="https://w3id.org/marine/ns/taxa-name/UnacceptedReason"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/TaxonName"/>
+        <rdfs:range rdf:resource="https://aphia.org/ns/taxon-name/UnacceptedReason"/>
         <rdfs:comment xml:lang="en">Property used to specify the motivation for which a name is not accepted for a taxon name.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà utilizzata per specificare il motivo per cui un nome non è accettato per un nome di taxon.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="it">ha motivo non accettato</rdfs:label>
         <rdfs:label xml:lang="en">ha unaccepted reason</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/isDenotedBy -->
+    <!-- https://aphia.org/ns/taxon-name/isDenotedBy -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/marine/ns/taxa-name/isDenotedBy">
+    <owl:ObjectProperty rdf:about="https://aphia.org/ns/taxon-name/isDenotedBy">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
-        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/taxa-name/Taxon"/>
-        <rdfs:range rdf:resource="https://w3id.org/marine/ns/top-level/Name"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
+        <rdfs:range rdf:resource="https://aphia.org/ns/top-level/Name"/>
         <rdfs:comment xml:lang="en">Inverse property of &apos;denotes&apos; that allows one to specify the name for a taxon.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà inversa di &apos;definito/denotato&apos; che consente di specificare il nome per un taxon.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="en">is denoted by</rdfs:label>
         <rdfs:label xml:lang="it">è definito/denotato da</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/isOfRank -->
+    <!-- https://aphia.org/ns/taxon-name/isOfRank -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/marine/ns/taxa-name/isOfRank">
+    <owl:ObjectProperty rdf:about="https://aphia.org/ns/taxon-name/isOfRank">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/taxa-name/TaxonName"/>
-        <rdfs:range rdf:resource="https://w3id.org/marine/ns/taxa-name/Rank"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/TaxonName"/>
+        <rdfs:range rdf:resource="https://aphia.org/ns/taxon-name/Rank"/>
         <rdfs:comment xml:lang="en">Property used to specify the rank in a taxonomic classification for the taxon name.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà utilizzata per specificare il rango in una classificazione tassonomica per un nome di taxon.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="en">is of rank</rdfs:label>
         <rdfs:label xml:lang="it">è di rango</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/isSynonymOf -->
+    <!-- https://aphia.org/ns/taxon-name/isSynonymOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/marine/ns/taxa-name/isSynonymOf">
+    <owl:ObjectProperty rdf:about="https://aphia.org/ns/taxon-name/isSynonymOf">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/taxa-name/TaxonName"/>
-        <rdfs:range rdf:resource="https://w3id.org/marine/ns/taxa-name/TaxonName"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/TaxonName"/>
+        <rdfs:range rdf:resource="https://aphia.org/ns/taxon-name/TaxonName"/>
         <rdfs:comment xml:lang="en">Inverse property of &apos;has synonym&apos;.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà inversa di &apos;ha sinonimo&apos;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="en">is synonym of</rdfs:label>
         <rdfs:label xml:lang="it">è sinonimo di</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://aphia.org/ns/top-level/hasIdentifier -->
+
+    <owl:ObjectProperty rdf:about="https://aphia.org/ns/top-level/hasIdentifier"/>
     
 
 
@@ -287,76 +330,110 @@
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/aphiaID -->
+    <!-- http://purl.org/dc/terms/identifier -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/marine/ns/taxa-name/aphiaID">
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/scientificName -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/scientificName"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/scientificNameAuthorship -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/scientificNameAuthorship"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/scientificNameID -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/scientificNameID"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/vernacularName -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/vernacularName"/>
+    
+
+
+    <!-- https://aphia.org/ns/taxon-name/aphiaID -->
+
+    <owl:DatatypeProperty rdf:about="https://aphia.org/ns/taxon-name/aphiaID">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/scientificNameID"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/taxa-name/TaxonName"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/TaxonName"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Codice univoco e persistente nel sistema WoRMS.</rdfs:comment>
         <rdfs:comment xml:lang="en">Unique and persistent code within WoRMS.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="en">aphia identifier</rdfs:label>
         <rdfs:label xml:lang="it">identificativo aphia</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/authorship -->
+    <!-- https://aphia.org/ns/taxon-name/authorship -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/marine/ns/taxa-name/authorship">
+    <owl:DatatypeProperty rdf:about="https://aphia.org/ns/taxon-name/authorship">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/scientificNameAuthorship"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/taxa-name/TaxonName"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/TaxonName"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <rdfs:comment xml:lang="it">La combinazione di autore e anno associata al nome di un taxon, espressa come stringa.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The combination of author and year associated with a taxon name, expressed as a string.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:comment xml:lang="it">Le informazioni sulla paternità del nome scientifico, espresse sottoforma di stringa, formattate secondo le convenzioni del codice nomenclaturale applicabile.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The authorship information, expressed as a string, for the scientific name, formatted according to the conventions of the applicable nomenclatural code.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="en">authorship</rdfs:label>
         <rdfs:label xml:lang="it">paternità</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/fullScientificName -->
+    <!-- https://aphia.org/ns/taxon-name/fullScientificName -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/marine/ns/taxa-name/fullScientificName">
+    <owl:DatatypeProperty rdf:about="https://aphia.org/ns/taxon-name/fullScientificName">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/scientificName"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2008/05/skos-xl#literalForm"/>
-        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/taxa-name/TaxonName"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/TaxonName"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="it">Il nome scientifico completo in latino che include anche la paternità, data dalla combinazione di autore e anno.</rdfs:comment>
         <rdfs:comment xml:lang="en">The complete scientific name in Latin including the authorship information (author, year).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="en">full scientific name (with author)</rdfs:label>
         <rdfs:label xml:lang="it">nome scientifico completo (con autore)</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/scientificName -->
+    <!-- https://aphia.org/ns/taxon-name/scientificName -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/marine/ns/taxa-name/scientificName">
+    <owl:DatatypeProperty rdf:about="https://aphia.org/ns/taxon-name/scientificName">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2008/05/skos-xl#literalForm"/>
-        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/taxa-name/TaxonName"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/TaxonName"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="it">Il nome scientifico in latino che non include le informazioni sulla paternità (autore, anno)</rdfs:comment>
         <rdfs:comment xml:lang="en">The scientific name in Latin that does not include information on the authorship (author, year).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="it">nome scientifico (senza autore)</rdfs:label>
         <rdfs:label xml:lang="en">scientific name (without author)</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/vernacularName -->
+    <!-- https://aphia.org/ns/taxon-name/vernacularName -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/marine/ns/taxa-name/vernacularName">
+    <owl:DatatypeProperty rdf:about="https://aphia.org/ns/taxon-name/vernacularName">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/vernacularName"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2008/05/skos-xl#literalForm"/>
-        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/taxa-name/VernacularName"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/VernacularName"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="it">Il nome comune espresso nelle varie lingue</rdfs:comment>
         <rdfs:comment xml:lang="en">The common name expressed in various languages.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="it">nome comune</rdfs:label>
         <rdfs:label xml:lang="en">vernacular name</rdfs:label>
     </owl:DatatypeProperty>
@@ -386,101 +463,86 @@
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/Authorship -->
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept -->
 
-    <owl:Class rdf:about="https://w3id.org/marine/ns/taxa-name/Authorship">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/marine/ns/top-level/hasAuthor"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/marine/ns/top-level/year"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">La combinazione dell&apos;autore e dell&apos;anno associati al nome del taxon.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The combination of the author and year associated with a taxon name.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
-        <rdfs:label xml:lang="en">Authorship</rdfs:label>
-        <rdfs:label xml:lang="it">Paternità</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/Rank -->
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
 
-    <owl:Class rdf:about="https://w3id.org/marine/ns/taxa-name/Rank">
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+    
+
+
+    <!-- https://aphia.org/ns/taxon-name/Rank -->
+
+    <owl:Class rdf:about="https://aphia.org/ns/taxon-name/Rank">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="it">Il livello specifico di una classificazione tassonomica che un nome occupa. Esempi sono: specie, famiglia, genere, sottospecie, ecc. Gli individui di questa classe possono essere concetti di un vocabolario controllato relativo.</rdfs:comment>
         <rdfs:comment xml:lang="en">The particular level in a taxonomic classification that a name occupies. Examples are: species, family, genus, subspecies, etc. The indivuals of this class can be concepts of a controlled vocabulary.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="it">Rango</rdfs:label>
         <rdfs:label xml:lang="en">Rank</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/Status -->
+    <!-- https://aphia.org/ns/taxon-name/Status -->
 
-    <owl:Class rdf:about="https://w3id.org/marine/ns/taxa-name/Status">
+    <owl:Class rdf:about="https://aphia.org/ns/taxon-name/Status">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="it">Lo stato dell&apos;uso del nome del taxon (di solito un parere tassonomico).</rdfs:comment>
         <rdfs:comment xml:lang="en">The status of the use of the taxon name (usually a taxonomic opinion).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="it">Stato</rdfs:label>
         <rdfs:label xml:lang="en">Status</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/Taxon -->
+    <!-- https://aphia.org/ns/taxon-name/Taxon -->
 
-    <owl:Class rdf:about="https://w3id.org/marine/ns/taxa-name/Taxon">
+    <owl:Class rdf:about="https://aphia.org/ns/taxon-name/Taxon">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/marine/ns/taxa-name/isDenotedBy"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/marine/ns/top-level/Name"/>
+                <owl:onProperty rdf:resource="https://aphia.org/ns/taxon-name/isDenotedBy"/>
+                <owl:someValuesFrom rdf:resource="https://aphia.org/ns/top-level/Name"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/dc/terms/source"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/marine/ns/top-level/Source"/>
+                <owl:allValuesFrom rdf:resource="https://aphia.org/ns/top-level/Source"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/marine/ns/taxa-name/hasChild"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+                <owl:onProperty rdf:resource="https://aphia.org/ns/taxon-name/hasChild"/>
+                <owl:allValuesFrom rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/marine/ns/taxa-name/isDenotedBy"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/marine/ns/top-level/Name"/>
+                <owl:onProperty rdf:resource="https://aphia.org/ns/taxon-name/isDenotedBy"/>
+                <owl:allValuesFrom rdf:resource="https://aphia.org/ns/top-level/Name"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/marine/ns/taxa-name/hasParent"/>
+                <owl:onProperty rdf:resource="https://aphia.org/ns/taxon-name/hasParent"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+                <owl:onClass rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://w3id.org/marine/ns/top-level/Name"/>
+        <owl:disjointWith rdf:resource="https://aphia.org/ns/top-level/Name"/>
         <rdfs:comment xml:lang="en">A group of organisms asserted by taxonomists to form a natural cohesive biological unit.</rdfs:comment>
         <rdfs:comment xml:lang="it">Un gruppo di organismi che, secondo i tassonomisti, formano un&apos;unità biologica naturale coesa.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="en">Taxon</rdfs:label>
         <rdfs:label xml:lang="it">Taxon</rdfs:label>
         <prov:wasDerivedFrom rdf:resource="http://rs.tdwg.org/dwc/terms/Taxon"/>
@@ -489,114 +551,114 @@
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/TaxonName -->
+    <!-- https://aphia.org/ns/taxon-name/TaxonName -->
 
-    <owl:Class rdf:about="https://w3id.org/marine/ns/taxa-name/TaxonName">
+    <owl:Class rdf:about="https://aphia.org/ns/taxon-name/TaxonName">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/marine/ns/top-level/Name"/>
+        <rdfs:subClassOf rdf:resource="https://aphia.org/ns/top-level/Name"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/dc/terms/source"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/marine/ns/top-level/Source"/>
+                <owl:allValuesFrom rdf:resource="https://aphia.org/ns/top-level/Source"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/marine/ns/taxa-name/hasSynonym"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/marine/ns/taxa-name/TaxonName"/>
+                <owl:onProperty rdf:resource="https://aphia.org/ns/taxon-name/hasSynonym"/>
+                <owl:allValuesFrom rdf:resource="https://aphia.org/ns/taxon-name/TaxonName"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/marine/ns/taxa-name/isSynonymOf"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/marine/ns/taxa-name/TaxonName"/>
+                <owl:onProperty rdf:resource="https://aphia.org/ns/taxon-name/isSynonymOf"/>
+                <owl:allValuesFrom rdf:resource="https://aphia.org/ns/taxon-name/TaxonName"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/marine/ns/top-level/hasIdentifier"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/marine/ns/top-level/Identifier"/>
+                <owl:onProperty rdf:resource="https://aphia.org/ns/top-level/hasIdentifier"/>
+                <owl:allValuesFrom rdf:resource="https://aphia.org/ns/top-level/Identifier"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/marine/ns/taxa-name/hasStatus"/>
+                <owl:onProperty rdf:resource="https://aphia.org/ns/taxon-name/hasStatus"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/marine/ns/taxa-name/Status"/>
+                <owl:onClass rdf:resource="https://aphia.org/ns/taxon-name/Status"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/marine/ns/taxa-name/isOfRank"/>
+                <owl:onProperty rdf:resource="https://aphia.org/ns/taxon-name/isOfRank"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/marine/ns/taxa-name/Rank"/>
+                <owl:onClass rdf:resource="https://aphia.org/ns/taxon-name/Rank"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/marine/ns/taxa-name/hasUnacceptedReason"/>
+                <owl:onProperty rdf:resource="https://aphia.org/ns/taxon-name/hasUnacceptedReason"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/marine/ns/taxa-name/UnacceptedReason"/>
+                <owl:onClass rdf:resource="https://aphia.org/ns/taxon-name/UnacceptedReason"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/marine/ns/taxa-name/aphiaID"/>
+                <owl:onProperty rdf:resource="https://aphia.org/ns/taxon-name/aphiaID"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/marine/ns/taxa-name/fullScientificName"/>
+                <owl:onProperty rdf:resource="https://aphia.org/ns/taxon-name/fullScientificName"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/marine/ns/taxa-name/authorship"/>
+                <owl:onProperty rdf:resource="https://aphia.org/ns/taxon-name/authorship"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/marine/ns/taxa-name/scientificName"/>
+                <owl:onProperty rdf:resource="https://aphia.org/ns/taxon-name/scientificName"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://w3id.org/marine/ns/taxa-name/VernacularName"/>
+        <owl:disjointWith rdf:resource="https://aphia.org/ns/taxon-name/VernacularName"/>
         <rdfs:comment xml:lang="en">A name of a particular taxon of any rank (e.g., a genus, a species, a family, etc.). It may be accepted/valid or not. The taxon author is frequently included when indicating a taxon name, as it can help distinguish between different uses of the same name (such as homonyms).</rdfs:comment>
         <rdfs:comment xml:lang="it">Nome di un particolare taxon di qualsiasi rango (ad esempio, un genere, una specie, una famiglia, ecc.). Può essere accettato/valido o meno. L&apos;autore del taxon è spesso incluso quando si indica un nome di taxon, in quanto può aiutare a distinguere tra diversi usi dello stesso nome (come gli omonimi).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="it">Nome del Taxon</rdfs:label>
         <rdfs:label xml:lang="en">Taxon Name</rdfs:label>
-        <prov:wasDerivedFrom rdf:resource="http://openbiodiv.net/TaxonomicName"/>
+        <prov:wasDerivedFrom rdf:resource="http://openbiodiv.net/LatinName"/>
         <prov:wasDerivedFrom rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName#TaxonName"/>
         <prov:wasDerivedFrom rdf:resource="https://discovery.biothings.io/view/bioschemas/TaxonName"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/UnacceptedReason -->
+    <!-- https://aphia.org/ns/taxon-name/UnacceptedReason -->
 
-    <owl:Class rdf:about="https://w3id.org/marine/ns/taxa-name/UnacceptedReason">
+    <owl:Class rdf:about="https://aphia.org/ns/taxon-name/UnacceptedReason">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="en">An explanation regarding why a given taxon name is judged to be invalid or not accepted. The individuals of this class can be concepts of a specific controlled vocabulary with values like: synonym, misapplied, original combination, new combination, etc.</rdfs:comment>
         <rdfs:comment xml:lang="it">Motivazione per cui un nome di un determinato taxon viene giudicato non accettato o non valido. Gli individui di questa classe possono essere concetti di uno specifico vocabolario controllato con valori come: sinonimo, errata applicazione, combinazione originale, nuova combinazione, ecc.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="it">Motivo per non Accettato</rdfs:label>
         <rdfs:label xml:lang="en">Unaccepted Reason</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/VernacularName -->
+    <!-- https://aphia.org/ns/taxon-name/VernacularName -->
 
-    <owl:Class rdf:about="https://w3id.org/marine/ns/taxa-name/VernacularName">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/marine/ns/top-level/Name"/>
+    <owl:Class rdf:about="https://aphia.org/ns/taxon-name/VernacularName">
+        <rdfs:subClassOf rdf:resource="https://aphia.org/ns/top-level/Name"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/dc/terms/coverage"/>
@@ -612,51 +674,51 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/dc/terms/source"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/marine/ns/top-level/Source"/>
+                <owl:allValuesFrom rdf:resource="https://aphia.org/ns/top-level/Source"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/marine/ns/taxa-name/vernacularName"/>
+                <owl:onProperty rdf:resource="https://aphia.org/ns/taxon-name/vernacularName"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A name other than a taxon name (scientific name) that is commonly used to refer to a species or other taxon. Examples are salmon, rainbow trout, acciuga etc. The language (e.g., English, Italian, etc.) is usually indicated for each vernacular name.</rdfs:comment>
         <rdfs:comment xml:lang="it">Un nome diverso dal nome del taxon (nome scientifico) che viene comunemente usato per indicare una specie o un altro taxon. Esempi sono il salmone, la trota iridea, l&apos;acciuga ecc. Per ogni nome comune viene solitamente indicata la lingua (ad esempio, inglese, italiano, ecc.).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/taxa-name"/>
+        <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/taxon-name"/>
         <rdfs:label xml:lang="it">Nome Comune</rdfs:label>
         <rdfs:label xml:lang="en">Vernacular Name</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/marine/ns/top-level/Identifier -->
+    <!-- https://aphia.org/ns/top-level/Identifier -->
 
-    <owl:Class rdf:about="https://w3id.org/marine/ns/top-level/Identifier"/>
+    <owl:Class rdf:about="https://aphia.org/ns/top-level/Identifier"/>
     
 
 
-    <!-- https://w3id.org/marine/ns/top-level/IdentifierType -->
+    <!-- https://aphia.org/ns/top-level/IdentifierType -->
 
-    <owl:Class rdf:about="https://w3id.org/marine/ns/top-level/IdentifierType"/>
+    <owl:Class rdf:about="https://aphia.org/ns/top-level/IdentifierType"/>
     
 
 
-    <!-- https://w3id.org/marine/ns/top-level/Person -->
+    <!-- https://aphia.org/ns/top-level/Name -->
 
-    <owl:Class rdf:about="https://w3id.org/marine/ns/top-level/Person"/>
+    <owl:Class rdf:about="https://aphia.org/ns/top-level/Name"/>
     
 
 
-    <!-- https://w3id.org/marine/ns/top-level/Source -->
+    <!-- https://aphia.org/ns/top-level/Source -->
 
-    <owl:Class rdf:about="https://w3id.org/marine/ns/top-level/Source"/>
+    <owl:Class rdf:about="https://aphia.org/ns/top-level/Source"/>
     
 
 
-    <!-- https://w3id.org/marine/ns/top-level/System -->
+    <!-- https://aphia.org/ns/top-level/System -->
 
-    <owl:Class rdf:about="https://w3id.org/marine/ns/top-level/System"/>
+    <owl:Class rdf:about="https://aphia.org/ns/top-level/System"/>
     
 
 
@@ -671,28 +733,14 @@
     
 
 
-    <!-- https://w3id.org/marine/resource/organisation/dv -->
+    <!-- https://aphia.org/resource/organisation/dv -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/marine/resource/organisation/dv">
+    <owl:NamedIndividual rdf:about="https://aphia.org/resource/organisation/dv">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
         <rdfs:label xml:lang="nl">Digitaal Vlaanderen</rdfs:label>
         <rdfs:label xml:lang="en">Digital Flanders</rdfs:label>
         <foaf:name xml:lang="nl">Digitaal Vlaanderen</foaf:name>
         <foaf:name xml:lang="en">Digital Flanders</foaf:name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/marine/resource/organisation/vliz -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/marine/resource/organisation/vliz">
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-        <rdfs:label xml:lang="en">Flanders Marine Institute</rdfs:label>
-        <rdfs:label xml:lang="it">Istituto marino delle Fiandre</rdfs:label>
-        <rdfs:label xml:lang="nl">Vlaams Instituut voor de Zee</rdfs:label>
-        <foaf:name xml:lang="en">Flanders Marine Institute</foaf:name>
-        <foaf:name xml:lang="it">Istituto marino delle Fiandre</foaf:name>
-        <foaf:name xml:lang="nl">Vlaams Instituut voor de Zee</foaf:name>
     </owl:NamedIndividual>
 </rdf:RDF>
 

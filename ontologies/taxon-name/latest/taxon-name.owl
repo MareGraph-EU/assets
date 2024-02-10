@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://w3id.org/marine/ns/taxa-name"
+     xml:base="https://aphia.org/ns/taxon-name"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://w3id.org/marine/ns/taxa-name"
-     versionIRI="https://w3id.org/marine/ns/taxa-name/0.1">
-    <Prefix name="" IRI="https://w3id.org/marine/ns/taxa-name/"/>
+     ontologyIRI="https://aphia.org/ns/taxon-name"
+     versionIRI="https://aphia.org/ns/taxon-name/0.2">
+    <Prefix name="" IRI="https://aphia.org/ns/taxon-name/"/>
     <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -16,26 +16,26 @@
     <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>http://www.w3.org/2008/05/skos-xl</Import>
-    <Import>https://w3id.org/marine/ns/top-level/0.1</Import>
+    <Import>https://aphia.org/ns/top-level</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <IRI>https://aphia.org/resource/organisation/dv</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <IRI>https://ror.org/0496vr396</IRI>
+    </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:creator"/>
         <IRI>https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dct:creator"/>
-        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dct:creator"/>
-        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <Literal xml:lang="it">Questa è l&apos;ontologia dei nomi dei taxon e di tutte le informazione tassonomiche, come disponibili dal sistema WoRMS. Essa importa l&apos;ontologia di primo livello top-level ed è allineata a skos-xl.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:description"/>
-        <Literal xml:lang="it">Questa è l&apos;ontologia dei nomi dei taxon e di tutte le informazione tassonomiche come disponibili dal sistema WoRMS. Essa importa l&apos;ontologia di primo livello MAREGRAPH ed è allineata a skos-xl.</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dct:description"/>
-        <Literal xml:lang="en">This is the ontology of taxon names and all taxonomic information as available from the WoRMS system. It imports the MAREGRAPH top-level ontology and is aligned to skos-xl.</Literal>
+        <Literal xml:lang="en">This is the ontology of taxon names and all taxonomic information, as available from the WoRMS system. It imports the top-level ontology of the APHIA network of ontologies, and is aligned to skos-xl.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:issued"/>
@@ -55,48 +55,45 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:modified"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-11-30</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2024-02-10</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:title"/>
-        <Literal xml:lang="it">MAREGRAPH - Ontologia dei nomi dei taxon</Literal>
+        <Literal xml:lang="it">APHIA - Ontologia dei nomi dei taxon</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:title"/>
-        <Literal xml:lang="en">MAREGRAPH - Taxa names ontology</Literal>
+        <Literal xml:lang="en">APHIA - Taxon names ontology</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal xml:lang="it">Questa è l&apos;ontologia dei nomi dei taxon e di tutte le informazione tassonomiche come disponibili dal sistema WoRMS. Essa importa l&apos;ontologia di primo livello MAREGRAPH ed è allineata a skos-xl.</Literal>
+        <Literal xml:lang="it">Questa è l&apos;ontologia dei nomi dei taxon e di tutte le informazione tassonomiche come disponibili dal sistema WoRMS. Essa importa l&apos;ontologia di primo livello top-level ed è allineata a skos-xl.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal xml:lang="en">This is the ontology of taxon names and all taxonomic information as available from the WoRMS system. It imports the MAREGRAPH top-level ontology and is aligned to skos-xl.</Literal>
+        <Literal xml:lang="en">This is the ontology of taxon names and all taxonomic information as available from the WoRMS system. It imports the top-level ontology of the APHIA network of ontologies, and is aligned to skos-xl.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <Literal xml:lang="it">MAREGRAPH - Ontologia dei nomi dei taxon</Literal>
+        <Literal xml:lang="it">APHIA - Ontologia dei nomi dei taxon</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <Literal xml:lang="en">MAREGRAPH - Taxa names ontology</Literal>
+        <Literal xml:lang="en">APHIA - Taxon names ontology</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal xml:lang="en">Preliminary version 0.1</Literal>
+        <Literal xml:lang="en">Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; changed the name of the ontology from taxa-name to taxon-name; introduced some alignments to Darwin Core for some properties; changed some definitions (e.g., authorship).</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal xml:lang="it">Versione preliminare 0.1</Literal>
+        <Literal xml:lang="it">Seconda versione 0.2 - cambiati tutti gli URI da w3id.org/ a aphia.org/; cambiato il nome dell&apos;ontologia da taxa-name a taxon-name; introdotti alcuni allineamenti a Darwin core per alcune proprietà; cambiate alcune definizioni (e.g., authorship).</Literal>
     </Annotation>
     <Declaration>
         <Class abbreviatedIRI="dct:LinguisticSystem"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="dct:Location"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/Authorship"/>
     </Declaration>
     <Declaration>
         <Class IRI="/Rank"/>
@@ -117,19 +114,16 @@
         <Class IRI="/VernacularName"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://w3id.org/marine/ns/top-level/Identifier"/>
+        <Class IRI="https://aphia.org/ns/top-level/Identifier"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://w3id.org/marine/ns/top-level/IdentifierType"/>
+        <Class IRI="https://aphia.org/ns/top-level/IdentifierType"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://w3id.org/marine/ns/top-level/Person"/>
+        <Class IRI="https://aphia.org/ns/top-level/Source"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://w3id.org/marine/ns/top-level/Source"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="https://w3id.org/marine/ns/top-level/System"/>
+        <Class IRI="https://aphia.org/ns/top-level/System"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="dct:coverage"/>
@@ -139,9 +133,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/hasAcceptedName"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/hasAuthorship"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/hasChild"/>
@@ -186,10 +177,7 @@
         <DataProperty IRI="/vernacularName"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="https://w3id.org/marine/resource/organisation/dv"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://w3id.org/marine/resource/organisation/vliz"/>
+        <NamedIndividual IRI="https://aphia.org/resource/organisation/dv"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dct:language"/>
@@ -207,56 +195,65 @@
         <AnnotationProperty abbreviatedIRI="dct:description"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="https://w3id.org/marine/ns/top-level"/>
+        <ObjectProperty abbreviatedIRI="dct:source"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dct:creator"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dct:issued"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rdf:List"/>
-    </Declaration>
-    <Declaration>
-        <Datatype abbreviatedIRI="xsd:date"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="xsd:gYear"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dct:contributor"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://rs.tdwg.org/dwc/terms/scientificNameID"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="foaf:Organization"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:issued"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dct:modified"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.w3.org/ns/person#Person"/>
+        <Class abbreviatedIRI="rdf:List"/>
     </Declaration>
-    <SubClassOf>
-        <Class IRI="/Authorship"/>
-        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Authorship"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="https://w3id.org/marine/ns/top-level/hasAuthor"/>
-            <Class abbreviatedIRI="rdf:List"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Authorship"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty IRI="https://w3id.org/marine/ns/top-level/year"/>
-            <Datatype abbreviatedIRI="xsd:gYear"/>
-        </DataExactCardinality>
-    </SubClassOf>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dct:relation"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://rs.tdwg.org/dwc/terms/vernacularName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://aphia.org/ns/top-level/hasIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://aphia.org/ns/top-level/Name"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://rs.tdwg.org/dwc/terms/scientificNameAuthorship"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://rs.tdwg.org/dwc/terms/scientificName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dct:identifier"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="/Rank"/>
         <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
@@ -285,14 +282,14 @@
         <Class IRI="/Taxon"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/isDenotedBy"/>
-            <Class IRI="https://w3id.org/marine/ns/top-level/Name"/>
+            <Class IRI="https://aphia.org/ns/top-level/Name"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Taxon"/>
         <ObjectAllValuesFrom>
             <ObjectProperty abbreviatedIRI="dct:source"/>
-            <Class IRI="https://w3id.org/marine/ns/top-level/Source"/>
+            <Class IRI="https://aphia.org/ns/top-level/Source"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -306,7 +303,7 @@
         <Class IRI="/Taxon"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/isDenotedBy"/>
-            <Class IRI="https://w3id.org/marine/ns/top-level/Name"/>
+            <Class IRI="https://aphia.org/ns/top-level/Name"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -322,13 +319,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/TaxonName"/>
-        <Class IRI="https://w3id.org/marine/ns/top-level/Name"/>
+        <Class IRI="https://aphia.org/ns/top-level/Name"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/TaxonName"/>
         <ObjectAllValuesFrom>
             <ObjectProperty abbreviatedIRI="dct:source"/>
-            <Class IRI="https://w3id.org/marine/ns/top-level/Source"/>
+            <Class IRI="https://aphia.org/ns/top-level/Source"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -348,8 +345,8 @@
     <SubClassOf>
         <Class IRI="/TaxonName"/>
         <ObjectAllValuesFrom>
-            <ObjectProperty IRI="https://w3id.org/marine/ns/top-level/hasIdentifier"/>
-            <Class IRI="https://w3id.org/marine/ns/top-level/Identifier"/>
+            <ObjectProperty IRI="https://aphia.org/ns/top-level/hasIdentifier"/>
+            <Class IRI="https://aphia.org/ns/top-level/Identifier"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -410,7 +407,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/VernacularName"/>
-        <Class IRI="https://w3id.org/marine/ns/top-level/Name"/>
+        <Class IRI="https://aphia.org/ns/top-level/Name"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/VernacularName"/>
@@ -430,7 +427,7 @@
         <Class IRI="/VernacularName"/>
         <ObjectAllValuesFrom>
             <ObjectProperty abbreviatedIRI="dct:source"/>
-            <Class IRI="https://w3id.org/marine/ns/top-level/Source"/>
+            <Class IRI="https://aphia.org/ns/top-level/Source"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -442,7 +439,7 @@
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="/Taxon"/>
-        <Class IRI="https://w3id.org/marine/ns/top-level/Name"/>
+        <Class IRI="https://aphia.org/ns/top-level/Name"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="/TaxonName"/>
@@ -450,11 +447,7 @@
     </DisjointClasses>
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Organization"/>
-        <NamedIndividual IRI="https://w3id.org/marine/resource/organisation/dv"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="foaf:Organization"/>
-        <NamedIndividual IRI="https://w3id.org/marine/resource/organisation/vliz"/>
+        <NamedIndividual IRI="https://aphia.org/resource/organisation/dv"/>
     </ClassAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/denotes"/>
@@ -463,10 +456,6 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/hasAcceptedName"/>
         <ObjectProperty IRI="/isDenotedBy"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="/hasAuthorship"/>
-        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/hasChild"/>
@@ -530,15 +519,11 @@
     </FunctionalObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/denotes"/>
-        <Class IRI="https://w3id.org/marine/ns/top-level/Name"/>
+        <Class IRI="https://aphia.org/ns/top-level/Name"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/hasAcceptedName"/>
         <Class IRI="/Taxon"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/hasAuthorship"/>
-        <Class IRI="/TaxonName"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/hasChild"/>
@@ -585,10 +570,6 @@
         <Class IRI="/TaxonName"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="/hasAuthorship"/>
-        <Class IRI="/Authorship"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="/hasChild"/>
         <Class IRI="/Taxon"/>
     </ObjectPropertyRange>
@@ -614,7 +595,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/isDenotedBy"/>
-        <Class IRI="https://w3id.org/marine/ns/top-level/Name"/>
+        <Class IRI="https://aphia.org/ns/top-level/Name"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/isOfRank"/>
@@ -629,12 +610,28 @@
         <DataProperty abbreviatedIRI="dct:identifier"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty IRI="/aphiaID"/>
+        <DataProperty IRI="http://rs.tdwg.org/dwc/terms/scientificNameID"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/authorship"/>
+        <DataProperty IRI="http://rs.tdwg.org/dwc/terms/scientificNameAuthorship"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/fullScientificName"/>
+        <DataProperty IRI="http://rs.tdwg.org/dwc/terms/scientificName"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="/fullScientificName"/>
         <DataProperty IRI="http://www.w3.org/2008/05/skos-xl#literalForm"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="/scientificName"/>
         <DataProperty IRI="http://www.w3.org/2008/05/skos-xl#literalForm"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/vernacularName"/>
+        <DataProperty IRI="http://rs.tdwg.org/dwc/terms/vernacularName"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="/vernacularName"/>
@@ -686,31 +683,6 @@
         <DataProperty IRI="/vernacularName"/>
         <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
     </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Authorship</IRI>
-        <Literal xml:lang="it">La combinazione dell&apos;autore e dell&apos;anno associati al nome del taxon.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Authorship</IRI>
-        <Literal xml:lang="en">The combination of the author and year associated with a taxon name.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/Authorship</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/Authorship</IRI>
-        <Literal xml:lang="en">Authorship</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/Authorship</IRI>
-        <Literal xml:lang="it">Paternità</Literal>
-    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/Rank</IRI>
@@ -824,7 +796,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
         <IRI>/TaxonName</IRI>
-        <IRI>http://openbiodiv.net/TaxonomicName</IRI>
+        <IRI>http://openbiodiv.net/LatinName</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
@@ -914,12 +886,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/authorship</IRI>
-        <Literal xml:lang="it">La combinazione di autore e anno associata al nome di un taxon, espressa come stringa.</Literal>
+        <Literal xml:lang="it">Le informazioni sulla paternità del nome scientifico, espresse sottoforma di stringa, formattate secondo le convenzioni del codice nomenclaturale applicabile.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/authorship</IRI>
-        <Literal xml:lang="en">The combination of author and year associated with a taxon name, expressed as a string.</Literal>
+        <Literal xml:lang="en">The authorship information, expressed as a string, for the scientific name, formatted according to the conventions of the applicable nomenclatural code.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -989,12 +961,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasAcceptedName</IRI>
-        <Literal xml:lang="en">Property used to represent the valid/accepted name for a taxon.</Literal>
+        <Literal xml:lang="en">Property used to represent the currently valid (zoological) or accepted (botanical) scientific name for a taxon.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasAcceptedName</IRI>
-        <Literal xml:lang="it">Proprietà utilizzata per definire il nome valido/accettato per un taxon.</Literal>
+        <Literal xml:lang="it">Proprietà utilizzata per rappresentare il nome scientifico attualmente valido (zoologico) o accettato (botanico) di un taxon.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -1010,31 +982,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/hasAcceptedName</IRI>
         <Literal xml:lang="en">has accepted name</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasAuthorship</IRI>
-        <Literal xml:lang="en">Property used to represent the situation of authorship, given by the combination of the author and year, for a taxon name.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasAuthorship</IRI>
-        <Literal xml:lang="it">Proprietà utilizzata per definire la situazione di paternità, data dalla combinazione di autore e anno, per un nome di taxon.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/hasAuthorship</IRI>
-        <IRI></IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/hasAuthorship</IRI>
-        <Literal xml:lang="it">ha paternità</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/hasAuthorship</IRI>
-        <Literal xml:lang="en">has authorship</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1313,53 +1260,23 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+        <IRI>https://aphia.org/resource/organisation/dv</IRI>
         <Literal xml:lang="nl">Digitaal Vlaanderen</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+        <IRI>https://aphia.org/resource/organisation/dv</IRI>
         <Literal xml:lang="en">Digital Flanders</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:name"/>
-        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+        <IRI>https://aphia.org/resource/organisation/dv</IRI>
         <Literal xml:lang="nl">Digitaal Vlaanderen</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:name"/>
-        <IRI>https://w3id.org/marine/resource/organisation/dv</IRI>
+        <IRI>https://aphia.org/resource/organisation/dv</IRI>
         <Literal xml:lang="en">Digital Flanders</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
-        <Literal xml:lang="en">Flanders Marine Institute</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
-        <Literal xml:lang="it">Istituto marino delle Fiandre</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
-        <Literal xml:lang="nl">Vlaams Instituut voor de Zee</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:name"/>
-        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
-        <Literal xml:lang="en">Flanders Marine Institute</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:name"/>
-        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
-        <Literal xml:lang="it">Istituto marino delle Fiandre</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:name"/>
-        <IRI>https://w3id.org/marine/resource/organisation/vliz</IRI>
-        <Literal xml:lang="nl">Vlaams Instituut voor de Zee</Literal>
     </AnnotationAssertion>
 </Ontology>
 

@@ -1,0 +1,1286 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://aphia.org/ns/taxon-name"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://aphia.org/ns/taxon-name"
+     versionIRI="https://aphia.org/ns/taxon-name/0.2">
+    <Prefix name="" IRI="https://aphia.org/ns/taxon-name/"/>
+    <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.w3.org/2008/05/skos-xl</Import>
+    <Import>https://aphia.org/ns/top-level</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <IRI>https://aphia.org/resource/organisation/dv</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <IRI>https://ror.org/0496vr396</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <IRI>https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <Literal xml:lang="it">Questa è l&apos;ontologia dei nomi dei taxon e di tutte le informazione tassonomiche, come disponibili dal sistema WoRMS. Essa importa l&apos;ontologia di primo livello top-level ed è allineata a skos-xl.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <Literal xml:lang="en">This is the ontology of taxon names and all taxonomic information, as available from the WoRMS system. It imports the top-level ontology of the APHIA network of ontologies, and is aligned to skos-xl.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-08-30</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+        <IRI>http://publications.europa.eu/resource/authority/language/ENG</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+        <IRI>http://publications.europa.eu/resource/authority/language/ITA</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:license"/>
+        <IRI>http://publications.europa.eu/resource/authority/licence/CC_BY_4_0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2024-02-10</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <Literal xml:lang="it">APHIA - Ontologia dei nomi dei taxon</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <Literal xml:lang="en">APHIA - Taxon names ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="it">Questa è l&apos;ontologia dei nomi dei taxon e di tutte le informazione tassonomiche come disponibili dal sistema WoRMS. Essa importa l&apos;ontologia di primo livello top-level ed è allineata a skos-xl.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">This is the ontology of taxon names and all taxonomic information as available from the WoRMS system. It imports the top-level ontology of the APHIA network of ontologies, and is aligned to skos-xl.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="it">APHIA - Ontologia dei nomi dei taxon</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">APHIA - Taxon names ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en">Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; changed the name of the ontology from taxa-name to taxon-name; introduced some alignments to Darwin Core for some properties; changed some definitions (e.g., authorship).</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="it">Seconda versione 0.2 - cambiati tutti gli URI da w3id.org/ a aphia.org/; cambiato il nome dell&apos;ontologia da taxa-name a taxon-name; introdotti alcuni allineamenti a Darwin core per alcune proprietà; cambiate alcune definizioni (e.g., authorship).</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="dct:LinguisticSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dct:Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Rank"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Taxon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TaxonName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/UnacceptedReason"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/VernacularName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://aphia.org/ns/top-level/Identifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://aphia.org/ns/top-level/IdentifierType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://aphia.org/ns/top-level/Source"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://aphia.org/ns/top-level/System"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dct:coverage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/denotes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasAcceptedName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasChild"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasParent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasSynonym"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasSynonymName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasUnacceptedReason"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isDenotedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isOfRank"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isSynonymOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/aphiaID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/authorship"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/fullScientificName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/scientificName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/vernacularName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://aphia.org/resource/organisation/dv"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:minQualifiedCardinality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dct:source"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:contributor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://rs.tdwg.org/dwc/terms/scientificNameID"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Organization"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:issued"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:modified"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdf:List"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dct:relation"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://rs.tdwg.org/dwc/terms/vernacularName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://aphia.org/ns/top-level/hasIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://aphia.org/ns/top-level/Name"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://rs.tdwg.org/dwc/terms/scientificNameAuthorship"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://rs.tdwg.org/dwc/terms/scientificName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dct:identifier"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="/Rank"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Rank"/>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Status"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Status"/>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Taxon"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Taxon"/>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Taxon"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/isDenotedBy"/>
+            <Class IRI="https://aphia.org/ns/top-level/Name"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Taxon"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="dct:source"/>
+            <Class IRI="https://aphia.org/ns/top-level/Source"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Taxon"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/hasChild"/>
+            <Class IRI="/Taxon"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Taxon"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/isDenotedBy"/>
+            <Class IRI="https://aphia.org/ns/top-level/Name"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Taxon"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="/hasParent"/>
+            <Class IRI="/Taxon"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonName"/>
+        <Class IRI="http://www.w3.org/2008/05/skos-xl#Label"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonName"/>
+        <Class IRI="https://aphia.org/ns/top-level/Name"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonName"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="dct:source"/>
+            <Class IRI="https://aphia.org/ns/top-level/Source"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonName"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/hasSynonym"/>
+            <Class IRI="/TaxonName"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonName"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/isSynonymOf"/>
+            <Class IRI="/TaxonName"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonName"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://aphia.org/ns/top-level/hasIdentifier"/>
+            <Class IRI="https://aphia.org/ns/top-level/Identifier"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonName"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="/hasStatus"/>
+            <Class IRI="/Status"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonName"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="/isOfRank"/>
+            <Class IRI="/Rank"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonName"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="/hasUnacceptedReason"/>
+            <Class IRI="/UnacceptedReason"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonName"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="/aphiaID"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonName"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="/fullScientificName"/>
+            <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonName"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="/authorship"/>
+            <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/TaxonName"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="/scientificName"/>
+            <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/UnacceptedReason"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/UnacceptedReason"/>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/VernacularName"/>
+        <Class IRI="https://aphia.org/ns/top-level/Name"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/VernacularName"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="dct:coverage"/>
+            <Class abbreviatedIRI="dct:Location"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/VernacularName"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="dct:language"/>
+            <Class abbreviatedIRI="dct:LinguisticSystem"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/VernacularName"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="dct:source"/>
+            <Class IRI="https://aphia.org/ns/top-level/Source"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/VernacularName"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="/vernacularName"/>
+            <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="/Taxon"/>
+        <Class IRI="https://aphia.org/ns/top-level/Name"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/TaxonName"/>
+        <Class IRI="/VernacularName"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Organization"/>
+        <NamedIndividual IRI="https://aphia.org/resource/organisation/dv"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/denotes"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasAcceptedName"/>
+        <ObjectProperty IRI="/isDenotedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasChild"/>
+        <ObjectProperty IRI="http://www.w3.org/2004/02/skos/core#narrower"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasParent"/>
+        <ObjectProperty IRI="http://www.w3.org/2004/02/skos/core#broader"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasStatus"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasSynonym"/>
+        <ObjectProperty abbreviatedIRI="dct:relation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasSynonymName"/>
+        <ObjectProperty IRI="/isDenotedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasUnacceptedReason"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/isDenotedBy"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/isOfRank"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/isSynonymOf"/>
+        <ObjectProperty abbreviatedIRI="dct:relation"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/denotes"/>
+        <ObjectProperty IRI="/isDenotedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasChild"/>
+        <ObjectProperty IRI="/hasParent"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasSynonym"/>
+        <ObjectProperty IRI="/isSynonymOf"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/hasAcceptedName"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/hasParent"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/hasStatus"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/isOfRank"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/denotes"/>
+        <Class IRI="https://aphia.org/ns/top-level/Name"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasAcceptedName"/>
+        <Class IRI="/Taxon"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasChild"/>
+        <Class IRI="/Taxon"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasParent"/>
+        <Class IRI="/Taxon"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasStatus"/>
+        <Class IRI="/TaxonName"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasSynonym"/>
+        <Class IRI="/TaxonName"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasSynonymName"/>
+        <Class IRI="/Taxon"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasUnacceptedReason"/>
+        <Class IRI="/TaxonName"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isDenotedBy"/>
+        <Class IRI="/Taxon"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isOfRank"/>
+        <Class IRI="/TaxonName"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isSynonymOf"/>
+        <Class IRI="/TaxonName"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/denotes"/>
+        <Class IRI="/Taxon"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasAcceptedName"/>
+        <Class IRI="/TaxonName"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasChild"/>
+        <Class IRI="/Taxon"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasParent"/>
+        <Class IRI="/Taxon"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasStatus"/>
+        <Class IRI="/Status"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasSynonym"/>
+        <Class IRI="/TaxonName"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasSynonymName"/>
+        <Class IRI="/TaxonName"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasUnacceptedReason"/>
+        <Class IRI="/UnacceptedReason"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isDenotedBy"/>
+        <Class IRI="https://aphia.org/ns/top-level/Name"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isOfRank"/>
+        <Class IRI="/Rank"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isSynonymOf"/>
+        <Class IRI="/TaxonName"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/aphiaID"/>
+        <DataProperty abbreviatedIRI="dct:identifier"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/aphiaID"/>
+        <DataProperty IRI="http://rs.tdwg.org/dwc/terms/scientificNameID"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/authorship"/>
+        <DataProperty IRI="http://rs.tdwg.org/dwc/terms/scientificNameAuthorship"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/fullScientificName"/>
+        <DataProperty IRI="http://rs.tdwg.org/dwc/terms/scientificName"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/fullScientificName"/>
+        <DataProperty IRI="http://www.w3.org/2008/05/skos-xl#literalForm"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/scientificName"/>
+        <DataProperty IRI="http://www.w3.org/2008/05/skos-xl#literalForm"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/vernacularName"/>
+        <DataProperty IRI="http://rs.tdwg.org/dwc/terms/vernacularName"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/vernacularName"/>
+        <DataProperty IRI="http://www.w3.org/2008/05/skos-xl#literalForm"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/aphiaID"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/authorship"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="/aphiaID"/>
+        <Class IRI="/TaxonName"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/authorship"/>
+        <Class IRI="/TaxonName"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/fullScientificName"/>
+        <Class IRI="/TaxonName"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/scientificName"/>
+        <Class IRI="/TaxonName"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/vernacularName"/>
+        <Class IRI="/VernacularName"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="/aphiaID"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/authorship"/>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/fullScientificName"/>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/scientificName"/>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/vernacularName"/>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Rank</IRI>
+        <Literal xml:lang="it">Il livello specifico di una classificazione tassonomica che un nome occupa. Esempi sono: specie, famiglia, genere, sottospecie, ecc. Gli individui di questa classe possono essere concetti di un vocabolario controllato relativo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Rank</IRI>
+        <Literal xml:lang="en">The particular level in a taxonomic classification that a name occupies. Examples are: species, family, genus, subspecies, etc. The indivuals of this class can be concepts of a controlled vocabulary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Rank</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Rank</IRI>
+        <Literal xml:lang="it">Rango</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Rank</IRI>
+        <Literal xml:lang="en">Rank</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Status</IRI>
+        <Literal xml:lang="it">Lo stato dell&apos;uso del nome del taxon (di solito un parere tassonomico).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Status</IRI>
+        <Literal xml:lang="en">The status of the use of the taxon name (usually a taxonomic opinion).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Status</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Status</IRI>
+        <Literal xml:lang="it">Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Status</IRI>
+        <Literal xml:lang="en">Status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Taxon</IRI>
+        <Literal xml:lang="en">A group of organisms asserted by taxonomists to form a natural cohesive biological unit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Taxon</IRI>
+        <Literal xml:lang="it">Un gruppo di organismi che, secondo i tassonomisti, formano un&apos;unità biologica naturale coesa.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Taxon</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Taxon</IRI>
+        <Literal xml:lang="en">Taxon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Taxon</IRI>
+        <Literal xml:lang="it">Taxon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+        <IRI>/Taxon</IRI>
+        <IRI>http://rs.tdwg.org/dwc/terms/Taxon</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+        <IRI>/Taxon</IRI>
+        <IRI>https://schema.org/Taxon</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TaxonName</IRI>
+        <Literal xml:lang="en">A name of a particular taxon of any rank (e.g., a genus, a species, a family, etc.). It may be accepted/valid or not. The taxon author is frequently included when indicating a taxon name, as it can help distinguish between different uses of the same name (such as homonyms).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TaxonName</IRI>
+        <Literal xml:lang="it">Nome di un particolare taxon di qualsiasi rango (ad esempio, un genere, una specie, una famiglia, ecc.). Può essere accettato/valido o meno. L&apos;autore del taxon è spesso incluso quando si indica un nome di taxon, in quanto può aiutare a distinguere tra diversi usi dello stesso nome (come gli omonimi).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TaxonName</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TaxonName</IRI>
+        <Literal xml:lang="it">Nome del Taxon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TaxonName</IRI>
+        <Literal xml:lang="en">Taxon Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+        <IRI>/TaxonName</IRI>
+        <IRI>http://openbiodiv.net/LatinName</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+        <IRI>/TaxonName</IRI>
+        <IRI>http://rs.tdwg.org/ontology/voc/TaxonName#TaxonName</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+        <IRI>/TaxonName</IRI>
+        <IRI>https://discovery.biothings.io/view/bioschemas/TaxonName</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/UnacceptedReason</IRI>
+        <Literal xml:lang="en">An explanation regarding why a given taxon name is judged to be invalid or not accepted. The individuals of this class can be concepts of a specific controlled vocabulary with values like: synonym, misapplied, original combination, new combination, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/UnacceptedReason</IRI>
+        <Literal xml:lang="it">Motivazione per cui un nome di un determinato taxon viene giudicato non accettato o non valido. Gli individui di questa classe possono essere concetti di uno specifico vocabolario controllato con valori come: sinonimo, errata applicazione, combinazione originale, nuova combinazione, ecc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/UnacceptedReason</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/UnacceptedReason</IRI>
+        <Literal xml:lang="it">Motivo per non Accettato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/UnacceptedReason</IRI>
+        <Literal xml:lang="en">Unaccepted Reason</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/VernacularName</IRI>
+        <Literal xml:lang="en">A name other than a taxon name (scientific name) that is commonly used to refer to a species or other taxon. Examples are salmon, rainbow trout, acciuga etc. The language (e.g., English, Italian, etc.) is usually indicated for each vernacular name.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/VernacularName</IRI>
+        <Literal xml:lang="it">Un nome diverso dal nome del taxon (nome scientifico) che viene comunemente usato per indicare una specie o un altro taxon. Esempi sono il salmone, la trota iridea, l&apos;acciuga ecc. Per ogni nome comune viene solitamente indicata la lingua (ad esempio, inglese, italiano, ecc.).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/VernacularName</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/VernacularName</IRI>
+        <Literal xml:lang="it">Nome Comune</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/VernacularName</IRI>
+        <Literal xml:lang="en">Vernacular Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/aphiaID</IRI>
+        <Literal xml:lang="it">Codice univoco e persistente nel sistema WoRMS.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/aphiaID</IRI>
+        <Literal xml:lang="en">Unique and persistent code within WoRMS.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/aphiaID</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/aphiaID</IRI>
+        <Literal xml:lang="en">aphia identifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/aphiaID</IRI>
+        <Literal xml:lang="it">identificativo aphia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/authorship</IRI>
+        <Literal xml:lang="it">Le informazioni sulla paternità del nome scientifico, espresse sottoforma di stringa, formattate secondo le convenzioni del codice nomenclaturale applicabile.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/authorship</IRI>
+        <Literal xml:lang="en">The authorship information, expressed as a string, for the scientific name, formatted according to the conventions of the applicable nomenclatural code.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/authorship</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/authorship</IRI>
+        <Literal xml:lang="en">authorship</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/authorship</IRI>
+        <Literal xml:lang="it">paternità</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/denotes</IRI>
+        <Literal xml:lang="en">Property used to represent a name for a taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/denotes</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per definire un nome per un taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/denotes</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/denotes</IRI>
+        <Literal xml:lang="it">definisce/denota</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/denotes</IRI>
+        <Literal xml:lang="en">denotes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/fullScientificName</IRI>
+        <Literal xml:lang="it">Il nome scientifico completo in latino che include anche la paternità, data dalla combinazione di autore e anno.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/fullScientificName</IRI>
+        <Literal xml:lang="en">The complete scientific name in Latin including the authorship information (author, year).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/fullScientificName</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/fullScientificName</IRI>
+        <Literal xml:lang="en">full scientific name (with author)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/fullScientificName</IRI>
+        <Literal xml:lang="it">nome scientifico completo (con autore)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasAcceptedName</IRI>
+        <Literal xml:lang="en">Property used to represent the currently valid (zoological) or accepted (botanical) scientific name for a taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasAcceptedName</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per rappresentare il nome scientifico attualmente valido (zoologico) o accettato (botanico) di un taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasAcceptedName</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasAcceptedName</IRI>
+        <Literal xml:lang="it">ha nome valido/accettato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasAcceptedName</IRI>
+        <Literal xml:lang="en">has accepted name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasChild</IRI>
+        <Literal xml:lang="en">Property that allows representing the direct child taxon in a classification.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasChild</IRI>
+        <Literal xml:lang="it">Proprietà che consente di rappresentare il taxon diretto inferiore in una classification.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasChild</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasChild</IRI>
+        <Literal xml:lang="it">ha taxon inferiore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasChild</IRI>
+        <Literal xml:lang="en">has child taxon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasParent</IRI>
+        <Literal xml:lang="en">Property that allows representing the direct parent taxon in a classification. The parent of a species is usually a genus; the parent of a genus is usually a family, and so on.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasParent</IRI>
+        <Literal xml:lang="it">Proprietà che consente di rappresentare il taxon diretto superiore in una classificatione. Il taxon diretto superiore di una specie è di solito il genere, quello del genere è la famiglia e così via.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasParent</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasParent</IRI>
+        <Literal xml:lang="it">ha taxon superiore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasParent</IRI>
+        <Literal xml:lang="en">has parent taxon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasStatus</IRI>
+        <Literal xml:lang="en">Property used to connect the taxon name with its status (e.g., accepted, unaccepted).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasStatus</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per collegare il nome del taxon con il suo stato (e.g., accettato, non accettato).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasStatus</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasStatus</IRI>
+        <Literal xml:lang="it">ha stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasStatus</IRI>
+        <Literal xml:lang="en">has status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasSynonym</IRI>
+        <Literal xml:lang="en">Property used to specify synonymity relations between taxon names.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasSynonym</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per specificare relazioni di sinonimia tra nomi di taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasSynonym</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasSynonym</IRI>
+        <Literal xml:lang="it">ha sinonimo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasSynonym</IRI>
+        <Literal xml:lang="en">has synonym</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasSynonymName</IRI>
+        <Literal xml:lang="en">Proprietà used to connect the taxon with its names considered synonyms.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasSynonymName</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per collegare il taxon con i suoi nomi considerati sinonimi.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasSynonymName</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasSynonymName</IRI>
+        <Literal xml:lang="it">ha nome sinonimo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasSynonymName</IRI>
+        <Literal xml:lang="en">has synonym name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasUnacceptedReason</IRI>
+        <Literal xml:lang="en">Property used to specify the motivation for which a name is not accepted for a taxon name.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasUnacceptedReason</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per specificare il motivo per cui un nome non è accettato per un nome di taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasUnacceptedReason</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasUnacceptedReason</IRI>
+        <Literal xml:lang="it">ha motivo non accettato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasUnacceptedReason</IRI>
+        <Literal xml:lang="en">ha unaccepted reason</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isDenotedBy</IRI>
+        <Literal xml:lang="en">Inverse property of &apos;denotes&apos; that allows one to specify the name for a taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isDenotedBy</IRI>
+        <Literal xml:lang="it">Proprietà inversa di &apos;definito/denotato&apos; che consente di specificare il nome per un taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/isDenotedBy</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isDenotedBy</IRI>
+        <Literal xml:lang="en">is denoted by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isDenotedBy</IRI>
+        <Literal xml:lang="it">è definito/denotato da</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isOfRank</IRI>
+        <Literal xml:lang="en">Property used to specify the rank in a taxonomic classification for the taxon name.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isOfRank</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per specificare il rango in una classificazione tassonomica per un nome di taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/isOfRank</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isOfRank</IRI>
+        <Literal xml:lang="en">is of rank</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isOfRank</IRI>
+        <Literal xml:lang="it">è di rango</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isSynonymOf</IRI>
+        <Literal xml:lang="en">Inverse property of &apos;has synonym&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isSynonymOf</IRI>
+        <Literal xml:lang="it">Proprietà inversa di &apos;ha sinonimo&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/isSynonymOf</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isSynonymOf</IRI>
+        <Literal xml:lang="en">is synonym of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isSynonymOf</IRI>
+        <Literal xml:lang="it">è sinonimo di</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/scientificName</IRI>
+        <Literal xml:lang="it">Il nome scientifico in latino che non include le informazioni sulla paternità (autore, anno)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/scientificName</IRI>
+        <Literal xml:lang="en">The scientific name in Latin that does not include information on the authorship (author, year).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/scientificName</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/scientificName</IRI>
+        <Literal xml:lang="it">nome scientifico (senza autore)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/scientificName</IRI>
+        <Literal xml:lang="en">scientific name (without author)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/vernacularName</IRI>
+        <Literal xml:lang="it">Il nome comune espresso nelle varie lingue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/vernacularName</IRI>
+        <Literal xml:lang="en">The common name expressed in various languages.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/vernacularName</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/vernacularName</IRI>
+        <Literal xml:lang="it">nome comune</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/vernacularName</IRI>
+        <Literal xml:lang="en">vernacular name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://aphia.org/resource/organisation/dv</IRI>
+        <Literal xml:lang="nl">Digitaal Vlaanderen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://aphia.org/resource/organisation/dv</IRI>
+        <Literal xml:lang="en">Digital Flanders</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://aphia.org/resource/organisation/dv</IRI>
+        <Literal xml:lang="nl">Digitaal Vlaanderen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://aphia.org/resource/organisation/dv</IRI>
+        <Literal xml:lang="en">Digital Flanders</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
