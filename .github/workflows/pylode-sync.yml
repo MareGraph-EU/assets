@@ -41,6 +41,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git add ontologies/**/*.html
           git commit -m "automated sync of ontology.html output from pylode" -a
 
       - name: push changes
