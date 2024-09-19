@@ -26,11 +26,12 @@ jobs:
           pip install pylode==2.13.2
 
       - name: run pylode
-        run: pylode -i ontologies/attribute-trait/latest/attribute-trait.ttl -o ontologies/attribute-trait/latest/attribute-trait.html -l en
-        run: pylode -i ontologies/distribution/latest/distribution.ttl -o ontologies/distribution/latest/distribution.html -l en
-        run: pylode -i ontologies/media/latest/media.ttl -o ontologies/media/latest/media.html -l en
-        run: pylode -i ontologies/taxon-name/latest/taxon-name.ttl -o ontologies/taxon-name/latest/taxon-name.html -l en
-        run: pylode -i ontologies/top-level/latest/top-level.ttl -o ontologies/top-level/latest/top-level.html -l en
+        run: |
+          pylode -i ontologies/attribute-trait/latest/attribute-trait.ttl -o ontologies/attribute-trait/latest/attribute-trait.html -l en
+          pylode -i ontologies/distribution/latest/distribution.ttl -o ontologies/distribution/latest/distribution.html -l en
+          pylode -i ontologies/media/latest/media.ttl -o ontologies/media/latest/media.html -l en
+          pylode -i ontologies/taxon-name/latest/taxon-name.ttl -o ontologies/taxon-name/latest/taxon-name.html -l en
+          pylode -i ontologies/top-level/latest/top-level.ttl -o ontologies/top-level/latest/top-level.html -l en
 
       - name: commit files
         run: |
