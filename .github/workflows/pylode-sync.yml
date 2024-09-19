@@ -27,11 +27,15 @@ jobs:
 
       - name: run pylode
         run: |
-          pylode -i ontologies/attribute-trait/latest/attribute-trait.ttl -o ontologies/attribute-trait/latest/attribute-trait.html -l en
-          pylode -i ontologies/distribution/latest/distribution.ttl -o ontologies/distribution/latest/distribution.html -l en
-          pylode -i ontologies/media/latest/media.ttl -o ontologies/media/latest/media.html -l en
-          pylode -i ontologies/taxon-name/latest/taxon-name.ttl -o ontologies/taxon-name/latest/taxon-name.html -l en
-          pylode -i ontologies/top-level/latest/top-level.ttl -o ontologies/top-level/latest/top-level.html -l en
+          for ontology in attribute-trait distribution media taxon-name top-level; do
+            input="ontologies/$ontology/latest/$ontology.ttl"
+            output="ontologies/$ontology/latest/$ontology.html"
+            {
+              pylode -i "$input" -o "$output" -l en
+            } || {
+              echo "Failed to process $input"
+            }
+          done
 
       - name: commit files
         run: |
