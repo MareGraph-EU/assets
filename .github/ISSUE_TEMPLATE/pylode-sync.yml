@@ -1,0 +1,45 @@
+name: publish-pylode-html
+
+on:
+  #schedule:
+  #  - cron: '0 12 * * *' # runs at 12:00 UTC everyday
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content to github runner
+
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8.10" # install the python version needed
+
+      - name: install python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install pylode==2.13.2
+
+      - name: run pylode
+        run: pylode -i ontologies/attribute-trait/latest/attribute-trait.ttl -o ontologies/attribute-trait/latest/attribute-trait.html -l en
+        run: pylode -i ontologies/distribution/latest/distribution.ttl -o ontologies/distribution/latest/distribution.html -l en
+        run: pylode -i ontologies/media/latest/media.ttl -o ontologies/media/latest/media.html -l en
+        run: pylode -i ontologies/taxon-name/latest/taxon-name.ttl -o ontologies/taxon-name/latest/taxon-name.html -l en
+        run: pylode -i ontologies/top-level/latest/top-level.ttl -o ontologies/top-level/latest/top-level.html -l en
+
+      - name: commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "automated sync of ontology.html output from pylode" -a
+
+      - name: push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
