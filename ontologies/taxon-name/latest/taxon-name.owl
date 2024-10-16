@@ -38,6 +38,10 @@
         <Literal xml:lang="en">This is the ontology of taxon names and all taxonomic information, as available from the WoRMS system. It imports the top-level ontology of the APHIA network of ontologies, and is aligned to skos-xl.</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <Literal xml:lang="nl">Dit is de ontologie van taxanamen en alle taxonomische informatie zoals beschikbaar in het WoRMS-systeem. Het importeert de APHIA top-level ontologie en is afgestemd op skos-xl.</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:issued"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-08-30</Literal>
     </Annotation>
@@ -66,12 +70,20 @@
         <Literal xml:lang="en">APHIA - Taxon names ontology</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <Literal xml:lang="nl">APHIA - Ontologie van taxanamen</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal xml:lang="it">Questa è l&apos;ontologia dei nomi dei taxon e di tutte le informazione tassonomiche come disponibili dal sistema WoRMS. Essa importa l&apos;ontologia di primo livello top-level ed è allineata a skos-xl.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal xml:lang="en">This is the ontology of taxon names and all taxonomic information as available from the WoRMS system. It imports the top-level ontology of the APHIA network of ontologies, and is aligned to skos-xl.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="nl">Dit is de ontologie van taxanamen en alle taxonomische informatie zoals beschikbaar in het WoRMS-systeem. Het importeert de APHIA top-level ontologie en is afgestemd op skos-xl.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -82,12 +94,20 @@
         <Literal xml:lang="en">APHIA - Taxon names ontology</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="nl">APHIA - Ontologie van taxanamen</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <Literal xml:lang="en">Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; changed the name of the ontology from taxa-name to taxon-name; introduced some alignments to Darwin Core for some properties; changed some definitions (e.g., authorship).</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <Literal xml:lang="it">Seconda versione 0.2 - cambiati tutti gli URI da w3id.org/ a aphia.org/; cambiato il nome dell&apos;ontologia da taxa-name a taxon-name; introdotti alcuni allineamenti a Darwin core per alcune proprietà; cambiate alcune definizioni (e.g., authorship).</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="nl">Tweede versie 0.2 - URI's gewijzigd van w3id.org/ naar aphia.org/; de naam van de ontologie gewijzigd van taxanaam in taxonnaam; enkele alignaties op Darwin Core geïntroduceerd voor sommige eigenschappen; enkele definities (bijv. auteurschap) gewijzigd.</Literal>
     </Annotation>
     <Declaration>
         <Class abbreviatedIRI="dct:LinguisticSystem"/>
@@ -694,6 +714,11 @@
         <Literal xml:lang="en">The particular level in a taxonomic classification that a name occupies. Examples are: species, family, genus, subspecies, etc. The indivuals of this class can be concepts of a controlled vocabulary.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Rank</IRI>
+        <Literal xml:lang="nl">Het specifieke niveau in een taxonomische classificatie die een naam inneemt. Voorbeelden zijn: soort, familie, geslacht, ondersoort, enz. De individuen van deze klasse kunnen concepten van een gecontroleerde woordenlijst zijn.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/Rank</IRI>
         <IRI></IRI>
@@ -702,6 +727,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/Rank</IRI>
         <Literal xml:lang="it">Rango</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Rank</IRI>
+        <Literal xml:lang="nl">Rang</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -719,6 +749,11 @@
         <Literal xml:lang="en">The status of the use of the taxon name (usually a taxonomic opinion).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Status</IRI>
+        <Literal xml:lang="nl">De status van het gebruik van de taxonnaam (meestal een taxonomisch advies)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/Status</IRI>
         <IRI></IRI>
@@ -734,6 +769,11 @@
         <Literal xml:lang="en">Status</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Status</IRI>
+        <Literal xml:lang="nl">Status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/Taxon</IRI>
         <Literal xml:lang="en">A group of organisms asserted by taxonomists to form a natural cohesive biological unit.</Literal>
@@ -742,6 +782,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/Taxon</IRI>
         <Literal xml:lang="it">Un gruppo di organismi che, secondo i tassonomisti, formano un&apos;unità biologica naturale coesa.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Taxon</IRI>
+        <Literal xml:lang="nl">Een groep organismen die, volgens taxonomen, een natuurlijke samenhangende biologische eenheid vormen.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -757,6 +802,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/Taxon</IRI>
         <Literal xml:lang="it">Taxon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Taxon</IRI>
+        <Literal xml:lang="nl">Taxon</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
@@ -779,6 +829,11 @@
         <Literal xml:lang="it">Nome di un particolare taxon di qualsiasi rango (ad esempio, un genere, una specie, una famiglia, ecc.). Può essere accettato/valido o meno. L&apos;autore del taxon è spesso incluso quando si indica un nome di taxon, in quanto può aiutare a distinguere tra diversi usi dello stesso nome (come gli omonimi).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TaxonName</IRI>
+        <Literal xml:lang="nl">Een naam van een bepaald taxon van om het even welke rang (bv. een genus, een soort, een familie, enz.). Deze kan geaccepteerd/geldig zijn of niet. De taxonauteur wordt vaak vermeld bij het aangeven van een taxonnaam, omdat het kan helpen onderscheid te maken tussen verschillende toepassingen van dezelfde naam (zoals homoniemen).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/TaxonName</IRI>
         <IRI></IRI>
@@ -792,6 +847,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/TaxonName</IRI>
         <Literal xml:lang="en">Taxon Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TaxonName</IRI>
+        <Literal xml:lang="nl">Taxon Naam</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
@@ -819,6 +879,11 @@
         <Literal xml:lang="it">Motivazione per cui un nome di un determinato taxon viene giudicato non accettato o non valido. Gli individui di questa classe possono essere concetti di uno specifico vocabolario controllato con valori come: sinonimo, errata applicazione, combinazione originale, nuova combinazione, ecc.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/UnacceptedReason</IRI>
+        <Literal xml:lang="nl">Een motivatie/uitleg waarom een bepaalde taxonnaam ongeldig of niet geaccepteerd wordt geacht. De individuen van deze klasse kunnen concepten zijn van een specifieke gecontroleerde vocabularium met waarden als: synoniem, verkeerd toegepast, originele combinatie, nieuwe combinatie, enz.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/UnacceptedReason</IRI>
         <IRI></IRI>
@@ -834,6 +899,11 @@
         <Literal xml:lang="en">Unaccepted Reason</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/UnacceptedReason</IRI>
+        <Literal xml:lang="nl">Niet-geaccepteerd Reden</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/VernacularName</IRI>
         <Literal xml:lang="en">A name other than a taxon name (scientific name) that is commonly used to refer to a species or other taxon. Examples are salmon, rainbow trout, acciuga etc. The language (e.g., English, Italian, etc.) is usually indicated for each vernacular name.</Literal>
@@ -842,6 +912,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/VernacularName</IRI>
         <Literal xml:lang="it">Un nome diverso dal nome del taxon (nome scientifico) che viene comunemente usato per indicare una specie o un altro taxon. Esempi sono il salmone, la trota iridea, l&apos;acciuga ecc. Per ogni nome comune viene solitamente indicata la lingua (ad esempio, inglese, italiano, ecc.).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/VernacularName</IRI>
+        <Literal xml:lang="nl">Een naam, anders dan een taxonnaam (wetenschappelijke naam), die algemeen gebruikt wordt om te verwijzen naar een soort of ander taxon. Voorbeelden zijn zalm, regenboogforel, acciuga enz. De taal (bijv. Engels, Italiaans, enz.) wordt meestal aangegeven voor elke vernaculaire naam.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -859,6 +934,11 @@
         <Literal xml:lang="en">Vernacular Name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/VernacularName</IRI>
+        <Literal xml:lang="nl">Vernaculaire naam</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/aphiaID</IRI>
         <Literal xml:lang="it">Codice univoco e persistente nel sistema WoRMS.</Literal>
@@ -867,6 +947,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/aphiaID</IRI>
         <Literal xml:lang="en">Unique and persistent code within WoRMS.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/aphiaID</IRI>
+        <Literal xml:lang="nl">Unieke en persistente code in WoRMS.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -884,6 +969,11 @@
         <Literal xml:lang="it">identificativo aphia</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/aphiaID</IRI>
+        <Literal xml:lang="nl">aphia identificatie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/authorship</IRI>
         <Literal xml:lang="it">Le informazioni sulla paternità del nome scientifico, espresse sottoforma di stringa, formattate secondo le convenzioni del codice nomenclaturale applicabile.</Literal>
@@ -894,6 +984,11 @@
         <Literal xml:lang="en">The authorship information, expressed as a string, for the scientific name, formatted according to the conventions of the applicable nomenclatural code.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/authorship</IRI>
+        <Literal xml:lang="nl">De auteursinformatie, uitgedrukt als een string, voor de wetenschappelijke naam, geformatteerd volgens de conventies van de toepasselijke nomenclatuurcode.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/authorship</IRI>
         <IRI></IRI>
@@ -902,6 +997,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/authorship</IRI>
         <Literal xml:lang="en">authorship</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/authorship</IRI>
+        <Literal xml:lang="nl">auteurschap</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -919,6 +1019,11 @@
         <Literal xml:lang="it">Proprietà utilizzata per definire un nome per un taxon.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/denotes</IRI>
+        <Literal xml:lang="nl">Eigenschap die wordt gebruikt om een naam voor een taxon te definiëren.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/denotes</IRI>
         <IRI></IRI>
@@ -934,6 +1039,11 @@
         <Literal xml:lang="en">denotes</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/denotes</IRI>
+        <Literal xml:lang="nl">definieert</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/fullScientificName</IRI>
         <Literal xml:lang="it">Il nome scientifico completo in latino che include anche la paternità, data dalla combinazione di autore e anno.</Literal>
@@ -942,6 +1052,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/fullScientificName</IRI>
         <Literal xml:lang="en">The complete scientific name in Latin including the authorship information (author, year).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/fullScientificName</IRI>
+        <Literal xml:lang="nl">De volledige wetenschappelijke naam in het Latijn, met informatie over het auteurschap (auteur, jaar).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -959,6 +1074,11 @@
         <Literal xml:lang="it">nome scientifico completo (con autore)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/fullScientificName</IRI>
+        <Literal xml:lang="nl">volledige wetenschappelijke naam (met auteur)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasAcceptedName</IRI>
         <Literal xml:lang="en">Property used to represent the currently valid (zoological) or accepted (botanical) scientific name for a taxon.</Literal>
@@ -967,6 +1087,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasAcceptedName</IRI>
         <Literal xml:lang="it">Proprietà utilizzata per rappresentare il nome scientifico attualmente valido (zoologico) o accettato (botanico) di un taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasAcceptedName</IRI>
+        <Literal xml:lang="nl">Eigenschap gebruikt om de huidige geldige (zoölogische) of aanvaarde (botanische) wetenschappelijke naam voor een taxon weer te geven.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -984,6 +1109,11 @@
         <Literal xml:lang="en">has accepted name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasAcceptedName</IRI>
+        <Literal xml:lang="nl">heeft geaccepteerde naam</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasChild</IRI>
         <Literal xml:lang="en">Property that allows representing the direct child taxon in a classification.</Literal>
@@ -992,6 +1122,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasChild</IRI>
         <Literal xml:lang="it">Proprietà che consente di rappresentare il taxon diretto inferiore in una classification.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasChild</IRI>
+        <Literal xml:lang="nl">Eigenschap die toelaat het directe lagere taxon in een classificatie weer te geven.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -1009,6 +1144,11 @@
         <Literal xml:lang="en">has child taxon</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasChild</IRI>
+        <Literal xml:lang="nl">heeft lager taxon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasParent</IRI>
         <Literal xml:lang="en">Property that allows representing the direct parent taxon in a classification. The parent of a species is usually a genus; the parent of a genus is usually a family, and so on.</Literal>
@@ -1017,6 +1157,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasParent</IRI>
         <Literal xml:lang="it">Proprietà che consente di rappresentare il taxon diretto superiore in una classificatione. Il taxon diretto superiore di una specie è di solito il genere, quello del genere è la famiglia e così via.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasParent</IRI>
+        <Literal xml:lang="nl">Eigenschap die toelaat het directe hogere taxon in een classificatie weer te geven. De ouder van een soort is meestal een geslacht; de ouder van een geslacht is meestal een familie, enzovoort.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -1034,6 +1179,11 @@
         <Literal xml:lang="en">has parent taxon</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasParent</IRI>
+        <Literal xml:lang="nl">heeft hoger taxon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasStatus</IRI>
         <Literal xml:lang="en">Property used to connect the taxon name with its status (e.g., accepted, unaccepted).</Literal>
@@ -1042,6 +1192,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasStatus</IRI>
         <Literal xml:lang="it">Proprietà utilizzata per collegare il nome del taxon con il suo stato (e.g., accettato, non accettato).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasStatus</IRI>
+        <Literal xml:lang="nl">Eigenschap gebruikt om de taxonnaam te koppelen aan zijn status (bijv. geaccepteerd, niet geaccepteerd).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -1059,6 +1214,11 @@
         <Literal xml:lang="en">has status</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasStatus</IRI>
+        <Literal xml:lang="nl">heeft status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasSynonym</IRI>
         <Literal xml:lang="en">Property used to specify synonymity relations between taxon names.</Literal>
@@ -1067,6 +1227,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasSynonym</IRI>
         <Literal xml:lang="it">Proprietà utilizzata per specificare relazioni di sinonimia tra nomi di taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasSynonym</IRI>
+        <Literal xml:lang="nl">Eigenschap gebruikt om synoniemenrelaties tussen taxonnamen te specificeren.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -1084,6 +1249,11 @@
         <Literal xml:lang="en">has synonym</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasSynonym</IRI>
+        <Literal xml:lang="nl">heeft synoniem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasSynonymName</IRI>
         <Literal xml:lang="en">Proprietà used to connect the taxon with its names considered synonyms.</Literal>
@@ -1092,6 +1262,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasSynonymName</IRI>
         <Literal xml:lang="it">Proprietà utilizzata per collegare il taxon con i suoi nomi considerati sinonimi.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasSynonymName</IRI>
+        <Literal xml:lang="nl">Eigenschap gebruikt om het taxon te koppelen aan zijn namen die als synoniemen worden beschouwd.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -1109,6 +1284,11 @@
         <Literal xml:lang="en">has synonym name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasSynonymName</IRI>
+        <Literal xml:lang="nl">heeft synoniem naam</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasUnacceptedReason</IRI>
         <Literal xml:lang="en">Property used to specify the motivation for which a name is not accepted for a taxon name.</Literal>
@@ -1117,6 +1297,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasUnacceptedReason</IRI>
         <Literal xml:lang="it">Proprietà utilizzata per specificare il motivo per cui un nome non è accettato per un nome di taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasUnacceptedReason</IRI>
+        <Literal xml:lang="nl">Eigenschap gebruikt om de motivatie te specificeren waarvoor een naam niet wordt geaccepteerd voor een taxonnaam.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -1131,7 +1316,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/hasUnacceptedReason</IRI>
-        <Literal xml:lang="en">ha unaccepted reason</Literal>
+        <Literal xml:lang="en">has unaccepted reason</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasUnacceptedReason</IRI>
+        <Literal xml:lang="nl">heeft niet-geaccepteerd reden</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1142,6 +1332,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/isDenotedBy</IRI>
         <Literal xml:lang="it">Proprietà inversa di &apos;definito/denotato&apos; che consente di specificare il nome per un taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isDenotedBy</IRI>
+        <Literal xml:lang="nl">Inverse eigenschap van 'definieert' die toelaat de naam van een taxon te definiëren.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -1159,6 +1354,11 @@
         <Literal xml:lang="it">è definito/denotato da</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isDenotedBy</IRI>
+        <Literal xml:lang="nl">is gedefinieerd door</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/isOfRank</IRI>
         <Literal xml:lang="en">Property used to specify the rank in a taxonomic classification for the taxon name.</Literal>
@@ -1167,6 +1367,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/isOfRank</IRI>
         <Literal xml:lang="it">Proprietà utilizzata per specificare il rango in una classificazione tassonomica per un nome di taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isOfRank</IRI>
+        <Literal xml:lang="nl">Eigenschap gebruikt om de taxonnaam te koppelen aan zijn rang in een taxonomische classificatie.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -1184,6 +1389,11 @@
         <Literal xml:lang="it">è di rango</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isOfRank</IRI>
+        <Literal xml:lang="nl">heeft rang</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/isSynonymOf</IRI>
         <Literal xml:lang="en">Inverse property of &apos;has synonym&apos;.</Literal>
@@ -1192,6 +1402,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/isSynonymOf</IRI>
         <Literal xml:lang="it">Proprietà inversa di &apos;ha sinonimo&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isSynonymOf</IRI>
+        <Literal xml:lang="nl">Inverse eigenschap van 'heeft synoniem'</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -1209,6 +1424,11 @@
         <Literal xml:lang="it">è sinonimo di</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isSynonymOf</IRI>
+        <Literal xml:lang="nl">is synoniem van</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/scientificName</IRI>
         <Literal xml:lang="it">Il nome scientifico in latino che non include le informazioni sulla paternità (autore, anno)</Literal>
@@ -1217,6 +1437,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/scientificName</IRI>
         <Literal xml:lang="en">The scientific name in Latin that does not include information on the authorship (author, year).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/scientificName</IRI>
+        <Literal xml:lang="nl">De wetenschappelijke naam in het Latijn zonder informatie over het auteurschap (auteur, jaar)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -1234,6 +1459,11 @@
         <Literal xml:lang="en">scientific name (without author)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/scientificName</IRI>
+        <Literal xml:lang="nl">wetenschappelijke naam (zonder auteur)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/vernacularName</IRI>
         <Literal xml:lang="it">Il nome comune espresso nelle varie lingue</Literal>
@@ -1242,6 +1472,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/vernacularName</IRI>
         <Literal xml:lang="en">The common name expressed in various languages.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/vernacularName</IRI>
+        <Literal xml:lang="nl">De inheemse/inlandse naam in verschillende talen.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -1257,6 +1492,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/vernacularName</IRI>
         <Literal xml:lang="en">vernacular name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/vernacularName</IRI>
+        <Literal xml:lang="nl">vernaculaire naam</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
