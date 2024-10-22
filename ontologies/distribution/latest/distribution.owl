@@ -39,6 +39,10 @@
         <Literal xml:lang="en">This is the (species) distribution ontology of the APHIA network of ontologies. It imports the top-level ontology of the APHIA network and it defines the documented distribution of the species as defined in the WoRMS database. The distribution is described according to various information: the geographical location, using the place name or latitude and longitude when single points can be identified, the source from which the distribution is documented, the origin of the species, the invasiveness of the species, the occurrence. It is also possible to indicate whether the distribution is marked as a type locality of the species. The ontology uses the Marine Region ontology for representing geographical locations</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <Literal xml:lang="nl">Dit is de (soorten) verspreidingsontologie van het APHIA-netwerk van ontologieën. De ontologie importeert de overkoepelende ontologie van het APHIA-netwerk en definieert de gedocumenteerde verspreiding van de soorten zoals gedefinieerd in de WoRMS-database. De verspreiding wordt beschreven aan de hand van verschillende informatie: de geografische locatie, met behulp van de plaatsnaam of de lengte- en breedtegraad wanneer afzonderlijke punten kunnen worden geïdentificeerd, de literaire bron van waaruit de verspreiding is gedocumenteerd, de herkomst van de soort, de invasiviteit van de soort, het voorkomen. Het is ook mogelijk om aan te geven of de verspreiding is gemarkeerd als een type localiteit van de soort. De ontologie maakt gebruik van de Marine Regions ontologie om geografische locaties weer te geven.</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:issued"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-08-30</Literal>
     </Annotation>
@@ -49,6 +53,10 @@
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:language"/>
         <IRI>http://publications.europa.eu/resource/authority/language/ITA</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+        <IRI>http://publications.europa.eu/resource/authority/language/NLD</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:license"/>
@@ -67,6 +75,10 @@
         <Literal xml:lang="it">APHIA - Ontologia sulla Distribuzione delle Specie</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <Literal xml:lang="nl">APHIA - (Soorten) Verspreidingsontologie</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal xml:lang="it">Questa è l&apos;ontologia della distribuzione (delle specie) della rete di ontologie APHIA. Importa l&apos;ontologia di primo livello top-level e definisce la distribuzione documentata delle specie come riportata nel database WoRMS. La distribuzione è descritta in base a diverse tipologie di informazioni: la posizione geografica, utilizzando il nome del luogo o la latitudine e la longitudine quando è possibile identificare singoli punti, la fonte da cui è documentata la distribuzione, l&apos;origine della specie, l&apos;invasività della specie, la presenza. È inoltre possibile indicare se la distribuzione è segnalata come &apos;località tipo&apos; della specie. L&apos;ontologia usa l&apos;ontologia delle regioni marine per rappresentare le posizioni geografiche.</Literal>
     </Annotation>
@@ -75,8 +87,16 @@
         <Literal xml:lang="en">This is the (species) distribution ontology of the APHIA network of ontologies. It imports the top-level ontology of the APHIA network and it defines the documented distribution of the species as defined in the WoRMS database. The distribution is described according to various information: the geographical location, using the place name or latitude and longitude when single points can be identified, the source from which the distribution is documented, the origin of the species, the invasiveness of the species, the occurrence. It is also possible to indicate whether the distribution is marked as a type locality of the species. The ontology uses the Marine Region ontology for representing geographical locations</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="nl">Dit is de (soorten) verspreidingsontologie van het APHIA-netwerk van ontologieën. De ontologie importeert de overkoepelende ontologie van het APHIA-netwerk en definieert de gedocumenteerde verspreiding van de soorten zoals gedefinieerd in de WoRMS-database. De verspreiding wordt beschreven aan de hand van verschillende informatie: de geografische locatie, met behulp van de plaatsnaam of de lengte- en breedtegraad wanneer afzonderlijke punten kunnen worden geïdentificeerd, de literaire bron van waaruit de verspreiding is gedocumenteerd, de herkomst van de soort, de invasiviteit van de soort, het voorkomen. Het is ook mogelijk om aan te geven of de verspreiding is gemarkeerd als een type localiteit van de soort. De ontologie maakt gebruik van de Marine Regions ontologie om geografische locaties weer te geven.</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <Literal xml:lang="en">APHIA - (Species) Distribution ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="nl">APHIA - (Soorten) Verspreidingsontologie</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -85,6 +105,10 @@
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <Literal xml:lang="en">Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; introduced some alignments to some properties of Darwin Core.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="nl">Tweede versie 0.2 - veranderde alle URI's van w3id.org/ naar aphia.org/; voegde enkele uitlijningen toe voor sommige Darwin Core-eigenschappen.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
@@ -401,6 +425,11 @@
         <Literal xml:lang="en">Geographical distribution of occurrence of marine and plant species</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Distribution</IRI>
+        <Literal xml:lang="nl">Geografische verspreiding van mariene en plantensoorten</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/Distribution</IRI>
         <IRI></IRI>
@@ -409,6 +438,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/Distribution</IRI>
         <Literal xml:lang="en">Distribution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Distribution</IRI>
+        <Literal xml:lang="nl">Verspreiding</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -431,6 +465,11 @@
         <Literal xml:lang="en">This class represents the propensity of an introduced species to invade a recipient ecosystem. The individuals of this class are represented by the concepts of the related controlled vocabulary that are: Invasive, Invasiveness Not Specified, Invasiveness Uncertain, Management recorded, Not invasive, Of concern.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Invasiveness</IRI>
+        <Literal xml:lang="nl">Deze klasse vertegenwoordigt de neiging van een geïntroduceerde soort om een ontvangend ecosysteem binnen te dringen. De individuen van deze klasse worden vertegenwoordigd door middel van begrippen uit verwante gecontroleerde vocabularia, met name: Invasief, Invasiviteit niet gespecificeerd, Invasiviteit onzeker, Beheer vastgelegd, Niet invasief, Van belang.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/Invasiveness</IRI>
         <IRI></IRI>
@@ -444,6 +483,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/Invasiveness</IRI>
         <Literal xml:lang="it">Invasività</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Invasiveness</IRI>
+        <Literal xml:lang="nl">Invasiviteit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="prov:wasDerivedFrom"/>
@@ -461,6 +505,11 @@
         <Literal xml:lang="en">This class represents the presence of species at locations of interest. The individuals of this class are represented by the concepts of the related controlled vocabulary.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Occurrence</IRI>
+        <Literal xml:lang="nl">Deze klasse vertegenwoordigt de aanwezigheid van soorten op interessante locaties. De individuen van deze klasse worden vertegenwoordigd door middel van de concepten uit verwante gecontroleerde vocabularia.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/Occurrence</IRI>
         <IRI></IRI>
@@ -474,6 +523,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/Occurrence</IRI>
         <Literal xml:lang="en">Occurrence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Occurrence</IRI>
+        <Literal xml:lang="nl">Voorkomen</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="prov:wasDerivedFrom"/>
@@ -491,6 +545,11 @@
         <Literal xml:lang="en">The origin of the introduced species. The individuals of this class are represented by the concepts of the related controlled vocabulary that are: Alien, Native, Native – Endemic, Native - Non-endemic, Origin uncertain, Origin unknown.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Origin</IRI>
+        <Literal xml:lang="nl">Deze klasse vertegenwoordigt de oorsprong van de geïntroduceerde soort. De individuen van deze klasse worden vertegenwoordigd door middel van de concepten uit verwante gecontroleerde vocabularia, met name: Alien, Native, Native - Endemic, Native - Non-endemic, Origin uncertain, Origin unknown.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/Origin</IRI>
         <IRI></IRI>
@@ -504,6 +563,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/Origin</IRI>
         <Literal xml:lang="it">Origine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Origin</IRI>
+        <Literal xml:lang="nl">Oorsprong</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="prov:wasDerivedFrom"/>
@@ -521,6 +585,11 @@
         <Literal xml:lang="it">Proprietà utilizzata per rappresentare l&apos;unità geografica di distribuzione della specie. Le unità geografiche sono specificate utilizzando il glossario delle regioni marine.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasArea</IRI>
+        <Literal xml:lang="nl">Eigenschap gebruikt om het geografische gebied van de verspreiding van de soort weer te geven. Geografische gebieden worden gespecificeerd aan de hand van de Marine Regions gazetteer.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/hasArea</IRI>
         <IRI></IRI>
@@ -536,6 +605,11 @@
         <Literal xml:lang="en">has area</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasArea</IRI>
+        <Literal xml:lang="nl">heeft gebied</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasDistribution</IRI>
         <Literal xml:lang="en">Property used to specify the distribution for a taxon.</Literal>
@@ -544,6 +618,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasDistribution</IRI>
         <Literal xml:lang="it">Proprietà utilizzata per specificare la distribuzione di un taxon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasDistribution</IRI>
+        <Literal xml:lang="nl">Eigenschap gebruikt om de verspreiding voor een taxon te specificeren.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -561,6 +640,11 @@
         <Literal xml:lang="en">has distribution</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasDistribution</IRI>
+        <Literal xml:lang="nl">heeft verspreiding</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasInvasiveness</IRI>
         <Literal xml:lang="en">Property used to represent the invasiveness of the species in its documented distribution.</Literal>
@@ -569,6 +653,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasInvasiveness</IRI>
         <Literal xml:lang="it">Proprietà utilizzata per rappresentare la proponsione all&apos;invasività della specie nella sua distribuzione documentata.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasInvasiveness</IRI>
+        <Literal xml:lang="nl">Eigenschap gebruikt om de invasiviteit van de soort in zijn gedocumenteerde verspreiding weer te geven.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -586,6 +675,11 @@
         <Literal xml:lang="en">has invasiveness</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasInvasiveness</IRI>
+        <Literal xml:lang="nl">heeft invasiviteit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasOccurrence</IRI>
         <Literal xml:lang="en">Property used to represent the occurrence of the species in its documented distribution.</Literal>
@@ -594,6 +688,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasOccurrence</IRI>
         <Literal xml:lang="it">Proprietà utilizzata per rappresentare la presenza della specie nella sua distribuzione documentata.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasOccurrence</IRI>
+        <Literal xml:lang="nl">Eigenschap gebruikt om het voorkomen van de soort in zijn gedocumenteerde verspreiding weer te geven.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -611,6 +710,11 @@
         <Literal xml:lang="en">has occurrence</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasOccurrence</IRI>
+        <Literal xml:lang="nl">heeft voorkomen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasOrigin</IRI>
         <Literal xml:lang="en">Property used to represent the origin of the species in its documented distribution.</Literal>
@@ -619,6 +723,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasOrigin</IRI>
         <Literal xml:lang="it">Proprietà utilizzata per rappresentare l&apos;origine della specie nella sua distribuzione documentata.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasOrigin</IRI>
+        <Literal xml:lang="nl">Eigenschap gebruikt om de oorsprong van de soort in zijn gedocumenteerde verspreiding weer te geven.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -636,6 +745,11 @@
         <Literal xml:lang="en">has origin</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasOrigin</IRI>
+        <Literal xml:lang="nl">heeft oorsprong</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/isDistributionOf</IRI>
         <Literal xml:lang="en">Inverse property of &apos;has distribution&apos; used to obtain information of the taxon from its distributions</Literal>
@@ -644,6 +758,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/isDistributionOf</IRI>
         <Literal xml:lang="it">Proprietà inversa di &apos;ha distribuzione&apos; usata per ottenere informazioni sul taxon dalle sue distribuzioni</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isDistributionOf</IRI>
+        <Literal xml:lang="nl">Inverse eigenschap van 'heeft verspreiding' gebruikt om informatie van het taxon te verkrijgen uit zijn verspreidingen</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -661,6 +780,11 @@
         <Literal xml:lang="it">è distribuzione di</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isDistributionOf</IRI>
+        <Literal xml:lang="nl">is de verspreiding van</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/isTypeLocality</IRI>
         <Literal xml:lang="en">Property used to mark mark a distribution as the type locality of the species.</Literal>
@@ -669,6 +793,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/isTypeLocality</IRI>
         <Literal xml:lang="it">Proprietà utilizzata per contrassegnare una distribuzione come &apos;località tipo&apos; della specie.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isTypeLocality</IRI>
+        <Literal xml:lang="nl">Eigenschap gebruikt om een verspreiding aan te duiden als de type localiteit van de soort.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -684,6 +813,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/isTypeLocality</IRI>
         <Literal xml:lang="it">è tipo località</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isTypeLocality</IRI>
+        <Literal xml:lang="nl">is type localiteit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

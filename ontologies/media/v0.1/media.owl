@@ -43,6 +43,10 @@
         <IRI>http://publications.europa.eu/resource/authority/language/ITA</IRI>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+        <IRI>http://publications.europa.eu/resource/authority/language/NLD</IRI>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:license"/>
         <IRI>http://publications.europa.eu/resource/authority/licence/CC_BY_4_0</IRI>
     </Annotation>
@@ -59,8 +63,16 @@
         <Literal xml:lang="en">This is the multimedia object for the species ontology of the MAREGRAPH network of ontologies. It imports the top-level ontology of MAREGRAPH, it directly reuses several Dublin Core elements and is aligned to Schema.org.</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="nl">Dit is het mediaobject voor de soorten ontologie van het MAREGRAPH-netwerk van ontologieën. Het importeert de top-level ontologie van MAREGRAPH, hergebruikt direct verschillende Dublin Core elementen en is afgestemd op Schema.org.</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <Literal xml:lang="en">MAREGRAPH - Media objects ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="nl">MAREGRAPH - Media objecten ontologie</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -72,7 +84,11 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal xml:lang="it">Versione preliminare 0.1</Literal>
+        <Literal xml:lang="nl">Preliminary version 0.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="it">Voorlopige versie 0.1</Literal>
     </Annotation>
     <Declaration>
         <Class abbreviatedIRI="dct:LicenseDocument"/>
@@ -301,9 +317,19 @@
         <Literal xml:lang="en">This is the multimedia object for the species ontology of the MAREGRAPH network of ontologies. It imports the top-level ontology of MAREGRAPH, it directly reuses several Dublin Core elements and is aligned to Schema.org.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="dct:description"/>
+        <NamedIndividual IRI=""/>
+        <Literal xml:lang="nl">Dit is het multimediaobject voor de soortenontologie van het MAREGRAPH-netwerk van ontologieën. Het importeert de ontologie op het hoogste niveau van MAREGRAPH, hergebruikt verschillende Dublin Core-elementen en is afgestemd op Schema.org.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="dct:title"/>
         <NamedIndividual IRI=""/>
         <Literal xml:lang="en">MAREGRAPH - Media objects ontology</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="dct:title"/>
+        <NamedIndividual IRI=""/>
+        <Literal xml:lang="nl">MAREGRAPH - Media objecten ontologie</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="dct:title"/>
@@ -373,6 +399,11 @@
         <Literal xml:lang="en">This class represents a specific type of media object, namely an image (e.g. a photo, a drawing).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ImageObject</IRI>
+        <Literal xml:lang="nl">Deze klasse vertegenwoordigt een specifiek type mediaobject, namelijk een afbeelding (bijv. een foto, een tekening).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/ImageObject</IRI>
         <IRI></IRI>
@@ -380,12 +411,17 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/ImageObject</IRI>
-        <Literal xml:lang="it">Image Object</Literal>
+        <Literal xml:lang="en">Image Object</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/ImageObject</IRI>
-        <Literal xml:lang="en">Oggetto Multimediale Immagine</Literal>
+        <Literal xml:lang="it">Oggetto Multimediale Immagine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ImageObject</IRI>
+        <Literal xml:lang="nl">Afbeelding object</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -398,6 +434,11 @@
         <Literal xml:lang="en">The class of the media (e.g., photos, drawings, videos, etc.) to be associated with the species.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/MediaObject</IRI>
+        <Literal xml:lang="nl">De klasse van de media (bijv. foto's, tekeningen, video's, enz.) die met de soort worden geassocieerd.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/MediaObject</IRI>
         <IRI></IRI>
@@ -406,6 +447,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/MediaObject</IRI>
         <Literal xml:lang="en">Media Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/MediaObject</IRI>
+        <Literal xml:lang="nl">Media Object</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -423,6 +469,11 @@
         <Literal xml:lang="en">The class of specific distributions of the media.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/MediaObjectDistribution</IRI>
+        <Literal xml:lang="nl">De klasse van specifieke distributies van de media.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/MediaObjectDistribution</IRI>
         <IRI></IRI>
@@ -436,6 +487,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/MediaObjectDistribution</IRI>
         <Literal xml:lang="en">Media Object Distribution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/MediaObjectDistribution</IRI>
+        <Literal xml:lang="nl">Media Object Distributie</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="prov:wasInfluencedBy"/>
@@ -453,6 +509,11 @@
         <Literal xml:lang="en">This class represents a specific type of media object, namely a video.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/VideoObject</IRI>
+        <Literal xml:lang="nl">Deze klasse vertegenwoordigt een specifiek type mediaobject, namelijk een video.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/VideoObject</IRI>
         <IRI></IRI>
@@ -468,9 +529,19 @@
         <Literal xml:lang="en">Video Object</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/VideoObject</IRI>
+        <Literal xml:lang="nl">Video Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasMediaObjectDistribution</IRI>
         <Literal xml:lang="en">Property used to specify a particular distribution of a media object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasMediaObjectDistribution</IRI>
+        <Literal xml:lang="nl">Eigenschap die wordt gebruikt om een bepaalde distributie van een mediaobject op te geven.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -493,9 +564,19 @@
         <Literal xml:lang="en">has media object distribution</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasMediaObjectDistribution</IRI>
+        <Literal xml:lang="nl">heeft media object distributie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/isMediaObjectDistributionOf</IRI>
         <Literal xml:lang="en">Inverse property of &apos;has media object distribution&apos; used to obtain information on the media object from its distribution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isMediaObjectDistributionOf</IRI>
+        <Literal xml:lang="nl">Inverse eigenschap van 'heeft distributie mediaobject' gebruikt om informatie te verkrijgen over het mediaobject uit zijn distributie.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -515,12 +596,22 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/isMediaObjectDistributionOf</IRI>
+        <Literal xml:lang="nl">is media object distributie van</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isMediaObjectDistributionOf</IRI>
         <Literal xml:lang="it">è distribuzione di oggetto multimediale di</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/isSubjectOf</IRI>
         <Literal xml:lang="en">Property used to specify the distribution for a taxon.</Literal>
+    </AnnotationAssertion>
+        <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isSubjectOf</IRI>
+        <Literal xml:lang="nl">Eigenschap die wordt gebruikt om de verdeling voor een taxon te specificeren.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -543,9 +634,19 @@
         <Literal xml:lang="en">has distribution</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isSubjectOf</IRI>
+        <Literal xml:lang="nl">heeft distributie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/size</IRI>
         <Literal xml:lang="en">Property used represent the dimension of the media distribution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/size</IRI>
+        <Literal xml:lang="nl">Eigenschap die wordt gebruikt om de grootte van de distributie van het mediaobject weer te geven.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -566,6 +667,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/size</IRI>
         <Literal xml:lang="en">size</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/size</IRI>
+        <Literal xml:lang="nl">afmeting</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

@@ -19,14 +19,18 @@
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-30</dct:issued>
         <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/NLD"/>
         <dct:license rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-10</dct:modified>
         <rdfs:comment xml:lang="it">Questa è l&apos;ontologia degli oggetti multimediali, associati alle specie, della rete di ontologie APHIA. Essa importa l&apos;ontologia di primo livello top-level, riutilizza direttamente diversi elementi Dublin Core ed è allineata a Schema.org.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the multimedia object for the species ontology of the APHIA network of ontologies. It imports the top-level ontology of APHIA, it directly reuses several Dublin Core elements and is aligned to Schema.org.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Dit is het mediaobject voor de soorten ontologie van het APHIA-netwerk van ontologieën. Het importeert de top-level ontologie van APHIA, hergebruikt direct verschillende Dublin Core elementen en is afgestemd op Schema.org.</rdfs:comment>
         <rdfs:label xml:lang="en">APHIA - Media objects ontology</rdfs:label>
         <rdfs:label xml:lang="it">APHIA - Ontologia degli oggetti multimediali</rdfs:label>
+        <rdfs:label xml:lang="nl">APHIA - Media objecten ontologie</rdfs:label>
         <owl:versionInfo xml:lang="en">Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; revised some modelling elements: eliminated MediaObjectDistribution.</owl:versionInfo>
         <owl:versionInfo xml:lang="it">Seconda versione 0.2 - cambiati gli URIs da w3id.org/ a aphia.org/; revisionati alcuni elementi di modellazione, in particolare eliminata la classe MediaObjectDistribution.</owl:versionInfo>
+        <owl:versionInfo xml:lang="nl">Tweede versie 0.2 - URI's gewijzigd van w3id.org/ naar aphia.org/; herziening van enkele modelleerelementen: MediaObjectDistribution verwijderd.</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -164,9 +168,11 @@
         <rdfs:range rdf:resource="https://aphia.org/ns/media/MediaObject"/>
         <rdfs:comment xml:lang="en">Property used to link the taxon to its media objects</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà utilizzata per collegare il taxon ai suoi oggetti multimediali.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Eigenschap gebruikt om het taxon aan zijn mediaobjecten te koppelen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/media"/>
         <rdfs:label xml:lang="en">is subject of</rdfs:label>
         <rdfs:label xml:lang="it">è soggetto di</rdfs:label>
+        <rdfs:label xml:lang="nl">is onderwerp van</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -243,9 +249,11 @@
         <owl:disjointWith rdf:resource="https://aphia.org/ns/media/VideoObject"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno specifico tipo di oggetto multimediale, ossia l&apos;immagine (e.g., una foto, un disegno).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a specific type of media object, namely an image (e.g. a photo, a drawing).</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Deze klasse vertegenwoordigt een specifiek type mediaobject, namelijk een afbeelding (bv. een foto, een tekening).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/media"/>
         <rdfs:label xml:lang="it">Image Object</rdfs:label>
         <rdfs:label xml:lang="en">Oggetto Multimediale Immagine</rdfs:label>
+        <rdfs:label xml:lang="nl">Afbeelding object</rdfs:label>
     </owl:Class>
     
 
@@ -294,9 +302,11 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">La classe degli oggetti multimediali (e.g., foto, disegni, video, ecc.) da associare alle specie.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class of the media (e.g., photos, drawings, videos, etc.) to be associated with the species.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">De klasse van mediaobjecten (bv. foto's, tekeningen, video's, enz.) die geassocieerd worden met de soort.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/media"/>
         <rdfs:label xml:lang="en">Media Object</rdfs:label>
         <rdfs:label xml:lang="it">Oggetto Multimediale</rdfs:label>
+        <rdfs:label xml:lang="nl">Media Object</rdfs:label>
     </owl:Class>
     
 
@@ -308,9 +318,11 @@
         <rdfs:subClassOf rdf:resource="https://schema.org/VideoObject"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno specifico tipo di oggetto multimediale, ossia il video.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a specific type of media object, namely a video.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Deze klasse vertegenwoordigt een specifiek type mediaobject, namelijk een video.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/media"/>
         <rdfs:label xml:lang="it">Oggetto Multimediale Video</rdfs:label>
         <rdfs:label xml:lang="en">Video Object</rdfs:label>
+        <rdfs:label xml:lang="nl">Video Object</rdfs:label>
     </owl:Class>
     
 

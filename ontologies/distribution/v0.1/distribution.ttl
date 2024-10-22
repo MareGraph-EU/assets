@@ -20,7 +20,8 @@
                                                            "This is the (species) distribution ontology of the MAREGRAPH network of ontologies. It imports the top-level ontology of the MAREGRAPH network and it defines the documented distribution of the species as defined in the WoRMS database. The distribution is described according to various information: the geographical location, using the place name or latitude and longitude when single points can be identified, the source from which the distribution is documented, the origin of the species, the invasiveness of the species, the occurrence. It is also possible to indicate whether the distribution is marked as a type locality of the species. The ontology uses the Marine Region ontology for representing geographical locations"@en ;
                                            dct:issued "2023-08-30"^^xsd:date ;
                                            dct:language <http://publications.europa.eu/resource/authority/language/ENG> ,
-                                                        <http://publications.europa.eu/resource/authority/language/ITA> ;
+                                                        <http://publications.europa.eu/resource/authority/language/ITA> ,
+                                                        <http://publications.europa.eu/resource/authority/language/NLD> ;
                                            dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
                                            dct:modified "2023-11-29"^^xsd:date ;
                                            dct:title "MAREGRAPH - (Species) Distribution ontology"@en ,

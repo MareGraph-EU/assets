@@ -15,11 +15,13 @@
                                                     <https://w3id.org/marine/resource/organisation/dv> ,
                                                     <https://w3id.org/marine/resource/organisation/vliz> ;
                                         dct:description "Questa è l'ontologia di primo livello (o primitiva) della rete di ontologie MAREGRAPH, utilizzata per allineare tutti gli elementi della rete a concetti fondazionali. Importa le ontologie fondazionali DUL - Dolce Ultra light e D0."@it ,
-                                                        "This is the top level ontology of the MAREGRAPH network of ontologies used to align all the elements of the network to foundational concepts. It imports DUL - Dolce Ultra light and D0 well-known foundational ontologies."@en ;
+                                                        "This is the top level ontology of the MAREGRAPH network of ontologies used to align all the elements of the network to foundational concepts. It imports DUL - Dolce Ultra light and D0 well-known foundational ontologies."@en ,
+                                                        "Dit is de overkoepelende ontologie van het APHIA-netwerk van ontologieën dat wordt gebruikt om alle elementen van het netwerk af te stemmen op basisbegrippen. Het importeert DUL - Dolce Ultra light en D0 bekende basisontologieën."@nl ;
                                         dct:issued "2023-08-30"^^xsd:date ;
                                         dct:modified "2023-11-29"^^xsd:date ;
                                         owl:versionInfo "Preliminary version 0.1"@en ,
-                                                        "Versione preliminare 0.1"@it .
+                                                        "Versione preliminare 0.1"@it ,
+                                                        "Voorlopige versie"@nl .
 
 #################################################################
 #    Annotation properties
@@ -80,7 +82,8 @@ dct:source rdf:type owl:ObjectProperty .
            rdfs:range :Person ;
            rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
            rdfs:label "ha autore"@it ,
-                      "has author"@en .
+                      "has author"@en ,
+                      "heeft auteur"@nl .
 
 
 ###  https://w3id.org/marine/ns/top-level/hasIdentifier
@@ -90,7 +93,8 @@ dct:source rdf:type owl:ObjectProperty .
                rdfs:range :Identifier ;
                rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
                rdfs:label "ha identifier"@it ,
-                          "has identifier"@en .
+                          "has identifier"@en ,
+                          "heeft identificatie"@nl .
 
 
 ###  https://w3id.org/marine/ns/top-level/hasType
@@ -100,7 +104,8 @@ dct:source rdf:type owl:ObjectProperty .
          rdfs:range :Type ;
          rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
          rdfs:label "ha tipo"@it ,
-                    "has type"@en .
+                    "has type"@en ,
+                    "heeft type"@nl .
 
 
 ###  https://w3id.org/marine/ns/top-level/hasUnitOfMeasure
@@ -110,7 +115,8 @@ dct:source rdf:type owl:ObjectProperty .
                   rdfs:range :UnitOfMeasure ;
                   rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
                   rdfs:label "ha unità di misura"@it ,
-                             "has unit of measure"@en .
+                             "has unit of measure"@en ,
+                             "heeft meeteenheid"@nl .
 
 
 ###  https://w3id.org/marine/ns/top-level/hasValue
@@ -120,7 +126,8 @@ dct:source rdf:type owl:ObjectProperty .
           rdfs:range :Value ;
           rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
           rdfs:label "ha valore"@it ,
-                     "has value"@en .
+                     "has value"@en ,
+                     "heeft waarde"@nl .
 
 
 ###  https://w3id.org/marine/ns/top-level/isAssignedBy
@@ -130,7 +137,8 @@ dct:source rdf:type owl:ObjectProperty .
               rdfs:range :System ;
               rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
               rdfs:label "is assigned by"@en ,
-                         "è assegnato da"@it .
+                         "è assegnato da"@it ,
+                         "is toegewezen door"@nl .
 
 
 #################################################################
@@ -152,7 +160,8 @@ dct:title rdf:type owl:DatatypeProperty .
       rdfs:range rdfs:Literal ;
       rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
       rdfs:label "name"@en ,
-                 "nome"@it .
+                 "nome"@it ,
+                 "naam"@nl .
 
 
 ###  https://w3id.org/marine/ns/top-level/value
@@ -162,7 +171,8 @@ dct:title rdf:type owl:DatatypeProperty .
        rdfs:range rdfs:Literal ;
        rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
        rdfs:label "valore"@it ,
-                  "value"@en .
+                  "value"@en ,
+                  "waarde"@nl .
 
 
 ###  https://w3id.org/marine/ns/top-level/year
@@ -171,7 +181,8 @@ dct:title rdf:type owl:DatatypeProperty .
       rdfs:domain owl:Thing ;
       rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
       rdfs:label "anno"@it ,
-                 "year"@en .
+                 "year"@en ,
+                 "jaar"@nl .
 
 
 #################################################################
@@ -215,7 +226,8 @@ foaf:Organization rdf:type owl:Class .
                             ] ;
             rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
             rdfs:label "Identificativo"@it ,
-                       "Identifier"@en .
+                       "Identifier"@en ,
+                       "Identificatie"@nl .
 
 
 ###  https://w3id.org/marine/ns/top-level/IdentifierType
@@ -224,7 +236,8 @@ foaf:Organization rdf:type owl:Class .
                                 :Type ;
                 rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
                 rdfs:label "Identifier Type"@en ,
-                           "Tipo di Identificativo"@it .
+                           "Tipo di Identificativo"@it ,
+                           "Type Identificatie"@nl .
 
 
 ###  https://w3id.org/marine/ns/top-level/Name
@@ -244,7 +257,8 @@ foaf:Organization rdf:type owl:Class .
                       ] ;
       rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
       rdfs:label "Name"@en ,
-                 "Nome"@it .
+                 "Nome"@it ,
+                 "Naam"@nl .
 
 
 ###  https://w3id.org/marine/ns/top-level/Person
@@ -253,7 +267,8 @@ foaf:Organization rdf:type owl:Class .
                         <http://www.w3.org/ns/person#Person> ;
         rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
         rdfs:label "Natural Person"@en ,
-                   "Persona Fisica"@it .
+                   "Persona Fisica"@it ,
+                   "Natuurlijk Persoon"@nl .
 
 
 ###  https://w3id.org/marine/ns/top-level/Source
@@ -261,7 +276,8 @@ foaf:Organization rdf:type owl:Class .
         rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject> ;
         rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
         rdfs:label "Sorgente"@it ,
-                   "Source"@en .
+                   "Source"@en ,
+                   "Bron"@nl .
 
 
 ###  https://w3id.org/marine/ns/top-level/System
@@ -276,7 +292,8 @@ foaf:Organization rdf:type owl:Class .
                         ] ;
         rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
         rdfs:label "Sistema"@it ,
-                   "System"@en .
+                   "System"@en ,
+                   "Systeem"@nl .
 
 
 ###  https://w3id.org/marine/ns/top-level/Type
@@ -284,14 +301,16 @@ foaf:Organization rdf:type owl:Class .
       rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ;
       rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
       rdfs:label "Tipo"@it ,
-                 "Type"@en .
+                 "Type"@en ,
+                 "Type"@nl .
 
 
 ###  https://w3id.org/marine/ns/top-level/UnitOfMeasure
 :UnitOfMeasure rdf:type owl:Class ;
                rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
                rdfs:label "Unit Of Measure"@en ,
-                          "Unità di Misura"@it .
+                          "Unità di Misura"@it ,
+                          "Meeteenheid"@nl .
 
 
 ###  https://w3id.org/marine/ns/top-level/Value
@@ -308,7 +327,8 @@ foaf:Organization rdf:type owl:Class .
                        ] ;
        rdfs:isDefinedBy <https://w3id.org/marine/ns/top-level> ;
        rdfs:label "Valore"@it ,
-                  "Value"@en .
+                  "Value"@en ,
+                  "Waarde"@nl .
 
 
 #################################################################
@@ -318,7 +338,8 @@ foaf:Organization rdf:type owl:Class .
 ###  https://w3id.org/marine/ns/top-level
 <https://w3id.org/marine/ns/top-level> rdf:type owl:NamedIndividual ;
                                        dct:title "MAREGRAPH - Ontologia di primo livello (primitiva o fondazionale)"@it ,
-                                                 "MAREGRAPH - Top level ontology"@en .
+                                                 "MAREGRAPH - Top level ontology"@en ,
+                                                 "MAREGRAPH - Overkoepelende ontologie"@nl .
 
 
 ###  https://w3id.org/marine/resource/organisation/dv

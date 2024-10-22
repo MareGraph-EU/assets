@@ -17,10 +17,12 @@
         <dct:creator rdf:resource="https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab"/>
         <dct:description xml:lang="it">Questa è l&apos;ontologia di primo livello (o primitiva) della rete di ontologie APHIA, utilizzata per allineare tutti gli elementi della rete a concetti fondazionali. Importa le ontologie fondazionali DUL - Dolce Ultra light e D0.</dct:description>
         <dct:description xml:lang="en">This is the top level ontology of the APHIA network of ontologies used to align all the elements of the network to foundational concepts. It imports DUL - Dolce Ultra light and D0 well-known foundational ontologies.</dct:description>
+        <dct:description xml:lang="nl">Dit is de overkoepelende ontologie van het APHIA-netwerk van ontologieën dat wordt gebruikt om alle elementen van het netwerk af te stemmen op basisbegrippen. Het importeert DUL - Dolce Ultra light en D0 bekende basisontologieën.</dct:description>
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-30</dct:issued>
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-10</dct:modified>
         <owl:versionInfo xml:lang="en">Second version of the ontology 0.2 - revision of the name of the network of ontologies, revision of metadata; added a reference to a controlled vocabulary.</owl:versionInfo>
         <owl:versionInfo xml:lang="it">Seconda versione dell&apos;ontologia 0.2 - revisione del nome della rete di ontologie, revisione dei metadati; aggiunto un riferimento a un vocabolario controllato.</owl:versionInfo>
+        <owl:versionInfo xml:lang="nl">Tweede versie van de ontologie 0.2 - herziening van de naam van het netwerk van ontologieën, herziening van metadata; een verwijzing naar een gecontroleerd vocabularium werd toegevoegd.</owl:versionInfo>
     </owl:Ontology>
 
 
@@ -127,6 +129,7 @@
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/top-level"/>
         <rdfs:label xml:lang="it">ha identifier</rdfs:label>
         <rdfs:label xml:lang="en">has identifier</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft identificatie</rdfs:label>
     </owl:ObjectProperty>
 
 
@@ -140,6 +143,7 @@
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/top-level"/>
         <rdfs:label xml:lang="it">ha tipo</rdfs:label>
         <rdfs:label xml:lang="en">has type</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft type</rdfs:label>
     </owl:ObjectProperty>
 
 
@@ -153,6 +157,7 @@
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/top-level"/>
         <rdfs:label xml:lang="it">ha unità di misura</rdfs:label>
         <rdfs:label xml:lang="en">has unit of measure</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft meeteenheid</rdfs:label>
     </owl:ObjectProperty>
 
 
@@ -166,6 +171,7 @@
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/top-level"/>
         <rdfs:label xml:lang="it">ha valore</rdfs:label>
         <rdfs:label xml:lang="en">has value</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft waarde</rdfs:label>
     </owl:ObjectProperty>
 
 
@@ -179,6 +185,7 @@
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/top-level"/>
         <rdfs:label xml:lang="en">is assigned by</rdfs:label>
         <rdfs:label xml:lang="it">è assegnato da</rdfs:label>
+        <rdfs:label xml:lang="nl">is toegewezen door</rdfs:label>
     </owl:ObjectProperty>
 
 
@@ -215,6 +222,7 @@
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/top-level"/>
         <rdfs:label xml:lang="en">name</rdfs:label>
         <rdfs:label xml:lang="it">nome</rdfs:label>
+        <rdfs:label xml:lang="nl">naam</rdfs:label>
     </owl:DatatypeProperty>
 
 
@@ -228,6 +236,7 @@
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/top-level"/>
         <rdfs:label xml:lang="it">valore</rdfs:label>
         <rdfs:label xml:lang="en">value</rdfs:label>
+        <rdfs:label xml:lang="nl">waarde</rdfs:label>
     </owl:DatatypeProperty>
 
 
@@ -240,6 +249,7 @@
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/top-level"/>
         <rdfs:label xml:lang="it">anno</rdfs:label>
         <rdfs:label xml:lang="en">year</rdfs:label>
+        <rdfs:label xml:lang="nl">jaar</rdfs:label>
     </owl:DatatypeProperty>
 
 
@@ -316,6 +326,7 @@
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/top-level"/>
         <rdfs:label xml:lang="it">Identificativo</rdfs:label>
         <rdfs:label xml:lang="en">Identifier</rdfs:label>
+        <rdfs:label xml:lang="nl">Identificatie</rdfs:label>
     </owl:Class>
 
 
@@ -328,6 +339,7 @@
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/top-level"/>
         <rdfs:label xml:lang="en">Identifier Type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di Identificativo</rdfs:label>
+        <rdfs:label xml:lang="nl">Type Identificatie</rdfs:label>
     </owl:Class>
 
 
@@ -357,6 +369,7 @@
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/top-level"/>
         <rdfs:label xml:lang="en">Name</rdfs:label>
         <rdfs:label xml:lang="it">Nome</rdfs:label>
+        <rdfs:label xml:lang="nl">Naam</rdfs:label>
     </owl:Class>
 
 
@@ -370,6 +383,7 @@
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/top-level"/>
         <rdfs:label xml:lang="en">Natural Person</rdfs:label>
         <rdfs:label xml:lang="it">Persona Fisica</rdfs:label>
+        <rdfs:label xml:lang="nl">Natuurlijk Persoon</rdfs:label>
     </owl:Class>
 
 
@@ -381,6 +395,7 @@
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/top-level"/>
         <rdfs:label xml:lang="it">Sorgente</rdfs:label>
         <rdfs:label xml:lang="en">Source</rdfs:label>
+        <rdfs:label xml:lang="nl">Bron</rdfs:label>
     </owl:Class>
 
 
@@ -403,6 +418,7 @@
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/top-level"/>
         <rdfs:label xml:lang="it">Sistema</rdfs:label>
         <rdfs:label xml:lang="en">System</rdfs:label>
+        <rdfs:label xml:lang="nl">Systeem</rdfs:label>
     </owl:Class>
 
 
@@ -414,6 +430,7 @@
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/top-level"/>
         <rdfs:label xml:lang="it">Tipo</rdfs:label>
         <rdfs:label xml:lang="en">Type</rdfs:label>
+        <rdfs:label xml:lang="nl">Type</rdfs:label>
     </owl:Class>
 
 
@@ -423,9 +440,11 @@
     <owl:Class rdf:about="https://aphia.org/ns/top-level/UnitOfMeasure">
         <rdfs:comment xml:lang="it">Si consiglia di utilizzare il seguente vocabolario controllato SKOS - unità di archiviazione dati approvate dal BODC: http://vocab.nerc.ac.uk/collection/P06/current/ per gli individui di questa classe.</rdfs:comment>
         <rdfs:comment xml:lang="en">We recommend to use the following SKOS controlled vocabulary - BODC-approved data storage units: http://vocab.nerc.ac.uk/collection/P06/current/ for the individuals of this class.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">We raden aan de volgende SKOS-gecontroleerde woordenlijst te gebruiken - BODC-goedgekeurde eenheden voor gegevensopslag: http://vocab.nerc.ac.uk/collection/P06/current/ voor de individuen van deze klasse.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/top-level"/>
         <rdfs:label xml:lang="en">Unit Of Measure</rdfs:label>
         <rdfs:label xml:lang="it">Unità di Misura</rdfs:label>
+        <rdfs:label xml:lang="nl">Meeteenheid</rdfs:label>
     </owl:Class>
 
 
@@ -450,6 +469,7 @@
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/top-level"/>
         <rdfs:label xml:lang="it">Valore</rdfs:label>
         <rdfs:label xml:lang="en">Value</rdfs:label>
+        <rdfs:label xml:lang="nl">Waarde</rdfs:label>
     </owl:Class>
 
 
