@@ -43,6 +43,10 @@
         <IRI>http://publications.europa.eu/resource/authority/language/ITA</IRI>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+        <IRI>http://publications.europa.eu/resource/authority/language/NLD</IRI>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:license"/>
         <IRI>http://publications.europa.eu/resource/authority/licence/CC_BY_4_0</IRI>
     </Annotation>
@@ -59,8 +63,16 @@
         <Literal xml:lang="en">This is the multimedia object for the species ontology of the APHIA network of ontologies. It imports the top-level ontology of APHIA, it directly reuses several Dublin Core elements and is aligned to Schema.org.</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="nl">Dit is het mediaobject voor de soorten ontologie van het APHIA-netwerk van ontologieën. Het importeert de top-level ontologie van APHIA, hergebruikt direct verschillende Dublin Core elementen en is afgestemd op Schema.org.</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <Literal xml:lang="en">APHIA - Media objects ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="nl">APHIA - Media objecten ontologie</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -69,6 +81,10 @@
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <Literal xml:lang="en">Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; revised some modelling elements: eliminated MediaObjectDistribution.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="nl">Tweede versie 0.2 - URI's gewijzigd van w3id.org/ naar aphia.org/; herziening van enkele modelleerelementen: MediaObjectDistribution verwijderd.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
@@ -268,6 +284,11 @@
         <Literal xml:lang="en">This class represents a specific type of media object, namely an image (e.g. a photo, a drawing).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ImageObject</IRI>
+        <Literal xml:lang="nl">Deze klasse vertegenwoordigt een specifiek type mediaobject, namelijk een afbeelding (bv. een foto, een tekening).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/ImageObject</IRI>
         <IRI></IRI>
@@ -283,6 +304,11 @@
         <Literal xml:lang="en">Oggetto Multimediale Immagine</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ImageObject</IRI>
+        <Literal xml:lang="nl">Afbeelding object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/MediaObject</IRI>
         <Literal xml:lang="it">La classe degli oggetti multimediali (e.g., foto, disegni, video, ecc.) da associare alle specie.</Literal>
@@ -293,6 +319,11 @@
         <Literal xml:lang="en">The class of the media (e.g., photos, drawings, videos, etc.) to be associated with the species.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/MediaObject</IRI>
+        <Literal xml:lang="nl">De klasse van mediaobjecten (bv. foto's, tekeningen, video's, enz.) die geassocieerd worden met de soort.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/MediaObject</IRI>
         <IRI></IRI>
@@ -301,6 +332,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/MediaObject</IRI>
         <Literal xml:lang="en">Media Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/MediaObject</IRI>
+        <Literal xml:lang="nl">Media Object</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -318,6 +354,11 @@
         <Literal xml:lang="en">This class represents a specific type of media object, namely a video.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/VideoObject</IRI>
+        <Literal xml:lang="nl">Deze klasse vertegenwoordigt een specifiek type mediaobject, namelijk een video.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/VideoObject</IRI>
         <IRI></IRI>
@@ -333,9 +374,19 @@
         <Literal xml:lang="en">Video Object</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/VideoObject</IRI>
+        <Literal xml:lang="nl">Video Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/isSubjectOf</IRI>
         <Literal xml:lang="en">Property used to link the taxon to its media objects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isSubjectOf</IRI>
+        <Literal xml:lang="nl">Eigenschap gebruikt om het taxon aan zijn mediaobjecten te koppelen.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -351,6 +402,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/isSubjectOf</IRI>
         <Literal xml:lang="en">is subject of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isSubjectOf</IRI>
+        <Literal xml:lang="nl">is onderwerp van</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

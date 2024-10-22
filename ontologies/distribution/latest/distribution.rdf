@@ -22,6 +22,7 @@
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-30</dct:issued>
         <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/NLD"/>
         <dct:license rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-10</dct:modified>
         <dct:title xml:lang="en">APHIA - (Species) Distribution ontology</dct:title>

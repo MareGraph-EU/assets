@@ -37,6 +37,10 @@
         <Literal xml:lang="en">This is the top level ontology of the APHIA network of ontologies used to align all the elements of the network to foundational concepts. It imports DUL - Dolce Ultra light and D0 well-known foundational ontologies.</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <Literal xml:lang="nl">Dit is de overkoepelende ontologie van het APHIA-netwerk van ontologieën dat wordt gebruikt om alle elementen van het netwerk af te stemmen op basisbegrippen. Het importeert DUL - Dolce Ultra light en D0 bekende basisontologieën.</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:issued"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-08-30</Literal>
     </Annotation>
@@ -51,6 +55,10 @@
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <Literal xml:lang="it">Seconda versione dell&apos;ontologia 0.2 - revisione del nome della rete di ontologie, revisione dei metadati; aggiunto un riferimento a un vocabolario controllato.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="nl">Tweede versie van de ontologie 0.2 - herziening van de naam van het netwerk van ontologieën, herziening van metadata; een verwijzing naar een gecontroleerd vocabularium werd toegevoegd.</Literal>
     </Annotation>
     <Declaration>
         <Class abbreviatedIRI="dct:Agent"/>
@@ -392,6 +400,11 @@
         <Literal xml:lang="en">Identifier</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Identifier</IRI>
+        <Literal xml:lang="nl">Identificatie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/IdentifierType</IRI>
         <IRI></IRI>
@@ -405,6 +418,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/IdentifierType</IRI>
         <Literal xml:lang="it">Tipo di Identificativo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/IdentifierType</IRI>
+        <Literal xml:lang="nl">Identificatie Type</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -422,6 +440,11 @@
         <Literal xml:lang="it">Nome</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Name</IRI>
+        <Literal xml:lang="nl">Naam</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/Person</IRI>
         <IRI></IRI>
@@ -435,6 +458,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/Person</IRI>
         <Literal xml:lang="it">Persona Fisica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Person</IRI>
+        <Literal xml:lang="nl">Natuurlijk Persoon</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -452,6 +480,11 @@
         <Literal xml:lang="en">Source</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Source</IRI>
+        <Literal xml:lang="nl">Bron</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/System</IRI>
         <IRI></IRI>
@@ -465,6 +498,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/System</IRI>
         <Literal xml:lang="en">System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/System</IRI>
+        <Literal xml:lang="nl">Systeem</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -482,6 +520,11 @@
         <Literal xml:lang="en">Type</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Type</IRI>
+        <Literal xml:lang="nl">Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/UnitOfMeasure</IRI>
         <Literal xml:lang="it">Si consiglia di utilizzare il seguente vocabolario controllato SKOS - unità di archiviazione dati approvate dal BODC: http://vocab.nerc.ac.uk/collection/P06/current/ per gli individui di questa classe.</Literal>
@@ -490,6 +533,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/UnitOfMeasure</IRI>
         <Literal xml:lang="en">We recommend to use the following SKOS controlled vocabulary - BODC-approved data storage units: http://vocab.nerc.ac.uk/collection/P06/current/ for the individuals of this class.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/UnitOfMeasure</IRI>
+        <Literal xml:lang="nl">We raden aan de volgende SKOS-gecontroleerde woordenlijst te gebruiken - BODC-goedgekeurde eenheden voor gegevensopslag: http://vocab.nerc.ac.uk/collection/P06/current/ voor de individuen van deze klasse.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -507,6 +555,11 @@
         <Literal xml:lang="it">Unità di Misura</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/UnitOfMeasure</IRI>
+        <Literal xml:lang="nl">Meeteenheid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/Value</IRI>
         <IRI></IRI>
@@ -520,6 +573,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/Value</IRI>
         <Literal xml:lang="en">Value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Value</IRI>
+        <Literal xml:lang="nl">Waarde</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -537,6 +595,11 @@
         <Literal xml:lang="en">has identifier</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasIdentifier</IRI>
+        <Literal xml:lang="nl">heeft identificatie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/hasType</IRI>
         <IRI></IRI>
@@ -545,6 +608,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/hasType</IRI>
         <Literal xml:lang="it">ha tipo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasType</IRI>
+        <Literal xml:lang="nl">heeft type</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -567,6 +635,11 @@
         <Literal xml:lang="en">has unit of measure</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasUnitOfMeasure</IRI>
+        <Literal xml:lang="nl">heeft meeteenheid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/hasValue</IRI>
         <IRI></IRI>
@@ -580,6 +653,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/hasValue</IRI>
         <Literal xml:lang="en">has value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasValue</IRI>
+        <Literal xml:lang="nl">heeft waarde</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -597,6 +675,11 @@
         <Literal xml:lang="it">è assegnato da</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isAssignedBy</IRI>
+        <Literal xml:lang="nl">is toegewezen door</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/name</IRI>
         <IRI></IRI>
@@ -610,6 +693,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/name</IRI>
         <Literal xml:lang="it">nome</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/name</IRI>
+        <Literal xml:lang="nl">naam</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
@@ -627,6 +715,11 @@
         <Literal xml:lang="en">value</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/value</IRI>
+        <Literal xml:lang="nl">waarde</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <IRI>/year</IRI>
         <IRI></IRI>
@@ -640,6 +733,12 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/year</IRI>
         <Literal xml:lang="en">year</Literal>
+    </AnnotationAssertion>
+    </AnnotationAssertion>
+        <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/year</IRI>
+        <Literal xml:lang="nl">jaar</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

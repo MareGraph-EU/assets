@@ -54,6 +54,10 @@
         <IRI>http://publications.europa.eu/resource/authority/language/ITA</IRI>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+        <IRI>http://publications.europa.eu/resource/authority/language/NLD</IRI>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:license"/>
         <IRI>http://publications.europa.eu/resource/authority/licence/CC_BY_4_0</IRI>
     </Annotation>

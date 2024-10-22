@@ -22,16 +22,21 @@
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-30</dct:issued>
         <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/NLD"/>
         <dct:license rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-29</dct:modified>
         <dct:title xml:lang="en">MAREGRAPH - (Species) Distribution ontology</dct:title>
         <dct:title xml:lang="it">MAREGRAPH - Ontologia sulla Distribuzione delle Specie</dct:title>
+        <dct:title xml:lang="nl">MAREGRAPH - (Soorten) Verspreidingsontologie</dct:title>
         <rdfs:comment xml:lang="it">Questa è l&apos;ontologia della distribuzione (delle specie) della rete di ontologie MAREGRAPH. Importa l&apos;ontologia di primo livello della rete MAREGRAPH e definisce la distribuzione documentata delle specie come riportata nel database WoRMS. La distribuzione è descritta in base a diverse tipologie di informazioni: la posizione geografica, utilizzando il nome del luogo o la latitudine e la longitudine quando è possibile identificare singoli punti, la fonte da cui è documentata la distribuzione, l&apos;origine della specie, l&apos;invasività della specie, la presenza. È inoltre possibile indicare se la distribuzione è segnalata come &apos;località tipo&apos; della specie. L&apos;ontologia usa l&apos;ontologia delle regioni marine per rappresentare le posizioni geografiche.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the (species) distribution ontology of the MAREGRAPH network of ontologies. It imports the top-level ontology of the MAREGRAPH network and it defines the documented distribution of the species as defined in the WoRMS database. The distribution is described according to various information: the geographical location, using the place name or latitude and longitude when single points can be identified, the source from which the distribution is documented, the origin of the species, the invasiveness of the species, the occurrence. It is also possible to indicate whether the distribution is marked as a type locality of the species. The ontology uses the Marine Region ontology for representing geographical locations</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Dit is de (soorten) verspreidingsontologie van het MAREGRAPH-netwerk van ontologieën. De ontologie importeert de overkoepelende ontologie van het MAREGRAPH-netwerk en definieert de gedocumenteerde verspreiding van de soorten zoals gedefinieerd in de WoRMS-database. De verspreiding wordt beschreven aan de hand van verschillende informatie: de geografische locatie, met behulp van de plaatsnaam of de lengte- en breedtegraad wanneer afzonderlijke punten kunnen worden geïdentificeerd, de literaire bron van waaruit de verspreiding is gedocumenteerd, de herkomst van de soort, de invasiviteit van de soort, het voorkomen. Het is ook mogelijk om aan te geven of de verspreiding is gemarkeerd als een type localiteit van de soort. De ontologie maakt gebruik van de Marine Regions ontologie om geografische locaties weer te geven.</rdfs:comment>
         <rdfs:label xml:lang="en">MAREGRAPH - (Species) Distribution ontology</rdfs:label>
         <rdfs:label xml:lang="it">MAREGRAPH - Ontologia sulla Distribuzione delle Specie</rdfs:label>
+        <rdfs:label xml:lang="nl">MAREGRAPH - (Soorten) Verspreidingsontologie</rdfs:label>
         <owl:versionInfo xml:lang="en">Preliminary version 0.1</owl:versionInfo>
         <owl:versionInfo xml:lang="it">Versione preliminare 0.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="nl">Voorlopige versie 0.1</owl:versionInfo>
     </owl:Ontology>
     
 
