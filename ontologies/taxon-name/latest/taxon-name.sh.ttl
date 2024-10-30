@@ -5,7 +5,7 @@
 @prefix : <https://aphia.org/ns/taxon-name/> .
 @prefix top-level: <https://aphia.org/ns/top-level/> .
 
-
+#### NodeShapes ####
 ### Shape for Rank
 :RankShape a sh:NodeShape ;
     sh:targetClass :Rank ;
@@ -36,7 +36,15 @@
         sh:path :hasParent ;
         sh:class :Taxon ;
         sh:maxCount 1 ;
-    ] .
+    ] ;
+    sh:property [
+        sh:path :hasAcceptedName ;
+        sh:class :TaxonName ;
+    ] ;
+    sh:property [
+        sh:path :hasSynonymName ;
+        sh:class :TaxonName ;
+    ] ;
 .
 
 ### Shape for TaxonName
@@ -77,25 +85,28 @@
     ] ;
     sh:property [
         sh:path :aphiaID ;
-        sh:datatype xsd:nonNegativeInteger ;             # unsure of this
+        sh:datatype xsd:nonNegativeInteger ;            # unsure of this
+        sh:class rdf:PlainLiteral ;                     # unsure
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path :fullScientificName ;
-        sh:datatype rdf:PlainLiteral ;
+        sh:datatype rdf:PlainLiteral ;                  # unsure, can this be specified to xsd:string?
+        sh:class rdf:PlainLiteral ;                     # unsure
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path :authorship ;
-        sh:datatype rdf:PlainLiteral ;
-        sh:minCount 1 ;
+        sh:datatype rdf:PlainLiteral ;                  # unsure, can this be specified to xsd:string? 
+        sh:class rdf:PlainLiteral ;                     # unsure
         sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path :scientificName ;
-        sh:datatype rdf:PlainLiteral ;
+        sh:datatype rdf:PlainLiteral ;                  # unsure, can this be specified to xsd:string?
+        sh:class rdf:PlainLiteral ;                     # unsure
         sh:maxCount 1 ;
     ] .
 
@@ -121,5 +132,113 @@
     ] ;
     sh:property [
         sh:path :vernacularName ;
-        sh:datatype rdf:PlainLiteral ;             # unsure about this
+        sh:datatype rdf:PlainLiteral ;             # unsure about this, can't this be specified to xsd:string?
+        sh:class rdf:PlainLiteral ;                # unsure
     ] .
+
+
+#### DatatypePropertyShapes ####            are these needed?
+
+### PropertyShape for aphiaID                  also specified in TaxonNameShape
+:AphiaIDPropertyShape a sh:PropertyShape ;
+    sh:path :aphiaID ;
+    sh:datatype xsd:string ;                # unsure
+    sh:class rdf:PlainLiteral ;                # unsure
+.
+
+### PropertyShape for authorship                  also specified in TaxonNameShape
+:AuthorshipPropertyShape a sh:PropertyShape ;
+    sh:path :authorship ;
+    sh:datatype xsd:string ;                # unsure
+    sh:class rdf:PlainLiteral ;                # unsure
+.
+
+### PropertyShape for fullScientificName                  also specified in TaxonNameShape
+:FullScientificNamePropertyShape a sh:PropertyShape ;
+    sh:path :fullScientificName ;
+    sh:datatype xsd:string ;                # unsure
+    sh:class rdf:PlainLiteral ;                # unsure
+.
+
+### PropertyShape for scientificName                  also specified in TaxonNameShape
+:ScientificNamePropertyShape a sh:PropertyShape ;
+    sh:path :scientificName ;
+    sh:datatype xsd:string ;                # unsure
+    sh:class rdf:PlainLiteral ;                # unsure
+.
+
+### PropertyShape for vernacularName                  also specified in VernacularNameShape
+:VernacularNamePropertyShape a sh:PropertyShape ;
+    sh:path :vernacularName ;
+    sh:datatype xsd:string ;                # unsure
+    sh:class rdf:PlainLiteral ;                # unsure
+.
+
+
+
+#### ObjectPropertyShapes ####              are this needed?
+### PropertyShape for denotes               # also specified top-level:NameShape
+:DenotesShape a sh:PropertyShape ;
+    sh:path :denotes ;
+    sh:class :Taxon ;
+.
+
+### PropertyShape for hasAcceptedName       also specified in TaxonShape
+:HasAcceptedNameShape a sh:PropertyShape ;
+    sh:path :hasAcceptedName ;
+    sh:class :TaxonName ;
+.
+
+### PropertyShape for hasChild       also specified in TaxonShape
+:HasChildShape a sh:PropertyShape ;
+    sh:path :hasChild ;
+    sh:class :Taxon ;
+.
+
+### PropertyShape for hasParent       also specified in TaxonShape
+:HasParentShape a sh:PropertyShape ;
+    sh:path :hasParent ;
+    sh:class :Taxon ;
+.
+
+### PropertyShape for hasStatus       also specified in TaxonNameShape
+:HasStatusShape a sh:PropertyShape ;
+    sh:path :hasStatus ;
+    sh:class :Status ;
+.
+
+### PropertyShape for hasSynonym       also specified in TaxonNameShape
+:HasSynonymShape a sh:PropertyShape ;
+    sh:path :hasSynonym ;
+    sh:class :TaxonName ;
+.
+
+### PropertyShape for hasSynonymName       also specified in TaxonShape
+:HasSynonymNameShape a sh:PropertyShape ;
+    sh:path :hasSynonymName ;
+    sh:class :TaxonName ;
+.
+
+### PropertyShape for hasUnacceptedReason       also specified in TaxonNameShape
+:HasUnacceptedReasonShape a sh:PropertyShape ;
+    sh:path :hasUnacceptedReason ;
+    sh:class :UnacceptedReason ;
+.
+
+### PropertyShape for isDenotedBy       also specified in TaxonShape
+:IsDenotedByShape a sh:PropertyShape ;
+    sh:path :isDenotedBy ;
+    sh:class top-level:Name ;
+.
+
+### PropertyShape for isOfRank       also specified in TaxonNameShape
+:IsOfRankShape a sh:PropertyShape ;
+    sh:path :isOfRank ;
+    sh:class :Rank ;
+.
+
+### PropertyShape for isSynonymOf       also specified in TaxonNameShape
+:IsSynonymOfShape a sh:PropertyShape ;
+    sh:path :isSynonymOf ;
+    sh:class :TaxonName ;
+.
