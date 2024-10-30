@@ -1,0 +1,120 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix : <https://aphia.org/ns/taxon-name/> .
+@prefix top-level: <https://aphia.org/ns/top-level/> .
+
+
+### Shape for Rank
+:RankShape a sh:NodeShape ;
+    sh:targetClass :Rank ;
+.
+
+### Shape for Status
+:StatusShape a sh:NodeShape ;
+    sh:targetClass :Status ;
+.
+
+### Shape for Taxon
+:TaxonShape a sh:NodeShape ;
+    sh:targetClass :Taxon ;
+    sh:property [
+        sh:path :isDenotedBy ;
+        sh:class top-level:Name ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:source ;
+        sh:class top-level:Source ;
+    ] ;
+    sh:property [
+        sh:path :hasChild ;
+        sh:class :Taxon ;
+    ] ;
+    sh:property [
+        sh:path :hasParent ;
+        sh:class :Taxon ;
+        sh:maxCount 1 ;
+    ] .
+.
+
+### Shape for TaxonName
+:TaxonNameShape a sh:NodeShape ;
+    sh:targetClass :TaxonName ;
+    sh:property [
+        sh:path dct:source ;
+        sh:class top-level:Source ;
+    ] ;
+    sh:property [
+        sh:path :hasSynonym ;
+        sh:class :TaxonName ;
+    ] ;
+    sh:property [
+        sh:path :isSynonymOf ;
+        sh:class :TaxonName ;
+    ] ;
+    sh:property [
+        sh:path top-level:hasIdentifier ;
+        sh:class top-level:Identifier ;
+    ] ;
+    sh:property [
+        sh:path :hasStatus ;
+        sh:class :Status ;
+        sh:count 1 ;
+    ] ;
+    sh:property [
+        sh:path :isOfRank ;
+        sh:class :Rank ;
+        sh:count 1 ;
+    ] ;
+    sh:property [
+        sh:path :hasUnacceptedReason ;
+        sh:class :UnacceptedReason ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path :aphiaID ;
+        sh:datatype xsd:nonNegativeInteger ;             # unsure of this
+        sh:count 1 ;
+    ] ;
+    sh:property [
+        sh:path :fullScientificName ;
+        sh:datatype rdf:PlainLiteral ;
+        sh:count 1 ;
+    ] ;
+    sh:property [
+        sh:path :authorship ;
+        sh:datatype rdf:PlainLiteral ;
+        sh:count 1 ;
+    ] ;
+    sh:property [
+        sh:path :scientificName ;
+        sh:datatype rdf:PlainLiteral ;
+        sh:maxCount 1 ;
+    ] .
+
+### Shape for UnacceptedReason
+:UnacceptedReasonShape a sh:NodeShape ;
+    sh:targetClass :UnacceptedReason ;   
+.
+
+### Shape for VernacularName
+:VernacularNameShape a sh:NodeShape ;
+    sh:targetClass :VernacularName ;
+    sh:property [
+        sh:path dct:coverage ;
+        sh:class dct:Location ;
+    ] ;
+    sh:property [
+        sh:path dct:language ;
+        sh:class dct:LinguisticSystem ;
+    ] ;
+    sh:property [
+        sh:path dct:source ;
+        sh:class top-level:Source ; 
+    ] ;
+    sh:property [
+        sh:path :vernacularName ;
+        sh:datatype rdf:PlainLiteral ;             # unsure about this
+    ] .

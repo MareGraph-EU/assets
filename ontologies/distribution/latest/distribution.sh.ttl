@@ -1,0 +1,74 @@
+@prefix : <https://aphia.org/ns/media/> .
+@prefix taxon-name: <https://aphia.org/ns/taxon-name/> .
+@prefix top-level: <https://aphia.org/ns/top-level/> .
+
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+### Shape for Distribution
+:DistributionShape a sh:NodeShape ;
+    sh:targetClass :Distribution ;
+
+    sh:property [
+        sh:path :hasArea ;
+        sh:class <http://marineregions.org/ns/ontology#MRGeoObject> ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path :isDistributionOf ;
+        sh:class taxon-name:Taxon ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:source ;
+        sh:class top-level:Source ;
+    ] ;
+    sh:property [
+        sh:path <http://www.w3.org/ns/locn#geometry> ;
+        sh:class <http://www.w3.org/ns/locn#Geometry> ;
+    ] ;
+    sh:property [
+        sh:path :hasInvasiveness ;
+        sh:class :Invasiveness ;
+    ] ;
+    sh:property [
+        sh:path :hasOccurrence ;
+        sh:class :Occurrence ;
+    ] ;
+    sh:property [
+        sh:path :hasOrigin ;
+        sh:class :Origin ;
+    ] ;
+    sh:property [
+        sh:path :isDistributionOf ;
+        sh:class taxon-name:Taxon ;
+    ] ;
+    sh:property [
+        sh:path skos:note ;
+        sh:class rdf:PlainLiteral ;
+    ] ;
+    sh:property [
+        sh:path :isTypeLocality ;
+        sh:datatype xsd:boolean ;
+        sh:maxCount 1 ;
+    ] ;
+.
+
+
+### Shape for Invasiveness
+:InvasivenessShape a sh:NodeShape ;
+    sh:targetClass :Invasiveness ;
+.
+
+
+### Shape for Occurrence
+:OccurrenceShape a sh:NodeShape ;
+    sh:targetClass :Occurrence ;
+.
+
+### Shape for Origin
+:OriginShape a sh:NodeShape ;
+    sh:targetClass :Origin ;
+.

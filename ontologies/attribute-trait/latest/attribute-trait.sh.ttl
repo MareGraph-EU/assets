@@ -1,0 +1,85 @@
+@prefix : <https://aphia.org/ns/attribute-trait/> .
+@prefix taxon-name: <https://aphia.org/ns/taxon-name/> .
+@prefix top-level: <https://aphia.org/ns/top-level/> .
+
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+### Shape for Attribute
+:AttributeShape a sh:NodeShape ;
+    sh:targetClass :Attribute ;
+.
+
+### Shape for Environment
+:EnvironmentShape a sh:NodeShape ;
+    sh:targetClass :Environment ;
+    sh:property [
+        sh:path :isHabitatOf ;
+        sh:class taxon-name:Taxon ;
+    ] ;
+.
+
+### Shape for SpecificationContext
+:SpecificationContextShape a sh:NodeShape ;
+    sh:targetClass :SpecificationContext ;
+    sh:property [
+        sh:path :definesParameter ;
+        sh:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path top-level:hasValue ;
+        sh:class top-level:Value ;
+        sh:minCount 1 ;
+    ] ;
+
+.
+
+### Shape for TaxonCharacteristic
+:SpecificationContextShape a sh:NodeShape ;
+    sh:targetClass :SpecificationContext ;
+    sh:property [
+        sh:path top-level:hasType ;
+        sh:class top-level:Type ;
+        sh:maxCount 1 ;
+    ] ;
+.
+
+### Shape for TaxonDescription
+:TaxonDescriptionShape a sh:NodeShape ;
+    sh:targetClass :TaxonDescription ;
+    sh:property [
+        sh:path :hasTaxonCharateristic ;
+        sh:class <http://www.ontologydesignpatterns.org/ont/d0.owl#Characteristic> ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path :isAdditionalDescriptionOf ;
+        sh:class taxon-name:Taxon ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path top-level:hasValue ;
+        sh:class top-level:Value ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:source ;
+        sh:class top-level:Source ;
+    ] ;
+    sh:property [
+        sh:path :hasExtraSpecification ;
+        sh:class :SpecificationContext ;
+    ] ;
+    sh:property [
+        sh:path skos:note ;
+        sh:datatype rdf:PlainLiteral ;
+    ] ;
+.
+
+### Shape for Trait
+:TraitShape a sh:NodeShape ;
+    sh:targetClass :Trait ;
+.

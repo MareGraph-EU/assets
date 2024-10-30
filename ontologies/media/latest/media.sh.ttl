@@ -1,0 +1,50 @@
+@prefix : <https://aphia.org/ns/media/> .
+@prefix taxon-name: <https://aphia.org/ns/taxon-name/> .
+
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+
+### Shape for ImageObject
+:ImageObjectShape a sh:NodeShape ;
+    sh:targetClass :ImageObject ;
+.
+
+### Shape for MediaObject
+:MediaObjectShape a sh:NodeShape ;
+    sh:targetClass :MediaObject ;
+    sh:property [
+        sh:path dct:subject ;
+        sh:node taxon-name:Taxon ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:format ;
+        sh:class dct:MediaTypeOrExtent ;
+    ] ;
+    sh:property [
+        sh:path dct:rightsHolder ;
+        sh:class dct:Agent ;
+    ] ;
+    sh:property [
+        sh:path dct:license ;
+        sh:class dct:LicenseDocument ; 
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:title ;
+        sh:class rdfs:Literal ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:description ;
+        sh:class rdfs:Literal ;
+    ] ;
+.
+
+### Shape for VideoObject
+:VideoObjectShape a sh:NodeShape ;
+    sh:targetClass :VideoObject ;
+.

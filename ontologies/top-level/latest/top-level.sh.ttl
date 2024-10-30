@@ -1,0 +1,90 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix : <https://aphia.org/ns/top-level/> .
+@prefix taxon-name: <https://aphia.org/ns/taxon-name/> .
+
+### Shape for Identifier
+:IdentifierShape a sh:NodeShape ;
+    sh:targetClass :Identifier ;
+    
+    sh:property [
+        sh:path :hasType ;
+        sh:class :IdentifierType ;
+    ] ;
+    sh:property [
+        sh:path :isAssignedBy ;
+        sh:class :System ;
+    ] ;
+    sh:property [
+        sh:path dct:identifier ;
+        sh:class rdfs:Literal ;
+        sh:minCount 1 ;
+    ] ;
+.
+
+### Shape for IdentifierType
+:IdentifierTypeShape a sh:NodeShape ;
+    sh:targetClass :IdentifierType ;
+.
+
+### Shape for Name
+:NameShape a sh:NodeShape ;
+    sh:targetClass :Name ;
+
+    sh:property [
+        sh:path dct:relation ;
+        sh:class :Name ;
+    ] ;
+    sh:property [
+        sh:path :name ;
+        sh:class rdfs:Literal ;
+        sh:minCount 1 ;
+    ] ;
+.
+
+### Shape for Person
+:PersonShape a sh:NodeShape ;
+    sh:targetClass :Person ;
+.
+
+### Shape for Source
+:SourceShape a sh:NodeShape ;
+    sh:targetClass :Source ;
+.
+
+### Shape for System
+:SystemShape a sh:NodeShape ;
+    sh:targetClass :System ;
+    sh:property [
+        sh:path dct:title ;
+        sh:class rdfs:Literal ;
+        sh:minCount 1 ;
+    ] ;
+.
+
+### Shape for Type
+:TypeShape a sh:NodeShape ;
+    sh:targetClass :Type ;
+.
+
+### Shape for UnitOfMeasure
+:UnitOfMeasureShape a sh:NodeShape ;
+    sh:targetClass :UnitOfMeasure ;
+.
+
+### Shape for Value
+:ValueShape a sh:NodeShape ;
+    sh:targetClass :Value ;
+    sh:property [
+        sh:path :hasUnitOfMeasure ;
+        sh:class :UnitOfMeasure ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path :value ;
+        sh:datatype xsd:anySimpleType ; #unsure about this, don't know if/which sh:class to specify?
+        sh:count 1 ;
+    ] ;
+.
