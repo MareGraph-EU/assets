@@ -45,6 +45,10 @@
         sh:path :hasSynonymName ;
         sh:class :TaxonName ;
     ] ;
+    sh:property [
+        sh:path :isSubjectOf ;
+        sh:class :MediaObject ;
+    ] ;
 .
 
 ### Shape for TaxonName
