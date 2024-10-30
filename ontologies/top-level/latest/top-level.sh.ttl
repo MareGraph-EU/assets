@@ -5,6 +5,7 @@
 @prefix : <https://aphia.org/ns/top-level/> .
 @prefix taxon-name: <https://aphia.org/ns/taxon-name/> .
 
+#### NodeShapes ####
 ### Shape for Identifier
 :IdentifierShape a sh:NodeShape ;
     sh:targetClass :Identifier ;
@@ -27,6 +28,9 @@
 ### Shape for IdentifierType
 :IdentifierTypeShape a sh:NodeShape ;
     sh:targetClass :IdentifierType ;
+
+    ## IdentifierType subClassOf Identifier (Q: need property restrictions be repeated?)
+    ## Type doesn't have specific restrictions
 .
 
 ### Shape for Name
@@ -84,8 +88,68 @@
     ] ;
     sh:property [
         sh:path :value ;
-        sh:datatype xsd:anySimpleType ; #unsure about this, don't know if/which sh:class to specify?
+        sh:datatype xsd:anySimpleType ;     # unsure about this, don't know if/which sh:class to specify?
+        sh:class rdfs:Literal ;             # unsure
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
+.
+
+
+
+#### DatatypePropertyShapes ####            are these needed?
+### PropertyShape for name                  also specified in NameShape
+:NamePropertyShape a sh:PropertyShape ;
+    sh:path :name ;
+    sh:datatype xsd:string ;                # unsure
+.
+
+### PropertyShape for value
+:ValuePropertyShape a sh:PropertyShape ;
+    sh:path :value ;
+    sh:datatype xsd:integer ;                 # unsure 
+.
+
+### PropertyShape for year
+:YearPropertyShape a sh:PropertyShape ;
+    sh:path :year ;
+    sh:datatype xsd:gYear ;                # unsure
+.
+
+
+
+#### ObjectPropertyShapes ####              are this needed?
+### PropertyShape for hasIdentifier
+:HasIdentifierShape
+    a sh:PropertyShape ;
+    sh:path :hasIdentifier ;
+    sh:class :Identifier ;
+.
+
+### PropertyShape for hasType
+:HasTypeShape
+    a sh:PropertyShape ;
+    sh:path :hasType ;
+    sh:class :Type ;
+.
+
+### PropertyShape for hasUnitOfMeasure      also specified in ValueShape
+:HasTypeShape
+    a sh:PropertyShape ;
+    sh:path :hasUnitOfMeasure ;
+    sh:class :UnitOfMeasure ;
+.
+
+### PropertyShape for hasValue
+:HasValueShape
+    a sh:PropertyShape ;
+    sh:path :hasValue ;
+    sh:class :Value ;
+.
+
+### PropertyShape for isAssignedBy      also specified in IdentifierShape
+:IsAssignedByShape
+    a sh:PropertyShape ;
+    sh:path :isAssignedBy ;
+    sh:class :System ;
 .
