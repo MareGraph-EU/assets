@@ -6,6 +6,8 @@
 @prefix top-level: <https://aphia.org/ns/top-level/> .
 @prefix media: <https://aphia.org/ns/media/> .
 @prefix dist: <https://aphia.org/ns/distribution/> .
+@prefix attr-trait: <https://aphia.org/ns/attribute-trait/> .
+
 
 #### NodeShapes ####
 ### Shape for Rank
@@ -54,6 +56,14 @@
     sh:property [
         sh:path dist:hasDistribution ;
         sh:class dist:Distribution ;
+    ] ;
+    sh:property [
+        sh:path attr-trait:hasAdditionalDescription ;
+        sh:class attr-trait:TaxonDescription ;
+    ] ;
+    sh:property [
+        sh:path attr-trait:hasHabitat ;
+        sh:class attr-trait:Environment ;
     ] ;
 .
 

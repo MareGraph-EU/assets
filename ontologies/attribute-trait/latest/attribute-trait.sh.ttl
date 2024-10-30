@@ -7,9 +7,17 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
+#### NodeShapes ####
 ### Shape for Attribute
 :AttributeShape a sh:NodeShape ;
     sh:targetClass :Attribute ;
+
+    # Attribute is subclass of TaxonCharacteristic ~ inheritance of property restrictions -> Does this need to be specified?
+    sh:property [
+        sh:path top-level:hasType ;
+        sh:class top-level:Type ;
+        sh:maxCount 1 ;
+    ] ;
 .
 
 ### Shape for Environment
@@ -34,12 +42,11 @@
         sh:class top-level:Value ;
         sh:minCount 1 ;
     ] ;
-
 .
 
 ### Shape for TaxonCharacteristic
-:SpecificationContextShape a sh:NodeShape ;
-    sh:targetClass :SpecificationContext ;
+:TaxonCharacteristicShape a sh:NodeShape ;
+    sh:targetClass :TaxonCharacteristic ;
     sh:property [
         sh:path top-level:hasType ;
         sh:class top-level:Type ;
@@ -53,6 +60,7 @@
     sh:property [
         sh:path :hasTaxonCharateristic ;
         sh:class <http://www.ontologydesignpatterns.org/ont/d0.owl#Characteristic> ;
+        #conflicting info on line 135 in attribute-trait.ttl??
         sh:minCount 1 ;
     ] ;
     sh:property [
@@ -82,4 +90,56 @@
 ### Shape for Trait
 :TraitShape a sh:NodeShape ;
     sh:targetClass :Trait ;
+
+    # Trait is subclass of TaxonCharacteristic ~ inheritance of property restrictions -> Does this need to be specified?
+    sh:property [
+        sh:path top-level:hasType ;
+        sh:class top-level:Type ;
+        sh:maxCount 1 ;
+    ] ;
+.
+
+
+
+#### ObjectPropertyShapes ####            are these needed?
+### PropertyShape for definesParameter               # also specified SpecificationContextShape
+:DefinesParameterPropertyShape a sh:PropertyShape ;
+    sh:path :definesParameter ;
+    sh:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> ;
+.
+
+### PropertyShape for hasAdditionalDescription               # also specified taxon-name:TaxonShape
+:HasAdditionalDescriptionPropertyShape a sh:PropertyShape ;
+    sh:path :hasAdditionalDescription ;
+    sh:class :TaxonDescription ;
+.
+
+### PropertyShape for hasExtraSpecification               # also specified TaxonDescriptionShape
+:HasExtraSpecificationPropertyShape a sh:PropertyShape ;
+    sh:path :hasExtraSpecification ;
+    sh:class :SpecificationContext ;
+.
+
+### PropertyShape for hasHabitat               # also specified taxon-name:TaxonShape
+:HasHabitatPropertyShape a sh:PropertyShape ;
+    sh:path :hasHabitat ;
+    sh:class :Environment ;
+.
+
+### PropertyShape for hasTaxonCharateristic               # also specified TaxonDescriptionShape
+:HasTaxonCharateristicPropertyShape a sh:PropertyShape ;
+    sh:path :hasTaxonCharateristic ;
+    sh:class :TaxonCharacteristic ;                         #conflicting info specified in TaxonDescriptionShape
+.
+
+### PropertyShape for isAdditionalDescriptionOf               # also specified TaxonDescriptionShape
+:IsAdditionalDescriptionOfPropertyShape a sh:PropertyShape ;
+    sh:path :isAdditionalDescriptionOf ;
+    sh:class taxon-name:Taxon ;
+.
+
+### PropertyShape for isHabitatOf               # also specified EnvironmentShape
+:IsHabitatOfPropertyShape a sh:PropertyShape ;
+    sh:path :isHabitatOf ;
+    sh:class taxon-name:Taxon ;
 .
