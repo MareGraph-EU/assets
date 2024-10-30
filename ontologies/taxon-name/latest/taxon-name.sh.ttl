@@ -61,12 +61,14 @@
     sh:property [
         sh:path :hasStatus ;
         sh:class :Status ;
-        sh:count 1 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path :isOfRank ;
         sh:class :Rank ;
-        sh:count 1 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path :hasUnacceptedReason ;
@@ -76,17 +78,20 @@
     sh:property [
         sh:path :aphiaID ;
         sh:datatype xsd:nonNegativeInteger ;             # unsure of this
-        sh:count 1 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path :fullScientificName ;
         sh:datatype rdf:PlainLiteral ;
-        sh:count 1 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path :authorship ;
         sh:datatype rdf:PlainLiteral ;
-        sh:count 1 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path :scientificName ;

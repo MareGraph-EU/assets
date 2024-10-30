@@ -85,6 +85,7 @@
     sh:property [
         sh:path :value ;
         sh:datatype xsd:anySimpleType ; #unsure about this, don't know if/which sh:class to specify?
-        sh:count 1 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
     ] ;
 .
