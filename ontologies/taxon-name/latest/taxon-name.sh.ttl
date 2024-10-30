@@ -4,6 +4,8 @@
 
 @prefix : <https://aphia.org/ns/taxon-name/> .
 @prefix top-level: <https://aphia.org/ns/top-level/> .
+@prefix media: <https://aphia.org/ns/media/> .
+@prefix dist: <https://aphia.org/ns/distribution/> .
 
 #### NodeShapes ####
 ### Shape for Rank
@@ -46,8 +48,12 @@
         sh:class :TaxonName ;
     ] ;
     sh:property [
-        sh:path :isSubjectOf ;
-        sh:class :MediaObject ;
+        sh:path media:isSubjectOf ;
+        sh:class media:MediaObject ;
+    ] ;
+    sh:property [
+        sh:path dist:hasDistribution ;
+        sh:class dist:Distribution ;
     ] ;
 .
 
@@ -142,7 +148,6 @@
 
 
 #### DatatypePropertyShapes ####            are these needed?
-
 ### PropertyShape for aphiaID                  also specified in TaxonNameShape
 :AphiaIDPropertyShape a sh:PropertyShape ;
     sh:path :aphiaID ;
@@ -182,67 +187,67 @@
 
 #### ObjectPropertyShapes ####              are this needed?
 ### PropertyShape for denotes               # also specified top-level:NameShape
-:DenotesShape a sh:PropertyShape ;
+:DenotesPropertyShape a sh:PropertyShape ;
     sh:path :denotes ;
     sh:class :Taxon ;
 .
 
 ### PropertyShape for hasAcceptedName       also specified in TaxonShape
-:HasAcceptedNameShape a sh:PropertyShape ;
+:HasAcceptedNamePropertyShape a sh:PropertyShape ;
     sh:path :hasAcceptedName ;
     sh:class :TaxonName ;
 .
 
 ### PropertyShape for hasChild       also specified in TaxonShape
-:HasChildShape a sh:PropertyShape ;
+:HasChildPropertyShape a sh:PropertyShape ;
     sh:path :hasChild ;
     sh:class :Taxon ;
 .
 
 ### PropertyShape for hasParent       also specified in TaxonShape
-:HasParentShape a sh:PropertyShape ;
+:HasParentPropertyShape a sh:PropertyShape ;
     sh:path :hasParent ;
     sh:class :Taxon ;
 .
 
 ### PropertyShape for hasStatus       also specified in TaxonNameShape
-:HasStatusShape a sh:PropertyShape ;
+:HasStatusPropertyShape a sh:PropertyShape ;
     sh:path :hasStatus ;
     sh:class :Status ;
 .
 
 ### PropertyShape for hasSynonym       also specified in TaxonNameShape
-:HasSynonymShape a sh:PropertyShape ;
+:HasSynonymPropertyShape a sh:PropertyShape ;
     sh:path :hasSynonym ;
     sh:class :TaxonName ;
 .
 
 ### PropertyShape for hasSynonymName       also specified in TaxonShape
-:HasSynonymNameShape a sh:PropertyShape ;
+:HasSynonymNamePropertyShape a sh:PropertyShape ;
     sh:path :hasSynonymName ;
     sh:class :TaxonName ;
 .
 
 ### PropertyShape for hasUnacceptedReason       also specified in TaxonNameShape
-:HasUnacceptedReasonShape a sh:PropertyShape ;
+:HasUnacceptedReasonPropertyShape a sh:PropertyShape ;
     sh:path :hasUnacceptedReason ;
     sh:class :UnacceptedReason ;
 .
 
 ### PropertyShape for isDenotedBy       also specified in TaxonShape
-:IsDenotedByShape a sh:PropertyShape ;
+:IsDenotedByPropertyShape a sh:PropertyShape ;
     sh:path :isDenotedBy ;
     sh:class top-level:Name ;
 .
 
 ### PropertyShape for isOfRank       also specified in TaxonNameShape
-:IsOfRankShape a sh:PropertyShape ;
+:IsOfRankPropertyShape a sh:PropertyShape ;
     sh:path :isOfRank ;
     sh:class :Rank ;
 .
 
 ### PropertyShape for isSynonymOf       also specified in TaxonNameShape
-:IsSynonymOfShape a sh:PropertyShape ;
+:IsSynonymOfPropertyShape a sh:PropertyShape ;
     sh:path :isSynonymOf ;
     sh:class :TaxonName ;
 .
