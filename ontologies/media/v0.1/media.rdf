@@ -127,7 +127,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/marine/ns/media/isSubjectOf">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
-        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+        <rdfs:domain rdf:resource="https://w3id.org/marine/ns/taxon-name/Taxon"/>
         <rdfs:range rdf:resource="https://w3id.org/marine/ns/media/MediaObject"/>
         <rdfs:comment xml:lang="en">Property used to specify the distribution for a taxon.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà utilizzata per specificare la distribuzione di un taxon.</rdfs:comment>
@@ -245,7 +245,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/dc/terms/subject"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/marine/ns/taxon-name/Taxon"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -263,7 +263,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/dc/terms/subject"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/marine/ns/taxon-name/Taxon"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -346,9 +346,9 @@
     
 
 
-    <!-- https://w3id.org/marine/ns/taxa-name/Taxon -->
+    <!-- https://w3id.org/marine/ns/taxon-name/Taxon -->
 
-    <owl:Class rdf:about="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+    <owl:Class rdf:about="https://w3id.org/marine/ns/taxon-name/Taxon"/>
     
 
 

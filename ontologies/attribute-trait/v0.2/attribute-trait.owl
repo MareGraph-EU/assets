@@ -136,7 +136,7 @@
         <Class IRI="/Trait"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://aphia.org/ns/taxa-name/Taxon"/>
+        <Class IRI="https://aphia.org/ns/taxon-name/Taxon"/>
     </Declaration>
     <Declaration>
         <Class IRI="https://kos.lifewatch.eu/thesauri/fishtraits/c_4"/>
@@ -276,7 +276,7 @@
         <Class IRI="/Environment"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/isHabitatOf"/>
-            <Class IRI="https://aphia.org/ns/taxa-name/Taxon"/>
+            <Class IRI="https://aphia.org/ns/taxon-name/Taxon"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -327,7 +327,7 @@
         <Class IRI="/TaxonDescription"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/isAdditionalDescriptionOf"/>
-            <Class IRI="https://aphia.org/ns/taxa-name/Taxon"/>
+            <Class IRI="https://aphia.org/ns/taxon-name/Taxon"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -430,7 +430,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/hasAdditionalDescription"/>
-        <Class IRI="https://aphia.org/ns/taxa-name/Taxon"/>
+        <Class IRI="https://aphia.org/ns/taxon-name/Taxon"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/hasExtraSpecification"/>
@@ -438,7 +438,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/hasHabitat"/>
-        <Class IRI="https://aphia.org/ns/taxa-name/Taxon"/>
+        <Class IRI="https://aphia.org/ns/taxon-name/Taxon"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/hasTaxonCharateristic"/>
@@ -474,11 +474,11 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/isAdditionalDescriptionOf"/>
-        <Class IRI="https://aphia.org/ns/taxa-name/Taxon"/>
+        <Class IRI="https://aphia.org/ns/taxon-name/Taxon"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/isHabitatOf"/>
-        <Class IRI="https://aphia.org/ns/taxa-name/Taxon"/>
+        <Class IRI="https://aphia.org/ns/taxon-name/Taxon"/>
     </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/ENVO_01000739"/>

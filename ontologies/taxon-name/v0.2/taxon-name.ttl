@@ -28,8 +28,8 @@
                                                      "This is the ontology of taxon names and all taxonomic information as available from the WoRMS system. It imports the top-level ontology of the APHIA network of ontologies, and is aligned to skos-xl."@en ;
                                         rdfs:label "APHIA - Ontologia dei nomi dei taxon"@it ,
                                                    "APHIA - Taxon names ontology"@en ;
-                                        owl:versionInfo "Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; changed the name of the ontology from taxa-name to taxon-name; introduced some alignments to Darwin Core for some properties; changed some definitions (e.g., authorship)."@en ,
-                                                        "Seconda versione 0.2 - cambiati tutti gli URI da w3id.org/ a aphia.org/; cambiato il nome dell'ontologia da taxa-name a taxon-name; introdotti alcuni allineamenti a Darwin core per alcune proprietà; cambiate alcune definizioni (e.g., authorship)."@it .
+                                        owl:versionInfo "Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; changed the name of the ontology from taxon-name to taxon-name; introduced some alignments to Darwin Core for some properties; changed some definitions (e.g., authorship)."@en ,
+                                                        "Seconda versione 0.2 - cambiati tutti gli URI da w3id.org/ a aphia.org/; cambiato il nome dell'ontologia da taxon-name a taxon-name; introdotti alcuni allineamenti a Darwin core per alcune proprietà; cambiate alcune definizioni (e.g., authorship)."@it .
 
 #################################################################
 #    Annotation properties
