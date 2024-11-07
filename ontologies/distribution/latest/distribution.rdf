@@ -193,7 +193,7 @@
     <owl:ObjectProperty rdf:about="https://aphia.org/ns/distribution/hasDistribution">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
         <owl:inverseOf rdf:resource="https://aphia.org/ns/distribution/isDistributionOf"/>
-        <rdfs:domain rdf:resource="https://aphia.org/ns/taxa-name/Taxon"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
         <rdfs:range rdf:resource="https://aphia.org/ns/distribution/Distribution"/>
         <rdfs:comment xml:lang="en">Property used to specify the distribution for a taxon.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà utilizzata per specificare la distribuzione di un taxon.</rdfs:comment>
@@ -263,7 +263,7 @@
     <owl:ObjectProperty rdf:about="https://aphia.org/ns/distribution/isDistributionOf">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
         <rdfs:domain rdf:resource="https://aphia.org/ns/distribution/Distribution"/>
-        <rdfs:range rdf:resource="https://aphia.org/ns/taxa-name/Taxon"/>
+        <rdfs:range rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
         <rdfs:comment xml:lang="en">Inverse property of &apos;has distribution&apos; used to obtain information of the taxon from its distributions</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà inversa di &apos;ha distribuzione&apos; usata per ottenere informazioni sul taxon dalle sue distribuzioni</rdfs:comment>
         <rdfs:comment xml:lang="nl">Inverse eigenschap van 'heeft verspreiding' gebruikt om informatie van het taxon te verkrijgen uit zijn verspreidingen</rdfs:comment>
@@ -363,7 +363,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://aphia.org/ns/distribution/isDistributionOf"/>
-                <owl:someValuesFrom rdf:resource="https://aphia.org/ns/taxa-name/Taxon"/>
+                <owl:someValuesFrom rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -405,7 +405,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://aphia.org/ns/distribution/isDistributionOf"/>
-                <owl:allValuesFrom rdf:resource="https://aphia.org/ns/taxa-name/Taxon"/>
+                <owl:allValuesFrom rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -481,9 +481,9 @@
 
 
 
-    <!-- https://aphia.org/ns/taxa-name/Taxon -->
+    <!-- https://aphia.org/ns/taxon-name/Taxon -->
 
-    <owl:Class rdf:about="https://aphia.org/ns/taxa-name/Taxon"/>
+    <owl:Class rdf:about="https://aphia.org/ns/taxon-name/Taxon"/>
 
 
 

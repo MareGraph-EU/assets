@@ -213,7 +213,7 @@
     <owl:ObjectProperty rdf:about="https://aphia.org/ns/attribute-trait/hasAdditionalDescription">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDescribedBy"/>
         <owl:inverseOf rdf:resource="https://aphia.org/ns/attribute-trait/isAdditionalDescriptionOf"/>
-        <rdfs:domain rdf:resource="https://aphia.org/ns/taxa-name/Taxon"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
         <rdfs:range rdf:resource="https://aphia.org/ns/attribute-trait/TaxonDescription"/>
         <rdfs:comment xml:lang="nl">Eigenschap gebruikt om de beschrijving van het taxon weer te geven in termen van kenmerken en eigenschappen, en gerelateerde extra specificaties met parameters zoals geslacht, geografische eenheden, levensfase, enz.).</rdfs:comment>
         <rdfs:comment xml:lang="en">Property used to represent the description of the taxon in terms of attributes and traits, and related extra specifications with parameters such as gender, geographical units, lifestage, etc.).</rdfs:comment>
@@ -247,7 +247,7 @@
     <owl:ObjectProperty rdf:about="https://aphia.org/ns/attribute-trait/hasHabitat">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
         <owl:inverseOf rdf:resource="https://aphia.org/ns/attribute-trait/isHabitatOf"/>
-        <rdfs:domain rdf:resource="https://aphia.org/ns/taxa-name/Taxon"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
         <rdfs:range rdf:resource="https://aphia.org/ns/attribute-trait/Environment"/>
         <rdfs:comment xml:lang="nl">Eigenschap die wordt gebruikt om de habitat van de soort weer te geven.</rdfs:comment>
         <rdfs:comment xml:lang="en">Property used to represent the habitat of the species.</rdfs:comment>
@@ -282,7 +282,7 @@
     <owl:ObjectProperty rdf:about="https://aphia.org/ns/attribute-trait/isAdditionalDescriptionOf">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#describes"/>
         <rdfs:domain rdf:resource="https://aphia.org/ns/attribute-trait/TaxonDescription"/>
-        <rdfs:range rdf:resource="https://aphia.org/ns/taxa-name/Taxon"/>
+        <rdfs:range rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
         <rdfs:comment xml:lang="nl">Inverse eigenschap van &apos;heeft aanvullende beschrijving&apos; gebruikt om informatie over het taxon te verkrijgen uit zijn beschrijving in termen van attributen en eigenschappen.</rdfs:comment>
         <rdfs:comment xml:lang="en">Inverse property of &apos;has additional description&apos; used to get information about the taxon from its description in terms of attributes and traits.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà inversa di &apos;ha descrizione aggiuntiva&apos;, utilizzata per ottenere informazioni sul taxon dalla sua descrizione in termini di attributi e tratti.</rdfs:comment>
@@ -299,7 +299,7 @@
     <owl:ObjectProperty rdf:about="https://aphia.org/ns/attribute-trait/isHabitatOf">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
         <rdfs:domain rdf:resource="https://aphia.org/ns/attribute-trait/Environment"/>
-        <rdfs:range rdf:resource="https://aphia.org/ns/taxa-name/Taxon"/>
+        <rdfs:range rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
         <rdfs:comment xml:lang="nl">Inverse eigenschap van &apos;heeft habitat&apos; om informatie over het taxon uit de omgeving te halen.</rdfs:comment>
         <rdfs:comment xml:lang="en">Inverse property of &apos;has habitat&apos; to get information about the taxon from the environment.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà inversa di &quot;ha un habitat&quot; per ottenere informazioni sul taxon dall&apos;ambiente.</rdfs:comment>
@@ -413,7 +413,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://aphia.org/ns/attribute-trait/isHabitatOf"/>
-                <owl:allValuesFrom rdf:resource="https://aphia.org/ns/taxa-name/Taxon"/>
+                <owl:allValuesFrom rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="nl">De klasse van de milieus waarvan bekend is dat het taxon er voorkomt. De individuen van deze klasse kunnen concepten zijn van een gecontroleerde woordenlijst van de habitats.</rdfs:comment>
@@ -489,7 +489,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://aphia.org/ns/attribute-trait/isAdditionalDescriptionOf"/>
-                <owl:someValuesFrom rdf:resource="https://aphia.org/ns/taxa-name/Taxon"/>
+                <owl:someValuesFrom rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -556,9 +556,9 @@
     
 
 
-    <!-- https://aphia.org/ns/taxa-name/Taxon -->
+    <!-- https://aphia.org/ns/taxon-name/Taxon -->
 
-    <owl:Class rdf:about="https://aphia.org/ns/taxa-name/Taxon"/>
+    <owl:Class rdf:about="https://aphia.org/ns/taxon-name/Taxon"/>
     
 
 

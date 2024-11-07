@@ -133,7 +133,7 @@ dct:source rdf:type owl:ObjectProperty .
 :hasDistribution rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
                  owl:inverseOf :isDistributionOf ;
-                 rdfs:domain <https://aphia.org/ns/taxa-name/Taxon> ;
+                 rdfs:domain <https://aphia.org/ns/taxon-name/Taxon> ;
                  rdfs:range :Distribution ;
                  rdfs:comment "Property used to specify the distribution for a taxon."@en ,
                               "Proprietà utilizzata per specificare la distribuzione di un taxon."@it ,
@@ -191,7 +191,7 @@ dct:source rdf:type owl:ObjectProperty .
 :isDistributionOf rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
                   rdfs:domain :Distribution ;
-                  rdfs:range <https://aphia.org/ns/taxa-name/Taxon> ;
+                  rdfs:range <https://aphia.org/ns/taxon-name/Taxon> ;
                   rdfs:comment "Inverse property of 'has distribution' used to obtain information of the taxon from its distributions"@en ,
                                "Proprietà inversa di 'ha distribuzione' usata per ottenere informazioni sul taxon dalle sue distribuzioni"@it ,
                                "Inverse eigenschap van 'heeft verspreiding' gebruikt om informatie van het taxon te verkrijgen uit zijn verspreidingen"@nl ;
@@ -256,7 +256,7 @@ foaf:Organization rdf:type owl:Class .
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :isDistributionOf ;
-                                owl:someValuesFrom <https://aphia.org/ns/taxa-name/Taxon>
+                                owl:someValuesFrom <https://aphia.org/ns/taxon-name/Taxon>
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dct:source ;
@@ -284,7 +284,7 @@ foaf:Organization rdf:type owl:Class .
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :isDistributionOf ;
-                                owl:allValuesFrom <https://aphia.org/ns/taxa-name/Taxon>
+                                owl:allValuesFrom <https://aphia.org/ns/taxon-name/Taxon>
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty skos:note ;
@@ -344,8 +344,8 @@ foaf:Organization rdf:type owl:Class .
         prov:wasDerivedFrom skos:Concept .
 
 
-###  https://aphia.org/ns/taxa-name/Taxon
-<https://aphia.org/ns/taxa-name/Taxon> rdf:type owl:Class .
+###  https://aphia.org/ns/taxon-name/Taxon
+<https://aphia.org/ns/taxon-name/Taxon> rdf:type owl:Class .
 
 
 ###  https://aphia.org/ns/top-level/Source
