@@ -89,7 +89,7 @@ prov:wasInfluencedBy rdf:type owl:AnnotationProperty .
 :hasAdditionalDescription rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDescribedBy> ;
                           owl:inverseOf :isAdditionalDescriptionOf ;
-                          rdfs:domain <https://aphia.org/ns/taxa-name/Taxon> ;
+                          rdfs:domain <https://aphia.org/ns/taxon-name/Taxon> ;
                           rdfs:range :TaxonDescription ;
                           rdfs:comment "Eigenschap gebruikt om de beschrijving van het taxon weer te geven in termen van kenmerken en eigenschappen, en gerelateerde extra specificaties met parameters zoals geslacht, geografische eenheden, levensfase, enz.)."@nl ,
                                        "Property used to represent the description of the taxon in terms of attributes and traits, and related extra specifications with parameters such as gender, geographical units, lifestage, etc.)."@en ,
@@ -117,7 +117,7 @@ prov:wasInfluencedBy rdf:type owl:AnnotationProperty .
 :hasHabitat rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
             owl:inverseOf :isHabitatOf ;
-            rdfs:domain <https://aphia.org/ns/taxa-name/Taxon> ;
+            rdfs:domain <https://aphia.org/ns/taxon-name/Taxon> ;
             rdfs:range :Environment ;
             rdfs:comment "Eigenschap die wordt gebruikt om de habitat van de soort weer te geven."@nl ,
                          "Property used to represent the habitat of the species."@en ,
@@ -146,7 +146,7 @@ prov:wasInfluencedBy rdf:type owl:AnnotationProperty .
 :isAdditionalDescriptionOf rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#describes> ;
                            rdfs:domain :TaxonDescription ;
-                           rdfs:range <https://aphia.org/ns/taxa-name/Taxon> ;
+                           rdfs:range <https://aphia.org/ns/taxon-name/Taxon> ;
                            rdfs:comment "Inverse eigenschap van 'heeft aanvullende beschrijving' gebruikt om informatie over het taxon te verkrijgen uit zijn beschrijving in termen van attributen en eigenschappen."@nl ,
                                         "Inverse property of 'has additional description' used to get information about the taxon from its description in terms of attributes and traits."@en ,
                                         "Proprietà inversa di 'ha descrizione aggiuntiva', utilizzata per ottenere informazioni sul taxon dalla sua descrizione in termini di attributi e tratti."@it ;
@@ -160,7 +160,7 @@ prov:wasInfluencedBy rdf:type owl:AnnotationProperty .
 :isHabitatOf rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
              rdfs:domain :Environment ;
-             rdfs:range <https://aphia.org/ns/taxa-name/Taxon> ;
+             rdfs:range <https://aphia.org/ns/taxon-name/Taxon> ;
              rdfs:comment "Inverse eigenschap van 'heeft habitat' om informatie over het taxon uit de omgeving te halen."@nl ,
                           "Inverse property of 'has habitat' to get information about the taxon from the environment."@en ,
                           "Proprietà inversa di \"ha un habitat\" per ottenere informazioni sul taxon dall'ambiente."@it ;
@@ -204,7 +204,7 @@ skos:Concept rdf:type owl:Class .
                              skos:Concept ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :isHabitatOf ;
-                               owl:allValuesFrom <https://aphia.org/ns/taxa-name/Taxon>
+                               owl:allValuesFrom <https://aphia.org/ns/taxon-name/Taxon>
                              ] ;
              rdfs:comment "De klasse van de milieus waarvan bekend is dat het taxon er voorkomt. De individuen van deze klasse kunnen concepten zijn van een gecontroleerde woordenlijst van de habitats."@nl ,
                           "La classe degli ambienti in cui il taxon è conosciuto. Gli individui di questa classe possono essere concetti di un vocabolario controllato degli habitat."@it ,
@@ -265,7 +265,7 @@ skos:Concept rdf:type owl:Class .
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :isAdditionalDescriptionOf ;
-                                    owl:someValuesFrom <https://aphia.org/ns/taxa-name/Taxon>
+                                    owl:someValuesFrom <https://aphia.org/ns/taxon-name/Taxon>
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty <https://aphia.org/ns/top-level/hasValue> ;
@@ -313,8 +313,8 @@ skos:Concept rdf:type owl:Class .
                   "Tratto"@it .
 
 
-###  https://aphia.org/ns/taxa-name/Taxon
-<https://aphia.org/ns/taxa-name/Taxon> rdf:type owl:Class .
+###  https://aphia.org/ns/taxon-name/Taxon
+<https://aphia.org/ns/taxon-name/Taxon> rdf:type owl:Class .
 
 
 #################################################################

@@ -105,7 +105,7 @@
         <Class IRI="/VideoObject"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://aphia.org/ns/taxa-name/Taxon"/>
+        <Class IRI="https://aphia.org/ns/taxon-name/Taxon"/>
     </Declaration>
     <Declaration>
         <Class IRI="https://schema.org/ImageObject"/>
@@ -199,7 +199,7 @@
         <Class IRI="/MediaObject"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="dct:subject"/>
-            <Class IRI="https://aphia.org/ns/taxa-name/Taxon"/>
+            <Class IRI="https://aphia.org/ns/taxon-name/Taxon"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -263,7 +263,7 @@
     </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/isSubjectOf"/>
-        <Class IRI="https://aphia.org/ns/taxa-name/Taxon"/>
+        <Class IRI="https://aphia.org/ns/taxon-name/Taxon"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/isSubjectOf"/>
