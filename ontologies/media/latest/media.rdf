@@ -160,7 +160,7 @@
 
     <owl:ObjectProperty rdf:about="https://aphia.org/ns/media/isSubjectOf">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
-        <rdfs:domain rdf:resource="https://aphia.org/ns/taxa-name/Taxon"/>
+        <rdfs:domain rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
         <rdfs:range rdf:resource="https://aphia.org/ns/media/MediaObject"/>
         <rdfs:comment xml:lang="en">Property used to link the taxon to its media objects</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà utilizzata per collegare il taxon ai suoi oggetti multimediali.</rdfs:comment>
@@ -258,7 +258,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/dc/terms/subject"/>
-                <owl:someValuesFrom rdf:resource="https://aphia.org/ns/taxa-name/Taxon"/>
+                <owl:someValuesFrom rdf:resource="https://aphia.org/ns/taxon-name/Taxon"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -315,9 +315,9 @@
     
 
 
-    <!-- https://aphia.org/ns/taxa-name/Taxon -->
+    <!-- https://aphia.org/ns/taxon-name/Taxon -->
 
-    <owl:Class rdf:about="https://aphia.org/ns/taxa-name/Taxon"/>
+    <owl:Class rdf:about="https://aphia.org/ns/taxon-name/Taxon"/>
     
 
 

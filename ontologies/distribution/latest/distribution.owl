@@ -109,7 +109,7 @@
         <Class IRI="/Origin"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://aphia.org/ns/taxa-name/Taxon"/>
+        <Class IRI="https://aphia.org/ns/taxon-name/Taxon"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.w3.org/ns/locn#geometry"/>
@@ -213,7 +213,7 @@
         <Class IRI="/Distribution"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/isDistributionOf"/>
-            <Class IRI="https://aphia.org/ns/taxa-name/Taxon"/>
+            <Class IRI="https://aphia.org/ns/taxon-name/Taxon"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -262,7 +262,7 @@
         <Class IRI="/Distribution"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/isDistributionOf"/>
-            <Class IRI="https://aphia.org/ns/taxa-name/Taxon"/>
+            <Class IRI="https://aphia.org/ns/taxon-name/Taxon"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -337,7 +337,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/hasDistribution"/>
-        <Class IRI="https://aphia.org/ns/taxa-name/Taxon"/>
+        <Class IRI="https://aphia.org/ns/taxon-name/Taxon"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/hasInvasiveness"/>
@@ -377,7 +377,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/isDistributionOf"/>
-        <Class IRI="https://aphia.org/ns/taxa-name/Taxon"/>
+        <Class IRI="https://aphia.org/ns/taxon-name/Taxon"/>
     </ObjectPropertyRange>
     <FunctionalDataProperty>
         <DataProperty IRI="/isTypeLocality"/>
