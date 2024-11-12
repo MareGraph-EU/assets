@@ -72,7 +72,7 @@ prov:wasDerivedFrom rdf:type owl:AnnotationProperty .
 :hasDistribution rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
                  owl:inverseOf :isDistributionOf ;
-                 rdfs:domain <https://w3id.org/marine/ns/taxa-name/Taxon> ;
+                 rdfs:domain <https://w3id.org/marine/ns/taxon-name/Taxon> ;
                  rdfs:range :Distribution ;
                  rdfs:comment "Property used to specify the distribution for a taxon."@en ,
                               "Proprietà utilizzata per specificare la distribuzione di un taxon."@it ;
@@ -121,7 +121,7 @@ prov:wasDerivedFrom rdf:type owl:AnnotationProperty .
 :isDistributionOf rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
                   rdfs:domain :Distribution ;
-                  rdfs:range <https://w3id.org/marine/ns/taxa-name/Taxon> ;
+                  rdfs:range <https://w3id.org/marine/ns/taxon-name/Taxon> ;
                   rdfs:comment "Inverse property of 'has distribution' used to obtain information of the taxon from its distributions"@en ,
                                "Proprietà inversa di 'ha distribuzione' usata per ottenere informazioni sul taxon dalle sue distribuzioni"@it ;
                   rdfs:isDefinedBy <https://w3id.org/marine/ns/distribution> ;
@@ -170,7 +170,7 @@ skos:note rdf:type owl:DatatypeProperty .
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :isDistributionOf ;
-                                owl:someValuesFrom <https://w3id.org/marine/ns/taxa-name/Taxon>
+                                owl:someValuesFrom <https://w3id.org/marine/ns/taxon-name/Taxon>
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty dct:source ;
@@ -198,7 +198,7 @@ skos:note rdf:type owl:DatatypeProperty .
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :isDistributionOf ;
-                                owl:allValuesFrom <https://w3id.org/marine/ns/taxa-name/Taxon>
+                                owl:allValuesFrom <https://w3id.org/marine/ns/taxon-name/Taxon>
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty skos:note ;
@@ -250,8 +250,8 @@ skos:note rdf:type owl:DatatypeProperty .
         prov:wasDerivedFrom skos:Concept .
 
 
-###  https://w3id.org/marine/ns/taxa-name/Taxon
-<https://w3id.org/marine/ns/taxa-name/Taxon> rdf:type owl:Class .
+###  https://w3id.org/marine/ns/taxon-name/Taxon
+<https://w3id.org/marine/ns/taxon-name/Taxon> rdf:type owl:Class .
 
 
 #################################################################

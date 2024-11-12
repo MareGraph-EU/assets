@@ -104,7 +104,7 @@ dct:subject rdf:type owl:ObjectProperty ;
 ###  https://aphia.org/ns/media/isSubjectOf
 :isSubjectOf rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
-             rdfs:domain <https://aphia.org/ns/taxa-name/Taxon> ;
+             rdfs:domain <https://aphia.org/ns/taxon-name/Taxon> ;
              rdfs:range :MediaObject ;
              rdfs:comment "Property used to link the taxon to its media objects"@en ,
                           "Proprietà utilizzata per collegare il taxon ai suoi oggetti multimediali."@it ;
@@ -167,7 +167,7 @@ foaf:Organization rdf:type owl:Class .
                              <https://schema.org/MediaObject> ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dct:subject ;
-                               owl:someValuesFrom <https://aphia.org/ns/taxa-name/Taxon>
+                               owl:someValuesFrom <https://aphia.org/ns/taxon-name/Taxon>
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dct:format ;
@@ -208,8 +208,8 @@ foaf:Organization rdf:type owl:Class .
                         "Video Object"@en .
 
 
-###  https://aphia.org/ns/taxa-name/Taxon
-<https://aphia.org/ns/taxa-name/Taxon> rdf:type owl:Class .
+###  https://aphia.org/ns/taxon-name/Taxon
+<https://aphia.org/ns/taxon-name/Taxon> rdf:type owl:Class .
 
 
 ###  https://schema.org/ImageObject
