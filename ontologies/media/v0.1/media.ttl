@@ -97,7 +97,7 @@ dct:subject rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/marine/ns/media/isSubjectOf
 :isSubjectOf rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
-             rdfs:domain <https://w3id.org/marine/ns/taxa-name/Taxon> ;
+             rdfs:domain <https://w3id.org/marine/ns/taxon-name/Taxon> ;
              rdfs:range :MediaObject ;
              rdfs:comment "Property used to specify the distribution for a taxon."@en ,
                           "Proprietà utilizzata per specificare la distribuzione di un taxon."@it ,
@@ -181,7 +181,7 @@ dct:MediaTypeOrExtent rdf:type owl:Class .
                              <https://schema.org/MediaObject> ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dct:subject ;
-                               owl:someValuesFrom <https://w3id.org/marine/ns/taxa-name/Taxon>
+                               owl:someValuesFrom <https://w3id.org/marine/ns/taxon-name/Taxon>
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasMediaObjectDistribution ;
@@ -193,7 +193,7 @@ dct:MediaTypeOrExtent rdf:type owl:Class .
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dct:subject ;
-                               owl:allValuesFrom <https://w3id.org/marine/ns/taxa-name/Taxon>
+                               owl:allValuesFrom <https://w3id.org/marine/ns/taxon-name/Taxon>
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasMediaObjectDistribution ;
@@ -259,8 +259,8 @@ dct:MediaTypeOrExtent rdf:type owl:Class .
                         "Video Object"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/Taxon
-<https://w3id.org/marine/ns/taxa-name/Taxon> rdf:type owl:Class .
+###  https://w3id.org/marine/ns/taxon-name/Taxon
+<https://w3id.org/marine/ns/taxon-name/Taxon> rdf:type owl:Class .
 
 
 ###  https://w3id.org/marine/ns/top-level/Person

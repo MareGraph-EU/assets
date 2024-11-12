@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/marine/ns/taxa-name/> .
+@prefix : <https://w3id.org/marine/ns/taxon-name/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,10 +6,10 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/marine/ns/taxa-name/> .
+@base <https://w3id.org/marine/ns/taxon-name/> .
 
-<https://w3id.org/marine/ns/taxa-name> rdf:type owl:Ontology ;
-                                        owl:versionIRI <https://w3id.org/marine/ns/taxa-name/0.1> ;
+<https://w3id.org/marine/ns/taxon-name> rdf:type owl:Ontology ;
+                                        owl:versionIRI <https://w3id.org/marine/ns/taxon-name/0.1> ;
                                         owl:imports <http://www.w3.org/2008/05/skos-xl> ,
                                                     <https://w3id.org/marine/ns/top-level/0.1> ;
                                         dct:creator <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab> ,
@@ -65,7 +65,7 @@ owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
 dct:coverage rdf:type owl:ObjectProperty .
 
 
-###  https://w3id.org/marine/ns/taxa-name/denotes
+###  https://w3id.org/marine/ns/taxon-name/denotes
 :denotes rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
          owl:inverseOf :isDenotedBy ;
@@ -74,13 +74,13 @@ dct:coverage rdf:type owl:ObjectProperty .
          rdfs:comment "Property used to represent a name for a taxon."@en ,
                       "Proprietà utilizzata per definire un nome per un taxon."@it ,
                       "Eigenschap die wordt gebruikt om een naam voor een taxon te definiëren."@nl ;
-         rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+         rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
          rdfs:label "definisce/denota"@it ,
                     "denotes"@en ,
                     "definieert"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/hasAcceptedName
+###  https://w3id.org/marine/ns/taxon-name/hasAcceptedName
 :hasAcceptedName rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :isDenotedBy ;
                  rdf:type owl:FunctionalProperty ;
@@ -89,13 +89,13 @@ dct:coverage rdf:type owl:ObjectProperty .
                  rdfs:comment "Property used to represent the valid/accepted name for a taxon."@en ,
                               "Proprietà utilizzata per definire il nome valido/accettato per un taxon."@it ,
                               "Eigenschap gebruikt om de geldige/aanvaarde naam voor een taxon te definiëren."@nl ;
-                 rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+                 rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
                  rdfs:label "ha nome valido/accettato"@it ,
                             "has accepted name"@en ,
                             "heeft geaccepteerde naam"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/hasAuthorship
+###  https://w3id.org/marine/ns/taxon-name/hasAuthorship
 :hasAuthorship rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
                rdfs:domain :TaxonName ;
@@ -103,13 +103,13 @@ dct:coverage rdf:type owl:ObjectProperty .
                rdfs:comment "Property used to represent the situation of authorship, given by the combination of the author and year, for a taxon name."@en ,
                             "Proprietà utilizzata per definire la situazione di paternità, data dalla combinazione di autore e anno, per un nome di taxon."@it ,
                             "Eigenschap gebruikt om auteurschap te definiëren, gegeven door de combinatie van auteur en jaar, voor een taxonnaam."@nl ;
-               rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+               rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
                rdfs:label "ha paternità"@it ,
                           "has authorship"@en ,
                           "heeft auteurschap"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/hasChild
+###  https://w3id.org/marine/ns/taxon-name/hasChild
 :hasChild rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#narrower> ;
           owl:inverseOf :hasParent ;
@@ -118,13 +118,13 @@ dct:coverage rdf:type owl:ObjectProperty .
           rdfs:comment "Property that allows representing the direct child taxon in a classification."@en ,
                        "Proprietà che consente di rappresentare il taxon diretto inferiore in una classification."@it ,
                        "Eigenschap die toelaat het directe lagere taxon in een classificatie weer te geven."@nl ;
-          rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+          rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
           rdfs:label "ha taxon inferiore"@it ,
                      "has child taxon"@en ,
                      "heeft lager taxon"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/hasParent
+###  https://w3id.org/marine/ns/taxon-name/hasParent
 :hasParent rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#broader> ;
            rdf:type owl:FunctionalProperty ;
@@ -133,13 +133,13 @@ dct:coverage rdf:type owl:ObjectProperty .
            rdfs:comment "Property that allows representing the direct parent taxon in a classification. The parent of a species is usually a genus; the parent of a genus is usually a family, and so on."@en ,
                         "Proprietà che consente di rappresentare il taxon diretto superiore in una classificatione. Il taxon diretto superiore di una specie è di solito il genere, quello del genere è la famiglia e così via."@it ,
                         "Eigenschap die toelaat het directe hogere taxon in een classificatie weer te geven. De ouder van een soort is meestal een geslacht; de ouder van een geslacht is meestal een familie, enzovoort."@nl ;
-           rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+           rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
            rdfs:label "ha taxon superiore"@it ,
                       "has parent taxon"@en ,
                       "heeft hoger taxon"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/hasStatus
+###  https://w3id.org/marine/ns/taxon-name/hasStatus
 :hasStatus rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
            rdf:type owl:FunctionalProperty ;
@@ -148,13 +148,13 @@ dct:coverage rdf:type owl:ObjectProperty .
            rdfs:comment "Property used to connect the taxon name with its status (e.g., accepted, unaccepted)."@en ,
                         "Proprietà utilizzata per collegare il nome del taxon con il suo stato (e.g., accettato, non accettato)."@it ,
                         "Eigenschap gebruikt om de taxonnaam te koppelen aan zijn status (bijv. geaccepteerd, niet geaccepteerd)."@nl ;
-           rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+           rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
            rdfs:label "ha stato"@it ,
                       "has status"@en ,
                       "heeft status"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/hasSynonym
+###  https://w3id.org/marine/ns/taxon-name/hasSynonym
 :hasSynonym rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf dct:relation ;
             owl:inverseOf :isSynonymOf ;
@@ -163,13 +163,13 @@ dct:coverage rdf:type owl:ObjectProperty .
             rdfs:comment "Property used to specify synonymity relations between taxon names."@en ,
                          "Proprietà utilizzata per specificare relazioni di sinonimia tra nomi di taxon."@it ,
                          "Eigenschap gebruikt om synoniemenrelaties tussen taxonnamen te specificeren."@nl ;
-            rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+            rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
             rdfs:label "ha sinonimo"@it ,
                        "has synonym"@en ,
                        "heeft synoniem"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/hasSynonymName
+###  https://w3id.org/marine/ns/taxon-name/hasSynonymName
 :hasSynonymName rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :isDenotedBy ;
                 rdfs:domain :Taxon ;
@@ -177,13 +177,13 @@ dct:coverage rdf:type owl:ObjectProperty .
                 rdfs:comment "Proprietà used to connect the taxon with its names considered synonyms."@en ,
                              "Proprietà utilizzata per collegare il taxon con i suoi nomi considerati sinonimi."@it ,
                              "Eigenschap gebruikt om het taxon te koppelen aan zijn namen die als synoniemen worden beschouwd."@nl ;
-                rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+                rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
                 rdfs:label "ha nome sinonimo"@it ,
                            "has synonym name"@en ,
                            "heeft synoniem naam"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/hasUnacceptedReason
+###  https://w3id.org/marine/ns/taxon-name/hasUnacceptedReason
 :hasUnacceptedReason rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
                      rdfs:domain :TaxonName ;
@@ -191,13 +191,13 @@ dct:coverage rdf:type owl:ObjectProperty .
                      rdfs:comment "Property used to specify the motivation for which a name is not accepted for a taxon name."@en ,
                                   "Proprietà utilizzata per specificare il motivo per cui un nome non è accettato per un nome di taxon."@it ,
                                   "Eigenschap gebruikt om de motivatie te specificeren waarvoor een naam niet wordt geaccepteerd voor een taxonnaam."@nl ;
-                     rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+                     rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
                      rdfs:label "ha motivo non accettato"@it ,
                                 "ha unaccepted reason"@en ,
                                 "heeft niet-geaccepteerd reden"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/isDenotedBy
+###  https://w3id.org/marine/ns/taxon-name/isDenotedBy
 :isDenotedBy rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
              rdfs:domain :Taxon ;
@@ -205,13 +205,13 @@ dct:coverage rdf:type owl:ObjectProperty .
              rdfs:comment "Inverse property of 'denotes' that allows one to specify the name for a taxon."@en ,
                           "Proprietà inversa di 'definito/denotato' che consente di specificare il nome per un taxon."@it ,
                           "Inverse eigenschap van 'definieert' die toelaat de naam van een taxon te definiëren."@nl ;
-             rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+             rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
              rdfs:label "is denoted by"@en ,
                         "è definito/denotato da"@it ,
                         "is gedefinieerd door"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/isOfRank
+###  https://w3id.org/marine/ns/taxon-name/isOfRank
 :isOfRank rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
           rdf:type owl:FunctionalProperty ;
@@ -220,13 +220,13 @@ dct:coverage rdf:type owl:ObjectProperty .
           rdfs:comment "Property used to specify the rank in a taxonomic classification for the taxon name."@en ,
                        "Proprietà utilizzata per specificare il rango in una classificazione tassonomica per un nome di taxon."@it ,
                        "Eigenschap gebruikt om de taxonnaam te koppelen aan zijn rang in een taxonomische classificatie."@nl ;
-          rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+          rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
           rdfs:label "is of rank"@en ,
                      "è di rango"@it ,
                      "heeft rang"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/isSynonymOf
+###  https://w3id.org/marine/ns/taxon-name/isSynonymOf
 :isSynonymOf rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf dct:relation ;
              rdfs:domain :TaxonName ;
@@ -234,7 +234,7 @@ dct:coverage rdf:type owl:ObjectProperty .
              rdfs:comment "Inverse property of 'has synonym'."@en ,
                           "Proprietà inversa di 'ha sinonimo'."@it ,
                           "Inverse eigenschap van 'heeft synoniem'"@nl ;
-             rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+             rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
              rdfs:label "is synonym of"@en ,
                         "è sinonimo di"@it ,
                         "is synoniem van"@nl .
@@ -244,7 +244,7 @@ dct:coverage rdf:type owl:ObjectProperty .
 #    Data properties
 #################################################################
 
-###  https://w3id.org/marine/ns/taxa-name/aphiaID
+###  https://w3id.org/marine/ns/taxon-name/aphiaID
 :aphiaID rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf dct:identifier ;
          rdf:type owl:FunctionalProperty ;
@@ -253,13 +253,13 @@ dct:coverage rdf:type owl:ObjectProperty .
          rdfs:comment "Codice univoco e persistente nel sistema WoRMS."@it ,
                       "Unique and persistent code within WoRMS."@en ,
                       "Unieke en persistente code in WoRMS."@nl ; 
-         rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+         rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
          rdfs:label "aphia identifier"@en ,
                     "identificativo aphia"@it ,
                     "aphia identificatie"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/authorship
+###  https://w3id.org/marine/ns/taxon-name/authorship
 :authorship rdf:type owl:DatatypeProperty ,
                      owl:FunctionalProperty ;
             rdfs:domain :TaxonName ;
@@ -267,13 +267,13 @@ dct:coverage rdf:type owl:ObjectProperty .
             rdfs:comment "La combinazione di autore e anno associata al nome di un taxon, espressa come stringa."@it ,
                          "The combination of author and year associated with a taxon name, expressed as a string."@en ,
                          "De combinatie van auteur en jaar geassocieerd met een taxonnaam, uitgedrukt als een string."@nl ;
-            rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+            rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
             rdfs:label "authorship"@en ,
                        "paternità"@it ,
                        "auteurschap"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/fullScientificName
+###  https://w3id.org/marine/ns/taxon-name/fullScientificName
 :fullScientificName rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf <http://www.w3.org/2008/05/skos-xl#literalForm> ;
                     rdfs:domain :TaxonName ;
@@ -281,13 +281,13 @@ dct:coverage rdf:type owl:ObjectProperty .
                     rdfs:comment "Il nome scientifico completo in latino che include anche la paternità, data dalla combinazione di autore e anno."@it ,
                                  "The complete scientific name in Latin including the authorship information (author, year)."@en ,
                                  "De volledige wetenschappelijke naam in het Latijn, met informatie over het auteurschap (auteur, jaar)."@nl ;
-                    rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+                    rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
                     rdfs:label "full scientific name (with author)"@en ,
                                "nome scientifico completo (con autore)"@it ,
                                "volledige wetenschappelijke naam (met auteur)"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/scientificName
+###  https://w3id.org/marine/ns/taxon-name/scientificName
 :scientificName rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf <http://www.w3.org/2008/05/skos-xl#literalForm> ;
                 rdfs:domain :TaxonName ;
@@ -295,13 +295,13 @@ dct:coverage rdf:type owl:ObjectProperty .
                 rdfs:comment "Il nome scientifico in latino che non include le informazioni sulla paternità (autore, anno)"@it ,
                              "The scientific name in Latin that does not include information on the authorship (author, year)."@en ,
                              "De wetenschappelijke naam in het Latijn zonder informatie over het auteurschap (auteur, jaar)"@nl ;
-                rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+                rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
                 rdfs:label "nome scientifico (senza autore)"@it ,
                            "scientific name (without author)"@en ,
                            "wetenschappelijke naam (zonder auteur)"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/vernacularName
+###  https://w3id.org/marine/ns/taxon-name/vernacularName
 :vernacularName rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf <http://www.w3.org/2008/05/skos-xl#literalForm> ;
                 rdfs:domain :VernacularName ;
@@ -309,7 +309,7 @@ dct:coverage rdf:type owl:ObjectProperty .
                 rdfs:comment "Il nome comune espresso nelle varie lingue"@it ,
                              "The common name expressed in various languages."@en ,
                              "De inheemse/inlandse naam in verschillende talen."@nl ;
-                rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+                rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
                 rdfs:label "nome comune"@it ,
                            "vernacular name"@en ,
                            "vernaculaire naam"@nl .
@@ -327,7 +327,7 @@ dct:LinguisticSystem rdf:type owl:Class .
 dct:Location rdf:type owl:Class .
 
 
-###  https://w3id.org/marine/ns/taxa-name/Authorship
+###  https://w3id.org/marine/ns/taxon-name/Authorship
 :Authorship rdf:type owl:Class ;
             rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation> ,
                             [ rdf:type owl:Restriction ;
@@ -343,39 +343,39 @@ dct:Location rdf:type owl:Class .
             rdfs:comment "La combinazione dell'autore e dell'anno associati al nome del taxon."@it ,
                          "The combination of the author and year associated with a taxon name."@en ,
                          "De combinatie van de auteur en het jaartal gekoppeld aan een taxonnaam."@nl ;
-            rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+            rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
             rdfs:label "Authorship"@en ,
                        "Paternità"@it ,
                        "Auteurschap"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/Rank
+###  https://w3id.org/marine/ns/taxon-name/Rank
 :Rank rdf:type owl:Class ;
       rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ,
                       <http://www.w3.org/2004/02/skos/core#Concept> ;
       rdfs:comment "Il livello specifico di una classificazione tassonomica che un nome occupa. Esempi sono: specie, famiglia, genere, sottospecie, ecc. Gli individui di questa classe possono essere concetti di un vocabolario controllato relativo."@it ,
                    "The particular level in a taxonomic classification that a name occupies. Examples are: species, family, genus, subspecies, etc. The indivuals of this class can be concepts of a controlled vocabulary."@en ,
                    "Het specifieke niveau in een taxonomische classificatie die een naam inneemt. Voorbeelden zijn: soort, familie, geslacht, ondersoort, enz. De individuen van deze klasse kunnen concepten van een gecontroleerde woordenlijst zijn."@nl ;
-      rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+      rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
       rdfs:label "Rango"@it ,
                  "Rank"@en ,
                  "Rang"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/Status
+###  https://w3id.org/marine/ns/taxon-name/Status
 :Status rdf:type owl:Class ;
         rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ,
                         <http://www.w3.org/2004/02/skos/core#Concept> ;
         rdfs:comment "Lo stato dell'uso del nome del taxon (di solito un parere tassonomico)."@it ,
                      "The status of the use of the taxon name (usually a taxonomic opinion)."@en ,
                      "De status van het gebruik van de taxonnaam (meestal een taxonomisch advies)"@nl ;
-        rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+        rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
         rdfs:label "Stato"@it ,
                    "Status"@en ,
                    "Status"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/Taxon
+###  https://w3id.org/marine/ns/taxon-name/Taxon
 :Taxon rdf:type owl:Class ;
        rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ,
                        <http://www.w3.org/2004/02/skos/core#Concept> ,
@@ -404,7 +404,7 @@ dct:Location rdf:type owl:Class .
        rdfs:comment "A group of organisms asserted by taxonomists to form a natural cohesive biological unit."@en ,
                     "Un gruppo di organismi che, secondo i tassonomisti, formano un'unità biologica naturale coesa."@it ,
                     "Een groep organismen die, volgens taxonomen, een natuurlijke samenhangende biologische eenheid vormen."@nl ;
-       rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+       rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
        rdfs:label "Taxon"@en ,
                   "Taxon"@it ,
                   "Taxon"@nl ;
@@ -412,7 +412,7 @@ dct:Location rdf:type owl:Class .
                                                   <https://schema.org/Taxon> .
 
 
-###  https://w3id.org/marine/ns/taxa-name/TaxonName
+###  https://w3id.org/marine/ns/taxon-name/TaxonName
 :TaxonName rdf:type owl:Class ;
            rdfs:subClassOf <http://www.w3.org/2008/05/skos-xl#Label> ,
                            <https://w3id.org/marine/ns/top-level/Name> ,
@@ -470,7 +470,7 @@ dct:Location rdf:type owl:Class .
            rdfs:comment "A name of a particular taxon of any rank (e.g., a genus, a species, a family, etc.). It may be accepted/valid or not. The taxon author is frequently included when indicating a taxon name, as it can help distinguish between different uses of the same name (such as homonyms)."@en ,
                         "Nome di un particolare taxon di qualsiasi rango (ad esempio, un genere, una specie, una famiglia, ecc.). Può essere accettato/valido o meno. L'autore del taxon è spesso incluso quando si indica un nome di taxon, in quanto può aiutare a distinguere tra diversi usi dello stesso nome (come gli omonimi)."@it ,
                         "Een naam van een bepaald taxon van om het even welke rang (bv. een genus, een soort, een familie, enz.). Deze kan geaccepteerd/geldig zijn of niet. De taxonauteur wordt vaak vermeld bij het aangeven van een taxonnaam, omdat het kan helpen onderscheid te maken tussen verschillende toepassingen van dezelfde naam (zoals homoniemen)."@nl ;
-           rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+           rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
            rdfs:label "Nome del Taxon"@it ,
                       "Taxon Name"@en ,
                       "Taxon Naam"@nl ;
@@ -479,20 +479,20 @@ dct:Location rdf:type owl:Class .
                                                       <https://discovery.biothings.io/view/bioschemas/TaxonName> .
 
 
-###  https://w3id.org/marine/ns/taxa-name/UnacceptedReason
+###  https://w3id.org/marine/ns/taxon-name/UnacceptedReason
 :UnacceptedReason rdf:type owl:Class ;
                   rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ,
                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
                   rdfs:comment "An explanation regarding why a given taxon name is judged to be invalid or not accepted. The individuals of this class can be concepts of a specific controlled vocabulary with values like: synonym, misapplied, original combination, new combination, etc."@en ,
                                "Motivazione per cui un nome di un determinato taxon viene giudicato non accettato o non valido. Gli individui di questa classe possono essere concetti di uno specifico vocabolario controllato con valori come: sinonimo, errata applicazione, combinazione originale, nuova combinazione, ecc."@it ,
                                "Een motivatie/uitleg waarom een bepaalde taxonnaam ongeldig of niet geaccepteerd wordt geacht. De individuen van deze klasse kunnen concepten zijn van een specifieke gecontroleerde vocabularium met waarden als: synoniem, verkeerd toegepast, originele combinatie, nieuwe combinatie, enz."@nl ;
-                  rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+                  rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
                   rdfs:label "Motivo per non Accettato"@it ,
                              "Unaccepted Reason"@en ,
                              "Niet-geaccepteerd Reden"@nl .
 
 
-###  https://w3id.org/marine/ns/taxa-name/VernacularName
+###  https://w3id.org/marine/ns/taxon-name/VernacularName
 :VernacularName rdf:type owl:Class ;
                 rdfs:subClassOf <https://w3id.org/marine/ns/top-level/Name> ,
                                 [ rdf:type owl:Restriction ;
@@ -514,7 +514,7 @@ dct:Location rdf:type owl:Class .
                 rdfs:comment "A name other than a taxon name (scientific name) that is commonly used to refer to a species or other taxon. Examples are salmon, rainbow trout, acciuga etc. The language (e.g., English, Italian, etc.) is usually indicated for each vernacular name."@en ,
                              "Un nome diverso dal nome del taxon (nome scientifico) che viene comunemente usato per indicare una specie o un altro taxon. Esempi sono il salmone, la trota iridea, l'acciuga ecc. Per ogni nome comune viene solitamente indicata la lingua (ad esempio, inglese, italiano, ecc.)."@it ,
                              "Een naam, anders dan een taxonnaam (wetenschappelijke naam), die algemeen gebruikt wordt om te verwijzen naar een soort of ander taxon. Voorbeelden zijn zalm, regenboogforel, acciuga enz. De taal (bijv. Engels, Italiaans, enz.) wordt meestal aangegeven voor elke vernaculaire naam."@nl ;
-                rdfs:isDefinedBy <https://w3id.org/marine/ns/taxa-name> ;
+                rdfs:isDefinedBy <https://w3id.org/marine/ns/taxon-name> ;
                 rdfs:label "Nome Comune"@it ,
                            "Vernacular Name"@en ,
                            "Vernaculaire naam"@nl .

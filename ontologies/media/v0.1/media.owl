@@ -112,7 +112,7 @@
         <Class IRI="/VideoObject"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+        <Class IRI="https://w3id.org/marine/ns/taxon-name/Taxon"/>
     </Declaration>
     <Declaration>
         <Class IRI="https://w3id.org/marine/ns/top-level/Person"/>
@@ -209,7 +209,7 @@
         <Class IRI="/MediaObject"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="dct:subject"/>
-            <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+            <Class IRI="https://w3id.org/marine/ns/taxon-name/Taxon"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -230,7 +230,7 @@
         <Class IRI="/MediaObject"/>
         <ObjectAllValuesFrom>
             <ObjectProperty abbreviatedIRI="dct:subject"/>
-            <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+            <Class IRI="https://w3id.org/marine/ns/taxon-name/Taxon"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -366,7 +366,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/isSubjectOf"/>
-        <Class IRI="https://w3id.org/marine/ns/taxa-name/Taxon"/>
+        <Class IRI="https://w3id.org/marine/ns/taxon-name/Taxon"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/hasMediaObjectDistribution"/>
