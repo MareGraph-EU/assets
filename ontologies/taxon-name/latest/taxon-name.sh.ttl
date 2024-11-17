@@ -25,11 +25,15 @@
 ### Shape for Taxon
 :TaxonShape a sh:NodeShape ;
     sh:targetClass :Taxon ;
-    sh:property [
-        sh:path :isDenotedBy ;
-        sh:class top-level:Name ;
-        sh:minCount 1 ;
-    ] ;
+    #sh:property [
+    #    sh:path :isDenotedBy ;
+    #    sh:class top-level:Name ;
+    #    sh:minCount 1 ;
+    #] ;
+    # generates validation error, 
+    # property not mentioned in feed atm
+    # has subpropertyclasses :hasAcceptedName and :hasSynonymName 
+    # both of which the value is an IRI
     sh:property [
         sh:path dct:source ;
         sh:class top-level:Source ;
@@ -45,11 +49,13 @@
     ] ;
     sh:property [
         sh:path :hasAcceptedName ;
-        sh:class :TaxonName ;
+        #sh:class :TaxonName ;                   # generates validation error, change to following?
+        sh:nodeKind sh:IRI ; 
     ] ;
     sh:property [
         sh:path :hasSynonymName ;
-        sh:class :TaxonName ;
+        sh:class :TaxonName ;                   # generates validation error, change to following?
+        sh:nodeKind sh:IRI ; 
     ] ;
     sh:property [
         sh:path media:isSubjectOf ;
@@ -65,7 +71,8 @@
     ] ;
     sh:property [
         sh:path attr-trait:hasHabitat ;
-        sh:class attr-trait:Environment ;
+        #sh:class attr-trait:Environment ;       # generates validation error, change to following?
+        sh:nodeKind sh:IRI ; 
     ] ;
 .
 
@@ -207,7 +214,8 @@
 ### PropertyShape for hasAcceptedName       also specified in TaxonShape
 :HasAcceptedNamePropertyShape a sh:PropertyShape ;
     sh:path :hasAcceptedName ;
-    sh:class :TaxonName ;
+    #sh:class :TaxonName ;                  # generates validation error, change to following?
+    sh:nodeKind sh:IRI ; 
 .
 
 ### PropertyShape for hasChild       also specified in TaxonShape
