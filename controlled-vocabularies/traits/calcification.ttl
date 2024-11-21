@@ -1,0 +1,53 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+
+trait:conceptScheme
+    a skos:ConceptScheme ;
+    rdfs:label "Listing Aphia attributes and traits"@en .
+
+<https://aphia.org/ns/vocab/attribute-trait/>
+    a skos:Collection ;
+    rdfs:label "Aphia attributes and traits"@en ;
+    
+    skos:member trait:calcification ;
+.
+
+trait:calcification
+    a skos:Collection ; 
+    dct:description "Mode of calcification of seaweed."@en ;
+
+    skos:member trait:calcified_articulated , trait:calcified_non_articulated , trait:non_calcified , trait:unreported ; 
+.
+
+trait:calcified_articulated
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "calcified articulated"@en ;
+    skos:definition "Algal thallus that is encrusted or impregnated with lime with non-calcified articulae rendering the thallus a segmented nature (macroalgae)."@en ;
+.
+
+trait:calcified_non_articulated
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "calcified non-articulated"@en ;
+    skos:definition "Algal thallus that is encrusted or impregnated with lime lacking non-calcified articulae (macroalgae)."@en ;
+.
+
+trait:non_calcified
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Non-calcified"@en ;
+    skos:definition "Algal thallus not encrusted or impregnated with lime (macroalgae)."@en ;
+.
+
+trait:unreported
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Unreported"@en ;
+    skos:definition "So far it has not been reported in literature whether or not the algal thallus is calcified (macroalgae)."@en ;
+.

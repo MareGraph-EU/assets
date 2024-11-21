@@ -1,0 +1,53 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+
+trait:conceptscheme
+    a skos:Conceptscheme ;
+    rdfs:label "listing aphia attributes and traits"@en .
+
+<https://aphia.org/ns/vocab/attribute-trait/>
+    a skos:Collection ;
+    rdfs:label "aphia attributes and traits"@en ;
+    
+    skos:member trait:development ;
+.
+
+trait:development
+    a skos:Collection ; 
+    dct:description "Description of how organisms develop into adults."@en ;
+
+    skos:member trait:direct_development , trait:indirect_development , trait:lecithotrophic , trait:planktotrophic ;
+. 
+
+trait:direct_development
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Direct development"@en ;
+    skos:definition "Type of heterochronous development in which the embryo abandons the larval stages of development and proceeds directly to adult stage (Henderson's Dictionary of Biology; Lawrence, 2005). Animals (including humans) whose young are essentially smaller, less sexually mature, versions of the adult are referred to as direct developers (Gilbert & Bareesi, 2016). The embryos of directly developing organisms generate at once a juvenile already possessing the complete adult body plan, which then grows and acquires sexual maturity (Arenas-Mena, 2010)."@en ;
+.
+
+trait:indirect_development
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Indirect development"@en ;
+    skos:definition "Most animal species are indirect developers whose life cycle includes a larval stage with characteristics very different from those of the adult organism, which emerges only after a period of metamorphosis (Gilbert & Barresi, 2016). In indirect development, the embryonic phase generates an intermediate larva, and the post-embryonic phase generates an adult by substantial transformation and replacement of larval tissues (Arenas-Mena, 2010)."@en ;
+.
+
+trait:lecithotrophic
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Lecithotrophic"@en ;
+    skos:definition "Pertaining to developmental stages that feed upon yolk, and to eggs rich in yolk (Lincoln et al., 1998). Development at the expense of internal resources (i.e. yolk) provided by the female (Barnes et al., 1993). Feeding on stored yolk, as in some sea urchin larvae (Henderson's Dictionary of Biology; Lawrence, 2005)."@en ;
+.
+
+trait:planktotrophic
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Planktotrophic"@en ;
+    skos:definition "Feeding on plankton (Lincoln et al., 1998). Feeding at least in part on materials captured from the plankton (Barnes et al., 1993). Feeding on plankton (Henderson's Dictionary of Biology; Lawrence, 2005)."@en ;
+.

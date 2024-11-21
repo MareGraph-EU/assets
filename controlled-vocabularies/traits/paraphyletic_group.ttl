@@ -1,0 +1,53 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+
+trait:conceptscheme
+    a skos:Conceptscheme ;
+    rdfs:label "listing aphia attributes and traits"@en .
+
+<https://aphia.org/ns/vocab/attribute-trait/>
+    a skos:Collection ;
+    rdfs:label "aphia attributes and traits"@en ;
+    
+    skos:member trait:paraphyletic_group ;
+.
+
+trait:paraphyletic_group
+    a skos:Collection ; 
+    dct:description "A group of taxa derived from a single ancestral taxon, but one which does not contain all the descendants of the most recent common ancestor; a category based on the common possession of plesiomorphic characters (symplesiomorphy) (Lincoln et al., 1998)."@en ;
+
+    skos:member trait:algae , trait:macroalgae , trait:mangroves , trait:pisces ;
+. 
+
+trait:algae
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Algae"@en ;
+    skos:definition "Paraphyletic group to combine all algae in Aphia."@en ;
+.
+
+trait:macroalgae
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Macroalgae"@en ;
+    skos:definition "Paraphyletic group to combine all macroalgae in Aphia."@en ;
+.
+
+trait:mangroves
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Mangroves"@en ;
+    skos:definition "Paraphyletic group to combine all mangroves in Aphia."@en ;
+.
+
+trait:pisces
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Pisces"@en ;
+    skos:definition "Paraphyletic group to combine all fish in Aphia."@en ;
+.

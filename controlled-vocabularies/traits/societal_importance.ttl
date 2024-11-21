@@ -1,0 +1,311 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+
+trait:conceptScheme
+    a skos:ConceptScheme ;
+    rdfs:label "Listing Aphia attributes and traits"@en .
+
+<https://aphia.org/ns/vocab/attribute-trait/>
+    a skos:Collection ;
+    rdfs:label "Aphia attributes and traits"@en ;
+    
+    skos:member trait:societal_importance ;
+.
+
+trait:societal_importance
+    a skos:Collection ; 
+    dct:description "Collections of concepts representing species importance to society"@en ;
+
+    skos:member trait:birds_directive_annex , 
+                #trait:black_sea_proposed_indicators , 
+                trait:cites_annex , 
+                trait:habitats_directive_annex , 
+                #trait:helcom_core_biodiversity_indicators , 
+                trait:helcom_red_list_category , 
+                #trait:Identifier , 
+                trait:iucn_red_list_category , 
+                #trait:mediterranean_proposed_indicators_adriatic_sea , 
+                #trait:mediterranean_proposed_indicators_aegean_levantine_sea , 
+                #trait:mediterranean_proposed_indicators_ionian_sea , 
+                #trait:mediterranean_proposed_indicators_mediterranean_sea , 
+                #trait:mediterranean_proposed_indicators_western_mediterranean , 
+                #trait:ospar_candidate_indicators_bay_of_biscay_and_the_iberian_coast , 
+                #trait:ospar_candidate_indicators_celtic_seas , 
+                #trait:ospar_candidate_indicators_greater_north_sea_including_outside_eu , 
+                #trait:ospar_candidate_indicators_north_sea , 
+                #trait:OSPAR common indicators , 
+                #trait:ospar_common_indicators_bay_of_biscay_and_iberian_coast , 
+                #trait:ospar_common_indicators_celtic_seas , 
+                #trait:ospar_common_indicators_greater_north_sea , 
+                #trait:ospar_common_indicators_greater_north_sea_including_outside_eu , 
+                trait:ospar_region_where_species_is_under_threat_and_or_in_decline ; 
+.
+
+trait:birds_directive_annex
+    a skos:Collection ; 
+    dct:description "Directive 2009/147/EC of the European Parliament and of the Council of 30 November 2009 on the conservation of wild birds."@en ;
+
+    skos:member trait:birds_directive_annex_I , trait:birds_directive_annex_II_part_A , trait:birds_directive_annex_II_part_B , trait:birds_directive_annex_III_part_A , trait:birds_directive_annex_III_part_B ;
+.
+
+trait:birds_directive_annex_I
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Birds Directive Annex I"@en ;
+    skos:definition "The species mentioned in Annex I shall be the subject of special conservation measures concerning their habitat in order to ensure their survival and reproduction in their area of distribution."@en ;
+.
+
+trait:birds_directive_annex_II_part_A
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Birds Directive Annex II, part A"@en ;
+    skos:definition "The species referred to in Annex II, Part A may be hunted in the geographical sea and land area where this Directive applies."@en ;
+.
+
+trait:birds_directive_annex_II_part_B
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Birds Directive Annex II, part B"@en ;
+    skos:definition "The species referred to in Annex II, Part B may be hunted only in the Member States in respect of which they are indicated."@en ;
+.
+
+trait:birds_directive_annex_III_part_A
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Birds Directive Annex III, part A"@en ;
+    skos:definition "The activities referred to in paragraph 1 [of the Birds Directive] shall not be prohibited in respect of the species referred to in Annex III, Part A, provided that the birds have been legally killed or captured or otherwise legally acquired."@en ;
+.
+
+trait:birds_directive_annex_III_part_B
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Birds Directive Annex III, part B"@en ;
+    skos:definition "Member States may, for the species listed in Annex III, Part B, allow within their territory the activities referred to in paragraph 1 [of the Birds Directive], making provision for certain restrictions, provided that the birds have been legally killed or captured or otherwise legally acquired."@en ;
+.
+
+
+trait:cites_annex
+    a skos:Collection ; 
+    dct:description "Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES). Consulted April 2015."@en ;
+
+    skos:member trait:cites_annex_I , trait:cites_annex_II , trait:cites_annex_III ;
+.
+
+trait:cites_annex_I
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "CITES annex I"@en ;
+    skos:definition "Species threatened with extinction. Trade in specimens of these species is permitted only in exceptional circumstances."@en ;
+.
+
+trait:cites_annex_II
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "CITES annex II"@en ;
+    skos:definition "Species not necessarily threatened with extinction, but in which trade must be controlled in order to avoid utilization incompatible with their survival."@en ;
+.
+
+trait:cites_annex_III
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "CITES annex III"@en ;
+    skos:definition "Species that are protected in at least one country, which has asked other CITES Parties for assistance in controlling the trade."@en ;
+.
+
+
+trait:habitats_directive_annex
+    a skos:Collection ; 
+    dct:description "Council Directive 92/43/EEC of 21 May 1992 on the conservation of natural habitats and of wild fauna and flora."@en ;
+
+    skos:member trait:habitats_directive_annex_I , 
+                trait:habitats_directive_annex_II , 
+                trait:habitats_directive_annex_III , 
+                trait:habitats_directive_annex_IV , 
+                trait:habitats_directive_annex_V , 
+                trait:habitats_directive_annex_VI ;
+.
+
+trait:habitats_directive_annex_I
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Habitats Directive Annex I"@en ;
+    skos:definition "Natural habitat types of community interest whose conservation requires the designation of specia areas of conservation."@en ;
+.
+
+trait:habitats_directive_annex_II
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Habitats Directive Annex II"@en ;
+    skos:definition "Animal and plant species of community interest whose conservation requires the designation of special areas of conservation."@en ;
+.
+
+trait:habitats_directive_annex_III
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Habitats Directive Annex III"@en ;
+    skos:definition "Criteria for selecting sites eligible for identification as sites of community importance and designation as specieal areas of conservation."@en ;
+.
+
+trait:habitats_directive_annex_IV
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Habitats Directive Annex IV"@en ;
+    skos:definition "Animal and plant species of comminity interest in need of strict protection."@en ;
+.
+
+trait:habitats_directive_annex_V
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Habitats Directive Annex V"@en ;
+    skos:definition "Animal and plant species of community interest whose taking in the wild and exploitation may be subject to management measures."@en ;
+.
+
+trait:habitats_directive_annex_VI
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Habitats Directive Annex VI"@en ;
+    skos:definition "Prohibited methods and means of capture and killing and modes of transport."@en ;
+.
+
+
+trait:helcom_red_list_category
+    a skos:Collection ; 
+    dct:description "HELCOM Red List Category (version 3.1) - specific for East Sea"@en ; #compared to IUCN red list, this one is specific to the East Sea
+
+    skos:member trait:extinct , 
+                trait:extinct_in_the_wild , 
+                trait:critically_endangered , 
+                trait:endangered , 
+                trait:vulnerable , 
+                trait:conservation_dependent , 
+                trait:near_threatened , 
+                trait:least_concern , 
+                trait:data_deficient , 
+                trait:not_evaluated ;
+.
+
+trait:extinct
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Extinct"@en ;
+    skos:definition "A taxon is Extinct when there is no reasonable doubt that the last individual has died. A taxon is presumed Extinct when exhaustive surveys in known and/or expected habitat, at appropriate times (diurnal, seasonal, annual), throughout its historic range have failed to record an individual. Surveys should be over a time frame appropriate to the taxon's life cycle and life form."@en ;
+.
+trait:extinct_in_the_wild
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Extinct in the Wild"@en ;
+    skos:definition "A taxon is Extinct in the Wild when it is known only to survive in cultivation, in captivity or as a naturalized population (or populations) well outside the past range. A taxon is presumed Extinct in the Wild when exhaustive surveys in known and/or expected habitat, at appropriate times (diurnal, seasonal, annual), throughout its historic range have failed to record an individual. Surveys should be over a time frame appropriate to the taxon's life cycle and life form."@en ;
+.
+trait:critically_endangered
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Critically Endangered"@en ;
+    skos:definition "A taxon is Critically Endangered when the best available evidence indicates that it meets any of the criteria A to E for Critically Endangered (see Section V), and it is therefore considered to be facing an extremely high risk of extinction in the wild."@en ;
+.
+trait:endangered
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Endangered"@en ;
+    skos:definition "A taxon is Endangered when the best available evidence indicates that it meets any of the criteria A to E for Endangered (see Section V), and it is therefore considered to be facing a very high risk of extinction in the wild."@en ;
+.
+trait:vulnerable
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Vulnerable"@en ;
+    skos:definition "A taxon is Vulnerable when the best available evidence indicates that it meets any of the criteria A to E for Vulnerable (see Section V), and it is therefore considered to be facing a high risk of extinction in the wild."@en ;
+.
+trait:conservation_dependent
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Conservation Dependent"@en ;
+    skos:definition "Taxa which are the focus of a continuing taxon-specific or habitat-specific conservation programme targeted towards the taxon in question, the cessation of which would result in the taxon qualifying for one of the threatened categories above within a period of five years. (Note: The conservation dependent category is part of the IUCN 1994 Categories & Criteria (version 2.3), which is no longer used in evaluation of taxa, but persists in the IUCN Red List for taxa evaluated prior to 2001, when version 3.1 was first used. Using the 2001 (v3.1) system these taxa are classed as near threatened, but those that have not been re-evaluated remain with the 'conservation dependent' category.)"@en ;
+.
+trait:near_threatened
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Near Threatened"@en ;
+    skos:definition "A taxon is Near Threatened when it has been evaluated against the criteria but does not qualify for Critically Endangered, Endangered or Vulnerable now, but is close to qualifying for or is likely to qualify for a threatened category in the near future."@en ;
+.
+trait:least_concern
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Least Concern"@en ;
+    skos:definition "A taxon is Least Concern when it has been evaluated against the criteria and does not qualify for Critically Endangered, Endangered, Vulnerable or Near Threatened. Widespread and abundant taxa are included in this category."@en ;
+.
+trait:data_deficient
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Data Deficient"@en ;
+    skos:definition "A taxon is Data Deficient when there is inadequate information to make a direct, or indirect, assessment of its risk of extinction based on its distribution and/or population status. A taxon in this category may be well studied, and its biology well known, but appropriate data on abundance and/or distribution are lacking. Data Deficient is therefore not a category of threat. Listing of taxa in this category indicates that more information is required and acknowledges the possibility that future research will show that threatened classification is appropriate. It is important to make positive use of whatever data are available. In many cases great care should be exercised in choosing between DD and a threatened status. If the range of a taxon is suspected to be relatively circumscribed, and a considerable period of time has elapsed since the last record of the taxon, threatened status may well be justified."@en ;
+.
+trait:not_evaluated
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Not Evaluated"@en ;
+    skos:definition "A taxon is Not Evaluated when it is has not yet been evaluated against the criteria."@en ;
+.
+
+
+trait:iucn_red_list_category
+    a skos:Collection ; 
+    dct:description "IUCN Red List Category (version 3.1)"@en ;
+
+    skos:member trait:extinct , 
+                trait:extinct_in_the_wild , 
+                trait:critically_endangered , 
+                trait:endangered , 
+                trait:vulnerable , 
+                trait:conservation_dependent , 
+                trait:near_threatened , 
+                trait:least_concern , 
+                trait:data_deficient , 
+                trait:not_evaluated ;
+.
+
+
+trait:ospar_region_where_species_is_under_threat_and_or_in_decline
+    a skos:Collection ; 
+    #dct:description ""@en ;
+
+    skos:member trait:ospar_region_I , trait:ospar_region_II , trait:ospar_region_III, trait:ospar_region_IV , trait:ospar_region_V ;
+.
+
+trait:ospar_region_I
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "OSPAR Region I (Arctic Waters)"@en ;
+    skos:definition "Region I is the most northerly OSPAR region, characterised by its harsh climate and ice coverage although the ecosystems of this region are still rich. In spite of its low population density, human activities such as fishing and offshore petroleum production remain significant. (https://www.ospar.org/convention/the-north-east-atlantic/i)"@en ;
+.
+
+trait:ospar_region_II
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "OSPAR Region II (Greater North Sea)"@en ;
+    skos:definition "The Greater North Sea is one of the busiest maritime areas. Offshore activities related to the exploitation of oil and gas reserves, and maritime traffic are very important. Two of the world's largest ports are situated on the North Sea coast, and the coastal zone is used intensively for recreation. (https://www.ospar.org/convention/the-north-east-atlantic/ii)"@en ;
+.
+
+trait:ospar_region_III
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "OSPAR Region III (Celtic Seas)"@en ;
+    skos:definition "The Celtic Seas region contains wide variations in coastal topography, from fjordic sea lochs, to sand dunes, bays, estuaries and numerous sandy beaches. The large range of habitats in the region supports a diverse fish fauna. Although traditional maritime activities, such as fishing, take place in the Celtic Seas, there is ongoing development of tourism. (https://www.ospar.org/convention/the-north-east-atlantic/iii)"@en ;
+.
+
+trait:ospar_region_IV
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "OSPAR Region IV (Bay of Biscay/Golfe de Gascogne & Iberian coasts)"@en ;
+    skos:definition "The bottom topography of Region IV and coastlines are highly diversified, including the continental shelf and slope and parts of the abyssal plain. Ecosystems in Region IV are very rich, support a rich fish fauna and have a particular importance for migratory birds. Main human activities in Region IV are fishing, maritime transport and tourism. (https://www.ospar.org/convention/the-north-east-atlantic/iv)"@en ;
+.
+
+trait:ospar_region_V
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "OSPAR Region V (Wider Atlantic)"@en ;
+    skos:definition "Region V represents the deep waters of the North-East Atlantic extending across the abyssal plain and the Mid-Atlantic Ridge, and including many seamounts. There have been recent discoveries of a number of different fragile deep-sea habitats (such as hydrothermal vents, carbonate mounds, coral gardens and sponge communities). Human population in the region is restricted to the Azores Archipelago. The main human activities are fishing and maritime transport. (https://www.ospar.org/convention/the-north-east-atlantic/v)"@en ;
+.

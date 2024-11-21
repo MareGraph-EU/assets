@@ -1,0 +1,53 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+
+trait:conceptScheme
+    a skos:ConceptScheme ;
+    rdfs:label "Listing Aphia attributes and traits"@en .
+
+<https://aphia.org/ns/vocab/attribute-trait/>
+    a skos:Collection ;
+    rdfs:label "Aphia attributes and traits"@en ;
+    
+    skos:member trait:thallus_vertical_space_used ;
+.
+
+trait:thallus_vertical_space_used
+    a skos:Collection ; 
+    dct:description "Trait that describes whether an organism belongs to the canopy, sub-canopy, turf, or is encrusting."@en ;
+
+    skos:member trait:canopy , 
+                trait:encrusting , 
+                trait:sub_canopy , 
+                trait:turf ;
+.
+
+trait:canopy
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Canopy"@en ;
+    skos:definition "Vegetation of macroalgae or plants partially blocking light penetration, thereby creating a shaded understory. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+.
+trait:encrusting
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Encrusting"@en ;
+    skos:definition "With a crustose growth form (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+.
+trait:sub_canopy
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Sub-canopy"@en ;
+    skos:definition "Forming a secondary cover, usually of 20 cm height maximum (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+.
+trait:turf
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Turf"@en ;
+    skos:definition "Vegetation dominated by macroalgae with limited vertical height, usually < 5 cm height. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+.

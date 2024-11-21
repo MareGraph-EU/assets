@@ -1,0 +1,112 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+
+trait:conceptScheme
+    a skos:ConceptScheme ;
+    rdfs:label "Listing Aphia attributes and traits"@en .
+
+<https://aphia.org/ns/vocab/attribute-trait/>
+    a skos:Collection ;
+    rdfs:label "Aphia attributes and traits"@en ;
+    
+    skos:member trait:body_size_unit ;
+.
+
+trait:body_size_unit
+    a skos:Collection ; 
+    dct:description "The unit of a body size (e.g. m, cm, mm)."@en ;
+
+    skos:member trait:micrometer , 
+                trait:millimeter , 
+                trait:centimeter , 
+                trait:meter , 
+                trait:square_centimeter , 
+                trait:square_decimeter , 
+                trait:square_meter , 
+                trait:cubic_centimeter , 
+                trait:inch , 
+                trait:kilogram , 
+                trait:ton ; 
+.
+
+trait:micrometer
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "micrometer"@en ;
+    skos:altLabel "µm"@en ; 
+    skos:definition "micrometer"@en ;
+.
+trait:millimeter
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "millimeter"@en ;
+    skos:altLabel "mm"@en ; 
+    skos:definition "millimeter"@en ;
+.
+trait:centimeter
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "centimeter"@en ;
+    skos:altLabel "cm"@en ; 
+    skos:definition "centimeter"@en ;
+.
+trait:meter
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "meter"@en ;
+    skos:altLabel "m"@en ; 
+    skos:definition "meter"@en ;
+.
+trait:square_centimeter
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "square centimeter"@en ;
+    skos:altLabel "cm²"@en ; 
+    skos:definition "square centimeter"@en ;
+.
+trait:square_decimeter
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "square decimeter"@en ;
+    skos:altLabel "dm²"@en ; 
+    skos:definition "square decimeter"@en ;
+.
+trait:square_meter
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "square meter"@en ;
+    skos:altLabel "m²"@en ; 
+    skos:definition "square meter"@en ;
+.
+trait:cubic_centimeter
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "cubic centimeter"@en ;
+    skos:altLabel "cm³"@en ; 
+    skos:definition "cubic centimeter"@en ;
+.
+trait:inch
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "inch"@en ;
+    skos:altLabel "inches"@en ; 
+    skos:definition "inch"@en ;
+.
+trait:kilogram
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "kilogram"@en ;
+    skos:altLabel "kg"@en ; 
+    skos:definition "kilogram"@en ;
+.
+trait:ton
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "ton"@en ;
+    skos:definition "ton"@en ;
+.

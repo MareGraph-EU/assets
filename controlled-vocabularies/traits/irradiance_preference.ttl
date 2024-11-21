@@ -1,0 +1,39 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+
+trait:conceptscheme
+    a skos:Conceptscheme ;
+    rdfs:label "listing aphia attributes and traits"@en .
+
+<https://aphia.org/ns/vocab/attribute-trait/>
+    a skos:Collection ;
+    rdfs:label "aphia attributes and traits"@en ;
+    
+    skos:member trait:irradiance_preference ;
+.
+
+trait:irradiance_preference
+    a skos:Collection ; 
+    dct:description "..."@en ;
+
+    skos:member trait:photophilic , trait:sciaphilic ;
+. 
+
+trait:photophilic
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Photophilic"@en ;
+    skos:definition "Growing or thriving in habitats with high light intensity."@en ;
+.
+
+trait:sciaphilic
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Sciaphilic"@en ;
+    skos:definition "Growing or thriving in shaded or low light intensity habitats."@en ;
+.

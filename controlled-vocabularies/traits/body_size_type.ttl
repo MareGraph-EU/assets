@@ -1,0 +1,88 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+
+trait:conceptScheme
+    a skos:ConceptScheme ;
+    rdfs:label "Listing Aphia attributes and traits"@en .
+
+<https://aphia.org/ns/vocab/attribute-trait/>
+    a skos:Collection ;
+    rdfs:label "Aphia attributes and traits"@en ;
+    
+    skos:member trait:body_size_type ;
+.
+
+trait:body_size_type
+    a skos:Collection ; 
+    dct:description "The type of a body size (e.g. minimum, maximum, average)."@en ;
+
+    skos:member trait:minimum , 
+                trait:maximum , 
+                trait:diameter , 
+                trait:average , 
+                trait:unknown_body_size_type , 
+                trait:mean , 
+                trait:standard_mean , 
+                trait:common ;
+.
+
+trait:minimum
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Minimum body size"@en ;
+    skos:definition "Minimum body size"@en ;
+.
+
+trait:maximum
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Maximum body size"@en ;
+    skos:definition "Maximum body size"@en ;
+.
+
+trait:diameter
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Body size diameter"@en ;
+    skos:definition "Body size diameter"@en ;
+.
+
+trait:average
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Average body size"@en ;
+    skos:definition "Average body size"@en ;
+.
+
+trait:unknown_body_size_type
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Unknown body size type"@en ;
+    skos:definition "Unknown body size type"@en ;
+.
+
+trait:mean
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Mean body size"@en ;
+    skos:definition "Mean body size"@en ;
+.
+
+trait:standard_mean
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Standard mean body size"@en ;
+    skos:definition "Standard mean body size"@en ;
+.
+
+trait:common
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Common body size"@en ;
+    skos:definition "Common body size"@en ;
+.

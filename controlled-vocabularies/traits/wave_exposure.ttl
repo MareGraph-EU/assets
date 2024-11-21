@@ -1,0 +1,133 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+
+trait:conceptScheme
+    a skos:ConceptScheme ;
+    rdfs:label "Listing Aphia attributes and traits"@en .
+
+<https://aphia.org/ns/vocab/attribute-trait/>
+    a skos:Collection ;
+    rdfs:label "Aphia attributes and traits"@en ;
+    
+    skos:member trait:wave_exposure ;
+.
+
+trait:wave_exposure
+    a skos:Collection ; 
+    dct:description "Trait that describes the range of exposure to wave action in which the organism is recorded."@en ;
+
+    skos:member trait:exposed , 
+                    trait:high_energy_rock , 
+                trait:features_of_rock , 
+                trait:semi_exposed , 
+                    trait:moderate_energy_rock , 
+                trait:sheltered , 
+                    trait:coarse_sediments , 
+                    trait:low_energy_rock , 
+                    trait:macrophyte_dominated_sediments , 
+                    trait:mud_dominated_sediments , 
+                    trait:sand_dominated_sediments , 
+                trait:unreported_wave_exposure ; 
+.
+
+trait:exposed
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Exposed"@en ;
+    skos:definition "Subject to high energy wave forces. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+
+    skos:narrower trait:high_energy_rock  ; 
+.
+
+trait:high_energy_rock
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "High energy rock"@en ;
+    skos:definition "Rocky substrate subject to high energy wave forces. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+
+    skos:broader trait:exposed  ; 
+.
+
+trait:features_of_rock
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Features of rock"@en ;
+    skos:definition "Specific characteristics of rocky substrate such as pools, caves, overhangs, surge gulleys, artificial hard substrata. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+.
+
+trait:semi_exposed
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Semi-exposed"@en ;
+    skos:definition "Subject to moderate energy wave forces. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+
+    skos:narrower trait:moderate_energy_rock ;
+.
+
+trait:moderate_energy_rock
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Moderate energy rock"@en ;
+    skos:definition "Rocky substrate subject to moderate energy wave forces. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+
+    skos:broader trait:semi_exposed  ; 
+.
+trait:sheltered
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Sheltered"@en ;
+    skos:definition "Subject to low energy wave forces. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+
+    skos:narrower trait:coarse_sediments , trait:low_energy_rock , trait:macrophyte_dominated_sediments , trait:mud_dominated_sediments , trait:sand_dominated_sediments ;
+.
+trait:coarse_sediments
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Coarse sediments"@en ;
+    skos:definition "Coarse sediments such as gravel, pebbles, shingles and cobbles ocurring at sheltered locations. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+
+    skos:broader trait:sheltered ; 
+.
+trait:low_energy_rock
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Low energy rock"@en ;
+    skos:definition "Rocky substrate subject to low energy wave forces. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+
+    skos:broader trait:sheltered ; 
+.
+trait:macrophyte_dominated_sediments
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Macrophyte-dominated sediments"@en ;
+    skos:definition "Sediments with a high cover of macroalgae or seagrasses. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+
+    skos:broader trait:sheltered ; 
+.
+trait:mud_dominated_sediments
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Mud-dominated sediments"@en ;
+    skos:definition "Sediments composed of a mixture of clay (< 2 um) and silt (4 - 62 um) typically deposited in a low energy environment. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+
+    skos:broader trait:sheltered ; 
+.
+trait:sand_dominated_sediments
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Sand-dominated sediments"@en ;
+    skos:definition "Sediments composed of a mixture of sand particles (0.074 - 4.75 mm) typically deposited in a low energy environment. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+
+    skos:broader trait:sheltered ; 
+.
+trait:unreported_wave_exposure
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Unreported wave exposure"@en ;
+    skos:definition "So far it has not been reported in literature which wave exposure this organism has."@en ;
+.

@@ -1,0 +1,111 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+
+trait:conceptScheme
+    a skos:ConceptScheme ;
+    rdfs:label "Listing Aphia attributes and traits"@en .
+
+<https://aphia.org/ns/vocab/attribute-trait/>
+    a skos:Collection ;
+    rdfs:label "Aphia attributes and traits"@en ;
+    
+    skos:member trait:asexual_reproduction ;
+.
+
+trait:asexual_reproduction
+    a skos:Collection ; 
+    dct:description "Reproduction which does not involve formation and fusion of gametes and results in progeny with an identical genetic constitution to the parent and to each other. Reproduction may occur by binary fission, budding, asexual spore formation or vegetative propagation. In asexual division in eukaryotic organisms, all cell divisions are by mitosis."@en ;
+
+    skos:member trait:asexual_reproduction_confirmed , 
+                    trait:by_unknown_mechanism , 
+                    trait:by_direct_development_of_spores , 
+                    trait:by_fragmentation , 
+                    trait:by_parthenogenesis , 
+                    trait:by_vegetative_propagules , 
+                    trait:by_binary_fission , 
+                    trait:by_budding , 
+                trait:asexual_reproduction_not_confirmed , 
+                trait:unknown ; 
+.
+
+trait:asexual_reproduction_confirmed
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Asexual reproduction"@en ;
+    skos:definition "The taxon reproduces asexually, which is reproduction which does not involve fusion of gametes or meiosis and usually results in progeny with an identical genetic constitution to the parent and to each other. Asexual reproduction may amongst others occur by binary fission, budding, asexual spore formation or vegetative propagation (adapted from Henderson's Dictionary of Biology; Lawrence, 2005)."@en ;
+
+    skos:narrower trait:by_unknown_mechanism , trait:by_direct_development_of_spores , trait:by_fragmentation , trait:by_parthenogenesis , trait:by_vegetative_propagules , trait:by_binary_fission , trait:by_budding ;
+.
+trait:by_unknown_mechanism
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "By unknown mechanism"@en ;
+    skos:definition "Asexual reproduction is detected, but the underpinning mechanism is unknown. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+
+    skos:broader trait:asexual_reproduction_confirmed ;
+.
+trait:by_direct_development_of_spores
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "By direct development of spores"@en ;
+    skos:definition "Reproduction by asexual spores resulting in a new individual of the same ploidy (exospore, endospore, monospore, bispore, paraspore, zoospore, aplanospore, autospore). (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+
+    skos:broader trait:asexual_reproduction_confirmed ;
+.
+trait:by_fragmentation
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "By fragmentation"@en ;
+    skos:definition "Type of asexual reproduction in which the organism breaks up into smaller pieces, each of which can develop into a new individual, as in some algae."@en ;
+
+    skos:broader trait:asexual_reproduction_confirmed ;
+.
+trait:by_parthenogenesis
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "By parthenogenesis"@en ;
+    skos:definition "Reproduction from a female gamete without fertilization by a male gamete (Henderson's Dictionary of Biology; Lawrence, 2005). Direct development of a new individual from an unfused gamete. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+
+    skos:broader trait:asexual_reproduction_confirmed ;
+.
+trait:by_vegetative_propagules
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "By vegetative propagules"@en ;
+    skos:definition "Any spore, seed, fruit or other part of a plant or microorganism capable of producing a new plant and used as a means of dispersal (Henderson's Dictionary of Biology; Lawrence, 2005). Asexual reproduction by development of a new individual from a vegetative progagule. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+
+    skos:broader trait:asexual_reproduction_confirmed ;
+.
+trait:by_binary_fission
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "By binary fission"@en ;
+    skos:definition "Binary fission in prokaryotic organisms, the chief mode of division, in which a cell divides into two equal daughter cells, each containing a copy of the chromosome."@en ;
+
+    skos:broader trait:asexual_reproduction_confirmed ;
+.
+trait:by_budding
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "By budding"@en ;
+    skos:definition "(1) production of buds; (2) (zool.) method of asexual reproduction common in sponges, coelenterates and some other invertebrates, in which new individuals develop as outgrowths of the parent organism, and may eventually be set free; (3) (bot.) artificial vegetative propagation by insertion of a bud within the bark of another plant; (4) (mycol.) cell division by the outgrowth of a new cell from the parent cell; (5) (virol.) release of certain animal viruses from the host cell by their envelopment in a piece of plasma membrane which subsequently pinches off from the cell."@en ;
+
+    skos:broader trait:asexual_reproduction_confirmed ;
+.
+trait:asexual_reproduction_not_confirmed
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "No asexual reproduction"@en ;
+    skos:definition "The taxon does not reproduce asexually, which is reproduction which does not involve formation and fusion of gametes and results in progeny with an identical genetic constitution to the parent and to each other. Reproduction may occur by binary fission, budding, asexual spore formation or vegetative propagation. In asexual division in eukaryotic organisms, all cell divisions are by mitosis."@en ;
+.
+trait:unknown
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "Asexual reproduction unknown"@en ;
+    skos:definition "According to literature it is unknown whether or not this organism reproduces asexually."@en ;
+.
