@@ -34,6 +34,8 @@ trait:dispersion_mode
                 trait:species_growing_on_artificial_substrate , 
                 trait:unknown , 
                 trait:unreported ;
+
+    skos:closeMatch ... ; 
 .
 
 trait:aplanospores

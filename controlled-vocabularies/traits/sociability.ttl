@@ -22,6 +22,8 @@ trait:sociability
     dct:description "Trait that describes an organism's behavioural interactions with members of the same species."@en ;
 
     skos:member trait:colonial , trait:social_colonies_of_unitary_organisms , trait:modular_organisms , trait:microbial_colonies , trait:solitary , trait:non_territorial_solitary , trait:territorial_solitary ; 
+
+    skos:exactMatch ... ; 
 .
 
 trait:colonial
@@ -31,6 +33,8 @@ trait:colonial
     skos:definition "In biology, a colony is composed of two or more conspecific individuals living in close association with, or connected to, one another. This association is usually for mutual benefit such as stronger defense or the ability to attack bigger prey. It is a cluster of identical cells (clones) on the surface of (or within) a solid medium, usually derived from a single parent cell, as in bacterial colony. [Source: https://en.wikipedia.org/wiki/Colony_(biology)]. Organisms that live together in large numbers, esp. where the individual organisms form part of a larger structure. Examples are some algae, soft corals, reef-building corals, gorgonians and other anthozoans, and siphonophores. (Henderson's dictionary of biology; Lawrence, 2005)."@en ;
 
     skos:narrower trait:social_colonies_of_unitary_organisms , trait:modular_organisms , trait:microbial_colonies ; 
+
+    skos:exactMatch ... ; 
 .
 trait:social_colonies_of_unitary_organisms
     a skos:Concept, aphia-trait:Trait ;
@@ -66,6 +70,8 @@ trait:solitary
     skos:definition "Living alone, not gregarious (Thompson 1995). [Source: https://www.marinespecies.org/traits/wiki/Traits:Solitary]. Solitary organisms are ones in which all individuals live independently and have all of the functions needed to survive and reproduce. [Source: https://en.wikipedia.org/wiki/Colony_(biology)]"@en ;
 
     skos:narrower trait:non_territorial_solitary , trait:territorial_solitary ;
+
+    skos:exactMatch ... ; 
 .
 
 trait:non_territorial_solitary

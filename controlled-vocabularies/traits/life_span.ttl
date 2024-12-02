@@ -27,6 +27,8 @@ trait:life_span
                     trait:long_perennial ,
                     trait:short_perennial ,
                 trait:unreported_life_span ;
+
+    skos:exactMatch ... ; 
 .
 
 trait:annual
@@ -36,6 +38,8 @@ trait:annual
     skos:definition "(1) Appl. structures or growth features that are marked off or completed yearly; (2) living for a year only; (3) completing life-cycle in a year from germination; (4) n. plant that completes its life-cycle in a year. (Henderson's Dictionary of Biology; Lawrence, 2005). Thallus which survives only one growing season (less than 1 year) (macroalgae; Womersley, 1987)."@en ;
 
     skos:narrower trait:ephemeral ;
+
+    skos:exactMatch ... ; 
 .
 
 trait:ephemeral
@@ -45,6 +49,8 @@ trait:ephemeral
     skos:definition "(1) Short-lived; (2) taking place once only, appl. plant movements as expanding buds; (3) completing life-cycle within a brief period; (4) n. a short-lived plant or animal species (Henderson's Dictionary of Biology; Lawrence, 2005). Thallus which survives for only a few weeks (less than 1 month) (macroalgae; Womersley, 1987)."@en ;
 
     skos:broader trait:annual ; 
+
+    skos:exactMatch ... ; 
 .
 
 trait:perennial
@@ -54,6 +60,8 @@ trait:perennial
     skos:definition "Plant which persists for several years."@en ;
 
     skos:narrower trait:long_perennial , trait:short_perennial ; 
+
+    skos:exactMatch ... ; 
 .
 
 trait:long_perennial
@@ -63,6 +71,8 @@ trait:long_perennial
     skos:definition "Thallus or part thereof with a lifespan exceeding 3 years (more than 3 years) (macroalgae; Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 
     skos:broader trait:perennial ; 
+
+    skos:exactMatch ... ; 
 .
 
 trait:short_perennial
@@ -72,6 +82,8 @@ trait:short_perennial
     skos:definition "Thallus or part thereof with a lifespan exceeding 1 year but under 3 years (macroalgae; Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 
     skos:broader trait:perennial ; 
+
+    skos:exactMatch ... ; 
 .
 
 trait:unreported_life_span

@@ -26,6 +26,8 @@ trait:reproductive_frequency
                 trait:one_short_period_a_year , 
                 trait:several_long_periods_a_year , 
                 trait:several_short_periods_a_year ; 
+
+    skos:exactMatch ... ; 
 .
 
 trait:all_over_the_year

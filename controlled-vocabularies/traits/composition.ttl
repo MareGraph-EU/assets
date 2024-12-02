@@ -48,6 +48,8 @@ trait:siliceous
     skos:inScheme trait:conceptScheme ;
     skos:prefLabel "Siliceous"@en ;
     skos:definition "Composed of silicon based spines, spicules or lattice, e.g. siliceous or glass sponges (derived from form Lawrence, 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
+
+    skos:exactMatch ... ; 
 .
 
 trait:chitinous
@@ -85,6 +87,8 @@ trait:calcareous
     skos:definition "Skeleton composed of calcareous spicules (sponges/echinoderms), plates, spines, bones or other structures (derived from Lawrence, 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
 
     skos:narrower trait:aragonite , trait:calcite , trait:amorphous_calcium_carbonate , trait:high_magnesium_calcite ;
+
+    skos:exactMatch ... ; 
 .
 
 trait:aragonite

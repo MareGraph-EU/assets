@@ -1,0 +1,377 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+
+trait:conceptScheme
+    a skos:ConceptScheme ;
+    rdfs:label "Listing Aphia attributes and traits"@en .
+
+<https://aphia.org/ns/vocab/attribute-trait/>
+    a skos:Collection ;
+    rdfs:label "Aphia attributes and traits"@en ;
+    
+    skos:member trait:life_stage ;
+.
+
+trait:life_stage
+    a skos:Collection ; 
+    dct:description "Longevity; the maximum or mean duration of life of an individual or group."@en ;
+
+    skos:member trait:adult , 
+                trait:juvenile ,
+                trait:egg , 
+                trait:larva ,
+                    trait:planula ,
+                    trait:tadpole ,
+                trait:postlarva , 
+                trait:spat ,
+                trait:subadult , 
+                trait:zoea , 
+                trait:nauplius , 
+                trait:polyp , 
+                trait:medusa , 
+                trait:ephyra , 
+                trait:megalops , 
+                trait:hydroid , 
+                trait:manca , 
+                trait:cypris , 
+                trait:hatchling , 
+                trait:copepodite_I , 
+                trait:copepodite_II , 
+                trait:copepodite_III , 
+                trait:copepodite_IV , 
+                trait:copepodite_V , 
+                trait:copepodite_VI , 
+                trait:gametophyte , 
+                trait:sporophyte , 
+                trait:macrothallus , 
+                trait:microthallus , 
+                trait:neonate , 
+                trait:1_year_old , 
+                trait:foetus , 
+                trait:podocyst , 
+                trait:polygastric , 
+                trait:eudoxid , 
+                trait:colony , 
+                trait:medusoid , 
+                trait:cerinula , 
+                trait:pilidium , 
+                trait:akinetes , 
+                trait:resting_spore , 
+                trait:resting_cyst , 
+                trait:temporary_cyst , 
+                trait:gametes , 
+                trait:auxospore , 
+                trait:copepodite_stage_not_specified ; 
+
+    skos:exactMatch ... ; 
+.
+
+trait:adult
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "adult"@en ;
+    skos:definition "The reproductively capable (mature), fully formed, usually longest lived, stage of an animals life cycle."@en ;
+
+    skos:exactMatch ... ; 
+.
+trait:juvenile
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "juvenile"@en ;
+    skos:definition "Young bird or other animal, before it has acquired full adult plumage or form."@en ;
+
+    skos:exactMatch ... ; 
+.
+trait:egg
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "egg"@en ;
+    skos:definition "(1) ovum q.v.; (2) in certain animals, e.g. reptiles, birds, amphibians and insects, a structure composed of the fertilized ovum and nutritive and protective tissues, surrounded by a protective shell, which is laid by the female, and from which the young animal hatches."@en ;
+.
+trait:larva
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "larva"@en ;
+    skos:definition "Independently living, post-embryonic stage of an animal that is markedly different in form from the adult and which undergoes metamorphosis into the adult form, e.g. caterpillar, grub, tadpole."@en ;
+
+    skos:narrower trait:planula , trait:tadpole ; 
+.
+trait:planula
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "planula"@en ;
+    skos:definition "The ovoid free-swimming ciliated larva of coelenterates."@en ;
+
+    skos:broader trait:larva ; 
+.
+trait:tadpole
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "tadpole"@en ;
+    skos:definition "Llarval stage in the life cycle of an amphibian, particularly frog or toad. Also called "pollywog"."@en ;
+
+    skos:broader trait:larva ; 
+.
+trait:postlarva
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "postlarva"@en ;
+    skos:definition ""@en ;
+.
+trait:spat
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "spat"@en ;
+    skos:definition "The spawn or young of bivalve molluscs."@en ;
+.
+trait:subadult
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "subadult"@en ;
+    skos:definition ""@en ;
+.
+trait:zoea
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "zoea"@en ;
+    skos:definition "Early larval form of certain decapod crustaceans."@en ;
+
+    skos:closeMatch ... ; 
+.
+trait:nauplius
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "nauplius"@en ;
+    skos:definition "Earliest larval stage of many crustaceans, with three pairs of appendages."@en ;
+
+    skos:closeMatch ... ; 
+.
+trait:polyp
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "polyp"@en ;
+    skos:definition "(1) Sedentary individual or zooid of a colonial animal; (2) in coelenterates, an individual having a tubular body, usually with a mouth and ring of tentacles on top, like a miniature sea anemone."@en ;
+.
+trait:medusa
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "medusa"@en ;
+    skos:definition "One of the forms of individuals of coelenterates of the classes Hydrozoa (hydroids) and Scyphozoa (jellyfish). It is bell-shaped, with a tube hanging down in the centre ending in a mouth, and tentacles around the edge of the bell, and is the form commonly called a jellyfish. It forms the free-swimming sexual reproductive stage of most hydrozoans, and is large and conspicuous in jellyfish."@en ;
+.
+trait:ephyra
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "ephyra"@en ;
+    skos:definition "Imature medusa in some jellyfish, formed by strobilization from a polyp."@en ;
+.
+trait:megalops
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "megalops"@en ;
+    skos:definition "A larval stage of certain crustaceans such as crabs, which has large stalked eyes and a crab-like cephalothorax."@en ;
+.
+trait:hydroid
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "hydroid"@en ;
+    skos:definition "One of the forms of individuals in the Hydrozoa, a class of solitary and colonial coelenterates, having a hollow cylindrical body closed at one end and with a mouth at the other surrounded by tentacles."@en ;
+.
+trait:manca
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "manca"@en ;
+    skos:definition "Larval (juvenile) stage of some isopods."@en ;
+.
+trait:cypris
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "cypris"@en ;
+    skos:definition "The nonfeeding larval stage prior to metamorphosis into the cyprid (unknown source). Larval stage that follows the nauplius stage in cirripedes (Lawrence, 2005)."@en ;
+
+    skos:closeMatch ... ; 
+.
+trait:hatchling
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "hatchling"@en ;
+    skos:definition ""@en ;
+.
+trait:copepodite_I
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "copepodite I"@en ;
+    skos:definition "Juvenile stage after the nauplius stage in copepods (Lawrence, 2005). There are six life stages for copepods after the nauplius stage. Each life stage stages can be defined by the number of legs an individual has. Copepoda life stage after the nauplius life stage; determined by 2 swimming legs."@en ;
+
+    skos:closeMatch ... ; 
+.
+trait:copepodite_II
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "copepodite II"@en ;
+    skos:definition "Juvenile stage after the nauplius stage in copepods (Lawrence, 2005). There are six life stages for copepods after the nauplius stage. Each life stage stages can be defined by the number of legs an individual has. Copepoda life stage after the copepodite I life stage; determined by 3 swimming legs."@en ;
+
+    skos:closeMatch ... ; 
+.
+trait:copepodite_III
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "copepodite III"@en ;
+    skos:definition "Juvenile stage after the nauplius stage in copepods (Lawrence, 2005). There are six life stages for copepods after the nauplius stage. Each life stage stages can be defined by the number of legs an individual has. Copepoda life stage after the copepodite II life stage; determined by 4 swimming legs."@en ;
+
+    skos:closeMatch ... ; 
+.
+trait:copepodite_IV
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "copepodite IV"@en ;
+    skos:definition "Juvenile stage after the nauplius stage in copepods (Lawrence, 2005). There are six life stages for copepods after the nauplius stage. Each life stage stages can be defined by the number of legs an individual has. Copepoda life stage after the copepodite III life stage; determined by 5 swimming legs."@en ;
+
+    skos:closeMatch ... ; 
+.
+trait:copepodite_V
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "copepodite V"@en ;
+    skos:definition "Juvenile stage after the nauplius stage in copepods (Lawrence, 2005). There are six life stages for copepods after the nauplius stage. Each life stage stages can be defined by the number of legs an individual has. Copepoda life stage after the copepodite IV life stage; pre-adult stage; determined by enlargement of the urosome and development of sexual organs. "@en ;
+
+    skos:closeMatch ... ; 
+.
+trait:copepodite_VI
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "copepodite VI"@en ;
+    skos:definition "Juvenile stage after the nauplius stage in copepods (Lawrence, 2005). There are six life stages for copepods after the nauplius stage. Each life stage stages can be defined by the number of legs an individual has. Copepoda life stage after the copepodite V life stage; adult stage; 5th leg is fully complete."@en ;
+
+    skos:closeMatch ... ; 
+.
+trait:gametophyte
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "gametophyte"@en ;
+    skos:definition "The haploid sexual phase of a plant which exhibits an alternation of generations, from which gametes are produced, usually by mitotic division; the haploid gametophyte is typically formed by meiotic division of a diploid sporophyte q.v.; gamophyte; haplophyte."@en ;
+.
+trait:sporophyte
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "sporophyte"@en ;
+    skos:definition "The diploid, spore-producing, asexual generation in the life cycle of a plant; typically formed by fusion of haploid gametes; diplophyte; synkaryophyte."@en ;
+.
+trait:macrothallus
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "macrothallus"@en ;
+    skos:definition "The larger, conspicuous, phase in the life history of an organism, as contrasted with the microthallus."@en ;
+.
+trait:microthallus
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "microthallus"@en ;
+    skos:definition "The smaller, often inconspicuous, phase in the life history of an organisms, as contrasted with the marcrothallus."@en ;
+.
+trait:neonate
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "neonate"@en ;
+    skos:definition "Newborn animal."@en ;
+.
+trait:1_year_old
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "1-year old"@en ;
+    skos:definition "An animal that has reached the age of 1 year."@en ;
+.
+trait:foetus
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "foetus"@en ;
+    skos:definition "Mammalian embryo after the stage at which it becomes recognizable."@en ;
+.
+trait:podocyst
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "podocyst"@en ;
+    skos:definition "A cyst beneath the pedal discs of scyphozoan polyps."@en ;
+.
+trait:polygastric
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "polygastric"@en ;
+    skos:definition "Main, asexual life stage of calycophoran siphonophores. The polygastric stage is comprised of an anterior nectophore and a posterior nectophore, joined together to form a functional swimming unit. This resembles the "adult" life stage in Calycophorae, although the term "adult" should not be used for Siphonophorae. Cf. Physonectae and Cystonectae, where this life stage is called "colony"."@en ;
+.
+trait:eudoxid
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "eudoxid"@en ;
+    skos:definition "Sexual stage of siphonophores."@en ;
+.
+trait:colony
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "colony"@en ;
+    skos:definition "Main, asexual life stage of physonect and cystonect siphonophores. This resembles the "adult" life stage in Physonectae and Cystonectae, although the term "adult" should not be used for Siphonophorae. cf. Calycophorae, where this life stage is called "polygastric"."@en ;
+.
+trait:medusoid
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "medusoid"@en ;
+    skos:definition "A life stage resembling or developing into a medusa."@en ;
+.
+trait:cerinula
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "cerinula"@en ;
+    skos:definition "larval stage within Ceriantharia"@en ;
+.
+trait:pilidium
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "pilidium"@en ;
+    skos:definition "The characteristic helmet-shaped larva of nemertine worms."@en ;
+.
+trait:akinetes
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "akinetes"@en ;
+    skos:definition "Akinetes are resting cells that develop from solitary cells or after the fusion of two or more neighboring cells, and occur in several members of the Nostocales (Cyanobacteria) (Komárek and Johansen 2015, p. 138)."@en ;
+.
+trait:resting_spore
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "resting spore"@en ;
+    skos:definition "The diatom resting spores are first and foremost recognized by their heavily silicified frustules. The resting spore morphology of some species is similar to that of the corresponding vegetative cells, whereas in other species, the resting spores and the vegetative cells differ drastically. Diatom resting spores are normally formed as a response to unfavorable environmental conditions, and germination occurs when the conditions improve. Resting spore formation is common in centric, but rare in pennate marine planktonic diatoms (Hasle and Syvertsen 1997, p. 11)."@en ;
+.
+trait:resting_cyst
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "resting cyst"@en ;
+    skos:definition "A dormant stage in which normal life processes are generally reduced (Fensome et al. 1993, p. 260)."@en ;
+.
+trait:temporary_cyst
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "temporary cyst"@en ;
+    skos:definition "A general term for nonmotile stages other than resting cysts (Dale 1983, p. 78)."@en ;
+.
+trait:gametes
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "gametes"@en ;
+    skos:definition "Haploid reproductive cell which, on fusion with another gamete produces a diploid cell (zygote) (Fensome et al. 1993, p. 254). "@en ;
+.
+trait:auxospore
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "auxospore"@en ;
+    skos:definition "Large cell resulting from sexual reproduction or autogamy. In diatoms, they lack the rigid valve construction as other cells; instead, they are covered by delicate siliceous scales or bands (= perizonium) (Wehr et al. 2015, p. 964)."@en ;
+.
+trait:copepodite_stage_not_specified
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "copepodite stage not specified"@en ;
+    skos:definition "Juvenile stage after the nauplius stage in copepods (Lawrence, 2005)."@en ;
+.

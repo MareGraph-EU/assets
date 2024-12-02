@@ -60,6 +60,8 @@ trait:benthos
     skos:definition "Benthic organisms, or the benthos, are those that live on or burried in the bottom."@en ;
 
     skos:narrower trait:megabenthos, trait:macrobenthos, trait:meiobenthos, trait:microbenthos, trait:hyperbenthos, trait:epibenthos, trait:endobenthos, trait:phytobenthos ;
+
+    skos:closeMatch ... ; 
 .
 
 trait:megabenthos
@@ -114,6 +116,8 @@ trait:epibenthos
     skos:definition "Organisms living on the surface of the bottom. Epifaunal or epifloral."@en ;
 
     skos:broader trait:benthos ; 
+
+    skos:closeMatch ... ; 
 .
 
 trait:endobenthos
@@ -123,6 +127,8 @@ trait:endobenthos
     skos:definition "Organisms living within the sediment of a lake or sea floor; infauna. Also called endobiontic."@en ;
 
     skos:broader trait:benthos ; 
+
+    skos:closeMatch ... ; 
 .
 
 trait:phytobenthos
@@ -282,6 +288,8 @@ trait:neuston
     skos:inScheme trait:conceptScheme ;
     skos:prefLabel "Neuston"@en ;
     skos:definition "Organisms that live right at the sea surface but remain underwater."@en ;
+
+    skos:closeMatch ... ; 
 .
 
 trait:pleuston
@@ -289,6 +297,8 @@ trait:pleuston
     skos:inScheme trait:conceptScheme ;
     skos:prefLabel "Pleuston"@en ;
     skos:definition "Organisms that live right at the sea surface, with part of the body projecting into the air."@en ;
+
+    skos:closeMatch ... ; 
 .
 
 trait:benthopelagic
@@ -296,6 +306,8 @@ trait:benthopelagic
     skos:inScheme trait:conceptScheme ;
     skos:prefLabel "Benthopelagic"@en ;
     skos:definition "Organisms living and feeding near the bottom as well as in midwaters or near the surface. Feeding on benthic as well as free swimming organisms. Many freshwater fish are opportunistic feeders that forage on the bottom as well as in midwater and near the surface, also pertaining to forms which hover or swim just over the floor of the sea, e.g. Halosauridae, Macrouridae, Moridae, Brotulidae; the depth zone about 100 metres off the bottom at all depths below the edge of the continental shelf. "@en ;
+
+    skos:exactMatch ... ; 
 .
 
 trait:edaphofauna

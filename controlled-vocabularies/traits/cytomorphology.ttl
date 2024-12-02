@@ -30,7 +30,9 @@ trait:unicellular
     skos:prefLabel "Unicellular"@en ;
     skos:definition "Having only one cell, or consisting of one cell."@en ;
 
-    skos:narrower trait:siphonous ; 
+    skos:narrower trait:siphonous ;
+
+    skos:exactMatch ... ;  
 .
 
 trait:siphonous
@@ -40,6 +42,8 @@ trait:siphonous
     skos:definition "Thallus consisting of a large tubular multinucleate cell (siphon) lacking cross-walls except during the formation of reproductive structures (note that many species of Dasycladales remain uninucleate throughout much of their life cycle with a giant diploid nucleus that only divides at the onset of reproduction). Also known as acellular."@en ;
 
     skos:broader trait:unicellular ; 
+
+    skos:exactMatch ... ; 
 .
 
 trait:non_unicellular

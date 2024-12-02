@@ -22,6 +22,8 @@ trait:irradiance_preference
     dct:description "..."@en ;
 
     skos:member trait:photophilic , trait:sciaphilic ;
+
+    skos:closeMatch ... ; 
 . 
 
 trait:photophilic
@@ -29,6 +31,8 @@ trait:photophilic
     skos:inScheme trait:conceptScheme ;
     skos:prefLabel "Photophilic"@en ;
     skos:definition "Growing or thriving in habitats with high light intensity."@en ;
+
+    skos:closeMatch ... ; 
 .
 
 trait:sciaphilic
@@ -36,4 +40,6 @@ trait:sciaphilic
     skos:inScheme trait:conceptScheme ;
     skos:prefLabel "Sciaphilic"@en ;
     skos:definition "Growing or thriving in shaded or low light intensity habitats."@en ;
+
+    skos:closeMatch ... ; 
 .

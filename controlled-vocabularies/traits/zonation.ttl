@@ -41,6 +41,8 @@ trait:zonation
                     trait:abyssal_zone ,
                     trait:hadal_zone ,
                 trait:unreported_zonation ;
+
+    skos:closeMatch ... ; 
 .
 
 trait:pelagic_zones
@@ -50,6 +52,8 @@ trait:pelagic_zones
     skos:definition ""@en ;
 
     skos:narrower trait:epipelagic_zone , trait:mesopelagic_zone , trait:bathypelagic_zone , trait:abyssopelagic_zone , trait:hadopelagic_zone ;
+
+    skos:closeMatch ... ; 
 .
 
 trait:epipelagic_zone
@@ -59,6 +63,8 @@ trait:epipelagic_zone
     skos:definition "The depth zone of the water column extending from the surface to 200 m. Because this zone has sufficient light penetration for photosynthesis, it is sometimes referred to as the photic zone."@en ;
 
     skos:broader trait:pelagic_zones ;
+
+    skos:closeMatch ... ; 
 .
 trait:mesopelagic_zone
     a skos:Concept, aphia-trait:Trait ;
@@ -67,6 +73,8 @@ trait:mesopelagic_zone
     skos:definition "The depth zone of the water column extending from 200 to 1000 m."@en ;
 
     skos:broader trait:pelagic_zones ;
+
+    skos:closeMatch ... ; 
 .
 trait:bathypelagic_zone
     a skos:Concept, aphia-trait:Trait ;
@@ -75,6 +83,8 @@ trait:bathypelagic_zone
     skos:definition "The depth zone of the water column extending from 1000 to 4000 m."@en ;
 
     skos:broader trait:pelagic_zones ;
+
+    skos:closeMatch ... ; 
 .
 trait:abyssopelagic_zone
     a skos:Concept, aphia-trait:Trait ;
@@ -83,6 +93,8 @@ trait:abyssopelagic_zone
     skos:definition "The depth zone of the water column extending from 4000 to 6000 m."@en ;
 
     skos:broader trait:pelagic_zones ;
+
+    skos:closeMatch ... ; 
 .
 trait:hadopelagic_zone
     a skos:Concept, aphia-trait:Trait ;

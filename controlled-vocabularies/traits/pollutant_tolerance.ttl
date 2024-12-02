@@ -22,6 +22,8 @@ trait:pollutant_tolerance
     dct:description "Trait that describes how tolerant to pollutants an organism is."@en ;
 
     skos:member trait:clear_waters , trait:eutrophic_waters , trait:mesotrophic_waters , trait:moderately_turbid_waters , trait:oligotrophic_waters , trait:waters_with_variable_turbidity , trait:turbid_waters ; 
+
+    skos:closeMatch ... ; 
 .
 
 trait:clear_waters

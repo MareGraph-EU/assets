@@ -22,6 +22,8 @@ trait:seasonality
     dct:description "Trait that describes the periodicity of an organism related to the seasons."@en ;
 
     skos:member trait:spring , trait:summer , trait:autumn , trait:winter , trait:unreported_seasonality ; 
+
+    skos:closeMatch ... ; 
 .
 
 trait:spring

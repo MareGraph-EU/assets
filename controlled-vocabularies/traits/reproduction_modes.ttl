@@ -28,6 +28,8 @@ trait:reproduction_modes
                 trait:viviparous , 
                     trait:viviparous_no_parental_care , 
                     trait:viviparous_parental_care ; 
+
+    skos:closeMatch ... ; 
 .
 
 trait:oviparous
@@ -37,6 +39,8 @@ trait:oviparous
     skos:definition "Egg laying; producing eggs that are laid and hatch externally (Lincoln et al., 1998). Egg-laying (Henderson's Dictionary of Biology; Lawrence, 2005)."@en ;
 
     skos:narrower trait:oviparous_no_parental_care , trait:oviparous_parental_care ;
+
+    skos:exactMatch ... ; 
 .
 
 trait:oviparous_no_parental_care
@@ -62,6 +66,8 @@ trait:ovoviviparous
     skos:inScheme trait:conceptScheme ;
     skos:prefLabel "Ovoviviparous"@en ;
     skos:definition "Fully formed eggs are retained and hatched inside the maternal body and are released as live offspring. No nutrition is derived from the mother (Lincoln et al., 1998). Pert. organisms that produce an egg with a persistent outer covering, but which hatches within the maternal body (Henderson's Dictionary of Biology; Lawrence, 2005)."@en ;
+
+    skos:exactMatch ... ; 
 .
 
 trait:viviparous
@@ -71,6 +77,8 @@ trait:viviparous
     skos:definition "1: Producing live offspring from within the body of the parent; zoogonous; viviparity, vivipary; cf. larvipary, oviparous, ovoviviparous. 2: Germinating while still attached to the parent plant (Lincoln et al., 1998). Development of an embryo within the body of the parent, in part, resources passing directly from parent to embryo (Barnes et al., 2006). (1) producing young alive rather than laying eggs, appl. all mammals except monotremes, and some animals in other groups; (2) appl. plants, having seeds that germinate while still attached to the parent plant, e.g. mangrove (Henderson's Dictionary of Biology; Lawrence, 2005)."@en ;
 
     skos:narrower trait:viviparous_no_parental_care , trait:viviparous_parental_care ;
+
+    skos:exactMatch ... ; 
 .
 
 trait:viviparous_no_parental_care

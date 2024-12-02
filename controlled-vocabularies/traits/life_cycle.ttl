@@ -31,6 +31,8 @@ trait:life_cycle
                 trait:haplontic , 
                 trait:life_cycle_unknown , 
                 trait:life_cycle_unreported ; 
+
+    skos:exactMatch ... ; 
 .
 
 trait:diplontic
@@ -38,6 +40,8 @@ trait:diplontic
     skos:inScheme trait:conceptScheme ;
     skos:prefLabel "Diplontic"@en ;
     skos:definition "Having a life cycle in which the direct products of meiosis act as gametes; only the gametes of diplonts are haploid; cf. haplont (Lincoln et al., 1998)."@en ;
+
+    skos:exactMatch ... ; 
 .
 trait:haplodiplontic
     a skos:Concept, aphia-trait:Trait ;
@@ -46,18 +50,24 @@ trait:haplodiplontic
     skos:definition "Having a life cycle with alternating free-living gametophyte and sporophyte phases (macroalgae; Womersley, 1987)."@en ;
 
     skos:narrower trait:heteromorphic , trait:haplodiplontic_not_applicable , trait:haplodiplontic_unknown , trait:haplodiplontic_unreported ;
+
+    skos:exactMatch ... ; 
 .
 trait:heteromorphic
     a skos:Concept, aphia-trait:Trait ;
     skos:inScheme trait:conceptScheme ;
     skos:prefLabel "Heteromorphic"@en ;
     skos:definition "Organisms with the gametophyte and sporophyte of different morphology and size (macroalgae; Womersley, 1987). Having different forms at different times or at different stages of the life cycle; used of a plant having an alternation of vegetatively dissimilar generations; heteromorphous; cf. homomorphic (Lincoln et al., 1998)."@en ;
+
+    skos:closeMatch ... ; 
 .
 trait:isomorphic
     a skos:Concept, aphia-trait:Trait ;
     skos:inScheme trait:conceptScheme ;
     skos:prefLabel "Isomorphic"@en ;
     skos:definition "Organisms with the gametophyte and sporophyte of similar morphology and size (macroalgae; Womersley, 1987). Used of a plant having an alternation between diploid and haploid generations which are morphologically similar in appearance; homomoprhic; isomorphous; cf. heteromorphic (Lincoln et al., 1998)."@en ;
+
+    skos:closeMatch ... ; 
 .
 trait:haplodiplontic_not_applicable
     a skos:Concept, aphia-trait:Trait ;
@@ -82,6 +92,8 @@ trait:haplontic
     skos:inScheme trait:conceptScheme ;
     skos:prefLabel "Haplontic"@en ;
     skos:definition "Having a life cycle in which meiosis occurs in the zygote to produce the haploid phase; only the zygote of the haplonts is diploid; cf. diplont."@en ;
+
+    skos:exactMatch ... ; 
 .
 trait:life_cycle_unknown
     a skos:Concept, aphia-trait:Trait ;

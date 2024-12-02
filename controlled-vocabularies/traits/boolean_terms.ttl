@@ -44,6 +44,8 @@ trait:macroalgal_blooming
     dct:description "Types of blooming specific for macroalgae species."@en ;
 
     skos:member trait:macroalgal_blooming_yes , trait:macroalgal_blooming_no ;
+
+    skos:closeMatch ... ; 
 . 
 
 trait:macroalgal_blooming_yes

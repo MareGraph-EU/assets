@@ -31,6 +31,8 @@ trait:asexual_reproduction
                     trait:by_budding , 
                 trait:asexual_reproduction_not_confirmed , 
                 trait:unknown ; 
+
+    skos:exactMatch ... ; 
 .
 
 trait:asexual_reproduction_confirmed
@@ -64,6 +66,8 @@ trait:by_fragmentation
     skos:definition "Type of asexual reproduction in which the organism breaks up into smaller pieces, each of which can develop into a new individual, as in some algae."@en ;
 
     skos:broader trait:asexual_reproduction_confirmed ;
+
+    skos:closeMatch ... ; 
 .
 trait:by_parthenogenesis
     a skos:Concept, aphia-trait:Trait ;
@@ -72,6 +76,8 @@ trait:by_parthenogenesis
     skos:definition "Reproduction from a female gamete without fertilization by a male gamete (Henderson's Dictionary of Biology; Lawrence, 2005). Direct development of a new individual from an unfused gamete. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 
     skos:broader trait:asexual_reproduction_confirmed ;
+
+    skos:closeMatch ... ; 
 .
 trait:by_vegetative_propagules
     a skos:Concept, aphia-trait:Trait ;
@@ -88,6 +94,8 @@ trait:by_binary_fission
     skos:definition "Binary fission in prokaryotic organisms, the chief mode of division, in which a cell divides into two equal daughter cells, each containing a copy of the chromosome."@en ;
 
     skos:broader trait:asexual_reproduction_confirmed ;
+
+    skos:closeMatch ... ; 
 .
 trait:by_budding
     a skos:Concept, aphia-trait:Trait ;
@@ -96,6 +104,8 @@ trait:by_budding
     skos:definition "(1) production of buds; (2) (zool.) method of asexual reproduction common in sponges, coelenterates and some other invertebrates, in which new individuals develop as outgrowths of the parent organism, and may eventually be set free; (3) (bot.) artificial vegetative propagation by insertion of a bud within the bark of another plant; (4) (mycol.) cell division by the outgrowth of a new cell from the parent cell; (5) (virol.) release of certain animal viruses from the host cell by their envelopment in a piece of plasma membrane which subsequently pinches off from the cell."@en ;
 
     skos:broader trait:asexual_reproduction_confirmed ;
+
+    skos:closeMatch ... ; 
 .
 trait:asexual_reproduction_not_confirmed
     a skos:Concept, aphia-trait:Trait ;
