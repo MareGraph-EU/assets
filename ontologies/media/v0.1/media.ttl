@@ -18,15 +18,19 @@
                                                 <https://w3id.org/marine/resource/organisation/vliz> ;
                                     dct:issued "2023-08-30"^^xsd:date ;
                                     dct:language <http://publications.europa.eu/resource/authority/language/ENG> ,
-                                                 <http://publications.europa.eu/resource/authority/language/ITA> ;
+                                                 <http://publications.europa.eu/resource/authority/language/ITA> ,
+                                                 <http://publications.europa.eu/resource/authority/language/NLD> ;
                                     dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
                                     dct:modified "2023-11-29"^^xsd:date ;
                                     rdfs:comment "Questa è l'ontologia degli oggetti multimediali, associati alle specie, della rete di ontologie MAREGRAPH. Essa importa l'ontologia di primo livello MAREGRAPH, riutilizza direttamente diversi elementi Dublin Core ed è allineata a Schema.org."@it ,
-                                                 "This is the multimedia object for the species ontology of the MAREGRAPH network of ontologies. It imports the top-level ontology of MAREGRAPH, it directly reuses several Dublin Core elements and is aligned to Schema.org."@en ;
+                                                 "This is the multimedia object for the species ontology of the MAREGRAPH network of ontologies. It imports the top-level ontology of MAREGRAPH, it directly reuses several Dublin Core elements and is aligned to Schema.org."@en ,
+                                                 "Dit is het mediaobject voor de soorten ontologie van het MAREGRAPH-netwerk van ontologieën. Het importeert de top-level ontologie van MAREGRAPH, hergebruikt direct verschillende Dublin Core elementen en is afgestemd op Schema.org."@nl ;
                                     rdfs:label "MAREGRAPH - Media objects ontology"@en ,
-                                               "MAREGRAPH - Ontologia degli oggetti multimediali"@it ;
+                                               "MAREGRAPH - Ontologia degli oggetti multimediali"@it ,
+                                               "MAREGRAPH - Media objecten ontologie"@nl ;
                                     owl:versionInfo "Preliminary version 0.1"@en ,
-                                                    "Versione preliminare 0.1"@it .
+                                                    "Versione preliminare 0.1"@it ,
+                                                    "Voorlopige versie 0.1"@nl .
 
 #################################################################
 #    Annotation properties
@@ -68,10 +72,12 @@ dct:subject rdf:type owl:ObjectProperty ;
                             rdfs:domain :MediaObject ;
                             rdfs:range :MediaObjectDistribution ;
                             rdfs:comment "Property used to specify a particular distribution of a media object."@en ,
-                                         "Proprietà utilizzata per specificare una particolare distribuzione di un oggetto multimediale."@it ;
+                                         "Proprietà utilizzata per specificare una particolare distribuzione di un oggetto multimediale."@it ,
+                                         "Eigenschap die wordt gebruikt om een bepaalde distributie van een mediaobject op te geven."@nl ;
                             rdfs:isDefinedBy <https://w3id.org/marine/ns/media> ;
                             rdfs:label "ha distribuzione oggetto multimediale"@it ,
-                                       "has media object distribution"@en .
+                                       "has media object distribution"@en ,
+                                       "heeft media object distributie"@nl .
 
 
 ###  https://w3id.org/marine/ns/media/isMediaObjectDistributionOf
@@ -80,10 +86,12 @@ dct:subject rdf:type owl:ObjectProperty ;
                              rdfs:domain :MediaObjectDistribution ;
                              rdfs:range :MediaObject ;
                              rdfs:comment "Inverse property of 'has media object distribution' used to obtain information on the media object from its distribution."@en ,
-                                          "Proprietà inversa di 'ha distribuzione oggetto multimediale' usata per ottenere informazioni sull'oggetto multimediale a partire dalla sua distribuzione."@it ;
+                                          "Proprietà inversa di 'ha distribuzione oggetto multimediale' usata per ottenere informazioni sull'oggetto multimediale a partire dalla sua distribuzione."@it ,
+                                          "Inverse eigenschap van 'heeft distributie mediaobject' gebruikt om informatie te verkrijgen over het mediaobject uit zijn distributie."@nl ;
                              rdfs:isDefinedBy <https://w3id.org/marine/ns/media> ;
                              rdfs:label "is media object distribution of"@en ,
-                                        "è distribuzione di oggetto multimediale di"@it .
+                                        "è distribuzione di oggetto multimediale di"@it ,
+                                        "is media object distributie van"@nl .
 
 
 ###  https://w3id.org/marine/ns/media/isSubjectOf
@@ -92,10 +100,12 @@ dct:subject rdf:type owl:ObjectProperty ;
              rdfs:domain <https://w3id.org/marine/ns/taxon-name/Taxon> ;
              rdfs:range :MediaObject ;
              rdfs:comment "Property used to specify the distribution for a taxon."@en ,
-                          "Proprietà utilizzata per specificare la distribuzione di un taxon."@it ;
+                          "Proprietà utilizzata per specificare la distribuzione di un taxon."@it ,
+                          "Eigenschap die wordt gebruikt om de verdeling voor een taxon te specificeren."@nl ;
              rdfs:isDefinedBy <https://w3id.org/marine/ns/media> ;
              rdfs:label "ha distribuzione"@it ,
-                        "has distribution"@en .
+                        "has distribution"@en ,
+                        "heeft distributie"@nl .
 
 
 ###  https://w3id.org/marine/ns/top-level/hasAuthor
@@ -119,10 +129,12 @@ dct:title rdf:type owl:DatatypeProperty .
 #       rdfs:domain :MediaObjectDistribution ;
 #       rdfs:range xsd:decimal ;
 #       rdfs:comment "Property used represent the dimension of the media distribution."@en ,
-#                    "Proprietà utilizzata per rappresentare la dimensione della distribuzione dell'oggetto multimediale."@it ;
+#                    "Proprietà utilizzata per rappresentare la dimensione della distribuzione dell'oggetto multimediale."@it ,
+#                    "Eigenschap die wordt gebruikt om de grootte van de distributie van het mediaobject weer te geven."@nl ;
 #       rdfs:isDefinedBy <https://w3id.org/marine/ns/media> ;
 #       rdfs:label "dimensione"@it ,
-#                  "size"@en .
+#                  "size"@en ,
+#                  "afmeting"@nl .
 
 
 #################################################################
@@ -155,10 +167,12 @@ dct:MediaTypeOrExtent rdf:type owl:Class .
                              :MediaObject ;
              owl:disjointWith :VideoObject ;
              rdfs:comment "Questa classe rappresenta uno specifico tipo di oggetto multimediale, ossia l'immagine (e.g., una foto, un disegno)."@it ,
-                          "This class represents a specific type of media object, namely an image (e.g. a photo, a drawing)."@en ;
+                          "This class represents a specific type of media object, namely an image (e.g. a photo, a drawing)."@en ,
+                          "Deze klasse vertegenwoordigt een specifiek type mediaobject, namelijk een afbeelding (bijv. een foto, een tekening)."@nl ;
              rdfs:isDefinedBy <https://w3id.org/marine/ns/media> ;
-             rdfs:label "Image Object"@it ,
-                        "Oggetto Multimediale Immagine"@en .
+             rdfs:label "Image Object"@en ,
+                        "Oggetto Multimediale Immagine"@it ,
+                        "Afbeelding object"@nl .
 
 
 ###  https://w3id.org/marine/ns/media/MediaObject
@@ -202,10 +216,12 @@ dct:MediaTypeOrExtent rdf:type owl:Class .
                                owl:allValuesFrom rdfs:Literal
                              ] ;
              rdfs:comment "La classe degli oggetti multimediali (e.g., foto, disegni, video, ecc.) da associare alle specie."@it ,
-                          "The class of the media (e.g., photos, drawings, videos, etc.) to be associated with the species."@en ;
+                          "The class of the media (e.g., photos, drawings, videos, etc.) to be associated with the species."@en ,
+                          "De klasse van de media (bijv. foto's, tekeningen, video's, enz.) die met de soort worden geassocieerd."@nl ;
              rdfs:isDefinedBy <https://w3id.org/marine/ns/media> ;
              rdfs:label "Media Object"@en ,
-                        "Oggetto Multimediale"@it .
+                        "Oggetto Multimediale"@it ,
+                        "Media Object"@nl .
 
 
 ###  https://w3id.org/marine/ns/media/MediaObjectDistribution
@@ -221,10 +237,12 @@ dct:MediaTypeOrExtent rdf:type owl:Class .
                                            owl:onDataRange xsd:decimal
                                          ] ;
                          rdfs:comment "La classe delle specifiche distribuzioni degli oggetti multimediali."@it ,
-                                      "The class of specific distributions of the media."@en ;
+                                      "The class of specific distributions of the media."@en ,
+                                      "De klasse van specifieke distributies van de media."@nl ;
                          rdfs:isDefinedBy <https://w3id.org/marine/ns/media> ;
                          rdfs:label "Distribuzione Oggetto Multimediale"@it ,
-                                    "Media Object Distribution"@en ;
+                                    "Media Object Distribution"@en ,
+                                    "Media Object Distributie"@nl ;
                          prov:wasInfluencedBy <http://www.w3.org/ns/dcat#Distribution> .
 
 
@@ -233,10 +251,12 @@ dct:MediaTypeOrExtent rdf:type owl:Class .
              rdfs:subClassOf <https://schema.org/VideoObject> ,
                              :MediaObject ;
              rdfs:comment "Questa classe rappresenta uno specifico tipo di oggetto multimediale, ossia il video."@it ,
-                          "This class represents a specific type of media object, namely a video."@en ;
+                          "This class represents a specific type of media object, namely a video."@en ,
+                          "Deze klasse vertegenwoordigt een specifiek type mediaobject, namelijk een video."@nl ;
              rdfs:isDefinedBy <https://w3id.org/marine/ns/media> ;
              rdfs:label "Oggetto Multimediale Video"@it ,
-                        "Video Object"@en .
+                        "Video Object"@en ,
+                        "Video Object"@nl .
 
 
 ###  https://w3id.org/marine/ns/taxon-name/Taxon
@@ -254,9 +274,11 @@ dct:MediaTypeOrExtent rdf:type owl:Class .
 ###  https://w3id.org/marine/ns/media
 <https://w3id.org/marine/ns/media> rdf:type owl:NamedIndividual ;
                                    dct:description "Questa è l'ontologia degli oggetti multimediali, associati alle specie, della rete di ontologie MAREGRAPH. Essa importa l'ontologia di primo livello MAREGRAPH, riutilizza direttamente diversi elementi Dublin Core ed è allineata a Schema.org."@it ,
-                                                   "This is the multimedia object for the species ontology of the MAREGRAPH network of ontologies. It imports the top-level ontology of MAREGRAPH, it directly reuses several Dublin Core elements and is aligned to Schema.org."@en ;
+                                                   "This is the multimedia object for the species ontology of the MAREGRAPH network of ontologies. It imports the top-level ontology of MAREGRAPH, it directly reuses several Dublin Core elements and is aligned to Schema.org."@en ,
+                                                   "Dit is het multimediaobject voor de soortenontologie van het MAREGRAPH-netwerk van ontologieën. Het importeert de ontologie op het hoogste niveau van MAREGRAPH, hergebruikt verschillende Dublin Core-elementen en is afgestemd op Schema.org."@nl ;
                                    dct:title "MAREGRAPH - Media objects ontology"@en ,
-                                             "MAREGRAPH - Ontologia degli oggetti multimediali"@it .
+                                             "MAREGRAPH - Ontologia degli oggetti multimediali"@it ,
+                                             "MAREGRAPH - Media objecten ontologie"@nl .
 
 
 ###  https://w3id.org/marine/resource/organisation/dv

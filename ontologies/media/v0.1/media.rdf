@@ -20,14 +20,18 @@
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-30</dct:issued>
         <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/NLD"/>
         <dct:license rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-29</dct:modified>
         <rdfs:comment xml:lang="it">Questa è l&apos;ontologia degli oggetti multimediali, associati alle specie, della rete di ontologie MAREGRAPH. Essa importa l&apos;ontologia di primo livello MAREGRAPH, riutilizza direttamente diversi elementi Dublin Core ed è allineata a Schema.org.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the multimedia object for the species ontology of the MAREGRAPH network of ontologies. It imports the top-level ontology of MAREGRAPH, it directly reuses several Dublin Core elements and is aligned to Schema.org.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Dit is het mediaobject voor de soorten ontologie van het MAREGRAPH-netwerk van ontologieën. Het importeert de top-level ontologie van MAREGRAPH, hergebruikt direct verschillende Dublin Core elementen en is afgestemd op Schema.org.</rdfs:comment>
         <rdfs:label xml:lang="en">MAREGRAPH - Media objects ontology</rdfs:label>
         <rdfs:label xml:lang="it">MAREGRAPH - Ontologia degli oggetti multimediali</rdfs:label>
+        <rdfs:label xml:lang="nl">MAREGRAPH - Media objecten ontologie</rdfs:label>
         <owl:versionInfo xml:lang="en">Preliminary version 0.1</owl:versionInfo>
         <owl:versionInfo xml:lang="it">Versione preliminare 0.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="nl">Voorlopige versie 0.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -101,9 +105,11 @@
         <rdfs:range rdf:resource="https://w3id.org/marine/ns/media/MediaObjectDistribution"/>
         <rdfs:comment xml:lang="en">Property used to specify a particular distribution of a media object.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà utilizzata per specificare una particolare distribuzione di un oggetto multimediale.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Eigenschap die wordt gebruikt om een bepaalde distributie van een mediaobject op te geven.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/media"/>
         <rdfs:label xml:lang="it">ha distribuzione oggetto multimediale</rdfs:label>
         <rdfs:label xml:lang="en">has media object distribution</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft media object distributie</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -116,9 +122,11 @@
         <rdfs:range rdf:resource="https://w3id.org/marine/ns/media/MediaObject"/>
         <rdfs:comment xml:lang="en">Inverse property of &apos;has media object distribution&apos; used to obtain information on the media object from its distribution.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà inversa di &apos;ha distribuzione oggetto multimediale&apos; usata per ottenere informazioni sull&apos;oggetto multimediale a partire dalla sua distribuzione.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Inverse eigenschap van 'heeft distributie mediaobject' gebruikt om informatie te verkrijgen over het mediaobject uit zijn distributie.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/media"/>
         <rdfs:label xml:lang="en">is media object distribution of</rdfs:label>
         <rdfs:label xml:lang="it">è distribuzione di oggetto multimediale di</rdfs:label>
+        <rdfs:label xml:lang="nl">is media object distributie van</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -131,9 +139,11 @@
         <rdfs:range rdf:resource="https://w3id.org/marine/ns/media/MediaObject"/>
         <rdfs:comment xml:lang="en">Property used to specify the distribution for a taxon.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà utilizzata per specificare la distribuzione di un taxon.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Eigenschap die wordt gebruikt om de verdeling voor een taxon te specificeren.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/media"/>
         <rdfs:label xml:lang="it">ha distribuzione</rdfs:label>
         <rdfs:label xml:lang="en">has distribution</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft distributie</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -174,9 +184,11 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="en">Property used represent the dimension of the media distribution.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà utilizzata per rappresentare la dimensione della distribuzione dell&apos;oggetto multimediale.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Eigenschap die wordt gebruikt om de grootte van de distributie van het mediaobject weer te geven.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/media"/>
         <rdfs:label xml:lang="it">dimensione</rdfs:label>
         <rdfs:label xml:lang="en">size</rdfs:label>
+        <rdfs:label xml:lang="nl">afmeting</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -230,9 +242,11 @@
         <owl:disjointWith rdf:resource="https://w3id.org/marine/ns/media/VideoObject"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno specifico tipo di oggetto multimediale, ossia l&apos;immagine (e.g., una foto, un disegno).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a specific type of media object, namely an image (e.g. a photo, a drawing).</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Deze klasse vertegenwoordigt een specifiek type mediaobject, namelijk een afbeelding (bijv. een foto, een tekening).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/media"/>
         <rdfs:label xml:lang="it">Image Object</rdfs:label>
         <rdfs:label xml:lang="en">Oggetto Multimediale Immagine</rdfs:label>
+        <rdfs:label xml:lang="nl">Afbeelding object</rdfs:label>
     </owl:Class>
     
 
@@ -298,9 +312,11 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">La classe degli oggetti multimediali (e.g., foto, disegni, video, ecc.) da associare alle specie.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class of the media (e.g., photos, drawings, videos, etc.) to be associated with the species.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">De klasse van de media (bijv. foto's, tekeningen, video's, enz.) die met de soort worden geassocieerd.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/media"/>
         <rdfs:label xml:lang="en">Media Object</rdfs:label>
         <rdfs:label xml:lang="it">Oggetto Multimediale</rdfs:label>
+        <rdfs:label xml:lang="nl">Media Object</rdfs:label>
     </owl:Class>
     
 
@@ -324,9 +340,11 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">La classe delle specifiche distribuzioni degli oggetti multimediali.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class of specific distributions of the media.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">De klasse van specifieke distributies van de media.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/media"/>
         <rdfs:label xml:lang="it">Distribuzione Oggetto Multimediale</rdfs:label>
         <rdfs:label xml:lang="en">Media Object Distribution</rdfs:label>
+        <rdfs:label xml:lang="nl">Media Object Distributie</rdfs:label>
         <prov:wasInfluencedBy rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
     </owl:Class>
     
@@ -339,9 +357,11 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/marine/ns/media/MediaObject"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno specifico tipo di oggetto multimediale, ossia il video.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a specific type of media object, namely a video.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Deze klasse vertegenwoordigt een specifiek type mediaobject, namelijk een video.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/marine/ns/media"/>
         <rdfs:label xml:lang="it">Oggetto Multimediale Video</rdfs:label>
         <rdfs:label xml:lang="en">Video Object</rdfs:label>
+        <rdfs:label xml:lang="nl">Video Object</rdfs:label>
     </owl:Class>
     
 
@@ -374,8 +394,10 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/marine/ns/media">
         <dct:description xml:lang="it">Questa è l&apos;ontologia degli oggetti multimediali, associati alle specie, della rete di ontologie MAREGRAPH. Essa importa l&apos;ontologia di primo livello MAREGRAPH, riutilizza direttamente diversi elementi Dublin Core ed è allineata a Schema.org.</dct:description>
         <dct:description xml:lang="en">This is the multimedia object for the species ontology of the MAREGRAPH network of ontologies. It imports the top-level ontology of MAREGRAPH, it directly reuses several Dublin Core elements and is aligned to Schema.org.</dct:description>
+        <dct:description xml:lang="nl">Dit is het multimediaobject voor de soortenontologie van het MAREGRAPH-netwerk van ontologieën. Het importeert de ontologie op het hoogste niveau van MAREGRAPH, hergebruikt verschillende Dublin Core-elementen en is afgestemd op Schema.org.</dct:description>
         <dct:title xml:lang="en">MAREGRAPH - Media objects ontology</dct:title>
         <dct:title xml:lang="it">MAREGRAPH - Ontologia degli oggetti multimediali</dct:title>
+        <dct:title xml:lang="nl">MAREGRAPH - Media objecten ontologie</dct:title>
     </owl:NamedIndividual>
     
 

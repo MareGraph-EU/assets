@@ -16,20 +16,26 @@
                                                     <https://aphia.org/resource/organisation/dv> ,
                                                     <https://ror.org/0496vr396> ;
                                         dct:description "Questa è l'ontologia dei nomi dei taxon e di tutte le informazione tassonomiche, come disponibili dal sistema WoRMS. Essa importa l'ontologia di primo livello top-level ed è allineata a skos-xl."@it ,
-                                                        "This is the ontology of taxon names and all taxonomic information, as available from the WoRMS system. It imports the top-level ontology of the APHIA network of ontologies, and is aligned to skos-xl."@en ;
+                                                        "This is the ontology of taxon names and all taxonomic information, as available from the WoRMS system. It imports the top-level ontology of the APHIA network of ontologies, and is aligned to skos-xl."@en ,
+                                                        "Dit is de ontologie van taxanamen en alle taxonomische informatie zoals beschikbaar in het WoRMS-systeem. Het importeert de APHIA top-level ontologie en is afgestemd op skos-xl."@nl ;
                                         dct:issued "2023-08-30"^^xsd:date ;
                                         dct:language <http://publications.europa.eu/resource/authority/language/ENG> ,
-                                                     <http://publications.europa.eu/resource/authority/language/ITA> ;
+                                                     <http://publications.europa.eu/resource/authority/language/ITA> ,
+                                                     <http://publications.europa.eu/resource/authority/language/NLD> ;
                                         dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
                                         dct:modified "2024-02-10"^^xsd:date ;
                                         dct:title "APHIA - Ontologia dei nomi dei taxon"@it ,
-                                                  "APHIA - Taxon names ontology"@en ;
+                                                  "APHIA - Taxon names ontology"@en ,
+                                                  "APHIA - Ontologie van taxanamen"@nl ;
                                         rdfs:comment "Questa è l'ontologia dei nomi dei taxon e di tutte le informazione tassonomiche come disponibili dal sistema WoRMS. Essa importa l'ontologia di primo livello top-level ed è allineata a skos-xl."@it ,
-                                                     "This is the ontology of taxon names and all taxonomic information as available from the WoRMS system. It imports the top-level ontology of the APHIA network of ontologies, and is aligned to skos-xl."@en ;
+                                                     "This is the ontology of taxon names and all taxonomic information as available from the WoRMS system. It imports the top-level ontology of the APHIA network of ontologies, and is aligned to skos-xl."@en ,
+                                                     "Dit is de ontologie van taxanamen en alle taxonomische informatie zoals beschikbaar in het WoRMS-systeem. Het importeert de APHIA top-level ontologie en is afgestemd op skos-xl."@nl ;
                                         rdfs:label "APHIA - Ontologia dei nomi dei taxon"@it ,
-                                                   "APHIA - Taxon names ontology"@en ;
+                                                   "APHIA - Taxon names ontology"@en ,
+                                                   "APHIA - Ontologie van taxanamen"@nl ;
                                         owl:versionInfo "Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; changed the name of the ontology from taxon-name to taxon-name; introduced some alignments to Darwin Core for some properties; changed some definitions (e.g., authorship)."@en ,
-                                                        "Seconda versione 0.2 - cambiati tutti gli URI da w3id.org/ a aphia.org/; cambiato il nome dell'ontologia da taxon-name a taxon-name; introdotti alcuni allineamenti a Darwin core per alcune proprietà; cambiate alcune definizioni (e.g., authorship)."@it .
+                                                        "Seconda versione 0.2 - cambiati tutti gli URI da w3id.org/ a aphia.org/; cambiato il nome dell'ontologia da taxon-name a taxon-name; introdotti alcuni allineamenti a Darwin core per alcune proprietà; cambiate alcune definizioni (e.g., authorship)."@it ,
+                                                        "Tweede versie 0.2 - URI's gewijzigd van w3id.org/ naar aphia.org/; de naam van de ontologie gewijzigd van taxanaam in taxonnaam; enkele alignaties op Darwin Core geïntroduceerd voor sommige eigenschappen; enkele definities (bijv. auteurschap) gewijzigd."@nl .
 
 #################################################################
 #    Annotation properties
@@ -66,10 +72,12 @@ dct:coverage rdf:type owl:ObjectProperty .
          rdfs:domain <https://aphia.org/ns/top-level/Name> ;
          rdfs:range :Taxon ;
          rdfs:comment "Property used to represent a name for a taxon."@en ,
-                      "Proprietà utilizzata per definire un nome per un taxon."@it ;
+                      "Proprietà utilizzata per definire un nome per un taxon."@it ,
+                      "Eigenschap die wordt gebruikt om een naam voor een taxon te definiëren."@nl ;
          rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
          rdfs:label "definisce/denota"@it ,
-                    "denotes"@en .
+                    "denotes"@en ,
+                    "definieert"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/hasAcceptedName
@@ -79,10 +87,12 @@ dct:coverage rdf:type owl:ObjectProperty .
                  rdfs:domain :Taxon ;
                  rdfs:range :TaxonName ;
                  rdfs:comment "Property used to represent the currently valid (zoological) or accepted (botanical) scientific name for a taxon."@en ,
-                              "Proprietà utilizzata per rappresentare il nome scientifico attualmente valido (zoologico) o accettato (botanico) di un taxon."@it ;
+                              "Proprietà utilizzata per rappresentare il nome scientifico attualmente valido (zoologico) o accettato (botanico) di un taxon."@it ,
+                              "Eigenschap gebruikt om de huidige geldige (zoölogische) of aanvaarde (botanische) wetenschappelijke naam voor een taxon weer te geven."@nl ;
                  rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
                  rdfs:label "ha nome valido/accettato"@it ,
-                            "has accepted name"@en .
+                            "has accepted name"@en ,
+                            "heeft geaccepteerde naam"@nl .
 
 
 # ###  https://aphia.org/ns/taxon-name/hasAuthorship
@@ -91,10 +101,12 @@ dct:coverage rdf:type owl:ObjectProperty .
 #                rdfs:domain :TaxonName ;
 #                rdfs:range :Authorship ;
 #                rdfs:comment "Property used to represent the situation of authorship, given by the combination of the author and year, for a taxon name."@en ,
-#                             "Proprietà utilizzata per definire la situazione di paternità, data dalla combinazione di autore e anno, per un nome di taxon."@it ;
+#                             "Proprietà utilizzata per definire la situazione di paternità, data dalla combinazione di autore e anno, per un nome di taxon."@it ,
+#                             "Eigenschap gebruikt om auteurschap te definiëren, gegeven door de combinatie van auteur en jaar, voor een taxonnaam."@nl ; 
 #                rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
 #                rdfs:label "ha paternità"@it ,
-#                           "has authorship"@en .
+#                           "has authorship"@en ,
+#                           "heeft auteurschap"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/hasChild
@@ -104,10 +116,12 @@ dct:coverage rdf:type owl:ObjectProperty .
           rdfs:domain :Taxon ;
           rdfs:range :Taxon ;
           rdfs:comment "Property that allows representing the direct child taxon in a classification."@en ,
-                       "Proprietà che consente di rappresentare il taxon diretto inferiore in una classification."@it ;
+                       "Proprietà che consente di rappresentare il taxon diretto inferiore in una classification."@it ,
+                       "Eigenschap die toelaat het directe lagere taxon in een classificatie weer te geven."@nl ;
           rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
           rdfs:label "ha taxon inferiore"@it ,
-                     "has child taxon"@en .
+                     "has child taxon"@en ,
+                     "heeft lager taxon"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/hasParent
@@ -117,10 +131,12 @@ dct:coverage rdf:type owl:ObjectProperty .
            rdfs:domain :Taxon ;
            rdfs:range :Taxon ;
            rdfs:comment "Property that allows representing the direct parent taxon in a classification. The parent of a species is usually a genus; the parent of a genus is usually a family, and so on."@en ,
-                        "Proprietà che consente di rappresentare il taxon diretto superiore in una classificatione. Il taxon diretto superiore di una specie è di solito il genere, quello del genere è la famiglia e così via."@it ;
+                        "Proprietà che consente di rappresentare il taxon diretto superiore in una classificatione. Il taxon diretto superiore di una specie è di solito il genere, quello del genere è la famiglia e così via."@it ,
+                        "Eigenschap die toelaat het directe hogere taxon in een classificatie weer te geven. De ouder van een soort is meestal een geslacht; de ouder van een geslacht is meestal een familie, enzovoort."@nl ;
            rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
            rdfs:label "ha taxon superiore"@it ,
-                      "has parent taxon"@en .
+                      "has parent taxon"@en ,
+                      "heeft hoger taxon"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/hasStatus
@@ -130,10 +146,12 @@ dct:coverage rdf:type owl:ObjectProperty .
            rdfs:domain :TaxonName ;
            rdfs:range :Status ;
            rdfs:comment "Property used to connect the taxon name with its status (e.g., accepted, unaccepted)."@en ,
-                        "Proprietà utilizzata per collegare il nome del taxon con il suo stato (e.g., accettato, non accettato)."@it ;
+                        "Proprietà utilizzata per collegare il nome del taxon con il suo stato (e.g., accettato, non accettato)."@it ,
+                        "Eigenschap gebruikt om de taxonnaam te koppelen aan zijn status (bijv. geaccepteerd, niet geaccepteerd)."@nl ;
            rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
            rdfs:label "ha stato"@it ,
-                      "has status"@en .
+                      "has status"@en ,
+                      "heeft status"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/hasSynonym
@@ -143,10 +161,12 @@ dct:coverage rdf:type owl:ObjectProperty .
             rdfs:domain :TaxonName ;
             rdfs:range :TaxonName ;
             rdfs:comment "Property used to specify synonymity relations between taxon names."@en ,
-                         "Proprietà utilizzata per specificare relazioni di sinonimia tra nomi di taxon."@it ;
+                         "Proprietà utilizzata per specificare relazioni di sinonimia tra nomi di taxon."@it ,
+                         "Eigenschap gebruikt om synoniemenrelaties tussen taxonnamen te specificeren."@nl ;
             rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
             rdfs:label "ha sinonimo"@it ,
-                       "has synonym"@en .
+                       "has synonym"@en ,
+                       "heeft synoniem"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/hasSynonymName
@@ -155,10 +175,12 @@ dct:coverage rdf:type owl:ObjectProperty .
                 rdfs:domain :Taxon ;
                 rdfs:range :TaxonName ;
                 rdfs:comment "Proprietà used to connect the taxon with its names considered synonyms."@en ,
-                             "Proprietà utilizzata per collegare il taxon con i suoi nomi considerati sinonimi."@it ;
+                             "Proprietà utilizzata per collegare il taxon con i suoi nomi considerati sinonimi."@it ,
+                             "Eigenschap gebruikt om het taxon te koppelen aan zijn namen die als synoniemen worden beschouwd."@nl ;
                 rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
                 rdfs:label "ha nome sinonimo"@it ,
-                           "has synonym name"@en .
+                           "has synonym name"@en ,
+                           "heeft synoniem naam"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/hasUnacceptedReason
@@ -167,10 +189,12 @@ dct:coverage rdf:type owl:ObjectProperty .
                      rdfs:domain :TaxonName ;
                      rdfs:range :UnacceptedReason ;
                      rdfs:comment "Property used to specify the motivation for which a name is not accepted for a taxon name."@en ,
-                                  "Proprietà utilizzata per specificare il motivo per cui un nome non è accettato per un nome di taxon."@it ;
+                                  "Proprietà utilizzata per specificare il motivo per cui un nome non è accettato per un nome di taxon."@it ,
+                                  "Eigenschap gebruikt om de motivatie te specificeren waarvoor een naam niet wordt geaccepteerd voor een taxonnaam."@nl ; 
                      rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
                      rdfs:label "ha motivo non accettato"@it ,
-                                "ha unaccepted reason"@en .
+                                "ha unaccepted reason"@en ,
+                                "heeft niet-geaccepteerd reden"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/isDenotedBy
@@ -179,10 +203,12 @@ dct:coverage rdf:type owl:ObjectProperty .
              rdfs:domain :Taxon ;
              rdfs:range <https://aphia.org/ns/top-level/Name> ;
              rdfs:comment "Inverse property of 'denotes' that allows one to specify the name for a taxon."@en ,
-                          "Proprietà inversa di 'definito/denotato' che consente di specificare il nome per un taxon."@it ;
+                          "Proprietà inversa di 'definito/denotato' che consente di specificare il nome per un taxon."@it ,
+                          "Inverse eigenschap van 'definieert' die toelaat de naam van een taxon te definiëren."@nl ;
              rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
              rdfs:label "is denoted by"@en ,
-                        "è definito/denotato da"@it .
+                        "è definito/denotato da"@it ,
+                        "is gedefinieerd door"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/isOfRank
@@ -192,10 +218,12 @@ dct:coverage rdf:type owl:ObjectProperty .
           rdfs:domain :TaxonName ;
           rdfs:range :Rank ;
           rdfs:comment "Property used to specify the rank in a taxonomic classification for the taxon name."@en ,
-                       "Proprietà utilizzata per specificare il rango in una classificazione tassonomica per un nome di taxon."@it ;
+                       "Proprietà utilizzata per specificare il rango in una classificazione tassonomica per un nome di taxon."@it ,
+                       "Eigenschap gebruikt om de taxonnaam te koppelen aan zijn rang in een taxonomische classificatie."@nl ;
           rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
           rdfs:label "is of rank"@en ,
-                     "è di rango"@it .
+                     "è di rango"@it ,
+                     "heeft rang"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/isSynonymOf
@@ -204,10 +232,12 @@ dct:coverage rdf:type owl:ObjectProperty .
              rdfs:domain :TaxonName ;
              rdfs:range :TaxonName ;
              rdfs:comment "Inverse property of 'has synonym'."@en ,
-                          "Proprietà inversa di 'ha sinonimo'."@it ;
+                          "Proprietà inversa di 'ha sinonimo'."@it ,
+                          "Inverse eigenschap van 'heeft synoniem'"@nl ;
              rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
              rdfs:label "is synonym of"@en ,
-                        "è sinonimo di"@it .
+                        "è sinonimo di"@it ,
+                        "is synoniem van"@nl .
 
 
 #################################################################
@@ -221,10 +251,12 @@ dct:coverage rdf:type owl:ObjectProperty .
          rdfs:domain :TaxonName ;
          rdfs:range rdfs:Literal ;
          rdfs:comment "Codice univoco e persistente nel sistema WoRMS."@it ,
-                      "Unique and persistent code within WoRMS."@en ;
+                      "Unique and persistent code within WoRMS."@en ,
+                      "Unieke en persistente code in WoRMS."@nl ; 
          rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
          rdfs:label "aphia identifier"@en ,
-                    "identificativo aphia"@it .
+                    "identificativo aphia"@it ,
+                    "aphia identificatie"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/authorship
@@ -234,10 +266,12 @@ dct:coverage rdf:type owl:ObjectProperty .
             rdfs:domain :TaxonName ;
             rdfs:range rdf:PlainLiteral ;
             rdfs:comment "The authorship information, expressed as a string, for the scientific name, formatted according to the conventions of the applicable nomenclatural code."@en ,
-                         "Le informazioni sulla paternità del nome scientifico, espresse sottoforma di stringa, formattate secondo le convenzioni del codice nomenclaturale applicabile."@it ;
+                         "Le informazioni sulla paternità del nome scientifico, espresse sottoforma di stringa, formattate secondo le convenzioni del codice nomenclaturale applicabile."@it ,
+                         "De auteursinformatie, uitgedrukt als een string, voor de wetenschappelijke naam, geformatteerd volgens de conventies van de toepasselijke nomenclatuurcode."@nl ;
             rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
             rdfs:label "authorship"@en ,
-                       "paternità"@it .
+                       "paternità"@it ,
+                       "auteurschap"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/fullScientificName
@@ -246,10 +280,12 @@ dct:coverage rdf:type owl:ObjectProperty .
                     rdfs:domain :TaxonName ;
                     rdfs:range rdf:PlainLiteral ;
                     rdfs:comment "Il nome scientifico completo in latino che include anche la paternità, data dalla combinazione di autore e anno."@it ,
-                                 "The complete scientific name in Latin including the authorship information (author, year)."@en ;
+                                 "The complete scientific name in Latin including the authorship information (author, year)."@en ,
+                                 "De volledige wetenschappelijke naam in het Latijn, met informatie over het auteurschap (auteur, jaar)."@nl ;
                     rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
                     rdfs:label "full scientific name (with author)"@en ,
-                               "nome scientifico completo (con autore)"@it .
+                               "nome scientifico completo (con autore)"@it ,
+                               "volledige wetenschappelijke naam (met auteur)"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/scientificName
@@ -258,10 +294,12 @@ dct:coverage rdf:type owl:ObjectProperty .
                 rdfs:domain :TaxonName ;
                 rdfs:range rdf:PlainLiteral ;
                 rdfs:comment "Il nome scientifico in latino che non include le informazioni sulla paternità (autore, anno)"@it ,
-                             "The scientific name in Latin that does not include information on the authorship (author, year)."@en ;
+                             "The scientific name in Latin that does not include information on the authorship (author, year)."@en ,
+                             "De wetenschappelijke naam in het Latijn zonder informatie over het auteurschap (auteur, jaar)"@nl ;
                 rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
                 rdfs:label "nome scientifico (senza autore)"@it ,
-                           "scientific name (without author)"@en .
+                           "scientific name (without author)"@en ,
+                           "wetenschappelijke naam (zonder auteur)"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/vernacularName
@@ -270,10 +308,12 @@ dct:coverage rdf:type owl:ObjectProperty .
                 rdfs:domain :VernacularName ;
                 rdfs:range rdf:PlainLiteral ;
                 rdfs:comment "Il nome comune espresso nelle varie lingue"@it ,
-                             "The common name expressed in various languages."@en ;
+                             "The common name expressed in various languages."@en ,
+                             "De inheemse/inlandse naam in verschillende talen."@nl ;
                 rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
                 rdfs:label "nome comune"@it ,
-                           "vernacular name"@en .
+                           "vernacular name"@en ,
+                           "vernaculaire naam"@nl .
 
 
 #################################################################
@@ -302,10 +342,12 @@ dct:Location rdf:type owl:Class .
 #                               owl:onDataRange xsd:gYear
 #                             ] ;
 #             rdfs:comment "La combinazione dell'autore e dell'anno associati al nome del taxon."@it ,
-#                          "The combination of the author and year associated with a taxon name."@en ;
+#                          "The combination of the author and year associated with a taxon name."@en ,
+#                          "De combinatie van de auteur en het jaartal gekoppeld aan een taxonnaam."@nl ;
 #             rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
 #             rdfs:label "Authorship"@en ,
-#                        "Paternità"@it .
+#                        "Paternità"@it ,
+#                        "Auteurschap"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/Rank
@@ -313,10 +355,12 @@ dct:Location rdf:type owl:Class .
       rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ,
                       <http://www.w3.org/2004/02/skos/core#Concept> ;
       rdfs:comment "Il livello specifico di una classificazione tassonomica che un nome occupa. Esempi sono: specie, famiglia, genere, sottospecie, ecc. Gli individui di questa classe possono essere concetti di un vocabolario controllato relativo."@it ,
-                   "The particular level in a taxonomic classification that a name occupies. Examples are: species, family, genus, subspecies, etc. The indivuals of this class can be concepts of a controlled vocabulary."@en ;
+                   "The particular level in a taxonomic classification that a name occupies. Examples are: species, family, genus, subspecies, etc. The indivuals of this class can be concepts of a controlled vocabulary."@en ,
+                   "Het specifieke niveau in een taxonomische classificatie die een naam inneemt. Voorbeelden zijn: soort, familie, geslacht, ondersoort, enz. De individuen van deze klasse kunnen concepten van een gecontroleerde woordenlijst zijn."@nl ;
       rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
       rdfs:label "Rango"@it ,
-                 "Rank"@en .
+                 "Rank"@en ,
+                 "Rang"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/Status
@@ -324,10 +368,12 @@ dct:Location rdf:type owl:Class .
         rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ,
                         <http://www.w3.org/2004/02/skos/core#Concept> ;
         rdfs:comment "Lo stato dell'uso del nome del taxon (di solito un parere tassonomico)."@it ,
-                     "The status of the use of the taxon name (usually a taxonomic opinion)."@en ;
+                     "The status of the use of the taxon name (usually a taxonomic opinion)."@en ,
+                     "De status van het gebruik van de taxonnaam (meestal een taxonomisch advies)"@nl ;
         rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
         rdfs:label "Stato"@it ,
-                   "Status"@en .
+                   "Status"@en ,
+                   "Status"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/Taxon
@@ -357,10 +403,12 @@ dct:Location rdf:type owl:Class .
                        ] ;
        owl:disjointWith <https://aphia.org/ns/top-level/Name> ;
        rdfs:comment "A group of organisms asserted by taxonomists to form a natural cohesive biological unit."@en ,
-                    "Un gruppo di organismi che, secondo i tassonomisti, formano un'unità biologica naturale coesa."@it ;
+                    "Un gruppo di organismi che, secondo i tassonomisti, formano un'unità biologica naturale coesa."@it ,
+                    "Een groep organismen die, volgens taxonomen, een natuurlijke samenhangende biologische eenheid vormen."@nl ;
        rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
        rdfs:label "Taxon"@en ,
-                  "Taxon"@it ;
+                  "Taxon"@it ,
+                  "Taxon"@nl ;
        <http://www.w3.org/ns/prov#wasDerivedFrom> <http://rs.tdwg.org/dwc/terms/Taxon> ,
                                                   <https://schema.org/Taxon> .
 
@@ -421,10 +469,12 @@ dct:Location rdf:type owl:Class .
                            ] ;
            owl:disjointWith :VernacularName ;
            rdfs:comment "A name of a particular taxon of any rank (e.g., a genus, a species, a family, etc.). It may be accepted/valid or not. The taxon author is frequently included when indicating a taxon name, as it can help distinguish between different uses of the same name (such as homonyms)."@en ,
-                        "Nome di un particolare taxon di qualsiasi rango (ad esempio, un genere, una specie, una famiglia, ecc.). Può essere accettato/valido o meno. L'autore del taxon è spesso incluso quando si indica un nome di taxon, in quanto può aiutare a distinguere tra diversi usi dello stesso nome (come gli omonimi)."@it ;
+                        "Nome di un particolare taxon di qualsiasi rango (ad esempio, un genere, una specie, una famiglia, ecc.). Può essere accettato/valido o meno. L'autore del taxon è spesso incluso quando si indica un nome di taxon, in quanto può aiutare a distinguere tra diversi usi dello stesso nome (come gli omonimi)."@it ,
+                        "Een naam van een bepaald taxon van om het even welke rang (bv. een genus, een soort, een familie, enz.). Deze kan geaccepteerd/geldig zijn of niet. De taxonauteur wordt vaak vermeld bij het aangeven van een taxonnaam, omdat het kan helpen onderscheid te maken tussen verschillende toepassingen van dezelfde naam (zoals homoniemen)."@nl ;
            rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
            rdfs:label "Nome del Taxon"@it ,
-                      "Taxon Name"@en ;
+                      "Taxon Name"@en ,
+                      "Taxon Naam"@nl ;
            <http://www.w3.org/ns/prov#wasDerivedFrom> <http://openbiodiv.net/LatinName> ,
                                                       <http://rs.tdwg.org/ontology/voc/TaxonName#TaxonName> ,
                                                       <https://discovery.biothings.io/view/bioschemas/TaxonName> .
@@ -435,10 +485,12 @@ dct:Location rdf:type owl:Class .
                   rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ,
                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
                   rdfs:comment "An explanation regarding why a given taxon name is judged to be invalid or not accepted. The individuals of this class can be concepts of a specific controlled vocabulary with values like: synonym, misapplied, original combination, new combination, etc."@en ,
-                               "Motivazione per cui un nome di un determinato taxon viene giudicato non accettato o non valido. Gli individui di questa classe possono essere concetti di uno specifico vocabolario controllato con valori come: sinonimo, errata applicazione, combinazione originale, nuova combinazione, ecc."@it ;
+                               "Motivazione per cui un nome di un determinato taxon viene giudicato non accettato o non valido. Gli individui di questa classe possono essere concetti di uno specifico vocabolario controllato con valori come: sinonimo, errata applicazione, combinazione originale, nuova combinazione, ecc."@it ,
+                               "Een motivatie/uitleg waarom een bepaalde taxonnaam ongeldig of niet geaccepteerd wordt geacht. De individuen van deze klasse kunnen concepten zijn van een specifieke gecontroleerde vocabularium met waarden als: synoniem, verkeerd toegepast, originele combinatie, nieuwe combinatie, enz."@nl ;
                   rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
                   rdfs:label "Motivo per non Accettato"@it ,
-                             "Unaccepted Reason"@en .
+                             "Unaccepted Reason"@en ,
+                             "Niet-geaccepteerd Reden"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/VernacularName
@@ -461,10 +513,12 @@ dct:Location rdf:type owl:Class .
                                   owl:allValuesFrom rdf:PlainLiteral
                                 ] ;
                 rdfs:comment "A name other than a taxon name (scientific name) that is commonly used to refer to a species or other taxon. Examples are salmon, rainbow trout, acciuga etc. The language (e.g., English, Italian, etc.) is usually indicated for each vernacular name."@en ,
-                             "Un nome diverso dal nome del taxon (nome scientifico) che viene comunemente usato per indicare una specie o un altro taxon. Esempi sono il salmone, la trota iridea, l'acciuga ecc. Per ogni nome comune viene solitamente indicata la lingua (ad esempio, inglese, italiano, ecc.)."@it ;
+                             "Un nome diverso dal nome del taxon (nome scientifico) che viene comunemente usato per indicare una specie o un altro taxon. Esempi sono il salmone, la trota iridea, l'acciuga ecc. Per ogni nome comune viene solitamente indicata la lingua (ad esempio, inglese, italiano, ecc.)."@it ,
+                             "Een naam, anders dan een taxonnaam (wetenschappelijke naam), die algemeen gebruikt wordt om te verwijzen naar een soort of ander taxon. Voorbeelden zijn zalm, regenboogforel, acciuga enz. De taal (bijv. Engels, Italiaans, enz.) wordt meestal aangegeven voor elke vernaculaire naam."@nl ;
                 rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
                 rdfs:label "Nome Comune"@it ,
-                           "Vernacular Name"@en .
+                           "Vernacular Name"@en ,
+                           "Vernaculaire naam"@nl .
 
 
 ###  https://aphia.org/ns/top-level/Identifier
