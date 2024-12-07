@@ -103,6 +103,8 @@ trait:presence_of_buoyance_structures
     skos:inScheme trait:conceptScheme ;
     skos:prefLabel "Presence of buoyance structures"@en ;
     skos:definition "Individuals exhibit gas-filled structures that favourise their floating. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
+
+    skos:exactMatch ... ; 
 .
 
 trait:species_cultivated_or_sold_in_aquaria_trade
