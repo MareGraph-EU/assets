@@ -18,15 +18,19 @@
                                           <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab> ;
                               dct:issued "2023-08-30"^^xsd:date ;
                               dct:language <http://publications.europa.eu/resource/authority/language/ENG> ,
-                                           <http://publications.europa.eu/resource/authority/language/ITA> ;
+                                           <http://publications.europa.eu/resource/authority/language/ITA> ,
+                                           <http://publications.europa.eu/resource/authority/language/NLD> ;
                               dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
                               dct:modified "2024-02-10"^^xsd:date ;
                               rdfs:comment "Questa è l'ontologia degli oggetti multimediali, associati alle specie, della rete di ontologie APHIA. Essa importa l'ontologia di primo livello top-level, riutilizza direttamente diversi elementi Dublin Core ed è allineata a Schema.org."@it ,
-                                           "This is the multimedia object for the species ontology of the APHIA network of ontologies. It imports the top-level ontology of APHIA, it directly reuses several Dublin Core elements and is aligned to Schema.org."@en ;
+                                           "This is the multimedia object for the species ontology of the APHIA network of ontologies. It imports the top-level ontology of APHIA, it directly reuses several Dublin Core elements and is aligned to Schema.org."@en ,
+                                           "Dit is het mediaobject voor de soorten ontologie van het APHIA-netwerk van ontologieën. Het importeert de top-level ontologie van APHIA, hergebruikt direct verschillende Dublin Core elementen en is afgestemd op Schema.org."@nl ;
                               rdfs:label "APHIA - Media objects ontology"@en ,
-                                         "APHIA - Ontologia degli oggetti multimediali"@it ;
+                                         "APHIA - Ontologia degli oggetti multimediali"@it ,
+                                         "APHIA - Media objecten ontologie"@nl ;
                               owl:versionInfo "Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; revised some modelling elements: eliminated MediaObjectDistribution."@en ,
-                                              "Seconda versione 0.2 - cambiati gli URIs da w3id.org/ a aphia.org/; revisionati alcuni elementi di modellazione, in particolare eliminata la classe MediaObjectDistribution."@it .
+                                              "Seconda versione 0.2 - cambiati gli URIs da w3id.org/ a aphia.org/; revisionati alcuni elementi di modellazione, in particolare eliminata la classe MediaObjectDistribution."@it ,
+                                              "Tweede versie 0.2 - URI's gewijzigd van w3id.org/ naar aphia.org/; herziening van enkele modelleerelementen: MediaObjectDistribution verwijderd."@nl .
 
 #################################################################
 #    Annotation properties
@@ -107,10 +111,12 @@ dct:subject rdf:type owl:ObjectProperty ;
              rdfs:domain <https://aphia.org/ns/taxon-name/Taxon> ;
              rdfs:range :MediaObject ;
              rdfs:comment "Property used to link the taxon to its media objects"@en ,
-                          "Proprietà utilizzata per collegare il taxon ai suoi oggetti multimediali."@it ;
+                          "Proprietà utilizzata per collegare il taxon ai suoi oggetti multimediali."@it ,
+                          "Eigenschap gebruikt om het taxon aan zijn mediaobjecten te koppelen."@nl ;
              rdfs:isDefinedBy <https://aphia.org/ns/media> ;
              rdfs:label "is subject of"@en ,
-                        "è soggetto di"@it .
+                        "è soggetto di"@it ,
+                        "is onderwerp van"@nl .
 
 
 #################################################################
@@ -155,10 +161,12 @@ foaf:Organization rdf:type owl:Class .
                              <https://schema.org/ImageObject> ;
              owl:disjointWith :VideoObject ;
              rdfs:comment "Questa classe rappresenta uno specifico tipo di oggetto multimediale, ossia l'immagine (e.g., una foto, un disegno)."@it ,
-                          "This class represents a specific type of media object, namely an image (e.g. a photo, a drawing)."@en ;
+                          "This class represents a specific type of media object, namely an image (e.g. a photo, a drawing)."@en ,
+                          "Deze klasse vertegenwoordigt een specifiek type mediaobject, namelijk een afbeelding (bv. een foto, een tekening)."@nl ;
              rdfs:isDefinedBy <https://aphia.org/ns/media> ;
              rdfs:label "Image Object"@it ,
-                        "Oggetto Multimediale Immagine"@en .
+                        "Oggetto Multimediale Immagine"@en ,
+                        "Afbeelding object"@nl .
 
 
 ###  https://aphia.org/ns/media/MediaObject
@@ -191,10 +199,12 @@ foaf:Organization rdf:type owl:Class .
                                owl:allValuesFrom rdfs:Literal
                              ] ;
              rdfs:comment "La classe degli oggetti multimediali (e.g., foto, disegni, video, ecc.) da associare alle specie."@it ,
-                          "The class of the media (e.g., photos, drawings, videos, etc.) to be associated with the species."@en ;
+                          "The class of the media (e.g., photos, drawings, videos, etc.) to be associated with the species."@en ,
+                          "De klasse van mediaobjecten (bv. foto's, tekeningen, video's, enz.) die geassocieerd worden met de soort."@nl ;
              rdfs:isDefinedBy <https://aphia.org/ns/media> ;
              rdfs:label "Media Object"@en ,
-                        "Oggetto Multimediale"@it .
+                        "Oggetto Multimediale"@it ,
+                        "Media Object"@nl .
 
 
 ###  https://aphia.org/ns/media/VideoObject
@@ -202,10 +212,12 @@ foaf:Organization rdf:type owl:Class .
              rdfs:subClassOf :MediaObject ,
                              <https://schema.org/VideoObject> ;
              rdfs:comment "Questa classe rappresenta uno specifico tipo di oggetto multimediale, ossia il video."@it ,
-                          "This class represents a specific type of media object, namely a video."@en ;
+                          "This class represents a specific type of media object, namely a video."@en ,
+                          "Deze klasse vertegenwoordigt een specifiek type mediaobject, namelijk een video."@nl ;
              rdfs:isDefinedBy <https://aphia.org/ns/media> ;
              rdfs:label "Oggetto Multimediale Video"@it ,
-                        "Video Object"@en .
+                        "Video Object"@en ,
+                        "Video Object"@nl .
 
 
 ###  https://aphia.org/ns/taxon-name/Taxon

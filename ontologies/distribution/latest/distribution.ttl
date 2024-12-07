@@ -17,20 +17,26 @@
                                                  <https://ror.org/0496vr396> ,
                                                  <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab> ;
                                      dct:description "Questa è l'ontologia della distribuzione (delle specie) della rete di ontologie APHIA. Importa l'ontologia di primo livello top-level e definisce la distribuzione documentata delle specie come riportata nel database WoRMS. La distribuzione è descritta in base a diverse tipologie di informazioni: la posizione geografica, utilizzando il nome del luogo o la latitudine e la longitudine quando è possibile identificare singoli punti, la fonte da cui è documentata la distribuzione, l'origine della specie, l'invasività della specie, la presenza. È inoltre possibile indicare se la distribuzione è segnalata come 'località tipo' della specie. L'ontologia usa l'ontologia delle regioni marine per rappresentare le posizioni geografiche."@it ,
-                                                     "This is the (species) distribution ontology of the APHIA network of ontologies. It imports the top-level ontology of the APHIA network and it defines the documented distribution of the species as defined in the WoRMS database. The distribution is described according to various information: the geographical location, using the place name or latitude and longitude when single points can be identified, the source from which the distribution is documented, the origin of the species, the invasiveness of the species, the occurrence. It is also possible to indicate whether the distribution is marked as a type locality of the species. The ontology uses the Marine Region ontology for representing geographical locations"@en ;
+                                                     "This is the (species) distribution ontology of the APHIA network of ontologies. It imports the top-level ontology of the APHIA network and it defines the documented distribution of the species as defined in the WoRMS database. The distribution is described according to various information: the geographical location, using the place name or latitude and longitude when single points can be identified, the source from which the distribution is documented, the origin of the species, the invasiveness of the species, the occurrence. It is also possible to indicate whether the distribution is marked as a type locality of the species. The ontology uses the Marine Region ontology for representing geographical locations"@en ,
+                                                     "Dit is de (soorten) verspreidingsontologie van het APHIA-netwerk van ontologieën. De ontologie importeert de overkoepelende ontologie van het APHIA-netwerk en definieert de gedocumenteerde verspreiding van de soorten zoals gedefinieerd in de WoRMS-database. De verspreiding wordt beschreven aan de hand van verschillende informatie: de geografische locatie, met behulp van de plaatsnaam of de lengte- en breedtegraad wanneer afzonderlijke punten kunnen worden geïdentificeerd, de literaire bron van waaruit de verspreiding is gedocumenteerd, de herkomst van de soort, de invasiviteit van de soort, het voorkomen. Het is ook mogelijk om aan te geven of de verspreiding is gemarkeerd als een type localiteit van de soort. De ontologie maakt gebruik van de Marine Regions ontologie om geografische locaties weer te geven."@nl ;
                                      dct:issued "2023-08-30"^^xsd:date ;
                                      dct:language <http://publications.europa.eu/resource/authority/language/ENG> ,
-                                                  <http://publications.europa.eu/resource/authority/language/ITA> ;
+                                                  <http://publications.europa.eu/resource/authority/language/ITA> ,
+                                                  <http://publications.europa.eu/resource/authority/language/NLD> ;
                                      dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
                                      dct:modified "2024-02-10"^^xsd:date ;
                                      dct:title "APHIA - (Species) Distribution ontology"@en ,
-                                               "APHIA - Ontologia sulla Distribuzione delle Specie"@it ;
+                                               "APHIA - Ontologia sulla Distribuzione delle Specie"@it ,
+                                               "APHIA - (Soorten) Verspreidingsontologie"@nl ;
                                      rdfs:comment "Questa è l'ontologia della distribuzione (delle specie) della rete di ontologie APHIA. Importa l'ontologia di primo livello top-level e definisce la distribuzione documentata delle specie come riportata nel database WoRMS. La distribuzione è descritta in base a diverse tipologie di informazioni: la posizione geografica, utilizzando il nome del luogo o la latitudine e la longitudine quando è possibile identificare singoli punti, la fonte da cui è documentata la distribuzione, l'origine della specie, l'invasività della specie, la presenza. È inoltre possibile indicare se la distribuzione è segnalata come 'località tipo' della specie. L'ontologia usa l'ontologia delle regioni marine per rappresentare le posizioni geografiche."@it ,
-                                                  "This is the (species) distribution ontology of the APHIA network of ontologies. It imports the top-level ontology of the APHIA network and it defines the documented distribution of the species as defined in the WoRMS database. The distribution is described according to various information: the geographical location, using the place name or latitude and longitude when single points can be identified, the source from which the distribution is documented, the origin of the species, the invasiveness of the species, the occurrence. It is also possible to indicate whether the distribution is marked as a type locality of the species. The ontology uses the Marine Region ontology for representing geographical locations"@en ;
+                                                  "This is the (species) distribution ontology of the APHIA network of ontologies. It imports the top-level ontology of the APHIA network and it defines the documented distribution of the species as defined in the WoRMS database. The distribution is described according to various information: the geographical location, using the place name or latitude and longitude when single points can be identified, the source from which the distribution is documented, the origin of the species, the invasiveness of the species, the occurrence. It is also possible to indicate whether the distribution is marked as a type locality of the species. The ontology uses the Marine Region ontology for representing geographical locations"@en ,
+                                                  "Dit is de (soorten) verspreidingsontologie van het APHIA-netwerk van ontologieën. De ontologie importeert de overkoepelende ontologie van het APHIA-netwerk en definieert de gedocumenteerde verspreiding van de soorten zoals gedefinieerd in de WoRMS-database. De verspreiding wordt beschreven aan de hand van verschillende informatie: de geografische locatie, met behulp van de plaatsnaam of de lengte- en breedtegraad wanneer afzonderlijke punten kunnen worden geïdentificeerd, de literaire bron van waaruit de verspreiding is gedocumenteerd, de herkomst van de soort, de invasiviteit van de soort, het voorkomen. Het is ook mogelijk om aan te geven of de verspreiding is gemarkeerd als een type localiteit van de soort. De ontologie maakt gebruik van de Marine Regions ontologie om geografische locaties weer te geven."@nl ;
                                      rdfs:label "APHIA - (Species) Distribution ontology"@en ,
-                                                "APHIA - Ontologia sulla Distribuzione delle Specie"@it ;
+                                                "APHIA - Ontologia sulla Distribuzione delle Specie"@it ,
+                                                "APHIA - (Soorten) Verspreidingsontologie"@nl ;
                                      owl:versionInfo "Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; introduced some alignments to some properties of Darwin Core."@en ,
-                                                     "Seconda versione 0.2 - cambiati tutti gli URI da w3id.org/ a aphia.org/; inseriti alcuni allineamenti per alcune proprietà di Darwin Core."@it .
+                                                     "Seconda versione 0.2 - cambiati tutti gli URI da w3id.org/ a aphia.org/; inseriti alcuni allineamenti per alcune proprietà di Darwin Core."@it ,
+                                                     "Tweede versie 0.2 - veranderde alle URI's van w3id.org/ naar aphia.org/; voegde enkele uitlijningen toe voor sommige Darwin Core-eigenschappen."@nl .
 
 #################################################################
 #    Annotation properties
@@ -115,10 +121,12 @@ dct:source rdf:type owl:ObjectProperty .
          rdfs:domain :Distribution ;
          rdfs:range <http://marineregions.org/ns/ontology#MRGeoObject> ;
          rdfs:comment "Property used to represent the geographical unit of the distribution of the species. The geographical units are specified using the Marine Region gazetteer."@en ,
-                      "Proprietà utilizzata per rappresentare l'unità geografica di distribuzione della specie. Le unità geografiche sono specificate utilizzando il glossario delle regioni marine."@it ;
+                      "Proprietà utilizzata per rappresentare l'unità geografica di distribuzione della specie. Le unità geografiche sono specificate utilizzando il glossario delle regioni marine."@it ,
+                      "Eigenschap gebruikt om het geografische gebied van de verspreiding van de soort weer te geven. Geografische gebieden worden gespecificeerd aan de hand van de Marine Regions gazetteer."@nl ;
          rdfs:isDefinedBy <https://aphia.org/ns/distribution> ;
          rdfs:label "ha area"@it ,
-                    "has area"@en .
+                    "has area"@en ,
+                    "heeft gebied"@nl .
 
 
 ###  https://aphia.org/ns/distribution/hasDistribution
@@ -128,10 +136,12 @@ dct:source rdf:type owl:ObjectProperty .
                  rdfs:domain <https://aphia.org/ns/taxon-name/Taxon> ;
                  rdfs:range :Distribution ;
                  rdfs:comment "Property used to specify the distribution for a taxon."@en ,
-                              "Proprietà utilizzata per specificare la distribuzione di un taxon."@it ;
+                              "Proprietà utilizzata per specificare la distribuzione di un taxon."@it ,
+                              "Eigenschap gebruikt om de verspreiding voor een taxon te specificeren."@nl ;
                  rdfs:isDefinedBy <https://aphia.org/ns/distribution> ;
                  rdfs:label "ha distribuzione"@it ,
-                            "has distribution"@en .
+                            "has distribution"@en ,
+                            "heeft verspreiding"@nl .
 
 
 ###  https://aphia.org/ns/distribution/hasInvasiveness
@@ -140,10 +150,12 @@ dct:source rdf:type owl:ObjectProperty .
                  rdfs:domain :Distribution ;
                  rdfs:range :Invasiveness ;
                  rdfs:comment "Property used to represent the invasiveness of the species in its documented distribution."@en ,
-                              "Proprietà utilizzata per rappresentare la proponsione all'invasività della specie nella sua distribuzione documentata."@it ;
+                              "Proprietà utilizzata per rappresentare la proponsione all'invasività della specie nella sua distribuzione documentata."@it ,
+                              "Eigenschap gebruikt om de invasiviteit van de soort in zijn gedocumenteerde verspreiding weer te geven."@nl ;
                  rdfs:isDefinedBy <https://aphia.org/ns/distribution> ;
                  rdfs:label "ha invasività"@it ,
-                            "has invasiveness"@en .
+                            "has invasiveness"@en ,
+                            "heeft invasiviteit"@nl .
 
 
 ###  https://aphia.org/ns/distribution/hasOccurrence
@@ -153,10 +165,12 @@ dct:source rdf:type owl:ObjectProperty .
                rdfs:domain :Distribution ;
                rdfs:range :Occurrence ;
                rdfs:comment "Property used to represent the occurrence of the species in its documented distribution."@en ,
-                            "Proprietà utilizzata per rappresentare la presenza della specie nella sua distribuzione documentata."@it ;
+                            "Proprietà utilizzata per rappresentare la presenza della specie nella sua distribuzione documentata."@it ,
+                            "Eigenschap gebruikt om het voorkomen van de soort in zijn gedocumenteerde verspreiding weer te geven."@nl ;
                rdfs:isDefinedBy <https://aphia.org/ns/distribution> ;
                rdfs:label "ha presenza"@it ,
-                          "has occurrence"@en .
+                          "has occurrence"@en ,
+                          "heeft voorkomen"@nl .
 
 
 ###  https://aphia.org/ns/distribution/hasOrigin
@@ -165,10 +179,12 @@ dct:source rdf:type owl:ObjectProperty .
            rdfs:domain :Distribution ;
            rdfs:range :Origin ;
            rdfs:comment "Property used to represent the origin of the species in its documented distribution."@en ,
-                        "Proprietà utilizzata per rappresentare l'origine della specie nella sua distribuzione documentata."@it ;
+                        "Proprietà utilizzata per rappresentare l'origine della specie nella sua distribuzione documentata."@it ,
+                        "Eigenschap gebruikt om de oorsprong van de soort in zijn gedocumenteerde verspreiding weer te geven."@nl ;
            rdfs:isDefinedBy <https://aphia.org/ns/distribution> ;
            rdfs:label "ha origine"@it ,
-                      "has origin"@en .
+                      "has origin"@en ,
+                      "heeft oorsprong"@nl .
 
 
 ###  https://aphia.org/ns/distribution/isDistributionOf
@@ -177,10 +193,12 @@ dct:source rdf:type owl:ObjectProperty .
                   rdfs:domain :Distribution ;
                   rdfs:range <https://aphia.org/ns/taxon-name/Taxon> ;
                   rdfs:comment "Inverse property of 'has distribution' used to obtain information of the taxon from its distributions"@en ,
-                               "Proprietà inversa di 'ha distribuzione' usata per ottenere informazioni sul taxon dalle sue distribuzioni"@it ;
+                               "Proprietà inversa di 'ha distribuzione' usata per ottenere informazioni sul taxon dalle sue distribuzioni"@it ,
+                               "Inverse eigenschap van 'heeft verspreiding' gebruikt om informatie van het taxon te verkrijgen uit zijn verspreidingen"@nl ;
                   rdfs:isDefinedBy <https://aphia.org/ns/distribution> ;
                   rdfs:label "is distribution of"@en ,
-                             "è distribuzione di"@it .
+                             "è distribuzione di"@it ,
+                             "is de verspreiding van"@nl .
 
 
 #################################################################
@@ -197,10 +215,12 @@ skos:note rdf:type owl:DatatypeProperty .
                 rdfs:domain :Distribution ;
                 rdfs:range xsd:boolean ;
                 rdfs:comment "Property used to mark mark a distribution as the type locality of the species."@en ,
-                             "Proprietà utilizzata per contrassegnare una distribuzione come 'località tipo' della specie."@it ;
+                             "Proprietà utilizzata per contrassegnare una distribuzione come 'località tipo' della specie."@it ,
+                             "Eigenschap gebruikt om een verspreiding aan te duiden als de type localiteit van de soort."@nl ;
                 rdfs:isDefinedBy <https://aphia.org/ns/distribution> ;
                 rdfs:label "is type locality"@en ,
-                           "è tipo località"@it .
+                           "è tipo località"@it ,
+                           "is type localiteit"@nl .
 
 
 #################################################################
@@ -276,10 +296,12 @@ foaf:Organization rdf:type owl:Class .
                                 owl:onDataRange xsd:boolean
                               ] ;
               rdfs:comment "Distribuzione geografica di presenza di specie marine e vegetali"@it ,
-                           "Geographical distribution of occurrence of marine and plant species"@en ;
+                           "Geographical distribution of occurrence of marine and plant species"@en ,
+                           "Geografische verspreiding van mariene en plantensoorten"@nl ;
               rdfs:isDefinedBy <https://aphia.org/ns/distribution> ;
               rdfs:label "Distribution"@en ,
-                         "Distribuzione"@it ;
+                         "Distribuzione"@it ,
+                         "Verspreiding"@nl ;
               prov:wasDerivedFrom <http://inspire.ec.europa.eu/theme/sd> .
 
 
@@ -287,10 +309,12 @@ foaf:Organization rdf:type owl:Class .
 :Invasiveness rdf:type owl:Class ;
               rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ;
               rdfs:comment "Questa classe rappresenta la propensione di una specie introdotta a invadere un ecosistema ricevente. Gli individui di questa classe sono rappresentati dai concetti del relativo vocabolario controllato che sono: Invasiva, Invasività non specificata, Invasività incerta, Gestione registrata, Non invasiva, Preoccupante."@it ,
-                           "This class represents the propensity of an introduced species to invade a recipient ecosystem. The individuals of this class are represented by the concepts of the related controlled vocabulary that are: Invasive, Invasiveness Not Specified, Invasiveness Uncertain, Management recorded, Not invasive, Of concern."@en ;
+                           "This class represents the propensity of an introduced species to invade a recipient ecosystem. The individuals of this class are represented by the concepts of the related controlled vocabulary that are: Invasive, Invasiveness Not Specified, Invasiveness Uncertain, Management recorded, Not invasive, Of concern."@en ,
+                           "Deze klasse vertegenwoordigt de neiging van een geïntroduceerde soort om een ontvangend ecosysteem binnen te dringen. De individuen van deze klasse worden vertegenwoordigd door middel van begrippen uit verwante gecontroleerde vocabularia, met name: Invasief, Invasiviteit niet gespecificeerd, Invasiviteit onzeker, Beheer vastgelegd, Niet invasief, Van belang."@nl ;
               rdfs:isDefinedBy <https://aphia.org/ns/distribution> ;
               rdfs:label "Invasiveness"@en ,
-                         "Invasività"@it ;
+                         "Invasività"@it ,
+                         "Invasiviteit"@nl ;
               prov:wasDerivedFrom skos:Concept .
 
 
@@ -298,10 +322,12 @@ foaf:Organization rdf:type owl:Class .
 :Occurrence rdf:type owl:Class ;
             rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ;
             rdfs:comment "Questa classe rappresenta la presenza di specie in località di interesse. Gli individui di questa classe sono rappresentati dai concetti del relativo vocabolario controllato."@it ,
-                         "This class represents the presence of species at locations of interest. The individuals of this class are represented by the concepts of the related controlled vocabulary."@en ;
+                         "This class represents the presence of species at locations of interest. The individuals of this class are represented by the concepts of the related controlled vocabulary."@en ,
+                         "Deze klasse vertegenwoordigt de aanwezigheid van soorten op interessante locaties. De individuen van deze klasse worden vertegenwoordigd door middel van de concepten uit verwante gecontroleerde vocabularia."@nl ;
             rdfs:isDefinedBy <https://aphia.org/ns/distribution> ;
             rdfs:label "Occorrenza"@it ,
-                       "Occurrence"@en ;
+                       "Occurrence"@en ,
+                       "Voorkomen"@nl ;
             prov:wasDerivedFrom skos:Concept .
 
 
@@ -309,10 +335,12 @@ foaf:Organization rdf:type owl:Class .
 :Origin rdf:type owl:Class ;
         rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ;
         rdfs:comment "L'origine della specie introdotta. Gli individui di questa classe sono rappresentati dai concetti del relativo vocabolario controllato che sono: Aliena, Autoctona, Autoctona - Endemica, Autoctona - Non endemica, Origine incerta, Origine sconosciuta."@it ,
-                     "The origin of the introduced species. The individuals of this class are represented by the concepts of the related controlled vocabulary that are: Alien, Native, Native – Endemic, Native - Non-endemic, Origin uncertain, Origin unknown."@en ;
+                     "The origin of the introduced species. The individuals of this class are represented by the concepts of the related controlled vocabulary that are: Alien, Native, Native – Endemic, Native - Non-endemic, Origin uncertain, Origin unknown."@en ,
+                     "Deze klasse vertegenwoordigt de oorsprong van de geïntroduceerde soort. De individuen van deze klasse worden vertegenwoordigd door middel van de concepten uit verwante gecontroleerde vocabularia, met name: Alien, Native, Native - Endemic, Native - Non-endemic, Origin uncertain, Origin unknown."@nl ;
         rdfs:isDefinedBy <https://aphia.org/ns/distribution> ;
         rdfs:label "Origin"@en ,
-                   "Origine"@it ;
+                   "Origine"@it ,
+                   "Oorsprong"@nl ;
         prov:wasDerivedFrom skos:Concept .
 
 
