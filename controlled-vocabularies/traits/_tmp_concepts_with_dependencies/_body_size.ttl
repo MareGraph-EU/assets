@@ -15,12 +15,14 @@ trait:conceptScheme
     rdfs:label "Aphia attributes and traits"@en ;
     
     skos:member trait:body_size ;
+    
+    skos:exactMatch ... ; 
 .
 
 trait:body_size
     a skos:Concept, aphia-trait:Trait ;
     dct:description "A measurement of the size of the organism. The measurement used to express body size varies within taxonomic groups. For example, some disciplines measure diameter, others carapace length, total body length or wing span. Also, body size can vary with gender and life stage."@en ;
 
-    #made up of combination of body_size_unit, body_size_type, body_size_dimension, 
+    #made up of combination of unit, type, dimension, 
     # + also dependent on: lifestage, gender, locality, corresponding width and corresponding length... 
 .
