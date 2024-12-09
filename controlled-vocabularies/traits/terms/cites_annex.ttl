@@ -1,0 +1,47 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+
+trait:conceptScheme
+    a skos:ConceptScheme ;
+    rdfs:label "Listing Aphia attributes and traits"@en .
+
+<https://aphia.org/ns/vocab/attribute-trait/>
+    a skos:Collection ;
+    rdfs:label "Aphia attributes and traits"@en ;
+    
+    skos:member trait:cites_annex ;
+.
+
+
+trait:cites_annex
+    a skos:Collection ; 
+    dct:description "Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES). Consulted April 2015."@en ;
+
+    skos:member trait:cites_annex_I , trait:cites_annex_II , trait:cites_annex_III ;
+.
+
+trait:cites_annex_I
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "CITES annex I"@en ;
+    skos:definition "Species threatened with extinction. Trade in specimens of these species is permitted only in exceptional circumstances."@en ;
+.
+
+trait:cites_annex_II
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "CITES annex II"@en ;
+    skos:definition "Species not necessarily threatened with extinction, but in which trade must be controlled in order to avoid utilization incompatible with their survival."@en ;
+.
+
+trait:cites_annex_III
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "CITES annex III"@en ;
+    skos:definition "Species that are protected in at least one country, which has asked other CITES Parties for assistance in controlling the trade."@en ;
+.

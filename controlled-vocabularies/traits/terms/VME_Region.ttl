@@ -1,0 +1,165 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+
+trait:conceptscheme
+    a skos:Conceptscheme ;
+    rdfs:label "listing aphia attributes and traits"@en .
+
+<https://aphia.org/ns/vocab/attribute-trait/>
+    a skos:Collection ;
+    rdfs:label "aphia attributes and traits"@en ;
+    
+    skos:member trait:vme_region ;
+.
+
+trait:vme_region
+    a skos:Collection ; 
+    dct:description "..."@en ;
+
+    skos:member trait:no_regional_information_available , 
+                trait:fao_fishing_area_I ,
+                trait:fao_fishing_area_II ,
+                trait:fao_fishing_area_III ,
+                trait:fao_fishing_area_IV ,
+                trait:fao_fishing_area_V ,
+                trait:fao_fishing_area_VI ,
+                trait:fao_fishing_area_VII ,
+                trait:fao_fishing_area_VIII ,
+                trait:fao_fishing_area_IX ,
+                trait:fao_fishing_area_X ,
+                trait:fao_fishing_area_XI ,
+                trait:fao_fishing_area_XII ,
+                trait:fao_fishing_area_XIII ,
+                trait:fao_fishing_area_XIV ,
+                trait:fao_fishing_area_XV ,
+                trait:fao_fishing_area_XVI ,
+                trait:fao_fishing_area_XVII ,
+                trait:fao_fishing_area_XVIII ,
+                trait:fao_fishing_area_XIX ;
+. 
+
+trait:No_regional_information_available
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel ""@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_I
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area I"@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_II
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area II"@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_III
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area III"@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_IV
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area IV"@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_V
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area V"@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_VI
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area VI"@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_VII
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area VII"@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_VIII
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area VIII"@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_IX
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area IX"@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_X
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area X"@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_XI
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area XI"@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_XII
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area XII"@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_XIII
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area XIII"@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_XIV
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area XIV"@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_XV
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area XV"@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_XVI
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area XVI"@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_XVII
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area XVII"@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_XVIII
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area XVIII"@en ;
+    skos:definition "..."@en ;
+.
+trait:fao_fishing_area_XIX
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "fao fishing area XIX"@en ;
+    skos:definition "..."@en ;
+.

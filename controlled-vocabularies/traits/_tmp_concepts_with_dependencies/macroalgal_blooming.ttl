@@ -14,30 +14,8 @@ trait:conceptscheme
     a skos:Collection ;
     rdfs:label "aphia attributes and traits"@en ;
     
-    skos:member trait:brooding , trait:macroalgal_blooming ;
+    skos:member trait:macroalgal_blooming ;
 .
-
-trait:brooding
-    a skos:Collection ; 
-    dct:description "..."@en ;
-
-    skos:member trait:brooding_yes , trait:brooding_no ;
-. 
-
-trait:brooding_yes
-    a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
-    skos:prefLabel "Yes"@en ;
-    skos:definition "..."@en ;
-.
-
-trait:brooding_no
-    a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
-    skos:prefLabel "No"@en ;
-    skos:definition ""@en ;
-.
-
 
 trait:macroalgal_blooming
     a skos:Collection ; 

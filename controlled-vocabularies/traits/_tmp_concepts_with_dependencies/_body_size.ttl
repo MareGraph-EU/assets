@@ -1,0 +1,26 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+
+trait:conceptScheme
+    a skos:ConceptScheme ;
+    rdfs:label "Listing Aphia attributes and traits"@en .
+
+<https://aphia.org/ns/vocab/attribute-trait/>
+    a skos:Collection ;
+    rdfs:label "Aphia attributes and traits"@en ;
+    
+    skos:member trait:body_size ;
+.
+
+trait:body_size
+    a skos:Concept, aphia-trait:Trait ;
+    dct:description "A measurement of the size of the organism. The measurement used to express body size varies within taxonomic groups. For example, some disciplines measure diameter, others carapace length, total body length or wing span. Also, body size can vary with gender and life stage."@en ;
+
+    #made up of combination of body_size_unit, body_size_type, body_size_dimension, 
+    # + also dependent on: lifestage, gender, locality, corresponding width and corresponding length... 
+.

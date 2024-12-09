@@ -1,0 +1,86 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+
+trait:conceptScheme
+    a skos:ConceptScheme ;
+    rdfs:label "Listing Aphia attributes and traits"@en .
+
+<https://aphia.org/ns/vocab/attribute-trait/>
+    a skos:Collection ;
+    rdfs:label "Aphia attributes and traits"@en ;
+    
+    skos:member trait:societal_importance ;
+.
+
+trait:societal_importance
+    a skos:Collection ; 
+    dct:description "Collections of concepts representing species importance to society"@en ;
+
+    skos:member 
+                #trait:black_sea_proposed_indicators , 
+                #trait:helcom_core_biodiversity_indicators , 
+                #trait:helcom_red_list_category , 
+                #trait:Identifier ,  
+                #trait:mediterranean_proposed_indicators_adriatic_sea , 
+                #trait:mediterranean_proposed_indicators_aegean_levantine_sea , 
+                #trait:mediterranean_proposed_indicators_ionian_sea , 
+                #trait:mediterranean_proposed_indicators_mediterranean_sea , 
+                #trait:mediterranean_proposed_indicators_western_mediterranean , 
+                #trait:ospar_candidate_indicators_bay_of_biscay_and_the_iberian_coast , 
+                #trait:ospar_candidate_indicators_celtic_seas , 
+                #trait:ospar_candidate_indicators_greater_north_sea_including_outside_eu , 
+                #trait:ospar_candidate_indicators_north_sea , 
+                #trait:OSPAR common indicators , 
+                #trait:ospar_common_indicators_bay_of_biscay_and_iberian_coast , 
+                #trait:ospar_common_indicators_celtic_seas , 
+                #trait:ospar_common_indicators_greater_north_sea , 
+                #trait:ospar_common_indicators_greater_north_sea_including_outside_eu , 
+                #trait:ospar_region_where_species_is_under_threat_and_or_in_decline ; 
+.
+
+trait:ospar_region_where_species_is_under_threat_and_or_in_decline
+    a skos:Collection ; 
+    #dct:description ""@en ;
+
+    skos:member trait:ospar_region_I , trait:ospar_region_II , trait:ospar_region_III, trait:ospar_region_IV , trait:ospar_region_V ;
+.
+
+trait:ospar_region_I
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "OSPAR Region I (Arctic Waters)"@en ;
+    skos:definition "Region I is the most northerly OSPAR region, characterised by its harsh climate and ice coverage although the ecosystems of this region are still rich. In spite of its low population density, human activities such as fishing and offshore petroleum production remain significant. (https://www.ospar.org/convention/the-north-east-atlantic/i)"@en ;
+.
+
+trait:ospar_region_II
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "OSPAR Region II (Greater North Sea)"@en ;
+    skos:definition "The Greater North Sea is one of the busiest maritime areas. Offshore activities related to the exploitation of oil and gas reserves, and maritime traffic are very important. Two of the world's largest ports are situated on the North Sea coast, and the coastal zone is used intensively for recreation. (https://www.ospar.org/convention/the-north-east-atlantic/ii)"@en ;
+.
+
+trait:ospar_region_III
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "OSPAR Region III (Celtic Seas)"@en ;
+    skos:definition "The Celtic Seas region contains wide variations in coastal topography, from fjordic sea lochs, to sand dunes, bays, estuaries and numerous sandy beaches. The large range of habitats in the region supports a diverse fish fauna. Although traditional maritime activities, such as fishing, take place in the Celtic Seas, there is ongoing development of tourism. (https://www.ospar.org/convention/the-north-east-atlantic/iii)"@en ;
+.
+
+trait:ospar_region_IV
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "OSPAR Region IV (Bay of Biscay/Golfe de Gascogne & Iberian coasts)"@en ;
+    skos:definition "The bottom topography of Region IV and coastlines are highly diversified, including the continental shelf and slope and parts of the abyssal plain. Ecosystems in Region IV are very rich, support a rich fish fauna and have a particular importance for migratory birds. Main human activities in Region IV are fishing, maritime transport and tourism. (https://www.ospar.org/convention/the-north-east-atlantic/iv)"@en ;
+.
+
+trait:ospar_region_V
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme trait:conceptScheme ;
+    skos:prefLabel "OSPAR Region V (Wider Atlantic)"@en ;
+    skos:definition "Region V represents the deep waters of the North-East Atlantic extending across the abyssal plain and the Mid-Atlantic Ridge, and including many seamounts. There have been recent discoveries of a number of different fragile deep-sea habitats (such as hydrothermal vents, carbonate mounds, coral gardens and sponge communities). Human population in the region is restricted to the Azores Archipelago. The main human activities are fishing and maritime transport. (https://www.ospar.org/convention/the-north-east-atlantic/v)"@en ;
+.
