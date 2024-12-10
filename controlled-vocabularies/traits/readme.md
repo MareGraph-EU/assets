@@ -14,11 +14,18 @@ This repository provides the RDF representation (in Turtle syntax) of a controll
 
 ## Folder Structure  
 
-The traits in this repository are organized into two folders:  
-- **terms**: Contains traits that can be represented as simple, independent lists of concepts.  
-- **_tmp_concepts_with_dependencies**: Contains traits that have dependencies on other traits and require additional modeling efforts to represent their relationships accurately.  
+The traits in this repository are organized and described as follows:  
+
+- **`terms.ttl`**:  
+  This file describes the vocabulary which is defined as a `skos:Collection`, listing trait/attributes as `skos:members`.  
+
+- **`./terms/`**:  
+  Contains individual `.ttl` files describing those traits that can be represented as simple, independent lists of concepts.  
+
+- **`./_tmp_concepts_with_dependencies/`**:  
+  Contains `.ttl` files describing those traits that have dependencies on other traits. These traits require additional modeling to represent their interrelationships accurately.  
+
 
 ## Additional Work Required  
 
-The dependency visualization highlights that while some traits can be modeled as straightforward lists of concepts,  
-Other traits (listed in **./_tmp_concepts_with_dependencies**) necessitate more advanced modeling to account for their interdependencies. 
+The dependency visualization highlights that while some traits can be modeled as straightforward lists of concepts, other traits (listed in **./_tmp_concepts_with_dependencies**) require more advanced modeling to account for their interdependencies. 
