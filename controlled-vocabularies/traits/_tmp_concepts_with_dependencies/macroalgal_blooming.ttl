@@ -6,16 +6,6 @@
 
 @prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
 
-trait:conceptscheme
-    a skos:Conceptscheme ;
-    rdfs:label "listing aphia attributes and traits"@en .
-
-<https://aphia.org/ns/vocab/attribute-trait/>
-    a skos:Collection ;
-    rdfs:label "aphia attributes and traits"@en ;
-    
-    skos:member trait:macroalgal_blooming ;
-.
 
 trait:macroalgal_blooming
     a skos:Collection ; 

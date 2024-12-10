@@ -1,0 +1,75 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+
+trait:conceptscheme
+    a skos:Conceptscheme ;
+    rdfs:label "listing aphia attributes and traits"@en .
+
+<https://aphia.org/ns/vocab/attribute-trait/>
+    a skos:Collection ;
+    rdfs:label "aphia attributes and traits"@en ;
+    
+    skos:note """This SKOS collection represents a set of species traits. 
+                The collection operates under the Open World Assumption (OWA), 
+                meaning that the absence of an trait in this collection does not imply that the trait does not exist. 
+                It may simply mean the trait is not yet included or explicitly documented."""@en ;
+
+    #listing simple concept lists (./terms)                 # to add (1) host/prey & (2) locality...
+    skos:member trait:ambi_ecological_group , 
+                trait:birds_directive_annex , 
+                trait:body_size_dimension , 
+                trait:body_size_type , 
+                trait:body_size_unit , 
+                trait:brooding ,
+                trait:cites_annex , 
+                trait:composition , 
+                trait:development ,
+                trait:fossil_range , 
+                trait:habitats_directive_annex , 
+                trait:helcom_red_list_category , 
+                trait:irradiance_preference , 
+                trait:iucn_red_list_category , 
+                trait:life_stage , 
+                trait:paraphyletic_group , 
+                trait:plant_habit , 
+                trait:reproduction_modes , 
+                trait:sex , 
+                trait:sociability , 
+                trait:structure , 
+                trait:vme_region ; 
+
+    #listing concepts with dependencies (./tmp_concepts_with_dependencies)
+    skos:member trait:asexual_reproduction , 
+                trait:body_shape , 
+                trait:body_size_qualitative , 
+                trait:calcification , 
+                trait:cytomorphology , 
+                trait:dispersion_mode , 
+                trait:environmental_position , 
+                trait:feedingtype , 
+                trait:functional_group , 
+                trait:gamete_type , 
+                trait:gametophyte_arrangement , 
+                trait:generation_time , 
+                trait:life_cycle , 
+                trait:life_span , 
+                trait:macroalgal_blooming , 
+                trait:mobility , 
+                trait:pollutant_tolerance , 
+                trait:reproductive_frequency , 
+                trait:seasonality , 
+                trait:species_exhibits_underwater_soniferous_behaviour , 
+                trait:spawning , 
+                trait:supporting_structure_enclosure , 
+                trait:thallus_vertical_space_used , 
+                trait:vme_indicative_taxon , 
+                trait:wave_exposure , 
+                trait:zonation ;
+                #trait:body_size , 
+                #trait:societal_importance ,  
+.

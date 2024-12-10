@@ -6,18 +6,8 @@
 
 @prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
 
-trait:conceptScheme
-    a skos:ConceptScheme ;
-    rdfs:label "Listing Aphia attributes and traits"@en .
 
-<https://aphia.org/ns/vocab/attribute-trait/>
-    a skos:Collection ;
-    rdfs:label "Aphia attributes and traits"@en ;
-    
-    skos:member trait:dimension ;
-.
-
-trait:dimension
+trait:body_size_dimension
     a skos:Collection ; 
     dct:description "The dimension of a body size (e.g. length, width, diameter)."@en ;
 

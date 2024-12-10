@@ -6,16 +6,6 @@
 
 @prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
 
-trait:conceptScheme
-    a skos:ConceptScheme ;
-    rdfs:label "Listing Aphia attributes and traits"@en .
-
-<https://aphia.org/ns/vocab/attribute-trait/>
-    a skos:Collection ;
-    rdfs:label "Aphia attributes and traits"@en ;
-    
-    skos:member trait:species_exhibits_underwater_soniferous_behaviour ;
-.
 
 trait:species_exhibits_underwater_soniferous_behaviour
     a skos:Collection ; 
