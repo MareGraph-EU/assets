@@ -12,7 +12,7 @@ This repository provides the RDF representation (in Turtle syntax) of a controll
   The relationships and dependencies between traits are visualized in the following document:  
   [Visualization of Trait Dependencies](visualization_attributes_dependencies.pdf)  
 
-## Folder Structure  
+## Repository Structure  
 
 The traits in this repository are organized and described as follows:  
 
