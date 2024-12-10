@@ -4,72 +4,70 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@prefix cntvocab: <https://aphia.org/ns/vocab/attribute-trait/> .
+@prefix term: <https://aphia.org/ns/term/> .
 
-trait:conceptscheme
-    a skos:Conceptscheme ;
-    rdfs:label "listing aphia attributes and traits"@en .
-
+# Define the concept scheme
 <https://aphia.org/ns/vocab/attribute-trait/>
-    a skos:Collection ;
-    rdfs:label "aphia attributes and traits"@en ;
-    
-    skos:note """This SKOS collection represents a set of species traits. 
-                The collection operates under the Open World Assumption (OWA), 
+    a skos:ConceptScheme ;
+    skos:prefLabel "Controlled vocabulary for Aphia attributes and traits"@en ;
+    rdfs:label "Controlled vocabulary for Aphia attributes and traits"@en ;
+
+    skos:note """This controlled vocabulary of Aphia attributes and traits operates under the Open World Assumption (OWA), 
                 meaning that the absence of an trait in this collection does not imply that the trait does not exist. 
                 It may simply mean the trait is not yet included or explicitly documented."""@en ;
 
     #listing simple concept lists (./terms)                 # to add (1) host/prey & (2) locality...
-    skos:member trait:ambi_ecological_group , 
-                trait:birds_directive_annex , 
-                trait:body_size_dimension , 
-                trait:body_size_type , 
-                trait:body_size_unit , 
-                trait:brooding ,
-                trait:cites_annex , 
-                trait:composition , 
-                trait:development ,
-                trait:fossil_range , 
-                trait:habitats_directive_annex , 
-                trait:helcom_red_list_category , 
-                trait:irradiance_preference , 
-                trait:iucn_red_list_category , 
-                trait:life_stage , 
-                trait:paraphyletic_group , 
-                trait:plant_habit , 
-                trait:reproduction_modes , 
-                trait:sex , 
-                trait:sociability , 
-                trait:structure , 
-                trait:vme_region ; 
+    skos:member term:ambi_ecological_group , 
+                term:birds_directive_annex , 
+                term:body_size_dimension , 
+                term:body_size_type , 
+                term:body_size_unit , 
+                term:brooding ,
+                term:cites_annex , 
+                term:composition , 
+                term:development ,
+                term:fossil_range , 
+                term:habitats_directive_annex , 
+                term:helcom_red_list_category , 
+                term:irradiance_preference , 
+                term:iucn_red_list_category , 
+                term:life_stage , 
+                term:paraphyletic_group , 
+                term:plant_habit , 
+                term:reproduction_modes , 
+                term:sex , 
+                term:sociability , 
+                term:structure , 
+                term:vme_region ; 
 
     #listing concepts with dependencies (./tmp_concepts_with_dependencies)
-    skos:member trait:asexual_reproduction , 
-                trait:body_shape , 
-                trait:body_size_qualitative , 
-                trait:calcification , 
-                trait:cytomorphology , 
-                trait:dispersion_mode , 
-                trait:environmental_position , 
-                trait:feedingtype , 
-                trait:functional_group , 
-                trait:gamete_type , 
-                trait:gametophyte_arrangement , 
-                trait:generation_time , 
-                trait:life_cycle , 
-                trait:life_span , 
-                trait:macroalgal_blooming , 
-                trait:mobility , 
-                trait:pollutant_tolerance , 
-                trait:reproductive_frequency , 
-                trait:seasonality , 
-                trait:species_exhibits_underwater_soniferous_behaviour , 
-                trait:spawning , 
-                trait:supporting_structure_enclosure , 
-                trait:thallus_vertical_space_used , 
-                trait:vme_indicative_taxon , 
-                trait:wave_exposure , 
-                trait:zonation ;
-                #trait:body_size , 
-                #trait:societal_importance ,  
+    skos:member term:asexual_reproduction , 
+                term:body_shape , 
+                term:body_size_qualitative , 
+                term:calcification , 
+                term:cytomorphology , 
+                term:dispersion_mode , 
+                term:environmental_position , 
+                term:feedingtype , 
+                term:functional_group , 
+                term:gamete_type , 
+                term:gametophyte_arrangement , 
+                term:generation_time , 
+                term:life_cycle , 
+                term:life_span , 
+                term:macroalgal_blooming , 
+                term:mobility , 
+                term:pollutant_tolerance , 
+                term:reproductive_frequency , 
+                term:seasonality , 
+                term:species_exhibits_underwater_soniferous_behaviour , 
+                term:spawning , 
+                term:supporting_structure_enclosure , 
+                term:thallus_vertical_space_used , 
+                term:vme_indicative_taxon , 
+                term:wave_exposure , 
+                term:zonation ;
+                #term:body_size , 
+                #term:societal_importance ,  
 .

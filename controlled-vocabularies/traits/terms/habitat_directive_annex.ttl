@@ -4,59 +4,58 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/habitats_directive_annex> .
 
-
-trait:habitats_directive_annex
+<>
     a skos:Collection ; 
     dct:description "Council Directive 92/43/EEC of 21 May 1992 on the conservation of natural habitats and of wild fauna and flora."@en ;
 
-    skos:member trait:habitats_directive_annex_I , 
-                trait:habitats_directive_annex_II , 
-                trait:habitats_directive_annex_III , 
-                trait:habitats_directive_annex_IV , 
-                trait:habitats_directive_annex_V , 
-                trait:habitats_directive_annex_VI ;
+    skos:member <#habitats_directive_annex_I> , 
+                <#habitats_directive_annex_II> , 
+                <#habitats_directive_annex_III> , 
+                <#habitats_directive_annex_IV> , 
+                <#habitats_directive_annex_V> , 
+                <#habitats_directive_annex_VI> ;
 .
 
-trait:habitats_directive_annex_I
+<#habitats_directive_annex_I>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Habitats Directive Annex I"@en ;
     skos:definition "Natural habitat types of community interest whose conservation requires the designation of specia areas of conservation."@en ;
 .
 
-trait:habitats_directive_annex_II
+<#habitats_directive_annex_II>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Habitats Directive Annex II"@en ;
     skos:definition "Animal and plant species of community interest whose conservation requires the designation of special areas of conservation."@en ;
 .
 
-trait:habitats_directive_annex_III
+<#habitats_directive_annex_III>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Habitats Directive Annex III"@en ;
     skos:definition "Criteria for selecting sites eligible for identification as sites of community importance and designation as specieal areas of conservation."@en ;
 .
 
-trait:habitats_directive_annex_IV
+<#habitats_directive_annex_IV>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Habitats Directive Annex IV"@en ;
     skos:definition "Animal and plant species of comminity interest in need of strict protection."@en ;
 .
 
-trait:habitats_directive_annex_V
+<#habitats_directive_annex_V>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Habitats Directive Annex V"@en ;
     skos:definition "Animal and plant species of community interest whose taking in the wild and exploitation may be subject to management measures."@en ;
 .
 
-trait:habitats_directive_annex_VI
+<#habitats_directive_annex_VI>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Habitats Directive Annex VI"@en ;
     skos:definition "Prohibited methods and means of capture and killing and modes of transport."@en ;
 .

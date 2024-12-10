@@ -4,60 +4,61 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@prefix <# <https://aphia.org/ns/vocab/attribute-trait/> .
 
+@base <https://aphia.org/ns/term/sex> .
 
-trait:sex
+<>
     a skos:Collection ; 
     dct:description "The sex of an organism. The sum of all structural, functional and behavioural characteristics distingiusing males, females and hermaphrodites. (Lincoln et al., 1998). The sum characteristics, structures, features and functions by which a plant or animal is classed as male or female. In some animals sex is entirely genetically determined, in others the sex may change in response to environmental conditions. (Henderson's dictionary of biology; Lawrence, 2005)."@en ;
 
-    skos:member trait:male , 
-                trait:female , 
-                trait:male_female , 
-                trait:hermaphrodite , 
-                trait:undetermined , 
-                trait:male_unsexed ; 
+    skos:member <#male> , 
+                <#female> , 
+                <#male_female> , 
+                <#hermaphrodite> , 
+                <#undetermined> , 
+                <#male_unsexed> ; 
 .
 
-trait:male
+<#male>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Male"@en ;
     skos:definition "The attribute is valid for organisms of the male sex; the sperm producing form of a a bisexual or dioecious organism."@en ;
 
     skos:closeMatch ... ; 
 .
-trait:female
+<#female>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Female"@en ;
     skos:definition "The attribute is valid for organisms of the female sex; the egg producing form of a bisexual or dioecious organism."@en ;
 
     skos:closeMatch ... ; 
 .
-trait:male_female
+<#male_female>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Male & Female"@en ;
     skos:definition "The attribute is valid for both organisms of the male sex and organisms of the female sex."@en ;
 .
-trait:hermaphrodite
+<#hermaphrodite>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Hermaphrodite"@en ;
     skos:definition "The attribute is valid for hermaphroditic organisms. Having both male and female reproductive organs in the same individual (animal) or the same flower (plant); androgyne; bisexual; the maturation of the male organs before the female is protandrous hermaphroditism; the female before the male is protogynous hermaphroditism, and simultaneously is syncrhonous hermaphroditism."@en ;
 
     skos:exactMatch ... ; 
 .
-trait:undetermined
+<#undetermined>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Undetermined"@en ;
     skos:definition "It has not yet been determined for which sex this attribute is valid."@en ;
 .
-trait:male_unsexed
+<#male_unsexed>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Male/unsexed"@en ;
     skos:definition "The attribute is valid for organisms of the male sex or for organisms for which the sex has not yet been identified."@en ;
 .

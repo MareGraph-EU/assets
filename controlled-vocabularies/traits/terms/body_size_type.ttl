@@ -4,75 +4,74 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/body_size_type> .
 
-
-trait:body_size_type
+<>
     a skos:Collection ; 
     dct:description "The type of a body size (e.g. minimum, maximum, average)."@en ;
 
-    skos:member trait:minimum , 
-                trait:maximum , 
-                trait:diameter , 
-                trait:average , 
-                trait:unknown_body_size_type , 
-                trait:mean , 
-                trait:standard_mean , 
-                trait:common ;
+    skos:member <#minimum> , 
+                <#maximum> , 
+                <#diameter> , 
+                <#average> , 
+                <#unknown_body_size_type> , 
+                <#mean> , 
+                <#standard_mean> , 
+                <#common> ;
 .
 
-trait:minimum
+<#minimum>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Minimum body size"@en ;
     skos:definition "Minimum body size"@en ;
 .
 
-trait:maximum
+<#maximum>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Maximum body size"@en ;
     skos:definition "Maximum body size"@en ;
 .
 
-trait:diameter
+<#diameter>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Body size diameter"@en ;
     skos:definition "Body size diameter"@en ;
 .
 
-trait:average
+<#average>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Average body size"@en ;
     skos:definition "Average body size"@en ;
 .
 
-trait:unknown_body_size_type
+<#unknown_body_size_type>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Unknown body size type"@en ;
     skos:definition "Unknown body size type"@en ;
 .
 
-trait:mean
+<#mean>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Mean body size"@en ;
     skos:definition "Mean body size"@en ;
 .
 
-trait:standard_mean
+<#standard_mean>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Standard mean body size"@en ;
     skos:definition "Standard mean body size"@en ;
 .
 
-trait:common
+<#common>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Common body size"@en ;
     skos:definition "Common body size"@en ;
 .

@@ -4,26 +4,25 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/brooding> .
 
-
-trait:brooding
+<>
     a skos:Collection ; 
     dct:description "..."@en ;
 
-    skos:member trait:brooding_yes , trait:brooding_no ;
+    skos:member <#brooding_yes> , <#brooding_no> ;
 . 
 
-trait:brooding_yes
+<#brooding_yes>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Yes"@en ;
     skos:definition "..."@en ;
 .
 
-trait:brooding_no
+<#brooding_no>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "No"@en ;
     skos:definition ""@en ;
 .

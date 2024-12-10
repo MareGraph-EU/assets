@@ -4,99 +4,108 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/body_size_unit> .
 
-
-trait:body_size_unit
+<>
     a skos:Collection ; 
     dct:description "The unit of a body size (e.g. m, cm, mm)."@en ;
 
-    skos:member trait:micrometer , 
-                trait:millimeter , 
-                trait:centimeter , 
-                trait:meter , 
-                trait:square_centimeter , 
-                trait:square_decimeter , 
-                trait:square_meter , 
-                trait:cubic_centimeter , 
-                trait:inch , 
-                trait:kilogram , 
-                trait:ton ; 
+    skos:member <#micrometer> , 
+                <#millimeter> , 
+                <#centimeter> , 
+                <#meter> , 
+                <#square_centimeter> , 
+                <#square_decimeter> , 
+                <#square_meter> , 
+                <#cubic_centimeter> , 
+                <#inch> , 
+                <#kilogram> , 
+                <#ton> ; 
 .
 
-trait:micrometer
+<#micrometer>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "micrometer"@en ;
     skos:altLabel "µm"@en ; 
     skos:definition "micrometer"@en ;
 .
-trait:millimeter
+
+<#millimeter>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "millimeter"@en ;
     skos:altLabel "mm"@en ; 
     skos:definition "millimeter"@en ;
 .
-trait:centimeter
+
+<#centimeter>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "centimeter"@en ;
     skos:altLabel "cm"@en ; 
     skos:definition "centimeter"@en ;
 .
-trait:meter
+
+<#meter>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "meter"@en ;
     skos:altLabel "m"@en ; 
     skos:definition "meter"@en ;
 .
-trait:square_centimeter
+
+<#square_centimeter>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "square centimeter"@en ;
     skos:altLabel "cm²"@en ; 
     skos:definition "square centimeter"@en ;
 .
-trait:square_decimeter
+
+<#square_decimeter>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "square decimeter"@en ;
     skos:altLabel "dm²"@en ; 
     skos:definition "square decimeter"@en ;
 .
-trait:square_meter
+
+<#square_meter>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "square meter"@en ;
     skos:altLabel "m²"@en ; 
     skos:definition "square meter"@en ;
 .
-trait:cubic_centimeter
+
+<#cubic_centimeter>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "cubic centimeter"@en ;
     skos:altLabel "cm³"@en ; 
     skos:definition "cubic centimeter"@en ;
 .
-trait:inch
+
+<#inch>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "inch"@en ;
     skos:altLabel "inches"@en ; 
     skos:definition "inch"@en ;
 .
-trait:kilogram
+
+<#kilogram>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "kilogram"@en ;
     skos:altLabel "kg"@en ; 
     skos:definition "kilogram"@en ;
 .
-trait:ton
+
+<#ton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "ton"@en ;
     skos:definition "ton"@en ;
 .

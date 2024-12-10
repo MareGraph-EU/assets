@@ -4,30 +4,29 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/irradiance_preference> .
 
-
-trait:irradiance_preference
+<>
     a skos:Collection ; 
     dct:description "..."@en ;
 
-    skos:member trait:photophilic , trait:sciaphilic ;
+    skos:member <#photophilic> , <#sciaphilic> ;
 
     skos:closeMatch ... ; 
 . 
 
-trait:photophilic
+<#photophilic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Photophilic"@en ;
     skos:definition "Growing or thriving in habitats with high light intensity."@en ;
 
     skos:closeMatch ... ; 
 .
 
-trait:sciaphilic
+<#sciaphilic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Sciaphilic"@en ;
     skos:definition "Growing or thriving in shaded or low light intensity habitats."@en ;
 
