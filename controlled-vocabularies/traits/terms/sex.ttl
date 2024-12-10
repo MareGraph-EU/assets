@@ -33,7 +33,7 @@ trait:male
     a skos:Concept, aphia-trait:Trait ;
     skos:inScheme trait:conceptScheme ;
     skos:prefLabel "Male"@en ;
-    skos:definition "The attribute is valid for organisms of the male gender; the sperm producing form of a a bisexual or dioecious organism."@en ;
+    skos:definition "The attribute is valid for organisms of the male sex; the sperm producing form of a a bisexual or dioecious organism."@en ;
 
     skos:closeMatch ... ; 
 .
@@ -41,7 +41,7 @@ trait:female
     a skos:Concept, aphia-trait:Trait ;
     skos:inScheme trait:conceptScheme ;
     skos:prefLabel "Female"@en ;
-    skos:definition "The attribute is valid for organisms of the female gender; the egg producing form of a bisexual or dioecious organism."@en ;
+    skos:definition "The attribute is valid for organisms of the female sex; the egg producing form of a bisexual or dioecious organism."@en ;
 
     skos:closeMatch ... ; 
 .
@@ -49,7 +49,7 @@ trait:male_female
     a skos:Concept, aphia-trait:Trait ;
     skos:inScheme trait:conceptScheme ;
     skos:prefLabel "Male & Female"@en ;
-    skos:definition "The attribute is valid for both organisms of the male gender and organisms of the female gender."@en ;
+    skos:definition "The attribute is valid for both organisms of the male sex and organisms of the female sex."@en ;
 .
 trait:hermaphrodite
     a skos:Concept, aphia-trait:Trait ;
@@ -63,11 +63,11 @@ trait:undetermined
     a skos:Concept, aphia-trait:Trait ;
     skos:inScheme trait:conceptScheme ;
     skos:prefLabel "Undetermined"@en ;
-    skos:definition "It has not yet been determined for which gender this attribute is valid."@en ;
+    skos:definition "It has not yet been determined for which sex this attribute is valid."@en ;
 .
 trait:male_unsexed
     a skos:Concept, aphia-trait:Trait ;
     skos:inScheme trait:conceptScheme ;
     skos:prefLabel "Male/unsexed"@en ;
-    skos:definition "The attribute is valid for organisms of the male gender or for organisms for which the gender has not yet been identified."@en ;
+    skos:definition "The attribute is valid for organisms of the male sex or for organisms for which the sex has not yet been identified."@en ;
 .
