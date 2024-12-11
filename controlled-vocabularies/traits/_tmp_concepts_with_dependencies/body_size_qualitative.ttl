@@ -4,43 +4,42 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/body_size_qualitative> .
 
-
-trait:body_size_qualitative
+<>
     a skos:Collection ; 
     dct:description "Trait that describes the size class of an organism."@en ;
 
-    skos:member trait:micro-body-size-under-0-2mm , 
-                trait:small-body-size-0-2-to-2mm , 
-                trait:medium-body-size-2-to-200mm , 
-                trait:large-body-size-over-200mm ;
+    skos:member <#micro-body-size-under-0-2mm> , 
+                <#small-body-size-0-2-to-2mm> , 
+                <#medium-body-size-2-to-200mm> , 
+                <#large-body-size-over-200mm> ;
 .
 
-trait:micro-body-size-under-0-2mm
+<#micro-body-size-under-0-2mm>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Micro body size (<0.2 mm)"@en ;
     skos:altLabel "<0.2 mm"@en ; 
     skos:definition "Individual organisms with a mean body size smaller than 0.2 mm (as defined, agreed and applied by the WoRMS Steering Committee)."@en ;
 .
-trait:small-body-size-0-2-to-2mm
+<#small-body-size-0-2-to-2mm>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Small body size (0.2–2.0 mm)"@en ;
     skos:altLabel "0.2 - 2.0 mm"@en ; 
     skos:definition "Individual organisms with a mean body size between 0.2 and 2.0 mm (as defined, agreed and applied by the WoRMS Steering Committee)."@en ;
 .
-trait:medium-body-size-2-to-200mm
+<#medium-body-size-2-to-200mm>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Medium body size (2.0–200 mm)"@en ;
     skos:altLabel "2.0 - 200 mm"@en ; 
     skos:definition "Individual organisms with a mean body size between 2.0 and 200 mm (as defined, agreed and applied by the WoRMS Steering Committee)."@en ;
 .
-trait:large-body-size-over-200mm
+<#large-body-size-over-200mm>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Large body size (>200 mm)"@en ;
     skos:altLabel "200 mm"@en ; 
     skos:definition "Individual organisms with a mean body size larger than 200 mm (as defined, agreed and applied by the WoRMS Steering Committee)."@en ;

@@ -4,54 +4,53 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/gamete_type> .
 
-
-trait:gamete_type
+<>
     a skos:Collection ; 
     dct:description "Descriptors of the relative size of gametes."@en ;
 
-    skos:member trait:anisogamous , 
-                trait:isogamous , 
-                trait:oogamous , 
-                trait:gamete_type_not_applicable ,
-                trait:gamete_type_unknown ,
-                trait:gamete_type_unreported ; 
+    skos:member <#anisogamous> , 
+                <#isogamous> , 
+                <#oogamous> , 
+                <#gamete_type_not_applicable> ,
+                <#gamete_type_unknown> ,
+                <#gamete_type_unreported> ; 
 .
 
-trait:anisogamous
+<#anisogamous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Anisogamous"@en ;
     skos:definition "Having gametes of dissimilar size, shape or behaviour; cf. isogamous (Lincoln et al., 1998)."@en ;
 .
-trait:isogamous
+<#isogamous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Isogamous"@en ;
     skos:definition "Having gametes that are similar in size, shape and behaviour; having gametes (isogametes) not differentiated into male and female; cf. anisogamous (Lincoln et al., 1998)."@en ;
 .
-trait:oogamous
+<#oogamous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Oogamous"@en ;
     skos:definition "Having a reproduction involving a large, non-motile female gamete (egg cell) and a small, motile male gamete (sperm cell or equivalent), except for red algae in which the male gamete is also non-motile (macroalgae; Womersley, 1987)."@en ;
 .
-trait:gamete_type_not_applicable
+<#gamete_type_not_applicable>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Gamete type not applicable"@en ;
     skos:definition "The attribute 'gamete type' is not applicable for this taxon."@en ;
 .
-trait:gamete_type_unknown
+<#gamete_type_unknown>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Gamete type unknown"@en ;
     skos:definition "According to literature it is unknown which gamete type this organism has."@en ;
 .
-trait:gamete_type_unreported
+<#gamete_type_unreported>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Gamete type unreported"@en ;
     skos:definition "So far it has not been reported in literature what the gamete type is for this taxon."@en ;
 .

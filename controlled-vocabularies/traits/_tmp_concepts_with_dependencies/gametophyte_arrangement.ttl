@@ -4,75 +4,74 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/gametophyte_arrangement> .
 
-
-trait:gametophyte_arrangement
+<>
     a skos:Collection ; 
     dct:description "Trait that describes the male and female reproductive structures."@en ;
 
-    skos:member trait:dioecious , 
-                trait:dioicous , 
-                trait:mixed , 
-                trait:monoecious , 
-                trait:monoicous ,
-                trait:gametophyte_arrangement_not_applicable ,
-                trait:gametophyte_arrangement_unknown ,
-                trait:gametophyte_arrangement_unreported ; 
+    skos:member <#dioecious> , 
+                <#dioicous> , 
+                <#mixed> , 
+                <#monoecious> , 
+                <#monoicous> ,
+                <#gametophyte_arrangement_not_applicable> ,
+                <#gametophyte_arrangement_unknown> ,
+                <#gametophyte_arrangement_unreported> ; 
 .
 
-trait:dioecious
+<#dioecious>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Dioecious"@en ;
     skos:definition "When male and female reproductive structures are formed on the separate individual and the sex is determined in diploid phase."@en ;
 .
 
-trait:dioicous
+<#dioicous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Dioicous"@en ;
     skos:definition "When male and female reproductive structures are formed on the separate individual and the sex is determined in haploid phase."@en ;
 .
 
-trait:mixed
+<#mixed>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Mixed"@en ;
     skos:definition "With individuals bearing only male or female reproductive structures and indivduals bearing both male and female reproductive structures in one species."@en ;
 .
 
-trait:monoecious
+<#monoecious>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Monoecious"@en ;
     skos:definition "When male and female reproductive structures are formed on same individuals and the sex is determined in diploid phase."@en ;
 .
 
-trait:monoicous
+<#monoicous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Monoicous"@en ;
     skos:definition "When male and female reproductive structures are formed on same individuals and the sex is determined in haploid phase."@en ;
 .
 
-trait:gametophyte_arrangement_not_applicable
+<#gametophyte_arrangement_not_applicable>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Gametophyte arrangement not applicable"@en ;
     skos:definition "The attribute 'gametophyte arrangement' is not applicable for this taxon."@en ;
 .
 
-trait:gametophyte_arrangement_unknown
+<#gametophyte_arrangement_unknown>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Unknown gametophyte arrangement"@en ;
     skos:definition "According to literature it is unknown which gametophyte arrangement this organism has."@en ;
 .
 
-trait:gametophyte_arrangement_unreported
+<#gametophyte_arrangement_unreported>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Unreported gametophyte arrangement"@en ;
     skos:definition "So far it has not been reported in literature what the gametophyte arrangement is for this taxon."@en ;
 .

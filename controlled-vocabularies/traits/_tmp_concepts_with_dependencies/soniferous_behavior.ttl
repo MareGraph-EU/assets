@@ -4,59 +4,58 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/species_exhibits_underwater_soniferous_behaviour> .
 
-
-trait:species_exhibits_underwater_soniferous_behaviour
+<>
     a skos:Collection ; 
     dct:description "Does the species actively or passively produce sound under natural conditions while submerged in water?"@en ;
 
-    skos:member trait:soniferous_behaviour_unknown , 
-                trait:soniferous_behaviour_unlikely_under_natural_conditions , 
-                trait:soniferous_behaviour_likely_though_unconfirmed_under_natural_conditions ,
-                trait:passive_sound_under_natural_conditions ,
-                trait:active_sound_under_natural_conditions ,
-                trait:active_and_passive_sound_under_natural_conditions ;
+    skos:member <#soniferous_behaviour_unknown> , 
+                <#soniferous_behaviour_unlikely_under_natural_conditions> , 
+                <#soniferous_behaviour_likely_though_unconfirmed_under_natural_conditions> ,
+                <#passive_sound_under_natural_conditions> ,
+                <#active_sound_under_natural_conditions> ,
+                <#active_and_passive_sound_under_natural_conditions> ;
 .
 
-trait:soniferous_behaviour_unknown
+<#soniferous_behaviour_unknown>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Unknown or undetermined"@en ;
     skos:definition "There is no known acoustic, morphological, or physiological study of sound production for this species and its likelihood of soniferous behavior based on an ancestral state reconstruction analysis, lineage, or evolutionary records has not been assessed, or this species has yet to be categorized by an expert source."@en ;
 .
 
-trait:soniferous_behaviour_unlikely_under_natural_conditions
+<#soniferous_behaviour_unlikely_under_natural_conditions>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Does not or is unlikely to produce sound under natural conditions"@en ;
     skos:definition "Species has been the subject of one or more studies to assess its acoustic behavior, morphology, and/or physiology, none of which have provided evidence of sound production either actively or passively, and/or species does not have a likelihood of soniferous behavior based on an ancestral state reconstruction analysis that results in a probability below 0.5, lineage, or evolutionary records."@en ;
 .
 
-trait:soniferous_behaviour_likely_though_unconfirmed_under_natural_conditions
+<#soniferous_behaviour_likely_though_unconfirmed_under_natural_conditions>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Likely to produce sound under natural conditions but unconfirmed"@en ;
     skos:definition "There is no known acoustic documentation to confidently validate sound production under natural conditions by this species, but it is likely to exhibit natural soniferous behavior based on an ancestral state reconstruction analysis that results in a probability of 0.5 or higher, lineage, evolutionary records, morphological characteristics, physiological characteristics, documented sound production behavior under artificial conditions, and/or documented sound production behavior with some uncertainty."@en ;
 .
 
-trait:passive_sound_under_natural_conditions
+<#passive_sound_under_natural_conditions>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Produces passive sound under natural conditions"@en ;
     skos:definition "There is validated acoustic documentation that this species produces passive sound under natural conditions, but no validated documentation to confirm that it actively produces sound."@en ;
 .
 
-trait:active_sound_under_natural_conditions
+<#active_sound_under_natural_conditions>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Produces active sound under natural conditions"@en ;
     skos:definition "There is validated acoustic documentation that this species produces active sound under natural conditions, but no validated documentation to confirm that it passively produces sound."@en ;
 .
 
-trait:active_and_passive_sound_under_natural_conditions
+<#active_and_passive_sound_under_natural_conditions>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Produces active and passive sound under natural conditions"@en ;
     skos:definition "There is validated acoustic documentation that this species produces active and passive sound under natural conditions."@en ;
 .

@@ -4,216 +4,215 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/zonation> .
 
-
-trait:zonation
+<>
     a skos:Collection ; 
     dct:description "The distribution of organisms in distinctive areas, layers or zones. It is important to note that variations in depth and definition occur depending on the source, area or research purpose. The depth ranges and definitions within the zonation attribute were agreed upon by the WoRMS Steering Committee based on diverse sources."@en ;
 
-    skos:member trait:pelagic_zones , 
-                    trait:epipelagic_zone , 
-                    trait:mesopelagic_zone , 
-                    trait:bathypelagic_zone , 
-                    trait:abyssopelagic_zone , 
-                    trait:hadopelagic_zone , 
-                trait:benthic_zones ,
-                    trait:littoral_zone ,
-                        trait:supralittoral_zone , 
-                        trait:eulittoral_zone , 
-                        trait:sublittoral_zone , 
-                            trait:infralittoral_zone ,
-                                trait:upper_infralittoral_zone ,
-                                trait:lower_infralittoral_zone , 
-                            trait:circalittoral_zone ,
-                                trait:upper_circalittoral_zone ,
-                    trait:bathyal_zone ,
-                    trait:abyssal_zone ,
-                    trait:hadal_zone ,
-                trait:unreported_zonation ;
+    skos:member <#pelagic_zones> , 
+                    <#epipelagic_zone> , 
+                    <#mesopelagic_zone> , 
+                    <#bathypelagic_zone> , 
+                    <#abyssopelagic_zone> , 
+                    <#hadopelagic_zone> , 
+                <#benthic_zones> ,
+                    <#littoral_zone> ,
+                        <#supralittoral_zone> , 
+                        <#eulittoral_zone> , 
+                        <#sublittoral_zone> , 
+                            <#infralittoral_zone> ,
+                                <#upper_infralittoral_zone> ,
+                                <#lower_infralittoral_zone> , 
+                            <#circalittoral_zone> ,
+                                <#upper_circalittoral_zone> ,
+                    <#bathyal_zone> ,
+                    <#abyssal_zone> ,
+                    <#hadal_zone> ,
+                <#unreported_zonation> ;
 
     skos:closeMatch ... ; 
 .
 
-trait:pelagic_zones
+<#pelagic_zones>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Pelagic zones"@en ;
     skos:definition ""@en ;
 
-    skos:narrower trait:epipelagic_zone , trait:mesopelagic_zone , trait:bathypelagic_zone , trait:abyssopelagic_zone , trait:hadopelagic_zone ;
+    skos:narrower <#epipelagic_zone> , <#mesopelagic_zone> , <#bathypelagic_zone> , <#abyssopelagic_zone> , <#hadopelagic_zone> ;
 
     skos:closeMatch ... ; 
 .
 
-trait:epipelagic_zone
+<#epipelagic_zone>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Epipelagic zone (0-200 m)"@en ;
     skos:definition "The depth zone of the water column extending from the surface to 200 m. Because this zone has sufficient light penetration for photosynthesis, it is sometimes referred to as the photic zone."@en ;
 
-    skos:broader trait:pelagic_zones ;
+    skos:broader <#pelagic_zones> ;
 
     skos:closeMatch ... ; 
 .
-trait:mesopelagic_zone
+<#mesopelagic_zone>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Mesopelagic zone (200-1000 m)"@en ;
     skos:definition "The depth zone of the water column extending from 200 to 1000 m."@en ;
 
-    skos:broader trait:pelagic_zones ;
+    skos:broader <#pelagic_zones> ;
 
     skos:closeMatch ... ; 
 .
-trait:bathypelagic_zone
+<#bathypelagic_zone>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Bathypelagic zone (1000-4000 m)"@en ;
     skos:definition "The depth zone of the water column extending from 1000 to 4000 m."@en ;
 
-    skos:broader trait:pelagic_zones ;
+    skos:broader <#pelagic_zones> ;
 
     skos:closeMatch ... ; 
 .
-trait:abyssopelagic_zone
+<#abyssopelagic_zone>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Abyssopelagic zone (4000-6000 m)"@en ;
     skos:definition "The depth zone of the water column extending from 4000 to 6000 m."@en ;
 
-    skos:broader trait:pelagic_zones ;
+    skos:broader <#pelagic_zones> ;
 
     skos:closeMatch ... ; 
 .
-trait:hadopelagic_zone
+<#hadopelagic_zone>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Hadopelagic zone (deeper than 6000 m)"@en ;
     skos:definition "The depth zone of the water column exceeding 6000 m. This zone corresponds to submarine trenches."@en ;
 
-    skos:broader trait:pelagic_zones ;
+    skos:broader <#pelagic_zones> ;
 .
 
-trait:benthic_zones
+<#benthic_zones>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Benthic zones"@en ;
     skos:definition ""@en ;
 
-    skos:narrower trait:littoral_zone , trait:bathyal_zone , trait:abyssal_zone , trait:hadal_zone ; 
+    skos:narrower <#littoral_zone> , <#bathyal_zone> , <#abyssal_zone> , <#hadal_zone> ; 
 .
-trait:littoral_zone
+<#littoral_zone>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Littoral zone (0-200 m)"@en ;
     skos:definition """The littoral zone extends from the shoreline to the edge of the continental shelf, typically down to 200 m deep. It is important to note that there is no single definition for the littoral zone because its full extent and divisions vary in different contexts and sources. The littoral zone includes the intertidal, but also all neritic waters within the bounds of the continental shelves. Although the littoral zone is larger than the intertidal zone, littoral and intertidal are often used interchangeably.
                     The part of the shore covering the intertidal and the splash zone, with the upper limit marked by the top of the lichen zone and the lower limit marked by the top of the laminarian kelp zone. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"""@en ;
 
-    skos:broader trait:benthic_zones ;
-    skos:narrower trait:supralittoral_zone , trait:eulittoral_zone , trait:sublittoral_zone ; 
+    skos:broader <#benthic_zones> ;
+    skos:narrower <#supralittoral_zone> , <#eulittoral_zone> , <#sublittoral_zone> ; 
 .
 
-trait:supralittoral_zone
+<#supralittoral_zone>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Supralittoral zone"@en ;
     skos:altLabel "Supratidal zone"@en ;
     skos:definition "The supralittoral zone comprises the area above the high tide mark. This zone is also referred to as the supratidal zone. The supralittoral zone can be further divided into the spray zone and splash zone."@en ;
 
-    skos:broader trait:littoral_zone ;
+    skos:broader <#littoral_zone> ;
 .
-trait:eulittoral_zone
+<#eulittoral_zone>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Eulittoral zone"@en ;
     skos:altLabel "Mediolittoral zone"@en ;
     skos:altLabel "Intertidal zone"@en ;
     skos:definition "The eulittoral zone comprises the area between the high tide mark and the low tide mark. This zone is also referred to as the mediolittoral zone, midlittoral zone or the intertidal zone. Allhough the intertidal zone is part of the littoral zone, littoral and intertidal are often used interchangeably (see definition for Littoral zone)."@en ;
 
-    skos:broader trait:littoral_zone ;
+    skos:broader <#littoral_zone> ;
 .
-trait:sublittoral_zone
+<#sublittoral_zone>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Sublittoral zone"@en ;
     skos:altLabel "Subtidal zone"@en ;
     skos:definition """The sublittoral zone comprises the seafloor from the low tide mark to the edge of the continental shelf, typically down to 200 m deep. The shallowest portion of the sublittoral zone is sometimes referred to as the subtidal zone. Allthough the sublitoral zone is larger than the subtidal zone, sublittoral and subtidal are often used interchangeably.
                     The part of the shore continuously covered by water, below the intertidal zone. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"""@en ;
 
-    skos:broader trait:littoral_zone ;
-    skos:narrower trait:infralittoral_zone , trait:circalittoral_zone ;
+    skos:broader <#littoral_zone> ;
+    skos:narrower <#infralittoral_zone> , <#circalittoral_zone> ;
 .
-trait:infralittoral_zone
+<#infralittoral_zone>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Infralittoral zone"@en ;
     skos:definition "The upper subdivision of the sublittoral zone, typically dominated by photosynthetic organisms."@en ;
 
-    skos:broader trait:sublittoral_zone ; 
-    skos:narrower trait:upper_infralittoral_zone , trait:lower_infralittoral_zone ; 
+    skos:broader <#sublittoral_zone> ; 
+    skos:narrower <#upper_infralittoral_zone> , <#lower_infralittoral_zone> ; 
 .
-trait:upper_infralittoral_zone
+<#upper_infralittoral_zone>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Upper infralittoral zone"@en ;
     skos:definition """The region of the sublittoral which extends from the lower limit of the infralittoral to the maximum depth at which photosynthesis is still possible. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"""@en ;
 
-    skos:broader trait:infralittoral_zone ; 
+    skos:broader <#infralittoral_zone> ; 
 .
-trait:lower_infralittoral_zone
+<#lower_infralittoral_zone>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Lower infralittoral zone"@en ;
     skos:definition """The part of the infralittoral zone that supports scattered kelp plants. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"""@en ;
 
-    skos:broader trait:infralittoral_zone ; 
+    skos:broader <#infralittoral_zone> ; 
 .
-trait:circalittoral_zone
+<#circalittoral_zone>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Circalittoral zone"@en ;
     skos:definition "The lower subdivision of the sublittoral zone, typically dominated by animals."@en ;
 
-    skos:broader trait:sublittoral_zone ; 
-    skos:narrower trait:upper_circalittoral_zone ;
+    skos:broader <#sublittoral_zone> ; 
+    skos:narrower <#upper_circalittoral_zone> ;
 .
-trait:upper_circalittoral_zone
+<#upper_circalittoral_zone>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Upper circalittoral zone"@en ;
     skos:definition """Dominated by animals with sparse foliose algae except where grazed. The part of the circalittoral subzone on hard substrata distinguished by the presence of scattered foliose algae amongst the dominating animals; its lower limit is the maximum limit of depth for foliose algae (based on Hiscock, 1985). (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"""@en ;
 
-    skos:broader trait:circalittoral_zone ; 
+    skos:broader <#circalittoral_zone> ; 
 .
-trait:bathyal_zone
+<#bathyal_zone>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Bathyal zone (200-4000 m)"@en ;
     skos:definition "The bathyal zone comprises sea floors at depths between 200 and 4000 m. This zone generally corresponds to the continental slope."@en ;
 
-    skos:broader trait:benthic_zones ;
+    skos:broader <#benthic_zones> ;
 .
-trait:abyssal_zone
+<#abyssal_zone>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Abyssal zone (4000-6000 m)"@en ;
     skos:definition "The abyssal zone comprises sea floors at depths between 4000 and 6000 m. This zone generally corresponds to the abyssal plain."@en ;
 
-    skos:broader trait:benthic_zones ;
+    skos:broader <#benthic_zones> ;
 .
-trait:hadal_zone
+<#hadal_zone>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Hadal zone (deeper than 6000 m)"@en ;
     skos:definition "The hadal zone comprises sea floors at depths exceeding 6000 m. This zone corresponds to submarine trenches."@en ;
 
-    skos:broader trait:benthic_zones ;
+    skos:broader <#benthic_zones> ;
 .
 
-trait:unreported_zonation
+<#unreported_zonation>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Unreported zonation"@en ;
     skos:definition "So far it has not been reported in literature which zonation this organism has."@en ;
 .

@@ -4,52 +4,51 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/cytomorphology> .
 
-
-trait:cytomorphology
+<>
     a skos:Collection ; 
     dct:description "This trait describes whether or not an organism is unicellular. For algae, this means the relationship between cell structure and thallus organisation. Examples include uninucleate unicellular organisms, multicellular thalli composed of uninucleate cells, multicellular thalli composed of multinucleate cells, and macroscopic thalli composed of a single giant tubular cell (siphonous or acellular thalli)."@en ;
 
-    skos:member trait:unicellular , trait:siphonous , trait:non_unicellular , trait:coenocytic ; 
+    skos:member <#unicellular> , <#siphonous> , <#non_unicellular> , <#coenocytic> ; 
 .
 
-trait:unicellular
+<#unicellular>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Unicellular"@en ;
     skos:definition "Having only one cell, or consisting of one cell."@en ;
 
-    skos:narrower trait:siphonous ;
+    skos:narrower <#siphonous> ;
 
     skos:exactMatch ... ;  
 .
 
-trait:siphonous
+<#siphonous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Siphonous"@en ;
     skos:definition "Thallus consisting of a large tubular multinucleate cell (siphon) lacking cross-walls except during the formation of reproductive structures (note that many species of Dasycladales remain uninucleate throughout much of their life cycle with a giant diploid nucleus that only divides at the onset of reproduction). Also known as acellular."@en ;
 
-    skos:broader trait:unicellular ; 
+    skos:broader <#unicellular> ; 
 
     skos:exactMatch ... ; 
 .
 
-trait:non_unicellular
+<#non_unicellular>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Non-unicellular"@en ;
     skos:definition "Having more than one cell, or consisting of more than one cell (adapted from Henderson's Dictionary of Biology)."@en ;
 
-    skos:narrower trait:coenocytic ; 
+    skos:narrower <#coenocytic> ; 
 .
 
-trait:coenocytic
+<#coenocytic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Coenocytic"@en ;
     skos:definition "Multicellular thallus composed of multinucleate cells. Also known as siphonocladous."@en ;
 
-    skos:broader trait:non_unicellular ; 
+    skos:broader <#non_unicellular> ; 
 .

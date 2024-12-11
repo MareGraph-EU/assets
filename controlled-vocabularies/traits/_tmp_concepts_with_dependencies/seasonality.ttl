@@ -4,50 +4,48 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/seasonality> .
 
-
-trait:seasonality
+<>
     a skos:Collection ; 
     dct:description "Trait that describes the periodicity of an organism related to the seasons."@en ;
 
-    skos:member trait:spring , trait:summer , trait:autumn , trait:winter , trait:unreported_seasonality ; 
+    skos:member <#spring> , <#summer> , <#autumn> , <#winter> , <#unreported_seasonality> ; 
 
     skos:closeMatch ... ; 
 .
 
-trait:spring
+<#spring>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Spring"@en ;
     skos:definition "The organism can be observed in spring."@en ;
 .
 
-
-trait:summer
+<#summer>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Summer"@en ;
     skos:definition "The organism can be observed in summer."@en ;
 .
 
-trait:autumn
+<#autumn>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Autumn"@en ;
     skos:definition "The organism can be observed in autumn."@en ;
 .
 
-trait:winter
+<#winter>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Winter"@en ;
     skos:definition "The organism can be observed in winter."@en ;
 .
 
-trait:unreported_seasonality
+<#unreported_seasonality>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Unreported seasonality"@en ;
     skos:definition "So far it has not been reported in literature in which season(s) this organism can be reported."@en ;
 .

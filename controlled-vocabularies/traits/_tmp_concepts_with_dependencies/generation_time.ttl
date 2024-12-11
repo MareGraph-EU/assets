@@ -4,43 +4,42 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/generation_time> .
 
-
-trait:generation_time
+<>
     a skos:Collection ; 
     dct:description "1: The average duration of a life cycle between birth and reproduction. 2: The mean period of time between reproduction of the parent generation and reproduction of the first filial generation. (Lincoln et al., 1998). Period of time to complete a life cycle in the lab. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)."@en ;
 
-    skos:member trait:1_to_3_months , 
-                trait:3_to_12_months , 
-                trait:1_to_3_years ,
-                trait:more_than_3_years ;
+    skos:member <#1_to_3_months> , 
+                <#3_to_12_months> , 
+                <#1_to_3_years> ,
+                <#more_than_3_years> ;
 .
 
-trait:1_to_3_months
+<#1_to_3_months>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "1 to 3 months"@en ;
     skos:definition "Life cycle completed in 1 to 3 months in the lab. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 .
 
-trait:3_to_12_months
+<#3_to_12_months>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "3 to 12 months"@en ;
     skos:definition "Life cycle completed in 3 to 12 months in the lab. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 .
 
-trait:1_to_3_years
+<#1_to_3_years>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "1 to 3 years"@en ;
     skos:definition "Life cycle completed in 1 to 3 years in the lab. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 .
 
-trait:more_than_3_years
+<#more_than_3_years>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "More than 3 years"@en ;
     skos:definition "Life cycle completed in more than 3 years in the lab. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 .

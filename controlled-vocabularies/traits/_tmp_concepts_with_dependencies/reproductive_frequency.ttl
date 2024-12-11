@@ -4,53 +4,52 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/reproductive_frequency> .
 
-
-trait:reproductive_frequency
+<>
     a skos:Collection ; 
     dct:description "Trait that describes the fertility period of an organism."@en ;
 
-    skos:member trait:all_over_the_year , 
-                trait:one_long_period_a_year , 
-                trait:one_short_period_a_year , 
-                trait:several_long_periods_a_year , 
-                trait:several_short_periods_a_year ; 
+    skos:member <#all_over_the_year> , 
+                <#one_long_period_a_year> , 
+                <#one_short_period_a_year> , 
+                <#several_long_periods_a_year> , 
+                <#several_short_periods_a_year> ; 
 
     skos:exactMatch ... ; 
 .
 
-trait:all_over_the_year
+<#all_over_the_year>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "All over the year"@en ;
     skos:definition "Fertile individuals observed all over the year. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 .
 
-trait:one_long_period_a_year
+<#one_long_period_a_year>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "One long period a year"@en ;
     skos:definition "A unique fertility period lasting more than 1 month. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 .
 
-trait:one_short_period_a_year
+<#one_short_period_a_year>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "One short period a year"@en ;
     skos:definition "A unique fertility period lasting less than 1 month. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 .
 
-trait:several_long_periods_a_year
+<#several_long_periods_a_year>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Several long periods a year"@en ;
     skos:definition "Several distinct fertility periods lasting more than 1 month each. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 .
 
-trait:several_short_periods_a_year
+<#several_short_periods_a_year>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Several short periods a year"@en ;
     skos:definition "Several distinct fertility periods lasting less than 1 month each."@en ;
 .

@@ -4,47 +4,46 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/spawning> .
 
-
-trait:spawning
+<>
     a skos:Collection ; 
     dct:description "The release of gametes or eggs into the water (Lincoln et al., 1998)."@en ;
 
-    skos:member trait:fertilisation_in_the_water_column , 
-                trait:fertilisation_on_female_gametophyte , 
-                trait:spawning_not_applicable , 
-                trait:spawning_unknown , 
-                trait:spawning_unreported ; 
+    skos:member <#fertilisation_in_the_water_column> , 
+                <#fertilisation_on_female_gametophyte> , 
+                <#spawning_not_applicable> , 
+                <#spawning_unknown> , 
+                <#spawning_unreported> ; 
 .
 
-trait:fertilisation_in_the_water_column
+<#fertilisation_in_the_water_column>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Fertilisation in the water column"@en ;
     skos:definition "Fertilization with gametes released in the water column."@en ;
 .
-trait:fertilisation_on_female_gametophyte
+<#fertilisation_on_female_gametophyte>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Fertilisation on female gametophyte"@en ;
     skos:definition "Female gamete retained on the female gametophyte (e.g. Rhodophyta)."@en ;
 .
-trait:spawning_not_applicable
+<#spawning_not_applicable>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Spawning not applicable"@en ;
     skos:definition "The attribute 'spawning' is not applicable for this taxon."@en ;
 .
-trait:spawning_unknown
+<#spawning_unknown>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Spawning unknown"@en ;
     skos:definition "According to literature it is unknown which spawning mechanism this organism has."@en ;
 .
-trait:spawning_unreported
+<#spawning_unreported>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Spawning unreported"@en ;
     skos:definition "So far it has not been reported in literature whether or not there is spawning for this taxon."@en ;
 .

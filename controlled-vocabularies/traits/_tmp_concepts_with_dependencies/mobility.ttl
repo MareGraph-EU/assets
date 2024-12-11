@@ -4,35 +4,34 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/mobility> .
 
-
-trait:mobility
+<>
     a skos:Collection ; 
     dct:description "The general shape of the body of an organism."@en ;
 
-    skos:member trait:mobile , trait:sessile , trait:sedentary ; 
+    skos:member <#mobile> , <#sessile> , <#sedentary> ; 
 .
 
-trait:mobile
+<#mobile>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme aphia-trait:<https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "mobile"@en ;
     skos:definition "An organism or population that can change its location or distribution with time; mobility; vagility."@en ;
 
     skos:exactMatch ... ; 
 .
-trait:sessile
+<#sessile>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme aphia-trait:<https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "sessile"@en ;
     skos:definition "Non-motile; permanently attached at the base."@en ;
 
     skos:exactMatch ... ; 
 .
-trait:sedentary
+<#sedentary>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme aphia-trait:<https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "sedentary"@en ;
     skos:definition "Attached to the substrate; not free-living."@en ;
 

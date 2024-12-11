@@ -4,47 +4,46 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/supporting_structure_enclosure> .
 
-
-trait:supporting_structure_enclosure
+<>
     a skos:Collection ;
     dct:description "Hard framework, internal or external, which supports and protects softer parts of plant, animal or unicellular organism, and to which muscles usually attach in animals, includes skeletons (derived from Lawrence, 2005)."@en ;
 
-    skos:member trait:unsupported , trait:hydrostatic_skeleton , trait:endoskeleton , trait:exoskeleton , trait:external_tube ;
+    skos:member <#unsupported> , <#hydrostatic_skeleton> , <#endoskeleton> , <#exoskeleton> , <#external_tube> ;
 .
 
-trait:unsupported
+<#unsupported>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "unsupported"@en ;
     skos:definition "The organism has no supporting structures and enclosures; no skeleton (derived from Lawrence 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."
 .
 
-trait:hydrostatic_skeleton
+<#hydrostatic_skeleton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "hydrostatic skeleton"@en ;
     skos:definition "Skeletal support provided by hydrostatic pressure from a fluid filled cavity (e.g. the coelum) surrounded by muscles. Hydrostatic pressure provides skeletal support in sea anemones, jellyfish, nematodes, annelids, echinoderms, and other groups (derived from Lawrence, 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."
 .
 
-trait:endoskeleton
+<#endoskeleton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "endoskeleton"@en ;
     skos:definition "Any internal skeleton or supporting structure (derived from Lawrence 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."
 .
 
-trait:exoskeleton
+<#exoskeleton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "exoskeleton (including shells)"@en ;
     skos:definition "A rigid external structure that supports and/or protects the body of an organism and that is mainly completely secreted by the epidermis (derived from Lawrence 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."
 .
 
-trait:external_tube
+<#external_tube>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "external tube"@en ;
     skos:definition "A built-structure inhabited by an organism and essential to its survival, but not part of its body, composed of hardened (either rigid or flexible) secretions, with or without the addition of embedded particles, with those particles either selectively collected from the environment or passively becoming glued during formation (pers. comm. Read, G.)."
 .

@@ -4,40 +4,39 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/calcification> .
 
-
-trait:calcification
+<>
     a skos:Collection ; 
     dct:description "Mode of calcification of seaweed."@en ;
 
-    skos:member trait:calcified_articulated , trait:calcified_non_articulated , trait:non_calcified , trait:unreported ; 
+    skos:member <#calcified_articulated> , <#calcified_non_articulated> , <#non_calcified> , <#unreported> ; 
 .
 
-trait:calcified_articulated
+<#calcified_articulated>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "calcified articulated"@en ;
     skos:definition "Algal thallus that is encrusted or impregnated with lime with non-calcified articulae rendering the thallus a segmented nature (macroalgae)."@en ;
 .
 
-trait:calcified_non_articulated
+<#calcified_non_articulated>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "calcified non-articulated"@en ;
     skos:definition "Algal thallus that is encrusted or impregnated with lime lacking non-calcified articulae (macroalgae)."@en ;
 .
 
-trait:non_calcified
+<#non_calcified>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Non-calcified"@en ;
     skos:definition "Algal thallus not encrusted or impregnated with lime (macroalgae)."@en ;
 .
 
-trait:unreported
+<#unreported>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Unreported"@en ;
     skos:definition "So far it has not been reported in literature whether or not the algal thallus is calcified (macroalgae)."@en ;
 .

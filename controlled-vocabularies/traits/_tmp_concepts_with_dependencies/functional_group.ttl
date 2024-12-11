@@ -3,333 +3,332 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/functional_group> .
 
-
-trait:functional_group
+<>
     a skos:Collection ; 
 
-    skos:member trait:benthos , 
-                    trait:megabenthos , 
-                    trait:macrobenthos , 
-                    trait:meiobenthos , 
-                    trait:microbenthos , 
-                    trait:hyperbenthos , 
-                    trait:epibenthos , 
-                    trait:endobenthos , 
-                    trait:phytobenthos , 
-                trait:plankton ,
-                    trait:megaplankton, 
-                    trait:macroplankton, 
-                    trait:mesoplankton, 
-                    trait:microplankton, 
-                    trait:nanoplankton, 
-                    trait:picoplankton, 
-                    trait:femtoplankton, 
-                    trait:zooplankton , 
-                    trait:phytoplankton ,
-                    trait:mixoplankton , 
-                        trait:endosymbiotic_specialist_non_constitutive_mixoplankton , 
-                        trait:constitutive_mixoplankton , 
-                        trait:plastid_specialists_non_constitutive_mixoplankton , 
-                        trait:general_non_constitutive_mixoplankton , 
-                trait:nekton , 
-                trait:neuston , 
-                trait:pleuston , 
-                trait:benthopelagic , 
-                trait:edaphofauna , 
-                    trait:macroedaphofauna , 
-                    trait:mesoedaphofauna , 
-                trait:functional_group_not_applicable ; 
+    skos:member <#benthos> , 
+                    <#megabenthos> , 
+                    <#macrobenthos> , 
+                    <#meiobenthos> , 
+                    <#microbenthos> , 
+                    <#hyperbenthos> , 
+                    <#epibenthos> , 
+                    <#endobenthos> , 
+                    <#phytobenthos> , 
+                <#plankton> ,
+                    <#megaplankton>, 
+                    <#macroplankton>, 
+                    <#mesoplankton>, 
+                    <#microplankton>, 
+                    <#nanoplankton>, 
+                    <#picoplankton>, 
+                    <#femtoplankton>, 
+                    <#zooplankton> , 
+                    <#phytoplankton> ,
+                    <#mixoplankton> , 
+                        <#endosymbiotic_specialist_non_constitutive_mixoplankton> , 
+                        <#constitutive_mixoplankton> , 
+                        <#plastid_specialists_non_constitutive_mixoplankton> , 
+                        <#general_non_constitutive_mixoplankton> , 
+                <#nekton> , 
+                <#neuston> , 
+                <#pleuston> , 
+                <#benthopelagic> , 
+                <#edaphofauna> , 
+                    <#macroedaphofauna> , 
+                    <#mesoedaphofauna> , 
+                <#functional_group_not_applicable> ; 
 . 
 
-trait:benthos
+<#benthos>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Benthos"@en ;
     skos:definition "Benthic organisms, or the benthos, are those that live on or burried in the bottom."@en ;
 
-    skos:narrower trait:megabenthos, trait:macrobenthos, trait:meiobenthos, trait:microbenthos, trait:hyperbenthos, trait:epibenthos, trait:endobenthos, trait:phytobenthos ;
+    skos:narrower <#megabenthos>, <#macrobenthos>, <#meiobenthos>, <#microbenthos>, <#hyperbenthos>, <#epibenthos>, <#endobenthos>, <#phytobenthos> ;
 
     skos:closeMatch ... ; 
 .
 
-trait:megabenthos
+<#megabenthos>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Megabenthos"@en ;
     skos:definition "The component of the benthos that consists of very large organisms over 20 cm in size (as defined, agreed and applied by the WoRMS Steering Committee)."@en ;
 
-    skos:broader trait:benthos ; 
+    skos:broader <#benthos> ; 
 .
 
-trait:macrobenthos
+<#macrobenthos>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Macrobenthos"@en ;
     skos:definition "The component of the benthos that consists of large organisms 2 to 200 mm in size (as defined, agreed and applied by the WoRMS Steering Committee)."@en ;
 
-    skos:broader trait:benthos ; 
+    skos:broader <#benthos> ; 
 .
 
-trait:meiobenthos
+<#meiobenthos>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Meiobenthos"@en ;
     skos:definition "The component of the benthos that consists of organisms 0,2 to 2 mm in size (as defined, agreed and applied by the WoRMS Steering Committee)."@en ;
 
-    skos:broader trait:benthos ; 
+    skos:broader <#benthos> ; 
 .
 
-trait:microbenthos
+<#microbenthos>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Microbenthos"@en ;
     skos:definition "The component of the benthos that consists of organisms 20 to 200 microns (µm) (0,02 to 0,2 mm) in size (as defined, agreed and applied by the WoRMS Steering Committee)."@en ;
 
-    skos:broader trait:benthos ; 
+    skos:broader <#benthos> ; 
 .
 
-trait:hyperbenthos
+<#hyperbenthos>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Hyperbenthos"@en ;
     skos:definition "Organisms living above but close to the substratum."@en ;
 
-    skos:broader trait:benthos ; 
+    skos:broader <#benthos> ; 
 .
 
-trait:epibenthos
+<#epibenthos>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Epibenthos"@en ;
     skos:definition "Organisms living on the surface of the bottom. Epifaunal or epifloral."@en ;
 
-    skos:broader trait:benthos ; 
+    skos:broader <#benthos> ; 
 
     skos:closeMatch ... ; 
 .
 
-trait:endobenthos
+<#endobenthos>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Endobenthos"@en ;
     skos:definition "Organisms living within the sediment of a lake or sea floor; infauna. Also called endobiontic."@en ;
 
-    skos:broader trait:benthos ; 
+    skos:broader <#benthos> ; 
 
     skos:closeMatch ... ; 
 .
 
-trait:phytobenthos
+<#phytobenthos>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Phytobenthos"@en ;
     skos:definition "1: A bottom-living plant community; phytobenthon. 2: That part of the bottom of a stream or lake covered by vegetation; cf. geobenthos."@en ;
 
-    skos:broader trait:benthos ; 
+    skos:broader <#benthos> ; 
 .
 
-trait:plankton
+<#plankton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Plankton"@en ;
     skos:definition "Organisms that cannot maintain a fixed location in the water column, and are thus moved by the tides and currents."@en ;
 
-    skos:narrower trait:megaplankton, trait:macroplankton, trait:mesoplankton, trait:microplankton, trait:nanoplankton, trait:picoplankton, trait:femtoplankton, trait:zooplankton , trait:phytoplankton ,
-        trait:mixoplankton , trait:endosymbiotic_specialist_non_constitutive_mixoplankton , trait:constitutive_mixoplankton , trait:plastid_specialists_non_constitutive_mixoplankton , trait:general_non_constitutive_mixoplankton ;
+    skos:narrower <#megaplankton>, <#macroplankton>, <#mesoplankton>, <#microplankton>, <#nanoplankton>, <#picoplankton>, <#femtoplankton>, <#zooplankton> , <#phytoplankton> ,
+        <#mixoplankton> , <#endosymbiotic_specialist_non_constitutive_mixoplankton> , <#constitutive_mixoplankton> , <#plastid_specialists_non_constitutive_mixoplankton> , <#general_non_constitutive_mixoplankton> ;
 .
 
-trait:megaplankton
+<#megaplankton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Megaplankton"@en ;
     skos:definition "The component of the plankton that consists of very large organisms over 20 cm in size."@en ;
 
-    skos:broader trait:plankton ; 
+    skos:broader <#plankton> ; 
 .
 
-trait:macroplankton
+<#macroplankton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Macroplankton"@en ;
     skos:definition "The component of the plankton that consists of large organisms 2 to 200 mm in size (as defined, agreed and applied by the WoRMS Steering Committee)."@en ;
 
-    skos:broader trait:plankton ; 
+    skos:broader <#plankton> ; 
 .
 
-trait:mesoplankton
+<#mesoplankton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Mesoplankton"@en ;
     skos:definition "The component of the plankton that consists of organisms 0,2 to 2 mm in size."@en ;
 
-    skos:broader trait:plankton ; 
+    skos:broader <#plankton> ; 
 .
 
-trait:microplankton
+<#microplankton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Microplankton"@en ;
     skos:definition "The component of the plankton that consists of organisms 20 to 200 microns (µm) (0,02 to 0,2 mm) in size."@en ;
 
-    skos:broader trait:plankton ; 
+    skos:broader <#plankton> ; 
 .
 
-trait:nanoplankton
+<#nanoplankton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Nanoplankton"@en ;
     skos:definition "The component of the plankton that consists of very small organisms 2 to 20 microns (µm) (0,002 to 0,02 mm) in size; they are too small to catch in a standard plankton net."@en ;
 
-    skos:broader trait:plankton ; 
+    skos:broader <#plankton> ; 
 .
 
-trait:picoplankton
+<#picoplankton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Picoplankton"@en ;
     skos:definition "The component of the plankton that consists of extremely small organisms, 0,2 to 2 microns (µm) (0,0002 to 0,002 mm) in size; they are too small to catch in a standard plankton net."@en ;
 
-    skos:broader trait:plankton ; 
+    skos:broader <#plankton> ; 
 .
 
-trait:femtoplankton
+<#femtoplankton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Femtoplankton"@en ;
     skos:definition "The component of the plankton that consists of extremely small organisms, 0,02 to 0,2 microns (µm) (0,00002 to 0,0002 mm) in size; they are too small to catch in a standard plankton net."@en ;
 
-    skos:broader trait:plankton ; 
+    skos:broader <#plankton> ; 
 .
 
-trait:zooplankton
+<#zooplankton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Zooplankton"@en ;
     skos:definition "Plankton obtaining nourishment via heterotrophy. They are incapable of phototrophy; cf. mixoplankton."@en ;
 
-    skos:broader trait:plankton ; 
+    skos:broader <#plankton> ; 
 .
 
-trait:phytoplankton
+<#phytoplankton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Phytoplankton"@en ;
     skos:definition "Plankton obtaining nourishment via photo(auto)trophy and osmo(hetero)trophy. They are incapable of phagotrophy; cf. mixoplankton."@en ;
 
-    skos:broader trait:plankton ; 
+    skos:broader <#plankton> ; 
 .
 
-trait:mixoplankton
+<#mixoplankton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Mixoplankton"@en ;
     skos:definition "Plankton protists capable of obtaining nourishment via photo(auto)trophy and phago(hetero)trophy, as well as via osmo(hetero)trophy."@en ;
 
-    skos:broader trait:plankton ; 
+    skos:broader <#plankton> ; 
 .
 
-trait:endosymbiotic_specialist_non_constitutive_mixoplankton 
+<#endosymbiotic_specialist_non_constitutive_mixoplankton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Endosymbiotic Specialist Non-Constitutive Mixoplankton"@en ;
     skos:definition "Specialist non-constitutive mixoplankton (SNCMs) are NCMs that acquire their capacity for phototrophy from specific phototrophic prey (cf. GNCM). Endosymbiotic Specialist Non-Constitutive Mixoplankton (eSNCM) are endosymbiotic acquiring phototrophy by harbouring specific phototrophic prey."@en ;
 
-    skos:broader trait:mixoplankton ; 
+    skos:broader <#mixoplankton> ; 
 .
 
-trait:constitutive_mixoplankton 
+<#constitutive_mixoplankton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Constitutive Mixoplankton"@en ;
     skos:definition "Protist plankton with an inherent capacity for phototrophy that can also exhibit phagotrophy."@en ;
 
-    skos:broader trait:mixoplankton ; 
+    skos:broader <#mixoplankton> ; 
 .
 
-trait:plastid_specialists_non_constitutive_mixoplankton 
+<#plastid_specialists_non_constitutive_mixoplankton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Plastid Specialists Non-Constitutive Mixoplankton"@en ;
     skos:definition "Specialist non-constitutive mixoplankton (SNCMs) are NCMs that acquire their capacity for phototrophy from specific phototrophic prey (cf. GNCM). Plastid Specialists Non-Constitutive Mixoplankton (pSNCMs) are plastidic specialists acquiring phototrophy from specialist prey type(s)."@en ;
 
-    skos:broader trait:mixoplankton ; 
+    skos:broader <#mixoplankton> ; 
 .
 
-trait:general_non_constitutive_mixoplankton
+<#general_non_constitutive_mixoplankton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "General Non-Constitutive Mixoplankton"@en ;
     skos:definition "NCMs that acquire their capacity for phototrophy from general (i.e. non-specific) phototrophic prey (cf. SNCM). Non-constitutive mixoplankton (NCMs) is protist plankton that acquire the capability for phototrophy from consumption (via phagotrophy) of phototrophic prey."@en ;
 
-    skos:broader trait:mixoplankton ; 
+    skos:broader <#mixoplankton> ; 
 .
 
-trait:nekton
+<#nekton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Nekton"@en ;
     skos:definition "Organisms that swim strongly enough to move against the current."@en ;
 .
 
-trait:neuston
+<#neuston>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Neuston"@en ;
     skos:definition "Organisms that live right at the sea surface but remain underwater."@en ;
 
     skos:closeMatch ... ; 
 .
 
-trait:pleuston
+<#pleuston>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Pleuston"@en ;
     skos:definition "Organisms that live right at the sea surface, with part of the body projecting into the air."@en ;
 
     skos:closeMatch ... ; 
 .
 
-trait:benthopelagic
+<#benthopelagic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Benthopelagic"@en ;
     skos:definition "Organisms living and feeding near the bottom as well as in midwaters or near the surface. Feeding on benthic as well as free swimming organisms. Many freshwater fish are opportunistic feeders that forage on the bottom as well as in midwater and near the surface, also pertaining to forms which hover or swim just over the floor of the sea, e.g. Halosauridae, Macrouridae, Moridae, Brotulidae; the depth zone about 100 metres off the bottom at all depths below the edge of the continental shelf. "@en ;
 
     skos:exactMatch ... ; 
 .
 
-trait:edaphofauna
+<#edaphofauna>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Edaphofauna"@en ;
     skos:definition "Animals that spend a significant portion of their life cycle within a soil profile or at the soil-litter interface"@en ;
 
-    skos:narrower trait:edaphofauna ; 
+    skos:narrower <#edaphofauna> ; 
 .
 
-trait:macroedaphofauna
+<#macroedaphofauna>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Marco Edaphofauna"@en ;
     skos:definition "Macro edaphofauna."@en ; 
 
-    skos:broader trait:edaphofauna ; 
+    skos:broader <#edaphofauna> ; 
 .
 
-trait:mesoedaphofauna
+<#mesoedaphofauna>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Meso Edaphofauna"@en ;
     skos:definition "Meso edaphofauna."@en ;
 
-    skos:broader trait:edaphofauna ; 
+    skos:broader <#edaphofauna> ; 
 .
 
-trait:functional_group_not_applicable
+<#functional_group_not_applicable>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Functional group not applicable"@en ;
     skos:definition "The attribute 'functional group' is not applicable for this taxon. This is e.g. used for parasitic taxa, to overwrite the functional group inherited from higher taxa."@en ;
 .

@@ -4,28 +4,27 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/macroalgal_blooming> .
 
-
-trait:macroalgal_blooming
+<>
     a skos:Collection ; 
     dct:description "Types of blooming specific for macroalgae species."@en ;
 
-    skos:member trait:macroalgal_blooming_yes , trait:macroalgal_blooming_no ;
+    skos:member <#macroalgal_blooming_yes> , <#macroalgal_blooming_no> ;
 
     skos:closeMatch ... ; 
 . 
 
-trait:macroalgal_blooming_yes
+<#macroalgal_blooming_yes>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Macroalgal blooming potential"@en ;
     skos:definition "The species has the potential to go through episodes of intense growth and mass proliferation of the thallus under specific environmental conditions such as high nutrient and temperature conditions."@en ;
 .
 
-trait:macroalgal_blooming_no
+<#macroalgal_blooming_no>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "No macroalgal blooming potential"@en ;
     skos:definition "The species does not have the obvious potential to go through episodes of intense growth and mass proliferation of the thallus under specific environmental conditions such as high nutrient and temperature conditions."@en ;
 .

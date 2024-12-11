@@ -4,10 +4,9 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/body_size> .
 
-
-trait:body_size
+<>
     a skos:Concept, aphia-trait:Trait ;
     dct:description "A measurement of the size of the organism. The measurement used to express body size varies within taxonomic groups. For example, some disciplines measure diameter, others carapace length, total body length or wing span. Also, body size can vary with gender and life stage."@en ;
 

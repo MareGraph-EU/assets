@@ -4,81 +4,80 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/life_span> .
 
-
-trait:life_span
+<>
     a skos:Collection ; 
     dct:description "Longevity; the maximum or mean duration of life of an individual or group."@en ;
 
-    skos:member trait:annual , 
-                    trait:ephemeral ,
-                trait:perennial , 
-                    trait:long_perennial ,
-                    trait:short_perennial ,
-                trait:unreported_life_span ;
+    skos:member <#annual> , 
+                    <#ephemeral> ,
+                <#perennial> , 
+                    <#long_perennial> ,
+                    <#short_perennial> ,
+                <#unreported_life_span> ;
 
     skos:exactMatch ... ; 
 .
 
-trait:annual
+<#annual>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Annual"@en ;
     skos:definition "(1) Appl. structures or growth features that are marked off or completed yearly; (2) living for a year only; (3) completing life-cycle in a year from germination; (4) n. plant that completes its life-cycle in a year. (Henderson's Dictionary of Biology; Lawrence, 2005). Thallus which survives only one growing season (less than 1 year) (macroalgae; Womersley, 1987)."@en ;
 
-    skos:narrower trait:ephemeral ;
+    skos:narrower <#ephemeral> ;
 
     skos:exactMatch ... ; 
 .
 
-trait:ephemeral
+<#ephemeral>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Ephemeral"@en ;
     skos:definition "(1) Short-lived; (2) taking place once only, appl. plant movements as expanding buds; (3) completing life-cycle within a brief period; (4) n. a short-lived plant or animal species (Henderson's Dictionary of Biology; Lawrence, 2005). Thallus which survives for only a few weeks (less than 1 month) (macroalgae; Womersley, 1987)."@en ;
 
-    skos:broader trait:annual ; 
+    skos:broader <#annual> ; 
 
     skos:exactMatch ... ; 
 .
 
-trait:perennial
+<#perennial>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Perennial"@en ;
     skos:definition "Plant which persists for several years."@en ;
 
-    skos:narrower trait:long_perennial , trait:short_perennial ; 
+    skos:narrower <#long_perennial> , <#short_perennial> ; 
 
     skos:exactMatch ... ; 
 .
 
-trait:long_perennial
+<#long_perennial>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Long perennial"@en ;
     skos:definition "Thallus or part thereof with a lifespan exceeding 3 years (more than 3 years) (macroalgae; Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 
-    skos:broader trait:perennial ; 
+    skos:broader <#perennial> ; 
 
     skos:exactMatch ... ; 
 .
 
-trait:short_perennial
+<#short_perennial>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Short perennial"@en ;
     skos:definition "Thallus or part thereof with a lifespan exceeding 1 year but under 3 years (macroalgae; Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 
-    skos:broader trait:perennial ; 
+    skos:broader <#perennial> ; 
 
     skos:exactMatch ... ; 
 .
 
-trait:unreported_life_span
+<#unreported_life_span>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Unreported life span"@en ;
     skos:definition "So far it has not been reported in literature which life span this organism has."@en ;
 .

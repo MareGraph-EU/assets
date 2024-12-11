@@ -4,395 +4,394 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/feedingtype> .
 
-
-trait:feedingtype
+<>
     a skos:Collection ; 
     dct:description "A mixture of the feeding method/behaviour (how the organism gathers food, and from where; e.g. predator) and the food type/diet (what it feeds on; e.g. carnivore) of an organism."@en ;
 
-    skos:member trait:carnivore , 
-                trait:commensal , 
-                trait:deposit_feeder , 
-                    trait:non_selective_deposit_feeder , 
-                    trait:selective_deposit_feeder , 
-                    trait:subsurface_deposit_feeder , 
-                    trait:surface_deposit_feeder , 
-                trait:detritus_feeder , 
-                trait:epigrowth_feeder , 
-                trait:filter_feeder , 
-                trait:grazer , 
-                    trait:interface_grazer , 
-                    trait:grazer_on_organic_substrates , 
-                    trait:grazer_on_periphyton , 
-                    trait:grazer_on_algae , 
-                    trait:grazer_on_phanerogams , 
-                trait:herbivore , 
-                trait:kleptovore , 
-                trait:omnivore , 
-                trait:parasitic , 
-                    trait:ectoparasitic , 
-                    trait:endocommensal , 
-                    trait:endoparasitic , 
-                trait:predator , 
-                    trait:predator_on_sessile_prey , 
-                    trait:predator_on_mobile_prey , 
-                trait:predator_omnivore , 
-                trait:scavenger , 
-                trait:suspension_feeder , 
-                    trait:facultative_suspension_feeder , 
-                trait:symbiotic , 
-                    trait:epizoic , 
-                    trait:symbiotic_with_chemosymbionts , 
-                trait:xylophagous , 
-                trait:non_feeding_feedingtype , 
-                trait:unknown_feedingtype ; 
+    skos:member <#carnivore> , 
+                <#commensal> , 
+                <#deposit_feeder> , 
+                    <#non_selective_deposit_feeder> , 
+                    <#selective_deposit_feeder> , 
+                    <#subsurface_deposit_feeder> , 
+                    <#surface_deposit_feeder> , 
+                <#detritus_feeder> , 
+                <#epigrowth_feeder> , 
+                <#filter_feeder> , 
+                <#grazer> , 
+                    <#interface_grazer> , 
+                    <#grazer_on_organic_substrates> , 
+                    <#grazer_on_periphyton> , 
+                    <#grazer_on_algae> , 
+                    <#grazer_on_phanerogams> , 
+                <#herbivore> , 
+                <#kleptovore> , 
+                <#omnivore> , 
+                <#parasitic> , 
+                    <#ectoparasitic> , 
+                    <#endocommensal> , 
+                    <#endoparasitic> , 
+                <#predator> , 
+                    <#predator_on_sessile_prey> , 
+                    <#predator_on_mobile_prey> , 
+                <#predator_omnivore> , 
+                <#scavenger> , 
+                <#suspension_feeder> , 
+                    <#facultative_suspension_feeder> , 
+                <#symbiotic> , 
+                    <#epizoic> , 
+                    <#symbiotic_with_chemosymbionts> , 
+                <#xylophagous> , 
+                <#non_feeding_feedingtype> , 
+                <#unknown_feedingtype> ; 
 
     skos:closeMatch ... ; 
 .
 
-trait:carnivore
+<#carnivore>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Carnivore"@en ;
     skos:definition "Flesh-eating; creophagous; sarcophagous."@en ;
 
     skos:exactMatch ... ;
 .
 
-trait:commensal
+<#commensal>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Commensal"@en ;
     skos:definition "Participating in commensalism. Commensalism is symbiosis in which one species derives benefit from a common food supply whilst the other species is not adversely affected."@en ;
 
     skos:closeMatch ... ; 
 .
 
-trait:deposit_feeder
+<#deposit_feeder>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Deposit feeder"@en ;
     skos:definition "Any organism that feeds on fragmented particulate organic matter in or on the substratum; a detritivorous organism."@en ;
 
-    skos:narrower trait:non_selective_deposit_feeder , trait:selective_deposit_feeder , trait:subsurface_deposit_feeder , trait:surface_deposit_feeder ; 
+    skos:narrower <#non_selective_deposit_feeder> , <#selective_deposit_feeder> , <#subsurface_deposit_feeder> , <#surface_deposit_feeder> ; 
 
     skos:closeMatch ... ; 
 .
 
-trait:non_selective_deposit_feeder
+<#non_selective_deposit_feeder>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "non-selective deposit feeder"@en ;
     skos:definition "Feeding group category for marine free-living meiobenthic Nematoda. Group 1-B: With cup-shaped, conical or cylindrical mouth-cavity, without any armature. Food obtained as above with additional help from active movements of lips and the anterior part of the mouth-cavity itself. Material available as food as above though larger objects (e.g. diatoms) are now being swallowed. Non-selective deposit-feeders."@en ;
 
-    skos:broader trait:deposit_feeder ;
+    skos:broader <#deposit_feeder> ;
 
     skos:closeMatch ... ; 
 .
 
-trait:selective_deposit_feeder
+<#selective_deposit_feeder>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Selective deposit feeder"@en ;
     skos:definition "Feeding group category for marine free-living meiobenthic Nematoda. Group 1-A: Without any mouth-cavity (though sometimes with traces of it). Food obtained mainly by means of the sucking power of the oesophagus. Consistency of material available as food most probable soft or floating. Large and hard particles never found in the intestine. Probably selective deposit-feeders."@en ;
 
-    skos:broader trait:deposit_feeder ;
+    skos:broader <#deposit_feeder> ;
 
     skos:exactMatch ... ; 
 .
 
-trait:subsurface_deposit_feeder
+<#subsurface_deposit_feeder>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Subsurface deposit feeder"@en ;
     skos:definition "Any organism that feeds on fragmented particulate organic matter within the substratum (e.g. Echinocardium cordatum) (adapted from Lincoln et al., 1998)."@en ;
 
-    skos:broader trait:deposit_feeder ;
+    skos:broader <#deposit_feeder> ;
 .
 
-trait:surface_deposit_feeder
+<#surface_deposit_feeder>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Surface deposit feeder"@en ;
     skos:definition "Any organism that feeds on fragmented particulate organic matter on the surface of the substratum (e.g. Corophium volutator) (adapted from Lincoln et al., 1998)."@en ;
 
-    skos:broader trait:deposit_feeder ;
+    skos:broader <#deposit_feeder> ;
 .
 
-trait:detritus_feeder
+<#detritus_feeder>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Detritus feeder"@en ;
     skos:definition "Any organism that feeds on fragmented particulate organic matter (detritus); detritivore."@en ;
 
     skos:closeMatch ... ; 
 .
 
-trait:epigrowth_feeder
+<#epigrowth_feeder>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Epigrowth feeder"@en ;
     skos:definition "Feeding group category for marine free-living meiobenthic Nematoda. Group 2-A: Mouth-cavity provided with small armature. Food scraped off bigger surfaces, or else the food-object is pierced and the cell-liquid sucked through the hole made in its wall. Epigrowth-feeders."@en ;
 .
 
-trait:filter_feeder
+<#filter_feeder>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Filter feeder"@en ;
     skos:definition "Any animal that feeds by filtering suspended particulate organic matter from water."@en ;
 
     skos:closeMatch ... ; 
 .
 
-trait:grazer
+<#grazer>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Grazer"@en ;
     skos:definition "Any organism that feeds on herbage, algae or phytoplankton, by consuming the whole food plant or by cropping the entire surface growth in the case of herbage; cf. browsing."@en ;
 
-    skos:narrower trait:interface_grazer , trait:grazer_on_organic_substrates , trait:grazer_on_periphyton , trait:grazer_on_algae , trait:grazer_on_phanerogams ;
+    skos:narrower <#interface_grazer> , <#grazer_on_organic_substrates> , <#grazer_on_periphyton> , <#grazer_on_algae> , <#grazer_on_phanerogams> ;
 .
 
-trait:interface_grazer
+<#interface_grazer>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Interface grazer"@en ;
     skos:definition ""@en ;
 
-    skos:broader trait:grazer ;
+    skos:broader <#grazer> ;
 
     skos:exactMatch ... ; 
 .
 
-trait:grazer_on_organic_substrates
+<#grazer_on_organic_substrates>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Grazer, on organic substrates."@en ;
     skos:definition "Grazing on organic substrates."@en ;
 
-    skos:broader trait:grazer ;
+    skos:broader <#grazer> ;
 
     skos:closeMatch ... ; 
 .
 
-trait:grazer_on_periphyton
+<#grazer_on_periphyton>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Grazer, on periphyton"@en ;
     skos:definition "Grazing on periphyton. Any organism that feeds on periphyton, a community of plants, animals and associated detritus adhering to and forming a surface coating on stones, plants and other submerged objects (adapted from Lincoln et al., 1998)."@en ;
 
-    skos:broader trait:grazer ;
+    skos:broader <#grazer> ;
 
     skos:closeMatch ... ; 
 .
 
-trait:grazer_on_algae
+<#grazer_on_algae>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Grazer, on algae"@en ;
     skos:definition "Grazing on algae. Any organism that feeds on algae, by consuming the whole food plant (adapted from Lincoln et al., 1998)."@en ;
 
-    skos:broader trait:grazer ;
+    skos:broader <#grazer> ;
 
     skos:closeMatch ... ; 
 .
 
-trait:grazer_on_phanerogams
+<#grazer_on_phanerogams>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Grazer, on phanerogams"@en ;
     skos:definition "Grazing on phanerogams. Phanerogams are all seed-bearing plants (Lawrence, 2005)."@en ;
 
-    skos:broader trait:grazer ;
+    skos:broader <#grazer> ;
 
     skos:closeMatch ... ; 
 .
 
-trait:herbivore
+<#herbivore>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Herbivore"@en ;
     skos:definition "Any organism that feeds on plants; phytophagous; also used of protozoans that feed on bacteria and/or othe algae."@en ;
 
     skos:exactMatch ... ; 
 .
 
-trait:kleptovore
+<#kleptovore>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Kleptovore"@en ;
     skos:definition "Feeding type specifically for Nemertea species that live inside bivalves and steal part of the food that has been filtered by the bivalve. Note that this is different from kleptoparasitism, where the female searches out the prey or stored food of another female, usually of a different species, and takes it for her own offspring (Lawrence, 2005). (The 'kleptovore' feeding type was requested by the Nemertea editors during their WoRMS Editor Workshop in 2017.)"@en ;
 .
 
-trait:omnivore
+<#omnivore>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Omnivore"@en ;
     skos:definition "Any organism that feeds on a mixed diet of plant and animal material."@en ;
 
     skos:exactMatch ... ; 
 .
 
-trait:parasitic
+<#parasitic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Parasitic"@en ;
     skos:definition "Any organism that is intimately associated with, and metabolically dependent upon another living organism (the host) for completion of its life cycle, and which is typically detrimental to the host to a greater or lesser extent."@en ;
 
-    skos:narrower trait:ectoparasitic , trait:endocommensal , trait:endoparasitic ;
+    skos:narrower <#ectoparasitic> , <#endocommensal> , <#endoparasitic> ;
 
     skos:closeMatch ... ; 
 .
 
-trait:ectoparasitic
+<#ectoparasitic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Ectoparasitic"@en ;
     skos:definition "A parasite that lives on the outer surface of its host, ectosite; epiparasite; episite; exoparasite; cf. endoparasite."@en ;
 
-    skos:broader trait:parasitic ;
+    skos:broader <#parasitic> ;
 
     skos:closeMatch ... ; 
 .
 
-trait:endocommensal
+<#endocommensal>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Endocommensal"@en ;
     skos:definition "A commensal symbiont that lives inside of its host."@en ;
 
-    skos:broader trait:parasitic ;
+    skos:broader <#parasitic> ;
 
     skos:closeMatch ... ; 
 .
 
-trait:endoparasitic
+<#endoparasitic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Endoparasitic"@en ;
     skos:definition "An internal parasite which lives within the organs or tissues of its host; endosite; entoparasite; cf. ectoparasite."@en ;
 
-    skos:broader trait:parasitic ;
+    skos:broader <#parasitic> ;
 
     skos:closeMatch ... ; 
 .
 
-trait:predator
+<#predator>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Predator"@en ;
     skos:definition "Any organism that feeds by preying on other organisms, killing them for food."@en ;
 
-    skos:narrower trait:predator_on_sessile_prey , trait:predator_on_mobile_prey ;
+    skos:narrower <#predator_on_sessile_prey> , <#predator_on_mobile_prey> ;
 
     skos:closeMatch ... ; 
 .
 
-trait:predator_on_sessile_prey
+<#predator_on_sessile_prey>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Predator, on sessile prey"@en ;
     skos:definition "Any organism that feeds by preying on sessile organisms, killing them for food (adapted from Lincoln et al., 1998)."@en ;
 
-    skos:broader trait:predator ; 
+    skos:broader <#predator> ; 
 
     skos:closeMatch ... ; 
 .
 
-trait:predator_on_mobile_prey
+<#predator_on_mobile_prey>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Predator, on mobile prey"@en ;
     skos:definition "Any organism that feeds by preying on mobile organisms, killing them for food (adapted from Lincoln et al., 1998)."@en ;
 
-    skos:broader trait:predator ; 
+    skos:broader <#predator> ; 
 
     skos:closeMatch ... ; 
 .
 
-trait:predator_omnivore
+<#predator_omnivore>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Predator/omnivore"@en ;
     skos:definition "Feeding group category for marine free-living meiobenthic Nematoda. Group 2-B: With big and powerful armature of different structure. Mostly predators. Prey swallowed whole or pierced by means of spears or teeth and the liquid food sucked and swallowed."@en ;
 .
 
-trait:scavenger
+<#scavenger>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Scavenger"@en ;
     skos:definition "Any organism that feeds on carrion or organic refuse."@en ;
 
     skos:closeMatch ... ; 
 .
 
-trait:suspension_feeder
+<#suspension_feeder>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Suspension feeder"@en ;
     skos:definition "Any organism that feeds on particulate organic matter suspended in water."@en ;
 
-    skos:narrower trait:facultative_suspension_feeder ;
+    skos:narrower <#facultative_suspension_feeder> ;
 
     skos:closeMatch ... ; 
 .
 
-trait:facultative_suspension_feeder
+<#facultative_suspension_feeder>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Suspension feeder, facultative"@en ;
     skos:definition "Facultative suspension feeder. Some species (e.g. polychaetes Nereis diversicolor and Pygospio elegans, gastropods Valvata piscinalis and Viviparus viviparus, bivalve Macoma balthica, etc) are known to use more than one feeding mode, e.g. to get particles from the water column (by filtering or using mucus nets) and also collect detritus from the surface of the bottom sediments (Fauchald and Jumars 1979; Kuznetzov 1980; Tsikhon-Lukanina 1987). These species were defined as “facultative suspension-feeders” to distinguish them from those which exclusively suspension-feed, i.e. “obligatory suspension-feeders”, such as the bivalve Mytilus edulis trossulus, the barnacle Balanus improvisus or the bryozoan Electra crustulenta."@en ;
 
-    skos:broader trait:suspension_feeder ; 
+    skos:broader <#suspension_feeder> ; 
 .
 
-trait:symbiotic
+<#symbiotic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Symbiotic"@en ;
     skos:definition "Participating in symbiosis. Symbiosis is the living together of two organisms; the relationship between two interacting organisms or populations, commonly used to describe all relationships between members of two different species, and also to include intraspecific associations; sometimes restricted to those associations that are mutually beneficial."@en ;
 
-    skos:narrower trait:epizoic , trait:symbiotic_with_chemosymbionts ;
+    skos:narrower <#epizoic> , <#symbiotic_with_chemosymbionts> ;
 .
 
-trait:epizoic
+<#epizoic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Epizoic"@en ;
     skos:definition "1: Living attached to the body of an animal; used of a non-parasitic animal that lives attached to the outer surface of another animal; epizoan, epizoism, epizoite, epizoon; cf. endozoic. 2: Dispersed by attachment to the surface of an animal; epizoochorous."@en ;
 
-    skos:broader trait:symbiotic ;
+    skos:broader <#symbiotic> ;
 
     skos:closeMatch ... ; 
 .
 
-trait:symbiotic_with_chemosymbionts
+<#symbiotic_with_chemosymbionts>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Symbiotic withchemosymbionts"@en ;
     skos:definition "symbiosis in which a bacterium provides chemically-derived energy and nutrients"@en ;
 
-    skos:broader trait:symbiotic ;
+    skos:broader <#symbiotic> ;
 .
 
-trait:xylophagous
+<#xylophagous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Xylophagous"@en ;
     skos:definition "Feeding on wood; dendrophagous; hylophagous; lignivorous; xylophage, xylophagy."@en ;
 .
 
-trait:non_feeding_feedingtype
+<#non_feeding_feedingtype>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Non-feeding"@en ;
     skos:definition "Non-feeding life stages (e.g. lecithotroph)."@en ;
 .
 
-trait:unknown_feedingtype
+<#unknown_feedingtype>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Unknown feeding type"@en ;
     skos:definition "According to literature it is unknown which feeding type this organism has."@en ;
 .

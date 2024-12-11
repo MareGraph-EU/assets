@@ -4,26 +4,25 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix trait: <https://aphia.org/ns/vocab/attribute-trait/> .
+@base <https://aphia.org/ns/term/vme_indicative_taxon> .
 
-
-trait:vme_indicative_taxon
+<>
     a skos:Collection ; 
     dct:description "..."@en ;
 
-    skos:member trait:vme_indicative_taxon_yes , trait:vme_indicative_taxon_no ;
+    skos:member <#vme_indicative_taxon_yes> , <#vme_indicative_taxon_no> ;
 . 
 
-trait:vme_indicative_taxon_yes
+<#vme_indicative_taxon_yes>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Yes"@en ;
     skos:definition "..."@en ;
 .
 
-trait:vme_indicative_taxon_no
+<#vme_indicative_taxon_no>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme trait:conceptScheme ;
+    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "No"@en ;
     skos:definition ""@en ;
 .
