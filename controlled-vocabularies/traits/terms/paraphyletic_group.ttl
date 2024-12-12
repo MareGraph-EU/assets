@@ -4,8 +4,6 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix <# <https://aphia.org/ns/vocab/attribute-trait/> .
-
 @base <https://aphia.org/ns/term/paraphyletic_group> .
 
 <>

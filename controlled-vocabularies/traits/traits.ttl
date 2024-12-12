@@ -4,7 +4,6 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix cntvocab: <https://aphia.org/ns/vocab/attribute-trait/> .
 @prefix term: <https://aphia.org/ns/term/> .
 
 # Define the concept scheme
