@@ -11,6 +11,8 @@
     dct:description "The general shape of the body of an organism."@en ;
 
     skos:member <#mobile> , <#sessile> , <#sedentary> ; 
+
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_b3723eba> ; 
 .
 
 <#mobile>
@@ -19,7 +21,7 @@
     skos:prefLabel "mobile"@en ;
     skos:definition "An organism or population that can change its location or distribution with time; mobility; vagility."@en ;
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_a548f05b> ; 
 .
 <#sessile>
     a skos:Concept, aphia-trait:Trait ;
@@ -27,7 +29,7 @@
     skos:prefLabel "sessile"@en ;
     skos:definition "Non-motile; permanently attached at the base."@en ;
 
-    skos:exactMatch ... ; 
+    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_89d2fe88> ; 
 .
 <#sedentary>
     a skos:Concept, aphia-trait:Trait ;
@@ -35,5 +37,5 @@
     skos:prefLabel "sedentary"@en ;
     skos:definition "Attached to the substrate; not free-living."@en ;
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_6f7def29> ; 
 .

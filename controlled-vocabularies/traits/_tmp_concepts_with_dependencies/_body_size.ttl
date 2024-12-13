@@ -10,6 +10,8 @@
     a skos:Concept, aphia-trait:Trait ;
     dct:description "A measurement of the size of the organism. The measurement used to express body size varies within taxonomic groups. For example, some disciplines measure diameter, others carapace length, total body length or wing span. Also, body size can vary with gender and life stage."@en ;
 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_efccde31> ; 
+    
     #made up of combination of unit, type, dimension, 
     # + also dependent on: lifestage, gender, locality, corresponding width and corresponding length... 
 .

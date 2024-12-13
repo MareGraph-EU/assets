@@ -12,7 +12,7 @@
 
     skos:member <#macroalgal_blooming_yes> , <#macroalgal_blooming_no> ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_9854e4cf> ; 
 . 
 
 <#macroalgal_blooming_yes>

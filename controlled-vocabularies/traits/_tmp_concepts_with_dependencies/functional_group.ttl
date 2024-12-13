@@ -50,7 +50,7 @@
 
     skos:narrower <#megabenthos>, <#macrobenthos>, <#meiobenthos>, <#microbenthos>, <#hyperbenthos>, <#epibenthos>, <#endobenthos>, <#phytobenthos> ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_c4dc39ff> ; 
 .
 
 <#megabenthos>
@@ -106,7 +106,7 @@
 
     skos:broader <#benthos> ; 
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_e0af2d87> ; 
 .
 
 <#endobenthos>
@@ -117,7 +117,7 @@
 
     skos:broader <#benthos> ; 
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_f5072629> ; 
 .
 
 <#phytobenthos>
@@ -278,7 +278,7 @@
     skos:prefLabel "Neuston"@en ;
     skos:definition "Organisms that live right at the sea surface but remain underwater."@en ;
 
-    skos:closeMatch ... ; 
+    #skos:closeMatch ... ; 
 .
 
 <#pleuston>
@@ -287,7 +287,7 @@
     skos:prefLabel "Pleuston"@en ;
     skos:definition "Organisms that live right at the sea surface, with part of the body projecting into the air."@en ;
 
-    skos:closeMatch ... ; 
+    #skos:closeMatch ... ; 
 .
 
 <#benthopelagic>
@@ -296,7 +296,7 @@
     skos:prefLabel "Benthopelagic"@en ;
     skos:definition "Organisms living and feeding near the bottom as well as in midwaters or near the surface. Feeding on benthic as well as free swimming organisms. Many freshwater fish are opportunistic feeders that forage on the bottom as well as in midwater and near the surface, also pertaining to forms which hover or swim just over the floor of the sea, e.g. Halosauridae, Macrouridae, Moridae, Brotulidae; the depth zone about 100 metres off the bottom at all depths below the edge of the continental shelf. "@en ;
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_14cc53c6> ; 
 .
 
 <#edaphofauna>

@@ -28,6 +28,8 @@
                 <#filiform> , 
                 <#mucilaginous> , 
                 <#stoloniferous> ; 
+
+    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_621df9ab> ; 
 .
 
 <#branched>
@@ -36,7 +38,7 @@
     skos:prefLabel "Branched"@en ;
     skos:definition "Forming main and lateral branches (and branchlets) (macroalgae thallus; Womersley, 1987)."@en ;
 
-    skos:exactMatch ... ; 
+    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_fda4947a> ; 
 .
 <#capitate>
     a skos:Concept, aphia-trait:Trait ;
@@ -44,7 +46,7 @@
     skos:prefLabel "Capitate"@en ;
     skos:definition "(1) Enlarged or swollen at tip; (2) Gathered into a mass at tip of stem or apex (Adapted from Lawrence, 2005 - Henderson's dictionary of Biology)."@en ;
 
-    skos:exactMatch ... ; 
+    #skos:exactMatch ... ; 
 .
 <#crustose>
     a skos:Concept, aphia-trait:Trait ;
@@ -52,7 +54,7 @@
     skos:prefLabel "Crustose"@en ;
     skos:definition "Forming a thin crust on the substratum, appl. certain lichens, sponges, algae (adapted from Henderson's Dictionary of Biology; Lawrence, 2005)."@en ;
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_e02f03a1> ; 
 .
 <#cushion_like>
     a skos:Concept, aphia-trait:Trait ;
@@ -60,7 +62,7 @@
     skos:prefLabel "Cushion-like"@en ;
     skos:definition "Approximating the shape of a cushion (macroalgae thallus; Womersley, 1987)."@en ;
 
-    skos:exactMatch ... ; 
+    #skos:exactMatch ... ; 
 .
 <#discoid>
     a skos:Concept, aphia-trait:Trait ;
@@ -68,7 +70,7 @@
     skos:prefLabel "Discoid"@en ;
     skos:definition "(1) Flat and circular; (2) Disc-shaped (Henderson's Dictionary of Biology; Lawrence, 2005)."@en ;
 
-    skos:exactMatch ... ; 
+    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_ff954754> ; 
 .
 <#erect>
     a skos:Concept, aphia-trait:Trait ;
@@ -76,7 +78,7 @@
     skos:prefLabel "Erect"@en ;
     skos:definition "Upright; (1) appl. ovule, directed towards summit of ovary; (2) appl. plants, growing upright, not decumbent."@en ;
 
-    skos:exactMatch ... ; 
+    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_07baa38c> ; 
 .
 <#filamentous>
     a skos:Concept, aphia-trait:Trait ;
@@ -84,7 +86,7 @@
     skos:prefLabel "Filamentous"@en ;
     skos:definition "Existing out of a branched or unbranched row of cells joined end to end (macroalgae thallus; Womersley, 1987)."@en ;
 
-    skos:exactMatch ... ; 
+    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_c5eb7429> ; 
 .
 <#flabellate>
     a skos:Concept, aphia-trait:Trait ;
@@ -92,7 +94,7 @@
     skos:prefLabel "Flabellate"@en ;
     skos:definition "With projecting flaps on one side, appl. to certain insect antennae (Henderson's Dictionary of Biology; Lawrence, 2005). Fan-shaped, thallus usually expanding upward from a narrow base. (macroalgae thallus; Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 
-    skos:exactMatch ... ; 
+    #skos:exactMatch ... ; 
 .
 <#foliose>
     a skos:Concept, aphia-trait:Trait ;
@@ -100,7 +102,7 @@
     skos:prefLabel "Foliose"@en ;
     skos:definition "(1) With many leaves; (2) Having leaf-like lobes, appl. the thallus of some lichens and liverworts (Henderson's Dictionary of Biology; Lawrence, 2005). Leaf-like (macroalgae thallus; Womersley, 1987)."@en ;
 
-    skos:exactMatch ... ; 
+    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_4a75112b> ; 
 .
 <#pinnate>
     a skos:Concept, aphia-trait:Trait ;
@@ -108,7 +110,7 @@
     skos:prefLabel "Pinnate"@en ;
     skos:definition "(1) Divided in a feathery manner; (2) having lateral processes; (3) (bot.) of a compound leaf, having leaflets on each side of an axis or midrib (Henderson's Dictionary of Biology; Lawrence, 2005). With laterals or branches arranged along each side of an axis or branch (macroalgae thallus; Womersley, 1987)."@en ;
 
-    skos:exactMatch ... ; 
+    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_1107d291> ; 
 .
 <#prostrate>
     a skos:Concept, aphia-trait:Trait ;
@@ -116,7 +118,7 @@
     skos:prefLabel "Prostrate"@en ;
     skos:definition "Trailing on the ground or lying closely along a surface (Henderson's Dictionary of Biology; Lawrence, 2005)."@en ;
 
-    skos:exactMatch ... ; 
+    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_40b5d4f1> ; 
 .
 <#saccate>
     a skos:Concept, aphia-trait:Trait ;
@@ -124,7 +126,7 @@
     skos:prefLabel "Saccate"@en ;
     skos:definition "Pouched (Henderson's Dictionary of Biology; Lawrence, 2005). Inflated, or sac-like (macroalgae thallus; Womersley, 1987)."@en ;
 
-    skos:exactMatch ... ; 
+    #skos:exactMatch ... ; 
 .
 <#spheric>
     a skos:Concept, aphia-trait:Trait ;
@@ -132,7 +134,7 @@
     skos:prefLabel "Spheric"@en ;
     skos:definition "Approximating the shape of a sphere (macroalgae thallus; Womersley, 1987)."@en ;
 
-    skos:exactMatch ... ; 
+    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_f093134c> ; 
 .
 <#tubular>
     a skos:Concept, aphia-trait:Trait ;
@@ -140,7 +142,7 @@
     skos:prefLabel "Tubular"@en ;
     skos:definition "In the form of a tube, having tubes, consisting of tubes (Henderson's Dictionary of Biology; Lawrence, 2005)."@en ;
 
-    skos:exactMatch ... ; 
+    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_6fd475a8> ; 
 .
 <#unreported_body_shape>
     a skos:Concept, aphia-trait:Trait ;
@@ -154,7 +156,7 @@
     skos:prefLabel "Filiform"@en ;
     skos:definition "Resembling a filament (Olivier De Clerck). Thread-like."@en ;
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_58da5576> ; 
 .
 <#mucilaginous>
     a skos:Concept, aphia-trait:Trait ;

@@ -12,7 +12,7 @@
 
     skos:member <#colonial> , <#social_colonies_of_unitary_organisms> , <#modular_organisms> , <#microbial_colonies> , <#solitary> , <#non_territorial_solitary> , <#territorial_solitary> ; 
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_19b4fd7c> ; 
 .
 
 <#colonial>
@@ -23,7 +23,7 @@
 
     skos:narrower <#social_colonies_of_unitary_organisms> , <#modular_organisms> , <#microbial_colonies> ; 
 
-    skos:exactMatch ... ; 
+    #skos:exactMatch ... ; 
 .
 <#social_colonies_of_unitary_organisms>
     a skos:Concept, aphia-trait:Trait ;
@@ -60,7 +60,7 @@
 
     skos:narrower <#non_territorial_solitary> , <#territorial_solitary> ;
 
-    skos:exactMatch ... ; 
+    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_bf85a861> ; 
 .
 
 <#non_territorial_solitary>
@@ -79,5 +79,6 @@
     skos:definition "Independent but maintains a defined territory [Source: https://www.marinespecies.org/traits/wiki/Traits:Territorial]. The animal establishes a territory which it defends against other members of the same species (adapted from Henderson's dictionary of biology; Lawrence, 2005)."@en ;
 
     skos:broader <#solitary> ;
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_22497fe5> ; 
 .
 

@@ -18,7 +18,7 @@
                     <#viviparous_no_parental_care> , 
                     <#viviparous_parental_care> ; 
 
-    skos:closeMatch ... ; 
+    #skos:closeMatch ... ; 
 .
 
 <#oviparous>
@@ -29,7 +29,7 @@
 
     skos:narrower <#oviparous_no_parental_care> , <#oviparous_parental_care> ;
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_b39d678c> ; 
 .
 
 <#oviparous_no_parental_care>
@@ -39,6 +39,7 @@
     skos:definition "Egg laying; producing eggs that are laid and hatch externally (Lincoln et al., 1998). Egg-laying (Henderson's Dictionary of Biology; Lawrence, 2005). There is no form of parental behaviour (adapted from Lincoln et al., 1998)."@en ;
 
     skos:broader <#oviparous> ;
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_408c68bc> ; 
 .
 
 <#oviparous_parental_care>
@@ -48,6 +49,7 @@
     skos:definition "Egg laying; producing eggs that are laid and hatch externally (Lincoln et al., 1998). Egg-laying (Henderson's Dictionary of Biology; Lawrence, 2005). Any form of parental behaviour that appears likely to increase the fitness of a parent's offspring."@en ;
 
     skos:broader <#oviparous> ;
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_78af6dd4> ; 
 .
 
 <#ovoviviparous>
@@ -56,7 +58,7 @@
     skos:prefLabel "Ovoviviparous"@en ;
     skos:definition "Fully formed eggs are retained and hatched inside the maternal body and are released as live offspring. No nutrition is derived from the mother (Lincoln et al., 1998). Pert. organisms that produce an egg with a persistent outer covering, but which hatches within the maternal body (Henderson's Dictionary of Biology; Lawrence, 2005)."@en ;
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_68644c58> ; 
 .
 
 <#viviparous>
@@ -67,7 +69,7 @@
 
     skos:narrower <#viviparous_no_parental_care> , <#viviparous_parental_care> ;
 
-    skos:exactMatch ... ; 
+    #skos:exactMatch ... ; 
 .
 
 <#viviparous_no_parental_care>
@@ -77,6 +79,7 @@
     skos:definition "1: Producing live offspring from within the body of the parent; zoogonous; viviparity, vivipary; cf. larvipary, oviparous, ovoviviparous. 2: Germinating while still attached to the parent plant (Lincoln et al., 1998). Development of an embryo within the body of the parent, in part, resources passing directly from parent to embryo (Barnes et al., 2006). (1) producing young alive rather than laying eggs, appl. all mammals except monotremes, and some animals in other groups; (2) appl. plants, having seeds that germinate while still attached to the parent plant, e.g. mangrove (Henderson's Dictionary of Biology; Lawrence, 2005). There is no form of parental behaviour (adapted from Lincoln et al., 1998)."@en ;
 
     skos:broader <#viviparous> ;
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_408c68bc> ; 
 .
 
 <#viviparous_parental_care>
@@ -86,4 +89,5 @@
     skos:definition "1: Producing live offspring from within the body of the parent; zoogonous; viviparity, vivipary; cf. larvipary, oviparous, ovoviviparous. 2: Germinating while still attached to the parent plant (Lincoln et al., 1998). Development of an embryo within the body of the parent, in part, resources passing directly from parent to embryo (Barnes et al., 2006). (1) producing young alive rather than laying eggs, appl. all mammals except monotremes, and some animals in other groups; (2) appl. plants, having seeds that germinate while still attached to the parent plant, e.g. mangrove (Henderson's Dictionary of Biology; Lawrence, 2005). Any form of parental behaviour that appears likely to increase the fitness of a parent's offspring."@en ;
 
     skos:broader <#viviparous> ;
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_78af6dd4> ; 
 .

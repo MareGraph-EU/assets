@@ -21,7 +21,7 @@
 
     skos:narrower <#siphonous> ;
 
-    skos:exactMatch ... ;  
+    #skos:exactMatch ... ;  
 .
 
 <#siphonous>
@@ -32,7 +32,7 @@
 
     skos:broader <#unicellular> ; 
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_bb3720cd> ; 
 .
 
 <#non_unicellular>

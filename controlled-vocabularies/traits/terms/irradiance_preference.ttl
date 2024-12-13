@@ -12,7 +12,7 @@
 
     skos:member <#photophilic> , <#sciaphilic> ;
 
-    skos:closeMatch ... ; 
+    #skos:closeMatch ... ; 
 . 
 
 <#photophilic>
@@ -21,7 +21,7 @@
     skos:prefLabel "Photophilic"@en ;
     skos:definition "Growing or thriving in habitats with high light intensity."@en ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_3753a259> ; 
 .
 
 <#sciaphilic>
@@ -30,5 +30,5 @@
     skos:prefLabel "Sciaphilic"@en ;
     skos:definition "Growing or thriving in shaded or low light intensity habitats."@en ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_47b9c500> ; 
 .

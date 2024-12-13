@@ -17,7 +17,7 @@
                     <#short_perennial> ,
                 <#unreported_life_span> ;
 
-    skos:exactMatch ... ; 
+    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_872b0018> ; 
 .
 
 <#annual>
@@ -28,7 +28,7 @@
 
     skos:narrower <#ephemeral> ;
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_2a79a7e4> ; 
 .
 
 <#ephemeral>
@@ -39,7 +39,7 @@
 
     skos:broader <#annual> ; 
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_4b481818> ; 
 .
 
 <#perennial>
@@ -50,7 +50,7 @@
 
     skos:narrower <#long_perennial> , <#short_perennial> ; 
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_a53b56cb> ; 
 .
 
 <#long_perennial>
@@ -61,7 +61,7 @@
 
     skos:broader <#perennial> ; 
 
-    skos:exactMatch ... ; 
+    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_ebc72258> ; 
 .
 
 <#short_perennial>
@@ -72,7 +72,7 @@
 
     skos:broader <#perennial> ; 
 
-    skos:exactMatch ... ; 
+    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_e6a65f8c> ; 
 .
 
 <#unreported_life_span>

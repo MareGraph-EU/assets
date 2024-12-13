@@ -47,7 +47,7 @@
                 <#non_feeding_feedingtype> , 
                 <#unknown_feedingtype> ; 
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_97b45c7c> ; 
 .
 
 <#carnivore>
@@ -56,7 +56,7 @@
     skos:prefLabel "Carnivore"@en ;
     skos:definition "Flesh-eating; creophagous; sarcophagous."@en ;
 
-    skos:exactMatch ... ;
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_a0775f94> ;
 .
 
 <#commensal>
@@ -65,7 +65,7 @@
     skos:prefLabel "Commensal"@en ;
     skos:definition "Participating in commensalism. Commensalism is symbiosis in which one species derives benefit from a common food supply whilst the other species is not adversely affected."@en ;
 
-    skos:closeMatch ... ; 
+    #skos:closeMatch ... ; 
 .
 
 <#deposit_feeder>
@@ -76,7 +76,7 @@
 
     skos:narrower <#non_selective_deposit_feeder> , <#selective_deposit_feeder> , <#subsurface_deposit_feeder> , <#surface_deposit_feeder> ; 
 
-    skos:closeMatch ... ; 
+    #skos:closeMatch ... ; 
 .
 
 <#non_selective_deposit_feeder>
@@ -87,7 +87,7 @@
 
     skos:broader <#deposit_feeder> ;
 
-    skos:closeMatch ... ; 
+    #skos:closeMatch ... ; 
 .
 
 <#selective_deposit_feeder>
@@ -98,7 +98,7 @@
 
     skos:broader <#deposit_feeder> ;
 
-    skos:exactMatch ... ; 
+    #skos:exactMatch ... ; 
 .
 
 <#subsurface_deposit_feeder>
@@ -125,7 +125,7 @@
     skos:prefLabel "Detritus feeder"@en ;
     skos:definition "Any organism that feeds on fragmented particulate organic matter (detritus); detritivore."@en ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_32e4af95> ; 
 .
 
 <#epigrowth_feeder>
@@ -141,7 +141,7 @@
     skos:prefLabel "Filter feeder"@en ;
     skos:definition "Any animal that feeds by filtering suspended particulate organic matter from water."@en ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_7a6a2248> ; 
 .
 
 <#grazer>
@@ -151,6 +151,7 @@
     skos:definition "Any organism that feeds on herbage, algae or phytoplankton, by consuming the whole food plant or by cropping the entire surface growth in the case of herbage; cf. browsing."@en ;
 
     skos:narrower <#interface_grazer> , <#grazer_on_organic_substrates> , <#grazer_on_periphyton> , <#grazer_on_algae> , <#grazer_on_phanerogams> ;
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_d0ad8081> ; 
 .
 
 <#interface_grazer>
@@ -161,7 +162,7 @@
 
     skos:broader <#grazer> ;
 
-    skos:exactMatch ... ; 
+    #skos:exactMatch ... ; 
 .
 
 <#grazer_on_organic_substrates>
@@ -172,7 +173,7 @@
 
     skos:broader <#grazer> ;
 
-    skos:closeMatch ... ; 
+    #skos:closeMatch ... ; 
 .
 
 <#grazer_on_periphyton>
@@ -183,7 +184,7 @@
 
     skos:broader <#grazer> ;
 
-    skos:closeMatch ... ; 
+    #skos:closeMatch ... ; 
 .
 
 <#grazer_on_algae>
@@ -194,7 +195,7 @@
 
     skos:broader <#grazer> ;
 
-    skos:closeMatch ... ; 
+    #skos:closeMatch ... ; 
 .
 
 <#grazer_on_phanerogams>
@@ -205,7 +206,7 @@
 
     skos:broader <#grazer> ;
 
-    skos:closeMatch ... ; 
+    #skos:closeMatch ... ; 
 .
 
 <#herbivore>
@@ -214,7 +215,7 @@
     skos:prefLabel "Herbivore"@en ;
     skos:definition "Any organism that feeds on plants; phytophagous; also used of protozoans that feed on bacteria and/or othe algae."@en ;
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_a827a4e2> ; 
 .
 
 <#kleptovore>
@@ -230,7 +231,7 @@
     skos:prefLabel "Omnivore"@en ;
     skos:definition "Any organism that feeds on a mixed diet of plant and animal material."@en ;
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_42952c24> ; 
 .
 
 <#parasitic>
@@ -241,7 +242,7 @@
 
     skos:narrower <#ectoparasitic> , <#endocommensal> , <#endoparasitic> ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_059f2729> ; 
 .
 
 <#ectoparasitic>
@@ -252,7 +253,7 @@
 
     skos:broader <#parasitic> ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_536d4a16> ; 
 .
 
 <#endocommensal>
@@ -263,7 +264,7 @@
 
     skos:broader <#parasitic> ;
 
-    skos:closeMatch ... ; 
+    #skos:closeMatch ... ; 
 .
 
 <#endoparasitic>
@@ -274,7 +275,7 @@
 
     skos:broader <#parasitic> ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_e5726670> ; 
 .
 
 <#predator>
@@ -285,7 +286,7 @@
 
     skos:narrower <#predator_on_sessile_prey> , <#predator_on_mobile_prey> ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_3330cc8d> ; 
 .
 
 <#predator_on_sessile_prey>
@@ -296,7 +297,7 @@
 
     skos:broader <#predator> ; 
 
-    skos:closeMatch ... ; 
+    #skos:closeMatch ... ; 
 .
 
 <#predator_on_mobile_prey>
@@ -307,7 +308,7 @@
 
     skos:broader <#predator> ; 
 
-    skos:closeMatch ... ; 
+    #skos:closeMatch ... ; 
 .
 
 <#predator_omnivore>
@@ -323,7 +324,7 @@
     skos:prefLabel "Scavenger"@en ;
     skos:definition "Any organism that feeds on carrion or organic refuse."@en ;
 
-    skos:closeMatch ... ; 
+    #skos:closeMatch ... ; 
 .
 
 <#suspension_feeder>
@@ -334,7 +335,8 @@
 
     skos:narrower <#facultative_suspension_feeder> ;
 
-    skos:closeMatch ... ; 
+    skos:exactMatch <#filter_feeder> ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_7a6a2248> ; 
 .
 
 <#facultative_suspension_feeder>
@@ -363,7 +365,7 @@
 
     skos:broader <#symbiotic> ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_debe5d61> ; 
 .
 
 <#symbiotic_with_chemosymbionts>

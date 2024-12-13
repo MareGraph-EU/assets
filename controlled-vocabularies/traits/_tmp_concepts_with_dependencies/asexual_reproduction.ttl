@@ -21,7 +21,7 @@
                 <#asexual_reproduction_not_confirmed> , 
                 <#unknown> ; 
 
-    skos:exactMatch ... ; 
+    #skos:exactMatch ... ; #LW URI will be provided with release of version 2.0 of LifeWatch Thesaurus Terms 
 .
 
 <#asexual_reproduction_confirmed>
@@ -56,7 +56,7 @@
 
     skos:broader <#asexual_reproduction_confirmed> ;
 
-    skos:closeMatch ... ; 
+    #skos:exactMatch ... ; #LW URI will be provided with release of version 2.0 of LifeWatch Thesaurus Terms 
 .
 <#by_parthenogenesis>
     a skos:Concept, aphia-trait:Trait ;
@@ -66,7 +66,7 @@
 
     skos:broader <#asexual_reproduction_confirmed> ;
 
-    skos:closeMatch ... ; 
+    #skos:exactMatch ... ; #LW URI will be provided with release of version 2.0 of LifeWatch Thesaurus Terms 
 .
 <#by_vegetative_propagules>
     a skos:Concept, aphia-trait:Trait ;
@@ -84,7 +84,7 @@
 
     skos:broader <#asexual_reproduction_confirmed> ;
 
-    skos:closeMatch ... ; 
+    #skos:exactMatch ... ; #LW URI will be provided with release of version 2.0 of LifeWatch Thesaurus Terms 
 .
 <#by_budding>
     a skos:Concept, aphia-trait:Trait ;
@@ -94,7 +94,7 @@
 
     skos:broader <#asexual_reproduction_confirmed> ;
 
-    skos:closeMatch ... ; 
+    #skos:exactMatch ... ; #LW URI will be provided with release of version 2.0 of LifeWatch Thesaurus Terms  
 .
 <#asexual_reproduction_not_confirmed>
     a skos:Concept, aphia-trait:Trait ;

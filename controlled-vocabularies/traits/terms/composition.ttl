@@ -38,7 +38,7 @@
     skos:prefLabel "Siliceous"@en ;
     skos:definition "Composed of silicon based spines, spicules or lattice, e.g. siliceous or glass sponges (derived from form Lawrence, 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
 
-    skos:exactMatch ... ; 
+    #skos:exactMatch ... ; 
 .
 
 <#chitinous>
@@ -77,7 +77,7 @@
 
     skos:narrower <#aragonite> , <#calcite> , <#amorphous_calcium_carbonate> , <#high_magnesium_calcite> ;
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_e4fb8661> ; 
 .
 
 <#aragonite>

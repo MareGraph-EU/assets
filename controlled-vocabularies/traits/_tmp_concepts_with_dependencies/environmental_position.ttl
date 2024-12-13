@@ -12,7 +12,7 @@
 
     skos:member <#endolithic> , <#endophytic> , <#endozoic> , <#epilithic> , <#epiphytic> , <#epizoic> , <#unattached> , <#epipsamnic> ;
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_f7a0e7bc> ; 
 .
 
 <#endolithic>
@@ -21,7 +21,7 @@
     skos:prefLabel "Endolithic"@en ;
     skos:definition "Growing within a rock or other hard inorganic substratum; petriculous; saxicavous; cf. epilithic (Lincoln et al., 1998). Living or penetrating into rock, as some algae and fungi (Henderson's dictionary of biology; Lawrence, 2005)."@en ;
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_5fdd6191> ; 
 .
 
 <#endophytic>
@@ -30,7 +30,7 @@
     skos:prefLabel "Endophytic"@en ;
     skos:definition "A plant living within another plant; entophytic; cf. ectophytic (Lincoln et al., 1998). Bacterium, fungus or alga living inside the body or cells of an organism to which they cause no apparent damage. alt. endosymbiont (Henderson's dictionary of biology; Lawrence, 2005)."@en ; 
 
-    skos:exactMatch ... ; 
+    #skos:closeMatch ; 
 .
 
 <#endozoic>
@@ -39,7 +39,7 @@
     skos:prefLabel "Endozoic"@en ;
     skos:definition "Living within or passing through the body of an animal; entozoic; cf. epizoic (Lincoln et al., 1998). Living within an animal or involving passage through an animal, as in the distribution of some seeds (Henderson's dictionary of biology; Lawrence, 2005)."@en ; 
 
-    skos:exactMatch ... ; 
+    #skos:exactMatch ... ; 
 .
 
 <#epilithic>
@@ -48,7 +48,7 @@
     skos:prefLabel "Epilithic"@en ;
     skos:definition "Growing on rocks or other hard inorganic substrata; petrophillous; cf. endolithic (Lincoln et al., 1998). Attached on rocks, appl. algae, lichens (Henderson's dictionary of biology; Lawrence, 2005)."@en ; 
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_14c749f7> ; 
 .
 
 <#epiphytic>
@@ -57,7 +57,7 @@
     skos:prefLabel "Epiphytic"@en ;
     skos:definition "1: A plant growing on another plant (the phorophyte) for support or anchorage rather than for water supply or nutrients; aerophyte. 2: Any organism living on the surface of a plant. (Lincoln et al., 1998). Plant that lives on the surface of another plant but does not derive nourishment from it (Henderson's dictionary of biology; Lawrence, 2005)."@en ; 
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_4cc2be48> ; 
 .
 
 <#epizoic>
@@ -66,7 +66,7 @@
     skos:prefLabel "Epizoic"@en ;
     skos:definition "Living attached to the body of an animal; used of a non-parasitic animal that lives attached to the outer surface of another animal; epizoan, epizoism, epizoite, epizoon; cf. endozoic (Lincoln et al., 1998). (1) living on or attached to the body of an animal; (2) having seeds or fruits dispersed by being attached to the surface of an animal (Henderson's dictionary of biology; Lawrence, 2005)."@en ; 
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_debe5d61> ; 
 .
 
 <#unattached>
@@ -82,5 +82,5 @@
     skos:prefLabel "Epipsamnic"@en ;
     skos:definition "Growing in or on sand or other soft inorganic or organic substratum (Olivier De Clerck). Attached to sand particles (Lincoln et al., 1998)."@en ; 
 
-    skos:exactMatch ... ; 
+    #skos:exactMatch ... ; 
 .

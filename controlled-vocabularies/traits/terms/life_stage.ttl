@@ -57,7 +57,7 @@
                 <#auxospore> , 
                 <#copepodite_stage_not_specified> ; 
 
-    skos:exactMatch ... ; 
+    #skos:exactMatch ... ; 
 .
 
 <#adult>

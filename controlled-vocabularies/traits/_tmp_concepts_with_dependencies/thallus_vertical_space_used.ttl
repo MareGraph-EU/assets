@@ -28,7 +28,7 @@
     skos:prefLabel "Encrusting"@en ;
     skos:definition "With a crustose growth form (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_179e5f6a> ; 
 .
 <#sub_canopy>
     a skos:Concept, aphia-trait:Trait ;

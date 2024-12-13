@@ -31,7 +31,7 @@
                     <#hadal_zone> ,
                 <#unreported_zonation> ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_f7a0e7bc> ; 
 .
 
 <#pelagic_zones>
@@ -42,7 +42,7 @@
 
     skos:narrower <#epipelagic_zone> , <#mesopelagic_zone> , <#bathypelagic_zone> , <#abyssopelagic_zone> , <#hadopelagic_zone> ;
 
-    skos:closeMatch ... ; 
+    #skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_57f94b26> ; 
 .
 
 <#epipelagic_zone>
@@ -53,7 +53,7 @@
 
     skos:broader <#pelagic_zones> ;
 
-    skos:closeMatch ... ; 
+    skos:related <https://kos.lifewatch.eu/thesauri/traits/c_6478ee9d> ; 
 .
 <#mesopelagic_zone>
     a skos:Concept, aphia-trait:Trait ;
@@ -63,7 +63,7 @@
 
     skos:broader <#pelagic_zones> ;
 
-    skos:closeMatch ... ; 
+    skos:related <https://kos.lifewatch.eu/thesauri/traits/c_53cde937> ; 
 .
 <#bathypelagic_zone>
     a skos:Concept, aphia-trait:Trait ;
@@ -73,7 +73,7 @@
 
     skos:broader <#pelagic_zones> ;
 
-    skos:closeMatch ... ; 
+    skos:related <https://kos.lifewatch.eu/thesauri/traits/c_37b181dc> ; 
 .
 <#abyssopelagic_zone>
     a skos:Concept, aphia-trait:Trait ;
@@ -83,7 +83,7 @@
 
     skos:broader <#pelagic_zones> ;
 
-    skos:closeMatch ... ; 
+    skos:related <https://kos.lifewatch.eu/thesauri/traits/c_2d1aa5b8> ; 
 .
 <#hadopelagic_zone>
     a skos:Concept, aphia-trait:Trait ;
