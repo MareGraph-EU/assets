@@ -1,10 +1,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@base <https://aphia.org/ns/term/pollutant_tolerance> .
+@base <https://aphia.org/ns/traits/pollutant_tolerance> .
 
 <>
     a skos:Collection ; 
@@ -17,49 +16,49 @@
 
 <#clear_waters>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Clear waters"@en ;
     skos:definition "Waters where visisbility is most of the time > 10 m. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 .
 
 <#eutrophic_waters>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Eutrophic waters"@en ;
     skos:definition "Having high primary productivity; pertaining to waters rich in nutrients (adapted from Lincoln et al., 1998)."@en ;
 .
 
 <#mesotrophic_waters>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Mesotrophic waters"@en ;
     skos:definition "Having intermediate levels of primary productivity; pertaining to waters having intermediate levels of nutrients (adapted from Lincoln et al., 1998)."@en ;
 .
 
 <#moderately_turbid_waters>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Moderately turbid waters"@en ;
     skos:definition "Waters where visibility is most of the time > 1m and < 10m. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 .
 
 <#oligotrophic_waters>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Oligotrophic waters"@en ;
     skos:definition "Having low primary productivity; pertaining to waters having low levels of nutrients (adapted from Lincoln et al., 1998)."@en ;
 .
 
 <#waters_with_variable_turbidity>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Waters with variable turbidity"@en ;
     skos:definition "Waters where turbidity varies periodically. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 .
 
 <#turbid_waters>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Turbid waters"@en ;
     skos:definition "Waters where visibility is most of the time < 1m. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 .

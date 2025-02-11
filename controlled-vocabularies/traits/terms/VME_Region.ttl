@@ -4,7 +4,7 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@base <https://aphia.org/ns/term/vme_region> .
+@base <https://aphia.org/ns/traits/vme_region> .
 
 <>
     a skos:Collection ; 
@@ -34,121 +34,121 @@
 
 <#No_regional_information_available>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel ""@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_I>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area I"@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_II>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area II"@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_III>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area III"@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_IV>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area IV"@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_V>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area V"@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_VI>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area VI"@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_VII>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area VII"@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_VIII>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area VIII"@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_IX>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area IX"@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_X>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area X"@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_XI>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area XI"@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_XII>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area XII"@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_XIII>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area XIII"@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_XIV>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area XIV"@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_XV>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area XV"@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_XVI>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area XVI"@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_XVII>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area XVII"@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_XVIII>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area XVIII"@en ;
     skos:definition "..."@en ;
 .
 <#fao_fishing_area_XIX>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fao fishing area XIX"@en ;
     skos:definition "..."@en ;
 .

@@ -1,12 +1,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@prefix <# <https://aphia.org/ns/vocab/attribute-trait/> .
-
-@base <https://aphia.org/ns/term/sex> .
+@base <https://aphia.org/ns/traits/sex> .
 
 <>
     a skos:Collection ; 
@@ -22,7 +19,7 @@
 
 <#male>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Male"@en ;
     skos:definition "The attribute is valid for organisms of the male sex; the sperm producing form of a a bisexual or dioecious organism."@en ;
 
@@ -30,7 +27,7 @@
 .
 <#female>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Female"@en ;
     skos:definition "The attribute is valid for organisms of the female sex; the egg producing form of a bisexual or dioecious organism."@en ;
 
@@ -38,13 +35,13 @@
 .
 <#male_female>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Male & Female"@en ;
     skos:definition "The attribute is valid for both organisms of the male sex and organisms of the female sex."@en ;
 .
 <#hermaphrodite>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Hermaphrodite"@en ;
     skos:definition "The attribute is valid for hermaphroditic organisms. Having both male and female reproductive organs in the same individual (animal) or the same flower (plant); androgyne; bisexual; the maturation of the male organs before the female is protandrous hermaphroditism; the female before the male is protogynous hermaphroditism, and simultaneously is syncrhonous hermaphroditism."@en ;
 
@@ -52,13 +49,13 @@
 .
 <#undetermined>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Undetermined"@en ;
     skos:definition "It has not yet been determined for which sex this attribute is valid."@en ;
 .
 <#male_unsexed>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Male/unsexed"@en ;
     skos:definition "The attribute is valid for organisms of the male sex or for organisms for which the sex has not yet been identified."@en ;
 .

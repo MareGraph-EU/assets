@@ -1,10 +1,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@base <https://aphia.org/ns/term/gametophyte_arrangement> .
+@base <https://aphia.org/ns/traits/gametophyte_arrangement> .
 
 <>
     a skos:Collection ; 
@@ -22,56 +21,56 @@
 
 <#dioecious>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Dioecious"@en ;
     skos:definition "When male and female reproductive structures are formed on the separate individual and the sex is determined in diploid phase."@en ;
 .
 
 <#dioicous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Dioicous"@en ;
     skos:definition "When male and female reproductive structures are formed on the separate individual and the sex is determined in haploid phase."@en ;
 .
 
 <#mixed>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Mixed"@en ;
     skos:definition "With individuals bearing only male or female reproductive structures and indivduals bearing both male and female reproductive structures in one species."@en ;
 .
 
 <#monoecious>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Monoecious"@en ;
     skos:definition "When male and female reproductive structures are formed on same individuals and the sex is determined in diploid phase."@en ;
 .
 
 <#monoicous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Monoicous"@en ;
     skos:definition "When male and female reproductive structures are formed on same individuals and the sex is determined in haploid phase."@en ;
 .
 
 <#gametophyte_arrangement_not_applicable>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Gametophyte arrangement not applicable"@en ;
     skos:definition "The attribute 'gametophyte arrangement' is not applicable for this taxon."@en ;
 .
 
 <#gametophyte_arrangement_unknown>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Unknown gametophyte arrangement"@en ;
     skos:definition "According to literature it is unknown which gametophyte arrangement this organism has."@en ;
 .
 
 <#gametophyte_arrangement_unreported>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Unreported gametophyte arrangement"@en ;
     skos:definition "So far it has not been reported in literature what the gametophyte arrangement is for this taxon."@en ;
 .

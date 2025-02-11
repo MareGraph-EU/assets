@@ -1,10 +1,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@base <https://aphia.org/ns/term/life_span> .
+@base <https://aphia.org/ns/traits/life_span> .
 
 <>
     a skos:Collection ; 
@@ -22,7 +21,7 @@
 
 <#annual>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Annual"@en ;
     skos:definition "(1) Appl. structures or growth features that are marked off or completed yearly; (2) living for a year only; (3) completing life-cycle in a year from germination; (4) n. plant that completes its life-cycle in a year. (Henderson's Dictionary of Biology; Lawrence, 2005). Thallus which survives only one growing season (less than 1 year) (macroalgae; Womersley, 1987)."@en ;
 
@@ -33,7 +32,7 @@
 
 <#ephemeral>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Ephemeral"@en ;
     skos:definition "(1) Short-lived; (2) taking place once only, appl. plant movements as expanding buds; (3) completing life-cycle within a brief period; (4) n. a short-lived plant or animal species (Henderson's Dictionary of Biology; Lawrence, 2005). Thallus which survives for only a few weeks (less than 1 month) (macroalgae; Womersley, 1987)."@en ;
 
@@ -44,7 +43,7 @@
 
 <#perennial>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Perennial"@en ;
     skos:definition "Plant which persists for several years."@en ;
 
@@ -55,7 +54,7 @@
 
 <#long_perennial>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Long perennial"@en ;
     skos:definition "Thallus or part thereof with a lifespan exceeding 3 years (more than 3 years) (macroalgae; Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 
@@ -66,7 +65,7 @@
 
 <#short_perennial>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Short perennial"@en ;
     skos:definition "Thallus or part thereof with a lifespan exceeding 1 year but under 3 years (macroalgae; Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 
@@ -77,7 +76,7 @@
 
 <#unreported_life_span>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Unreported life span"@en ;
     skos:definition "So far it has not been reported in literature which life span this organism has."@en ;
 .

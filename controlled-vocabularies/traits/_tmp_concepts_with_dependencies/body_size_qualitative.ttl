@@ -1,10 +1,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@base <https://aphia.org/ns/term/body_size_qualitative> .
+@base <https://aphia.org/ns/traits/body_size_qualitative> .
 
 <>
     a skos:Collection ; 
@@ -18,28 +17,28 @@
 
 <#micro-body-size-under-0-2mm>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Micro body size (<0.2 mm)"@en ;
     skos:altLabel "<0.2 mm"@en ; 
     skos:definition "Individual organisms with a mean body size smaller than 0.2 mm (as defined, agreed and applied by the WoRMS Steering Committee)."@en ;
 .
 <#small-body-size-0-2-to-2mm>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Small body size (0.2–2.0 mm)"@en ;
     skos:altLabel "0.2 - 2.0 mm"@en ; 
     skos:definition "Individual organisms with a mean body size between 0.2 and 2.0 mm (as defined, agreed and applied by the WoRMS Steering Committee)."@en ;
 .
 <#medium-body-size-2-to-200mm>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Medium body size (2.0–200 mm)"@en ;
     skos:altLabel "2.0 - 200 mm"@en ; 
     skos:definition "Individual organisms with a mean body size between 2.0 and 200 mm (as defined, agreed and applied by the WoRMS Steering Committee)."@en ;
 .
 <#large-body-size-over-200mm>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Large body size (>200 mm)"@en ;
     skos:altLabel "200 mm"@en ; 
     skos:definition "Individual organisms with a mean body size larger than 200 mm (as defined, agreed and applied by the WoRMS Steering Committee)."@en ;

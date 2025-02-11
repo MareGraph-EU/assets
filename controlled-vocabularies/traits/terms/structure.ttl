@@ -4,7 +4,7 @@
 
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@base <https://aphia.org/ns/term/structure> .
+@base <https://aphia.org/ns/traits/structure> .
 
 <>
     a skos:Collection ; 
@@ -17,21 +17,21 @@
 
 <#solid>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Solid"@en ;
     skos:definition "Massive structure, i.e. not consisting of loose agglutinated particles (derived from Lawrence 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
 .
 
 <#non_solid_cement>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Non-solid, cement"@en ;
     skos:definition "Component that keeps the agglutinated particles of the non-massive skeleton together (derived from Lawrence 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
 .
 
 <#non_solid_particles>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Non-solid, particles"@en ;
     skos:definition "Small and individual structural elements that function as supporting structure/enclosure, e.g. spicules in sponges (derived from Lawrence 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
 .

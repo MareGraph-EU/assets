@@ -1,10 +1,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@base <https://aphia.org/ns/term/fossil_range> .
+@base <https://aphia.org/ns/traits/fossil_range> .
 
 <>
     a skos:Collection ; 
@@ -189,7 +188,7 @@
 
 <#phanerozoic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "phanerozoic"@en ;
 
     skos:narrower <#cenozoic> , <#mesozoic> , <#paleozoic> ;
@@ -197,7 +196,7 @@
 
 <#cenozoic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "cenozoic"@en ;
 
     skos:broader <#phanerozoic> ;
@@ -206,7 +205,7 @@
 
 <#quaternary>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "quaternary"@en ;
 
     skos:broader <#cenozoic> ;
@@ -215,7 +214,7 @@
 
 <#holocene>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "holocene"@en ;
 
     skos:broader <#quaternary> ;
@@ -223,7 +222,7 @@
 
 <#pleistocene>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "pleistocene"@en ;
 
     skos:broader <#quaternary> ;
@@ -232,28 +231,28 @@
 
 <#pleistocene_upper>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "pleistocene upper"@en ;
 
     skos:broader <#pleistocene> ;
 .
 <#pleistocene_middle>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "pleistocene middle"@en ;
 
     skos:broader <#pleistocene> ;
 .
 <#calabrian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "calabrian"@en ;
 
     skos:broader <#pleistocene> ;
 .
 <#gelasian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "gelasian"@en ;
 
     skos:broader <#pleistocene> ;
@@ -261,7 +260,7 @@
 
 <#neogene>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "neogene"@en ;
 
     skos:broader <#cenozoic> ;
@@ -270,7 +269,7 @@
 
 <#pliocene>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "pliocene"@en ;
 
     skos:broader <#neogene> ;
@@ -279,14 +278,14 @@
 
 <#piacenzian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "piacenzian"@en ;
 
     skos:broader <#pliocene> ;
 .
 <#zanclean>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "zanclean"@en ;
 
     skos:broader <#pliocene> ;
@@ -294,7 +293,7 @@
 
 <#miocene>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "miocene"@en ;
 
     skos:broader <#neogene> ;
@@ -303,42 +302,42 @@
 
 <#messinian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "messinian"@en ;
 
     skos:broader <#miocene> ;
 .
 <#tortonian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "tortonian"@en ;
 
     skos:broader <#miocene> ;
 .
 <#serravallian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "serravallian"@en ;
 
     skos:broader <#miocene> ;
 .
 <#langhian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "langhian"@en ;
 
     skos:broader <#miocene> ;
 .
 <#burdigalian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "burdigalian"@en ;
 
     skos:broader <#miocene> ;
 .
 <#aquitanian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "aquitanian"@en ;
 
     skos:broader <#miocene> ;
@@ -346,7 +345,7 @@
 
 <#paleogene>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "paleogene"@en ;
 
     skos:broader <#cenozoic> ;
@@ -355,7 +354,7 @@
 
 <#oligocene>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "oligocene"@en ;
 
     skos:broader <#paleogene> ;
@@ -364,14 +363,14 @@
 
 <#chattian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "chattian"@en ;
 
     skos:broader <#oligocene> ;
 .
 <#rupelian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "rupelian"@en ;
 
     skos:broader <#oligocene> ;
@@ -379,7 +378,7 @@
 
 <#eocene>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "eocene"@en ;
 
     skos:broader <#paleogene> ;
@@ -388,28 +387,28 @@
 
 <#priabonian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "priabonian"@en ;
 
     skos:broader <#eocene> ;
 .
 <#bartonian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "bartonian"@en ;
 
     skos:broader <#eocene> ;
 .
 <#lutetian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "lutetian"@en ;
 
     skos:broader <#eocene> ;
 .
 <#ypresian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "ypresian"@en ;
 
     skos:broader <#eocene> ;
@@ -417,7 +416,7 @@
 
 <#paleocene>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "paleocene"@en ;
 
     skos:broader <#paleogene ;
@@ -426,21 +425,21 @@
 
 <#thanetian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "thanetian"@en ;
 
     skos:broader <#paleocene> ;
 .
 <#selandian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "selandian"@en ;
 
     skos:broader <#paleocene> ;
 .
 <#danian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "danian"@en ;
 
     skos:broader <#paleocene> ;
@@ -448,7 +447,7 @@
 
 <#mesozoic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "mesozoic"@en ;
 
     skos:broader <#phanerozoic> ;
@@ -457,7 +456,7 @@
 
 <#cretaceous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "cretaceous"@en ;
 
     skos:broader <#mesozoic> ;
@@ -466,7 +465,7 @@
 
 <#cretaceous_upper>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "cretaceous upper"@en ;
 
     skos:broader <#cretaceous> ;
@@ -475,42 +474,42 @@
 
 <#maastrichtian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "maastrichtian"@en ;
 
     skos:broader <#cretaceous_upper> ;
 .
 <#campanian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "campanian"@en ;
 
     skos:broader <#cretaceous_upper> ;
 .
 <#santonian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "santonian"@en ;
 
     skos:broader <#cretaceous_upper> ;
 .
 <#coniacian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "coniacian"@en ;
 
     skos:broader <#cretaceous_upper> ;
 .
 <#turonian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "turonian"@en ;
 
     skos:broader <#cretaceous_upper> ;
 .
 <#cenomanian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "cenomanian"@en ;
 
     skos:broader <#cretaceous_upper> ;
@@ -518,7 +517,7 @@
 
 <#cretaceous_lower>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "cretaceous lower"@en ;
 
     skos:broader <#cretaceous> ;
@@ -527,42 +526,42 @@
 
 <#albian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "albian"@en ;
 
     skos:broader <#cretaceous_lower> ;
 .
 <#aptian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "aptian"@en ;
 
     skos:broader <#cretaceous_lower> ;
 .
 <#barremian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "barremian"@en ;
 
     skos:broader <#cretaceous_lower> ;
 .
 <#hauterivian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "hauterivian"@en ;
 
     skos:broader <#cretaceous_lower> ;
 .
 <#valanginian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "valanginian"@en ;
 
     skos:broader <#cretaceous_lower> ;
 .
 <#berriasian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "berriasian"@en ;
 
     skos:broader <#cretaceous_lower> ;
@@ -570,7 +569,7 @@
 
 <#jurassic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "jurassic"@en ;
 
     skos:broader <#mesozoic> ;
@@ -579,7 +578,7 @@
 
 <#jurassic_upper>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "jurassic upper"@en ;
 
     skos:broader <#jurassic> ;
@@ -588,21 +587,21 @@
 
 <#tithonian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "tithonian"@en ;
 
     skos:broader <#jurassic_upper> ;
 .
 <#kimmeridgian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "kimmeridgian"@en ;
 
     skos:broader <#jurassic_upper> ;
 .
 <#oxfordian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "oxfordian"@en ;
 
     skos:broader <#jurassic_upper> ;
@@ -610,7 +609,7 @@
 
 <#jurassic_middle>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "jurassic middle"@en ;
 
     skos:broader <#jurassic> ;
@@ -619,28 +618,28 @@
 
 <#callovian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "callovian"@en ;
 
     skos:broader <#jurassic_middle> ;
 .
 <#bathonian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "bathonian"@en ;
 
     skos:broader <#jurassic_middle> ;
 .
 <#bajocian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "bajocian"@en ;
 
     skos:broader <#jurassic_middle> ;
 .
 <#aalenian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "aalenian"@en ;
 
     skos:broader <#jurassic_middle> ;
@@ -648,7 +647,7 @@
 
 <#jurassic_lower>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "jurassic lower"@en ;
 
     skos:broader <#jurassic> ;
@@ -657,28 +656,28 @@
 
 <#toarcian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "toarcian"@en ;
 
     skos:broader <#jurassic_lower> ;
 .
 <#pliensbachian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "pliensbachian"@en ;
 
     skos:broader <#jurassic_lower> ;
 .
 <#sinemurian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "sinemurian"@en ;
 
     skos:broader <#jurassic_lower> ;
 .
 <#hettangian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "hettangian"@en ;
 
     skos:broader <#jurassic_lower> ;
@@ -686,7 +685,7 @@
 
 <#triassic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "triassic"@en ;
 
     skos:broader <#mesozoic> ; 
@@ -695,7 +694,7 @@
 
 <#triassic_upper>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "triassic upper"@en ;
 
     skos:broader <#triassic> ; 
@@ -704,21 +703,21 @@
 
 <#rhaetian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "rhaetian"@en ;
 
     skos:broader <#triassic_upper> ; 
 .
 <#norian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "norian"@en ;
 
     skos:broader <#triassic_upper> ; 
 .
 <#carnian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "carnian"@en ;
 
     skos:broader <#triassic_upper> ; 
@@ -726,7 +725,7 @@
 
 <#triassic_middle>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "triassic middle"@en ;
 
     skos:broader <#triassic> ; 
@@ -735,14 +734,14 @@
 
 <#ladinian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "ladinian"@en ;
 
     skos:broader <#triassic_middle> ; 
 .
 <#anisian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "anisian"@en ;
 
     skos:broader <#triassic_middle> ; 
@@ -750,7 +749,7 @@
 
 <#triassic_lower>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "triassic lower"@en ;
 
     skos:broader <#triassic> ; 
@@ -759,14 +758,14 @@
 
 <#olenekian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "olenekian"@en ;
 
     skos:broader <#triassic_lower> ; 
 .
 <#induan>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "induan"@en ;
 
     skos:broader <#triassic_lower> ; 
@@ -774,7 +773,7 @@
 
 <#paleozoic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "paleozoic"@en ;
 
     skos:broader <#phanerozoic> ; 
@@ -783,7 +782,7 @@
 
 <#permian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "permian"@en ;
 
     skos:broader <#paleozoic> ; 
@@ -792,7 +791,7 @@
 
 <#lopingian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "lopingian"@en ;
 
     skos:broader <#permian> ; 
@@ -800,14 +799,14 @@
 .
 <#changhsingian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "changhsingian"@en ;
 
     skos:broader <#lopingian> ; 
 .
 <#wuchiapingian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "wuchiapingian"@en ;
 
     skos:broader <#lopingian> ; 
@@ -815,7 +814,7 @@
 
 <#guadalupian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "guadalupian"@en ;
 
     skos:broader <#permian> ; 
@@ -824,21 +823,21 @@
 
 <#capitanian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "capitanian"@en ;
 
     skos:broader <#guadalupian> ; 
 .
 <#wordian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "wordian"@en ;
 
     skos:broader <#guadalupian> ; 
 .
 <#roadian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "roadian"@en ;
 
     skos:broader <#guadalupian> ; 
@@ -846,7 +845,7 @@
 
 <#cisuralian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "cisuralian"@en ;
 
     skos:broader <#permian> ;
@@ -855,28 +854,28 @@
 
 <#kungurian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "kungurian"@en ;
 
     skos:broader <#cisuralian> ;
 .
 <#artinskian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "artinskian"@en ;
 
     skos:broader <#cisuralian> ;
 .
 <#sakmarian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "sakmarian"@en ;
 
     skos:broader <#cisuralian> ;
 .
 <#asselian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "asselian"@en ;
 
     skos:broader <#cisuralian> ;
@@ -884,7 +883,7 @@
 
 <#carboniferous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "carboniferous"@en ;
 
     skos:broader <#paleozoic> ; 
@@ -893,7 +892,7 @@
 
 <#pennsylvanian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "pennsylvanian"@en ;
 
     skos:broader <#carboniferous> ; 
@@ -902,7 +901,7 @@
 
 <#pennsylvanian_upper>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "pennsylvanian upper"@en ;
 
     skos:broader <#pennsylvanian> ; 
@@ -910,14 +909,14 @@
 .
 <#gzhelian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "gzhelian"@en ;
 
     skos:broader <#pennsylvanian_upper> ; 
 .
 <#kasimovian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "kasimovian"@en ;
 
     skos:broader <#pennsylvanian_upper> ; 
@@ -925,7 +924,7 @@
 
 <#pennsylvanian_middle>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "pennsylvanian middle"@en ;
 
     skos:broader <#pennsylvanian> ; 
@@ -933,7 +932,7 @@
 .
 <#moscovian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "moscovian"@en ;
 
     skos:broader <#pennsylvanian_middle> ; 
@@ -941,7 +940,7 @@
 
 <#pennsylvanian_lower>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "pennsylvanian lower"@en ;
 
     skos:broader <#pennsylvanian> ; 
@@ -949,7 +948,7 @@
 .
 <#bashkirian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "bashkirian"@en ;
 
     skos:broader <#pennsylvanian_lower> ; 
@@ -957,7 +956,7 @@
 
 <#mississippian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "mississippian"@en ;
 
     skos:broader <#carboniferous> ; 
@@ -966,7 +965,7 @@
 
 <#mississippian_upper>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "mississippian upper"@en ;
 
     skos:broader <#mississippian> ; 
@@ -974,14 +973,14 @@
 .
 <#serpukhovian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "serpukhovian"@en ;
 
     skos:broader <#mississippian_upper> ; 
 .
 <#mississippian_middle>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "mississippian middle"@en ;
 
     skos:broader <#mississippian> ; 
@@ -989,7 +988,7 @@
 .
 <#visean>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "visean"@en ;
 
     skos:broader <#mississippian_middle> ; 
@@ -997,7 +996,7 @@
 
 <#mississippian_lower>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "mississippian lower"@en ;
 
     skos:broader <#mississippian> ; 
@@ -1005,7 +1004,7 @@
 .
 <#tournaisian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "tournaisian"@en ;
 
     skos:broader <#mississippian_lower> ; 
@@ -1013,7 +1012,7 @@
 
 <#devonian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "devonian"@en ;
 
     skos:broader <#paleozoic> ; 
@@ -1022,7 +1021,7 @@
 
 <#devonian_upper>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "devonian upper"@en ;
 
     skos:broader <#devonian> ; 
@@ -1030,14 +1029,14 @@
 .
 <#famennian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "famennian"@en ;
 
     skos:broader <#devonian_upper> ; 
 .
 <#frasnian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "frasnian"@en ;
 
     skos:broader <#devonian_upper> ; 
@@ -1045,7 +1044,7 @@
 
 <#devonian_middle>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "devonian middle"@en ;
 
     skos:broader <#devonian> ; 
@@ -1053,14 +1052,14 @@
 .
 <#givetian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "givetian"@en ;
 
     skos:broader <#devonian_middle> ; 
 .
 <#eifelian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "eifelian"@en ;
 
     skos:broader <#devonian_middle> ; 
@@ -1068,7 +1067,7 @@
 
 <#devonian_lower>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "devonian lower"@en ;
 
     skos:broader <#devonian> ; 
@@ -1076,21 +1075,21 @@
 .
 <#emsian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "emsian"@en ;
 
     skos:broader <#devonian_lower> ; 
 .
 <#pragian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "pragian"@en ;
 
     skos:broader <#devonian_lower> ; 
 .
 <#lochkovian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "lochkovian"@en ;
 
     skos:broader <#devonian_lower> ; 
@@ -1099,7 +1098,7 @@
 
 <#silurian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "silurian"@en ;
 
     skos:broader <#paleozoic> ; 
@@ -1108,7 +1107,7 @@
 
 <#pridoli>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "pridoli"@en ;
 
     skos:broader <#silurian> ; 
@@ -1116,7 +1115,7 @@
 
 <#ludlow>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "ludlow"@en ;
 
     skos:broader <#silurian> ; 
@@ -1124,14 +1123,14 @@
 .
 <#ludfordian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "ludfordian"@en ;
 
     skos:broader <#ludlow> ; 
 .
 <#gorstian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "gorstian"@en ;
 
     skos:broader <#ludlow> ; 
@@ -1139,7 +1138,7 @@
 
 <#wenlock>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "wenlock"@en ;
 
     skos:broader <#silurian> ; 
@@ -1147,14 +1146,14 @@
 .
 <#homerian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "homerian"@en ;
 
     skos:broader <#wenlock> ; 
 .
 <#sheinwoodian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "sheinwoodian"@en ;
 
     skos:broader <#wenlock> ; 
@@ -1162,7 +1161,7 @@
 
 <#llandovery>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "llandovery"@en ;
 
     skos:broader <#silurian> ; 
@@ -1170,21 +1169,21 @@
 .
 <#telychian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "telychian"@en ;
 
     skos:broader <#llandovery> ; 
 .
 <#aeronian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "aeronian"@en ;
 
     skos:broader <#llandovery> ; 
 .
 <#rhuddanian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "rhuddanian"@en ;
 
     skos:broader <#llandovery> ; 
@@ -1193,7 +1192,7 @@
 
 <#ordovician>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "ordovician"@en ;
 
     skos:broader <#paleozoic> ; 
@@ -1202,7 +1201,7 @@
 
 <#ordovician_upper>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "ordovician upper"@en ;
 
     skos:broader <#ordovician> ; 
@@ -1210,21 +1209,21 @@
 .
 <#hirnantian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "hirnantian"@en ;
 
     skos:broader <#ordovician_upper> ; 
 .
 <#katian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "katian"@en ;
 
     skos:broader <#ordovician_upper> ; 
 .
 <#sandbian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "sandbian"@en ;
 
     skos:broader <#ordovician_upper> ; 
@@ -1232,7 +1231,7 @@
 
 <#ordovician_middle>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "ordovician middle"@en ;
 
     skos:broader <#ordovician> ; 
@@ -1240,14 +1239,14 @@
 .
 <#darriwilian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "darriwilian"@en ;
 
     skos:broader <#ordovician_middle> ; 
 .
 <#dapingian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "dapingian"@en ;
 
     skos:broader <#ordovician_middle> ; 
@@ -1255,7 +1254,7 @@
 
 <#ordovician_lower>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "ordovician lower"@en ;
 
     skos:broader <#ordovician> ; 
@@ -1263,14 +1262,14 @@
 .
 <#floian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "floian"@en ;
 
     skos:broader <#ordovician_lower> ; 
 .
 <#tremadocian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "tremadocian"@en ;
 
     skos:broader <#ordovician_lower> ; 
@@ -1279,7 +1278,7 @@
 
 <#cambrian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "cambrian"@en ;
 
     skos:broader <#paleozoic> ; 
@@ -1288,7 +1287,7 @@
 
 <#furongian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "furongian"@en ;
 
     skos:broader <#cambrian> ; 
@@ -1296,21 +1295,21 @@
 .
 <#stage_10>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "stage 10"@en ;
 
     skos:broader <#furongian> ; 
 .
 <#jiangshanian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "jiangshanian"@en ;
 
     skos:broader <#furongian> ; 
 .
 <#paibian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "paibian"@en ;
 
     skos:broader <#furongian> ; 
@@ -1318,7 +1317,7 @@
 
 <#series_3>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "series 3"@en ;
 
     skos:broader <#cambrian> ; 
@@ -1326,21 +1325,21 @@
 .
 <#guzhangian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "guzhangian"@en ;
 
     skos:broader <#series_3> ; 
 .
 <#drumian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "drumian"@en ;
 
     skos:broader <#series_3> ; 
 .
 <#stage_5>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "stage 5"@en ;
 
     skos:broader <#series_3> ; 
@@ -1348,7 +1347,7 @@
 
 <#series_2>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "series 2"@en ;
 
     skos:broader <#cambrian> ; 
@@ -1356,14 +1355,14 @@
 .
 <#stage_4>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "stage 4"@en ;
 
     skos:broader <#series_2> ; 
 .
 <#stage_3>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "stage 3"@en ;
 
     skos:broader <#series_2> ; 
@@ -1371,7 +1370,7 @@
 
 <#terreneuvian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "terreneuvian"@en ;
 
     skos:broader <#cambrian> ; 
@@ -1379,14 +1378,14 @@
 .
 <#stage_2>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "stage 2"@en ;
 
     skos:broader <#terreneuvian> ; 
 .
 <#fortunian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "fortunian"@en ;
 
     skos:broader <#terreneuvian> ; 
@@ -1396,7 +1395,7 @@
 
 <#proterozoic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "proterozoic"@en ;
 
     skos:narrower <#neoproterozoic> , <#mesoproterozoic> , <#paleoproterozoic> ;
@@ -1405,7 +1404,7 @@
 
 <#neoproterozoic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "neoproterozoic"@en ;
     
     skos:broader <#proterozoic> ; 
@@ -1413,21 +1412,21 @@
 .
 <#ediacaran>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "ediacaran"@en ;
     
     skos:broader <#neoproterozoic> ; 
 .
 <#cryogenian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "cryogenian"@en ;
     
     skos:broader <#neoproterozoic> ; 
 .
 <#tonian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "tonian"@en ;
     
     skos:broader <#neoproterozoic> ; 
@@ -1435,7 +1434,7 @@
 
 <#mesoproterozoic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "mesoproterozoic"@en ;
     
     skos:broader <#proterozoic> ; 
@@ -1443,21 +1442,21 @@
 .
 <#stenian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "stenian"@en ;
     
     skos:broader <#mesoproterozoic> ; 
 .
 <#ectasian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "ectasian"@en ;
     
     skos:broader <#mesoproterozoic> ; 
 .
 <#calymmian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "calymmian"@en ;
     
     skos:broader <#mesoproterozoic> ; 
@@ -1465,7 +1464,7 @@
 
 <#paleoproterozoic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "paleoproterozoic"@en ;
     
     skos:broader <#proterozoic> ; 
@@ -1473,28 +1472,28 @@
 .
 <#statherian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "statherian"@en ;
     
     skos:broader <#paleoproterozoic> ; 
 .
 <#orosirian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "orosirian"@en ;
     
     skos:broader <#paleoproterozoic> ; 
 .
 <#rhyacian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "rhyacian"@en ;
     
     skos:broader <#paleoproterozoic> ; 
 .
 <#siderian>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "siderian"@en ;
     
     skos:broader <#paleoproterozoic> ; 
@@ -1504,7 +1503,7 @@
 
 <#archaen>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "archaen"@en ;
 
     skos:narrower <#neoarchean> , <#mesoarchean> , <#paleoarchean> , <#eoarchean> ; 
@@ -1512,28 +1511,28 @@
 
 <#neoarchean>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "neoarchean"@en ;
 
     skos:broader <#archaen> ; 
 .
 <#mesoarchean>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "mesoarchean"@en ;
 
     skos:broader <#archaen> ; 
 .
 <#paleoarchean>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "paleoarchean"@en ;
 
     skos:broader <#archaen> ; 
 .
 <#eoarchean>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "eoarchean"@en ;
 
     skos:broader <#archaen> ; 
@@ -1543,6 +1542,6 @@
 
 <#hadean>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "hadean"@en ;
 .

@@ -1,13 +1,11 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
-
-@prefix term: <https://aphia.org/ns/term/> .
+@prefix term: <https://aphia.org/ns/traits/> .
 
 # Define the concept scheme
-<https://aphia.org/ns/vocab/attribute-trait/>
+<https://aphia.org/ns/traits/>
     a skos:ConceptScheme ;
     skos:prefLabel "Controlled vocabulary for Aphia attributes and traits"@en ;
     rdfs:label "Controlled vocabulary for Aphia attributes and traits"@en ;

@@ -1,10 +1,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@base <https://aphia.org/ns/term/macroalgal_blooming> .
+@base <https://aphia.org/ns/traits/macroalgal_blooming> .
 
 <>
     a skos:Collection ; 
@@ -17,14 +16,14 @@
 
 <#macroalgal_blooming_yes>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Macroalgal blooming potential"@en ;
     skos:definition "The species has the potential to go through episodes of intense growth and mass proliferation of the thallus under specific environmental conditions such as high nutrient and temperature conditions."@en ;
 .
 
 <#macroalgal_blooming_no>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "No macroalgal blooming potential"@en ;
     skos:definition "The species does not have the obvious potential to go through episodes of intense growth and mass proliferation of the thallus under specific environmental conditions such as high nutrient and temperature conditions."@en ;
 .

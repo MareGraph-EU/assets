@@ -1,10 +1,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@base <https://aphia.org/ns/term/composition> .
+@base <https://aphia.org/ns/traits/composition> .
 
 <>
     a skos:Collection ; 
@@ -27,14 +26,14 @@
 
 <#phosphatic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Phosphatic"@en ;
     skos:definition "Composed of phosphoric acid or phosphates (derived from form Lawrence, 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
 .
 
 <#siliceous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Siliceous"@en ;
     skos:definition "Composed of silicon based spines, spicules or lattice, e.g. siliceous or glass sponges (derived from form Lawrence, 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
 
@@ -43,35 +42,35 @@
 
 <#chitinous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Chitinous"@en ;
     skos:definition "Composed of chitin, a long-chain polymer of N-acetylglucosamine. It is the chief polysaccharide in fungal cell walls and in the exoskeleton of arthropods (derived form Lawrence, 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
 .
 
 <#gorgonin>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Gorgonin"@en ;
     skos:definition "Fibrous protein in the mesoglea of sea fans (gorgonians) which forms the stiff skeleton of the colony (derived from Lawrence, 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
 .
 
 <#keratinous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Keratinous"@en ;
     skos:definition "Composed of keratin, a fibrous protein rich cysteine constituent of intermediate filaments (keratin filaments), chief material in horn, hair, nails and the upper layer of skin (derived from Lawrence, 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
 .
 
 <#sponginous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Sponginous"@en ;
     skos:definition "Composed of spongin, fibrous protein component of the horny sponges (derived from Lawrence, 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
 .
 
 <#calcareous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Calcareous"@en ;
     skos:definition "Skeleton composed of calcareous spicules (sponges/echinoderms), plates, spines, bones or other structures (derived from Lawrence, 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
 
@@ -82,7 +81,7 @@
 
 <#aragonite>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Aragonite"@en ;
     skos:definition "A crystalline form of calcium carbonate, e.g. one of the constituents of mollusc shells (derived from Lawrence, 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
 
@@ -91,7 +90,7 @@
 
 <#calcite>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Calcite"@en ;
     skos:definition "Crystalline form of calcium carbonate, e. g. one of the constituents of mollusc shells and the skeletons of calcareous sponges (derived from Lawrence, 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
 
@@ -100,7 +99,7 @@
 
 <#amorphous_calcium_carbonate>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Amorphous calcium carbonate"@en ;
     skos:definition "Calcium carbonate that lacks a crystalline structure, or whose internal is so irregular that there is no characteristic external form. The term does not preclude the existence of any degree of order (derived from Neuendorf et al. 2005, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
 
@@ -109,7 +108,7 @@
 
 <#high_magnesium_calcite>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "High-magnesium calcite"@en ;
     skos:definition "Calcite where more than 8wt.% CaCO3 is substituted by MgCO3 (derived from Smith et al., 2006, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
 
@@ -118,14 +117,14 @@
 
 <#organic>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Organic"@en ;
     skos:definition "(1) derived from, or showing the properties of a living organism; (2) containing carbon, applied to molecules (derived from Lawrence, 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
 .
 
 <#variable_composition>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Variable composition"@en ;
     skos:definition "Mixed and variable material (derived from Lawrence, 2005 - Henderson's Dictionary of Biology, and discussed and agreed upon by the WoRMS/Aphia editor community)."@en ;
 .

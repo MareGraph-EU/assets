@@ -1,10 +1,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@base <https://aphia.org/ns/term/body_shape> .
+@base <https://aphia.org/ns/traits/body_shape> .
 
 <>
     a skos:Collection ; 
@@ -34,7 +33,7 @@
 
 <#branched>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Branched"@en ;
     skos:definition "Forming main and lateral branches (and branchlets) (macroalgae thallus; Womersley, 1987)."@en ;
 
@@ -42,7 +41,7 @@
 .
 <#capitate>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Capitate"@en ;
     skos:definition "(1) Enlarged or swollen at tip; (2) Gathered into a mass at tip of stem or apex (Adapted from Lawrence, 2005 - Henderson's dictionary of Biology)."@en ;
 
@@ -50,7 +49,7 @@
 .
 <#crustose>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Crustose"@en ;
     skos:definition "Forming a thin crust on the substratum, appl. certain lichens, sponges, algae (adapted from Henderson's Dictionary of Biology; Lawrence, 2005)."@en ;
 
@@ -58,7 +57,7 @@
 .
 <#cushion_like>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Cushion-like"@en ;
     skos:definition "Approximating the shape of a cushion (macroalgae thallus; Womersley, 1987)."@en ;
 
@@ -66,7 +65,7 @@
 .
 <#discoid>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Discoid"@en ;
     skos:definition "(1) Flat and circular; (2) Disc-shaped (Henderson's Dictionary of Biology; Lawrence, 2005)."@en ;
 
@@ -74,7 +73,7 @@
 .
 <#erect>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Erect"@en ;
     skos:definition "Upright; (1) appl. ovule, directed towards summit of ovary; (2) appl. plants, growing upright, not decumbent."@en ;
 
@@ -82,7 +81,7 @@
 .
 <#filamentous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Filamentous"@en ;
     skos:definition "Existing out of a branched or unbranched row of cells joined end to end (macroalgae thallus; Womersley, 1987)."@en ;
 
@@ -90,7 +89,7 @@
 .
 <#flabellate>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Flabellate"@en ;
     skos:definition "With projecting flaps on one side, appl. to certain insect antennae (Henderson's Dictionary of Biology; Lawrence, 2005). Fan-shaped, thallus usually expanding upward from a narrow base. (macroalgae thallus; Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 
@@ -98,7 +97,7 @@
 .
 <#foliose>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Foliose"@en ;
     skos:definition "(1) With many leaves; (2) Having leaf-like lobes, appl. the thallus of some lichens and liverworts (Henderson's Dictionary of Biology; Lawrence, 2005). Leaf-like (macroalgae thallus; Womersley, 1987)."@en ;
 
@@ -106,7 +105,7 @@
 .
 <#pinnate>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Pinnate"@en ;
     skos:definition "(1) Divided in a feathery manner; (2) having lateral processes; (3) (bot.) of a compound leaf, having leaflets on each side of an axis or midrib (Henderson's Dictionary of Biology; Lawrence, 2005). With laterals or branches arranged along each side of an axis or branch (macroalgae thallus; Womersley, 1987)."@en ;
 
@@ -114,7 +113,7 @@
 .
 <#prostrate>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Prostrate"@en ;
     skos:definition "Trailing on the ground or lying closely along a surface (Henderson's Dictionary of Biology; Lawrence, 2005)."@en ;
 
@@ -122,7 +121,7 @@
 .
 <#saccate>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Saccate"@en ;
     skos:definition "Pouched (Henderson's Dictionary of Biology; Lawrence, 2005). Inflated, or sac-like (macroalgae thallus; Womersley, 1987)."@en ;
 
@@ -130,7 +129,7 @@
 .
 <#spheric>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Spheric"@en ;
     skos:definition "Approximating the shape of a sphere (macroalgae thallus; Womersley, 1987)."@en ;
 
@@ -138,7 +137,7 @@
 .
 <#tubular>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Tubular"@en ;
     skos:definition "In the form of a tube, having tubes, consisting of tubes (Henderson's Dictionary of Biology; Lawrence, 2005)."@en ;
 
@@ -146,13 +145,13 @@
 .
 <#unreported_body_shape>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Unreported body shape"@en ;
     skos:definition "So far it has not been reported in literature what the body shape (thallus) is for this taxon."@en ;
 .
 <#filiform>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Filiform"@en ;
     skos:definition "Resembling a filament (Olivier De Clerck). Thread-like."@en ;
 
@@ -160,7 +159,7 @@
 .
 <#mucilaginous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Mucilaginous"@en ;
     skos:definition "Consisting of a slippery and slimy texture (Maggs & Hommersand, 1993). Containing, or composed of mucilage (Henderson's Dictionary of Biology; Lawrence, 2005)."@en ;
 
@@ -168,7 +167,7 @@
 .
 <#stoloniferous>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Stoloniferous"@en ;
     skos:definition "Forming a prostrate axis, lying on or in the substrate, from which erect branches arise (Womersley, 1984). Bearing a stolon or stolons (Henderson's Dictionary of Biology; Lawrence, 2005)."@en ;
 

@@ -1,10 +1,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@base <https://aphia.org/ns/term/species_exhibits_underwater_soniferous_behaviour> .
+@base <https://aphia.org/ns/traits/species_exhibits_underwater_soniferous_behaviour> .
 
 <>
     a skos:Collection ; 
@@ -20,42 +19,42 @@
 
 <#soniferous_behaviour_unknown>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Unknown or undetermined"@en ;
     skos:definition "There is no known acoustic, morphological, or physiological study of sound production for this species and its likelihood of soniferous behavior based on an ancestral state reconstruction analysis, lineage, or evolutionary records has not been assessed, or this species has yet to be categorized by an expert source."@en ;
 .
 
 <#soniferous_behaviour_unlikely_under_natural_conditions>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Does not or is unlikely to produce sound under natural conditions"@en ;
     skos:definition "Species has been the subject of one or more studies to assess its acoustic behavior, morphology, and/or physiology, none of which have provided evidence of sound production either actively or passively, and/or species does not have a likelihood of soniferous behavior based on an ancestral state reconstruction analysis that results in a probability below 0.5, lineage, or evolutionary records."@en ;
 .
 
 <#soniferous_behaviour_likely_though_unconfirmed_under_natural_conditions>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Likely to produce sound under natural conditions but unconfirmed"@en ;
     skos:definition "There is no known acoustic documentation to confidently validate sound production under natural conditions by this species, but it is likely to exhibit natural soniferous behavior based on an ancestral state reconstruction analysis that results in a probability of 0.5 or higher, lineage, evolutionary records, morphological characteristics, physiological characteristics, documented sound production behavior under artificial conditions, and/or documented sound production behavior with some uncertainty."@en ;
 .
 
 <#passive_sound_under_natural_conditions>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Produces passive sound under natural conditions"@en ;
     skos:definition "There is validated acoustic documentation that this species produces passive sound under natural conditions, but no validated documentation to confirm that it actively produces sound."@en ;
 .
 
 <#active_sound_under_natural_conditions>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Produces active sound under natural conditions"@en ;
     skos:definition "There is validated acoustic documentation that this species produces active sound under natural conditions, but no validated documentation to confirm that it passively produces sound."@en ;
 .
 
 <#active_and_passive_sound_under_natural_conditions>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Produces active and passive sound under natural conditions"@en ;
     skos:definition "There is validated acoustic documentation that this species produces active and passive sound under natural conditions."@en ;
 .

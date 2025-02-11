@@ -1,10 +1,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@base <https://aphia.org/ns/term/dispersion_mode> .
+@base <https://aphia.org/ns/traits/dispersion_mode> .
 
 <>
     a skos:Collection ; 
@@ -29,42 +28,42 @@
 
 <#aplanospores>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Aplanospores"@en ;
     skos:definition "A non-motile spore, without power of locomotion (Lincoln et al., 1998). A non-motile resting spore (Henderson's Dictionary of biology; Lawrence, 2005). A non-motile, asexual spore ((Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)."@en ;
 .
 
 <#monospores>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Monospores"@en ;
     skos:definition "A simple or undivided spore."@en ;
 .
 
 <#motile_spores>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Motile spores"@en ;
     skos:definition "Spores are flagellate and can therefore disperse. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 .
 
 <#one_motile_gamete>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "One motile gamete"@en ;
     skos:definition "Only the male gamete is flagellate and can therefore disperse. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 .
 
 <#two_motile_gametes>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Two motile gametes"@en ;
     skos:definition "Both male and female gametes are flagellate and can therefore disperse. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 .
 
 <#vegetative_fragmentation>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Vegetative fragmentation"@en ;
     skos:definition "Type of asexual reproduction in which the organism breaks up into smaller pieces, each of which can develop into a new individual."@en ;
 
@@ -73,7 +72,7 @@
 
 <#thallus_fragmentation_and_drift>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Thallus fragmentation and drift"@en ;
     skos:definition "A part of the thallus can be lost and drift. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 
@@ -82,14 +81,14 @@
 
 <#vegetative_propagation>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Vegetative propagation"@en ;
     skos:definition "Any spore, seed, fruit or other part of a plant or microorganism capable of producing a new plant and used as a means of dispersal (Henderson's Dictionary of Biology; Lawrence, 2005). Vegetative reproduction by propagules that can also be used as a means of dispersal. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 .
 
 <#presence_of_buoyance_structures>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Presence of buoyance structures"@en ;
     skos:definition "Individuals exhibit gas-filled structures that favourise their floating. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 
@@ -98,28 +97,28 @@
 
 <#species_cultivated_or_sold_in_aquaria_trade>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Species cultivated or sold in aquaria trade"@en ;
     skos:definition "The species is cultivated or sold in aquaria trade. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 .
 
 <#species_growing_on_artificial_substrate>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Species growing on artificial substrate"@en ;
     skos:definition "The species is growing on artificial substrate such as harbour walls, boat hulls, piers, buoys. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)"@en ;
 .
 
 <#unknown_dispersion_mode>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Unknown dispersion mode"@en ;
     skos:definition "According to literature it is unknown which dispersion mode this organism has."@en ;
 .
 
 <#unreported_dispersion_mode>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Unreported dispersion mode"@en ;
     skos:definition "So far it has not been reported in literature which dispersion mode this taxon has."@en ;
 .

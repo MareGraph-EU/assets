@@ -1,10 +1,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@base <https://aphia.org/ns/term/seasonality> .
+@base <https://aphia.org/ns/traits/seasonality> .
 
 <>
     a skos:Collection ; 
@@ -17,35 +16,35 @@
 
 <#spring>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Spring"@en ;
     skos:definition "The organism can be observed in spring."@en ;
 .
 
 <#summer>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Summer"@en ;
     skos:definition "The organism can be observed in summer."@en ;
 .
 
 <#autumn>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Autumn"@en ;
     skos:definition "The organism can be observed in autumn."@en ;
 .
 
 <#winter>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Winter"@en ;
     skos:definition "The organism can be observed in winter."@en ;
 .
 
 <#unreported_seasonality>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Unreported seasonality"@en ;
     skos:definition "So far it has not been reported in literature in which season(s) this organism can be reported."@en ;
 .

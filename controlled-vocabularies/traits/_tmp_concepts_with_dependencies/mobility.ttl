@@ -1,10 +1,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@base <https://aphia.org/ns/term/mobility> .
+@base <https://aphia.org/ns/traits/mobility> .
 
 <>
     a skos:Collection ; 
@@ -17,7 +16,7 @@
 
 <#mobile>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme aphia-trait:<https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme aphia-trait:<https://aphia.org/ns/traits/> ;
     skos:prefLabel "mobile"@en ;
     skos:definition "An organism or population that can change its location or distribution with time; mobility; vagility."@en ;
 
@@ -25,7 +24,7 @@
 .
 <#sessile>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme aphia-trait:<https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme aphia-trait:<https://aphia.org/ns/traits/> ;
     skos:prefLabel "sessile"@en ;
     skos:definition "Non-motile; permanently attached at the base."@en ;
 
@@ -33,7 +32,7 @@
 .
 <#sedentary>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme aphia-trait:<https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme aphia-trait:<https://aphia.org/ns/traits/> ;
     skos:prefLabel "sedentary"@en ;
     skos:definition "Attached to the substrate; not free-living."@en ;
 

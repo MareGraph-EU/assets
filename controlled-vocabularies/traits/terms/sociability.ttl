@@ -1,10 +1,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@base <https://aphia.org/ns/term/sociability> .
+@base <https://aphia.org/ns/traits/sociability> .
 
 <>
     a skos:Collection ; 
@@ -17,7 +16,7 @@
 
 <#colonial>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Colonial"@en ;
     skos:definition "In biology, a colony is composed of two or more conspecific individuals living in close association with, or connected to, one another. This association is usually for mutual benefit such as stronger defense or the ability to attack bigger prey. It is a cluster of identical cells (clones) on the surface of (or within) a solid medium, usually derived from a single parent cell, as in bacterial colony. [Source: https://en.wikipedia.org/wiki/Colony_(biology)]. Organisms that live together in large numbers, esp. where the individual organisms form part of a larger structure. Examples are some algae, soft corals, reef-building corals, gorgonians and other anthozoans, and siphonophores. (Henderson's dictionary of biology; Lawrence, 2005)."@en ;
 
@@ -27,7 +26,7 @@
 .
 <#social_colonies_of_unitary_organisms>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Social colonies of unitary organisms"@en ;
     skos:definition "Unicellular and multicellular unitary organisms may aggregate to form colonies. Examples are slime molds of protists, colonies of ants and bees, breeding or nesting colonies of birds and mammals. [Source: https://en.wikipedia.org/wiki/Colony_(biology)]"@en ;
 
@@ -36,7 +35,7 @@
 
 <#modular_organisms>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Modular organisms"@en ;
     skos:definition "Modular organisms are those in which a genet (or genetic individual formed from a sexually-produced zygote) asexually reproduces to form genetically identical clones called ramets. [Source: https://en.wikipedia.org/wiki/Colony_(biology)]"@en ;
 
@@ -45,7 +44,7 @@
 
 <#microbial_colonies>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Microbial colonies"@en ;
     skos:definition "A microbial colony is defined as a visible cluster of microorganisms growing on the surface of or within a solid medium, presumably cultured from a single cell. [Source: https://en.wikipedia.org/wiki/Colony_(biology)]"@en ;
 
@@ -54,7 +53,7 @@
 
 <#solitary>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Solitary"@en ;
     skos:definition "Living alone, not gregarious (Thompson 1995). [Source: https://www.marinespecies.org/traits/wiki/Traits:Solitary]. Solitary organisms are ones in which all individuals live independently and have all of the functions needed to survive and reproduce. [Source: https://en.wikipedia.org/wiki/Colony_(biology)]"@en ;
 
@@ -65,7 +64,7 @@
 
 <#non_territorial_solitary>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Solitary, Non-territorial"@en ;
     skos:definition "Independent without a defined territory [Source: https://www.marinespecies.org/traits/wiki/Traits:NonTerritorial]. The animal does not establish a territory to defend against other members of the same species (adapted from Henderson's dictionary of biology; Lawrence, 2005)."@en ;
 
@@ -74,7 +73,7 @@
 
 <#territorial_solitary>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Solitary, Territorial"@en ;
     skos:definition "Independent but maintains a defined territory [Source: https://www.marinespecies.org/traits/wiki/Traits:Territorial]. The animal establishes a territory which it defends against other members of the same species (adapted from Henderson's dictionary of biology; Lawrence, 2005)."@en ;
 

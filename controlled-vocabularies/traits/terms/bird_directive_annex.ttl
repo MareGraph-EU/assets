@@ -1,10 +1,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-
 @prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
 
-@base <https://aphia.org/ns/term/birds_directive_annex> .
+@base <https://aphia.org/ns/traits/birds_directive_annex> .
 
 <>
     a skos:Collection ; 
@@ -15,35 +14,35 @@
 
 <#birds_directive_annex_I>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Birds Directive Annex I"@en ;
     skos:definition "The species mentioned in Annex I shall be the subject of special conservation measures concerning their habitat in order to ensure their survival and reproduction in their area of distribution."@en ;
 .
 
 <#birds_directive_annex_II_part_A>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Birds Directive Annex II, part A"@en ;
     skos:definition "The species referred to in Annex II, Part A may be hunted in the geographical sea and land area where this Directive applies."@en ;
 .
 
 <#birds_directive_annex_II_part_B>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Birds Directive Annex II, part B"@en ;
     skos:definition "The species referred to in Annex II, Part B may be hunted only in the Member States in respect of which they are indicated."@en ;
 .
 
 <#birds_directive_annex_III_part_A>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Birds Directive Annex III, part A"@en ;
     skos:definition "The activities referred to in paragraph 1 [of the Birds Directive] shall not be prohibited in respect of the species referred to in Annex III, Part A, provided that the birds have been legally killed or captured or otherwise legally acquired."@en ;
 .
 
 <#birds_directive_annex_III_part_B>
     a skos:Concept, aphia-trait:Trait ;
-    skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Birds Directive Annex III, part B"@en ;
     skos:definition "Member States may, for the species listed in Annex III, Part B, allow within their territory the activities referred to in paragraph 1 [of the Birds Directive], making provision for certain restrictions, provided that the birds have been legally killed or captured or otherwise legally acquired."@en ;
 .
