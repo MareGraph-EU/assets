@@ -16,7 +16,7 @@ This repository provides the RDF representation (in Turtle syntax) of a controll
 
 The traits in this repository are organized and described as follows:  
 
-- **`terms.ttl`**:  
+- **`traits.ttl`**:  
   This file describes the controlled vocabulary which is defined as a `skos:ConceptScheme`, listing trait/attributes as `skos:members`.  
 
 - **`./terms/`**:  
