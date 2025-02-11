@@ -140,8 +140,7 @@
     skos:inScheme <https://aphia.org/ns/vocab/attribute-trait/> ;
     skos:prefLabel "Filter feeder"@en ;
     skos:definition "Any animal that feeds by filtering suspended particulate organic matter from water."@en ;
-
-    skos:exactMatch <#suspension_feeder> ; 
+ 
     skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_7a6a2248> ; 
 .
 
@@ -336,7 +335,6 @@
 
     skos:narrower <#facultative_suspension_feeder> ;
 
-    skos:exactMatch <#filter_feeder> ; 
     skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_7a6a2248> ; 
 .
 
