@@ -20,12 +20,8 @@ The traits in this repository are organized and described as follows:
   This file describes the controlled vocabulary which is defined as a `skos:ConceptScheme`, listing trait/attributes as `skos:members`.  
 
 - **`./terms/`**:  
-  Contains individual `.ttl` files describing those traits that are represented as simple, independent lists of concepts.  
+  Contains individual `.ttl` files describing those terms that are represented as simple, independent lists of concepts.  
 
-- **`./_tmp_concepts_with_dependencies/`**:  
-  Contains `.ttl` files describing those traits that have dependencies on other traits. These traits require additional modeling to represent their interrelationships accurately.  
-
-
-## Additional Work Required  
-
-The dependency visualization highlights that while some traits can be modeled as straightforward lists of concepts, other traits (listed in **./_tmp_concepts_with_dependencies**) require more advanced modeling to account for their interdependencies. 
+- **`./parameters/`**:  
+  Contains individual `.ttl` files describing those terms that provide additional information to other terms. These terms do not have standalone meaning but instead modify, refine, or specify details about another terms.
+...
