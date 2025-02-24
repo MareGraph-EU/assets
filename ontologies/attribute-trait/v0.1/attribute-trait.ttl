@@ -42,10 +42,6 @@
 #    Annotation properties
 #################################################################
 
-###  http://purl.obolibrary.org/obo/ENVO_01000739
-<http://purl.obolibrary.org/obo/ENVO_01000739> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/language
 dct:language rdf:type owl:AnnotationProperty .
 
@@ -59,8 +55,7 @@ dct:title rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/ns/prov#wasDerivedFrom
-prov:wasDerivedFrom rdf:type owl:AnnotationProperty ;
-                    <http://purl.obolibrary.org/obo/ENVO_01000739>  .
+prov:wasDerivedFrom rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/ns/prov#wasInfluencedBy
@@ -231,7 +226,7 @@ skos:Concept rdf:type owl:Class .
                                         owl:allValuesFrom <https://w3id.org/marine/ns/top-level/Value>
                                       ] ;
                       rdfs:comment "De klasse voor het representeren van een verdere specificatie van de taxonbeschrijving. De klasse combineert aanvullende parameters en hun waarden die de kenmerken en eigenschappen van de taxonbeschrijving weergeven. Voorbeelden zijn: geslacht, levensstadium enz. met hun toegestane waarden."@nl ,
-                                   "La classe che consente di rappresentare un'ulteriore specifica della descrizione del taxon. La classe unisce parametri aggiuntivi, e relativi valori, che connotano gli attributi e tratti della descrizione del taxon. Esempi includono: il sesso, il stadio di vita, ecc. con i loro valori ammessi."@it ,
+                                   "La classe che consente di rappresentare un'ulteriore specifica della descrizione del taxon. La classe unisce parametri aggiuntivi, e relativi valori, che connotano gli attributi e tratti della descrizione del taxon. Esempi includono: il sesso, lo stadio di vita, ecc. con i loro valori ammessi."@it ,
                                    "The class for representing a further specification of the taxon description. The class combines additional parameters, and their values, that connote the attributes and traits of the taxon description. Examples include: sex, life stage etc. with their permitted values."@en ;
                       rdfs:isDefinedBy <https://w3id.org/marine/ns/attribute-trait> ;
                       rdfs:label "Specifica di Contesto"@it ,

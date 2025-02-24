@@ -42,10 +42,6 @@
 #    Annotation properties
 #################################################################
 
-###  http://purl.obolibrary.org/obo/ENVO_01000739
-<http://purl.obolibrary.org/obo/ENVO_01000739> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/language
 dct:language rdf:type owl:AnnotationProperty .
 
@@ -59,8 +55,7 @@ dct:title rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/ns/prov#wasDerivedFrom
-prov:wasDerivedFrom rdf:type owl:AnnotationProperty ;
-                    <http://purl.obolibrary.org/obo/ENVO_01000739>  .
+prov:wasDerivedFrom rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/ns/prov#wasInfluencedBy

@@ -39,10 +39,10 @@
         <owl:versionInfo xml:lang="it">Seconda versione 0.2 - cambiati tutti gli URI da w3id.org/ a aphia.org/; inserita la proprietà skos:note per la classe TaxonDescription.</owl:versionInfo>
         <owl:versionInfo xml:lang="nl">Tweede versie 0.2 - URI&apos;s gewijzigd van w3id.org/ naar aphia.org/; skos:note geïntroduceerd als eigenschap voor TaxonDescription.</owl:versionInfo>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -50,84 +50,76 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_01000739 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ENVO_01000739"/>
-    
 
 
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/description -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/issued -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/language -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/language"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/modified -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
-    
+
 
 
     <!-- http://www.w3.org/2002/07/owl#maxQualifiedCardinality -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#maxQualifiedCardinality"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
-        <obo:ENVO_01000739 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></obo:ENVO_01000739>
-    </owl:AnnotationProperty>
-    
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+
 
 
     <!-- http://www.w3.org/ns/prov#wasInfluencedBy -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasInfluencedBy"/>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/name -->
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Datatypes
@@ -135,16 +127,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://www.w3.org/2001/XMLSchema#date -->
 
     <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -152,43 +144,43 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.org/dc/terms/source -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/source"/>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith -->
 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines -->
 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines"/>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#describes -->
 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#describes"/>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDescribedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDescribedBy"/>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRelatedToDescription -->
 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRelatedToDescription"/>
-    
+
 
 
     <!-- https://aphia.org/ns/attribute-trait/definesParameter -->
@@ -205,7 +197,7 @@
         <rdfs:label xml:lang="nl">definieert parameter</rdfs:label>
         <rdfs:label xml:lang="it">definisce parametro</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://aphia.org/ns/attribute-trait/hasAdditionalDescription -->
@@ -223,7 +215,7 @@
         <rdfs:label xml:lang="en">has additional description</rdfs:label>
         <rdfs:label xml:lang="nl">heeft aanvullende beschrijving</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://aphia.org/ns/attribute-trait/hasExtraSpecification -->
@@ -239,7 +231,7 @@
         <rdfs:label xml:lang="en">has extra specification</rdfs:label>
         <rdfs:label xml:lang="nl">heeft extra specificatie</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://aphia.org/ns/attribute-trait/hasHabitat -->
@@ -257,7 +249,7 @@
         <rdfs:label xml:lang="en">has habitat</rdfs:label>
         <rdfs:label xml:lang="nl">heeft habitat</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://aphia.org/ns/attribute-trait/hasTaxonCharateristic -->
@@ -274,7 +266,7 @@
         <rdfs:label xml:lang="en">has taxon characteristic</rdfs:label>
         <rdfs:label xml:lang="nl">heeft taxonkenmerk</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://aphia.org/ns/attribute-trait/isAdditionalDescriptionOf -->
@@ -291,7 +283,7 @@
         <rdfs:label xml:lang="nl">is een aanvullende beschrijving van</rdfs:label>
         <rdfs:label xml:lang="it">è ulteriore descrizione di</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://aphia.org/ns/attribute-trait/isHabitatOf -->
@@ -308,16 +300,16 @@
         <rdfs:label xml:lang="en">is habitat of</rdfs:label>
         <rdfs:label xml:lang="it">è habitat di</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://aphia.org/ns/top-level/hasValue -->
 
     <owl:ObjectProperty rdf:about="https://aphia.org/ns/top-level/hasValue"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -325,16 +317,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#note -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -342,49 +334,49 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://org.semanticweb.owlapi/error#Error1 -->
 
     <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/d0.owl#Characteristic -->
 
     <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/d0.owl#Characteristic"/>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept -->
 
     <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description -->
 
     <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
-    
+
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter -->
 
     <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#Concept -->
 
     <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/Organization -->
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
-    
+
 
 
     <!-- https://aphia.org/ns/attribute-trait/Attribute -->
@@ -402,7 +394,7 @@
         <rdfs:label xml:lang="nl">Attribuut</rdfs:label>
         <prov:wasInfluencedBy rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_4"/>
     </owl:Class>
-    
+
 
 
     <!-- https://aphia.org/ns/attribute-trait/Environment -->
@@ -424,7 +416,7 @@
         <rdfs:label xml:lang="en">Environment</rdfs:label>
         <rdfs:label xml:lang="nl">Milieu</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://aphia.org/ns/attribute-trait/SpecificationContext -->
@@ -457,7 +449,7 @@
         <rdfs:label xml:lang="nl">Specificatie Context</rdfs:label>
         <rdfs:label xml:lang="en">Specification Context</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://aphia.org/ns/attribute-trait/TaxonCharacteristic -->
@@ -473,7 +465,7 @@
         <rdfs:label xml:lang="en">Taxon Characteristic</rdfs:label>
         <rdfs:label xml:lang="nl">Taxonkenmerk</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://aphia.org/ns/attribute-trait/TaxonDescription -->
@@ -536,7 +528,7 @@
         <rdfs:label xml:lang="nl">Taxon Beschrijving</rdfs:label>
         <rdfs:label xml:lang="en">Taxon Description</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://aphia.org/ns/attribute-trait/Trait -->
@@ -553,34 +545,34 @@
         <rdfs:label xml:lang="en">Trait</rdfs:label>
         <rdfs:label xml:lang="it">Tratto</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://aphia.org/ns/taxon-name/Taxon -->
 
     <owl:Class rdf:about="https://aphia.org/ns/taxon-name/Taxon"/>
-    
+
 
 
     <!-- https://aphia.org/ns/top-level/Source -->
 
     <owl:Class rdf:about="https://aphia.org/ns/top-level/Source"/>
-    
+
 
 
     <!-- https://aphia.org/ns/top-level/Value -->
 
     <owl:Class rdf:about="https://aphia.org/ns/top-level/Value"/>
-    
+
 
 
     <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_4 -->
 
     <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_4"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -588,7 +580,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://aphia.org/resource/organisation/dv -->
@@ -608,4 +600,3 @@
 
 
 <!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
-
