@@ -62,12 +62,6 @@
 
 
 
-    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
-
-
-
     <!-- http://xmlns.com/foaf/0.1/name -->
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
@@ -246,6 +240,7 @@
     <owl:DatatypeProperty rdf:about="https://aphia.org/ns/top-level/year">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
         <rdfs:isDefinedBy rdf:resource="https://aphia.org/ns/top-level"/>
         <rdfs:label xml:lang="it">anno</rdfs:label>
         <rdfs:label xml:lang="en">year</rdfs:label>
@@ -497,17 +492,7 @@
 
 
 
-    <!--
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
 
-    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#range">
-        <xsd:gYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></xsd:gYear>
-    </rdf:Description>
 </rdf:RDF>
 
 
