@@ -560,7 +560,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/SpecificationContext</IRI>
-        <Literal xml:lang="it">La classe che consente di rappresentare un&apos;ulteriore specifica della descrizione del taxon. La classe unisce parametri aggiuntivi, e relativi valori, che connotano gli attributi e tratti della descrizione del taxon. Esempi includono: il sesso, il stadio di vita, ecc. con i loro valori ammessi.</Literal>
+        <Literal xml:lang="it">La classe che consente di rappresentare un&apos;ulteriore specifica della descrizione del taxon. La classe unisce parametri aggiuntivi, e relativi valori, che connotano gli attributi e tratti della descrizione del taxon. Esempi includono: il sesso, lo stadio di vita, ecc. con i loro valori ammessi.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
