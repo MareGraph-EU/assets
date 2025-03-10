@@ -1,0 +1,62 @@
+name: publish-pylode-html
+
+on:
+  push:
+    branches: [feature/controlled_vocabularies]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content to github runner
+
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.12.6" # install the python version needed
+
+      - name: install python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install pylode==2.13.2
+
+      - name: run pylode
+        run: |
+          # Create base output directory if it doesn't exist
+          mkdir -p controlled-vocabularies/pylode-output/
+          
+          # Find all .ttl files in the controlled-vocabularies directory
+          find controlled-vocabularies -name "*.ttl" | while read ttl_file; do
+            # Extract directory path and filename without extension
+            dir_path=$(dirname "$ttl_file")
+            filename=$(basename "$ttl_file" .ttl)
+            
+            # Create the output directory structure
+            # Replace the base 'controlled-vocabularies' with 'controlled-vocabularies/pylode-output'
+            output_dir="${dir_path/controlled-vocabularies/controlled-vocabularies\/pylode-output}"
+            mkdir -p "$output_dir"
+            
+            # Set the output file path
+            output_file="$output_dir/$filename.html"
+            
+            echo "Processing $ttl_file -> $output_file"
+            {
+              pylode -i "$ttl_file" -o "$output_file" -l en
+            } || {
+              echo "Failed to process $ttl_file"
+            }
+          done
+
+      - name: commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add controlled-vocabularies/pylode-output/**/*.html
+          git commit -m "automated sync of ontology.html output from pylode" -a || echo "No changes to commit"
+
+      - name: push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: feature/controlled_vocabularies
