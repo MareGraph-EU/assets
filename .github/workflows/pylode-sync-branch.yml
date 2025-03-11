@@ -37,19 +37,13 @@ jobs:
       - name: run pylode
         run: |
           # Create base output directory if it doesn't exist
-          mkdir -p controlled-vocabularies/pylode-output/
           
           # Find all .ttl files in the controlled-vocabularies directory
           find controlled-vocabularies -name "*.ttl" | while read ttl_file; do
             # Extract directory path and filename without extension
             dir_path=$(dirname "$ttl_file")
             filename=$(basename "$ttl_file" .ttl)
-            
-            # Create the output directory structure
-            # Replace the base 'controlled-vocabularies' with 'controlled-vocabularies/pylode-output'
-            output_dir="${dir_path/controlled-vocabularies/controlled-vocabularies\/pylode-output}"
-            mkdir -p "$output_dir"
-            echo "Processing $ttl_file -> $output_file"
+            echo "Processing $ttl_file
             {
               python ttl_to_csv_to_html.py "$ttl_file" vocab_html.html
             } || {
@@ -57,11 +51,17 @@ jobs:
             }
           done
 
+      - name: cleanup output directory
+        run: |
+          # Remove the script and template
+          rm ttl_to_csv_to_html.py vocab_html.html
+
       - name: commit files
         run: |
+          
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add controlled-vocabularies/pylode-output/**/*.html
+          git add *
           git commit -m "automated sync of ontology.html output from pylode" -a || echo "No changes to commit"
 
       - name: push changes
