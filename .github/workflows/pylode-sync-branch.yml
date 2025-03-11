@@ -40,7 +40,7 @@ jobs:
             # Extract directory path and filename without extension
             dir_path=$(dirname "$ttl_file")
             filename=$(basename "$ttl_file" .ttl)
-            echo "Processing $ttl_file
+            echo "Processing $ttl_file"
             {
               python ttl_to_csv_to_html.py "$ttl_file" vocab_html.html
             } || {
@@ -55,7 +55,6 @@ jobs:
 
       - name: commit files
         run: |
-          
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add *
