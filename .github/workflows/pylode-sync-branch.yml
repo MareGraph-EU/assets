@@ -23,18 +23,16 @@ jobs:
           pip install rdflib
           pip install jinja2
 
-
-    - name: get needed script and template from vliz-be-opsci/pylode-to-pages repo
-      run: |
-        echo "Downloading script and template from vliz-be-opsci/pylode-to-pages repo"
-        if ! command -v wget &> /dev/null
-        then
-          echo "wget could not be found, installing it"
-          sudo apt-get update && sudo apt-get install -y wget
-        fi
-        wget https://raw.githubusercontent.com/vliz-be-opsci/pylode-to-pages/refs/heads/main/tests/aphia_csv_test/ttl_to_csv_to_html.py
-        wget https://raw.githubusercontent.com/vliz-be-opsci/pylode-to-pages/refs/heads/main/tests/aphia_csv_test/vocab_html.html
-          
+      - name: get needed script and template from vliz-be-opsci/pylode-to-pages repo
+        run: |
+          echo "Downloading script and template from vliz-be-opsci/pylode-to-pages repo"
+          if ! command -v wget &> /dev/null
+          then
+            echo "wget could not be found, installing it"
+            sudo apt-get update && sudo apt-get install -y wget
+          fi
+          wget https://raw.githubusercontent.com/vliz-be-opsci/pylode-to-pages/refs/heads/main/tests/aphia_csv_test/ttl_to_csv_to_html.py
+          wget https://raw.githubusercontent.com/vliz-be-opsci/pylode-to-pages/refs/heads/main/tests/aphia_csv_test/vocab_html.html
 
       - name: run pylode
         run: |
