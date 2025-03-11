@@ -36,8 +36,6 @@ jobs:
 
       - name: run pylode
         run: |
-          # Create base output directory if it doesn't exist
-          
           # Find all .ttl files in the controlled-vocabularies directory
           find controlled-vocabularies -name "*.ttl" | while read ttl_file; do
             # Extract directory path and filename without extension
