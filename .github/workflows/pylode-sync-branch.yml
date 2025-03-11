@@ -20,6 +20,16 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pylode==2.13.2
+          pip install rdflib
+          pip install jinja2
+
+
+    - name: get needed script and template from vliz-be-opsci/pylode-to-pages repo
+      run: |
+        echo "Downloading script and template from vliz-be-opsci/pylode-to-pages repo"
+        wget https://raw.githubusercontent.com/vliz-be-opsci/pylode-to-pages/refs/heads/main/tests/aphia_csv_test/ttl_to_csv_to_html.py
+        wget https://raw.githubusercontent.com/vliz-be-opsci/pylode-to-pages/refs/heads/main/tests/aphia_csv_test/vocab_html.html
+          
 
       - name: run pylode
         run: |
@@ -36,13 +46,9 @@ jobs:
             # Replace the base 'controlled-vocabularies' with 'controlled-vocabularies/pylode-output'
             output_dir="${dir_path/controlled-vocabularies/controlled-vocabularies\/pylode-output}"
             mkdir -p "$output_dir"
-            
-            # Set the output file path
-            output_file="$output_dir/$filename.html"
-            
             echo "Processing $ttl_file -> $output_file"
             {
-              pylode -i "$ttl_file" -o "$output_file" -l en
+              python ttl_to_csv_to_html.py "$ttl_file" vocab_html.html
             } || {
               echo "Failed to process $ttl_file"
             }
