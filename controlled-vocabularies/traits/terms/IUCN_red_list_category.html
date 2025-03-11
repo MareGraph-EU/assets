@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IUCN_red_list_category</title>
+    <style>
+      #pylode {
+          position: fixed;
+          top: 170px;
+          left: -150px;
+          font-size: small;
+          transform: rotate(-90deg);
+          color: grey;
+      }
+      html {
+          scroll-behavior: smooth;
+      }
+      #pylode a {
+          font-size: 2em;
+          font-weight: bold;
+          text-decoration: none;
+          color: #005A9C;
+      }
+      #pylode a:hover {
+          color: #333;
+      }
+      #pylode #p {
+          color: #329545;
+      }
+      #pylode #y {
+          color: #f9cb33;
+      }
+      #pylode #version {
+          font-size: 1.0em;
+      }
+
+      .cardinality {
+          font-style: italic;
+          color: #aa00aa;
+      }
+
+      dl {
+          /*border: 1px solid navy;*/
+          /*padding:5px;*/
+      }
+
+      dt {
+          font-weight: bold;
+          padding: 0;
+      }
+
+      dd {
+          margin-bottom: 10px;
+          padding-top: 7px;
+      }
+
+      #metadata ul,
+      #classes ul {
+          list-style-type: none;
+      }
+
+      #metadata ul li,
+      #classes ul li {
+          margin-left: -40px;
+      }
+
+      ul.hlist {
+          list-style-type: none;
+          border: 1px solid navy;
+          padding:5px;
+          background-color: #F4FFFF;
+      }
+
+      ul.hierarchy {
+          border: 1px solid navy;
+          padding: 5px 25px 5px 25px;
+          background-color: #F4FFFF;
+      }
+
+
+      ul.hlist li {
+          display: inline;
+          margin-right: 10px;
+      }
+
+      .entity {
+          border: 1px solid navy;
+          margin:5px 0 5px 0;
+          padding: 5px;
+      }
+
+      .entity th {
+          width: 150px;
+          vertical-align: top;
+      }
+
+      .entity th,
+      .entity td {
+          padding-bottom: 20px;
+      }
+
+      .entity table th {
+          text-align: left;
+      }
+
+      section#overview img {
+          max-width: 1000px;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+          text-align: left
+      }
+      h1, h2, h3 {
+          color: #005A9C; background: white
+      }
+      h1 {
+          font: 170% sans-serif;
+          line-height: 110%;
+      }
+      h2 {
+          font: 140% sans-serif;
+          margin-top:40px;
+      }
+      h3 {
+          font: 120% sans-serif;
+          margin-top: 20px;
+          padding-bottom: 5px;
+          border-bottom: 1px solid navy;
+      }
+      h4 { font: bold 100% sans-serif }
+      h5 { font: italic 100% sans-serif }
+      h6 { font: small-caps 100% sans-serif }
+
+      body {
+          padding: 2em 70px 2em 70px;
+          margin: 0;
+          font-family: sans-serif;
+          color: black;
+          background: white;
+          background-position: top left;
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+          text-align: left;
+      }
+
+      section {
+          max-width: 1500px;
+      }
+
+      .figure {
+          margin-bottom: 20px;
+      }
+
+      :link { color: #00C; background: transparent }
+      :visited { color: #609; background: transparent }
+      a:active { color: #C00; background: transparent }
+
+      .sup-c,
+      .sup-op,
+      .sup-fp,
+      .sup-dp,
+      .sup-ap,
+      .sup-p,
+      .sup-ni,
+      .sup-con,
+      .sup-col {
+          cursor:help;
+      }
+
+      .sup-c {
+          color:orange;
+      }
+
+      .sup-op {
+          color:navy;
+      }
+
+      .sup-fp {
+          color:lightskyblue;
+      }
+
+      .sup-dp {
+          color:green;
+      }
+
+      .sup-ap {
+          color:darkred;
+      }
+
+      .sup-p {
+          color:black;
+      }
+
+      .sup-ni {
+          color:brown;
+      }
+
+      .sup-con {
+          color:orange;
+      }
+
+      .sup-col {
+          color:darkred;
+      }
+
+      sup {
+          margin-left: -3px;
+      }
+      code {
+          font-size: large;
+          color: darkred;
+      }
+
+      /* less prominent links for properties */
+      .proplink {
+          color: #336;
+          text-decoration: none;
+      }
+
+      #toc {
+          position: fixed;
+          top: 0;
+          right: 0;
+          z-index: 2;
+          height: 100%;
+          overflow-y: auto;
+          padding: 10px;
+          border: solid 1px navy;
+          font-size: small;
+          width: 180px;
+      }
+      #toc h3 {
+          margin-top: 5px;
+      }
+
+      #toc ul {
+          list-style: none;
+          padding-left: 0;
+      }
+
+      #toc .first > li {
+          margin-top: 5px;
+      }
+
+      #toc .second,
+      #toc .third {
+          padding-left: 10px;
+      }
+
+      #content {
+          width: calc(100% - 150px);
+      }
+
+      .hover_property {
+          cursor: help;
+          text-decoration: none;
+          border-bottom: dashed 1px;
+      }
+
+      .setclass {
+          list-style-type: none;
+      }
+
+      code{
+          word-wrap: break-word;
+        }
+        table {
+          table-layout: fixed;
+          width: 100%;
+        }
+        td {
+          word-wrap: break-word;
+        }
+    </style>
+    <link
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1SewEAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC"
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg=="
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <div id="content">
+
+      <div class="section" id="collections">
+        <h2>Collections</h2>
+        
+        <div class="concept entity" id="https://aphia.org/ns/traits/iucn_red_list_category#">
+          <h3>https://aphia.org/ns/traits/iucn_red_list_category#</h3>
+          
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  IUCN Red List Category (version 3.1)
+                  
+                </p>
+                </td>
+            </tr>
+            
+        </div>
+        
+      </div>
+
+      <div class="section" id="concepts">
+        <h2>Concepts</h2>
+        
+        <div class="concept entity" id="Data Deficient">
+          <h3>
+            Data Deficient
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/iucn_red_list_category#data_deficient</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  A taxon is Data Deficient when there is inadequate information to make a direct, or indirect, assessment of its risk of extinction based on its distribution and/or population status. A taxon in this category may be well studied, and its biology well known, but appropriate data on abundance and/or distribution are lacking. Data Deficient is therefore not a category of threat. Listing of taxa in this category indicates that more information is required and acknowledges the possibility that future research will show that threatened classification is appropriate. It is important to make positive use of whatever data are available. In many cases great care should be exercised in choosing between DD and a threatened status. If the range of a taxon is suspected to be relatively circumscribed, and a considerable period of time has elapsed since the last record of the taxon, threatened status may well be justified.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Vulnerable">
+          <h3>
+            Vulnerable
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/iucn_red_list_category#vulnerable</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  A taxon is Vulnerable when the best available evidence indicates that it meets any of the criteria A to E for Vulnerable (see Section V), and it is therefore considered to be facing a high risk of extinction in the wild.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Not Evaluated">
+          <h3>
+            Not Evaluated
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/iucn_red_list_category#not_evaluated</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  A taxon is Not Evaluated when it is has not yet been evaluated against the criteria.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Near Threatened">
+          <h3>
+            Near Threatened
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/iucn_red_list_category#near_threatened</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  A taxon is Near Threatened when it has been evaluated against the criteria but does not qualify for Critically Endangered, Endangered or Vulnerable now, but is close to qualifying for or is likely to qualify for a threatened category in the near future.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Extinct in the Wild">
+          <h3>
+            Extinct in the Wild
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/iucn_red_list_category#extinct_in_the_wild</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  A taxon is Extinct in the Wild when it is known only to survive in cultivation, in captivity or as a naturalized population (or populations) well outside the past range. A taxon is presumed Extinct in the Wild when exhaustive surveys in known and/or expected habitat, at appropriate times (diurnal, seasonal, annual), throughout its historic range have failed to record an individual. Surveys should be over a time frame appropriate to the taxon's life cycle and life form.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Least Concern">
+          <h3>
+            Least Concern
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/iucn_red_list_category#least_concern</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  A taxon is Least Concern when it has been evaluated against the criteria and does not qualify for Critically Endangered, Endangered, Vulnerable or Near Threatened. Widespread and abundant taxa are included in this category.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Endangered">
+          <h3>
+            Endangered
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/iucn_red_list_category#endangered</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  A taxon is Endangered when the best available evidence indicates that it meets any of the criteria A to E for Endangered (see Section V), and it is therefore considered to be facing a very high risk of extinction in the wild.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Extinct">
+          <h3>
+            Extinct
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/iucn_red_list_category#extinct</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  A taxon is Extinct when there is no reasonable doubt that the last individual has died. A taxon is presumed Extinct when exhaustive surveys in known and/or expected habitat, at appropriate times (diurnal, seasonal, annual), throughout its historic range have failed to record an individual. Surveys should be over a time frame appropriate to the taxon's life cycle and life form.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Conservation Dependent">
+          <h3>
+            Conservation Dependent
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/iucn_red_list_category#conservation_dependent</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Taxa which are the focus of a continuing taxon-specific or habitat-specific conservation programme targeted towards the taxon in question, the cessation of which would result in the taxon qualifying for one of the threatened categories above within a period of five years. (Note: The conservation dependent category is part of the IUCN 1994 Categories & Criteria (version 2.3), which is no longer used in evaluation of taxa, but persists in the IUCN Red List for taxa evaluated prior to 2001, when version 3.1 was first used. Using the 2001 (v3.1) system these taxa are classed as near threatened, but those that have not been re-evaluated remain with the 'conservation dependent' category.)
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Critically Endangered">
+          <h3>
+            Critically Endangered
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/iucn_red_list_category#critically_endangered</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  A taxon is Critically Endangered when the best available evidence indicates that it meets any of the criteria A to E for Critically Endangered (see Section V), and it is therefore considered to be facing an extremely high risk of extinction in the wild.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+      </div>
+      <div id="namespaces">
+        <h2>Namespaces</h2>
+        <dl>
+          <dt id="dcterms">dcterms</dt>
+          <dd>
+            <code>http://purl.org/dc/terms/</code>
+          </dd>
+          <dt id="rdf">rdf</dt>
+          <dd>
+            <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code>
+          </dd>
+          <dt id="rdfs">rdfs</dt>
+          <dd>
+            <code>http://www.w3.org/2000/01/rdf-schema#</code>
+          </dd>
+          <dt id="skos">skos</dt>
+          <dd>
+            <code>http://www.w3.org/2004/02/skos/core#</code>
+          </dd>
+          <dt id="vann">vann</dt>
+          <dd>
+            <code>http://purl.org/vocab/vann/</code>
+          </dd>
+        </dl>
+      </div>
+      <div id="legend">
+        <h2>Legend</h2>
+        <table class="entity">
+          <tr id="CC">
+            <td>
+              <sup class="sup-op" title="SKOS concept">CC</sup>
+            </td>
+            <td>Concept</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="pylode">
+      <p>
+        made by
+        <a href="https://github.com/vliz-be-opsci/pylode-to-pages">
+          <span id="p">Pylode</span>
+          <span id="y">-To-Pages</span>
+          <span>@VLIZ</span>
+        </a>
+      </p>
+    </div>
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <ul class="first">
+        <li>
+          <h4>
+            <a href="#concepts">Concepts</a>
+          </h4>
+          <ul class="second">
+            
+            <li>
+              <a href="#Data Deficient">Data Deficient</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Vulnerable">Vulnerable</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Not Evaluated">Not Evaluated</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Near Threatened">Near Threatened</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Extinct in the Wild">Extinct in the Wild</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Least Concern">Least Concern</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Endangered">Endangered</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Extinct">Extinct</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Conservation Dependent">Conservation Dependent</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Critically Endangered">Critically Endangered</a>
+            </li>
+
+            <li></li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#namespaces">Namespaces</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#dcterms">dcterms</a>
+            </li>
+            <li>
+              <a href="#rdf">rdf</a>
+            </li>
+            <li>
+              <a href="#rdfs">rdfs</a>
+            </li>
+            <li>
+              <a href="#skos">skos</a>
+            </li>
+            <li>
+              <a href="#vann">vann</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#legend">Legend</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#CC">Concept</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,2798 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>feeding_type</title>
+    <style>
+      #pylode {
+          position: fixed;
+          top: 170px;
+          left: -150px;
+          font-size: small;
+          transform: rotate(-90deg);
+          color: grey;
+      }
+      html {
+          scroll-behavior: smooth;
+      }
+      #pylode a {
+          font-size: 2em;
+          font-weight: bold;
+          text-decoration: none;
+          color: #005A9C;
+      }
+      #pylode a:hover {
+          color: #333;
+      }
+      #pylode #p {
+          color: #329545;
+      }
+      #pylode #y {
+          color: #f9cb33;
+      }
+      #pylode #version {
+          font-size: 1.0em;
+      }
+
+      .cardinality {
+          font-style: italic;
+          color: #aa00aa;
+      }
+
+      dl {
+          /*border: 1px solid navy;*/
+          /*padding:5px;*/
+      }
+
+      dt {
+          font-weight: bold;
+          padding: 0;
+      }
+
+      dd {
+          margin-bottom: 10px;
+          padding-top: 7px;
+      }
+
+      #metadata ul,
+      #classes ul {
+          list-style-type: none;
+      }
+
+      #metadata ul li,
+      #classes ul li {
+          margin-left: -40px;
+      }
+
+      ul.hlist {
+          list-style-type: none;
+          border: 1px solid navy;
+          padding:5px;
+          background-color: #F4FFFF;
+      }
+
+      ul.hierarchy {
+          border: 1px solid navy;
+          padding: 5px 25px 5px 25px;
+          background-color: #F4FFFF;
+      }
+
+
+      ul.hlist li {
+          display: inline;
+          margin-right: 10px;
+      }
+
+      .entity {
+          border: 1px solid navy;
+          margin:5px 0 5px 0;
+          padding: 5px;
+      }
+
+      .entity th {
+          width: 150px;
+          vertical-align: top;
+      }
+
+      .entity th,
+      .entity td {
+          padding-bottom: 20px;
+      }
+
+      .entity table th {
+          text-align: left;
+      }
+
+      section#overview img {
+          max-width: 1000px;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+          text-align: left
+      }
+      h1, h2, h3 {
+          color: #005A9C; background: white
+      }
+      h1 {
+          font: 170% sans-serif;
+          line-height: 110%;
+      }
+      h2 {
+          font: 140% sans-serif;
+          margin-top:40px;
+      }
+      h3 {
+          font: 120% sans-serif;
+          margin-top: 20px;
+          padding-bottom: 5px;
+          border-bottom: 1px solid navy;
+      }
+      h4 { font: bold 100% sans-serif }
+      h5 { font: italic 100% sans-serif }
+      h6 { font: small-caps 100% sans-serif }
+
+      body {
+          padding: 2em 70px 2em 70px;
+          margin: 0;
+          font-family: sans-serif;
+          color: black;
+          background: white;
+          background-position: top left;
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+          text-align: left;
+      }
+
+      section {
+          max-width: 1500px;
+      }
+
+      .figure {
+          margin-bottom: 20px;
+      }
+
+      :link { color: #00C; background: transparent }
+      :visited { color: #609; background: transparent }
+      a:active { color: #C00; background: transparent }
+
+      .sup-c,
+      .sup-op,
+      .sup-fp,
+      .sup-dp,
+      .sup-ap,
+      .sup-p,
+      .sup-ni,
+      .sup-con,
+      .sup-col {
+          cursor:help;
+      }
+
+      .sup-c {
+          color:orange;
+      }
+
+      .sup-op {
+          color:navy;
+      }
+
+      .sup-fp {
+          color:lightskyblue;
+      }
+
+      .sup-dp {
+          color:green;
+      }
+
+      .sup-ap {
+          color:darkred;
+      }
+
+      .sup-p {
+          color:black;
+      }
+
+      .sup-ni {
+          color:brown;
+      }
+
+      .sup-con {
+          color:orange;
+      }
+
+      .sup-col {
+          color:darkred;
+      }
+
+      sup {
+          margin-left: -3px;
+      }
+      code {
+          font-size: large;
+          color: darkred;
+      }
+
+      /* less prominent links for properties */
+      .proplink {
+          color: #336;
+          text-decoration: none;
+      }
+
+      #toc {
+          position: fixed;
+          top: 0;
+          right: 0;
+          z-index: 2;
+          height: 100%;
+          overflow-y: auto;
+          padding: 10px;
+          border: solid 1px navy;
+          font-size: small;
+          width: 180px;
+      }
+      #toc h3 {
+          margin-top: 5px;
+      }
+
+      #toc ul {
+          list-style: none;
+          padding-left: 0;
+      }
+
+      #toc .first > li {
+          margin-top: 5px;
+      }
+
+      #toc .second,
+      #toc .third {
+          padding-left: 10px;
+      }
+
+      #content {
+          width: calc(100% - 150px);
+      }
+
+      .hover_property {
+          cursor: help;
+          text-decoration: none;
+          border-bottom: dashed 1px;
+      }
+
+      .setclass {
+          list-style-type: none;
+      }
+
+      code{
+          word-wrap: break-word;
+        }
+        table {
+          table-layout: fixed;
+          width: 100%;
+        }
+        td {
+          word-wrap: break-word;
+        }
+    </style>
+    <link
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1SewEAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC"
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg=="
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <div id="content">
+
+      <div class="section" id="collections">
+        <h2>Collections</h2>
+        
+        <div class="concept entity" id="https://aphia.org/ns/traits/feedingtype#">
+          <h3>https://aphia.org/ns/traits/feedingtype#</h3>
+          
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  A mixture of the feeding method/behaviour (how the organism gathers food, and from where; e.g. predator) and the food type/diet (what it feeds on; e.g. carnivore) of an organism.
+                  
+                </p>
+                </td>
+            </tr>
+            
+        </div>
+        
+      </div>
+
+      <div class="section" id="concepts">
+        <h2>Concepts</h2>
+        
+        <div class="concept entity" id="Ectoparasitic">
+          <h3>
+            Ectoparasitic
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#ectoparasitic</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  A parasite that lives on the outer surface of its host, ectosite; epiparasite; episite; exoparasite; cf. endoparasite.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#closeMatch"
+                title="A close match between two concepts. Defined in SKOS"
+                >skos:closeMatch</a
+              >
+              </th>
+              <td>
+              <a href="https://kos.lifewatch.eu/thesauri/traits/c_536d4a16">https://kos.lifewatch.eu/thesauri/traits/c_536d4a16</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Detritus feeder">
+          <h3>
+            Detritus feeder
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#detritus_feeder</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Any organism that feeds on fragmented particulate organic matter (detritus); detritivore.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#closeMatch"
+                title="A close match between two concepts. Defined in SKOS"
+                >skos:closeMatch</a
+              >
+              </th>
+              <td>
+              <a href="https://kos.lifewatch.eu/thesauri/traits/c_32e4af95">https://kos.lifewatch.eu/thesauri/traits/c_32e4af95</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Predator">
+          <h3>
+            Predator
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#predator</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Any organism that feeds by preying on other organisms, killing them for food.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#closeMatch"
+                title="A close match between two concepts. Defined in SKOS"
+                >skos:closeMatch</a
+              >
+              </th>
+              <td>
+              <a href="https://kos.lifewatch.eu/thesauri/traits/c_3330cc8d">https://kos.lifewatch.eu/thesauri/traits/c_3330cc8d</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Endoparasitic">
+          <h3>
+            Endoparasitic
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#endoparasitic</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  An internal parasite which lives within the organs or tissues of its host; endosite; entoparasite; cf. ectoparasite.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#closeMatch"
+                title="A close match between two concepts. Defined in SKOS"
+                >skos:closeMatch</a
+              >
+              </th>
+              <td>
+              <a href="https://kos.lifewatch.eu/thesauri/traits/c_e5726670">https://kos.lifewatch.eu/thesauri/traits/c_e5726670</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Filter feeder">
+          <h3>
+            Filter feeder
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#filter_feeder</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Any animal that feeds by filtering suspended particulate organic matter from water.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#closeMatch"
+                title="A close match between two concepts. Defined in SKOS"
+                >skos:closeMatch</a
+              >
+              </th>
+              <td>
+              <a href="https://kos.lifewatch.eu/thesauri/traits/c_7a6a2248">https://kos.lifewatch.eu/thesauri/traits/c_7a6a2248</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Grazer, on phanerogams">
+          <h3>
+            Grazer, on phanerogams
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#grazer_on_phanerogams</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Grazing on phanerogams. Phanerogams are all seed-bearing plants (Lawrence, 2005).
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Suspension feeder, facultative">
+          <h3>
+            Suspension feeder, facultative
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#facultative_suspension_feeder</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Facultative suspension feeder. Some species (e.g. polychaetes Nereis diversicolor and Pygospio elegans, gastropods Valvata piscinalis and Viviparus viviparus, bivalve Macoma balthica, etc) are known to use more than one feeding mode, e.g. to get particles from the water column (by filtering or using mucus nets) and also collect detritus from the surface of the bottom sediments (Fauchald and Jumars 1979; Kuznetzov 1980; Tsikhon-Lukanina 1987). These species were defined as “facultative suspension-feeders” to distinguish them from those which exclusively suspension-feed, i.e. “obligatory suspension-feeders”, such as the bivalve Mytilus edulis trossulus, the barnacle Balanus improvisus or the bryozoan Electra crustulenta.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Parasitic">
+          <h3>
+            Parasitic
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#parasitic</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Any organism that is intimately associated with, and metabolically dependent upon another living organism (the host) for completion of its life cycle, and which is typically detrimental to the host to a greater or lesser extent.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#closeMatch"
+                title="A close match between two concepts. Defined in SKOS"
+                >skos:closeMatch</a
+              >
+              </th>
+              <td>
+              <a href="https://kos.lifewatch.eu/thesauri/traits/c_059f2729">https://kos.lifewatch.eu/thesauri/traits/c_059f2729</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Suspension feeder">
+          <h3>
+            Suspension feeder
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#suspension_feeder</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Any organism that feeds on particulate organic matter suspended in water.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#closeMatch"
+                title="A close match between two concepts. Defined in SKOS"
+                >skos:closeMatch</a
+              >
+              </th>
+              <td>
+              <a href="https://kos.lifewatch.eu/thesauri/traits/c_7a6a2248">https://kos.lifewatch.eu/thesauri/traits/c_7a6a2248</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Deposit feeder">
+          <h3>
+            Deposit feeder
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#deposit_feeder</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Any organism that feeds on fragmented particulate organic matter in or on the substratum; a detritivorous organism.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Omnivore">
+          <h3>
+            Omnivore
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#omnivore</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Any organism that feeds on a mixed diet of plant and animal material.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#closeMatch"
+                title="A close match between two concepts. Defined in SKOS"
+                >skos:closeMatch</a
+              >
+              </th>
+              <td>
+              <a href="https://kos.lifewatch.eu/thesauri/traits/c_42952c24">https://kos.lifewatch.eu/thesauri/traits/c_42952c24</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Predator, on sessile prey">
+          <h3>
+            Predator, on sessile prey
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#predator_on_sessile_prey</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Any organism that feeds by preying on sessile organisms, killing them for food (adapted from Lincoln et al., 1998).
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Grazer">
+          <h3>
+            Grazer
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#grazer</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Any organism that feeds on herbage, algae or phytoplankton, by consuming the whole food plant or by cropping the entire surface growth in the case of herbage; cf. browsing.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#closeMatch"
+                title="A close match between two concepts. Defined in SKOS"
+                >skos:closeMatch</a
+              >
+              </th>
+              <td>
+              <a href="https://kos.lifewatch.eu/thesauri/traits/c_d0ad8081">https://kos.lifewatch.eu/thesauri/traits/c_d0ad8081</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Epizoic">
+          <h3>
+            Epizoic
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#epizoic</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  1: Living attached to the body of an animal; used of a non-parasitic animal that lives attached to the outer surface of another animal; epizoan, epizoism, epizoite, epizoon; cf. endozoic. 2: Dispersed by attachment to the surface of an animal; epizoochorous.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#closeMatch"
+                title="A close match between two concepts. Defined in SKOS"
+                >skos:closeMatch</a
+              >
+              </th>
+              <td>
+              <a href="https://kos.lifewatch.eu/thesauri/traits/c_debe5d61">https://kos.lifewatch.eu/thesauri/traits/c_debe5d61</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="non-selective deposit feeder">
+          <h3>
+            non-selective deposit feeder
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#non_selective_deposit_feeder</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Feeding group category for marine free-living meiobenthic Nematoda. Group 1-B: With cup-shaped, conical or cylindrical mouth-cavity, without any armature. Food obtained as above with additional help from active movements of lips and the anterior part of the mouth-cavity itself. Material available as food as above though larger objects (e.g. diatoms) are now being swallowed. Non-selective deposit-feeders.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Scavenger">
+          <h3>
+            Scavenger
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#scavenger</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Any organism that feeds on carrion or organic refuse.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Subsurface deposit feeder">
+          <h3>
+            Subsurface deposit feeder
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#subsurface_deposit_feeder</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Any organism that feeds on fragmented particulate organic matter within the substratum (e.g. Echinocardium cordatum) (adapted from Lincoln et al., 1998).
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Herbivore">
+          <h3>
+            Herbivore
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#herbivore</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Any organism that feeds on plants; phytophagous; also used of protozoans that feed on bacteria and/or othe algae.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#closeMatch"
+                title="A close match between two concepts. Defined in SKOS"
+                >skos:closeMatch</a
+              >
+              </th>
+              <td>
+              <a href="https://kos.lifewatch.eu/thesauri/traits/c_a827a4e2">https://kos.lifewatch.eu/thesauri/traits/c_a827a4e2</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Epigrowth feeder">
+          <h3>
+            Epigrowth feeder
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#epigrowth_feeder</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Feeding group category for marine free-living meiobenthic Nematoda. Group 2-A: Mouth-cavity provided with small armature. Food scraped off bigger surfaces, or else the food-object is pierced and the cell-liquid sucked through the hole made in its wall. Epigrowth-feeders.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Interface grazer">
+          <h3>
+            Interface grazer
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#interface_grazer</code
+                >
+              </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Commensal">
+          <h3>
+            Commensal
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#commensal</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Participating in commensalism. Commensalism is symbiosis in which one species derives benefit from a common food supply whilst the other species is not adversely affected.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Surface deposit feeder">
+          <h3>
+            Surface deposit feeder
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#surface_deposit_feeder</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Any organism that feeds on fragmented particulate organic matter on the surface of the substratum (e.g. Corophium volutator) (adapted from Lincoln et al., 1998).
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Grazer, on organic substrates.">
+          <h3>
+            Grazer, on organic substrates.
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#grazer_on_organic_substrates</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Grazing on organic substrates.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Kleptovore">
+          <h3>
+            Kleptovore
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#kleptovore</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Feeding type specifically for Nemertea species that live inside bivalves and steal part of the food that has been filtered by the bivalve. Note that this is different from kleptoparasitism, where the female searches out the prey or stored food of another female, usually of a different species, and takes it for her own offspring (Lawrence, 2005). (The 'kleptovore' feeding type was requested by the Nemertea editors during their WoRMS Editor Workshop in 2017.)
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Symbiotic">
+          <h3>
+            Symbiotic
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#symbiotic</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Participating in symbiosis. Symbiosis is the living together of two organisms; the relationship between two interacting organisms or populations, commonly used to describe all relationships between members of two different species, and also to include intraspecific associations; sometimes restricted to those associations that are mutually beneficial.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Endocommensal">
+          <h3>
+            Endocommensal
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#endocommensal</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  A commensal symbiont that lives inside of its host.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Non-feeding">
+          <h3>
+            Non-feeding
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#non_feeding_feedingtype</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Non-feeding life stages (e.g. lecithotroph).
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Grazer, on periphyton">
+          <h3>
+            Grazer, on periphyton
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#grazer_on_periphyton</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Grazing on periphyton. Any organism that feeds on periphyton, a community of plants, animals and associated detritus adhering to and forming a surface coating on stones, plants and other submerged objects (adapted from Lincoln et al., 1998).
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Symbiotic withchemosymbionts">
+          <h3>
+            Symbiotic withchemosymbionts
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#symbiotic_with_chemosymbionts</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  symbiosis in which a bacterium provides chemically-derived energy and nutrients
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Predator, on mobile prey">
+          <h3>
+            Predator, on mobile prey
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#predator_on_mobile_prey</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Any organism that feeds by preying on mobile organisms, killing them for food (adapted from Lincoln et al., 1998).
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Unknown feeding type">
+          <h3>
+            Unknown feeding type
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#unknown_feedingtype</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  According to literature it is unknown which feeding type this organism has.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Grazer, on algae">
+          <h3>
+            Grazer, on algae
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#grazer_on_algae</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Grazing on algae. Any organism that feeds on algae, by consuming the whole food plant (adapted from Lincoln et al., 1998).
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Selective deposit feeder">
+          <h3>
+            Selective deposit feeder
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#selective_deposit_feeder</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Feeding group category for marine free-living meiobenthic Nematoda. Group 1-A: Without any mouth-cavity (though sometimes with traces of it). Food obtained mainly by means of the sucking power of the oesophagus. Consistency of material available as food most probable soft or floating. Large and hard particles never found in the intestine. Probably selective deposit-feeders.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Carnivore">
+          <h3>
+            Carnivore
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#carnivore</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Flesh-eating; creophagous; sarcophagous.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#closeMatch"
+                title="A close match between two concepts. Defined in SKOS"
+                >skos:closeMatch</a
+              >
+              </th>
+              <td>
+              <a href="https://kos.lifewatch.eu/thesauri/traits/c_a0775f94">https://kos.lifewatch.eu/thesauri/traits/c_a0775f94</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Predator/omnivore">
+          <h3>
+            Predator/omnivore
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#predator_omnivore</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Feeding group category for marine free-living meiobenthic Nematoda. Group 2-B: With big and powerful armature of different structure. Mostly predators. Prey swallowed whole or pierced by means of spears or teeth and the liquid food sucked and swallowed.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Xylophagous">
+          <h3>
+            Xylophagous
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/feedingtype#xylophagous</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Feeding on wood; dendrophagous; hylophagous; lignivorous; xylophage, xylophagy.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+      </div>
+      <div id="namespaces">
+        <h2>Namespaces</h2>
+        <dl>
+          <dt id="dcterms">dcterms</dt>
+          <dd>
+            <code>http://purl.org/dc/terms/</code>
+          </dd>
+          <dt id="rdf">rdf</dt>
+          <dd>
+            <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code>
+          </dd>
+          <dt id="rdfs">rdfs</dt>
+          <dd>
+            <code>http://www.w3.org/2000/01/rdf-schema#</code>
+          </dd>
+          <dt id="skos">skos</dt>
+          <dd>
+            <code>http://www.w3.org/2004/02/skos/core#</code>
+          </dd>
+          <dt id="vann">vann</dt>
+          <dd>
+            <code>http://purl.org/vocab/vann/</code>
+          </dd>
+        </dl>
+      </div>
+      <div id="legend">
+        <h2>Legend</h2>
+        <table class="entity">
+          <tr id="CC">
+            <td>
+              <sup class="sup-op" title="SKOS concept">CC</sup>
+            </td>
+            <td>Concept</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="pylode">
+      <p>
+        made by
+        <a href="https://github.com/vliz-be-opsci/pylode-to-pages">
+          <span id="p">Pylode</span>
+          <span id="y">-To-Pages</span>
+          <span>@VLIZ</span>
+        </a>
+      </p>
+    </div>
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <ul class="first">
+        <li>
+          <h4>
+            <a href="#concepts">Concepts</a>
+          </h4>
+          <ul class="second">
+            
+            <li>
+              <a href="#Ectoparasitic">Ectoparasitic</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Detritus feeder">Detritus feeder</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Predator">Predator</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Endoparasitic">Endoparasitic</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Filter feeder">Filter feeder</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Grazer, on phanerogams">Grazer, on phanerogams</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Suspension feeder, facultative">Suspension feeder, facultative</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Parasitic">Parasitic</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Suspension feeder">Suspension feeder</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Deposit feeder">Deposit feeder</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Omnivore">Omnivore</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Predator, on sessile prey">Predator, on sessile prey</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Grazer">Grazer</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Epizoic">Epizoic</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#non-selective deposit feeder">non-selective deposit feeder</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Scavenger">Scavenger</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Subsurface deposit feeder">Subsurface deposit feeder</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Herbivore">Herbivore</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Epigrowth feeder">Epigrowth feeder</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Interface grazer">Interface grazer</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Commensal">Commensal</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Surface deposit feeder">Surface deposit feeder</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Grazer, on organic substrates.">Grazer, on organic substrates.</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Kleptovore">Kleptovore</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Symbiotic">Symbiotic</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Endocommensal">Endocommensal</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Non-feeding">Non-feeding</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Grazer, on periphyton">Grazer, on periphyton</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Symbiotic withchemosymbionts">Symbiotic withchemosymbionts</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Predator, on mobile prey">Predator, on mobile prey</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Unknown feeding type">Unknown feeding type</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Grazer, on algae">Grazer, on algae</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Selective deposit feeder">Selective deposit feeder</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Carnivore">Carnivore</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Predator/omnivore">Predator/omnivore</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Xylophagous">Xylophagous</a>
+            </li>
+
+            <li></li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#namespaces">Namespaces</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#dcterms">dcterms</a>
+            </li>
+            <li>
+              <a href="#rdf">rdf</a>
+            </li>
+            <li>
+              <a href="#rdfs">rdfs</a>
+            </li>
+            <li>
+              <a href="#skos">skos</a>
+            </li>
+            <li>
+              <a href="#vann">vann</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#legend">Legend</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#CC">Concept</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

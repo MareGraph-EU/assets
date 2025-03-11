@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>zonation</title>
+    <style>
+      #pylode {
+          position: fixed;
+          top: 170px;
+          left: -150px;
+          font-size: small;
+          transform: rotate(-90deg);
+          color: grey;
+      }
+      html {
+          scroll-behavior: smooth;
+      }
+      #pylode a {
+          font-size: 2em;
+          font-weight: bold;
+          text-decoration: none;
+          color: #005A9C;
+      }
+      #pylode a:hover {
+          color: #333;
+      }
+      #pylode #p {
+          color: #329545;
+      }
+      #pylode #y {
+          color: #f9cb33;
+      }
+      #pylode #version {
+          font-size: 1.0em;
+      }
+
+      .cardinality {
+          font-style: italic;
+          color: #aa00aa;
+      }
+
+      dl {
+          /*border: 1px solid navy;*/
+          /*padding:5px;*/
+      }
+
+      dt {
+          font-weight: bold;
+          padding: 0;
+      }
+
+      dd {
+          margin-bottom: 10px;
+          padding-top: 7px;
+      }
+
+      #metadata ul,
+      #classes ul {
+          list-style-type: none;
+      }
+
+      #metadata ul li,
+      #classes ul li {
+          margin-left: -40px;
+      }
+
+      ul.hlist {
+          list-style-type: none;
+          border: 1px solid navy;
+          padding:5px;
+          background-color: #F4FFFF;
+      }
+
+      ul.hierarchy {
+          border: 1px solid navy;
+          padding: 5px 25px 5px 25px;
+          background-color: #F4FFFF;
+      }
+
+
+      ul.hlist li {
+          display: inline;
+          margin-right: 10px;
+      }
+
+      .entity {
+          border: 1px solid navy;
+          margin:5px 0 5px 0;
+          padding: 5px;
+      }
+
+      .entity th {
+          width: 150px;
+          vertical-align: top;
+      }
+
+      .entity th,
+      .entity td {
+          padding-bottom: 20px;
+      }
+
+      .entity table th {
+          text-align: left;
+      }
+
+      section#overview img {
+          max-width: 1000px;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+          text-align: left
+      }
+      h1, h2, h3 {
+          color: #005A9C; background: white
+      }
+      h1 {
+          font: 170% sans-serif;
+          line-height: 110%;
+      }
+      h2 {
+          font: 140% sans-serif;
+          margin-top:40px;
+      }
+      h3 {
+          font: 120% sans-serif;
+          margin-top: 20px;
+          padding-bottom: 5px;
+          border-bottom: 1px solid navy;
+      }
+      h4 { font: bold 100% sans-serif }
+      h5 { font: italic 100% sans-serif }
+      h6 { font: small-caps 100% sans-serif }
+
+      body {
+          padding: 2em 70px 2em 70px;
+          margin: 0;
+          font-family: sans-serif;
+          color: black;
+          background: white;
+          background-position: top left;
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+          text-align: left;
+      }
+
+      section {
+          max-width: 1500px;
+      }
+
+      .figure {
+          margin-bottom: 20px;
+      }
+
+      :link { color: #00C; background: transparent }
+      :visited { color: #609; background: transparent }
+      a:active { color: #C00; background: transparent }
+
+      .sup-c,
+      .sup-op,
+      .sup-fp,
+      .sup-dp,
+      .sup-ap,
+      .sup-p,
+      .sup-ni,
+      .sup-con,
+      .sup-col {
+          cursor:help;
+      }
+
+      .sup-c {
+          color:orange;
+      }
+
+      .sup-op {
+          color:navy;
+      }
+
+      .sup-fp {
+          color:lightskyblue;
+      }
+
+      .sup-dp {
+          color:green;
+      }
+
+      .sup-ap {
+          color:darkred;
+      }
+
+      .sup-p {
+          color:black;
+      }
+
+      .sup-ni {
+          color:brown;
+      }
+
+      .sup-con {
+          color:orange;
+      }
+
+      .sup-col {
+          color:darkred;
+      }
+
+      sup {
+          margin-left: -3px;
+      }
+      code {
+          font-size: large;
+          color: darkred;
+      }
+
+      /* less prominent links for properties */
+      .proplink {
+          color: #336;
+          text-decoration: none;
+      }
+
+      #toc {
+          position: fixed;
+          top: 0;
+          right: 0;
+          z-index: 2;
+          height: 100%;
+          overflow-y: auto;
+          padding: 10px;
+          border: solid 1px navy;
+          font-size: small;
+          width: 180px;
+      }
+      #toc h3 {
+          margin-top: 5px;
+      }
+
+      #toc ul {
+          list-style: none;
+          padding-left: 0;
+      }
+
+      #toc .first > li {
+          margin-top: 5px;
+      }
+
+      #toc .second,
+      #toc .third {
+          padding-left: 10px;
+      }
+
+      #content {
+          width: calc(100% - 150px);
+      }
+
+      .hover_property {
+          cursor: help;
+          text-decoration: none;
+          border-bottom: dashed 1px;
+      }
+
+      .setclass {
+          list-style-type: none;
+      }
+
+      code{
+          word-wrap: break-word;
+        }
+        table {
+          table-layout: fixed;
+          width: 100%;
+        }
+        td {
+          word-wrap: break-word;
+        }
+    </style>
+    <link
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1SewEAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC"
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg=="
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <div id="content">
+
+      <div class="section" id="collections">
+        <h2>Collections</h2>
+        
+        <div class="concept entity" id="https://aphia.org/ns/traits/zonation#">
+          <h3>https://aphia.org/ns/traits/zonation#</h3>
+          
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The distribution of organisms in distinctive areas, layers or zones. It is important to note that variations in depth and definition occur depending on the source, area or research purpose. The depth ranges and definitions within the zonation attribute were agreed upon by the WoRMS Steering Committee based on diverse sources.
+                  
+                </p>
+                </td>
+            </tr>
+            
+        </div>
+        
+      </div>
+
+      <div class="section" id="concepts">
+        <h2>Concepts</h2>
+        
+        <div class="concept entity" id="Lower infralittoral zone">
+          <h3>
+            Lower infralittoral zone
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#lower_infralittoral_zone</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The part of the infralittoral zone that supports scattered kelp plants. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Littoral zone (0-200 m)">
+          <h3>
+            Littoral zone (0-200 m)
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#littoral_zone</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The littoral zone extends from the shoreline to the edge of the continental shelf, typically down to 200 m deep. It is important to note that there is no single definition for the littoral zone because its full extent and divisions vary in different contexts and sources. The littoral zone includes the intertidal, but also all neritic waters within the bounds of the continental shelves. Although the littoral zone is larger than the intertidal zone, littoral and intertidal are often used interchangeably.
+                    The part of the shore covering the intertidal and the splash zone, with the upper limit marked by the top of the lichen zone and the lower limit marked by the top of the laminarian kelp zone. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Upper circalittoral zone">
+          <h3>
+            Upper circalittoral zone
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#upper_circalittoral_zone</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Dominated by animals with sparse foliose algae except where grazed. The part of the circalittoral subzone on hard substrata distinguished by the presence of scattered foliose algae amongst the dominating animals; its lower limit is the maximum limit of depth for foliose algae (based on Hiscock, 1985). (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Abyssal zone (4000-6000 m)">
+          <h3>
+            Abyssal zone (4000-6000 m)
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#abyssal_zone</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The abyssal zone comprises sea floors at depths between 4000 and 6000 m. This zone generally corresponds to the abyssal plain.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Infralittoral zone">
+          <h3>
+            Infralittoral zone
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#infralittoral_zone</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The upper subdivision of the sublittoral zone, typically dominated by photosynthetic organisms.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Eulittoral zone">
+          <h3>
+            Eulittoral zone
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#eulittoral_zone</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The eulittoral zone comprises the area between the high tide mark and the low tide mark. This zone is also referred to as the mediolittoral zone, midlittoral zone or the intertidal zone. Allhough the intertidal zone is part of the littoral zone, littoral and intertidal are often used interchangeably (see definition for Littoral zone).
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Benthic zones">
+          <h3>
+            Benthic zones
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#benthic_zones</code
+                >
+              </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Mesopelagic zone (200-1000 m)">
+          <h3>
+            Mesopelagic zone (200-1000 m)
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#mesopelagic_zone</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The depth zone of the water column extending from 200 to 1000 m.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Bathyal zone (200-4000 m)">
+          <h3>
+            Bathyal zone (200-4000 m)
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#bathyal_zone</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The bathyal zone comprises sea floors at depths between 200 and 4000 m. This zone generally corresponds to the continental slope.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Pelagic zones">
+          <h3>
+            Pelagic zones
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#pelagic_zones</code
+                >
+              </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Upper infralittoral zone">
+          <h3>
+            Upper infralittoral zone
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#upper_infralittoral_zone</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The region of the sublittoral which extends from the lower limit of the infralittoral to the maximum depth at which photosynthesis is still possible. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Bathypelagic zone (1000-4000 m)">
+          <h3>
+            Bathypelagic zone (1000-4000 m)
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#bathypelagic_zone</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The depth zone of the water column extending from 1000 to 4000 m.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Supralittoral zone">
+          <h3>
+            Supralittoral zone
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#supralittoral_zone</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The supralittoral zone comprises the area above the high tide mark. This zone is also referred to as the supratidal zone. The supralittoral zone can be further divided into the spray zone and splash zone.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Circalittoral zone">
+          <h3>
+            Circalittoral zone
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#circalittoral_zone</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The lower subdivision of the sublittoral zone, typically dominated by animals.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Epipelagic zone (0-200 m)">
+          <h3>
+            Epipelagic zone (0-200 m)
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#epipelagic_zone</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The depth zone of the water column extending from the surface to 200 m. Because this zone has sufficient light penetration for photosynthesis, it is sometimes referred to as the photic zone.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Hadal zone (deeper than 6000 m)">
+          <h3>
+            Hadal zone (deeper than 6000 m)
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#hadal_zone</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The hadal zone comprises sea floors at depths exceeding 6000 m. This zone corresponds to submarine trenches.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Sublittoral zone">
+          <h3>
+            Sublittoral zone
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#sublittoral_zone</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The sublittoral zone comprises the seafloor from the low tide mark to the edge of the continental shelf, typically down to 200 m deep. The shallowest portion of the sublittoral zone is sometimes referred to as the subtidal zone. Allthough the sublitoral zone is larger than the subtidal zone, sublittoral and subtidal are often used interchangeably.
+                    The part of the shore continuously covered by water, below the intertidal zone. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Unreported zonation">
+          <h3>
+            Unreported zonation
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#unreported_zonation</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  So far it has not been reported in literature which zonation this organism has.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Abyssopelagic zone (4000-6000 m)">
+          <h3>
+            Abyssopelagic zone (4000-6000 m)
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#abyssopelagic_zone</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The depth zone of the water column extending from 4000 to 6000 m.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Hadopelagic zone (deeper than 6000 m)">
+          <h3>
+            Hadopelagic zone (deeper than 6000 m)
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/zonation#hadopelagic_zone</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The depth zone of the water column exceeding 6000 m. This zone corresponds to submarine trenches.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+      </div>
+      <div id="namespaces">
+        <h2>Namespaces</h2>
+        <dl>
+          <dt id="dcterms">dcterms</dt>
+          <dd>
+            <code>http://purl.org/dc/terms/</code>
+          </dd>
+          <dt id="rdf">rdf</dt>
+          <dd>
+            <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code>
+          </dd>
+          <dt id="rdfs">rdfs</dt>
+          <dd>
+            <code>http://www.w3.org/2000/01/rdf-schema#</code>
+          </dd>
+          <dt id="skos">skos</dt>
+          <dd>
+            <code>http://www.w3.org/2004/02/skos/core#</code>
+          </dd>
+          <dt id="vann">vann</dt>
+          <dd>
+            <code>http://purl.org/vocab/vann/</code>
+          </dd>
+        </dl>
+      </div>
+      <div id="legend">
+        <h2>Legend</h2>
+        <table class="entity">
+          <tr id="CC">
+            <td>
+              <sup class="sup-op" title="SKOS concept">CC</sup>
+            </td>
+            <td>Concept</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="pylode">
+      <p>
+        made by
+        <a href="https://github.com/vliz-be-opsci/pylode-to-pages">
+          <span id="p">Pylode</span>
+          <span id="y">-To-Pages</span>
+          <span>@VLIZ</span>
+        </a>
+      </p>
+    </div>
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <ul class="first">
+        <li>
+          <h4>
+            <a href="#concepts">Concepts</a>
+          </h4>
+          <ul class="second">
+            
+            <li>
+              <a href="#Lower infralittoral zone">Lower infralittoral zone</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Littoral zone (0-200 m)">Littoral zone (0-200 m)</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Upper circalittoral zone">Upper circalittoral zone</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Abyssal zone (4000-6000 m)">Abyssal zone (4000-6000 m)</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Infralittoral zone">Infralittoral zone</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Eulittoral zone">Eulittoral zone</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Benthic zones">Benthic zones</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Mesopelagic zone (200-1000 m)">Mesopelagic zone (200-1000 m)</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Bathyal zone (200-4000 m)">Bathyal zone (200-4000 m)</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Pelagic zones">Pelagic zones</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Upper infralittoral zone">Upper infralittoral zone</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Bathypelagic zone (1000-4000 m)">Bathypelagic zone (1000-4000 m)</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Supralittoral zone">Supralittoral zone</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Circalittoral zone">Circalittoral zone</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Epipelagic zone (0-200 m)">Epipelagic zone (0-200 m)</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Hadal zone (deeper than 6000 m)">Hadal zone (deeper than 6000 m)</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Sublittoral zone">Sublittoral zone</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Unreported zonation">Unreported zonation</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Abyssopelagic zone (4000-6000 m)">Abyssopelagic zone (4000-6000 m)</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Hadopelagic zone (deeper than 6000 m)">Hadopelagic zone (deeper than 6000 m)</a>
+            </li>
+
+            <li></li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#namespaces">Namespaces</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#dcterms">dcterms</a>
+            </li>
+            <li>
+              <a href="#rdf">rdf</a>
+            </li>
+            <li>
+              <a href="#rdfs">rdfs</a>
+            </li>
+            <li>
+              <a href="#skos">skos</a>
+            </li>
+            <li>
+              <a href="#vann">vann</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#legend">Legend</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#CC">Concept</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

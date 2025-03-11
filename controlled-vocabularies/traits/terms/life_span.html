@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>life_span</title>
+    <style>
+      #pylode {
+          position: fixed;
+          top: 170px;
+          left: -150px;
+          font-size: small;
+          transform: rotate(-90deg);
+          color: grey;
+      }
+      html {
+          scroll-behavior: smooth;
+      }
+      #pylode a {
+          font-size: 2em;
+          font-weight: bold;
+          text-decoration: none;
+          color: #005A9C;
+      }
+      #pylode a:hover {
+          color: #333;
+      }
+      #pylode #p {
+          color: #329545;
+      }
+      #pylode #y {
+          color: #f9cb33;
+      }
+      #pylode #version {
+          font-size: 1.0em;
+      }
+
+      .cardinality {
+          font-style: italic;
+          color: #aa00aa;
+      }
+
+      dl {
+          /*border: 1px solid navy;*/
+          /*padding:5px;*/
+      }
+
+      dt {
+          font-weight: bold;
+          padding: 0;
+      }
+
+      dd {
+          margin-bottom: 10px;
+          padding-top: 7px;
+      }
+
+      #metadata ul,
+      #classes ul {
+          list-style-type: none;
+      }
+
+      #metadata ul li,
+      #classes ul li {
+          margin-left: -40px;
+      }
+
+      ul.hlist {
+          list-style-type: none;
+          border: 1px solid navy;
+          padding:5px;
+          background-color: #F4FFFF;
+      }
+
+      ul.hierarchy {
+          border: 1px solid navy;
+          padding: 5px 25px 5px 25px;
+          background-color: #F4FFFF;
+      }
+
+
+      ul.hlist li {
+          display: inline;
+          margin-right: 10px;
+      }
+
+      .entity {
+          border: 1px solid navy;
+          margin:5px 0 5px 0;
+          padding: 5px;
+      }
+
+      .entity th {
+          width: 150px;
+          vertical-align: top;
+      }
+
+      .entity th,
+      .entity td {
+          padding-bottom: 20px;
+      }
+
+      .entity table th {
+          text-align: left;
+      }
+
+      section#overview img {
+          max-width: 1000px;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+          text-align: left
+      }
+      h1, h2, h3 {
+          color: #005A9C; background: white
+      }
+      h1 {
+          font: 170% sans-serif;
+          line-height: 110%;
+      }
+      h2 {
+          font: 140% sans-serif;
+          margin-top:40px;
+      }
+      h3 {
+          font: 120% sans-serif;
+          margin-top: 20px;
+          padding-bottom: 5px;
+          border-bottom: 1px solid navy;
+      }
+      h4 { font: bold 100% sans-serif }
+      h5 { font: italic 100% sans-serif }
+      h6 { font: small-caps 100% sans-serif }
+
+      body {
+          padding: 2em 70px 2em 70px;
+          margin: 0;
+          font-family: sans-serif;
+          color: black;
+          background: white;
+          background-position: top left;
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+          text-align: left;
+      }
+
+      section {
+          max-width: 1500px;
+      }
+
+      .figure {
+          margin-bottom: 20px;
+      }
+
+      :link { color: #00C; background: transparent }
+      :visited { color: #609; background: transparent }
+      a:active { color: #C00; background: transparent }
+
+      .sup-c,
+      .sup-op,
+      .sup-fp,
+      .sup-dp,
+      .sup-ap,
+      .sup-p,
+      .sup-ni,
+      .sup-con,
+      .sup-col {
+          cursor:help;
+      }
+
+      .sup-c {
+          color:orange;
+      }
+
+      .sup-op {
+          color:navy;
+      }
+
+      .sup-fp {
+          color:lightskyblue;
+      }
+
+      .sup-dp {
+          color:green;
+      }
+
+      .sup-ap {
+          color:darkred;
+      }
+
+      .sup-p {
+          color:black;
+      }
+
+      .sup-ni {
+          color:brown;
+      }
+
+      .sup-con {
+          color:orange;
+      }
+
+      .sup-col {
+          color:darkred;
+      }
+
+      sup {
+          margin-left: -3px;
+      }
+      code {
+          font-size: large;
+          color: darkred;
+      }
+
+      /* less prominent links for properties */
+      .proplink {
+          color: #336;
+          text-decoration: none;
+      }
+
+      #toc {
+          position: fixed;
+          top: 0;
+          right: 0;
+          z-index: 2;
+          height: 100%;
+          overflow-y: auto;
+          padding: 10px;
+          border: solid 1px navy;
+          font-size: small;
+          width: 180px;
+      }
+      #toc h3 {
+          margin-top: 5px;
+      }
+
+      #toc ul {
+          list-style: none;
+          padding-left: 0;
+      }
+
+      #toc .first > li {
+          margin-top: 5px;
+      }
+
+      #toc .second,
+      #toc .third {
+          padding-left: 10px;
+      }
+
+      #content {
+          width: calc(100% - 150px);
+      }
+
+      .hover_property {
+          cursor: help;
+          text-decoration: none;
+          border-bottom: dashed 1px;
+      }
+
+      .setclass {
+          list-style-type: none;
+      }
+
+      code{
+          word-wrap: break-word;
+        }
+        table {
+          table-layout: fixed;
+          width: 100%;
+        }
+        td {
+          word-wrap: break-word;
+        }
+    </style>
+    <link
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1SewEAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC"
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg=="
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <div id="content">
+
+      <div class="section" id="collections">
+        <h2>Collections</h2>
+        
+        <div class="concept entity" id="https://aphia.org/ns/traits/life_span#">
+          <h3>https://aphia.org/ns/traits/life_span#</h3>
+          
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Longevity; the maximum or mean duration of life of an individual or group.
+                  
+                </p>
+                </td>
+            </tr>
+            
+        </div>
+        
+      </div>
+
+      <div class="section" id="concepts">
+        <h2>Concepts</h2>
+        
+        <div class="concept entity" id="Perennial">
+          <h3>
+            Perennial
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/life_span#perennial</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Plant which persists for several years.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#closeMatch"
+                title="A close match between two concepts. Defined in SKOS"
+                >skos:closeMatch</a
+              >
+              </th>
+              <td>
+              <a href="https://kos.lifewatch.eu/thesauri/traits/c_a53b56cb">https://kos.lifewatch.eu/thesauri/traits/c_a53b56cb</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Unreported life span">
+          <h3>
+            Unreported life span
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/life_span#unreported_life_span</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  So far it has not been reported in literature which life span this organism has.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Annual">
+          <h3>
+            Annual
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/life_span#annual</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  (1) Appl. structures or growth features that are marked off or completed yearly; (2) living for a year only; (3) completing life-cycle in a year from germination; (4) n. plant that completes its life-cycle in a year. (Henderson's Dictionary of Biology; Lawrence, 2005). Thallus which survives only one growing season (less than 1 year) (macroalgae; Womersley, 1987).
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#closeMatch"
+                title="A close match between two concepts. Defined in SKOS"
+                >skos:closeMatch</a
+              >
+              </th>
+              <td>
+              <a href="https://kos.lifewatch.eu/thesauri/traits/c_2a79a7e4">https://kos.lifewatch.eu/thesauri/traits/c_2a79a7e4</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Long perennial">
+          <h3>
+            Long perennial
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/life_span#long_perennial</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Thallus or part thereof with a lifespan exceeding 3 years (more than 3 years) (macroalgae; Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#exactMatch"
+                title="An exact match between two concepts. Defined in SKOS"
+                >skos:exactMatch</a
+              >
+              </th>
+              <td>
+              <a href="https://kos.lifewatch.eu/thesauri/traits/c_ebc72258">https://kos.lifewatch.eu/thesauri/traits/c_ebc72258</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Ephemeral">
+          <h3>
+            Ephemeral
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/life_span#ephemeral</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  (1) Short-lived; (2) taking place once only, appl. plant movements as expanding buds; (3) completing life-cycle within a brief period; (4) n. a short-lived plant or animal species (Henderson's Dictionary of Biology; Lawrence, 2005). Thallus which survives for only a few weeks (less than 1 month) (macroalgae; Womersley, 1987).
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#closeMatch"
+                title="A close match between two concepts. Defined in SKOS"
+                >skos:closeMatch</a
+              >
+              </th>
+              <td>
+              <a href="https://kos.lifewatch.eu/thesauri/traits/c_4b481818">https://kos.lifewatch.eu/thesauri/traits/c_4b481818</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Short perennial">
+          <h3>
+            Short perennial
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/life_span#short_perennial</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Thallus or part thereof with a lifespan exceeding 1 year but under 3 years (macroalgae; Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#exactMatch"
+                title="An exact match between two concepts. Defined in SKOS"
+                >skos:exactMatch</a
+              >
+              </th>
+              <td>
+              <a href="https://kos.lifewatch.eu/thesauri/traits/c_e6a65f8c">https://kos.lifewatch.eu/thesauri/traits/c_e6a65f8c</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+          </table>
+        </div>
+        
+      </div>
+      <div id="namespaces">
+        <h2>Namespaces</h2>
+        <dl>
+          <dt id="dcterms">dcterms</dt>
+          <dd>
+            <code>http://purl.org/dc/terms/</code>
+          </dd>
+          <dt id="rdf">rdf</dt>
+          <dd>
+            <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code>
+          </dd>
+          <dt id="rdfs">rdfs</dt>
+          <dd>
+            <code>http://www.w3.org/2000/01/rdf-schema#</code>
+          </dd>
+          <dt id="skos">skos</dt>
+          <dd>
+            <code>http://www.w3.org/2004/02/skos/core#</code>
+          </dd>
+          <dt id="vann">vann</dt>
+          <dd>
+            <code>http://purl.org/vocab/vann/</code>
+          </dd>
+        </dl>
+      </div>
+      <div id="legend">
+        <h2>Legend</h2>
+        <table class="entity">
+          <tr id="CC">
+            <td>
+              <sup class="sup-op" title="SKOS concept">CC</sup>
+            </td>
+            <td>Concept</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="pylode">
+      <p>
+        made by
+        <a href="https://github.com/vliz-be-opsci/pylode-to-pages">
+          <span id="p">Pylode</span>
+          <span id="y">-To-Pages</span>
+          <span>@VLIZ</span>
+        </a>
+      </p>
+    </div>
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <ul class="first">
+        <li>
+          <h4>
+            <a href="#concepts">Concepts</a>
+          </h4>
+          <ul class="second">
+            
+            <li>
+              <a href="#Perennial">Perennial</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Unreported life span">Unreported life span</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Annual">Annual</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Long perennial">Long perennial</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Ephemeral">Ephemeral</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Short perennial">Short perennial</a>
+            </li>
+
+            <li></li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#namespaces">Namespaces</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#dcterms">dcterms</a>
+            </li>
+            <li>
+              <a href="#rdf">rdf</a>
+            </li>
+            <li>
+              <a href="#rdfs">rdfs</a>
+            </li>
+            <li>
+              <a href="#skos">skos</a>
+            </li>
+            <li>
+              <a href="#vann">vann</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#legend">Legend</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#CC">Concept</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>asexual_reproduction</title>
+    <style>
+      #pylode {
+          position: fixed;
+          top: 170px;
+          left: -150px;
+          font-size: small;
+          transform: rotate(-90deg);
+          color: grey;
+      }
+      html {
+          scroll-behavior: smooth;
+      }
+      #pylode a {
+          font-size: 2em;
+          font-weight: bold;
+          text-decoration: none;
+          color: #005A9C;
+      }
+      #pylode a:hover {
+          color: #333;
+      }
+      #pylode #p {
+          color: #329545;
+      }
+      #pylode #y {
+          color: #f9cb33;
+      }
+      #pylode #version {
+          font-size: 1.0em;
+      }
+
+      .cardinality {
+          font-style: italic;
+          color: #aa00aa;
+      }
+
+      dl {
+          /*border: 1px solid navy;*/
+          /*padding:5px;*/
+      }
+
+      dt {
+          font-weight: bold;
+          padding: 0;
+      }
+
+      dd {
+          margin-bottom: 10px;
+          padding-top: 7px;
+      }
+
+      #metadata ul,
+      #classes ul {
+          list-style-type: none;
+      }
+
+      #metadata ul li,
+      #classes ul li {
+          margin-left: -40px;
+      }
+
+      ul.hlist {
+          list-style-type: none;
+          border: 1px solid navy;
+          padding:5px;
+          background-color: #F4FFFF;
+      }
+
+      ul.hierarchy {
+          border: 1px solid navy;
+          padding: 5px 25px 5px 25px;
+          background-color: #F4FFFF;
+      }
+
+
+      ul.hlist li {
+          display: inline;
+          margin-right: 10px;
+      }
+
+      .entity {
+          border: 1px solid navy;
+          margin:5px 0 5px 0;
+          padding: 5px;
+      }
+
+      .entity th {
+          width: 150px;
+          vertical-align: top;
+      }
+
+      .entity th,
+      .entity td {
+          padding-bottom: 20px;
+      }
+
+      .entity table th {
+          text-align: left;
+      }
+
+      section#overview img {
+          max-width: 1000px;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+          text-align: left
+      }
+      h1, h2, h3 {
+          color: #005A9C; background: white
+      }
+      h1 {
+          font: 170% sans-serif;
+          line-height: 110%;
+      }
+      h2 {
+          font: 140% sans-serif;
+          margin-top:40px;
+      }
+      h3 {
+          font: 120% sans-serif;
+          margin-top: 20px;
+          padding-bottom: 5px;
+          border-bottom: 1px solid navy;
+      }
+      h4 { font: bold 100% sans-serif }
+      h5 { font: italic 100% sans-serif }
+      h6 { font: small-caps 100% sans-serif }
+
+      body {
+          padding: 2em 70px 2em 70px;
+          margin: 0;
+          font-family: sans-serif;
+          color: black;
+          background: white;
+          background-position: top left;
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+          text-align: left;
+      }
+
+      section {
+          max-width: 1500px;
+      }
+
+      .figure {
+          margin-bottom: 20px;
+      }
+
+      :link { color: #00C; background: transparent }
+      :visited { color: #609; background: transparent }
+      a:active { color: #C00; background: transparent }
+
+      .sup-c,
+      .sup-op,
+      .sup-fp,
+      .sup-dp,
+      .sup-ap,
+      .sup-p,
+      .sup-ni,
+      .sup-con,
+      .sup-col {
+          cursor:help;
+      }
+
+      .sup-c {
+          color:orange;
+      }
+
+      .sup-op {
+          color:navy;
+      }
+
+      .sup-fp {
+          color:lightskyblue;
+      }
+
+      .sup-dp {
+          color:green;
+      }
+
+      .sup-ap {
+          color:darkred;
+      }
+
+      .sup-p {
+          color:black;
+      }
+
+      .sup-ni {
+          color:brown;
+      }
+
+      .sup-con {
+          color:orange;
+      }
+
+      .sup-col {
+          color:darkred;
+      }
+
+      sup {
+          margin-left: -3px;
+      }
+      code {
+          font-size: large;
+          color: darkred;
+      }
+
+      /* less prominent links for properties */
+      .proplink {
+          color: #336;
+          text-decoration: none;
+      }
+
+      #toc {
+          position: fixed;
+          top: 0;
+          right: 0;
+          z-index: 2;
+          height: 100%;
+          overflow-y: auto;
+          padding: 10px;
+          border: solid 1px navy;
+          font-size: small;
+          width: 180px;
+      }
+      #toc h3 {
+          margin-top: 5px;
+      }
+
+      #toc ul {
+          list-style: none;
+          padding-left: 0;
+      }
+
+      #toc .first > li {
+          margin-top: 5px;
+      }
+
+      #toc .second,
+      #toc .third {
+          padding-left: 10px;
+      }
+
+      #content {
+          width: calc(100% - 150px);
+      }
+
+      .hover_property {
+          cursor: help;
+          text-decoration: none;
+          border-bottom: dashed 1px;
+      }
+
+      .setclass {
+          list-style-type: none;
+      }
+
+      code{
+          word-wrap: break-word;
+        }
+        table {
+          table-layout: fixed;
+          width: 100%;
+        }
+        td {
+          word-wrap: break-word;
+        }
+    </style>
+    <link
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1SewEAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC"
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg=="
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <div id="content">
+
+      <div class="section" id="collections">
+        <h2>Collections</h2>
+        
+        <div class="concept entity" id="https://aphia.org/ns/traits/asexual_reproduction#">
+          <h3>https://aphia.org/ns/traits/asexual_reproduction#</h3>
+          
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Reproduction which does not involve formation and fusion of gametes and results in progeny with an identical genetic constitution to the parent and to each other. Reproduction may occur by binary fission, budding, asexual spore formation or vegetative propagation. In asexual division in eukaryotic organisms, all cell divisions are by mitosis.
+                  
+                </p>
+                </td>
+            </tr>
+            
+        </div>
+        
+      </div>
+
+      <div class="section" id="concepts">
+        <h2>Concepts</h2>
+        
+        <div class="concept entity" id="By unknown mechanism">
+          <h3>
+            By unknown mechanism
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/asexual_reproduction#by_unknown_mechanism</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Asexual reproduction is detected, but the underpinning mechanism is unknown. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Asexual reproduction unknown">
+          <h3>
+            Asexual reproduction unknown
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/asexual_reproduction#unknown</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  According to literature it is unknown whether or not this organism reproduces asexually.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="By parthenogenesis">
+          <h3>
+            By parthenogenesis
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/asexual_reproduction#by_parthenogenesis</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Reproduction from a female gamete without fertilization by a male gamete (Henderson's Dictionary of Biology; Lawrence, 2005). Direct development of a new individual from an unfused gamete. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="Asexual reproduction">
+          <h3>
+            Asexual reproduction
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/asexual_reproduction#asexual_reproduction_confirmed</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The taxon reproduces asexually, which is reproduction which does not involve fusion of gametes or meiosis and usually results in progeny with an identical genetic constitution to the parent and to each other. Asexual reproduction may amongst others occur by binary fission, budding, asexual spore formation or vegetative propagation (adapted from Henderson's Dictionary of Biology; Lawrence, 2005).
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="By budding">
+          <h3>
+            By budding
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/asexual_reproduction#by_budding</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  (1) production of buds; (2) (zool.) method of asexual reproduction common in sponges, coelenterates and some other invertebrates, in which new individuals develop as outgrowths of the parent organism, and may eventually be set free; (3) (bot.) artificial vegetative propagation by insertion of a bud within the bark of another plant; (4) (mycol.) cell division by the outgrowth of a new cell from the parent cell; (5) (virol.) release of certain animal viruses from the host cell by their envelopment in a piece of plasma membrane which subsequently pinches off from the cell.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="By vegetative propagules">
+          <h3>
+            By vegetative propagules
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/asexual_reproduction#by_vegetative_propagules</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Any spore, seed, fruit or other part of a plant or microorganism capable of producing a new plant and used as a means of dispersal (Henderson's Dictionary of Biology; Lawrence, 2005). Asexual reproduction by development of a new individual from a vegetative progagule. (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="No asexual reproduction">
+          <h3>
+            No asexual reproduction
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/asexual_reproduction#asexual_reproduction_not_confirmed</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  The taxon does not reproduce asexually, which is reproduction which does not involve formation and fusion of gametes and results in progeny with an identical genetic constitution to the parent and to each other. Reproduction may occur by binary fission, budding, asexual spore formation or vegetative propagation. In asexual division in eukaryotic organisms, all cell divisions are by mitosis.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="By fragmentation">
+          <h3>
+            By fragmentation
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/asexual_reproduction#by_fragmentation</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Type of asexual reproduction in which the organism breaks up into smaller pieces, each of which can develop into a new individual, as in some algae.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="By binary fission">
+          <h3>
+            By binary fission
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/asexual_reproduction#by_binary_fission</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Binary fission in prokaryotic organisms, the chief mode of division, in which a cell divides into two equal daughter cells, each containing a copy of the chromosome.
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+        <div class="concept entity" id="By direct development of spores">
+          <h3>
+            By direct development of spores
+            <sup class="sup-op" title="SKOS concept">cc</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code
+                  >https://aphia.org/ns/traits/asexual_reproduction#by_direct_development_of_spores</code
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <th>
+                <a
+                  class="hover_property"
+                  href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms"
+                  >Description</a
+                >
+              </th>
+                <td>
+                <p>
+                  
+                  Reproduction by asexual spores resulting in a new individual of the same ploidy (exospore, endospore, monospore, bispore, paraspore, zoospore, aplanospore, autospore). (Definition composed by Line Le Gall, Olivier De Clerck, Sofie Vranken and Marine Robuchon, based on diverse literature sources, in the framework of compiling macroalgae traits.)
+                  
+                </p>
+                </td>
+            </tr>
+            
+
+            
+            <tr>
+              <th>
+              <a
+                class="hover_property"
+                href="http://www.w3.org/2004/02/skos/core#inScheme"
+                title="A concept scheme in which the concept is included. Defined in SKOS"
+                >skos:inScheme</a
+              >
+              </th>
+              <td>
+              <a href="https://aphia.org/ns/traits/">https://aphia.org/ns/traits/</a>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </table>
+        </div>
+        
+      </div>
+      <div id="namespaces">
+        <h2>Namespaces</h2>
+        <dl>
+          <dt id="dcterms">dcterms</dt>
+          <dd>
+            <code>http://purl.org/dc/terms/</code>
+          </dd>
+          <dt id="rdf">rdf</dt>
+          <dd>
+            <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code>
+          </dd>
+          <dt id="rdfs">rdfs</dt>
+          <dd>
+            <code>http://www.w3.org/2000/01/rdf-schema#</code>
+          </dd>
+          <dt id="skos">skos</dt>
+          <dd>
+            <code>http://www.w3.org/2004/02/skos/core#</code>
+          </dd>
+          <dt id="vann">vann</dt>
+          <dd>
+            <code>http://purl.org/vocab/vann/</code>
+          </dd>
+        </dl>
+      </div>
+      <div id="legend">
+        <h2>Legend</h2>
+        <table class="entity">
+          <tr id="CC">
+            <td>
+              <sup class="sup-op" title="SKOS concept">CC</sup>
+            </td>
+            <td>Concept</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="pylode">
+      <p>
+        made by
+        <a href="https://github.com/vliz-be-opsci/pylode-to-pages">
+          <span id="p">Pylode</span>
+          <span id="y">-To-Pages</span>
+          <span>@VLIZ</span>
+        </a>
+      </p>
+    </div>
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <ul class="first">
+        <li>
+          <h4>
+            <a href="#concepts">Concepts</a>
+          </h4>
+          <ul class="second">
+            
+            <li>
+              <a href="#By unknown mechanism">By unknown mechanism</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Asexual reproduction unknown">Asexual reproduction unknown</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#By parthenogenesis">By parthenogenesis</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#Asexual reproduction">Asexual reproduction</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#By budding">By budding</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#By vegetative propagules">By vegetative propagules</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#No asexual reproduction">No asexual reproduction</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#By fragmentation">By fragmentation</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#By binary fission">By binary fission</a>
+            </li>
+
+            <li>
+            <li>
+              <a href="#By direct development of spores">By direct development of spores</a>
+            </li>
+
+            <li></li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#namespaces">Namespaces</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#dcterms">dcterms</a>
+            </li>
+            <li>
+              <a href="#rdf">rdf</a>
+            </li>
+            <li>
+              <a href="#rdfs">rdfs</a>
+            </li>
+            <li>
+              <a href="#skos">skos</a>
+            </li>
+            <li>
+              <a href="#vann">vann</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#legend">Legend</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#CC">Concept</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

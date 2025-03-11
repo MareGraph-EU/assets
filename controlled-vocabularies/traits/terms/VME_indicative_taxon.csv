@@ -1,0 +1,4 @@
+ID,type,http__www_w3_org_1999_02_22-rdf-syntax-ns_type,http__www_w3_org_2004_02_skos_core_prefLabel,http__www_w3_org_2004_02_skos_core_definition,http__www_w3_org_2004_02_skos_core_inScheme,http__www_w3_org_2004_02_skos_core_member,http__purl_org_dc_terms_description
+https://aphia.org/ns/traits/vme_indicative_taxon#,collection,,,,,https://aphia.org/ns/traits/vme_indicative_taxon#vme_indicative_taxon_no,...
+https://aphia.org/ns/traits/vme_indicative_taxon#vme_indicative_taxon_no,concept,https://aphia.org/ns/attribute-trait/Trait,No,,https://aphia.org/ns/traits/,,
+https://aphia.org/ns/traits/vme_indicative_taxon#vme_indicative_taxon_yes,concept,https://aphia.org/ns/attribute-trait/Trait,Yes,...,https://aphia.org/ns/traits/,,
