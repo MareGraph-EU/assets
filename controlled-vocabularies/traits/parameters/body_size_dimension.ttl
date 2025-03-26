@@ -171,8 +171,7 @@
     skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Width of disk (WD)"@en ;
     skos:definition "The greatest distance between the lateral tips of the pectoral fins in Rajiformes."@en ;
-
-    skos:exactMatch ... ; 
+    #skos:exactMatch ... ; 
 .
 
 <#prosome_length>

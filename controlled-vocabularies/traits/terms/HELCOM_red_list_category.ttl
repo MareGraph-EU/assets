@@ -75,7 +75,7 @@
     skos:prefLabel "Data Deficient"@en ;
     skos:definition "A taxon is Data Deficient when there is inadequate information to make a direct, or indirect, assessment of its risk of extinction based on its distribution and/or population status. A taxon in this category may be well studied, and its biology well known, but appropriate data on abundance and/or distribution are lacking. Data Deficient is therefore not a category of threat. Listing of taxa in this category indicates that more information is required and acknowledges the possibility that future research will show that threatened classification is appropriate. It is important to make positive use of whatever data are available. In many cases great care should be exercised in choosing between DD and a threatened status. If the range of a taxon is suspected to be relatively circumscribed, and a considerable period of time has elapsed since the last record of the taxon, threatened status may well be justified."@en ;
 .
-t<#not_evaluated>
+<#not_evaluated>
     a skos:Concept, aphia-trait:Trait ;
     skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Not Evaluated"@en ;
