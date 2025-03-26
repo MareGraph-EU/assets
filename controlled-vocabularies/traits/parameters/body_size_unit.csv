@@ -1,13 +1,13 @@
-ID,type,http__www_w3_org_2004_02_skos_core_member,http__purl_org_dc_terms_description,http__www_w3_org_2004_02_skos_core_altLabel,http__www_w3_org_1999_02_22-rdf-syntax-ns_type,http__www_w3_org_2004_02_skos_core_prefLabel,http__www_w3_org_2004_02_skos_core_definition,http__www_w3_org_2004_02_skos_core_inScheme
-https://aphia.org/ns/traits/body_size_unit#,collection,https://aphia.org/ns/traits/body_size_unit#ton,"The unit of a body size (e.g. m, cm, mm).",,,,,
-https://aphia.org/ns/traits/body_size_unit#centimeter,concept,,,cm,https://aphia.org/ns/attribute-trait/Trait,centimeter,centimeter,https://aphia.org/ns/traits/
-https://aphia.org/ns/traits/body_size_unit#meter,concept,,,m,https://aphia.org/ns/attribute-trait/Trait,meter,meter,https://aphia.org/ns/traits/
-https://aphia.org/ns/traits/body_size_unit#kilogram,concept,,,kg,https://aphia.org/ns/attribute-trait/Trait,kilogram,kilogram,https://aphia.org/ns/traits/
-https://aphia.org/ns/traits/body_size_unit#inch,concept,,,inches,https://aphia.org/ns/attribute-trait/Trait,inch,inch,https://aphia.org/ns/traits/
-https://aphia.org/ns/traits/body_size_unit#square_meter,concept,,,m²,https://aphia.org/ns/attribute-trait/Trait,square meter,square meter,https://aphia.org/ns/traits/
-https://aphia.org/ns/traits/body_size_unit#cubic_centimeter,concept,,,cm³,https://aphia.org/ns/attribute-trait/Trait,cubic centimeter,cubic centimeter,https://aphia.org/ns/traits/
-https://aphia.org/ns/traits/body_size_unit#ton,concept,,,,https://aphia.org/ns/attribute-trait/Trait,ton,ton,https://aphia.org/ns/traits/
-https://aphia.org/ns/traits/body_size_unit#square_centimeter,concept,,,cm²,https://aphia.org/ns/attribute-trait/Trait,square centimeter,square centimeter,https://aphia.org/ns/traits/
-https://aphia.org/ns/traits/body_size_unit#square_decimeter,concept,,,dm²,https://aphia.org/ns/attribute-trait/Trait,square decimeter,square decimeter,https://aphia.org/ns/traits/
-https://aphia.org/ns/traits/body_size_unit#micrometer,concept,,,µm,https://aphia.org/ns/attribute-trait/Trait,micrometer,micrometer,https://aphia.org/ns/traits/
-https://aphia.org/ns/traits/body_size_unit#millimeter,concept,,,mm,https://aphia.org/ns/attribute-trait/Trait,millimeter,millimeter,https://aphia.org/ns/traits/
+ID,type,http__www_w3_org_2004_02_skos_core_member,http__www_w3_org_1999_02_22-rdf-syntax-ns_type,http__www_w3_org_2004_02_skos_core_altLabel,http__www_w3_org_2004_02_skos_core_inScheme,http__purl_org_dc_terms_description,http__www_w3_org_2004_02_skos_core_prefLabel,http__www_w3_org_2004_02_skos_core_definition
+https://aphia.org/ns/traits/body_size_unit#,collection,https://aphia.org/ns/traits/body_size_unit#square_meter,,,,"The unit of a body size (e.g. m, cm, mm).",,
+https://aphia.org/ns/traits/body_size_unit#ton,concept,,https://aphia.org/ns/attribute-trait/Trait,,https://aphia.org/ns/traits/,,ton,ton
+https://aphia.org/ns/traits/body_size_unit#square_centimeter,concept,,https://aphia.org/ns/attribute-trait/Trait,cm²,https://aphia.org/ns/traits/,,square centimeter,square centimeter
+https://aphia.org/ns/traits/body_size_unit#millimeter,concept,,https://aphia.org/ns/attribute-trait/Trait,mm,https://aphia.org/ns/traits/,,millimeter,millimeter
+https://aphia.org/ns/traits/body_size_unit#square_decimeter,concept,,https://aphia.org/ns/attribute-trait/Trait,dm²,https://aphia.org/ns/traits/,,square decimeter,square decimeter
+https://aphia.org/ns/traits/body_size_unit#centimeter,concept,,https://aphia.org/ns/attribute-trait/Trait,cm,https://aphia.org/ns/traits/,,centimeter,centimeter
+https://aphia.org/ns/traits/body_size_unit#cubic_centimeter,concept,,https://aphia.org/ns/attribute-trait/Trait,cm³,https://aphia.org/ns/traits/,,cubic centimeter,cubic centimeter
+https://aphia.org/ns/traits/body_size_unit#inch,concept,,https://aphia.org/ns/attribute-trait/Trait,inches,https://aphia.org/ns/traits/,,inch,inch
+https://aphia.org/ns/traits/body_size_unit#square_meter,concept,,https://aphia.org/ns/attribute-trait/Trait,m²,https://aphia.org/ns/traits/,,square meter,square meter
+https://aphia.org/ns/traits/body_size_unit#micrometer,concept,,https://aphia.org/ns/attribute-trait/Trait,µm,https://aphia.org/ns/traits/,,micrometer,micrometer
+https://aphia.org/ns/traits/body_size_unit#kilogram,concept,,https://aphia.org/ns/attribute-trait/Trait,kg,https://aphia.org/ns/traits/,,kilogram,kilogram
+https://aphia.org/ns/traits/body_size_unit#meter,concept,,https://aphia.org/ns/attribute-trait/Trait,m,https://aphia.org/ns/traits/,,meter,meter
