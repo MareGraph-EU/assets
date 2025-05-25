@@ -449,7 +449,7 @@ dct:identier rdf:type owl:DatatypeProperty .
                    rdfs:comment "A string to represent the continent of the place where an event takes place in the context of biodiversity"@en ,
                                 "Een tekenreeks om het continent weer te geven van de plaats waar een gebeurtenis plaatsvindt in de context van biodiversiteit"@nl ,
                                 "Una stringa per rappresentare il continente del luogo dove avviene un evento nel contesto della biodiversità"@it ;
-                   rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ,
+                   rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
                    rdfs:label "continent in string"@en ,
                               "continent in tekenreeks"@nl ,
                               "continente in stringa"@it ;
