@@ -6,7 +6,7 @@ The following image illustrates in the graphical notation offered by Graffoo of 
 
 <img
     title="Species Distribution Ontology of APHIA"
-    src="./distribution.png"  
+    src="./marine-observation.png"  
     width="70%"
     />
 
