@@ -598,7 +598,7 @@
         <rdfs:comment xml:lang="nl">Een tekenreeks om het continent weer te geven van de plaats waar een gebeurtenis plaatsvindt in de context van biodiversiteit</rdfs:comment>
         <rdfs:comment xml:lang="it">Una stringa per rappresentare il continente del luogo dove avviene un evento nel contesto della biodiversità</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://eurobis.org/ns/marine-observation"/>
-        <rdfs:label xml:lang="nl">continent in tekenreeks</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="nl">continent in tekenreeks</rdfs:label>
         <rdfs:label xml:lang="en">continent in string</rdfs:label>
         <rdfs:label xml:lang="it">continente in stringa</rdfs:label>
         <skos:usageNote xml:lang="nl">Het wordt aanbevolen om altijd unieke URI&apos;s te gebruiken om continenten te identificeren, mogelijk zelfs afgeleid van gecontroleerde vocabulaires. Als het niet mogelijk is om een continent te identificeren door het gebruik van een object geïdentificeerd door een URI, dan kan deze eigenschap worden gebruikt om het te specificeren in tekenreeksvorm.</skos:usageNote>
