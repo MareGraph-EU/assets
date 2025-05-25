@@ -450,8 +450,8 @@ dct:identier rdf:type owl:DatatypeProperty .
                                 "Een tekenreeks om het continent weer te geven van de plaats waar een gebeurtenis plaatsvindt in de context van biodiversiteit"@nl ,
                                 "Una stringa per rappresentare il continente del luogo dove avviene un evento nel contesto della biodiversità"@it ;
                    rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ,
-                                    "continent in tekenreeks"@nl ;
                    rdfs:label "continent in string"@en ,
+                              "continent in tekenreeks"@nl ,
                               "continente in stringa"@it ;
                    skos:usageNote "Het wordt aanbevolen om altijd unieke URI's te gebruiken om continenten te identificeren, mogelijk zelfs afgeleid van gecontroleerde vocabulaires. Als het niet mogelijk is om een continent te identificeren door het gebruik van een object geïdentificeerd door een URI, dan kan deze eigenschap worden gebruikt om het te specificeren in tekenreeksvorm."@nl ,
                                   "It is recommended to always use unique URIs to identify continents, possibly even derived from controlled vocabularies. If it is not possible to identify a continent through the use of an object identified by a URI, then this property may be used to specify it in string form."@en ,
