@@ -1,0 +1,1021 @@
+@prefix : <https://eurobis.org/ns/marine-observation/> .
+@prefix mr: <http://marineregions.org/ns/ontology#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tat: <https://aphia.org/ns/attribute-trait/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix taxa-name: <https://aphia.org/ns/taxa-name/> .
+@prefix top-level: <https://aphia.org/ns/top-level/> .
+@base <https://eurobis.org/ns/marine-observation/> .
+
+<https://eurobis.org/ns/marine-observation> rdf:type owl:Ontology ;
+                                             owl:versionIRI <https://eurobis.org/ns/marine-observation/0.1> ;
+                                             owl:imports <https://aphia.org/ns/top-level> ;
+                                             dct:creator <https://alphia.org/resource/organisation/dv> ,
+                                                         <https://ror.org/0496vr396> ,
+                                                         <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab> ;
+                                             dct:description "Dit is de ontologie van mariene waarnemingen. De term mariene waarnemingen verwijst naar alle verschillende metingen en waarnemingen van het bestaan van organismen die tijdens specifieke gebeurtenissen worden gedaan en in het EUROBIS-systeem worden gerapporteerd."@nl ,
+                                                             "Questa è l'ontologia delle osservazioni marine. Con il termine osservazioni marine si intende l'insieme di tutte le differenti misurazioni nonché osservazioni dell'esistenza di organismi che vengono effettuate durante eventi specifici e riportate nel sistema EUROBIS."@it ,
+                                                             "This is the ontology of marine observations. The term marine observations refers to all the different measurements as well as observations of the existence of organisms that are made during specific events and reported in the EUROBIS system."@en ;
+                                             dct:issued "2025-01-27"^^xsd:date ;
+                                             dct:language <http://publications.europa.eu/resource/authority/language/ENG> ,
+                                                          <http://publications.europa.eu/resource/authority/language/ITA> ,
+                                                          <http://publications.europa.eu/resource/authority/language/NLD> ;
+                                             dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                                             dct:modified "2025-05-25" ;
+                                             dct:title "EUROBIS - Marine observations ontology"@en ,
+                                                       "EUROBIS - Ontologia delle osservazioni marine"@it ,
+                                                       "EUROBIS - Ontologie mariene waarnemingen"@nl ;
+                                             rdfs:comment "Dit is de ontologie van mariene waarnemingen. De term mariene waarnemingen verwijst naar alle verschillende metingen en waarnemingen van het bestaan van organismen die tijdens specifieke gebeurtenissen worden gedaan en in het EUROBIS-systeem worden gerapporteerd."@nl ,
+                                                          "Questa è l'ontologia delle osservazioni marine. Con il termine osservazioni marine si intende l'insieme di tutte le differenti misurazioni nonché osservazioni dell'esistenza di organismi che vengono effettuate durante eventi specifici e riportate nel sistema EUROBIS."@it ,
+                                                          "This is the ontology of marine observations. The term marine observations refers to all the different measurements as well as observations of the existence of organisms that are made during specific events and reported in the EUROBIS system."@en ;
+                                             rdfs:label "EUROBIS - Marine observations ontology"@en ,
+                                                        "EUROBIS - Ontologia delle osservazioni marine"@it ,
+                                                        "EUROBIS - Ontologie mariene waarnemingen"@nl ;
+                                             owl:versionInfo "First version 0.1."@en ,
+                                                             "Prima versione 0.1."@it ,
+                                                             "versie 0.1."@nl .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/ENVO_01000739
+<http://purl.obolibrary.org/obo/ENVO_01000739> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dct:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/language
+dct:language rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#qualifiedCardinality
+owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#usageNote
+skos:usageNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+prov:wasDerivedFrom rdf:type owl:AnnotationProperty ;
+                    <http://purl.obolibrary.org/obo/ENVO_01000739>  .
+
+
+###  http://www.w3.org/ns/prov#wasInfluencedBy
+prov:wasInfluencedBy rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://rs.tdwg.org/dwc/iri/habitat
+<http://rs.tdwg.org/dwc/iri/habitat> rdf:type owl:ObjectProperty .
+
+
+###  http://rs.tdwg.org/dwc/terms/occurrenceStatus
+<http://rs.tdwg.org/dwc/terms/occurrenceStatus> rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/hasResult
+<http://www.w3.org/ns/sosa/hasResult> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/usedProcedure
+<http://www.w3.org/ns/sosa/usedProcedure> rdf:type owl:ObjectProperty .
+
+
+###  https://aphia.org/ns/top-level/hasTemporalEntity
+top-level:hasTemporalEntity rdf:type owl:ObjectProperty .
+
+
+###  https://aphia.org/ns/top-level/hasType
+top-level:hasType rdf:type owl:ObjectProperty .
+
+
+###  https://eurobis.org/ns/marine-observation/hasBioFeatureOfInterest
+:hasBioFeatureOfInterest rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
+                         rdfs:domain :MarineObservation ;
+                         rdfs:range :BioFeatureOfInterest ;
+                         rdfs:comment "Eigenschap die wordt gebruikt om de habitat van de soort weer te geven."@nl ,
+                                      "Property used to represent the habitat of the species."@en ,
+                                      "Proprietà utilizzata per rappresentare l'habitat della specie."@it ;
+                         rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                         rdfs:label "ha caratteristica marina di interesse"@it ,
+                                    "has marine feature of interest"@en ,
+                                    "heeft interessant marien kenmerk"@nl .
+
+
+###  https://eurobis.org/ns/marine-observation/hasObservableProperty
+:hasObservableProperty rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                       owl:inverseOf :isObservablePropertyOf ;
+                       rdfs:domain :MarineObservation ;
+                       rdfs:range :ObservableProperty ;
+                       rdfs:comment "Eigenschap die wordt gebruikt om een specifieke eigenschap van de mariene observatie weer te geven, zoals een biotische of abiotische eigenschap."@nl ,
+                                    "Property used to represent a specific property of the marine observation such as a biotic or abiotic property."@en ,
+                                    "Proprietà utilizzata per rappresentare una proprietà specifica dell'osservazione marina come può essere una proprietà biotica o abiotica."@it ;
+                       rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                       rdfs:label "ha proprietà osservabile"@it ,
+                                  "has observable property"@en ,
+                                  "heeft waarneembare eigenschap"@nl .
+
+
+###  https://eurobis.org/ns/marine-observation/hasObservationValue
+:hasObservationValue rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://www.w3.org/ns/sosa/hasResult> ;
+                     rdfs:domain :MarineObservation ;
+                     rdfs:range :ObservationValue ;
+                     rdfs:comment "Eigenschap die wordt gebruikt om een waarde te specificeren, hetzij numeriek met maateenheden of kwalitatief van de mariene observatie."@nl ,
+                                  "Property used to specify a value, be it numerical with units of measurement or qualitative of the marine observation."@en ,
+                                  "Proprietà utilizzata per specificare un valore, sia esso numerico con unità di misura sia esso qualitativo dell'osservazione marina."@it ;
+                     rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                     rdfs:label "ha valore osservazione"@it ,
+                                "has observation value"@en ,
+                                "heeft observatiewaarde"@nl .
+
+
+###  https://eurobis.org/ns/marine-observation/hasOccurredInHabitat
+:hasOccurredInHabitat rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://rs.tdwg.org/dwc/iri/habitat> ;
+                      rdfs:domain :BioEvent ;
+                      rdfs:range tat:Environment ;
+                      rdfs:comment "Eigenschap die het mogelijk maakt om een gebeurtenis in de biodiversiteitssfeer te associëren met de omgeving/habitat waarin ze plaatsvindt."@nl ,
+                                   "Property allowing an event occurring in the biodiversity sphere to be associated with the environment/habitat in which it takes place."@en ,
+                                   "Proprietà che consente di associare un evento che si verifica in ambito biodiversità con l'ambiente/habitat in cui questo avviene."@it ;
+                      rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                      rdfs:label "has occurred in habitat"@en ,
+                                 "is opgetreden in habitat"@nl ,
+                                 "si è verificato in habitat"@it .
+
+
+###  https://eurobis.org/ns/marine-observation/hasOccurrenceBasis
+:hasOccurrenceBasis rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+                    rdfs:domain :OrganismOccurrence ;
+                    rdfs:range :OccurrenceBasis ;
+                    rdfs:comment "Eigenschap die het mogelijk maakt om de basis of aard of soort detectie van het bestaan van een bepaald organisme uit te drukken (bijv. menselijke observatie, observatie gedaan met software, door middel van bemonstering, gebaseerd op een bewaard exemplaar/fossiel, etc.)."@nl ,
+                                 "Property that allows one to express the basis or nature or type of detection of the existence of a certain organism (e.g. human observation, observation made with software, through sampling, based on a preserved specimen/fossil, etc.)."@en ,
+                                 "Proprietà che consente di esprimere la base o natura o tipologia di rilevamento dell'esistenza di un certo organismo (e.g., osservazione umana, osservazione fatta con software, attraverso un campionamento, basata su un esemplare preservato/fossile, ecc.)."@it ;
+                    rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                    rdfs:label "ha natura dell'occorrenza"@it ,
+                               "has occurrence basis"@en ,
+                               "heeft basis van voorkomen"@nl .
+
+
+###  https://eurobis.org/ns/marine-observation/hasOccurrenceStatus
+:hasOccurrenceStatus rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://rs.tdwg.org/dwc/terms/occurrenceStatus> ;
+                     rdfs:domain :OrganismOccurrence ;
+                     rdfs:range :OccurrenceStatus ;
+                     rdfs:comment "Eigenschap waarmee men de toestand van de gebeurtenis kan uitdrukken die afwezig of aanwezig kan zijn op een bepaalde locatie."@nl ,
+                                  "Property that allows one to express the state of the occurrence that may be absent or present at a certain location."@en ,
+                                  "Proprietà che consente di esprimere lo stato dell'occorrenza che può essere assente o presente in un certo luogo."@it ;
+                     rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                     rdfs:label "ha stato dell'occorrenza"@it ,
+                                "has occurrence status"@en ,
+                                "heeft voorvalstatus"@nl .
+
+
+###  https://eurobis.org/ns/marine-observation/hasOrganismQuantity
+:hasOrganismQuantity rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+                     rdfs:domain :OrganismOccurrence ;
+                     rdfs:range top-level:Value ;
+                     rdfs:comment "Eigenschap waarmee een hoeveelheid organismen kan worden weergegeven in de detectie van de aanwezigheid van organismen, uitgedrukt in een bepaalde meeteenheid.."@nl ,
+                                  "Property that allows a quantity of organisms to be represented in the detection of the presence of organisms, expressed in some unit of measurement."@en ,
+                                  "Proprietà che consente di rappresentare un quantitativo di organismi nel rilevamento della presenza di organismi, espresso in una qualche unità di misura."@it ;
+                     rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                     rdfs:label "ha quantità organismi"@it ,
+                                "has organism quantity"@en ,
+                                "heeft hoeveelheid organisme"@nl ;
+                     skos:usageNote "Deze eigenschap kan worden gebruikt om gegevens te modelleren die in het OBIS-model organismehoeveelheid (organismQuantity) en organismehoeveelheidstype (organismQuantityType) worden genoemd."@nl ,
+                                    "Questa proprietà può essere utilizzata per modellare i dati che nel modello OBIS vengono chiamati quantità organismi (organismQuantity) e tipo quantità organismi (organismQuantityType)"@it ,
+                                    "This property can be used to model data that in the OBIS model are called organism quantity (organismQuantity) and organism quantity type (organismQuantityType)"@en .
+
+
+###  https://eurobis.org/ns/marine-observation/hasSize
+:hasSize rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+         rdfs:domain :Sample ;
+         rdfs:range top-level:Value ;
+         rdfs:comment "Eigenschap waarmee de steekproefgrootte kan worden uitgedrukt. De steekproefgrootte wordt uitgedrukt met een object van het type Waarde dat een numerieke waarde en eventueel een meeteenheid kan hebben. Via deze eigenschap kunnen we uitdrukken wat in darwnin core de twee eigenschappen genaamd steekproefgrootte-eenheid (sampleSizeUnit) en steekproefgrootte-waarde (sampleSizeValue) zijn."@nl ,
+                      "Property that allows the sample size to be expressed. The sample size is expressed with an object of type Value which may have a numerical value and potentially a unit of measurement. Through this property we are able to express what in darwnin core are the two properties called sample size unit (sampleSizeUnit) and sample size value (sampleSizeValue)."@en ,
+                      "Proprietà che consente di esprimere la dimensione del campione. La dimensione del campione è espressa con un oggetto di tipo Valore che può avere il valore numerico e potenzialmente l'unità di misura. Attraverso questa proprietà si riesce ad esprimere quello che in darwnin core sono le due proprietà chiamate unità della dimensione del campione (sampleSizeUnit) e valore della dimensione del campione (sampleSizeValue)."@it ;
+         rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+         rdfs:label "ha dimensione"@it ,
+                    "has size"@en ,
+                    "heeft grootte"@nl .
+
+
+###  https://eurobis.org/ns/marine-observation/isInTheContextOf
+:isInTheContextOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+                  rdfs:domain :MarineObservation ;
+                  rdfs:range :MarineObservation ;
+                  rdfs:comment "Eigenschap die gebruikt wordt om een mariene observatie aan een andere te koppelen, om aan te geven dat een bepaalde zeeobservatie plaatsvindt in de context van een andere. Het is bijvoorbeeld mogelijk om de waarneming van de behoeftigheid van een organisme te koppelen aan bepaalde biotische of abiotische metingen."@nl ,
+                               "Property used to link one marine observation to another, to represent that a certain marine observation occurs in the context of another. For example, it is possible to link the observation of an organism's neediness with certain biotic or abiotic measurements."@en ,
+                               "Proprietà utilizzata per collegare un'osservazione marina ad un'altra, per poter rappresentare che una certa osservazione marina avviene nel contesto di un'altra. Ad esempio è possibile collegare l'osservazione dell'occorrezza di un organismo con alcune misurazioni biotiche o abiotiche."@it ;
+                  rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                  rdfs:label "heeft aanvullende beschrijving"@nl ,
+                             "is in the context of"@en ,
+                             "è nel contesto di"@it .
+
+
+###  https://eurobis.org/ns/marine-observation/isObservablePropertyOf
+:isObservablePropertyOf rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+                        rdfs:domain :ObservableProperty ;
+                        rdfs:range :MarineObservation ;
+                        rdfs:comment "Inverse eigenschap van “heeft waarneembare eigenschap” gebruikt om een mariene observatie te specificeren gegeven een waargenomen eigenschap."@nl ,
+                                     "Inverse property of ‘has observable property’ used to specify a marine observation given an observed property."@en ,
+                                     "Proprietà inversa di 'ha proprietà osservabile' utilizzata per specificare un'osservazione marina data una proprietà osservata."@it ;
+                        rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                        rdfs:label "heeft waarneembare eigenschap"@nl ,
+                                   "is observable property of"@en ,
+                                   "è proprietà osservabile di"@it .
+
+
+###  https://eurobis.org/ns/marine-observation/isOfOrganismNamedAs
+:isOfOrganismNamedAs rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+                     rdfs:domain :OrganismOccurrence ;
+                     rdfs:range taxa-name:TaxonName ;
+                     rdfs:comment "Eigenschap die het mogelijk maakt de naam van het referentie-taxon te specificeren in de waarneming betreffende het voorkomen van een bepaald organisme."@nl ,
+                                  "Property allowing the name of the reference taxon to be specified in the observation concerning the occurrence of a certain organism."@en ,
+                                  "Proprietà che consente di specificare il nome del taxon di riferimento nell'osservazione relativa alla occorrenza di un certo organismo."@it ;
+                     rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                     rdfs:label "is of organism named as"@en ,
+                                "is van organisme met de naam"@nl ,
+                                "è di organismo chiamato come"@it .
+
+
+###  https://eurobis.org/ns/marine-observation/isSubEventOf
+:isSubEventOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> ;
+              rdf:type owl:TransitiveProperty ,
+                       owl:ReflexiveProperty ;
+              rdfs:domain :BioEvent ;
+              rdfs:range :BioEvent ;
+              rdfs:comment "Eigenschap die een mogelijke hiërarchie van gebeurtenissen weergeeft."@nl ,
+                           "Property representing a possible hierarchy of events."@en ,
+                           "Proprietà che rappresenta una possibile gerarchia di eventi."@it ;
+              rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+              rdfs:label "is sub event of"@en ,
+                         "is subgebeurtenis van"@nl ,
+                         "è sotto evento di"@it .
+
+
+###  https://eurobis.org/ns/marine-observation/isSubSampleOf
+:isSubSampleOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+               rdf:type owl:TransitiveProperty ;
+               rdfs:domain :Sample ;
+               rdfs:range :Sample ;
+               rdfs:comment "Eigenschap die het creëren van hiërarchieën tussen monsters mogelijk maakt (in de context van mariene waarnemingen)"@nl ,
+                            "Property enabling the creation of hierarchies between samples (in the context of marine observations)"@en ,
+                            "Proprietà che consente di creare gerarchie tra campioni (nel contesto delle osservazioni marine)."@it ;
+               rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+               rdfs:label "is een deelmonster van"@nl ,
+                          "is sub sample of"@en ,
+                          "è sottocampione di"@it .
+
+
+###  https://eurobis.org/ns/marine-observation/madeBy
+:madeBy rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+        rdfs:domain :MarineObservation ;
+        rdfs:range :MonitoringFacility ;
+        rdfs:comment "Eigenschap die wordt gebruikt om de bewakingsfaciliteit te identificeren die de mariene observatie heeft uitgevoerd."@nl ,
+                     "Property used to identify the monitoring facility that carried out the marine observation."@en ,
+                     "Proprietà utilizzata per individuare la struttura di monitoraggio che ha svolto l'osservazione marina."@it ;
+        rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+        rdfs:label "fatto da"@it ,
+                   "gemaakt door"@nl ,
+                   "made by"@en .
+
+
+###  https://eurobis.org/ns/marine-observation/madeDuringEvent
+:madeDuringEvent rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+                 rdfs:domain :MarineObservation ;
+                 rdfs:range :BioEvent ;
+                 rdfs:comment "Eigenschap die wordt gebruikt om een mariene waarneming te koppelen aan de gebeurtenis waarin ze werd gedaan."@nl ,
+                              "Property used to link a marine observation to the event in which it was made."@en ,
+                              "Proprietà utilizzata per collegare un'osservazione marina all'evento in cui è stata fatta."@it ;
+                 rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                 rdfs:label "fatto durante evento"@it ,
+                            "gemaakt tijdens evenement"@nl ,
+                            "made during event"@en .
+
+
+###  https://eurobis.org/ns/marine-observation/occursIn
+:occursIn rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+          rdfs:domain :BioEvent ;
+          rdfs:range mr:Feature ;
+          rdfs:comment "Eigenschap waarmee de locatie van een bepaalde gebeurtenis kan worden weergegeven (in de context van mariene waarnemingen)."@nl ,
+                       "Property that allows one to represent the location of a certain event (in the context of marine observations)."@en ,
+                       "Proprietà che consente di rappresentare il luogo in cui è avvenuto un certo evento (nel contesto delle osservazioni marine)."@it ;
+          rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+          rdfs:label "avviene in"@it ,
+                     "komt voor in"@nl ,
+                     "occurs in"@en ;
+          skos:usageNote "Het wordt aanbevolen om deze eigenschap te gebruiken in combinatie met geolocaties/kenmerken die gedefinieerd zijn in Gazzettiers, zoals Marine Regions Gazzettier. Wanneer dat echter niet mogelijk is, kan deze eigenschap worden gebruikt in combinatie met een object van het type Feature of SpatialObject dat voor een dergelijk doel wordt aangemaakt. Om de nauwkeurigheid van de coördinaten en de onzekerheid in meters van de coördinaten aan te geven, wordt voorgesteld om respectievelijk de geo:hasSpatialResolution en geo:hasMetricSpatialAccuracy eigenschappen van de geosparql ontologie te gebruiken in de representatie van een geometrie geassocieerd met een locatie."@nl ,
+                         "It is recommened using this property in combination with geo locations/features that are defined in Gazzettiers, such as Marine Regions Gazzettier. However, when that is not possible, this property can be used associated with an object of type Feature or SpatialObject to be created for such a purpose. To indicate the accuracy of the coordinates and the uncertainty in metres of the coordinates, it is suggested that the geo:hasSpatialResolution and geo:hasMetricSpatialAccuracy properties, respectively, of the geosparql ontology be used in the representation of a geometry associated with a location/feature."@en ,
+                         "Si consiglia di utilizzare questa proprietà in combinazione con località geografiche/caratteristiche definite in Gazzettier, come il Gazzettier delle Regioni marine. Tuttavia, quando ciò non è possibile, questa proprietà può essere utilizzata associata a un oggetto di tipo Feature o SpatialObject da creare a tale scopo. Per indicare la precisione delle coordinate e l'incertezza in metri delle coordinate, si suggerisce di utilizzare le proprietà geo:hasSpatialResolution e geo:hasMetricSpatialAccuracy ,rispettivamente, dell'ontologia geosparql da utilizzare nella rappresentazione di una geometria associata a un luogo."@it .
+
+
+###  https://eurobis.org/ns/marine-observation/produces
+:produces rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf <http://www.w3.org/ns/sosa/hasResult> ;
+          rdfs:domain :Sampling ;
+          rdfs:range :Sample ;
+          rdfs:comment "Eigenschap waarmee de bemonsteringsactiviteit kan worden gekoppeld aan het gerelateerde monster dat is aangemaakt."@nl ,
+                       "Property that allows the sampling activity to be linked to the related sample created."@en ,
+                       "Proprietà che consente di collegare l'attività di campionamento con il relativo campione creato."@it ;
+          rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+          rdfs:label "produce"@it ,
+                     "produceert"@nl ,
+                     "produces"@en .
+
+
+###  https://eurobis.org/ns/marine-observation/usesMethod
+:usesMethod rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf <http://www.w3.org/ns/sosa/usedProcedure> ;
+            rdfs:domain :Sampling ;
+            rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Method> ;
+            rdfs:comment "Eigenschap die de methode voor bemonstering weergeeft (specifiek in de context van mariene waarnemingen)."@nl ,
+                         "Property representing the method used in sampling (specifically in the context of marine observations)."@en ,
+                         "Proprietà che rappresenta il metodo utilizzato nel campionamento (nello specifico nel contesto di osservazioni marine)."@it ;
+            rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+            rdfs:label "gebruikt methode"@nl ,
+                       "uses method"@en ,
+                       "utilizza metodo"@it .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/date
+dct:date rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/identier
+dct:identier rdf:type owl:DatatypeProperty .
+
+
+###  http://rs.tdwg.org/dwc/terms/continent
+<http://rs.tdwg.org/dwc/terms/continent> rdf:type owl:DatatypeProperty .
+
+
+###  http://rs.tdwg.org/dwc/terms/maximumDepthInMeters
+<http://rs.tdwg.org/dwc/terms/maximumDepthInMeters> rdf:type owl:DatatypeProperty .
+
+
+###  http://rs.tdwg.org/dwc/terms/minimumDepthInMeters
+<http://rs.tdwg.org/dwc/terms/minimumDepthInMeters> rdf:type owl:DatatypeProperty .
+
+
+###  http://rs.tdwg.org/dwc/terms/samplingEffort
+<http://rs.tdwg.org/dwc/terms/samplingEffort> rdf:type owl:DatatypeProperty .
+
+
+###  http://rs.tdwg.org/dwc/terms/samplingProtocol
+<http://rs.tdwg.org/dwc/terms/samplingProtocol> rdf:type owl:DatatypeProperty .
+
+
+###  https://eurobis.org/ns/marine-observation/continentInString
+:continentInString rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf <http://rs.tdwg.org/dwc/terms/continent> ;
+                   rdfs:domain mr:Feature ;
+                   rdfs:range rdf:PlainLiteral ;
+                   rdfs:comment "A string to represent the continent of the place where an event takes place in the context of biodiversity"@en ,
+                                "Een tekenreeks om het continent weer te geven van de plaats waar een gebeurtenis plaatsvindt in de context van biodiversiteit"@nl ,
+                                "Una stringa per rappresentare il continente del luogo dove avviene un evento nel contesto della biodiversità"@it ;
+                   rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ,
+                                    "continent in tekenreeks"@nl ;
+                   rdfs:label "continent in string"@en ,
+                              "continente in stringa"@it ;
+                   skos:usageNote "Het wordt aanbevolen om altijd unieke URI's te gebruiken om continenten te identificeren, mogelijk zelfs afgeleid van gecontroleerde vocabulaires. Als het niet mogelijk is om een continent te identificeren door het gebruik van een object geïdentificeerd door een URI, dan kan deze eigenschap worden gebruikt om het te specificeren in tekenreeksvorm."@nl ,
+                                  "It is recommended to always use unique URIs to identify continents, possibly even derived from controlled vocabularies. If it is not possible to identify a continent through the use of an object identified by a URI, then this property may be used to specify it in string form."@en ,
+                                  "È raccomandato utilizzare sempre URI univoci per identificare continenti, possibilmente anche ricavati da vocabolari controllati. Qualora non sia possibile identificare un continente attraverso l'uso di un oggetto identificato da un URI, allora questa proprietà può essere usata per specificarlo sottoforma di stringa."@it .
+
+
+###  https://eurobis.org/ns/marine-observation/maximumDepthInMeters
+:maximumDepthInMeters rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf <http://rs.tdwg.org/dwc/terms/maximumDepthInMeters> ;
+                      rdfs:domain :Sample ;
+                      rdfs:range xsd:integer ;
+                      rdfs:comment "Het maximale niveau van een diepte-interval onder het lokale oppervlak, uitgedrukt in meters. De diepte verwijst naar waar het monster werd genomen."@nl ,
+                                   "Il livello massimo di un intervallo di profondità sotto la superficie locale, espresso in metri. La profondità è riferita a dove il campione è stato preso."@it ,
+                                   "The maximum level of a depth interval below the local surface, expressed in metres. The depth refers to where the sample was taken."@en ;
+                      rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                      rdfs:label "massima profondità in metro"@it ,
+                                 "maximale diepte in meters"@nl ,
+                                 "maximum depth in meters"@en .
+
+
+###  https://eurobis.org/ns/marine-observation/minimumDepthInMeters
+:minimumDepthInMeters rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf <http://rs.tdwg.org/dwc/terms/minimumDepthInMeters> ;
+                      rdfs:domain :Sample ;
+                      rdfs:range xsd:integer ;
+                      rdfs:comment "Het minimumniveau van een diepte-interval onder het lokale oppervlak, uitgedrukt in meters. De diepte verwijst naar waar het monster werd genomen."@nl ,
+                                   "Il livello minimo di un intervallo di profondità sotto la superficie locale, espresso in metri. La profondità è riferita a dove il campione è stato preso."@it ,
+                                   "The minimum level of a depth interval below the local surface, expressed in metres. The depth refers to where the sample was taken."@en ;
+                      rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                      rdfs:label "minimum depth in meters"@en ,
+                                 "minimumdiepte in meters"@nl ,
+                                 "profondità minima in metri"@it .
+
+
+###  https://eurobis.org/ns/marine-observation/samplingEffort
+:samplingEffort rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf <http://rs.tdwg.org/dwc/terms/samplingEffort> ;
+                rdfs:domain :Sampling ;
+                rdfs:range rdf:PlainLiteral ;
+                rdfs:comment "De hoeveelheid moeite voor bemonstering. Voorbeelden zijn: 10 waarnemersuren, enz."@nl ,
+                             "La quantità di sforzo per il campionamento. Esempi includono: 10 ore di osservazione, ecc."@it ,
+                             "The amount of effort for sampling. Examples include: 10 observer hours, "@en ,
+                             "The amount of effort for sampling. Examples include: 10 observer hours, etc."@en ;
+                rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                rdfs:label "bemonsteringsinspannings"@nl ,
+                           "impegno per campionamento"@it ,
+                           "sampling effort"@en .
+
+
+###  https://eurobis.org/ns/marine-observation/samplingProtocolInString
+:samplingProtocolInString rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf <http://rs.tdwg.org/dwc/terms/samplingProtocol> ;
+                          rdfs:domain :Sampling ;
+                          rdfs:range rdf:PlainLiteral ;
+                          rdfs:comment "A string through which to specify/describe the protocol used for sampling."@en ,
+                                       "Een tekenreeks om het protocol te specificeren/beschrijven dat wordt gebruikt voor bemonstering."@nl ,
+                                       "Una stringa attraverso cui specificare/descrivere il protocollo utilizzato per il campionamento."@it ;
+                          rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                          rdfs:label "bemonsteringsprotocol in tekenreeks"@nl ,
+                                     "protocollo di campionamento in stringa"@it ,
+                                     "sampling protocol in string"@en ;
+                          skos:usageNote "Het wordt altijd aanbevolen om het protocol uit te drukken met een URI, zodat dezelfde protocollen/methoden kunnen worden hergebruikt in andere bemonsteringen door het gebruik van een unieke URI. Echter, in alle gevallen waar dit niet mogelijk is, kan deze eigenschap gebruikt worden door het te associëren met de monsternamegebeurtenis."@nl ,
+                                         "It is always recommended to express the protocol using a URI, so that the same protocols/methods can be reused in other samplings through the use of a unique URI. However, in all those cases where this is not possible, one can use this property by associating it with the sampling event."@en ,
+                                         "Si raccomanda sempre di esprimere il protocollo utilizzando un URI, così che stessi protocolli/metodi possano essere riutilizzati in altri campionamenti attraverso l'uso di un URI univoco. Tuttavia, in tutti quei casi in cui ciò non è possibile, si può utilizzare questa proprietà associandola all'evento di campionamento."@it .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://marineregions.org/ns/ontology#Feature
+mr:Feature rdf:type owl:Class .
+
+
+###  http://rs.tdwg.org/dwc/terms/Event
+<http://rs.tdwg.org/dwc/terms/Event> rdf:type owl:Class .
+
+
+###  http://rs.tdwg.org/dwc/terms/MaterialSample
+<http://rs.tdwg.org/dwc/terms/MaterialSample> rdf:type owl:Class .
+
+
+###  http://rs.tdwg.org/dwc/terms/MeasurmentOrFact
+<http://rs.tdwg.org/dwc/terms/MeasurmentOrFact> rdf:type owl:Class .
+
+
+###  http://rs.tdwg.org/dwc/terms/Occurrence
+<http://rs.tdwg.org/dwc/terms/Occurrence> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Method
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Method> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/Platform
+<http://www.w3.org/ns/sosa/Platform> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/Result
+<http://www.w3.org/ns/sosa/Result> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/Sample
+<http://www.w3.org/ns/sosa/Sample> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/Sampling
+<http://www.w3.org/ns/sosa/Sampling> rdf:type owl:Class .
+
+
+###  http://www.w3id.org/cenpat-gilia/bigeonto/BioEvent
+<http://www.w3id.org/cenpat-gilia/bigeonto/BioEvent> rdf:type owl:Class .
+
+
+###  https://aphia.org/ns/attribute-trait/Environment
+tat:Environment rdf:type owl:Class .
+
+
+###  https://aphia.org/ns/taxa-name/TaxonName
+taxa-name:TaxonName rdf:type owl:Class .
+
+
+###  https://aphia.org/ns/top-level/TemporalEntity
+top-level:TemporalEntity rdf:type owl:Class .
+
+
+###  https://aphia.org/ns/top-level/Type
+top-level:Type rdf:type owl:Class .
+
+
+###  https://aphia.org/ns/top-level/Value
+top-level:Value rdf:type owl:Class .
+
+
+###  https://eurobis.org/ns/marine-observation/AbioticMeasurement
+:AbioticMeasurement rdf:type owl:Class ;
+                    rdfs:subClassOf :Measurement ;
+                    rdfs:comment "De klasse vertegenwoordigt een specifiek type meting gericht op het detecteren van abiotische factoren, d.w.z. niet-levende componenten van een omgeving die het leven van organismen beïnvloeden."@nl ,
+                                 "La classe rappresenta uno specifico tipo di misurazione volta a rilevare fattori abiotici, i.e., componenti non viventi di un ambiente che influenzano la vita degli organismi."@it ,
+                                 "The class represents a specific type of measurement aimed at detecting abiotic factors, i.e. non-living components of an environment that influence the life of organisms."@en ;
+                    rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                    rdfs:label "Abiotic Measurement"@en ,
+                               "Abiotische Meting"@nl ,
+                               "Misurazione Abiotica"@it .
+
+
+###  https://eurobis.org/ns/marine-observation/AbioticProperty
+:AbioticProperty rdf:type owl:Class ;
+                 rdfs:subClassOf :ObservableProperty ;
+                 rdfs:comment "De klasse van abiotische attributen of eigenschappen die waarneembaar zijn tijdens een observatie (marien). Dit zijn eigenschappen die geen verband houden met biologische aspecten van levende organismen. In plaats daarvan zijn het eigenschappen die betrekking hebben op de omgeving zoals water, lucht, wind, enz. die een invloed kunnen hebben op levende organismen."@nl ,
+                              "La classe degli attributi o proprietà abiotiche osservabili durante un'osservazione (marina). Si intendono attributi non riferibili agli aspetti biologici di organismi viventi. Sono invece proprietà relative all'ambiente circostante come l'acqua, l'aria, vento, ecc. che possono avere un impatto sugli organismi viventi."@it ,
+                              "The class of abiotic attributes or properties observable during an observation (marine). These are attributes that do not relate to biological aspects of living organisms. Instead, they are properties relating to the surrounding environment such as water, air, wind, etc. that can have an impact on living organisms."@en ;
+                 rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                 rdfs:label "Abiotic Property"@en ,
+                            "Abiotische eigenschappen"@nl ,
+                            "Proprietà Abiotica"@it .
+
+
+###  https://eurobis.org/ns/marine-observation/BioEvent
+:BioEvent rdf:type owl:Class ;
+          rdfs:subClassOf <http://rs.tdwg.org/dwc/terms/Event> ,
+                          <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> ,
+                          <http://www.w3id.org/cenpat-gilia/bigeonto/BioEvent> ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty top-level:hasType ;
+                            owl:someValuesFrom :EventType
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasOccurredInHabitat ;
+                            owl:someValuesFrom tat:Environment
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty top-level:hasTemporalEntity ;
+                            owl:allValuesFrom top-level:TemporalEntity
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :isSubEventOf ;
+                            owl:allValuesFrom :BioEvent
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :occursIn ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass mr:Feature
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty dct:date ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty dct:identier ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                          ] ;
+          rdfs:comment "Deze klasse vertegenwoordigt specifieke acties die plaatsvinden op een bepaalde plaats en tijd in de context van biodiversiteit. De klasse is semantisch afgestemd op de Event-klasse van Darwin Core en de Bio Event-klasse van de Bige-Onto ontologie die wordt gebruikt om gegevens in openbare bestanden zoals GBIF en OBIS te modelleren. Voorbeelden van gebeurtenissen zijn: een gebeurtenis bij het verzamelen van specimens, een gebeurtenis bij het verwerven van beelden, een viscampagne met sleepnetten, enz."@nl ,
+                       "Questa classe rappresenta azioni specifiche che avvengono in un certo luogo e in un certo tempo nel contesto della biodiversità. La classe è allineata semanticamente alla classe Evento di Darwin Core e alla classe Bio Evento dell'ontologia Bige-Onto usata per modellare i dati contenuti in registri pubblici come GBIF e OBIS. Esempi di eventi includono: un evento di raccolta di esemplari, un evento di acquisizione immagini, una campagna di pesca marina con rete a strascico, ecc."@it ,
+                       "This class represents specific actions that occur at a certain place and time in the context of biodiversity. The class is semantically aligned to the Event class of Darwin Core and the Bio Event class of the Bige-Onto ontology used to model data contained in public records such as GBIF and OBIS. Examples of events include: a specimen collection event, an image acquisition event, a marine trawl fishing campaign, etc."@en ;
+          rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+          rdfs:label "Biodiversiteitsevenement"@nl ,
+                     "Biodiversity Event"@en ,
+                     "Evento Biodiversità"@it ;
+          skos:usageNote "Om de tijdsdimensie van de gebeurtenis te specificeren, is het mogelijk om de generieke eigenschap date van dublin core te gebruiken, waarvan het bereik de superklasse is van de primitieve types rdfs:Literal (dit vertegenwoordigt de darwin core-eigenschap eventDate die vereist is in OBIS). Dit betekent dat het specifieke type van het bereik verder kan worden aangegeven volgens het type van de datum. Als het datum en tijd is, zal het xsd:dateTime zijn, als het alleen een datum is kan het xsd:date zijn, enz. Merk op dat in het geval dat een complexere timing moet worden uitgedrukt, het mogelijk is om de eigenschap top-level:hasTemporalEntity te gebruiken en dan de maand, het jaar, een generieke tijd in een string, enz. aan te geven. Met deze modellering kunnen gegevens die worden uitgedrukt met behulp van eigenschappen van darwin core zoals eventTime, jaar, maand, startDayOfYear, endDayOfYear in een robuustere semantische modellering worden weergegeven."@nl ,
+                         "Per specificare la dimensione temporale dell'evento, è possibile utilizzare la proprietà generica date di dublin core, il cui range è la superclasse dei tipi primitivi rdfs:Literal (rappresenta la proprietà eventDate di darwin core, richiesta in OBIS). Ciò significa che il tipo specifico può essere ulteriormente indicato in base al tipo di dato. Se si tratta di una data e ora, sarà xsd:dateTime, se è solo una data può essere xsd:date, ecc. Si noti che nel caso in cui sia necessario esprimere una tempistica più complessa, è possibile utilizzare la proprietà top-level:hasTemporalEntity e quindi indicare il mese, l'anno, un orario generico in stringa, ecc. Questa modellazione consente di rappresentare in modo più robusto i dati semantici espressi utilizzando proprietà di darwin core come eventTime, year, month, startDayOfYear, endDayOfYear."@it ,
+                         "To specify the temporal dimension of the event, it is possible to use the generic property date of dublin core whose range is the superclass of primitive types rdfs:Literal (this represents the darwin core property eventDate required in OBIS). This means that the specific type can be further indicated according to the type of date. If it is date and time it will be xsd:dateTime, if it is only a date it can be xsd:date, etc. Please note that in the case more complex timing is required to be express it is possible to use the property top-level:hasTemporalEntity and then indicate the month, the year, a generic time in string, etc. This modelling allows to represent in a more robust semantic modelling data expressed using properties of darwin core like eventTime, year, month, startDayOfYear, endDayOfYear."@en ;
+          prov:wasDerivedFrom <http://rs.tdwg.org/dwc/terms/Event> ;
+          prov:wasInfluencedBy <http://www.w3id.org/cenpat-gilia/bigeonto/BioEvent> .
+
+
+###  https://eurobis.org/ns/marine-observation/BioFeatureOfInterest
+:BioFeatureOfInterest rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
+                                      [ rdf:type owl:Class ;
+                                        owl:unionOf ( <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event>
+                                                      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity>
+                                                      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object>
+                                                    )
+                                      ] ;
+                      rdfs:comment "De klasse van dingen waarvan de eigenschappen worden gedetecteerd of waargenomen in de loop van een zeeobservatie om tot een eindwaarde te komen. Voorbeelden zijn een deel van de zee, een rivier, een verzameling organismen, de lucht, enz."@nl ,
+                                   "La classe di cose la cui proprietà viene rilevata o osservata nel corso di un'osservazione marina per arrivare a un valore finale. Esempi includono, un'area del mare, un fiume, un insieme di organismi, l'aria, ecc."@it ,
+                                   "The class of the things whose property is being detected or observed in the course of a Marine Observation to arrive at a final value. Examples include: an area of the sea, a river, a collection of organisms, the air, etc."@en ;
+                      rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                      rdfs:label "Bio Eigenschap Van Belang"@nl ,
+                                 "Bio Feature of Interest"@en ,
+                                 "Caratteristica di Interesse Bio"@it ;
+                      prov:wasDerivedFrom <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+
+
+###  https://eurobis.org/ns/marine-observation/BioticMeasurement
+:BioticMeasurement rdf:type owl:Class ;
+                   rdfs:subClassOf :Measurement ;
+                   rdfs:comment "De klasse vertegenwoordigt een specifiek type meting gericht op het detecteren van biotische factoren, d.w.z. factoren met betrekking tot levende organismen die het ecosysteem beïnvloeden."@nl ,
+                                "La classe rappresenta uno specifico tipo di misurazione volta a rilevare fattori biotici, i.e., fattori relativi a organismi viventi che influenzano l'ecosistema."@it ,
+                                "The class represents a specific type of measurement aimed at detecting biotic factors, i.e., factors relating to living organisms that influence the ecosystem."@en ;
+                   rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                   rdfs:label "Biotic Measurement"@en ,
+                              "Biotische Meting"@nl ,
+                              "Misurazione biotica"@it .
+
+
+###  https://eurobis.org/ns/marine-observation/BioticProperty
+:BioticProperty rdf:type owl:Class ;
+                rdfs:subClassOf :ObservableProperty ;
+                rdfs:comment "De klasse van biotische kenmerken of eigenschappen die waarneembaar zijn tijdens een observatie (marien). Dit zijn attributen die verwijzen naar levende organismen of iets dat ooit leefde."@nl ,
+                             "La classe degli attributi o proprietà biotiche osservabili durante un'osservazione (marina). Si intendono attributi riferibili a organismi viventi o qualcosa che un tempo era vivo."@it ,
+                             "The class of biotic attributes or properties observable during an observation (marine). These are attributes referring to living organisms or something that was once alive."@en ;
+                rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                rdfs:label "Biotic Property"@en ,
+                           "Biotische eigenschappen"@nl ,
+                           "Proprietà Biotica"@it .
+
+
+###  https://eurobis.org/ns/marine-observation/EventType
+:EventType rdf:type owl:Class ;
+           rdfs:subClassOf skos:Concept ,
+                           top-level:Type ;
+           rdfs:comment "De klasse van gebeurtenistypes in de context van biodiversiteit. Voorbeelden zijn: sitebezoek, project, biotische interactie, observatie, enz."@nl ,
+                        "La classe dei tipi di eventi nel contesto della biodiversità. Esempi includono: visita in un luogo, progetto, interazione biotica, osservazione, ecc."@it ,
+                        "The class of event types in the context of biodiversity. Examples include: site visit, project, biotic interaction, observation, etc."@en ;
+           rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+           rdfs:label "Event Type"@en ,
+                      "Soort evenement"@nl ,
+                      "Tipo Evento"@it .
+
+
+###  https://eurobis.org/ns/marine-observation/MarineObservation
+:MarineObservation rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                   :BioEvent ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :isInTheContextOf ;
+                                     owl:allValuesFrom :MarineObservation
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :madeBy ;
+                                     owl:allValuesFrom :MonitoringFacility
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :madeDuringEvent ;
+                                     owl:allValuesFrom :BioEvent
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasBioFeatureOfInterest ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass :BioFeatureOfInterest
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasObservableProperty ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass :ObservableProperty
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasObservationValue ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass :ObservationValue
+                                   ] ;
+                   rdfs:comment "De klasse vertegenwoordigt een waarneming uitgevoerd in de context van mariene biodiversiteit. In het algemeen wordt een waarneming gedefinieerd als een activiteit waarbij de waarde van een eigenschap van een kenmerk van belang volgens een bepaalde methode of procedure wordt berekend."@nl ,
+                                "La classe rappresenta un'osservazione effettuata nel contesto della biodiversità marina. In generale, per osservazione si intende un'attività volta a calcolare il valore di una proprietà di una caratteristica di interesse in base a un determinato metodo o procedura."@it ,
+                                "The class represents an observation carried out in the context of marine biodiversity. In general, an observation is defined as an activity to calculate the value of a property of a characteristic of interest according to a certain method or procedure."@en ;
+                   rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                   rdfs:label "Mariene Observatie"@nl ,
+                              "Marine Observation"@en ,
+                              "Osservazione Marina"@it .
+
+
+###  https://eurobis.org/ns/marine-observation/Measurement
+:Measurement rdf:type owl:Class ;
+             rdfs:subClassOf <http://rs.tdwg.org/dwc/terms/MeasurmentOrFact> ,
+                             :MarineObservation ;
+             rdfs:comment "De klasse vertegenwoordigt de actie om iets te meten. In de context van deze ontologie is meten een soort mariene observatie gerelateerd aan het meten van abiotische en biotische eigenschappen. Voorbeelden zijn: het gewicht van een organisme in gram, temperatuur van het oppervlaktewater in Celsius, enz.betrouwbaar."@nl ,
+                          "La classe rappresenta l'azione di misurare qualcosa. Nel contesto di questa ontologia, la misurazione è un tipo di osservazione marina legata alla misurazione di proprietà abiotiche e biotiche. Esempi includono: il peso di un organismo in grammi, la temperatura dell'acqua di superficie in gradi Celsius, ecc."@it ,
+                          "The class represents the action of measuring something. In the context of this ontology, measurement is a type of marine observation related to the measurement of abiotic and biotic properties. Examples include: the weight of an organism in grams, surface water temperature in Celsius, etc."@en ;
+             rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+             rdfs:label "Measurement"@en ,
+                        "Meting"@nl ,
+                        "Misurazione"@it ;
+             skos:usageNote "Aangezien een meting een specifiek type mariene observatie is, kunnen alle eigenschappen van darwin core zoals measurementValue, measurementUnit van een meting van een Fact-entiteit worden gemodelleerd via de ObservationValue van de MarineObservation. Het MeasurementType en MeasurementTypeID kunnen worden uitgedrukt via de entiteit ObservableProperty van de MarineObservation die ook kan worden gedefinieerd in de context van BODC-gecontroleerde vocabulaires."@nl ,
+                            "Poiché una misura è un tipo specifico di osservazione marina, tutte le proprietà di darwin core come measurementValue, measurementUnit di un'entità Measurement of Fact possono essere modellate attraverso ObservationValue di MarineObservation. Il MeasurementType e il MeasurementTypeID possono essere espressi attraverso l'entità ObservableProperty della MarineObservation, che può essere definita anche nel contesto dei vocabolari controllati BODC."@it ,
+                            "Since a Measurement is a specific type of Marine Observation, all those properties of darwin core like measurementValue, measurementUnit can be modelled through the ObservationValue of the MarineObservation, while the MeasurementType and MeasurementTypeID through the entity ObservableProperty that can be also define in the context of BODC controlled vocabularies."@en .
+
+
+###  https://eurobis.org/ns/marine-observation/MonitoringFacility
+:MonitoringFacility rdf:type owl:Class ;
+                    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object> ,
+                                    <http://www.w3.org/ns/sosa/Platform> ;
+                    rdfs:comment "De klasse van entiteiten die worden gebruikt als bewakingsfaciliteiten om (mariene) waarnemingen uit te voeren en zo gegevens te verzamelen over die. In de context van deze ontologie is een voorbeeld het schip/boot."@nl ,
+                                 "La classe delle entità adibite a strutture di monitoraggio per effettuare osservazioni (marine) e quindi acquisire dati su quelle. Nel contesto di questa ontologia un esempio è rappresentato dal vascello/imbarcazione."@it ,
+                                 "The class of entities used as monitoring facilities to carry out (marine) observations and thus acquire data on those. In the context of this ontology, an example is the vessel/boat."@en ;
+                    rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                    rdfs:label "Bewakingsfaciliteit"@nl ,
+                               "Monitoring Facility"@en ,
+                               "Struttura di Monitoraggio"@it ;
+                    prov:wasDerivedFrom <http://www.w3.org/ns/sosa/Platform> ;
+                    prov:wasInfluencedBy <http://inspire.ec.europa.eu/codelist/PlatformTypeValue> ,
+                                         <http://inspire.ec.europa.eu/theme/ef> .
+
+
+###  https://eurobis.org/ns/marine-observation/ObservableProperty
+:ObservableProperty rdf:type owl:Class ;
+                    rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality> ,
+                                    skos:Concept ,
+                                    <http://www.w3.org/ns/sosa/ObservableProperty> ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :isObservablePropertyOf ;
+                                      owl:allValuesFrom :MarineObservation
+                                    ] ;
+                    rdfs:comment "De klasse van attributen of eigenschappen die kunnen worden waargenomen/detecteerd tijdens een observatie (marien). Dit kan op zijn beurt, in de context van deze ontologie, worden gespecialiseerd in biotische en abiotische eigenschappen."@nl ,
+                                 "La classe degli attributi o proprietà osservabili/rilevabili durante un'osservazione (marina). Questa può essere a sua volta specializzata, nel contesto di questa ontologia, in proprietà biotiche e abiotiche."@it ,
+                                 "The class of attributes or properties that can be observed/detected during an observation (marine). This in turn can be specialised, in the context of this ontology, into biotic and abiotic properties."@en ;
+                    rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                    rdfs:label "Observable Property"@en ,
+                               "Proprietà Osservabile/Rilevabile"@it ,
+                               "Waarneembaar eigendom"@nl ;
+                    skos:usageNote "Het wordt aanbevolen om URI's van de gecontroleerde vocabulaires gedefinieerd in BODC te gebruiken om de waarneembare eigenschappen uit te drukken. In alle gevallen waarin geen URI's kunnen worden gevonden, is het mogelijk om een object van dit type ObservableProperty te maken. Het wordt altijd aanbevolen om URI's te gebruiken om de waarneembare eigenschappen uit te drukken, in plaats van eenvoudige strings."@nl ,
+                                   "It is recommended to use URIs of the controlled vocabularies defined in BODC to express the observable properties. In all those cases in which URIs cannot be found, it is possible to create an object of this type ObservableProperty. It is always recommended to use URIs to express the observable properties, rather than simple strings."@en ,
+                                   "Si raccomanda di utilizzare gli URI dei vocabolari controllati definiti nel contesto di BODC per esprimere le proprietà osservabili. In tutti i casi in cui non è possibile trovare URI, si può creare un oggetto di questo tipo ObservableProperty. Si raccomanda sempre di utilizzare URI per esprimere le proprietà osservabile, piuttosto che semplici stringhe."@it ;
+                    prov:wasDerivedFrom <http://www.w3.org/ns/sosa/ObservableProperty> .
+
+
+###  https://eurobis.org/ns/marine-observation/ObservationValue
+:ObservationValue rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/ns/sosa/Result> ,
+                                  top-level:Value ,
+                                  [ rdf:type owl:Class ;
+                                    owl:unionOf ( <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object>
+                                                  <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region>
+                                                )
+                                  ] ;
+                  rdfs:comment "De klasse voor de weergave van het resultaat van de waarneming (marien). Dit kan een kwantitatieve waarde zijn die wordt uitgedrukt in een meeteenheid of een kwalitatieve waarde die wordt uitgedrukt als een normale tekststring."@nl ,
+                               "La classe che consente di rappresentare il risultato dell'osservazione (marina). Questo può essere un valore quantitativo espresso in un'unità di misura o qualitativo espresso come una normale stringa di testo."@it ,
+                               "The class for representing the result of the observation (marine). This may be a quantitative value expressed in a unit of measurement or a qualitative value expressed as a normal text string."@en ;
+                  rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                  rdfs:label "Observation Value"@en ,
+                             "Valore Osservazione"@it ,
+                             "Waarnemingswaarde"@nl ;
+                  prov:wasDerivedFrom <http://www.w3.org/ns/sosa/Result> .
+
+
+###  https://eurobis.org/ns/marine-observation/OccurrenceBasis
+:OccurrenceBasis rdf:type owl:Class ;
+                 rdfs:subClassOf skos:Concept ;
+                 rdfs:comment "De klasse modelleert de basis of de aard of het type detectie van het bestaan van een bepaald organisme. De individuen kunnen menselijke observatie zijn, observatie met software, door bemonstering, gebaseerd op een bewaard exemplaar/fossiel, enz."@nl ,
+                              "La classe modella la base o la natura o il tipo di rilevamento dell'esistenza di un certo organismo. I suoi individui possono essere l'osservazione umana, l'osservazione effettuata con un software, attraverso il campionamento, sulla base di un esemplare/fossile conservato, ecc."@it ,
+                              "The class models the basis or nature or type of detection of the existence of a certain organism. Its individuals can be human observation, observation made with software, through sampling, based on a preserved specimen/fossil, etc."@en ;
+                 rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                 rdfs:label "Natura Occorrenza"@it ,
+                            "Occurrence Basis"@en ,
+                            "Voorval Basis"@nl .
+
+
+###  https://eurobis.org/ns/marine-observation/OccurrenceStatus
+:OccurrenceStatus rdf:type owl:Class ;
+                  rdfs:comment "De klasse modelleert de staat van voorkomen van organismen. De toestand kan twee waarden aannemen: aanwezig of afwezig."@nl ,
+                               "La classe modella lo stato dell'occorrenza di organismi. Lo stato può assumere due valori: presente o assente."@it ,
+                               "The class models the state of the occurrence of organisms. The state can take two values: present or absent."@en ;
+                  rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                  rdfs:label "Occurrence Status"@en ,
+                             "Stato Occorrenza"@it ,
+                             "Voorvalstatus"@nl .
+
+
+###  https://eurobis.org/ns/marine-observation/OrganismOccurrence
+:OrganismOccurrence rdf:type owl:Class ;
+                    rdfs:subClassOf <http://rs.tdwg.org/dwc/terms/Occurrence> ,
+                                    :MarineObservation ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasOccurrenceBasis ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass :OccurrenceBasis
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasOccurrenceStatus ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass :OccurrenceStatus
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasOrganismQuantity ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass top-level:Value
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :isOfOrganismNamedAs ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass taxa-name:TaxonName
+                                    ] ;
+                    rdfs:comment "De klasse vertegenwoordigt een specifiek type mariene observatie gericht op het detecteren van de aanwezigheid van een bepaald organisme op een bepaalde plaats en tijd."@nl ,
+                                 "La classe rappresenta uno specifico tipo di osservazione marina volta a rilevare la presenza di un certo organismo in un certo luogo e in un certo tempo."@it ,
+                                 "The class represents a specific type of marine observation aimed at detecting the presence of a certain organism at a certain place and time."@en ;
+                    rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+                    rdfs:label "Esistenza Organismo"@it ,
+                               "Organism Occurrence"@en ,
+                               "Organisme Voorkomenn"@nl .
+
+
+###  https://eurobis.org/ns/marine-observation/Sample
+:Sample rdf:type owl:Class ;
+        rdfs:subClassOf <http://rs.tdwg.org/dwc/terms/MaterialSample> ,
+                        <http://www.w3.org/ns/sosa/Sample> ,
+                        :BioFeatureOfInterest ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasSize ;
+                          owl:someValuesFrom top-level:Value
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :isSubSampleOf ;
+                          owl:allValuesFrom :Sample
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :maximumDepthInMeters ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:integer
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :minimumDepthInMeters ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:integer
+                        ] ;
+        rdfs:comment "De klasse vertegenwoordigt het monster, d.w.z. een materiële entiteit die een geheel of een deel van een belangrijk element van de waarneming (marien) vertegenwoordigt. Monsters zijn meestal deelverzamelingen of uittreksels van het element van belang van een waarneming en worden gebruikt in situaties waar directe waarnemingen van het uiteindelijke element van belang niet mogelijk zijn, ofwel omdat het volledige element niet kan worden waargenomen of omdat het handiger is om een proxy te gebruiken. Bijvoorbeeld een heel organisme, een watermonster, een marien microbieel monster, enz."@nl ,
+                     "La classe rappresenta il campione, cioè un'entità materiale che rappresenta in tutto o in parte un'elemento di interesse dell'osservazione (marina). I campioni sono in genere sottoinsiemi o estratti dell'elemento di interesse di un'osservazione e vengono utilizzati in situazioni in cui non è possibile effettuare osservazioni dirette sull'elemento di interesse finale, sia perché non è possibile osservare l'intero elemento, sia perché è più conveniente utilizzare un proxy. Ad esempio, un intero organismo, un campione dell'acqua, un campione microbico marino, ecc."@it ,
+                     "The class represents the sample, i.e. a material entity representing all or part of an element of interest of the observation (marine). Samples are usually subsets or extracts of the element of interest of an observation and are used in situations where direct observations of the final element of interest cannot be made, either because the entire element cannot be observed or because it is more convenient to use a proxy. For example, a whole organism, a water sample, a marine microbial sample, etc."@en ;
+        rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+        rdfs:label "Campione"@it ,
+                   "Sample"@en ,
+                   "Voorbeeld"@nl ;
+        prov:wasDerivedFrom <http://rs.tdwg.org/dwc/terms/MaterialSample> ,
+                            <http://www.w3.org/ns/sosa/Sample> .
+
+
+###  https://eurobis.org/ns/marine-observation/Sampling
+:Sampling rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/ns/sosa/Sampling> ,
+                          :BioEvent ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :produces ;
+                            owl:someValuesFrom :Sample
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :usesMethod ;
+                            owl:someValuesFrom <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Method>
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :samplingEffort ;
+                            owl:someValuesFrom rdf:PlainLiteral
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :samplingProtocolInString ;
+                            owl:allValuesFrom rdf:PlainLiteral
+                          ] ;
+          rdfs:comment "De klasse vertegenwoordigt de handeling van het creëren van een steekproef voor observatie (marien), op basis van een specifieke gebruikte methode."@nl ,
+                       "La classe rappresenta l'atto di creare un campione per effettuare un'osservazione (marina), sulla base di uno specifico metodo utilizzato."@it ,
+                       "The class represents the act of creating a sample to make an observation (marine), based on a specific method used."@en ;
+          rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+          rdfs:label "Bemonstering"@nl ,
+                     "Campionamento"@it ,
+                     "Sampling"@en ;
+          prov:wasDerivedFrom <http://www.w3.org/ns/sosa/Sampling> ;
+          prov:wasInfluencedBy <http://rs.tdwg.org/dwc/terms/Event> .
+
+
+###  https://eurobis.org/ns/marine-observation/Vessel
+:Vessel rdf:type owl:Class ;
+        rdfs:subClassOf :MonitoringFacility ;
+        rdfs:comment "De klasse vertegenwoordigt een specifiek type bewakingsfaciliteit, d.w.z. een schip of groot schip, waar mariene waarnemingen worden uitgevoerd."@nl ,
+                     "La classe rappresenta una specifica tipologia di struttura di monitoraggio ossia una nave o una grande imbarcazione, dove si effettuano osservazioni marine."@it ,
+                     "The class represents a specific type of monitoring facility, i.e. a ship or large vessel, where marine observations are carried out."@en ;
+        rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+        rdfs:label "Schip"@nl ,
+                   "Vascello"@it ,
+                   "Vessel"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://eurobis.org/ns/marine-observation/Absent
+:Absent rdf:type owl:NamedIndividual ,
+                 :OccurrenceStatus ;
+        rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+        rdfs:label "Absent"@en ,
+                   "Afwezig"@nl ,
+                   "Assente"@it .
+
+
+###  https://eurobis.org/ns/marine-observation/Present
+:Present rdf:type owl:NamedIndividual ,
+                  :OccurrenceStatus ;
+         rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+         rdfs:label "Aanwezig"@nl ,
+                    "Present"@en ,
+                    "Presente"@it .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
