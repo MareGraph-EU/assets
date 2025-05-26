@@ -841,16 +841,16 @@
     
 
 
-    <!-- https://eurobis.org/ns/marine-observation/AbioticAssertation -->
+    <!-- https://eurobis.org/ns/marine-observation/AbioticAssertion -->
 
-    <owl:Class rdf:about="https://eurobis.org/ns/marine-observation/AbioticAssertation">
-        <rdfs:subClassOf rdf:resource="https://eurobis.org/ns/marine-observation/Assertation"/>
-        <owl:disjointWith rdf:resource="https://eurobis.org/ns/marine-observation/BioticAssertation"/>
+    <owl:Class rdf:about="https://eurobis.org/ns/marine-observation/AbioticAssertion">
+        <rdfs:subClassOf rdf:resource="https://eurobis.org/ns/marine-observation/Assertion"/>
+        <owl:disjointWith rdf:resource="https://eurobis.org/ns/marine-observation/BioticAssertion"/>
         <rdfs:comment xml:lang="nl">De klasse vertegenwoordigt een specifiek type bewering gericht op het detecteren van abiotische factoren, d.w.z. niet-levende componenten van een omgeving die het leven van organismen beïnvloeden.</rdfs:comment>
-        <rdfs:comment xml:lang="it">La classe rappresenta uno specifico tipo di misurazione volta a rilevare fattori abiotici, i.e., componenti non viventi di un ambiente che influenzano la vita degli organismi.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The class represents a specific type of assertation aimed at detecting abiotic factors, i.e. non-living components of an environment that influence the life of organisms.</rdfs:comment>
+        <rdfs:comment xml:lang="it">La classe rappresenta uno specifico tipo di asserzione volta a rilevare fattori abiotici, i.e., componenti non viventi di un ambiente che influenzano la vita degli organismi.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents a specific type of assertion aimed at detecting abiotic factors, i.e. non-living components of an environment that influence the life of organisms.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://eurobis.org/ns/marine-observation"/>
-        <rdfs:label xml:lang="en">Abiotic Assertation</rdfs:label>
+        <rdfs:label xml:lang="en">Abiotic Assertion</rdfs:label>
         <rdfs:label xml:lang="nl">Abiotische Bewering</rdfs:label>
         <rdfs:label xml:lang="it">Asserzione Abiotica</rdfs:label>
     </owl:Class>
@@ -873,21 +873,21 @@
     
 
 
-    <!-- https://eurobis.org/ns/marine-observation/Assertation -->
+    <!-- https://eurobis.org/ns/marine-observation/Assertion -->
 
-    <owl:Class rdf:about="https://eurobis.org/ns/marine-observation/Assertation">
+    <owl:Class rdf:about="https://eurobis.org/ns/marine-observation/Assertion">
         <rdfs:subClassOf rdf:resource="http://rs.tdwg.org/dwc/terms/MeasurmentOrFact"/>
         <rdfs:subClassOf rdf:resource="https://eurobis.org/ns/marine-observation/MarineObservation"/>
         <rdfs:comment xml:lang="nl">De klasse vertegenwoordigt de actie om iets te bevestigen. In de context van deze ontologie is assertatie een soort mariene observatie gerelateerd aan het rapporteren van abiotische en biotische eigenschappen. Voorbeelden zijn: het gewicht van een organisme in gram, de temperatuur van het oppervlaktewater in Celsius, enz.</rdfs:comment>
         <rdfs:comment xml:lang="it">La classe rappresenta l&apos;azione di asserire qualcosa. Nel contesto di questa ontologia, l&apos;asserzione è un tipo di osservazione marina relativa alla segnalazione di proprietà abiotiche e biotiche. Alcuni esempi sono: il peso di un organismo in grammi, la temperatura dell&apos;acqua superficiale in gradi Celsius, ecc.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The class represents the action of asserting something. In the context of this ontology, assertation is a type of marine observation related to the reporting of abiotic and biotic properties. Examples include: the weight of an organism in grams, surface water temperature in Celsius, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the action of asserting something. In the context of this ontology, assertion is a type of marine observation related to the reporting of abiotic and biotic properties. Examples include: the weight of an organism in grams, surface water temperature in Celsius, etc.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://eurobis.org/ns/marine-observation"/>
-        <rdfs:label xml:lang="en">Assertation</rdfs:label>
+        <rdfs:label xml:lang="en">Assertion</rdfs:label>
         <rdfs:label xml:lang="it">Asserzione</rdfs:label>
-        <rdfs:label xml:lang="nl">Proefschrift</rdfs:label>
-        <skos:usageNote xml:lang="nl">Aangezien een proefschrift een specifiek type mariene observatie is, kunnen alle eigenschappen van darwin core zoals measurementValue, measurementUnit van een meting van een Fact-entiteit worden gemodelleerd via de ObservationValue van de MarineObservation. Het MeasurementType en MeasurementTypeID kunnen worden uitgedrukt via de entiteit ObservableProperty van de MarineObservation die ook kan worden gedefinieerd in de context van BODC-gecontroleerde vocabulaires.</skos:usageNote>
+        <rdfs:label xml:lang="nl">Bevestiging</rdfs:label>
+        <skos:usageNote xml:lang="nl">Aangezien een bevestiging een specifiek type mariene observatie is, kunnen alle eigenschappen van darwin core zoals measurementValue, measurementUnit van een meting van een Fact-entiteit worden gemodelleerd via de ObservationValue van de MarineObservation. Het MeasurementType en MeasurementTypeID kunnen worden uitgedrukt via de entiteit ObservableProperty van de MarineObservation die ook kan worden gedefinieerd in de context van BODC-gecontroleerde vocabulaires.</skos:usageNote>
         <skos:usageNote xml:lang="it">Poiché una asserzione è un tipo specifico di osservazione marina, tutte le proprietà di darwin core come measurementValue, measurementUnit di un&apos;entità Measurement of Fact possono essere modellate attraverso ObservationValue di MarineObservation. Il MeasurementType e il MeasurementTypeID possono essere espressi attraverso l&apos;entità ObservableProperty della MarineObservation, che può essere definita anche nel contesto dei vocabolari controllati BODC.</skos:usageNote>
-        <skos:usageNote xml:lang="en">Since an Assertation is a specific type of Marine Observation, all those properties of darwin core like measurementValue, measurementUnit can be modelled through the ObservationValue of the MarineObservation, while the MeasurementType and MeasurementTypeID through the entity ObservableProperty that can be also defined in the context of BODC controlled vocabularies.</skos:usageNote>
+        <skos:usageNote xml:lang="en">Since an assertion is a specific type of Marine Observation, all those properties of darwin core like measurementValue, measurementUnit can be modelled through the ObservationValue of the MarineObservation, while the MeasurementType and MeasurementTypeID through the entity ObservableProperty that can be also defined in the context of BODC controlled vocabularies.</skos:usageNote>
     </owl:Class>
     
 
@@ -982,17 +982,17 @@
     
 
 
-    <!-- https://eurobis.org/ns/marine-observation/BioticAssertation -->
+    <!-- https://eurobis.org/ns/marine-observation/BioticAssertion -->
 
-    <owl:Class rdf:about="https://eurobis.org/ns/marine-observation/BioticAssertation">
-        <rdfs:subClassOf rdf:resource="https://eurobis.org/ns/marine-observation/Assertation"/>
-        <rdfs:comment xml:lang="nl">De klasse vertegenwoordigt een specifiek type meting gericht op het detecteren van biotische factoren, d.w.z. factoren met betrekking tot levende organismen die het ecosysteem beïnvloeden.</rdfs:comment>
-        <rdfs:comment xml:lang="it">La classe rappresenta uno specifico tipo di misurazione volta a rilevare fattori biotici, i.e., fattori relativi a organismi viventi che influenzano l&apos;ecosistema.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The class represents a specific type of assertation aimed at detecting biotic factors, i.e., factors relating to living organisms that influence the ecosystem.</rdfs:comment>
+    <owl:Class rdf:about="https://eurobis.org/ns/marine-observation/BioticAssertion">
+        <rdfs:subClassOf rdf:resource="https://eurobis.org/ns/marine-observation/Assertion"/>
+        <rdfs:comment xml:lang="nl">De klasse vertegenwoordigt een specifiek type bewering gericht op het detecteren van biotische factoren, d.w.z. factoren met betrekking tot levende organismen die het ecosysteem beïnvloeden.</rdfs:comment>
+        <rdfs:comment xml:lang="it">La classe rappresenta uno specifico tipo di asserzione volta a rilevare fattori biotici, i.e., fattori relativi a organismi viventi che influenzano l&apos;ecosistema.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents a specific type of assertion aimed at detecting biotic factors, i.e., factors relating to living organisms that influence the ecosystem.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://eurobis.org/ns/marine-observation"/>
-        <rdfs:label xml:lang="en">Biotic Assertation</rdfs:label>
-        <rdfs:label xml:lang="nl">Biotische Meting</rdfs:label>
-        <rdfs:label xml:lang="it">Misurazione biotica</rdfs:label>
+        <rdfs:label xml:lang="it">Asserzione biotica</rdfs:label>
+        <rdfs:label xml:lang="en">Biotic Assertion</rdfs:label>
+        <rdfs:label xml:lang="nl">Biotische Bewering</rdfs:label>
     </owl:Class>
     
 
