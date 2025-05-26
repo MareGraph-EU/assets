@@ -28,7 +28,7 @@
                                                           <http://publications.europa.eu/resource/authority/language/ITA> ,
                                                           <http://publications.europa.eu/resource/authority/language/NLD> ;
                                              dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
-                                             dct:modified "2025-05-25" ;
+                                             dct:modified "2025-05-26" ;
                                              dct:title "EUROBIS - Marine observations ontology"@en ,
                                                        "EUROBIS - Ontologia delle osservazioni marine"@it ,
                                                        "EUROBIS - Ontologie mariene waarnemingen"@nl ;
@@ -622,21 +622,23 @@ top-level:Type rdf:type owl:Class .
 top-level:Value rdf:type owl:Class .
 
 
-###  https://eurobis.org/ns/marine-observation/AbioticMeasurement
-:AbioticMeasurement rdf:type owl:Class ;
-                    rdfs:subClassOf :Measurement ;
-                    rdfs:comment "De klasse vertegenwoordigt een specifiek type meting gericht op het detecteren van abiotische factoren, d.w.z. niet-levende componenten van een omgeving die het leven van organismen beïnvloeden."@nl ,
+###  https://eurobis.org/ns/marine-observation/AbioticAssertation
+:AbioticAssertation rdf:type owl:Class ;
+                    rdfs:subClassOf :Assertation ;
+                    owl:disjointWith :BioticAssertation ;
+                    rdfs:comment "De klasse vertegenwoordigt een specifiek type bewering gericht op het detecteren van abiotische factoren, d.w.z. niet-levende componenten van een omgeving die het leven van organismen beïnvloeden."@nl ,
                                  "La classe rappresenta uno specifico tipo di misurazione volta a rilevare fattori abiotici, i.e., componenti non viventi di un ambiente che influenzano la vita degli organismi."@it ,
-                                 "The class represents a specific type of measurement aimed at detecting abiotic factors, i.e. non-living components of an environment that influence the life of organisms."@en ;
+                                 "The class represents a specific type of assertation aimed at detecting abiotic factors, i.e. non-living components of an environment that influence the life of organisms."@en ;
                     rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
-                    rdfs:label "Abiotic Measurement"@en ,
-                               "Abiotische Meting"@nl ,
-                               "Misurazione Abiotica"@it .
+                    rdfs:label "Abiotic Assertation"@en ,
+                               "Abiotische Bewering"@nl ,
+                               "Asserzione Abiotica"@it .
 
 
 ###  https://eurobis.org/ns/marine-observation/AbioticProperty
 :AbioticProperty rdf:type owl:Class ;
                  rdfs:subClassOf :ObservableProperty ;
+                 owl:disjointWith :BioticProperty ;
                  rdfs:comment "De klasse van abiotische attributen of eigenschappen die waarneembaar zijn tijdens een observatie (marien). Dit zijn eigenschappen die geen verband houden met biologische aspecten van levende organismen. In plaats daarvan zijn het eigenschappen die betrekking hebben op de omgeving zoals water, lucht, wind, enz. die een invloed kunnen hebben op levende organismen."@nl ,
                               "La classe degli attributi o proprietà abiotiche osservabili durante un'osservazione (marina). Si intendono attributi non riferibili agli aspetti biologici di organismi viventi. Sono invece proprietà relative all'ambiente circostante come l'acqua, l'aria, vento, ecc. che possono avere un impatto sugli organismi viventi."@it ,
                               "The class of abiotic attributes or properties observable during an observation (marine). These are attributes that do not relate to biological aspects of living organisms. Instead, they are properties relating to the surrounding environment such as water, air, wind, etc. that can have an impact on living organisms."@en ;
@@ -644,6 +646,22 @@ top-level:Value rdf:type owl:Class .
                  rdfs:label "Abiotic Property"@en ,
                             "Abiotische eigenschappen"@nl ,
                             "Proprietà Abiotica"@it .
+
+
+###  https://eurobis.org/ns/marine-observation/Assertation
+:Assertation rdf:type owl:Class ;
+             rdfs:subClassOf <http://rs.tdwg.org/dwc/terms/MeasurmentOrFact> ,
+                             :MarineObservation ;
+             rdfs:comment "De klasse vertegenwoordigt de actie om iets te bevestigen. In de context van deze ontologie is assertatie een soort mariene observatie gerelateerd aan het rapporteren van abiotische en biotische eigenschappen. Voorbeelden zijn: het gewicht van een organisme in gram, de temperatuur van het oppervlaktewater in Celsius, enz."@nl ,
+                          "La classe rappresenta l'azione di asserire qualcosa. Nel contesto di questa ontologia, l'asserzione è un tipo di osservazione marina relativa alla segnalazione di proprietà abiotiche e biotiche. Alcuni esempi sono: il peso di un organismo in grammi, la temperatura dell'acqua superficiale in gradi Celsius, ecc."@it ,
+                          "The class represents the action of asserting something. In the context of this ontology, assertation is a type of marine observation related to the reporting of abiotic and biotic properties. Examples include: the weight of an organism in grams, surface water temperature in Celsius, etc."@en ;
+             rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
+             rdfs:label "Assertation"@en ,
+                        "Asserzione"@it ,
+                        "Proefschrift"@nl ;
+             skos:usageNote "Aangezien een proefschrift een specifiek type mariene observatie is, kunnen alle eigenschappen van darwin core zoals measurementValue, measurementUnit van een meting van een Fact-entiteit worden gemodelleerd via de ObservationValue van de MarineObservation. Het MeasurementType en MeasurementTypeID kunnen worden uitgedrukt via de entiteit ObservableProperty van de MarineObservation die ook kan worden gedefinieerd in de context van BODC-gecontroleerde vocabulaires."@nl ,
+                            "Poiché una asserzione è un tipo specifico di osservazione marina, tutte le proprietà di darwin core come measurementValue, measurementUnit di un'entità Measurement of Fact possono essere modellate attraverso ObservationValue di MarineObservation. Il MeasurementType e il MeasurementTypeID possono essere espressi attraverso l'entità ObservableProperty della MarineObservation, che può essere definita anche nel contesto dei vocabolari controllati BODC."@it ,
+                            "Since an Assertation is a specific type of Marine Observation, all those properties of darwin core like measurementValue, measurementUnit can be modelled through the ObservationValue of the MarineObservation, while the MeasurementType and MeasurementTypeID through the entity ObservableProperty that can be also defined in the context of BODC controlled vocabularies."@en .
 
 
 ###  https://eurobis.org/ns/marine-observation/BioEvent
@@ -713,14 +731,14 @@ top-level:Value rdf:type owl:Class .
                       prov:wasDerivedFrom <http://www.w3.org/ns/sosa/FeatureOfInterest> .
 
 
-###  https://eurobis.org/ns/marine-observation/BioticMeasurement
-:BioticMeasurement rdf:type owl:Class ;
-                   rdfs:subClassOf :Measurement ;
+###  https://eurobis.org/ns/marine-observation/BioticAssertation
+:BioticAssertation rdf:type owl:Class ;
+                   rdfs:subClassOf :Assertation ;
                    rdfs:comment "De klasse vertegenwoordigt een specifiek type meting gericht op het detecteren van biotische factoren, d.w.z. factoren met betrekking tot levende organismen die het ecosysteem beïnvloeden."@nl ,
                                 "La classe rappresenta uno specifico tipo di misurazione volta a rilevare fattori biotici, i.e., fattori relativi a organismi viventi che influenzano l'ecosistema."@it ,
-                                "The class represents a specific type of measurement aimed at detecting biotic factors, i.e., factors relating to living organisms that influence the ecosystem."@en ;
+                                "The class represents a specific type of assertation aimed at detecting biotic factors, i.e., factors relating to living organisms that influence the ecosystem."@en ;
                    rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
-                   rdfs:label "Biotic Measurement"@en ,
+                   rdfs:label "Biotic Assertation"@en ,
                               "Biotische Meting"@nl ,
                               "Misurazione biotica"@it .
 
@@ -788,22 +806,6 @@ top-level:Value rdf:type owl:Class .
                    rdfs:label "Mariene Observatie"@nl ,
                               "Marine Observation"@en ,
                               "Osservazione Marina"@it .
-
-
-###  https://eurobis.org/ns/marine-observation/Measurement
-:Measurement rdf:type owl:Class ;
-             rdfs:subClassOf <http://rs.tdwg.org/dwc/terms/MeasurmentOrFact> ,
-                             :MarineObservation ;
-             rdfs:comment "De klasse vertegenwoordigt de actie om iets te meten. In de context van deze ontologie is meten een soort mariene observatie gerelateerd aan het meten van abiotische en biotische eigenschappen. Voorbeelden zijn: het gewicht van een organisme in gram, temperatuur van het oppervlaktewater in Celsius, enz.betrouwbaar."@nl ,
-                          "La classe rappresenta l'azione di misurare qualcosa. Nel contesto di questa ontologia, la misurazione è un tipo di osservazione marina legata alla misurazione di proprietà abiotiche e biotiche. Esempi includono: il peso di un organismo in grammi, la temperatura dell'acqua di superficie in gradi Celsius, ecc."@it ,
-                          "The class represents the action of measuring something. In the context of this ontology, measurement is a type of marine observation related to the measurement of abiotic and biotic properties. Examples include: the weight of an organism in grams, surface water temperature in Celsius, etc."@en ;
-             rdfs:isDefinedBy <https://eurobis.org/ns/marine-observation> ;
-             rdfs:label "Measurement"@en ,
-                        "Meting"@nl ,
-                        "Misurazione"@it ;
-             skos:usageNote "Aangezien een meting een specifiek type mariene observatie is, kunnen alle eigenschappen van darwin core zoals measurementValue, measurementUnit van een meting van een Fact-entiteit worden gemodelleerd via de ObservationValue van de MarineObservation. Het MeasurementType en MeasurementTypeID kunnen worden uitgedrukt via de entiteit ObservableProperty van de MarineObservation die ook kan worden gedefinieerd in de context van BODC-gecontroleerde vocabulaires."@nl ,
-                            "Poiché una misura è un tipo specifico di osservazione marina, tutte le proprietà di darwin core come measurementValue, measurementUnit di un'entità Measurement of Fact possono essere modellate attraverso ObservationValue di MarineObservation. Il MeasurementType e il MeasurementTypeID possono essere espressi attraverso l'entità ObservableProperty della MarineObservation, che può essere definita anche nel contesto dei vocabolari controllati BODC."@it ,
-                            "Since a Measurement is a specific type of Marine Observation, all those properties of darwin core like measurementValue, measurementUnit can be modelled through the ObservationValue of the MarineObservation, while the MeasurementType and MeasurementTypeID through the entity ObservableProperty that can be also define in the context of BODC controlled vocabularies."@en .
 
 
 ###  https://eurobis.org/ns/marine-observation/MonitoringFacility
