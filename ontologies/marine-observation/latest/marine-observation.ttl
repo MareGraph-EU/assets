@@ -163,7 +163,7 @@ top-level:hasType rdf:type owl:ObjectProperty .
 
 ###  https://eurobis.org/ns/marine-observation/hasObservableProperty
 :hasObservableProperty rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                       rdfs:subPropertyOf <http://www.w3.org/ns/sosa/hasObservableProperty> ;
                        owl:inverseOf :isObservablePropertyOf ;
                        rdfs:domain :MarineObservation ;
                        rdfs:range :ObservableProperty ;
