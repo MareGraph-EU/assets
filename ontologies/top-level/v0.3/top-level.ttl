@@ -200,7 +200,15 @@ foaf:Organization rdf:type owl:Class .
 
 ###  https://aphia.org/ns/top-level/Context
 :Context rdf:type owl:Class ;
-         rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description> .
+         rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description> ;
+         rdfs:label "Contesto"@it ,
+                    "Context"@en ,
+                    "Context"@nl ;
+         rdfs:comment "A generic concept to represent a context"@en ,
+                      "Un concetto generico per rappresentare un contesto"@it ,
+                      "Een generiek concept om een context weer te geven"@nl ;
+           rdfs:isDefinedBy <https://aphia.org/ns/top-level> .
+
 
 
 ###  https://aphia.org/ns/top-level/Identifier
@@ -299,7 +307,12 @@ foaf:Organization rdf:type owl:Class .
 :TemporalEntity rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ;
                 rdfs:label "Entità Temporale"@it ,
-                           "Temporal Entity"@en .
+                           "Temporal Entity"@en ,
+                           "Tijdelijke Entiteit"@nl ;
+                rdfs:comment "A generic concept representing a temporal dimension"@en ,
+                             "Un concetto generico per rappresentare un'entità temporale"@it ,
+                             "Een generiek concept dat een tijdsdimensie vertegenwoordigt"@nl ;
+                  rdfs:isDefinedBy <https://aphia.org/ns/top-level> .
 
 
 ###  https://aphia.org/ns/top-level/Type
