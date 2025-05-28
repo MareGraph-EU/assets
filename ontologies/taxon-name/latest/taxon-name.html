@@ -417,18 +417,18 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept">dul:Concept</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept">dul:Concept</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#hasparenttaxon">has parent taxon</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">max</span> 1 <a href="#Taxon">Taxon</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#haschildtaxon">has child taxon</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Taxon">Taxon</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#isdenotedby">is denoted by</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://aphia.org/ns/top-level/Name">https://aphia.org/ns/top-level/Name</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/dc/terms/source">dct:source</a> <span class="cardinality">only</span> <a href="https://aphia.org/ns/top-level/Source">https://aphia.org/ns/top-level/Source</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#haschildtaxon">has child taxon</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Taxon">Taxon</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#isdenotedby">is denoted by</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://aphia.org/ns/top-level/Name">https://aphia.org/ns/top-level/Name</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasparenttaxon">has parent taxon</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">max</span> 1 <a href="#Taxon">Taxon</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -436,16 +436,16 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 <td>
                     <a href="#hasacceptedname">has accepted name</a><sup class="sup-fp" title="functional property">fp</sup><br/>
                     <a href="#haschildtaxon">has child taxon</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hassynonymname">has synonym name</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasparenttaxon">has parent taxon</a><sup class="sup-fp" title="functional property">fp</sup><br/>
                     <a href="#isdenotedby">is denoted by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hassynonymname">has synonym name</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="#hasparenttaxon">has parent taxon</a><sup class="sup-fp" title="functional property">fp</sup><br/>
                     <a href="#haschildtaxon">has child taxon</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasparenttaxon">has parent taxon</a><sup class="sup-fp" title="functional property">fp</sup><br/>
                     <a href="#denotes">denotes</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
@@ -483,40 +483,40 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#aphiaidentifier">aphia identifier</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#fullscientificname(withauthor)">full scientific name (with author)</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#issynonymof">is synonym of</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#TaxonName">Taxon Name</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/dc/terms/source">dct:source</a> <span class="cardinality">only</span> <a href="https://aphia.org/ns/top-level/Source">https://aphia.org/ns/top-level/Source</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#scientificname(withoutauthor)">scientific name (without author)</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#hasstatus">has status</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">exactly</span> 1 <a href="#Status">Status</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#isofrank">is of rank</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">exactly</span> 1 <a href="#Rank">Rank</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#haunacceptedreason">ha unaccepted reason</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="#UnacceptedReason">Unaccepted Reason</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hassynonym">has synonym</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#TaxonName">Taxon Name</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#fullscientificname(withauthor)">full scientific name (with author)</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="#authorship">authorship</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="https://aphia.org/ns/top-level/hasIdentifier">https://aphia.org/ns/top-level/hasIdentifier</a> <span class="cardinality">only</span> <a href="https://aphia.org/ns/top-level/Identifier">https://aphia.org/ns/top-level/Identifier</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#isofrank">is of rank</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">exactly</span> 1 <a href="#Rank">Rank</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#hassynonym">has synonym</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#TaxonName">Taxon Name</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.org/dc/terms/source">dct:source</a> <span class="cardinality">only</span> <a href="https://aphia.org/ns/top-level/Source">https://aphia.org/ns/top-level/Source</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#hasstatus">has status</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">exactly</span> 1 <a href="#Status">Status</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#issynonymof">is synonym of</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#TaxonName">Taxon Name</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#scientificname(withoutauthor)">scientific name (without author)</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#aphiaidentifier">aphia identifier</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="#aphiaidentifier">aphia identifier</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                    <a href="#scientificname(withoutauthor)">scientific name (without author)</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#isofrank">is of rank</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                    <a href="#hasstatus">has status</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                    <a href="#fullscientificname(withauthor)">full scientific name (with author)</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#hassynonym">has synonym</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#issynonymof">is synonym of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#haunacceptedreason">ha unaccepted reason</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#isofrank">is of rank</a><sup class="sup-fp" title="functional property">fp</sup><br/>
                     <a href="#authorship">authorship</a><sup class="sup-fp" title="functional property">fp</sup><br/>
-                    <a href="#hassynonym">has synonym</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#scientificname(withoutauthor)">scientific name (without author)</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#fullscientificname(withauthor)">full scientific name (with author)</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#aphiaidentifier">aphia identifier</a><sup class="sup-fp" title="functional property">fp</sup><br/>
-                    <a href="#hasstatus">has status</a><sup class="sup-fp" title="functional property">fp</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="#hasacceptedname">has accepted name</a><sup class="sup-fp" title="functional property">fp</sup><br/>
                     <a href="#hassynonymname">has synonym name</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#issynonymof">is synonym of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hassynonym">has synonym</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasacceptedname">has accepted name</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                    <a href="#issynonymof">is synonym of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -590,9 +590,9 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 <th>Restrictions</th>
                 <td>
                     <a href="#vernacularname">vernacular name</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">rdf:PlainLiteral</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.org/dc/terms/coverage">dct:coverage</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://purl.org/dc/terms/Location">dct:Location</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.org/dc/terms/source">dct:source</a> <span class="cardinality">only</span> <a href="https://aphia.org/ns/top-level/Source">https://aphia.org/ns/top-level/Source</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/dc/terms/language">dct:language</a><sup class="sup-ap" title="annotation property">ap</sup> <span class="cardinality">only</span> <a href="http://purl.org/dc/terms/LinguisticSystem">dct:LinguisticSystem</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/dc/terms/source">dct:source</a> <span class="cardinality">only</span> <a href="https://aphia.org/ns/top-level/Source">https://aphia.org/ns/top-level/Source</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/dc/terms/coverage">dct:coverage</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://purl.org/dc/terms/Location">dct:Location</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
