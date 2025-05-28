@@ -9,19 +9,22 @@
 @base <https://aphia.org/ns/top-level/> .
 
 <https://aphia.org/ns/top-level> rdf:type owl:Ontology ;
-                                        owl:versionIRI <https://aphia.org/ns/top-level/0.2> ;
-                                        owl:imports <http://www.ontologydesignpatterns.org/ont/d0.owl> ;
-                                        dct:creator <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab> ,
-                                                    <https://aphia.org/resource/organisation/dv> ,
-                                                    <https://ror.org/0496vr396> ;
-                                        dct:description "Questa è l'ontologia di primo livello (o primitiva) della rete di ontologie APHIA, utilizzata per allineare tutti gli elementi della rete a concetti fondazionali. Importa le ontologie fondazionali DUL - Dolce Ultra light e D0."@it ,
-                                                        "This is the top level ontology of the APHIA network of ontologies used to align all the elements of the network to foundational concepts. It imports DUL - Dolce Ultra light and D0 well-known foundational ontologies."@en ,
-                                                        "Dit is de overkoepelende ontologie van het APHIA-netwerk van ontologieën dat wordt gebruikt om alle elementen van het netwerk af te stemmen op basisbegrippen. Het importeert DUL - Dolce Ultra light en D0 bekende basisontologieën."@nl ;
-                                        dct:issued "2023-08-30"^^xsd:date ;
-                                        dct:modified "2024-02-10"^^xsd:date ;
-                                        owl:versionInfo "Second version of the ontology 0.2 - revision of the name of the network of ontologies, revision of metadata; added a reference to a controlled vocabulary."@en ,
-                                                        "Seconda versione dell'ontologia 0.2 - revisione del nome della rete di ontologie, revisione dei metadati; aggiunto un riferimento a un vocabolario controllato."@it ,
-                                                        "Tweede versie van de ontologie 0.2 - herziening van de naam van het netwerk van ontologieën, herziening van metadata; een verwijzing naar een gecontroleerd vocabularium werd toegevoegd."@nl .
+                                  owl:versionIRI <https://aphia.org/ns/top-level/0.3> ;
+                                  owl:imports <http://www.ontologydesignpatterns.org/ont/d0.owl> ;
+                                  dct:creator <https://aphia.org/resource/organisation/dv> ,
+                                              <https://ror.org/0496vr396> ,
+                                              <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab> ;
+                                  dct:description "Dit is de overkoepelende ontologie van het APHIA-netwerk van ontologieën dat wordt gebruikt om alle elementen van het netwerk af te stemmen op basisbegrippen. Het importeert DUL - Dolce Ultra light en D0 bekende basisontologieën."@nl ,
+                                                  "Questa è l'ontologia di primo livello (o primitiva) della rete di ontologie APHIA, utilizzata per allineare tutti gli elementi della rete a concetti fondazionali. Importa le ontologie fondazionali DUL - Dolce Ultra light e D0."@it ,
+                                                  "This is the top level ontology of the APHIA network of ontologies used to align all the elements of the network to foundational concepts. It imports DUL - Dolce Ultra light and D0 well-known foundational ontologies."@en ;
+                                  dct:issued "2023-08-30"^^xsd:date ;
+                                  dct:modified "2025-05-28" ;
+                                  dct:title "Ontologia Fondazionale di APHIA"@it ,
+                                            "Top Level/Foundational Ontology of APHIA"@en ,
+                                            "Topniveau/onderliggende ontologie van APHIA"@nl ;
+                                  owl:versionInfo "Derde versie van de ontologie 0.3 - introductie van context en temporele entiteitklassen. Probleem #24 oplossen"@nl ,
+                                                  "Terza versione dell'ontologia 0.3 - introduzione delle classi di entità contestuali e temporali. Correzione del problema #24"@it ,
+                                                  "Third version of the ontology 0.3 - introduction of context and temporal entity classes. Fix issue #24"@en .
 
 #################################################################
 #    Annotation properties
@@ -43,6 +46,10 @@ dct:issued rdf:type owl:AnnotationProperty .
 dct:modified rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
 ###  http://xmlns.com/foaf/0.1/name
 foaf:name rdf:type owl:AnnotationProperty .
 
@@ -53,6 +60,10 @@ foaf:name rdf:type owl:AnnotationProperty .
 
 ###  http://www.w3.org/2001/XMLSchema#date
 xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#gMonth
+xsd:gMonth rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3.org/2001/XMLSchema#gYear
@@ -69,17 +80,6 @@ dct:relation rdf:type owl:ObjectProperty .
 
 ###  http://purl.org/dc/terms/source
 dct:source rdf:type owl:ObjectProperty .
-
-
-###  https://aphia.org/ns/top-level/hasAuthor
-# :hasAuthor rdf:type owl:ObjectProperty ;
-#            rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
-#            rdfs:domain owl:Thing ;
-#            rdfs:range :Person ;
-#            rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
-#            rdfs:label "ha autore"@it ,
-#                       "has author"@en ,
-#                       "heeft auteur"@nl .
 
 
 ###  https://aphia.org/ns/top-level/hasIdentifier
@@ -133,8 +133,22 @@ dct:source rdf:type owl:ObjectProperty .
               rdfs:range :System ;
               rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
               rdfs:label "is assigned by"@en ,
-                         "è assegnato da"@it ,
-                         "is toegewezen door"@nl .
+                         "is toegewezen door"@nl ,
+                         "è assegnato da"@it .
+
+
+###  https://aphia.org/ns/top-level/withProvider
+:withProvider rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+              rdfs:domain :Context ;
+              rdfs:range <http://www.ontologydesignpatterns.org/ont/d0.owl#System> ;
+              rdfs:comment "Eigenschap die wordt gebruikt om een context af te bakenen, d.w.z. om het referentiesysteem te specificeren dat de gegevens verschaft."@nl ,
+                           "Property used to delineate a context, i.e., specifying the system of reference that provides the data"@en ,
+                           "Proprietà utilizzata per delineare un contesto, cioè per specificare il sistema di riferimento che fornisce i dati."@it ;
+              rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
+              rdfs:label "con fornitore"@it ,
+                         "met leverancier"@nl ,
+                         "with provider"@en .
 
 
 #################################################################
@@ -149,15 +163,43 @@ dct:identifier rdf:type owl:DatatypeProperty .
 dct:title rdf:type owl:DatatypeProperty .
 
 
+###  https://aphia.org/ns/top-level/month
+:month rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue> ;
+       rdfs:domain owl:Thing ;
+       rdfs:range xsd:gMonth ;
+       rdfs:comment "Het maanddeel van een datum"@nl ,
+                    "La parte del mese di una data"@it ,
+                    "The month part of a date"@en ;
+       rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
+       rdfs:label "maand"@nl ,
+                  "mese"@en ,
+                  "month"@en .
+
+
 ###  https://aphia.org/ns/top-level/name
 :name rdf:type owl:DatatypeProperty ;
       rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue> ;
       rdfs:domain :Name ;
       rdfs:range rdfs:Literal ;
       rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
-      rdfs:label "name"@en ,
-                 "nome"@it ,
-                 "naam"@nl .
+      rdfs:label "naam"@nl ,
+                 "name"@en ,
+                 "nome"@it .
+
+
+###  https://aphia.org/ns/top-level/time
+:time rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue> ;
+      rdfs:domain owl:Thing ;
+      rdfs:range rdfs:Literal ;
+      rdfs:comment "Generic property to express the time in a string format."@en ,
+                   "Generieke eigenschap om de tijd uit te drukken in een tekenreeksformaat."@nl ,
+                   "Proprietà generica per esprimere il tempo in un formato stringa."@it ;
+      rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
+      rdfs:label "tempo"@it ,
+                 "tijd"@nl ,
+                 "time"@en .
 
 
 ###  https://aphia.org/ns/top-level/value
@@ -178,13 +220,17 @@ dct:title rdf:type owl:DatatypeProperty .
       rdfs:range xsd:gYear ;
       rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
       rdfs:label "anno"@it ,
-                 "year"@en ,
-                 "jaar"@nl .
+                 "jaar"@nl ,
+                 "year"@en .
 
 
 #################################################################
 #    Classes
 #################################################################
+
+###  http://purl.org/dc/terms/Agent
+dct:Agent rdf:type owl:Class .
+
 
 ###  http://www.ontologydesignpatterns.org/ont/d0.owl#System
 <http://www.ontologydesignpatterns.org/ont/d0.owl#System> owl:equivalentClass :System .
@@ -197,11 +243,21 @@ dct:title rdf:type owl:DatatypeProperty .
 ###  http://www.w3.org/ns/person#Person
 <http://www.w3.org/ns/person#Person> rdf:type owl:Class .
 
-### http://purl.org/dc/terms/Agent
-<http://purl.org/dc/terms/Agent> rdf:type owl:Class .
 
 ###  http://xmlns.com/foaf/0.1/Organization
 foaf:Organization rdf:type owl:Class .
+
+
+###  https://aphia.org/ns/top-level/Context
+:Context rdf:type owl:Class ;
+         rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description> ;
+         rdfs:comment "A generic concept to represent a context"@en ,
+                      "Een generiek concept om een context weer te geven"@nl ,
+                      "Un concetto generico per rappresentare un contesto"@it ;
+         rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
+         rdfs:label "Contesto"@it ,
+                    "Context"@en ,
+                    "Context"@nl .
 
 
 ###  https://aphia.org/ns/top-level/Identifier
@@ -224,9 +280,9 @@ foaf:Organization rdf:type owl:Class .
                               owl:allValuesFrom rdfs:Literal
                             ] ;
             rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
-            rdfs:label "Identificativo"@it ,
-                       "Identifier"@en ,
-                       "Identificatie"@nl .
+            rdfs:label "Identificatie"@nl ,
+                       "Identificativo"@it ,
+                       "Identifier"@en .
 
 
 ###  https://aphia.org/ns/top-level/IdentifierType
@@ -255,27 +311,29 @@ foaf:Organization rdf:type owl:Class .
                         owl:allValuesFrom rdfs:Literal
                       ] ;
       rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
-      rdfs:label "Name"@en ,
-                 "Nome"@it ,
-                 "Naam"@nl .
+      rdfs:label "Naam"@nl ,
+                 "Name"@en ,
+                 "Nome"@it .
 
 
 ###  https://aphia.org/ns/top-level/Person
 :Person rdf:type owl:Class ;
-        rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> ,
-                        <http://www.w3.org/ns/person#Person> , <http://purl.org/dc/terms/Agent> ;
+        rdfs:subClassOf dct:Agent ,
+                        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> ,
+                        <http://www.w3.org/ns/person#Person> ;
         rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
         rdfs:label "Natural Person"@en ,
-                   "Persona Fisica"@it ,
-                   "Natuurlijk Persoon"@nl .
+                   "Natuurlijk Persoon"@nl ,
+                   "Persona Fisica"@it .
+
 
 ###  https://aphia.org/ns/top-level/Source
 :Source rdf:type owl:Class ;
         rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject> ;
         rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
-        rdfs:label "Sorgente"@it ,
-                   "Source"@en ,
-                   "Bron"@nl .
+        rdfs:label "Bron"@nl ,
+                   "Sorgente"@it ,
+                   "Source"@en .
 
 
 ###  https://aphia.org/ns/top-level/System
@@ -290,8 +348,20 @@ foaf:Organization rdf:type owl:Class .
                         ] ;
         rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
         rdfs:label "Sistema"@it ,
-                   "System"@en ,
-                   "Systeem"@nl .
+                   "Systeem"@nl ,
+                   "System"@en .
+
+
+###  https://aphia.org/ns/top-level/TemporalEntity
+:TemporalEntity rdf:type owl:Class ;
+                rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ;
+                rdfs:comment "A generic concept representing a temporal dimension"@en ,
+                             "Een generiek concept dat een tijdsdimensie vertegenwoordigt"@nl ,
+                             "Un concetto generico per rappresentare un'entità temporale"@it ;
+                rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
+                rdfs:label "Entità Temporale"@it ,
+                           "Temporal Entity"@en ,
+                           "Tijdelijke Entiteit"@nl .
 
 
 ###  https://aphia.org/ns/top-level/Type
@@ -305,12 +375,12 @@ foaf:Organization rdf:type owl:Class .
 
 ###  https://aphia.org/ns/top-level/UnitOfMeasure
 :UnitOfMeasure rdf:type owl:Class ;
+               rdfs:comment "Si consiglia di utilizzare il seguente vocabolario controllato SKOS - unità di archiviazione dati approvate dal BODC: http://vocab.nerc.ac.uk/collection/P06/current/ per gli individui di questa classe."@it ,
+                            "We recommend to use the following SKOS controlled vocabulary - BODC-approved data storage units: http://vocab.nerc.ac.uk/collection/P06/current/ for the individuals of this class."@en ;
                rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
-               rdfs:comment "We recommend to use the following SKOS controlled vocabulary - BODC-approved data storage units: http://vocab.nerc.ac.uk/collection/P06/current/ for the individuals of this class."@en ,
-                            "Si consiglia di utilizzare il seguente vocabolario controllato SKOS - unità di archiviazione dati approvate dal BODC: http://vocab.nerc.ac.uk/collection/P06/current/ per gli individui di questa classe."@it ;
-               rdfs:label "Unit Of Measure"@en ,
-                          "Unità di Misura"@it ,
-                          "Meeteenheid"@nl .
+               rdfs:label "Meeteenheid"@nl ,
+                          "Unit Of Measure"@en ,
+                          "Unità di Misura"@it .
 
 
 ###  https://aphia.org/ns/top-level/Value
@@ -335,13 +405,17 @@ foaf:Organization rdf:type owl:Class .
 #    Individuals
 #################################################################
 
+###  https://aphia.org/ns/top-level
+<https://aphia.org/ns/top-level> rdf:type owl:NamedIndividual .
+
+
 ###  https://aphia.org/resource/organisation/dv
 <https://aphia.org/resource/organisation/dv> rdf:type owl:NamedIndividual ,
-                                                            foaf:Organization ;
-                                                   rdfs:label "Digitaal Vlaanderen"@nl ,
-                                                              "Digital Flanders"@en ;
-                                                   foaf:name "Digitaal Vlaanderen"@nl ,
-                                                             "Digital Flanders"@en .
+                                                      foaf:Organization ;
+                                             rdfs:label "Digitaal Vlaanderen"@nl ,
+                                                        "Digital Flanders"@en ;
+                                             foaf:name "Digitaal Vlaanderen"@nl ,
+                                                       "Digital Flanders"@en .
 
 
-###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

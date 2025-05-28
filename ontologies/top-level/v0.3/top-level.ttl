@@ -9,9 +9,6 @@
 @base <https://aphia.org/ns/top-level/> .
 
 <https://aphia.org/ns/top-level> rdf:type owl:Ontology ;
-                                  dct:title "Top Level/Foundational ontology of MAREGRAPH"@en ,
-                                            "Ontologia Fondazionale di MAREGRAPH"@it ,
-                                            "Ontologie op het hoogste niveau/grondbeginselen van MAREGRAPH"@nl ;
                                   owl:versionIRI <https://aphia.org/ns/top-level/0.3> ;
                                   owl:imports <http://www.ontologydesignpatterns.org/ont/d0.owl> ;
                                   dct:creator <https://aphia.org/resource/organisation/dv> ,
@@ -22,6 +19,9 @@
                                                   "This is the top level ontology of the APHIA network of ontologies used to align all the elements of the network to foundational concepts. It imports DUL - Dolce Ultra light and D0 well-known foundational ontologies."@en ;
                                   dct:issued "2023-08-30"^^xsd:date ;
                                   dct:modified "2025-05-28" ;
+                                  dct:title "Ontologia Fondazionale di APHIA"@it ,
+                                            "Top Level/Foundational Ontology of APHIA"@en ,
+                                            "Topniveau/onderliggende ontologie van APHIA"@nl ;
                                   owl:versionInfo "Derde versie van de ontologie 0.3 - introductie van context en temporele entiteitklassen. Probleem #24 oplossen"@nl ,
                                                   "Terza versione dell'ontologia 0.3 - introduzione delle classi di entità contestuali e temporali. Correzione del problema #24"@it ,
                                                   "Third version of the ontology 0.3 - introduction of context and temporal entity classes. Fix issue #24"@en .
@@ -46,6 +46,10 @@ dct:issued rdf:type owl:AnnotationProperty .
 dct:modified rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
 ###  http://xmlns.com/foaf/0.1/name
 foaf:name rdf:type owl:AnnotationProperty .
 
@@ -56,6 +60,10 @@ foaf:name rdf:type owl:AnnotationProperty .
 
 ###  http://www.w3.org/2001/XMLSchema#date
 xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#gMonth
+xsd:gMonth rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3.org/2001/XMLSchema#gYear
@@ -129,6 +137,20 @@ dct:source rdf:type owl:ObjectProperty .
                          "è assegnato da"@it .
 
 
+###  https://aphia.org/ns/top-level/withProvider
+:withProvider rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> ;
+              rdfs:domain :Context ;
+              rdfs:range <http://www.ontologydesignpatterns.org/ont/d0.owl#System> ;
+              rdfs:comment "Eigenschap die wordt gebruikt om een context af te bakenen, d.w.z. om het referentiesysteem te specificeren dat de gegevens verschaft."@nl ,
+                           "Property used to delineate a context, i.e., specifying the system of reference that provides the data"@en ,
+                           "Proprietà utilizzata per delineare un contesto, cioè per specificare il sistema di riferimento che fornisce i dati."@it ;
+              rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
+              rdfs:label "con fornitore"@it ,
+                         "met leverancier"@nl ,
+                         "with provider"@en .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -141,6 +163,20 @@ dct:identifier rdf:type owl:DatatypeProperty .
 dct:title rdf:type owl:DatatypeProperty .
 
 
+###  https://aphia.org/ns/top-level/month
+:month rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue> ;
+       rdfs:domain owl:Thing ;
+       rdfs:range xsd:gMonth ;
+       rdfs:comment "Het maanddeel van een datum"@nl ,
+                    "La parte del mese di una data"@it ,
+                    "The month part of a date"@en ;
+       rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
+       rdfs:label "maand"@nl ,
+                  "mese"@en ,
+                  "month"@en .
+
+
 ###  https://aphia.org/ns/top-level/name
 :name rdf:type owl:DatatypeProperty ;
       rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue> ;
@@ -150,6 +186,20 @@ dct:title rdf:type owl:DatatypeProperty .
       rdfs:label "naam"@nl ,
                  "name"@en ,
                  "nome"@it .
+
+
+###  https://aphia.org/ns/top-level/time
+:time rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue> ;
+      rdfs:domain owl:Thing ;
+      rdfs:range rdfs:Literal ;
+      rdfs:comment "Generic property to express the time in a string format."@en ,
+                   "Generieke eigenschap om de tijd uit te drukken in een tekenreeksformaat."@nl ,
+                   "Proprietà generica per esprimere il tempo in un formato stringa."@it ;
+      rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
+      rdfs:label "tempo"@it ,
+                 "tijd"@nl ,
+                 "time"@en .
 
 
 ###  https://aphia.org/ns/top-level/value
@@ -201,14 +251,13 @@ foaf:Organization rdf:type owl:Class .
 ###  https://aphia.org/ns/top-level/Context
 :Context rdf:type owl:Class ;
          rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description> ;
+         rdfs:comment "A generic concept to represent a context"@en ,
+                      "Een generiek concept om een context weer te geven"@nl ,
+                      "Un concetto generico per rappresentare un contesto"@it ;
+         rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
          rdfs:label "Contesto"@it ,
                     "Context"@en ,
-                    "Context"@nl ;
-         rdfs:comment "A generic concept to represent a context"@en ,
-                      "Un concetto generico per rappresentare un contesto"@it ,
-                      "Een generiek concept om een context weer te geven"@nl ;
-           rdfs:isDefinedBy <https://aphia.org/ns/top-level> .
-
+                    "Context"@nl .
 
 
 ###  https://aphia.org/ns/top-level/Identifier
@@ -306,13 +355,13 @@ foaf:Organization rdf:type owl:Class .
 ###  https://aphia.org/ns/top-level/TemporalEntity
 :TemporalEntity rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ;
+                rdfs:comment "A generic concept representing a temporal dimension"@en ,
+                             "Een generiek concept dat een tijdsdimensie vertegenwoordigt"@nl ,
+                             "Un concetto generico per rappresentare un'entità temporale"@it ;
+                rdfs:isDefinedBy <https://aphia.org/ns/top-level> ;
                 rdfs:label "Entità Temporale"@it ,
                            "Temporal Entity"@en ,
-                           "Tijdelijke Entiteit"@nl ;
-                rdfs:comment "A generic concept representing a temporal dimension"@en ,
-                             "Un concetto generico per rappresentare un'entità temporale"@it ,
-                             "Een generiek concept dat een tijdsdimensie vertegenwoordigt"@nl ;
-                  rdfs:isDefinedBy <https://aphia.org/ns/top-level> .
+                           "Tijdelijke Entiteit"@nl .
 
 
 ###  https://aphia.org/ns/top-level/Type
@@ -355,6 +404,10 @@ foaf:Organization rdf:type owl:Class .
 #################################################################
 #    Individuals
 #################################################################
+
+###  https://aphia.org/ns/top-level
+<https://aphia.org/ns/top-level> rdf:type owl:NamedIndividual .
+
 
 ###  https://aphia.org/resource/organisation/dv
 <https://aphia.org/resource/organisation/dv> rdf:type owl:NamedIndividual ,
