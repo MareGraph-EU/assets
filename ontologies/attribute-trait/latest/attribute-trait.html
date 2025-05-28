@@ -236,13 +236,13 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
     <a href="https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab">stlab</a><br/>
         </dd>
         <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/modified">Modified</a></dt>
-        <dd>2024-02-10</dd>
+        <dd>2025-05-28</dd>
         <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/issued">Issued</a></dt>
         <dd>2023-08-30</dd>
         <dt>Version Information</dt>
-        <dd>Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; introduced skos:note as a property for TaxonDescription.</dd>
+        <dd>Third version 0.3 - introduced hierarchy properties for SpecificationContext and TaxonCharacteristic</dd>
         <dt>Version URI</dt>
-        <dd><a href="https://aphia.org/ns/attribute-trait/0.2">https://aphia.org/ns/attribute-trait/0.2</a></dd>
+        <dd><a href="https://aphia.org/ns/attribute-trait/0.3">https://aphia.org/ns/attribute-trait/0.3</a></dd>
         <dt>Imports</dt>
         <dd>
             <a href="https://aphia.org/ns/top-level">https://aphia.org/ns/top-level</a><br/>
@@ -262,6 +262,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
     <ol>
         <li><a href="#classes">Classes</a></li>
         <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#datatypeproperties">Datatype Properties</a></li>
         <li><a href="#annotationproperties">Annotation Properties</a></li>
         <li><a href="#namedindividuals">Named Individuals</a></li>
         <li><a href="#namespaces">Namespaces</a></li>
@@ -278,7 +279,12 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
   <section id="classes">
     <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
+      <li><a href="http://www.ontologydesignpatterns.org/ont/d0.owl#Characteristic">http://www.ontologydesignpatterns.org/ont/d0.owl#Characteristic</a></li>
+      <li><a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept">dul:Concept</a></li>
+      <li><a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description">dul:Description</a></li>
+      <li><a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter">dul:Parameter</a></li>
       <li><a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a></li>
+      <li><a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a></li>
       <li><a href="#Attribute">Attribute</a></li>
       <li><a href="#Environment">Environment</a></li>
       <li><a href="#SpecificationContext">Specification Context</a></li>
@@ -286,12 +292,88 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
       <li><a href="#TaxonDescription">Taxon Description</a></li>
       <li><a href="#Trait">Trait</a></li>
       <li><a href="https://aphia.org/ns/taxon-name/Taxon">https://aphia.org/ns/taxon-name/Taxon</a></li>
+      <li><a href="https://aphia.org/ns/top-level/Source">https://aphia.org/ns/top-level/Source</a></li>
+      <li><a href="https://aphia.org/ns/top-level/Type">https://aphia.org/ns/top-level/Type</a></li>
+      <li><a href="https://aphia.org/ns/top-level/Value">https://aphia.org/ns/top-level/Value</a></li>
       <li><a href="https://kos.lifewatch.eu/thesauri/fishtraits/c_4">https://kos.lifewatch.eu/thesauri/fishtraits/c_4</a></li>
     </ul>
+    <div class="entity class" id="Characteristic">
+        <h3>
+          Characteristic<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Characteristic" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.ontologydesignpatterns.org/ont/d0.owl#Characteristic</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#TaxonCharacteristic">Taxon Characteristic</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity class" id="Concept">
         <h3>
           Concept<sup title="class" class="sup-c">c</sup>
           <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Concept" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#Environment">Environment</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Description">
+        <h3>
+          Description<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Description" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#TaxonDescription">Taxon Description</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#SpecificationContext">Specification Context</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Parameter">
+        <h3>
+          Parameter<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Parameter" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter</code></td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#definesparameter">defines parameter</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Concept1">
+        <h3>
+          Concept<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Concept1" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
         </h3>
         <table>
             <tr>
@@ -301,9 +383,27 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#Attribute">Attribute</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#Trait">Trait</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#Environment">Environment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Trait">Trait</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Attribute">Attribute</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Organization">
+        <h3>
+          Organization<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Organization" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://xmlns.com/foaf/0.1/Organization</code></td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="https://aphia.org/resource/organisation/dv">https://aphia.org/resource/organisation/dv</a><br/>
                 </td>
             </tr>
         </table>
@@ -364,8 +464,8 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept">dul:Concept</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept">dul:Concept</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -419,14 +519,15 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://aphia.org/ns/top-level/hasValue">https://aphia.org/ns/top-level/hasValue</a> <span class="cardinality">some</span> <a href="https://aphia.org/ns/top-level/Value">https://aphia.org/ns/top-level/Value</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://aphia.org/ns/top-level/hasValue">https://aphia.org/ns/top-level/hasValue</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://aphia.org/ns/top-level/Value">https://aphia.org/ns/top-level/Value</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#definesparameter">defines parameter</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter">dul:Parameter</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://aphia.org/ns/top-level/hasValue">https://aphia.org/ns/top-level/hasValue</a> <span class="cardinality">only</span> <a href="https://aphia.org/ns/top-level/Value">https://aphia.org/ns/top-level/Value</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://aphia.org/ns/top-level/hasValue">https://aphia.org/ns/top-level/hasValue</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://aphia.org/ns/top-level/Value">https://aphia.org/ns/top-level/Value</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="#Propertythatallowsuserstocreatehierarchiesofspecificationcontextsforthetaxondescription.Itissimilartotheskos:narrowerpropertyintheSKOSontology.">Property that allows users to create hierarchies of specification contexts for the taxon description. It is similar to the skos:narrower property in the SKOS ontology.</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#definesparameter">defines parameter</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
@@ -434,6 +535,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 <th>In range of</th>
                 <td>
                     <a href="#hasextraspecification">has extra specification</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#Propertythatallowsuserstocreatehierarchiesofspecificationcontextsforthetaxondescription.Itissimilartotheskos:narrowerpropertyintheSKOSontology.">Property that allows users to create hierarchies of specification contexts for the taxon description. It is similar to the skos:narrower property in the SKOS ontology.</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -469,19 +571,26 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://aphia.org/ns/top-level/hasType">https://aphia.org/ns/top-level/hasType</a> <span class="cardinality">max</span> 1 <a href="https://aphia.org/ns/top-level/Type">https://aphia.org/ns/top-level/Type</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://aphia.org/ns/top-level/hasType">https://aphia.org/ns/top-level/hasType</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://aphia.org/ns/top-level/Type">https://aphia.org/ns/top-level/Type</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#Attribute">Attribute</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#Trait">Trait</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Attribute">Attribute</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://aphia.org/ns/top-level/isSubTaxonCharacteristicOf">https://aphia.org/ns/top-level/isSubTaxonCharacteristicOf</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
+                    <a href="https://aphia.org/ns/top-level/isSubTaxonCharacteristicOf">https://aphia.org/ns/top-level/isSubTaxonCharacteristicOf</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hastaxoncharacteristic">has taxon characteristic</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
@@ -518,22 +627,22 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://www.w3.org/2004/02/skos/core#note">skos:note</a> <span class="cardinality">only</span> <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">rdf:PlainLiteral</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://aphia.org/ns/top-level/hasValue">https://aphia.org/ns/top-level/hasValue</a> <span class="cardinality">some</span> <a href="https://aphia.org/ns/top-level/Value">https://aphia.org/ns/top-level/Value</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#hastaxoncharacteristic">has taxon characteristic</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://www.ontologydesignpatterns.org/ont/d0.owl#Characteristic">http://www.ontologydesignpatterns.org/ont/d0.owl#Characteristic</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasextraspecification">has extra specification</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#SpecificationContext">Specification Context</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#hastaxoncharacteristic">has taxon characteristic</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.ontologydesignpatterns.org/ont/d0.owl#Characteristic">http://www.ontologydesignpatterns.org/ont/d0.owl#Characteristic</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#isadditionaldescriptionof">is additional description of</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://aphia.org/ns/taxon-name/Taxon">https://aphia.org/ns/taxon-name/Taxon</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.org/dc/terms/source">dct:source</a> <span class="cardinality">only</span> <a href="https://aphia.org/ns/top-level/Source">https://aphia.org/ns/top-level/Source</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://aphia.org/ns/top-level/hasValue">https://aphia.org/ns/top-level/hasValue</a> <span class="cardinality">only</span> <a href="https://aphia.org/ns/top-level/Value">https://aphia.org/ns/top-level/Value</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#hasextraspecification">has extra specification</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#SpecificationContext">Specification Context</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://aphia.org/ns/top-level/hasValue">https://aphia.org/ns/top-level/hasValue</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://aphia.org/ns/top-level/Value">https://aphia.org/ns/top-level/Value</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/2004/02/skos/core#note">skos:note</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">rdf:PlainLiteral</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://aphia.org/ns/top-level/hasValue">https://aphia.org/ns/top-level/hasValue</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://aphia.org/ns/top-level/Value">https://aphia.org/ns/top-level/Value</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hastaxoncharacteristic">has taxon characteristic</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://www.ontologydesignpatterns.org/ont/d0.owl#Characteristic">http://www.ontologydesignpatterns.org/ont/d0.owl#Characteristic</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/dc/terms/source">dct:source</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://aphia.org/ns/top-level/Source">https://aphia.org/ns/top-level/Source</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="#hasextraspecification">has extra specification</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#isadditionaldescriptionof">is additional description of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hastaxoncharacteristic">has taxon characteristic</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasextraspecification">has extra specification</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -588,8 +697,8 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#hasadditionaldescription">has additional description</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hashabitat">has habitat</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasadditionaldescription">has additional description</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -598,6 +707,42 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                     <a href="#ishabitatof">is habitat of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#isadditionaldescriptionof">is additional description of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Source">
+        <h3>
+          Source<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Source" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://aphia.org/ns/top-level/Source</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Type">
+        <h3>
+          Type<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Type" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://aphia.org/ns/top-level/Type</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Value">
+        <h3>
+          Value<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Value" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://aphia.org/ns/top-level/Value</code></td>
             </tr>
         </table>
     </div>
@@ -617,6 +762,12 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
 <section id="objectproperties">
     <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
+        <li><a href="#source">source</a></li>
+        <li><a href="#associatedWith">associatedWith</a></li>
+        <li><a href="#defines">defines</a></li>
+        <li><a href="#describes">describes</a></li>
+        <li><a href="#isDescribedBy">isDescribedBy</a></li>
+        <li><a href="#isRelatedToDescription">isRelatedToDescription</a></li>
         <li><a href="#definesparameter">defines parameter</a></li>
         <li><a href="#hasadditionaldescription">has additional description</a></li>
         <li><a href="#hasextraspecification">has extra specification</a></li>
@@ -624,7 +775,77 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
         <li><a href="#hastaxoncharacteristic">has taxon characteristic</a></li>
         <li><a href="#isadditionaldescriptionof">is additional description of</a></li>
         <li><a href="#ishabitatof">is habitat of</a></li>
+        <li><a href="#Propertythatallowsuserstocreatehierarchiesofspecificationcontextsforthetaxondescription.Itissimilartotheskos:narrowerpropertyintheSKOSontology.">Property that allows users to create hierarchies of specification contexts for the taxon description. It is similar to the skos:narrower property in the SKOS ontology.</a></li>
+        <li><a href="#hasType">hasType</a></li>
+        <li><a href="#hasValue">hasValue</a></li>
+        <li><a href="#issubtaxoncharacteristicof">is sub taxon characteristic of</a></li>
     </ul>
+    <div class="entity property" id="source">
+        <h3>source<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#source" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/source</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="associatedWith">
+        <h3>associatedWith<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#associatedWith" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="defines">
+        <h3>defines<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#defines" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="describes">
+        <h3>describes<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#describes" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#describes</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isDescribedBy">
+        <h3>isDescribedBy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isDescribedBy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDescribedBy</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isRelatedToDescription">
+        <h3>isRelatedToDescription<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isRelatedToDescription" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRelatedToDescription</code></td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="definesparameter">
         <h3>defines parameter<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
             <a href="#definesparameter" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
@@ -649,7 +870,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines">dul:defines</a>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines">dul:defines</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -690,7 +911,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDescribedBy">dul:isDescribedBy</a>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDescribedBy">dul:isDescribedBy</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -737,7 +958,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRelatedToDescription">dul:isRelatedToDescription</a>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRelatedToDescription">dul:isRelatedToDescription</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -778,7 +999,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">dul:associatedWith</a>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">dul:associatedWith</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -825,7 +1046,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines">dul:defines</a>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines">dul:defines</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -866,7 +1087,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#describes">dul:describes</a>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#describes">dul:describes</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -907,7 +1128,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">dul:associatedWith</a>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">dul:associatedWith</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -924,17 +1145,172 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             </tr>
         </table>
     </div>
+    <div class="entity property" id="Propertythatallowsuserstocreatehierarchiesofspecificationcontextsforthetaxondescription.Itissimilartotheskos:narrowerpropertyintheSKOSontology.">
+        <h3>Property that allows users to create hierarchies of specification contexts for the taxon description. It is similar to the skos:narrower property in the SKOS ontology.<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#Propertythatallowsuserstocreatehierarchiesofspecificationcontextsforthetaxondescription.Itissimilartotheskos:narrowerpropertyintheSKOSontology." title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://aphia.org/ns/attribute-trait/isSubSpecificationContextOf</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://aphia.org/ns/attribute-trait
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">dul:associatedWith</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#SpecificationContext">Specification Context</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://aphia.org/ns/attribute-trait/SpecificationContext">https://aphia.org/ns/attribute-trait/SpecificationContext</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasType">
+        <h3>hasType<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasType" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://aphia.org/ns/top-level/hasType</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasValue">
+        <h3>hasValue<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasValue" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://aphia.org/ns/top-level/hasValue</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="issubtaxoncharacteristicof">
+        <h3>is sub taxon characteristic of<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#issubtaxoncharacteristicof" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://aphia.org/ns/top-level/isSubTaxonCharacteristicOf</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://aphia.org/ns/attribute-trait
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property that allows users to create hierarchies of taxon characteristics and then hierarchies of attributes and traits. It is similar to the skos:narrower property in the SKOS ontology.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">dul:associatedWith</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#TaxonCharacteristic">Taxon Characteristic</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://aphia.org/ns/attribute-trait/TaxonCharacteristic">https://aphia.org/ns/attribute-trait/TaxonCharacteristic</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="datatypeproperties">
+    <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#note">note</a></li>
+    </ul>
+    <div class="entity property" id="note">
+        <h3>note<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#note" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2004/02/skos/core#note</code></td>
+            </tr>
+        </table>
+    </div>
 </section>
 
 <section id="annotationproperties">
     <h2>Annotation Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
+        <li><a href="#creator">creator</a></li>
+        <li><a href="#description">description</a></li>
+        <li><a href="#issued">issued</a></li>
         <li><a href="#language">language</a></li>
         <li><a href="#license">license</a></li>
+        <li><a href="#modified">modified</a></li>
         <li><a href="#title">title</a></li>
+        <li><a href="#maxQualifiedCardinality">maxQualifiedCardinality</a></li>
         <li><a href="#wasDerivedFrom">wasDerivedFrom</a></li>
         <li><a href="#wasInfluencedBy">wasInfluencedBy</a></li>
+        <li><a href="#name">name</a></li>
     </ul>
+    <div class="entity property" id="creator">
+        <h3>creator<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#creator" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/creator</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="description">
+        <h3>description<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#description" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/description</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="issued">
+        <h3>issued<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#issued" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/issued</code></td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="language">
         <h3>language<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
             <a href="#language" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
@@ -957,6 +1333,17 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             </tr>
         </table>
     </div>
+    <div class="entity property" id="modified">
+        <h3>modified<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#modified" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/modified</code></td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="title">
         <h3>title<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
             <a href="#title" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
@@ -965,6 +1352,17 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>URI</th>
                 <td><code>http://purl.org/dc/terms/title</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="maxQualifiedCardinality">
+        <h3>maxQualifiedCardinality<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#maxQualifiedCardinality" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2002/07/owl#maxQualifiedCardinality</code></td>
             </tr>
         </table>
     </div>
@@ -987,6 +1385,17 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>URI</th>
                 <td><code>http://www.w3.org/ns/prov#wasInfluencedBy</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="name">
+        <h3>name<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#name" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://xmlns.com/foaf/0.1/name</code></td>
             </tr>
         </table>
     </div>
