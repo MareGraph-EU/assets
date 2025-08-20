@@ -28,6 +28,8 @@
     skos:prefLabel "micrometer"@en ;
     skos:altLabel "µm"@en ; 
     skos:definition "micrometer"@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/P06/current/UMIC/> ;
 .
 
 <#millimeter>
@@ -36,6 +38,8 @@
     skos:prefLabel "millimeter"@en ;
     skos:altLabel "mm"@en ; 
     skos:definition "millimeter"@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/P06/current/UXMM/> ;
 .
 
 <#centimeter>
@@ -44,6 +48,8 @@
     skos:prefLabel "centimeter"@en ;
     skos:altLabel "cm"@en ; 
     skos:definition "centimeter"@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/P06/current/ULCM/> ;
 .
 
 <#meter>
@@ -52,6 +58,8 @@
     skos:prefLabel "meter"@en ;
     skos:altLabel "m"@en ; 
     skos:definition "meter"@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/P06/current/ULAA/> ; 
 .
 
 <#square_centimeter>
@@ -60,6 +68,8 @@
     skos:prefLabel "square centimeter"@en ;
     skos:altLabel "cm²"@en ; 
     skos:definition "square centimeter"@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/P06/current/SQCM/> ;
 .
 
 <#square_decimeter>
@@ -76,6 +86,8 @@
     skos:prefLabel "square meter"@en ;
     skos:altLabel "m²"@en ; 
     skos:definition "square meter"@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/P06/current/UMSQ/> ;
 .
 
 <#cubic_centimeter>
@@ -84,6 +96,8 @@
     skos:prefLabel "cubic centimeter"@en ;
     skos:altLabel "cm³"@en ; 
     skos:definition "cubic centimeter"@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/P06/current/VVCC/> ;
 .
 
 <#inch>
@@ -100,6 +114,8 @@
     skos:prefLabel "kilogram"@en ;
     skos:altLabel "kg"@en ; 
     skos:definition "kilogram"@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/P06/current/KGXX/> ;
 .
 
 <#ton>
@@ -107,4 +123,6 @@
     skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "ton"@en ;
     skos:definition "ton"@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/P06/current/MTON/> ;
 .

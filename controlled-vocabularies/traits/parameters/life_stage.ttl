@@ -65,7 +65,7 @@
     skos:prefLabel "adult"@en ;
     skos:definition "The reproductively capable (mature), fully formed, usually longest lived, stage of an animals life cycle."@en ;
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S1116/> ; 
 .
 <#juvenile>
     a skos:Concept, aphia-trait:Trait ;
@@ -73,14 +73,17 @@
     skos:prefLabel "juvenile"@en ;
     skos:definition "Young bird or other animal, before it has acquired full adult plumage or form."@en ;
 
-    skos:exactMatch ... ; 
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S1127/> ; 
 .
 <#egg>
     a skos:Concept, aphia-trait:Trait ;
     skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "egg"@en ;
     skos:definition "(1) ovum q.v.; (2) in certain animals, e.g. reptiles, birds, amphibians and insects, a structure composed of the fertilized ovum and nutritive and protective tissues, surrounded by a protective shell, which is laid by the female, and from which the young animal hatches."@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S1122/> ;
 .
+
 <#larva>
     a skos:Concept, aphia-trait:Trait ;
     skos:inScheme <https://aphia.org/ns/traits/> ;
@@ -88,7 +91,10 @@
     skos:definition "Independently living, post-embryonic stage of an animal that is markedly different in form from the adult and which undergoes metamorphosis into the adult form, e.g. caterpillar, grub, tadpole."@en ;
 
     skos:narrower <#planula> , <#tadpole> ; 
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S1128/> ;
 .
+
 <#planula>
     a skos:Concept, aphia-trait:Trait ;
     skos:inScheme <https://aphia.org/ns/traits/> ;
@@ -96,6 +102,8 @@
     skos:definition "The ovoid free-swimming ciliated larva of coelenterates."@en ;
 
     skos:broader <#larva> ; 
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S1132/> ;
 .
 <#tadpole>
     a skos:Concept, aphia-trait:Trait ;
@@ -110,12 +118,16 @@
     skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "postlarva"@en ;
     skos:definition ""@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S1133/> ;
 .
 <#spat>
     a skos:Concept, aphia-trait:Trait ;
     skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "spat"@en ;
     skos:definition "The spawn or young of bivalve molluscs."@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S1170/> ;
 .
 <#subadult>
     a skos:Concept, aphia-trait:Trait ;
@@ -129,7 +141,7 @@
     skos:prefLabel "zoea"@en ;
     skos:definition "Early larval form of certain decapod crustaceans."@en ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S1137/> ; 
 .
 <#nauplius>
     a skos:Concept, aphia-trait:Trait ;
@@ -137,7 +149,7 @@
     skos:prefLabel "nauplius"@en ;
     skos:definition "Earliest larval stage of many crustaceans, with three pairs of appendages."@en ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S1130/> ; 
 .
 <#polyp>
     a skos:Concept, aphia-trait:Trait ;
@@ -150,12 +162,16 @@
     skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "medusa"@en ;
     skos:definition "One of the forms of individuals of coelenterates of the classes Hydrozoa (hydroids) and Scyphozoa (jellyfish). It is bell-shaped, with a tube hanging down in the centre ending in a mouth, and tentacles around the edge of the bell, and is the form commonly called a jellyfish. It forms the free-swimming sexual reproductive stage of most hydrozoans, and is large and conspicuous in jellyfish."@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S1129/> ;
 .
 <#ephyra>
     a skos:Concept, aphia-trait:Trait ;
     skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "ephyra"@en ;
     skos:definition "Imature medusa in some jellyfish, formed by strobilization from a polyp."@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S1179/> ;
 .
 <#megalops>
     a skos:Concept, aphia-trait:Trait ;
@@ -188,6 +204,8 @@
     skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "hatchling"@en ;
     skos:definition ""@en ;
+
+    skos:related <https://vocab.nerc.ac.uk/collection/S11/current/S1172/> ;
 .
 <#copepodite_I>
     a skos:Concept, aphia-trait:Trait ;
@@ -195,7 +213,7 @@
     skos:prefLabel "copepodite I"@en ;
     skos:definition "Juvenile stage after the nauplius stage in copepods (Lawrence, 2005). There are six life stages for copepods after the nauplius stage. Each life stage stages can be defined by the number of legs an individual has. Copepoda life stage after the nauplius life stage; determined by 2 swimming legs."@en ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S111/> ; 
 .
 <#copepodite_II>
     a skos:Concept, aphia-trait:Trait ;
@@ -203,7 +221,7 @@
     skos:prefLabel "copepodite II"@en ;
     skos:definition "Juvenile stage after the nauplius stage in copepods (Lawrence, 2005). There are six life stages for copepods after the nauplius stage. Each life stage stages can be defined by the number of legs an individual has. Copepoda life stage after the copepodite I life stage; determined by 3 swimming legs."@en ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S117/> ; 
 .
 <#copepodite_III>
     a skos:Concept, aphia-trait:Trait ;
@@ -211,7 +229,7 @@
     skos:prefLabel "copepodite III"@en ;
     skos:definition "Juvenile stage after the nauplius stage in copepods (Lawrence, 2005). There are six life stages for copepods after the nauplius stage. Each life stage stages can be defined by the number of legs an individual has. Copepoda life stage after the copepodite II life stage; determined by 4 swimming legs."@en ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S118/> ; 
 .
 <#copepodite_IV>
     a skos:Concept, aphia-trait:Trait ;
@@ -219,7 +237,7 @@
     skos:prefLabel "copepodite IV"@en ;
     skos:definition "Juvenile stage after the nauplius stage in copepods (Lawrence, 2005). There are six life stages for copepods after the nauplius stage. Each life stage stages can be defined by the number of legs an individual has. Copepoda life stage after the copepodite III life stage; determined by 5 swimming legs."@en ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S1110/> ; 
 .
 <#copepodite_V>
     a skos:Concept, aphia-trait:Trait ;
@@ -227,7 +245,7 @@
     skos:prefLabel "copepodite V"@en ;
     skos:definition "Juvenile stage after the nauplius stage in copepods (Lawrence, 2005). There are six life stages for copepods after the nauplius stage. Each life stage stages can be defined by the number of legs an individual has. Copepoda life stage after the copepodite IV life stage; pre-adult stage; determined by enlargement of the urosome and development of sexual organs. "@en ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S1112/> ; 
 .
 <#copepodite_VI>
     a skos:Concept, aphia-trait:Trait ;
@@ -235,7 +253,7 @@
     skos:prefLabel "copepodite VI"@en ;
     skos:definition "Juvenile stage after the nauplius stage in copepods (Lawrence, 2005). There are six life stages for copepods after the nauplius stage. Each life stage stages can be defined by the number of legs an individual has. Copepoda life stage after the copepodite V life stage; adult stage; 5th leg is fully complete."@en ;
 
-    skos:closeMatch ... ; 
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S116/> ; 
 .
 <#gametophyte>
     a skos:Concept, aphia-trait:Trait ;
@@ -290,12 +308,16 @@
     skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "polygastric"@en ;
     skos:definition "Main, asexual life stage of calycophoran siphonophores. The polygastric stage is comprised of an anterior nectophore and a posterior nectophore, joined together to form a functional swimming unit. This resembles the "adult" life stage in Calycophorae, although the term "adult" should not be used for Siphonophorae. Cf. Physonectae and Cystonectae, where this life stage is called "colony"."@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S1101/> ;
 .
 <#eudoxid>
     a skos:Concept, aphia-trait:Trait ;
     skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "eudoxid"@en ;
     skos:definition "Sexual stage of siphonophores."@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S1195/> ;
 .
 <#colony>
     a skos:Concept, aphia-trait:Trait ;
@@ -320,6 +342,8 @@
     skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "pilidium"@en ;
     skos:definition "The characteristic helmet-shaped larva of nemertine worms."@en ;
+
+    skos:related <https://vocab.nerc.ac.uk/collection/S11/current/S1102/> ;
 .
 <#akinetes>
     a skos:Concept, aphia-trait:Trait ;
@@ -332,30 +356,43 @@
     skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "resting spore"@en ;
     skos:definition "The diatom resting spores are first and foremost recognized by their heavily silicified frustules. The resting spore morphology of some species is similar to that of the corresponding vegetative cells, whereas in other species, the resting spores and the vegetative cells differ drastically. Diatom resting spores are normally formed as a response to unfavorable environmental conditions, and germination occurs when the conditions improve. Resting spore formation is common in centric, but rare in pennate marine planktonic diatoms (Hasle and Syvertsen 1997, p. 11)."@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S1134/> ; 
 .
+
 <#resting_cyst>
     a skos:Concept, aphia-trait:Trait ;
     skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "resting cyst"@en ;
     skos:definition "A dormant stage in which normal life processes are generally reduced (Fensome et al. 1993, p. 260)."@en ;
+
+    skos:related <https://vocab.nerc.ac.uk/collection/S11/current/S1121/> ;
 .
+
 <#temporary_cyst>
     a skos:Concept, aphia-trait:Trait ;
     skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "temporary cyst"@en ;
     skos:definition "A general term for nonmotile stages other than resting cysts (Dale 1983, p. 78)."@en ;
+
+    skos:related <https://vocab.nerc.ac.uk/collection/S11/current/S1121/> ;
 .
+
 <#gametes>
     a skos:Concept, aphia-trait:Trait ;
     skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "gametes"@en ;
     skos:definition "Haploid reproductive cell which, on fusion with another gamete produces a diploid cell (zygote) (Fensome et al. 1993, p. 254). "@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S1156/> ;
 .
 <#auxospore>
     a skos:Concept, aphia-trait:Trait ;
     skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "auxospore"@en ;
     skos:definition "Large cell resulting from sexual reproduction or autogamy. In diatoms, they lack the rigid valve construction as other cells; instead, they are covered by delicate siliceous scales or bands (= perizonium) (Wehr et al. 2015, p. 964)."@en ;
+
+    skos:closeMatch <https://vocab.nerc.ac.uk/collection/S11/current/S1117/> ;
 .
 <#copepodite_stage_not_specified>
     a skos:Concept, aphia-trait:Trait ;

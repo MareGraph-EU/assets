@@ -24,6 +24,8 @@
     skos:inScheme <https://aphia.org/ns/traits/> ;
     skos:prefLabel "Macroalgae"@en ;
     skos:definition "Paraphyletic group to combine all macroalgae in Aphia."@en ;
+
+    skos:related <https://vocab.nerc.ac.uk/collection/S25/current/BE009624/> ;
 .
 
 <#mangroves>

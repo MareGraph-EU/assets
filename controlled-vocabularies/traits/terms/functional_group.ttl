@@ -172,6 +172,10 @@
     skos:definition "The component of the plankton that consists of organisms 20 to 200 microns (µm) (0,02 to 0,2 mm) in size."@en ;
 
     skos:broader <#plankton> ; 
+
+    skos:related <https://vocab.nerc.ac.uk/collection/S25/current/BE006314/> ,
+                <https://vocab.nerc.ac.uk/collection/S25/current/BE006313/> ,
+                <https://vocab.nerc.ac.uk/collection/S25/current/BE006309/> ;
 .
 
 <#nanoplankton>
@@ -181,6 +185,8 @@
     skos:definition "The component of the plankton that consists of very small organisms 2 to 20 microns (µm) (0,002 to 0,02 mm) in size; they are too small to catch in a standard plankton net."@en ;
 
     skos:broader <#plankton> ; 
+
+    skos:related <https://vocab.nerc.ac.uk/collection/S25/current/BE006310/> , <https://vocab.nerc.ac.uk/collection/S25/current/BE006315/> ;
 .
 
 <#picoplankton>
@@ -190,6 +196,8 @@
     skos:definition "The component of the plankton that consists of extremely small organisms, 0,2 to 2 microns (µm) (0,0002 to 0,002 mm) in size; they are too small to catch in a standard plankton net."@en ;
 
     skos:broader <#plankton> ; 
+
+    skos:related <https://vocab.nerc.ac.uk/collection/S25/current/BE004254/> ;
 .
 
 <#femtoplankton>
@@ -208,6 +216,8 @@
     skos:definition "Plankton obtaining nourishment via heterotrophy. They are incapable of phototrophy; cf. mixoplankton."@en ;
 
     skos:broader <#plankton> ; 
+
+    skos:related <https://vocab.nerc.ac.uk/collection/S25/current/BE005887/> ;
 .
 
 <#phytoplankton>
@@ -217,6 +227,8 @@
     skos:definition "Plankton obtaining nourishment via photo(auto)trophy and osmo(hetero)trophy. They are incapable of phagotrophy; cf. mixoplankton."@en ;
 
     skos:broader <#plankton> ; 
+
+    skos:related <https://vocab.nerc.ac.uk/collection/S25/current/BE004249/> ;
 .
 
 <#mixoplankton>

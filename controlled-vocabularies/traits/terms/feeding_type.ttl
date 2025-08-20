@@ -242,6 +242,7 @@
     skos:narrower <#ectoparasitic> , <#endocommensal> , <#endoparasitic> ;
 
     skos:closeMatch <https://kos.lifewatch.eu/thesauri/traits/c_059f2729> ; 
+    skos:related <https://vocab.nerc.ac.uk/collection/S13/current/S1323/> ;
 .
 
 <#ectoparasitic>

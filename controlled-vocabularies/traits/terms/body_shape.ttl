@@ -38,6 +38,8 @@
     skos:definition "Forming main and lateral branches (and branchlets) (macroalgae thallus; Womersley, 1987)."@en ;
 
     skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_fda4947a> ; 
+    skos:related <https://vocab.nerc.ac.uk/collection/S14/current/S1462/> ,
+                <https://vocab.nerc.ac.uk/collection/S14/current/S1442/> ;
 .
 <#capitate>
     a skos:Concept, aphia-trait:Trait ;
@@ -61,7 +63,7 @@
     skos:prefLabel "Cushion-like"@en ;
     skos:definition "Approximating the shape of a cushion (macroalgae thallus; Womersley, 1987)."@en ;
 
-    #skos:exactMatch ... ; 
+    skos:exactMatch <https://vocab.nerc.ac.uk/collection/S14/current/S1453/> ; 
 .
 <#discoid>
     a skos:Concept, aphia-trait:Trait ;
@@ -86,6 +88,7 @@
     skos:definition "Existing out of a branched or unbranched row of cells joined end to end (macroalgae thallus; Womersley, 1987)."@en ;
 
     skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_c5eb7429> ; 
+    skos:related <https://vocab.nerc.ac.uk/collection/S14/current/S1400/> ;
 .
 <#flabellate>
     a skos:Concept, aphia-trait:Trait ;
@@ -110,6 +113,7 @@
     skos:definition "(1) Divided in a feathery manner; (2) having lateral processes; (3) (bot.) of a compound leaf, having leaflets on each side of an axis or midrib (Henderson's Dictionary of Biology; Lawrence, 2005). With laterals or branches arranged along each side of an axis or branch (macroalgae thallus; Womersley, 1987)."@en ;
 
     skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_1107d291> ; 
+    skos:related <https://vocab.nerc.ac.uk/collection/S14/current/S1493/> ;
 .
 <#prostrate>
     a skos:Concept, aphia-trait:Trait ;
@@ -133,7 +137,9 @@
     skos:prefLabel "Spheric"@en ;
     skos:definition "Approximating the shape of a sphere (macroalgae thallus; Womersley, 1987)."@en ;
 
-    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_f093134c> ; 
+    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_f093134c> ,
+                    <https://vocab.nerc.ac.uk/collection/S14/current/S1470/> ; 
+    skos:related <https://vocab.nerc.ac.uk/collection/S14/current/S1468/> ;
 .
 <#tubular>
     a skos:Concept, aphia-trait:Trait ;
@@ -141,7 +147,8 @@
     skos:prefLabel "Tubular"@en ;
     skos:definition "In the form of a tube, having tubes, consisting of tubes (Henderson's Dictionary of Biology; Lawrence, 2005)."@en ;
 
-    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_6fd475a8> ; 
+    skos:exactMatch <https://kos.lifewatch.eu/thesauri/traits/c_6fd475a8> , 
+                    <https://vocab.nerc.ac.uk/collection/S14/current/S1477/> ; 
 .
 <#unreported_body_shape>
     a skos:Concept, aphia-trait:Trait ;

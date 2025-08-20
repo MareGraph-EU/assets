@@ -22,7 +22,7 @@
 
     skos:narrower <#social_colonies_of_unitary_organisms> , <#modular_organisms> , <#microbial_colonies> ; 
 
-    #skos:exactMatch ... ; 
+    #skos:related <https://vocab.nerc.ac.uk/collection/S13/current/S138/> ; 
 .
 <#social_colonies_of_unitary_organisms>
     a skos:Concept, aphia-trait:Trait ;
