@@ -193,7 +193,7 @@ dct:coverage rdf:type owl:ObjectProperty .
                                   "Eigenschap gebruikt om de motivatie te specificeren waarvoor een naam niet wordt geaccepteerd voor een taxonnaam."@nl ; 
                      rdfs:isDefinedBy <https://aphia.org/ns/taxon-name> ;
                      rdfs:label "ha motivo non accettato"@it ,
-                                "ha unaccepted reason"@en ,
+                                "has unaccepted reason"@en ,
                                 "heeft niet-geaccepteerd reden"@nl .
 
 
