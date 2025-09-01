@@ -1,0 +1,221 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@base <https://aphia.org/ns/traits/feeding_method> .
+
+<>
+    a skos:Collection ; 
+    dct:description "These are terms related to how an organism eats."@en ;
+
+    skos:member <#predator> , 
+                    <#pred_on_sessile_prey> , 
+                    <#pred_on_mobile_prey> , 
+                <#scavenger> , 
+                <#suspension_feeder> , 
+                    <#filter_feeder> , 
+                        <#obligate_filter_feeder> , 
+                        <#facultative_filter_feeder> , 
+                <#deposit_feeder> , 
+                    <#selective_deposit_feeder> , 
+                    <#non_selective_deposit_feeder> , 
+                    <#surface_deposit_feeder> , 
+                    <#subsurface_deposit_feeder> , 
+                <#grazer> , 
+                    <#grazer_on_organic_substrates> , 
+                    <#grazer_on_periphyton> , 
+                    <#grazer_on_algae> , 
+                <#epigrowth_feeder> , 
+                <#predator_omnivore> ,
+                <#kleptovore> ,
+                <#non_feeding> ,
+                <#unknown> ;
+.
+
+<#predator>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Predator"@en ;
+    skos:definition "Organism able to utilize carbon dioxide as its sole source of carbon, and inorganic sources of nitrogen (e.g. nitrates, ammonium salts) and other elements as its sole starting materials for biosynthesis."@en ;
+
+    skos:narrower <#pred_on_sessile_prey> , <#pred_on_mobile_prey> ;
+.
+
+<#pred_on_sessile_prey>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Predator on sessile prey"@en ;
+    skos:definition "Any organism that feeds by preying on sessile organisms, killing them for food (adapted from Lincoln et al., 1998)."@en ;
+
+    skos:broader <#predator> ;
+.
+
+<#pred_on_mobile_prey>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Predator on mobile prey"@en ;
+    skos:definition "Any organism that feeds by preying on mobile organisms, killing them for food (adapted from Lincoln et al., 1998)."@en ;
+
+    skos:broader <#predator> ;
+.
+
+<#scavenger>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Scavenger"@en ;
+    skos:definition "Any organism that feeds on carrion or organic refuse."@en ;
+.
+
+<#suspension_feeder>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Suspension feeder"@en ;
+    skos:definition "Any organism that feeds on particulate organic matter suspended in water."@en ;
+
+    skos:narrower <#filter_feeder> ;
+.
+
+<#filter_feeder>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Filter feeder"@en ;
+    skos:definition "Any animal that feeds by actively filtering suspended particulate organic matter from water. Captures planktonic particles by pumping or sweeping water past a filter."@en ;
+
+    skos:broader <#suspension_feeder> ;
+    skos:narrower <#obligate_filter_feeder> , <#facultative_filter_feeder> ;
+.
+
+<#obligate_filter_feeder>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Obligate filter feeder"@en ;
+    skos:definition "Obligate suspension feeder. Organism feeds only as a suspension feeder."@en ;
+
+    skos:broader <#filter_feeder> ;
+.
+
+<#facultative_filter_feeder>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Facultative filter feeder"@en ;
+    skos:definition "Facultative suspension feeder. Some species (e.g. polychaetes Nereis diversicolor and Pygospio elegans, gastropods Valvata piscinalis and Viviparus viviparus, bivalve Macoma balthica, etc) are known to use more than one feeding mode, e.g. to get particles from the water column (by filtering or using mucus nets) and also collect detritus from the surface of the bottom sediments (Fauchald and Jumars 1979; Kuznetzov 1980; Tsikhon-Lukanina 1987). These species were defined as “facultative suspension-feeders” to distinguish them from those which exclusively suspension-feed, i.e. “obligatory suspension-feeders”, such as the bivalve Mytilus edulis trossulus, the barnacle Balanus improvisus or the bryozoan Electra crustulenta."@en ;
+
+    skos:broader <#filter_feeder> ;
+.
+
+<#deposit_feeder>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Deposit feeder"@en ;
+    skos:definition "Any organism that feeds on fragmented particulate organic matter in or on the substratum; a detritivorous organism."@en ;
+
+    skos:narrower <#selective_deposit_feeder> , <#non_selective_deposit_feeder> , <#surface_deposit_feeder> , <#subsurface_deposit_feeder> ;
+.
+
+<#selective_deposit_feeder>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Selective Deposit feeder"@en ;
+    skos:definition "Feeding group category for marine free-living meiobenthic Nematoda. Group 1-A: Without any mouth-cavity (though sometimes with traces of it). Food obtained mainly by means of the sucking power of the oesophagus. Consistency of material available as food most probable soft or floating. Large and hard particles never found in the intestine. Probably selective deposit-feeders."@en ;
+
+    skos:broader <#deposit_feeder> ; 
+.
+
+<#non_selective_deposit_feeder>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Non-selective Deposit feeder"@en ;
+    skos:definition "Feeding group category for marine free-living meiobenthic Nematoda. Group 1-B: With cup-shaped, conical or cylindrical mouth-cavity, without any armature. Food obtained as above with additional help from active movements of lips and the anterior part of the mouth-cavity itself. Material available as food as above though larger objects (e.g. diatoms) are now being swallowed. Non-selective deposit-feeders."@en ;
+
+    skos:broader <#deposit_feeder> ; 
+.
+
+<#surface_deposit_feeder>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Surface Deposit feeder"@en ;
+    skos:definition "Any organism that feeds on fragmented particulate organic matter on the surface of the substratum (e.g. Corophium volutator) (adapted from Lincoln et al., 1998)."@en ;
+
+    skos:broader <#deposit_feeder> ; 
+.
+
+<#subsurface_deposit_feeder>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Subsurface Deposit feeder"@en ;
+    skos:definition "Any organism that feeds on fragmented particulate organic matter within the substratum (e.g. Echinocardium cordatum) (adapted from Lincoln et al., 1998)."@en ;
+
+    skos:broader <#deposit_feeder> ; 
+.
+
+<#grazer>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Grazer"@en ;
+    skos:definition "Any organism that feeds on herbage, algae or phytoplankton, by consuming the whole food plant or by cropping the entire surface growth in the case of herbage; cf. browsing."@en ;
+
+    skos:narrower <#grazer_on_organic_substrates> , <#grazer_on_periphyton> , <#grazer_on_algae> ;
+.
+
+<#grazer_on_organic_substrates>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Grazer on organic substrates"@en ;
+    skos:definition "Grazing on organic substrates."@en ;
+
+    skos:broader <#grazer> ;
+.
+
+<#grazer_on_periphyton>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Grazer on periphyton"@en ;
+    skos:definition "Grazing on periphyton. Any organism that feeds on periphyton, a community of plants, animals and associated detritus adhering to and forming a surface coating on stones, plants and other submerged objects (adapted from Lincoln et al., 1998)."@en ;
+
+    skos:broader <#grazer> ;
+.
+
+<#grazer_on_algae>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Grazer on algae"@en ;
+    skos:definition "Grazing on algae. Any organism that feeds on algae, by consuming the whole food plant (adapted from Lincoln et al., 1998)."@en ;
+
+    skos:broader <#grazer> ;
+.
+
+<#epigrowth_feeder>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Epigrowth feeder"@en ;
+    skos:definition "Feeding group category for marine free-living meiobenthic Nematoda. Group 2-A: Mouth-cavity provided with small armature. Food scraped off bigger surfaces, or else the food-object is pierced and the cell-liquid sucked through the hole made in its wall. Epigrowth-feeders."@en ;
+.
+
+<#predator_omnivore>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "predator/omnivore"@en ;
+    skos:definition "Feeding group category for marine free-living meiobenthic Nematoda. Group 2-B: With big and powerful armature of different structure. Mostly predators. Prey swallowed whole or pierced by means of spears or teeth and the liquid food sucked and swallowed."@en ;
+.
+
+<#kleptovore>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Kleptovore"@en ;
+    skos:definition "Feeding type specifically for Nemertea species that live inside bivalves and steal part of the food that has been filtered by the bivalve. Note that this is different from kleptoparasitism, where the female searches out the prey or stored food of another female, usually of a different species, and takes it for her own offspring (Lawrence, 2005). (The 'kleptovore' feeding type was requested by the Nemertea editors during their WoRMS Editor Workshop in 2017.)"@en ;
+.
+
+<#non_feeding>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Non feeding"@en ;
+    skos:definition "Non-feeding life stages (e.g. lecithotroph)."@en ;
+.
+
+<#unknown>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Unknown"@en ;
+    skos:definition "According to literature it is unknown which feeding method this organism has."@en ;
+.

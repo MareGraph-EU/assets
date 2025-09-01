@@ -1,0 +1,129 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@base <https://aphia.org/ns/traits/trophic_level> .
+
+<>
+    a skos:Collection ; 
+    dct:description "These are terms related to what an organism eats or where an organism gets its nutrients from."@en ;
+
+    skos:member <#autotroph> , 
+                    <#phototroph> , 
+                    <#chemotroph> , 
+                <#heterotroph> , 
+                    <#carnivore> , 
+                    <#herbivore> , 
+                        <#lignivore> , 
+                    <#omnivore> , 
+                    <#planktivore> , 
+                    <#detritivore> , 
+                <#mixotroph> , 
+                <#unknown> ;
+.
+
+<#autotroph>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Autotroph"@en ;
+    skos:definition "Organism able to utilize carbon dioxide as its sole source of carbon, and inorganic sources of nitrogen (e.g. nitrates, ammonium salts) and other elements as its sole starting materials for biosynthesis."@en ;
+
+    skos:narrower <#phototroph> , <#chemotroph> ;
+.
+
+<#phototroph>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Phototroph"@en ;
+    skos:definition "Organism using sunlight as a source of energy."@en ;
+  
+    skos:broader <#autotroph> ;
+.
+
+<#chemotroph>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Chemotroph"@en ;
+    skos:definition "Organism that uses chemicals as its source of energy. These may be inorganic chemicals as in chemolithotrophs, or organic compounds as in chemoorganotrophs."@en ;
+  
+    skos:broader <#autotroph> ;
+.
+
+<#heterotroph>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Heterotroph"@en ;
+    skos:definition "Organism requiring organic compounds as a carbon source."@en ;
+
+    skos:narrower <#carnivore> , <#herbivore> , <#omnivore> , <#planktivore> , <#detritivore> ; 
+.
+
+<#carnivore>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Carnivore"@en ;
+    skos:definition "Flesh-eating; creophagous; sarcophagous."@en ;
+  
+    skos:broader <#heterotroph> ;
+.
+
+<#herbivore>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Herbivore"@en ;
+    skos:definition "Any organism that feeds on plants; phytophagous; also used of protozoans that feed on bacteria and/or othe algae."@en ;
+ 
+    skos:broader <#heterotroph> ;
+    skos:narrower <#lignivore> ; 
+.
+
+<#lignivore>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Herbivore"@en ;
+    skos:definition "Feeding on wood; dendrophagous; hylophagous; lignivorous; xylophagous; xylophage, xylophagy."@en ;
+ 
+    skos:broader <#herbivore> ;
+.
+
+<#omnivore>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Omnivore"@en ;
+    skos:definition "Any organism that feeds on a mixed diet of plant and animal material."@en ;
+   
+    skos:broader <#heterotroph> ;
+.
+
+<#planktivore>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Planktivore"@en ;
+    skos:definition "Any organism that feeds on plankton."@en ;
+  
+    skos:broader <#heterotroph> ;
+.
+
+<#detritivore>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Detritivore"@en ;
+    skos:definition "Any organism that feeds on fragmented particulate organic matter (detritus); detritus feeder."@en ;
+  
+    skos:broader <#heterotroph> ;
+.
+
+<#mixotroph>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Mixotroph"@en ;
+    skos:definition "Organism that can use an inorganic compound as an energy source and an organic compound as a carbon source."@en ;
+.
+
+<#unknown>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Unknown"@en ;
+    skos:definition "According to literature it is unknown which trophic level this organism has."@en ;
+.

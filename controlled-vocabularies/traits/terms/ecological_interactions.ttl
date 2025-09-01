@@ -1,0 +1,363 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix aphia-trait: <https://aphia.org/ns/attribute-trait/> .
+
+@base <https://aphia.org/ns/traits/ecological_interactions> .
+
+<>
+    a skos:Collection ; 
+    dct:description "These terms are related to how an organism ecologically interacts with other organisms, whether it is free living or symbiotic (e.g. parasitic)."@en ;
+
+    skos:member <#free_living> , 
+                <#symbiotic> , 
+                    <#mutualistic> , 
+                        <#endomutualistic> , 
+                        <#ectomutualistic> , 
+                        <#cleaning> , 
+                    <#parasitic> , 
+                        <#endoparasitic> , 
+                        <#ectoparasitic> , 
+                        <#mesoparasitic> , 
+                    <#commensal> , 
+                        <#endocommensal> , 
+                        <#ectocommensal> , 
+                        <#inquiline> , 
+                    <#with_chemosymbionts> , 
+                    <#suspected_symbiont> , 
+                    <#endosymbiont> , 
+                    <#ectosymbiont> , 
+                    <#camouflage> , 
+                    <#shelter> , 
+                    <#decorating> , 
+                    <#photosymbiotic> , 
+                        <#obligate_photosymbiotic> , 
+                             <#obligate_dinoflagellates_zooxanthellate> , 
+                             <#obligate_green_algae_zoochlorellate> , 
+                             <#obligate_cyanobacteria> , 
+                             <#obligate_unknown> , 
+                        <#facultative_apophotosymbiotic> ,
+                            <#facultative_dinoflagellates_zooxanthellate> , 
+                            <#facultative_green_algae_zoochlorellate> , 
+                            <#facultative_cyanobacteria> , 
+                            <#facultative_unknown> ,
+                        <#not_photosymbiotic> ,
+                        <#unknown_photosymbiotic> ,
+                <#unknown> ;
+.
+
+<#free_living>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Free living"@en ;
+    skos:definition "Species which is not known or suspected to take part in a symbiotic relationship."@en ;
+.
+
+<#symbiotic>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Symbiotic"@en ;
+    skos:definition "Participating in symbiosis. Symbiosis is the living together of two organisms; the relationship between two interacting organisms or populations, commonly used to describe all relationships between members of two different species, and also to include intraspecific associations; sometimes restricted to those associations that are mutually beneficial."@en ;
+
+    skos:narrower <#mutualistic> , <#parasitic> , <#commensal> , <#with_chemosymbionts> , <#suspected_symbiont> , <#endosymbiont> , <#ectosymbiont> , <#camouflage> , <#shelter> , <#decorating> , <#photosymbiotic> ;
+.
+
+<#mutualistic>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Mutualistic"@en ;
+    skos:definition "Special case of symbiosis in which both partners benefit from the association."@en ;
+
+    skos:broader <#symbiotic> ; 
+    skos:narrower <#endomutualistic> , <#ectomutualistic> , <#cleaning> ; 
+.
+
+<#endomutualistic>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Endomutualistic"@en ;
+    skos:definition "A mutualistic relationship where one organism lives within the body or cells of another organism."@en ;
+
+    skos:broader <#mutualistic> ; 
+.
+
+<#ectomutualistic>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Ectomutualistic"@en ;
+    skos:definition "A mutualistic relationship where one organism lives on the outer surface of another organism."@en ;
+
+    skos:broader <#mutualistic> ; 
+.
+
+<#cleaning>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Cleaning"@en ;
+    skos:definition "Species that removes ectoparasites, diseased and injured tissue, and unwanted food particles from a client (host)."@en ;
+
+    skos:broader <#mutualistic> ; 
+.
+
+<#parasitic>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Parasitic"@en ;
+    skos:definition "Any organism that is intimately associated with, and metabolically dependent upon another living organism (the host) for completion of its life cycle, and which is typically detrimental to the host to a greater or lesser extent."@en ;
+
+    skos:broader <#symbiotic> ; 
+    skos:narrower <#endoparasitic> , <#ectoparasitic> , <#mesoparasitic> ; 
+.
+
+<#endoparasitic>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Endoparasitic"@en ;
+    skos:definition "An internal parasite which lives within the organs or tissues of its host; endosite; entoparasite; cf. ectoparasite."@en ;
+
+    skos:broader <#parasitic> ; 
+.
+
+<#ectoparasitic>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Ectoparasitic"@en ;
+    skos:definition "A parasite that lives on the outer surface of its host, ectosite; epiparasite; episite; exoparasite; cf. endoparasite."@en ;
+
+    skos:broader <#parasitic> ; 
+.
+
+<#mesoparasitic>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Mesoparasitic"@en ;
+    skos:definition "A type of parasite intermediate between ecto- and endoparasites."@en ;
+
+    skos:broader <#parasitic> ; 
+.
+
+<#commensal>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Commensal"@en ;
+    skos:definition "Participating in commensalism. Commensalism is symbiosis in which one species derives benefit from a common food supply whilst the other species is not adversely affected."@en ;
+
+    skos:broader <#symbiotic> ; 
+    skos:narrower <#endocommensal> , <#ectocommensal> , <#inquiline> ; 
+.
+
+<#endocommensal>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Endocommensal"@en ;
+    skos:definition "A commensal symbiont that lives inside of its host."@en ;
+
+    skos:broader <#commensal> ; 
+.
+
+<#ectocommensal>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Ectocommensal"@en ;
+    skos:definition "A commensal symbiont living on the surface of another organism."@en ;
+
+    skos:broader <#commensal> ; 
+.
+
+<#inquiline>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Inquiline"@en ;
+    skos:definition "Inquilism (dwelling within inanimate cavities, such as burrows and tubes in soft sediment, where the host may or may not be present)."@en ;
+
+    skos:broader <#commensal> ; 
+.
+
+<#with_chemosymbionts>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "With chemosymbionts"@en ;
+    skos:definition "Symbiosis in which a bacterium provides chemically-derived energy and nutrients."@en ;
+
+    skos:broader <#symbiotic> ;
+.
+
+<#suspected_symbiont>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Suspected symbiont"@en ;
+    skos:definition "Species which is suspected to take part in a symbiotic relation, but without real observations."@en ;
+
+    skos:broader <#symbiotic> ;
+.
+
+<#endosymbiont>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Endosymbiont"@en ;
+    skos:definition "Co-habiting as endosymbiont."@en ;
+
+    skos:broader <#symbiotic> ;
+.
+
+<#ectosymbiont>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Ectosymbiont"@en ;
+    skos:definition "Co-habiting as ectosymbiont."@en ;
+
+    skos:broader <#symbiotic> ;
+.
+<#camouflage>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Camouflage"@en ;
+    skos:definition "Carrying for camouflage (pereiopod modification)."@en ;
+
+    skos:broader <#symbiotic> ;
+.
+
+<#shelter>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Shelter"@en ;
+    skos:definition "Carrying for shelter (pereiopod and/or abdomen modification)."@en ;
+
+    skos:broader <#symbiotic> ;
+.
+
+<#decorating>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Decorating"@en ;
+    skos:definition "Decorating (hooked setae modification)."@en ;
+
+    skos:broader <#symbiotic> ;
+.
+
+<#photosymbiotic>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Photosymbiotic"@en ;
+    skos:definition "Organism hosts phototropic partner."@en ;
+
+    skos:broader <#symbiotic> ;
+    skos:narrower <#obligate_photosymbiotic> , <#facultative_apophotosymbiotic> , <#not_photosymbiotic> , <#unknown_photosymbiotic> ;
+.
+
+<#obligate_photosymbiotic>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Obligate photosymbiotic"@en ;
+    skos:definition "Organism hosts phototropic partner, obligately."@en ;
+
+    skos:broader <#photosymbiotic> ;
+    skos:narrower <#obligate_dinoflagellates_zooxanthellate> , <#obligate_green_algae_zoochlorellate> , <#obligate_cyanobacteria> , <#obligate_unknown> ;
+.
+
+<#obligate_dinoflagellates_zooxanthellate>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Obligate dinoflagellates (apozooxanthellate)"@en ;
+    skos:definition "The photosynthetic partner is a dinoflagellate."@en ;
+
+    skos:broader <#obligate_photosymbiotic> ;
+.
+
+<#obligate_green_algae_zoochlorellate>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Obligate green algae (apozoochlorellate)"@en ;
+    skos:definition "The photosynthetic partner is a green algae, and specifically a Chlorophyta."@en ;
+
+    skos:broader <#obligate_photosymbiotic> ;
+.
+
+<#obligate_cyanobacteria>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Obligate Cyanobacteria"@en ;
+    skos:definition "The photosynthetic partner is a Cyanobacteria. "@en ;
+
+    skos:broader <#obligate_photosymbiotic> ;
+.
+
+<#obligate_unknown>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Obligate Unknown"@en ;
+    skos:definition "The photosynthetic partner is unknown."@en ;
+
+    skos:broader <#obligate_photosymbiotic> ;
+.
+
+<#facultative_apophotosymbiotic>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Facultative (apophotosymbiotic)"@en ;
+    skos:definition "Organism hosts phototropic partner under some circumstances, but not obligately."@en ;
+
+    skos:broader <#photosymbiotic> ;
+    skos:narrower <#facultative_dinoflagellates_zooxanthellate> , <#facultative_green_algae_zoochlorellate> , <#facultative_cyanobacteria> , <#facultative_unknown> ;
+.
+
+<#facultative_dinoflagellates_zooxanthellate>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Facultative dinoflagellates (apozooxanthellate)"@en ;
+    skos:definition "The photosynthetic partner is a dinoflagellate."@en ;
+
+    skos:broader <#facultative_apophotosymbiotic> ;
+.
+
+<#facultative_green_algae_zoochlorellate>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Facultative green algae (apozoochlorellate)"@en ;
+    skos:definition "The photosynthetic partner is a green algae, and specifically a Chlorophyta."@en ;
+
+    skos:broader <#facultative_apophotosymbiotic> ;
+.
+
+<#facultative_cyanobacteria>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Facultative Cyanobacteria"@en ;
+    skos:definition "The photosynthetic partner is a Cyanobacteria. "@en ;
+
+    skos:broader <#facultative_apophotosymbiotic> ;
+.
+
+<#facultative_unknown>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Facultative unknown"@en ;
+    skos:definition "The photosynthetic partner is unknown."@en ;
+
+    skos:broader <#facultative_apophotosymbiotic> ;
+.
+
+<#not_photosymbiotic>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Not photosymbiotic"@en ;
+    skos:definition "Organism does not host phototropic partner."@en ;
+
+    skos:broader <#photosymbiotic> ;
+.
+
+<#unknown_photosymbiotic>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Unknown"@en ;
+    skos:definition "It is unknown whether or not the organism hosts a phototrophic partner."@en ;
+
+    skos:broader <#photosymbiotic> ;
+.
+
+<#unknown>
+    a skos:Concept, aphia-trait:Trait ;
+    skos:inScheme <https://aphia.org/ns/traits/> ;
+    skos:prefLabel "Unknown"@en ;
+    skos:definition "It is unknown whether or not the organism hosts a phototrophic partner."@en ;
+.
