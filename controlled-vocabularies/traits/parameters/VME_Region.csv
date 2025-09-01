@@ -1,22 +1,22 @@
-ID,type,http__www_w3_org_2004_02_skos_core_definition,http__www_w3_org_2004_02_skos_core_inScheme,http__www_w3_org_2004_02_skos_core_member,http__www_w3_org_1999_02_22-rdf-syntax-ns_type,http__www_w3_org_2004_02_skos_core_prefLabel,http__purl_org_dc_terms_description
-https://aphia.org/ns/traits/vme_region#,collection,,,https://aphia.org/ns/traits/vme_region#fao_fishing_area_XVI,,,...
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_XV,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area XV,
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_XIII,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area XIII,
-https://aphia.org/ns/traits/vme_region#No_regional_information_available,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,,
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_IX,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area IX,
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_V,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area V,
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_IV,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area IV,
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_VIII,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area VIII,
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_XII,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area XII,
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_VII,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area VII,
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_XVIII,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area XVIII,
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_II,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area II,
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_X,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area X,
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_III,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area III,
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_VI,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area VI,
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_XI,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area XI,
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_XVII,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area XVII,
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_XIV,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area XIV,
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_XVI,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area XVI,
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_I,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area I,
-https://aphia.org/ns/traits/vme_region#fao_fishing_area_XIX,concept,...,https://aphia.org/ns/traits/,,https://aphia.org/ns/attribute-trait/Trait,fao fishing area XIX,
+ID,type,http__www_w3_org_2004_02_skos_core_prefLabel,http__purl_org_dc_terms_description,http__www_w3_org_1999_02_22-rdf-syntax-ns_type,http__www_w3_org_2004_02_skos_core_member,http__www_w3_org_2004_02_skos_core_definition,http__www_w3_org_2004_02_skos_core_inScheme
+https://aphia.org/ns/traits/vme_region#,collection,,...,,https://aphia.org/ns/traits/vme_region#fao_fishing_area_XIV,,
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_VIII,concept,fao fishing area VIII,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_XIV,concept,fao fishing area XIV,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_V,concept,fao fishing area V,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_II,concept,fao fishing area II,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_IV,concept,fao fishing area IV,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_VI,concept,fao fishing area VI,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_IX,concept,fao fishing area IX,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_XIX,concept,fao fishing area XIX,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_III,concept,fao fishing area III,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_XII,concept,fao fishing area XII,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_XVIII,concept,fao fishing area XVIII,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_I,concept,fao fishing area I,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_VII,concept,fao fishing area VII,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_XVI,concept,fao fishing area XVI,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#No_regional_information_available,concept,,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_XVII,concept,fao fishing area XVII,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_XV,concept,fao fishing area XV,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_XI,concept,fao fishing area XI,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_X,concept,fao fishing area X,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
+https://aphia.org/ns/traits/vme_region#fao_fishing_area_XIII,concept,fao fishing area XIII,,https://aphia.org/ns/attribute-trait/Trait,,...,https://aphia.org/ns/traits/
