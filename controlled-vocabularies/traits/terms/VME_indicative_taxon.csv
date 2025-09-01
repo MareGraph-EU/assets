@@ -1,4 +1,4 @@
-ID,type,http__www_w3_org_2004_02_skos_core_definition,http__purl_org_dc_terms_description,http__www_w3_org_2004_02_skos_core_inScheme,http__www_w3_org_2004_02_skos_core_member,http__www_w3_org_2004_02_skos_core_prefLabel,http__www_w3_org_1999_02_22-rdf-syntax-ns_type
-https://aphia.org/ns/traits/vme_indicative_taxon#,collection,,...,,https://aphia.org/ns/traits/vme_indicative_taxon#vme_indicative_taxon_yes,,
-https://aphia.org/ns/traits/vme_indicative_taxon#vme_indicative_taxon_yes,concept,...,,https://aphia.org/ns/traits/,,Yes,https://aphia.org/ns/attribute-trait/Trait
-https://aphia.org/ns/traits/vme_indicative_taxon#vme_indicative_taxon_no,concept,,,https://aphia.org/ns/traits/,,No,https://aphia.org/ns/attribute-trait/Trait
+ID,type,http__www_w3_org_2004_02_skos_core_prefLabel,http__www_w3_org_2004_02_skos_core_member,http__purl_org_dc_terms_description,http__www_w3_org_2004_02_skos_core_definition,http__www_w3_org_2004_02_skos_core_inScheme,http__www_w3_org_1999_02_22-rdf-syntax-ns_type
+https://aphia.org/ns/traits/vme_indicative_taxon#,collection,,https://aphia.org/ns/traits/vme_indicative_taxon#vme_indicative_taxon_no,...,,,
+https://aphia.org/ns/traits/vme_indicative_taxon#vme_indicative_taxon_yes,concept,Yes,,,...,https://aphia.org/ns/traits/,https://aphia.org/ns/attribute-trait/Trait
+https://aphia.org/ns/traits/vme_indicative_taxon#vme_indicative_taxon_no,concept,No,,,,https://aphia.org/ns/traits/,https://aphia.org/ns/attribute-trait/Trait

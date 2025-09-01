@@ -1,4 +1,4 @@
-ID,type,http__www_w3_org_2004_02_skos_core_note,http__www_w3_org_2004_02_skos_core_member,http__www_w3_org_1999_02_22-rdf-syntax-ns_type,http__www_w3_org_2004_02_skos_core_prefLabel,http__www_w3_org_2000_01_rdf-schema_label
-https://aphia.org/ns/traits/#https://aphia.org/ns/traits/,,"This controlled vocabulary of Aphia attributes and traits operates under the Open World Assumption (OWA), 
+ID,type,http__www_w3_org_2004_02_skos_core_prefLabel,http__www_w3_org_2004_02_skos_core_member,http__www_w3_org_2004_02_skos_core_note,http__www_w3_org_1999_02_22-rdf-syntax-ns_type,http__www_w3_org_2000_01_rdf-schema_label
+https://aphia.org/ns/traits/#https://aphia.org/ns/traits/,,Controlled vocabulary for Aphia attributes and traits,https://aphia.org/ns/traits/ecological_interactions,"This controlled vocabulary of Aphia attributes and traits operates under the Open World Assumption (OWA), 
                 meaning that the absence of an trait in this collection does not imply that the trait does not exist. 
-                It may simply mean the trait is not yet included or explicitly documented.",https://aphia.org/ns/traits/body_shape,http://www.w3.org/2004/02/skos/core#ConceptScheme,Controlled vocabulary for Aphia attributes and traits,Controlled vocabulary for Aphia attributes and traits
+                It may simply mean the trait is not yet included or explicitly documented.",http://www.w3.org/2004/02/skos/core#ConceptScheme,Controlled vocabulary for Aphia attributes and traits
