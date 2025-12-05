@@ -51,74 +51,11 @@
     ] ;
     sh:property [
         sh:path skos:note ;
-        sh:class rdf:PlainLiteral ;
+        sh:datatype xsd:string ; 
     ] ;
     sh:property [
         sh:path :isTypeLocality ;
         sh:datatype xsd:boolean ;
         sh:maxCount 1 ;
     ] ;
-.
-
-
-### Shape for Invasiveness
-:InvasivenessShape a sh:NodeShape ;
-    sh:targetClass :Invasiveness ;
-.
-
-
-### Shape for Occurrence
-:OccurrenceShape a sh:NodeShape ;
-    sh:targetClass :Occurrence ;
-.
-
-### Shape for Origin
-:OriginShape a sh:NodeShape ;
-    sh:targetClass :Origin ;
-.
-
-#### DatatypePropertyShapes ####            are these needed?
-### PropertyShape for isTypeLocality                  also specified in DistributionShape
-:IsTypeLocalityPropertyShape a sh:PropertyShape ;
-    sh:path :isTypeLocality ;
-    sh:datatype xsd:boolean ;                # unsure
-    sh:class rdf:PlainLiteral ;                # unsure
-.
-
-
-#### ObjectPropertyShapes ####            are these needed?
-### PropertyShape for hasArea               # also specified DistributionShape
-:HasAreaPropertyShape a sh:PropertyShape ;
-    sh:path :hasArea ;
-    sh:class <http://marineregions.org/ns/ontology#MRGeoObject> ;
-.
-
-### PropertyShape for hasDistribution               # also specified taxon-name:TaxonShape
-:HasDistributionPropertyShape a sh:PropertyShape ;
-    sh:path :hasDistribution ;
-    sh:class :Distribution ;
-.
-
-### PropertyShape for hasInvasiveness               # also specified DistributionShape
-:HasInvasivenessPropertyShape a sh:PropertyShape ;
-    sh:path :hasInvasiveness ;
-    sh:class :Invasiveness ;
-.
-
-### PropertyShape for hasOccurrence               # also specified DistributionShape
-:HasOccurrencePropertyShape a sh:PropertyShape ;
-    sh:path :hasOccurrence ;
-    sh:class :Occurrence ;
-.
-
-### PropertyShape for hasOrigin               # also specified DistributionShape
-:HasOriginPropertyShape a sh:PropertyShape ;
-    sh:path :hasOrigin ;
-    sh:class :Origin ;
-.
-
-### PropertyShape for isDistributionOf               # also specified DistributionShape
-:IsDistributionOfPropertyShape a sh:PropertyShape ;
-    sh:path :isDistributionOf ;
-    sh:class taxon-name:Taxon ;
 .

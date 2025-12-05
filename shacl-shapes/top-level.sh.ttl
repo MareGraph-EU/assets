@@ -12,7 +12,6 @@
 ### Shape for Identifier
 :IdentifierShape a sh:NodeShape ;
     sh:targetClass :Identifier ;
-    
     sh:property [
         sh:path :hasType ;
         sh:class :IdentifierType ;
@@ -23,42 +22,23 @@
     ] ;
     sh:property [
         sh:path dct:identifier ;
-        sh:class rdfs:Literal ;
+        sh:nodeKind sh:Literal ;
         sh:minCount 1 ;
     ] ;
-.
-
-### Shape for IdentifierType
-:IdentifierTypeShape a sh:NodeShape ;
-    sh:targetClass :IdentifierType ;
-
-    ## IdentifierType subClassOf Identifier (Q: need property restrictions be repeated?)
-    ## Type doesn't have specific restrictions
 .
 
 ### Shape for Name
 :NameShape a sh:NodeShape ;
     sh:targetClass :Name ;
-
     sh:property [
         sh:path dct:relation ;
         sh:class :Name ;
     ] ;
     sh:property [
         sh:path :name ;
-        sh:class rdfs:Literal ;
+        sh:datatype xsd:string ;
         sh:minCount 1 ;
     ] ;
-.
-
-### Shape for Person
-:PersonShape a sh:NodeShape ;
-    sh:targetClass :Person ;
-.
-
-### Shape for Source
-:SourceShape a sh:NodeShape ;
-    sh:targetClass :Source ;
 .
 
 ### Shape for System
@@ -66,19 +46,9 @@
     sh:targetClass :System ;
     sh:property [
         sh:path dct:title ;
-        sh:class rdfs:Literal ;
+        sh:nodeKind sh:Literal ;
         sh:minCount 1 ;
     ] ;
-.
-
-### Shape for Type
-:TypeShape a sh:NodeShape ;
-    sh:targetClass :Type ;
-.
-
-### Shape for UnitOfMeasure
-:UnitOfMeasureShape a sh:NodeShape ;
-    sh:targetClass :UnitOfMeasure ;
 .
 
 ### Shape for Value
@@ -91,8 +61,7 @@
     ] ;
     sh:property [
         sh:path :value ;
-        sh:datatype xsd:anySimpleType ;     # unsure about this, don't know if/which sh:class to specify?
-        sh:class rdfs:Literal ;             # unsure
+        sh:nodeKind sh:Literal ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
@@ -100,28 +69,6 @@
 
 
 
-#### DatatypePropertyShapes ####            are these needed?
-### PropertyShape for name                  also specified in NameShape
-:NamePropertyShape a sh:PropertyShape ;
-    sh:path :name ;
-    sh:datatype xsd:string ;                # unsure
-.
-
-### PropertyShape for value
-:ValuePropertyShape a sh:PropertyShape ;
-    sh:path :value ;
-    sh:datatype xsd:integer ;                 # unsure 
-.
-
-### PropertyShape for year
-:YearPropertyShape a sh:PropertyShape ;
-    sh:path :year ;
-    sh:datatype xsd:gYear ;                # unsure
-.
-
-
-
-#### ObjectPropertyShapes ####              are this needed?
 ### PropertyShape for hasIdentifier
 :HasIdentifierShape
     a sh:PropertyShape ;
@@ -129,30 +76,9 @@
     sh:class :Identifier ;
 .
 
-### PropertyShape for hasType
-:HasTypeShape
-    a sh:PropertyShape ;
-    sh:path :hasType ;
-    sh:class :Type ;
-.
-
-### PropertyShape for hasUnitOfMeasure      also specified in ValueShape
-:HasTypeShape
-    a sh:PropertyShape ;
-    sh:path :hasUnitOfMeasure ;
-    sh:class :UnitOfMeasure ;
-.
-
 ### PropertyShape for hasValue
 :HasValueShape
     a sh:PropertyShape ;
     sh:path :hasValue ;
     sh:class :Value ;
-.
-
-### PropertyShape for isAssignedBy      also specified in IdentifierShape
-:IsAssignedByShape
-    a sh:PropertyShape ;
-    sh:path :isAssignedBy ;
-    sh:class :System ;
 .
