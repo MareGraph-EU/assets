@@ -21,7 +21,7 @@
         <https://marineinfo.org/id/collection/619> ;
 
     #dcat:dataset
-    #    <http://aphia.org> ;
+        <http://aphia.org> ;
 
     dcat:service
         <https://aphia.org/feed> ,
