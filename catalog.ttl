@@ -1,0 +1,120 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# Maregraph catalog
+#################################################################
+
+<https://maregraph.vliz.be/assets/catalogue.ttl>
+    a dcat:Catalog ;
+    dct:title "Maregraph catalog"@en ;
+    dct:description "Catalogue of datasets, data services, vocabularies, and ontologies produced by the Maregraph project."@en ;
+    dct:publisher <https://marineinfo.org/id/> ;
+    dct:issued "2026-01-19"^^xsd:date ;
+
+    dcat:catalog
+        <https://eurobis.org/dcat> ,
+        <https://marineinfo.org/id/collection/619> ;
+
+    #dcat:dataset
+    #    <http://aphia.org> ;
+
+    dcat:service
+        <https://aphia.org/feed> ,
+        <https://eurobis.org/feed> ;
+
+    dcat:resource
+        <https://aphia.org/ns/traits/> ,
+        <https://aphia.org/ns/attribute-trait> , 
+        <https://aphia.org/ns/distribution> , 
+        <https://eurobis.org/ns/marine-observation> ,
+        <https://aphia.org/ns/media> ,
+        <https://aphia.org/ns/taxon-name> ,
+        <https://aphia.org/ns/top-level> ;
+.
+
+#################
+# Data Catalogs #
+#################
+
+#<https://eurobis.org/dcat>
+#      a dcat:Catalog ;
+# however: currently describing webservice - to be looked at 
+
+
+<https://marineinfo.org/id/collection/619>
+    a dcat:Catalog ;
+    dct:title "EurOBIS Collection"@en ;
+    foaf:homepage <https://marineinfo.org/> ;
+.
+
+############
+# Datasets #
+############
+
+<http://aphia.org>
+    a dcat:Dataset ; 
+    
+    dcat:distribution <https://marineinfo.org/doc/dataset/1447> ;                   ## to verify predicate use
+#    dcat:distribution <{new LOD distribution}> ;                                    ## to verify predicate use
+.
+
+
+#################
+# Data Services #
+#################
+
+<https://aphia.org/feed>
+    a dcat:DataService ;
+    dct:title "Aphia LDES Feed"@en ;
+    dct:description "LDES feed exposing Aphia/WoRMS changes over time."@en ;
+    dcat:endpointURL <https://aphia.org/feed> ;
+    dcat:servesDataset <https://marineinfo.org/id/dataset/worms> ;
+.
+
+<https://eurobis.org/feed>
+    a dcat:DataService ;
+    dct:title "EurOBIS LDES Feed"@en ;
+    dct:description "LDES feed exposing EurOBIS data changes."@en ;
+    dcat:endpointURL <https://eurobis.org/feed> ;
+.
+
+##################
+# Data Resources #
+##################
+
+<https://aphia.org/ns/traits/>
+    a dcat:Resource ; 
+    dct:title: "controlled vocabulary of Aphia attributes and traits" ; 
+    dct:description """Aphia attributes and traits are modelled as skos:concepts. This skos:ConceptScheme operates under the Open World Assumption (OWA), 
+                meaning that the absence of an trait in this collection does not imply that the trait does not exist. 
+                It may simply mean the trait is not yet included or explicitly documented."""@en ; 
+.
+
+<https://aphia.org/ns/attribute-trait>
+    a dcat:Resource ; 
+.
+
+<https://aphia.org/ns/distribution> 
+    a dcat:Resource ; 
+.
+
+<https://eurobis.org/ns/marine-observation>
+    a dcat:Resource ; 
+.
+
+<https://aphia.org/ns/media>
+    a dcat:Resource ; 
+.
+
+<https://aphia.org/ns/taxon-name>
+    a dcat:Resource ; 
+.
+
+<https://aphia.org/ns/top-level> 
+    a dcat:Resource ; 
+.
