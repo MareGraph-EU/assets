@@ -41,9 +41,11 @@
 # Data Catalogs #
 #################
 
-#<https://eurobis.org/dcat>
-#      a dcat:Catalog ;
-# however: currently describing webservice - to be looked at 
+<https://eurobis.org/dcat>
+    a dcat:Catalog ;
+    dct:title "DCAT description of EurOBIS datasets and services" ; 
+    foaf:homepage <https://eurobis.org/> ;
+. 
 
 
 <https://marineinfo.org/id/collection/619>
