@@ -13,7 +13,7 @@
     a dcat:Catalog ;
     dct:title "Maregraph catalog"@en ;
     dct:description "Catalogue of datasets, data services, vocabularies, and ontologies produced by the Maregraph project."@en ;
-    dct:publisher <https://marineinfo.org/id/> ;
+    dct:publisher <https://marineinfo.org/id/institute/36> ;
     dct:issued "2026-01-19"^^xsd:date ;
 
     dcat:catalog
