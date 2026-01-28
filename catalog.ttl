@@ -1,0 +1,158 @@
+@prefix adms: <http://www.w3.org/ns/adms#> . 
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# Maregraph catalog
+#################################################################
+
+<https://w3id.org/marine/metadata/catalog> 
+    a adms:AssetRepository , dcat:Catalog ;
+    dct:title "Maregraph catalog"@en ;
+    dct:description "Catalogue of datasets, data services, vocabularies, and ontologies produced by the Maregraph project."@en ;
+    dct:publisher <https://marineinfo.org/id/institute/36> ;
+    dct:issued "2026-01-19"^^xsd:date ;
+
+    dcat:catalog
+        <https://eurobis.org/dcat> ,
+        <https://marineinfo.org/id/collection/619> ;
+
+    dcat:dataset
+        <http://aphia.org> ;
+
+    dcat:service
+        <https://aphia.org/feed> ,
+        <https://eurobis.org/feed> ;
+
+    dcat:resource
+        <https://aphia.org/ns/traits/> ,
+        <https://aphia.org/ns/attribute-trait> , 
+        <https://aphia.org/ns/distribution> , 
+        <https://eurobis.org/ns/marine-observation> ,
+        <https://aphia.org/ns/media> ,
+        <https://aphia.org/ns/taxon-name> ,
+        <https://aphia.org/ns/top-level> ;
+.
+
+#################
+# Data Catalogs #
+#################
+
+<https://eurobis.org/dcat>
+    a adms:Asset , dcat:Catalog ;
+    dct:title "DCAT description of EurOBIS datasets and services" ; 
+    foaf:homepage <https://eurobis.org/> ;
+. 
+
+
+<https://marineinfo.org/id/collection/619>
+    a adms:Asset , dcat:Catalog ;
+    dct:title "EurOBIS Collection, listing EurOBIS datasets"@en ;
+    foaf:homepage <https://marineinfo.org/> ;
+.
+
+############
+# Datasets #
+############
+
+<http://aphia.org>
+    a adms:Asset , dcat:Dataset ; 
+    dct:title "" ;
+    dct:description "" ; 
+
+    dcat:distribution [
+        a adms:AssetDistribution , dcat:Distribution ; 
+        dcat:accessURL <https://marineinfo.org/id/dataset/1447> ;
+    ] ; 
+    dcat:distribution [
+        a adms:AssetDistribution , dcat:Distribution ; 
+        dcat:accessService <https://aphia.org/feed> ; 
+    ]
+.
+
+
+#################
+# Data Services #
+#################
+
+<https://aphia.org/feed>
+    a adms:Asset , dcat:DataService ;
+    dct:title "Aphia LDES Feed"@en ;
+    dct:description "LDES feed exposing Aphia/WoRMS changes over time."@en ;
+    dcat:endpointURL <https://aphia.org/feed> ;
+    dcat:servesDataset <http://aphia.org> ;         # or <https://marineinfo.org/id/dataset/1447> ?
+.
+
+<https://eurobis.org/feed>
+    a adms:Asset , dcat:DataService ;
+    dct:title "EurOBIS LDES Feed"@en ;
+    dct:description "LDES feed exposing EurOBIS data changes."@en ;
+    dcat:endpointURL <https://eurobis.org/feed> ;
+    #dcat:servesDataset <https://marineinfo.org/id/collection/619> ; 
+.
+
+##################
+# Data Resources #
+##################
+
+<https://aphia.org/ns/traits/>
+    a adms:Asset , dcat:Dataset ; 
+    dct:title: "controlled vocabulary of Aphia attributes and traits" ; 
+    dct:description """Aphia attributes and traits are modelled as skos:concepts. This skos:ConceptScheme operates under the Open World Assumption (OWA), 
+                meaning that the absence of an trait in this collection does not imply that the trait does not exist. 
+                It may simply mean the trait is not yet included or explicitly documented."""@en ; 
+    # dct:issued "2023-08-30"^^xsd:date ;
+    # owl:versionInfo "First version 0.1"@en ; 
+.
+
+<https://aphia.org/ns/attribute-trait>
+    a adms:Asset , dcat:Dataset ; 
+    dct:title "APHIA - (Species) attributes and traits ontology"@en ;
+    dct:description "The attribute and trait of species ontology of the APHIA ontology network. It imports the top-level ontology of the APHIA network and proposes the use of a specific ontology design pattern 'Description' in order to model attributes, traits and their context information that may not even be known a priori and extended in the future."@en ; 
+    dct:issued "2023-08-30"^^xsd:date ;
+    owl:versionInfo "Third version 0.3 - introduced hierarchy properties for SpecificationContext and TaxonCharacteristic"@en ; 
+.
+
+<https://aphia.org/ns/distribution> 
+    a adms:Asset , dcat:Dataset ; 
+    dct:title "APHIA - (Species) Distribution ontology"@en ;
+    dct:description "The (species) distribution ontology of the APHIA network of ontologies. It imports the top-level ontology of the APHIA network and it defines the documented distribution of the species as defined in the WoRMS database. The distribution is described according to various information: the geographical location, using the place name or latitude and longitude when single points can be identified, the source from which the distribution is documented, the origin of the species, the invasiveness of the species, the occurrence. It is also possible to indicate whether the distribution is marked as a type locality of the species. The ontology uses the Marine Region ontology for representing geographical locations"@en ; 
+    dct:issued "2023-08-30"^^xsd:date ; 
+    owl:versionInfo "Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; introduced some alignments to some properties of Darwin Core."@en ; 
+.
+
+<https://eurobis.org/ns/marine-observation>
+    a adms:Asset , dcat:Dataset ;
+    dct:title "EUROBIS - Marine observations ontology"@en ;
+    dct:description "Tthe ontology of marine observations. The term marine observations refers to all the different measurements as well as observations of the existence of organisms that are made during specific events and reported in the EUROBIS system."@en ; 
+    dct:issued "2025-01-27"^^xsd:date ;
+    owl:versionInfo "First version 0.1."@en ; 
+.
+
+<https://aphia.org/ns/media>
+    a adms:Asset , dcat:Dataset ; 
+    dct:title "APHIA - Media objects ontology"@en ;
+    dct:description "The multimedia object for the species ontology of the APHIA network of ontologies. It imports the top-level ontology of APHIA, it directly reuses several Dublin Core elements and is aligned to Schema.org."@en ;
+    dct:issued "2023-08-30"^^xsd:date ; 
+    owl:versionInfo "Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; revised some modelling elements: eliminated MediaObjectDistribution."@en ; 
+.
+
+<https://aphia.org/ns/taxon-name>
+    a adms:Asset , dcat:Dataset ;
+    dct:title "APHIA - Taxon names ontology"@en ;
+    dct:description "The ontology of taxon names and all taxonomic information, as available from the WoRMS system. It imports the top-level ontology of the APHIA network of ontologies, and is aligned to skos-xl."@en ; 
+    dct:issued "2023-08-30"^^xsd:date ;
+    owl:versionInfo "Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; changed the name of the ontology from taxon-name to taxon-name; introduced some alignments to Darwin Core for some properties; changed some definitions (e.g., authorship)."@en ; 
+.
+
+<https://aphia.org/ns/top-level> 
+    a adms:Asset , dcat:Dataset ;
+    dct:title "Top Level/Foundational Ontology of APHIA"@en ;
+    dct:description "The top level ontology of the APHIA network of ontologies used to align all the elements of the network to foundational concepts. It imports DUL - Dolce Ultra light and D0 well-known foundational ontologies."@en ; 
+    dct:issued "2023-08-30"^^xsd:date ;
+    owl:versionInfo "Third version of the ontology 0.3 - introduction of context and temporal entity classes."@en ; 
+.
