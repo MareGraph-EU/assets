@@ -21,14 +21,12 @@
         <https://eurobis.org/dcat> ,
         <https://marineinfo.org/id/collection/619> ;
 
-    dcat:dataset
-        <http://aphia.org> ;
-
     dcat:service
         <https://aphia.org/feed> ,
         <https://eurobis.org/feed> ;
 
-    dcat:resource
+    dcat:dataset
+        <http://aphia.org> ,
         <https://aphia.org/ns/traits/> ,
         <https://aphia.org/ns/attribute-trait> , 
         <https://aphia.org/ns/distribution> , 
