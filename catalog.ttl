@@ -5,6 +5,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 
 #################################################################
 # Maregraph catalog
@@ -14,8 +15,11 @@
     a adms:AssetRepository , dcat:Catalog ;
     dct:title "Maregraph catalog"@en ;
     dct:description "Catalogue of datasets, data services, vocabularies, and ontologies produced by the Maregraph project."@en ;
-    dct:publisher <https://marineinfo.org/id/institute/36> ;
+    dct:publisher <https://ror.org/0496vr396> ;
     dct:issued "2026-01-19"^^xsd:date ;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
+    dct:language <http://publications.europa.eu/resource/authority/language/ENG> ; 
+    foaf:homepage <https://www.maregraph.eu/> ; 
 
     dcat:catalog
         <https://eurobis.org/catalog> ,                 # EurOBIS catalog
@@ -32,10 +36,15 @@
 # Data Catalogs #
 #################
 
-<https://eurobis.org/dcat>
+<https://eurobis.org/catalog>
     a adms:Asset , dcat:Catalog ;
     dct:title "Catalog of EurOBIS related resources" ; 
     dct:description "" ; 
+    dct:publisher <https://ror.org/0496vr396> ;
+    dct:issued "2026-01-19"^^xsd:date ;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
+    dct:language <http://publications.europa.eu/resource/authority/language/ENG> ; 
+    foaf:homepage <https://www.eurobis.org/> ; 
 
     dcat:dataset <https://marineinfo.org/id/collection/619> ; 
 
@@ -43,19 +52,30 @@
                     <https://eurobis.org/feed>
 . 
 
-<http://aphia.org/dcat>
+<http://aphia.org/catalog>
     a adms:Asset , dcat:Catalog ; 
-    dct:title "Catalog of Aphia related resources" ;
-    dct:description "" ; 
+    dct:title "Aphia catalog" ;
+    dct:description "Catalog of Aphia related resources and their description" ; 
+    dct:publisher <https://ror.org/0496vr396> ;
+    dct:issued "2026-01-19"^^xsd:date ;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
+    dct:language<http://publications.europa.eu/resource/authority/language/ENG> ; 
+    foaf:homepage <https://www.aphia.org/> ; 
 
     dcat:dataset <https://marineinfo.org/id/dataset/1447> ;
 
     dcat:service <https://aphia.org/feed> ; 
 .
 
-<https://aphia.org/ns>
+<https://aphia.org/ns/catalog>
     a adms:Asset , dcat:Catalog ;
-    dct:title "Catalog of Semantic assets developed in context if the MareGraph project" ; 
+    dct:title "MareGraph Semantic assets catalog" ;
+    dct:description "Catalog of Semantic assets developed in context if the MareGraph project" ; 
+    dct:publisher <https://ror.org/05w9g2j85> , <https://ror.org/0496vr396> ;
+    dct:issued "2026-01-19"^^xsd:date ;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
+    dct:language<http://publications.europa.eu/resource/authority/language/ENG> ; 
+    #foaf:homepage <https://www.aphia.org/ns> ;      #needs to be created  
 
     dcat:dataset    <https://aphia.org/ns/traits/> ,
                     <https://aphia.org/ns/attribute-trait> , 
@@ -97,8 +117,15 @@
     dct:description """Aphia attributes and traits are modelled as skos:concepts. This skos:ConceptScheme operates under the Open World Assumption (OWA), 
                 meaning that the absence of an trait in this collection does not imply that the trait does not exist. 
                 It may simply mean the trait is not yet included or explicitly documented."""@en ; 
-    # dct:issued "2023-08-30"^^xsd:date ;
-    # owl:versionInfo "First version 0.1"@en ; 
+    dct:publisher <https://ror.org/0496vr396> ; 
+    dcat:contactPoint [
+        a vcard:Kind ;
+        vcard:fn "MareGraph project support team"@en ;
+        vcard:hasEmail <mailto:info@maregraph.eu>
+    ] ;
+    dct:issued "2023-08-30"^^xsd:date ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
+    dcat:keyword "controlled vocabulary" , "concept scheme" ; 
 .
 
 <https://aphia.org/ns/attribute-trait>
@@ -106,7 +133,14 @@
     dct:title "APHIA - (Species) attributes and traits ontology"@en ;
     dct:description "The attribute and trait of species ontology of the APHIA ontology network. It imports the top-level ontology of the APHIA network and proposes the use of a specific ontology design pattern 'Description' in order to model attributes, traits and their context information that may not even be known a priori and extended in the future."@en ; 
     dct:issued "2023-08-30"^^xsd:date ;
-    owl:versionInfo "Third version 0.3 - introduced hierarchy properties for SpecificationContext and TaxonCharacteristic"@en ; 
+    dct:publisher <https://ror.org/05w9g2j85> ; 
+    dcat:contactPoint [
+        a vcard:Kind ;
+        vcard:fn "MareGraph project support team"@en ;
+        vcard:hasEmail <mailto:info@maregraph.eu>
+    ] ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
+    dcat:keyword "RDF ontology" ; 
 .
 
 <https://aphia.org/ns/distribution> 
@@ -114,7 +148,14 @@
     dct:title "APHIA - (Species) Distribution ontology"@en ;
     dct:description "The (species) distribution ontology of the APHIA network of ontologies. It imports the top-level ontology of the APHIA network and it defines the documented distribution of the species as defined in the WoRMS database. The distribution is described according to various information: the geographical location, using the place name or latitude and longitude when single points can be identified, the source from which the distribution is documented, the origin of the species, the invasiveness of the species, the occurrence. It is also possible to indicate whether the distribution is marked as a type locality of the species. The ontology uses the Marine Region ontology for representing geographical locations"@en ; 
     dct:issued "2023-08-30"^^xsd:date ; 
-    owl:versionInfo "Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; introduced some alignments to some properties of Darwin Core."@en ; 
+    dct:publisher <https://ror.org/05w9g2j85> ; 
+    dcat:contactPoint [
+        a vcard:Kind ;
+        vcard:fn "MareGraph project support team"@en ;
+        vcard:hasEmail <mailto:info@maregraph.eu>
+    ] ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
+    dcat:keyword "RDF ontology" ; 
 .
 
 <https://eurobis.org/ns/marine-observation>
@@ -122,7 +163,14 @@
     dct:title "EUROBIS - Marine observations ontology"@en ;
     dct:description "Tthe ontology of marine observations. The term marine observations refers to all the different measurements as well as observations of the existence of organisms that are made during specific events and reported in the EUROBIS system."@en ; 
     dct:issued "2025-01-27"^^xsd:date ;
-    owl:versionInfo "First version 0.1."@en ; 
+    dct:publisher <https://ror.org/05w9g2j85> ; 
+    dcat:contactPoint [
+        a vcard:Kind ;
+        vcard:fn "MareGraph project support team"@en ;
+        vcard:hasEmail <mailto:info@maregraph.eu>
+    ] ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
+    dcat:keyword "RDF ontology" ; 
 .
 
 <https://aphia.org/ns/media>
@@ -130,7 +178,14 @@
     dct:title "APHIA - Media objects ontology"@en ;
     dct:description "The multimedia object for the species ontology of the APHIA network of ontologies. It imports the top-level ontology of APHIA, it directly reuses several Dublin Core elements and is aligned to Schema.org."@en ;
     dct:issued "2023-08-30"^^xsd:date ; 
-    owl:versionInfo "Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; revised some modelling elements: eliminated MediaObjectDistribution."@en ; 
+    dct:publisher <https://ror.org/05w9g2j85> ; 
+    dcat:contactPoint [
+        a vcard:Kind ;
+        vcard:fn "MareGraph project support team"@en ;
+        vcard:hasEmail <mailto:info@maregraph.eu>
+    ] ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
+    dcat:keyword "RDF ontology" ; 
 .
 
 <https://aphia.org/ns/taxon-name>
@@ -138,7 +193,14 @@
     dct:title "APHIA - Taxon names ontology"@en ;
     dct:description "The ontology of taxon names and all taxonomic information, as available from the WoRMS system. It imports the top-level ontology of the APHIA network of ontologies, and is aligned to skos-xl."@en ; 
     dct:issued "2023-08-30"^^xsd:date ;
-    owl:versionInfo "Second version 0.2 - changed URIs from w3id.org/ to aphia.org/; changed the name of the ontology from taxon-name to taxon-name; introduced some alignments to Darwin Core for some properties; changed some definitions (e.g., authorship)."@en ; 
+    dct:publisher <https://ror.org/05w9g2j85> ; 
+    dcat:contactPoint [
+        a vcard:Kind ;
+        vcard:fn "MareGraph project support team"@en ;
+        vcard:hasEmail <mailto:info@maregraph.eu>
+    ] ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
+    dcat:keyword "RDF ontology" ; 
 .
 
 <https://aphia.org/ns/top-level> 
@@ -146,6 +208,13 @@
     dct:title "Top Level/Foundational Ontology of APHIA"@en ;
     dct:description "The top level ontology of the APHIA network of ontologies used to align all the elements of the network to foundational concepts. It imports DUL - Dolce Ultra light and D0 well-known foundational ontologies."@en ; 
     dct:issued "2023-08-30"^^xsd:date ;
-    owl:versionInfo "Third version of the ontology 0.3 - introduction of context and temporal entity classes."@en ; 
+    dct:publisher <https://ror.org/05w9g2j85> ; 
+    dcat:contactPoint [
+        a vcard:Kind ;
+        vcard:fn "MareGraph project support team"@en ;
+        vcard:hasEmail <mailto:info@maregraph.eu>
+    ] ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
+    dcat:keyword "RDF ontology" ; 
 .
 
