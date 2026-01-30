@@ -19,21 +19,15 @@
 
     dcat:catalog
         <https://eurobis.org/dcat> ,
-        <https://marineinfo.org/id/collection/619> ;
+        <https://marineinfo.org/id/collection/619> ,
+        <https://aphia.org/ns> ; 
 
     dcat:service
         <https://aphia.org/feed> ,
         <https://eurobis.org/feed> ;
 
     dcat:dataset
-        <http://aphia.org> ,
-        <https://aphia.org/ns/traits/> ,
-        <https://aphia.org/ns/attribute-trait> , 
-        <https://aphia.org/ns/distribution> , 
-        <https://eurobis.org/ns/marine-observation> ,
-        <https://aphia.org/ns/media> ,
-        <https://aphia.org/ns/taxon-name> ,
-        <https://aphia.org/ns/top-level> ;
+        <http://aphia.org> ;
 .
 
 #################
@@ -52,6 +46,18 @@
     dct:title "EurOBIS Collection, listing EurOBIS datasets"@en ;
     foaf:homepage <https://marineinfo.org/> ;
 .
+
+<https://aphia.org/ns>
+    a adms:Asset , dcat:Catalog ;
+    dct:title "Catalog of Semantic assets developed in context if the MareGraph project" ; 
+
+    dcat:dataset    <https://aphia.org/ns/traits/> ,
+                    <https://aphia.org/ns/attribute-trait> , 
+                    <https://aphia.org/ns/distribution> , 
+                    <https://eurobis.org/ns/marine-observation> ,
+                    <https://aphia.org/ns/media> ,
+                    <https://aphia.org/ns/taxon-name> ,
+                    <https://aphia.org/ns/top-level> ;
 
 ############
 # Datasets #
@@ -92,6 +98,7 @@
     dcat:endpointURL <https://eurobis.org/feed> ;
     #dcat:servesDataset <https://marineinfo.org/id/collection/619> ; 
 .
+
 
 ##################
 # Data Resources #
@@ -154,3 +161,4 @@
     dct:issued "2023-08-30"^^xsd:date ;
     owl:versionInfo "Third version of the ontology 0.3 - introduction of context and temporal entity classes."@en ; 
 .
+
