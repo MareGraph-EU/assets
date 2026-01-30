@@ -11,7 +11,7 @@
 # Maregraph catalog
 #################################################################
 
-<https://w3id.org/marine/metadata/catalog> 
+<https://w3id.org/marine/metadata/catalog>  #hosted on: maregraph.vliz.be/catalog
     a adms:AssetRepository , dcat:Catalog ;
     dct:title "Maregraph catalog"@en ;
     dct:description "Catalogue of datasets, data services, vocabularies, and ontologies produced by the Maregraph project."@en ;
@@ -36,7 +36,7 @@
 # Data Catalogs #
 #################
 
-<https://eurobis.org/catalog>
+<w3id.org/marine/metadata/catalog/eurobis> #hosted: <https://eurobis.org/catalog>
     a adms:Asset , dcat:Catalog ;
     dct:title "Catalog of EurOBIS related resources" ; 
     dct:description "" ; 
@@ -52,7 +52,7 @@
                     <https://eurobis.org/feed>
 . 
 
-<http://aphia.org/catalog>
+<w3id.org/marine/metadata/catalog/aphia> #hosted: <http://aphia.org/catalog>
     a adms:Asset , dcat:Catalog ; 
     dct:title "Aphia catalog" ;
     dct:description "Catalog of Aphia related resources and their description" ; 
