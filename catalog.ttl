@@ -18,17 +18,15 @@
     dct:issued "2026-01-19"^^xsd:date ;
 
     dcat:catalog
-        <https://eurobis.org/dcat> ,
-        <https://marineinfo.org/id/collection/619> ,
-        <https://aphia.org/ns> ; 
+        <https://eurobis.org/catalog> ,                 # EurOBIS catalog
+        <http://aphia.org/catalog> ,                    # Aphia catalog
+        <https://aphia.org/ns/catalog> ;                # Semantic assets catalog
 
     dcat:service
         <https://aphia.org/feed> ,
         <https://eurobis.org/feed> ;
-
-    dcat:dataset
-        <http://aphia.org> ;
 .
+
 
 #################
 # Data Catalogs #
@@ -36,15 +34,23 @@
 
 <https://eurobis.org/dcat>
     a adms:Asset , dcat:Catalog ;
-    dct:title "DCAT description of EurOBIS datasets and services" ; 
-    foaf:homepage <https://eurobis.org/> ;
+    dct:title "Catalog of EurOBIS related resources" ; 
+    dct:description "" ; 
+
+    dcat:dataset <https://marineinfo.org/id/collection/619> ; 
+
+    dcat:service    <https://eurobis.org/eurobis_ogc> , 
+                    <https://eurobis.org/feed>
 . 
 
+<http://aphia.org/dcat>
+    a adms:Asset , dcat:Catalog ; 
+    dct:title "Catalog of Aphia related resources" ;
+    dct:description "" ; 
 
-<https://marineinfo.org/id/collection/619>
-    a adms:Asset , dcat:Catalog ;
-    dct:title "EurOBIS Collection, listing EurOBIS datasets"@en ;
-    foaf:homepage <https://marineinfo.org/> ;
+    dcat:dataset <https://marineinfo.org/id/dataset/1447> ;
+
+    dcat:service <https://aphia.org/feed> ; 
 .
 
 <https://aphia.org/ns>
@@ -59,25 +65,6 @@
                     <https://aphia.org/ns/taxon-name> ,
                     <https://aphia.org/ns/top-level> ;
 
-############
-# Datasets #
-############
-
-<http://aphia.org>
-    a adms:Asset , dcat:Dataset ; 
-    dct:title "" ;
-    dct:description "" ; 
-
-    dcat:distribution [
-        a adms:AssetDistribution , dcat:Distribution ; 
-        dcat:accessURL <https://marineinfo.org/id/dataset/1447> ;
-    ] ; 
-    dcat:distribution [
-        a adms:AssetDistribution , dcat:Distribution ; 
-        dcat:accessService <https://aphia.org/feed> ; 
-    ]
-.
-
 
 #################
 # Data Services #
@@ -88,7 +75,7 @@
     dct:title "Aphia LDES Feed"@en ;
     dct:description "LDES feed exposing Aphia/WoRMS changes over time."@en ;
     dcat:endpointURL <https://aphia.org/feed> ;
-    dcat:servesDataset <http://aphia.org> ;         # or <https://marineinfo.org/id/dataset/1447> ?
+    dcat:servesDataset <https://marineinfo.org/id/dataset/1447> ;
 .
 
 <https://eurobis.org/feed>
@@ -96,13 +83,13 @@
     dct:title "EurOBIS LDES Feed"@en ;
     dct:description "LDES feed exposing EurOBIS data changes."@en ;
     dcat:endpointURL <https://eurobis.org/feed> ;
-    #dcat:servesDataset <https://marineinfo.org/id/collection/619> ; 
+    dcat:servesDataset <https://marineinfo.org/id/collection/619> ; 
 .
 
 
-##################
-# Data Resources #
-##################
+############
+# Datasets #
+############
 
 <https://aphia.org/ns/traits/>
     a adms:Asset , dcat:Dataset ; 
