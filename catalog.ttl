@@ -24,11 +24,13 @@
     dcat:catalog
         <https://eurobis.org/catalog> ,                 # EurOBIS catalog
         <http://aphia.org/catalog> ,                    # Aphia catalog
-        <https://aphia.org/ns/catalog> ;                # Semantic assets catalog
+        <https://aphia.org/ns/catalog> ,                # Semantic assets catalog
+        <https://marineregions.org/catalog> ;           # Marine Regions catalog 
 
     dcat:service
         <https://aphia.org/feed> ,
-        <https://eurobis.org/feed> ;
+        <https://eurobis.org/feed> ,
+        <https://marineregions.org/feed> ; 
 .
 
 
@@ -48,8 +50,8 @@
 
     dcat:dataset <https://marineinfo.org/id/collection/619> ; 
 
-    dcat:service    <https://eurobis.org/eurobis_ogc> , 
-                    <https://eurobis.org/feed>
+    dcat:service    <https://eurobis.org/eurobis_ogc> ,
+                    <https://eurobis.org/feed> ,
 . 
 
 <http://aphia.org/catalog>
@@ -86,6 +88,21 @@
                     <https://aphia.org/ns/top-level> ;
 .
 
+<http://marineregions.org/catalog>
+    a adms:Asset , dcat:Catalog ; 
+    dct:title "Marine Regions catalog" ;
+    dct:description "Catalog of Marine Regions related resources and their description" ; 
+    dct:publisher <https://ror.org/0496vr396> ;
+    dct:issued "2026-01-19"^^xsd:date ;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
+    dct:language<http://publications.europa.eu/resource/authority/language/ENG> ; 
+    foaf:homepage <https://www.marineregions.org/> ; 
+
+    dcat:dataset <https://marineinfo.org/id/dataset/1426> ;
+
+    dcat:service <https://marineregions.org/feed> ;
+.
+
 #################
 # Data Services #
 #################
@@ -106,6 +123,13 @@
     dcat:servesDataset <https://marineinfo.org/id/collection/619> ; 
 .
 
+<https://marineregions.org/feed>
+    a adms:Asset , dcat:DataService ;
+    dct:title "Marine Regions LDES Feed"@en ;
+    dct:description "LDES feed exposing Marine Regions changes over time."@en ;
+    dcat:endpointURL <https://marineregions.org/feed> ;
+    dcat:servesDataset <https://marineinfo.org/id/dataset/1426> ;
+.
 
 ############
 # Datasets #
