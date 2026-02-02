@@ -36,7 +36,7 @@
 # Data Catalogs #
 #################
 
-<w3id.org/marine/metadata/catalog/eurobis> #hosted: <https://eurobis.org/catalog>
+<https://eurobis.org/catalog>
     a adms:Asset , dcat:Catalog ;
     dct:title "Catalog of EurOBIS related resources" ; 
     dct:description "" ; 
@@ -52,7 +52,7 @@
                     <https://eurobis.org/feed>
 . 
 
-<w3id.org/marine/metadata/catalog/aphia> #hosted: <http://aphia.org/catalog>
+<http://aphia.org/catalog>
     a adms:Asset , dcat:Catalog ; 
     dct:title "Aphia catalog" ;
     dct:description "Catalog of Aphia related resources and their description" ; 
