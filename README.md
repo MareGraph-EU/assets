@@ -16,3 +16,7 @@ In particular, we have set up an issue template you can use to [submit specific 
 The public review period will be open until the **30th of June 2024**. We encourage you to submit your contributions as soon as possible to ensure they are considered during the finalization process.
 
 Looking forward to your feedback!
+
+___ 
+
+A Description of the maintenance and availability of resources mentioned in `catalog.ttl` is available at [catalog_resource_description](./catalog_resource_maintenance.md).
