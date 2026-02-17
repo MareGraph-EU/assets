@@ -102,31 +102,31 @@ The network is organized into thematic modules that correspond to the primary da
 
 **URI**: [`https://aphia.org/ns/top-level`](https://aphia.org/ns/top-level)
 
-The [`top-level`]() ontology module provides base and common cross-domain classes and properties, such as identifiers, source references, and units of measure, reused by the other ontology modules in the network.
+The [`top-level`](./ontologies/top-level/latest/README.md) ontology module provides base and common cross-domain classes and properties, such as identifiers, source references, and units of measure, reused by the other ontology modules in the network.
 
 #### Taxon Name
 
 **URI**: [`https://aphia.org/ns/taxon-name`](https://aphia.org/ns/taxon-name)
 
-The [`taxon-name`]() ontology module handles scientific and vernacular names, taxonomic status, ranks, and classification hierarchy for aquatic organisms.
+The [`taxon-name`](./ontologies/taxon-name/latest/README.md) ontology module handles scientific and vernacular names, taxonomic status, ranks, and classification hierarchy for aquatic organisms.
 
 #### Distribution
 
 **URI**: [`https://aphia.org/ns/distribution`](https://aphia.org/ns/distribution)
 
-The [`distribution`]() ontology module defines geographic distribution, occurrence origin, type locality, and invasiveness for marine species. It relies on the [Marine Regions Ontology](http://marineregions.org/ns/ontology) for representing geographical locations.
+The [`distribution`](./ontologies/distribution/latest/README.md) ontology module defines geographic distribution, occurrence origin, type locality, and invasiveness for marine species. It relies on the [Marine Regions Ontology](http://marineregions.org/ns/ontology) for representing geographical locations.
 
 #### Media
 
 **URI**: [`https://aphia.org/ns/media`](https://aphia.org/ns/media)
 
-The [`media`]() ontology module allows representing metadata for images, videos, and other media objects related to marine species.
+The [`media`](./ontologies/media/latest/README.md) ontology module allows representing metadata for images, videos, and other media objects related to marine species.
 
 #### Attribute and Trait
 
 **URI**: [`https://aphia.org/ns/attribute-trait`](https://aphia.org/ns/attribute-trait)
 
-The [`attribute-trait`]() ontology module allows representing biological, ecological, and taxonomic characteristics—ranging from body size and habitat to IUCN conservation categories—for marine species.
+The [`attribute-trait`](./ontologies/attribute-trait/latest/README.md) ontology module allows representing biological, ecological, and taxonomic characteristics—ranging from body size and habitat to IUCN conservation categories—for marine species.
 
 The [`https://aphia.org/ns/traits/`](https://aphia.org/ns/traits/) SKOS controlled vocabulary defines the attributes and traits originating from WoRMS.
 
@@ -134,7 +134,7 @@ The [`https://aphia.org/ns/traits/`](https://aphia.org/ns/traits/) SKOS controll
 
 **URI**: [`https://eurobis.org/ns/marine-observation`](https://eurobis.org/ns/marine-observation)
 
-The [`marine-observation`]() ontology module allows representing and relating species occurrences, events (e.g., cruises, sampling activities, etc.), and associated measurements or facts covering biotic and abiotic properties.
+The [`marine-observation`](./ontologies/marine-observation/latest/README.md) ontology module allows representing and relating species occurrences, events (e.g., cruises, sampling activities, etc.), and associated measurements or facts covering biotic and abiotic properties.
 
 By modelling species observations, this module allows integrating and linking EurOBIS, WoRMS, and MarineRegions data.
 
