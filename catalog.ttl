@@ -20,13 +20,9 @@
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
     dct:language <http://publications.europa.eu/resource/authority/language/ENG> ; 
     foaf:homepage <https://www.maregraph.eu/> ; 
-    dcat:contactPoint [
-        a vcard:Kind ;
-        vcard:fn "MareGraph project team"@en ;
-        vcard:hasEmail <mailto:info@maregraph.eu>
-    ] ;
+    dcat:contactPoint <#maregraph-contact> ;
 
-    dct:relation                     #(orig: dcat:catalog, changed for conformance to European Data Catalog 
+    dct:relation                     #(orig: dcat:catalog, changed for conformance to European Data Catalog) 
         <https://eurobis.org/catalog> ,                 # EurOBIS catalog
         <http://aphia.org/catalog> ,                    # Aphia catalog
         <https://aphia.org/ns/catalog> ,                # Semantic assets catalog
@@ -64,11 +60,7 @@
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
     dct:language <http://publications.europa.eu/resource/authority/language/ENG> ; 
     foaf:homepage <https://www.eurobis.org/> ; 
-    dcat:contactPoint [
-        a vcard:Kind ;
-        vcard:fn "EurOBIS team"@en ;
-        vcard:hasEmail <mailto:info@eurobis.org>
-    ] ;
+    dcat:contactPoint <#eurobis-contact> ;
 
     dcat:dataset <https://marineinfo.org/id/collection/619> ; 
 
@@ -85,11 +77,7 @@
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
     dct:language<http://publications.europa.eu/resource/authority/language/ENG> ; 
     foaf:homepage <https://www.aphia.org/> ; 
-    dcat:contactPoint [
-        a vcard:Kind ;
-        vcard:fn "Marine Species team"@en ;
-        vcard:hasEmail <mailto:info@marinespecies.org>
-    ] ;
+    dcat:contactPoint <#aphia-contact> ;
 
     dcat:dataset <https://marineinfo.org/id/dataset/1447> ;
 
@@ -105,11 +93,7 @@
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
     dct:language<http://publications.europa.eu/resource/authority/language/ENG> ; 
     #foaf:homepage <https://www.aphia.org/ns> ;      #needs to be created  
-    dcat:contactPoint [
-        a vcard:Kind ;
-        vcard:fn "MareGraph project team"@en ;
-        vcard:hasEmail <mailto:info@maregraph.eu>
-    ] ;
+    dcat:contactPoint <#maregraph-contact> ;
 
     dcat:dataset    <https://aphia.org/ns/traits/> ,
                     <https://aphia.org/ns/attribute-trait> , 
@@ -183,11 +167,7 @@
     dcat:landingPage <https://aphia.org/ns/traits/> ;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
     dct:publisher <https://ror.org/0496vr396> ; 
-    dcat:contactPoint [
-        a vcard:Kind ;
-        vcard:fn "MareGraph project team"@en ;
-        vcard:hasEmail <mailto:info@maregraph.eu>
-    ] ;
+    dcat:contactPoint <#maregraph-contact> ;
     dct:issued "2023-08-30"^^xsd:date ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
     dcat:keyword "controlled vocabulary" , "concept scheme" ; 
@@ -209,11 +189,7 @@
     dcat:landingPage <https://aphia.org/ns/attribute-trait> ;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
     dct:publisher <https://ror.org/05w9g2j85> ; 
-    dcat:contactPoint [
-        a vcard:Kind ;
-        vcard:fn "MareGraph project team"@en ;
-        vcard:hasEmail <mailto:info@maregraph.eu>
-    ] ;
+    dcat:contactPoint <#maregraph-contact> ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
     dcat:keyword "RDF ontology" ; 
     dcat:distribution [
@@ -234,11 +210,7 @@
     dcat:landingPage <https://aphia.org/ns/distribution> ;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
     dct:publisher <https://ror.org/05w9g2j85> ; 
-    dcat:contactPoint [
-        a vcard:Kind ;
-        vcard:fn "MareGraph project team"@en ;
-        vcard:hasEmail <mailto:info@maregraph.eu>
-    ] ;
+    dcat:contactPoint <#maregraph-contact> ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
     dcat:keyword "RDF ontology" ; 
     dcat:distribution [
@@ -259,11 +231,7 @@
     dcat:landingPage <https://eurobis.org/ns/marine-observation> ;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
     dct:publisher <https://ror.org/05w9g2j85> ; 
-    dcat:contactPoint [
-        a vcard:Kind ;
-        vcard:fn "MareGraph project team"@en ;
-        vcard:hasEmail <mailto:info@maregraph.eu>
-    ] ;
+    dcat:contactPoint <#maregraph-contact> ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
     dcat:keyword "RDF ontology" ; 
     dcat:distribution [
@@ -284,11 +252,7 @@
     dcat:landingPage <https://aphia.org/ns/media> ;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
     dct:publisher <https://ror.org/05w9g2j85> ; 
-    dcat:contactPoint [
-        a vcard:Kind ;
-        vcard:fn "MareGraph project team"@en ;
-        vcard:hasEmail <mailto:info@maregraph.eu>
-    ] ;
+    dcat:contactPoint <#maregraph-contact> ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
     dcat:keyword "RDF ontology" ; 
     dcat:distribution [
@@ -309,11 +273,7 @@
     dcat:landingPage <https://aphia.org/ns/taxon-name> ;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
     dct:publisher <https://ror.org/05w9g2j85> ; 
-    dcat:contactPoint [
-        a vcard:Kind ;
-        vcard:fn "MareGraph project team"@en ;
-        vcard:hasEmail <mailto:info@maregraph.eu>
-    ] ;
+    dcat:contactPoint <#maregraph-contact> ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
     dcat:keyword "RDF ontology" ; 
     dcat:distribution [
@@ -334,11 +294,7 @@
     dcat:landingPage <https://aphia.org/ns/top-level> ;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
     dct:publisher <https://ror.org/05w9g2j85> ; 
-    dcat:contactPoint [
-        a vcard:Kind ;
-        vcard:fn "MareGraph project team"@en ;
-        vcard:hasEmail <mailto:info@maregraph.eu>
-    ] ;
+    dcat:contactPoint <#maregraph-contact> ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
     dcat:keyword "RDF ontology" ; 
     dcat:distribution [
@@ -349,3 +305,25 @@
     ] ;
 .
 
+
+#################
+# contactPoints #
+#################
+
+<#maregraph-contact>
+    a vcard:Group ;
+    vcard:fn "MareGraph project team"@en ;
+    vcard:hasEmail <mailto:info@maregraph.eu> ;
+.
+
+<#eurobis-contact>
+    a vcard:Group ;
+    vcard:fn "EurOBIS team"@en ;
+    vcard:hasEmail <mailto:info@eurobis.org> ;
+.
+
+<#aphia-contact>
+    a vcard:Group ;
+    vcard:fn "Marine Species team"@en ;
+    vcard:hasEmail <mailto:info@marinespecies.org> ; 
+.
