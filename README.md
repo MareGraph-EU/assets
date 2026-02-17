@@ -1,5 +1,7 @@
 # MAREGRAPH Semantic Assets
 
+![MAREGRAPH Logo](https://www.maregraph.eu/img/maregraph-text-horizontal-600x200.svg)
+
 ## Overview
 
 This repository hosts a comprehensive network of **semantic assets** — including OWL ontologies, SKOS controlled vocabularies, SHACL validation shapes, and a DCAT-based data catalogue — designed and developed in the context of the [MAREGRAPH](https://www.maregraph.eu/) project.
