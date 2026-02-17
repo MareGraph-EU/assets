@@ -187,14 +187,14 @@
     dct:issued "2023-08-30"^^xsd:date ;
     dct:language <http://publications.europa.eu/resource/authority/language/ENG> ; 
     dcat:landingPage <https://aphia.org/ns/attribute-trait> ;
-    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
+    dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ; 
     dct:publisher <https://ror.org/05w9g2j85> ; 
     dcat:contactPoint <#maregraph-contact> ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
     dcat:keyword "RDF ontology" ; 
     dcat:distribution [
         a dcat:Distribution ;
-        dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+        dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
         dcat:accessURL <https://aphia.org/ns/attribute-trait.ttl> ;
         dcat:mediaType <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
     ] ;
@@ -208,14 +208,14 @@
     dct:issued "2023-08-30"^^xsd:date ; 
     dct:language <http://publications.europa.eu/resource/authority/language/ENG> ; 
     dcat:landingPage <https://aphia.org/ns/distribution> ;
-    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
+    dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ; 
     dct:publisher <https://ror.org/05w9g2j85> ; 
     dcat:contactPoint <#maregraph-contact> ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
     dcat:keyword "RDF ontology" ; 
     dcat:distribution [
         a dcat:Distribution ;
-        dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+        dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
         dcat:accessURL <https://aphia.org/ns/distribution.ttl> ;
         dcat:mediaType <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
     ] ;
@@ -229,14 +229,14 @@
     dct:issued "2025-01-27"^^xsd:date ;
     dct:language <http://publications.europa.eu/resource/authority/language/ENG> ; 
     dcat:landingPage <https://eurobis.org/ns/marine-observation> ;
-    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
+    dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ; 
     dct:publisher <https://ror.org/05w9g2j85> ; 
     dcat:contactPoint <#maregraph-contact> ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
     dcat:keyword "RDF ontology" ; 
     dcat:distribution [
         a dcat:Distribution ;
-        dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+        dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
         dcat:accessURL <https://aphia.org/ns/marine-observation.ttl> ;
         dcat:mediaType <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
     ] ;
@@ -250,14 +250,14 @@
     dct:issued "2023-08-30"^^xsd:date ; 
     dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
     dcat:landingPage <https://aphia.org/ns/media> ;
-    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
+    dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ; 
     dct:publisher <https://ror.org/05w9g2j85> ; 
     dcat:contactPoint <#maregraph-contact> ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
     dcat:keyword "RDF ontology" ; 
     dcat:distribution [
         a dcat:Distribution ;
-        dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+        dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
         dcat:accessURL <https://aphia.org/ns/media.ttl> ;
         dcat:mediaType <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
     ] ;
@@ -271,14 +271,14 @@
     dct:issued "2023-08-30"^^xsd:date ;
     dct:language <http://publications.europa.eu/resource/authority/language/ENG> ; 
     dcat:landingPage <https://aphia.org/ns/taxon-name> ;
-    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
+    dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ; 
     dct:publisher <https://ror.org/05w9g2j85> ; 
     dcat:contactPoint <#maregraph-contact> ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
     dcat:keyword "RDF ontology" ; 
     dcat:distribution [
         a dcat:Distribution ;
-        dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+        dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
         dcat:accessURL <https://aphia.org/ns/taxon-name.ttl> ;
         dcat:mediaType <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
     ] ;
@@ -292,14 +292,14 @@
     dct:issued "2023-08-30"^^xsd:date ;
     dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
     dcat:landingPage <https://aphia.org/ns/top-level> ;
-    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ; 
+    dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ; 
     dct:publisher <https://ror.org/05w9g2j85> ; 
     dcat:contactPoint <#maregraph-contact> ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI> ;
     dcat:keyword "RDF ontology" ; 
     dcat:distribution [
         a dcat:Distribution ;
-        dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+        dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
         dcat:accessURL <https://aphia.org/ns/top-level.ttl> ;
         dcat:mediaType <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
     ] ;
