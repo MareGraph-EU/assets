@@ -25,7 +25,7 @@ jobs:
 
       - name: run pylode
         run: |
-          for ontology in attribute-trait distribution media taxon-name top-level; do
+          for ontology in attribute-trait distribution media taxon-name top-level marine-observation; do
             input="ontologies/$ontology/latest/$ontology.ttl"
             output="ontologies/$ontology/latest/$ontology.html"
             {
