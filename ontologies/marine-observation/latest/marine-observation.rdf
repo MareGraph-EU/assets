@@ -18,7 +18,7 @@
     <owl:Ontology rdf:about="https://eurobis.org/ns/marine-observation">
         <owl:versionIRI rdf:resource="https://eurobis.org/ns/marine-observation/0.1"/>
         <owl:imports rdf:resource="https://aphia.org/ns/top-level"/>
-        <dct:creator rdf:resource="https://alphia.org/resource/organisation/dv"/>
+        <dct:creator rdf:resource="https://data.vlaanderen.be/id/organisatie/OVO002949"/>
         <dct:creator rdf:resource="https://ror.org/0496vr396"/>
         <dct:creator rdf:resource="https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab"/>
         <dct:description xml:lang="nl">Dit is de ontologie van mariene waarnemingen. De term mariene waarnemingen verwijst naar alle verschillende metingen en waarnemingen van het bestaan van organismen die tijdens specifieke gebeurtenissen worden gedaan en in het EUROBIS-systeem worden gerapporteerd.</dct:description>
