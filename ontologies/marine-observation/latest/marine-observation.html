@@ -1,0 +1,3008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EUROBIS - Marine observations ontology</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg==">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1Sew
+EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+        #pylode {
+            position: fixed;
+            top: 130px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-con,
+        .sup-col {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-con {
+            color:orange;
+        }
+
+        .sup-col {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+        /* less prominent links for properties */
+        .proplink {
+            color: #336;
+            text-decoration: none;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+      [
+  {
+    "@id": "https://eurobis.org/ns/marine-observation",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "<p>This is the ontology of marine observations. The term marine observations refers to all the different measurements as well as observations of the existence of organisms that are made during specific events and reported in the EUROBIS system.</p>"
+      }
+    ],
+    "https://schema.org/license": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "EUROBIS - Marine observations ontology"
+      }
+    ]
+  }
+]
+    </script>
+</head>
+<body>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.13.2</span>
+  </div>
+  <h1>EUROBIS - Marine observations ontology</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>URI</dt>
+        <dd><code>https://eurobis.org/ns/marine-observation</code></dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator">Creator</a>(s)</dt>
+        <dd>
+            
+    <a href="https://data.vlaanderen.be/id/organisatie/OVO002949">OVO002949</a><br/>
+            
+    <a href="https://ror.org/0496vr396">0496vr396</a><br/>
+            
+    <a href="https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab">stlab</a><br/>
+        </dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/modified">Modified</a></dt>
+        <dd>2025-05-26</dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/issued">Issued</a></dt>
+        <dd>2025-01-27</dd>
+        <dt>Version Information</dt>
+        <dd>First version 0.1.</dd>
+        <dt>Version URI</dt>
+        <dd><a href="https://eurobis.org/ns/marine-observation/0.1">https://eurobis.org/ns/marine-observation/0.1</a></dd>
+        <dt>Imports</dt>
+        <dd>
+            <a href="https://aphia.org/ns/top-level">https://aphia.org/ns/top-level</a><br/>
+        </dd>
+        <dt>License</dt>
+        <dd><a href="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0">http://publications.europa.eu/resource/authority/licence/CC_BY_4_0</a></dd>
+        <dt>Ontology RDF</dt>
+        <dd><a href="marine-observation.ttl">RDF (turtle)</a></dd>
+    </dl>
+    <h2>Description</h2>
+    <div id="description">
+        <p>This is the ontology of marine observations. The term marine observations refers to all the different measurements as well as observations of the existence of organisms that are made during specific events and reported in the EUROBIS system.</p>
+    </div>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#datatypeproperties">Datatype Properties</a></li>
+        <li><a href="#annotationproperties">Annotation Properties</a></li>
+        <li><a href="#namedindividuals">Named Individuals</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#legend">Legend</a></li>
+    </ol>
+</section>
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <div style="width:500px; height:50px; background-color: lightgrey; border:solid 2px grey; padding:10px;margin-bottom:5px; text-align:center;">Pictures say 1,000 words</div>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
+  <section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+      <li><a href="http://marineregions.org/ns/ontology#Feature">mr:Feature</a></li>
+      <li><a href="http://rs.tdwg.org/dwc/terms/Event">dwc:Event</a></li>
+      <li><a href="http://rs.tdwg.org/dwc/terms/MaterialSample">dwc:MaterialSample</a></li>
+      <li><a href="http://rs.tdwg.org/dwc/terms/MeasurmentOrFact">dwc:MeasurmentOrFact</a></li>
+      <li><a href="http://rs.tdwg.org/dwc/terms/Occurrence">dwc:Occurrence</a></li>
+      <li><a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event">dul:Event</a></li>
+      <li><a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity">dul:InformationEntity</a></li>
+      <li><a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Method">dul:Method</a></li>
+      <li><a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object">dul:Object</a></li>
+      <li><a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality">dul:Quality</a></li>
+      <li><a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region">dul:Region</a></li>
+      <li><a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a></li>
+      <li><a href="http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a></li>
+      <li><a href="http://www.w3.org/ns/sosa/ObservableProperty">sosa:ObservableProperty</a></li>
+      <li><a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a></li>
+      <li><a href="http://www.w3.org/ns/sosa/Platform">sosa:Platform</a></li>
+      <li><a href="http://www.w3.org/ns/sosa/Result">sosa:Result</a></li>
+      <li><a href="http://www.w3.org/ns/sosa/Sample">sosa:Sample</a></li>
+      <li><a href="http://www.w3.org/ns/sosa/Sampling">sosa:Sampling</a></li>
+      <li><a href="http://www.w3id.org/cenpat-gilia/bigeonto/BioEvent">http://www.w3id.org/cenpat-gilia/bigeonto/BioEvent</a></li>
+      <li><a href="https://aphia.org/ns/attribute-trait/Environment">tat:Environment</a></li>
+      <li><a href="https://aphia.org/ns/taxa-name/TaxonName">taxa-name:TaxonName</a></li>
+      <li><a href="https://aphia.org/ns/top-level/TemporalEntity">top-level:TemporalEntity</a></li>
+      <li><a href="https://aphia.org/ns/top-level/Type">top-level:Type</a></li>
+      <li><a href="https://aphia.org/ns/top-level/Value">top-level:Value</a></li>
+      <li><a href="#AbioticAssertion">Abiotic Assertion</a></li>
+      <li><a href="#AbioticProperty">Abiotic Property</a></li>
+      <li><a href="#Assertion">Assertion</a></li>
+      <li><a href="#BiodiversityEvent">Biodiversity Event</a></li>
+      <li><a href="#BioFeatureofInterest">Bio Feature of Interest</a></li>
+      <li><a href="#BioticAssertion">Biotic Assertion</a></li>
+      <li><a href="#BioticProperty">Biotic Property</a></li>
+      <li><a href="#EventType">Event Type</a></li>
+      <li><a href="#MarineObservation">Marine Observation</a></li>
+      <li><a href="#MonitoringFacility">Monitoring Facility</a></li>
+      <li><a href="#ObservableProperty1">Observable Property</a></li>
+      <li><a href="#ObservationValue">Observation Value</a></li>
+      <li><a href="#OccurrenceBasis">Occurrence Basis</a></li>
+      <li><a href="#OccurrenceStatus">Occurrence Status</a></li>
+      <li><a href="#OrganismOccurrence">Organism Occurrence</a></li>
+      <li><a href="#Sample1">Sample</a></li>
+      <li><a href="#Sampling1">Sampling</a></li>
+      <li><a href="#Vessel">Vessel</a></li>
+    </ul>
+    <div class="entity class" id="Feature">
+        <h3>
+          Feature<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Feature" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://marineregions.org/ns/ontology#Feature</code></td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#continentinstring">continent in string</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#occursin">occurs in</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Event">
+        <h3>
+          Event<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Event" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://rs.tdwg.org/dwc/terms/Event</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#BiodiversityEvent">Biodiversity Event</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="MaterialSample">
+        <h3>
+          MaterialSample<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#MaterialSample" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://rs.tdwg.org/dwc/terms/MaterialSample</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#Sample1">Sample</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="MeasurmentOrFact">
+        <h3>
+          MeasurmentOrFact<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#MeasurmentOrFact" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://rs.tdwg.org/dwc/terms/MeasurmentOrFact</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#Assertion">Assertion</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Occurrence">
+        <h3>
+          Occurrence<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Occurrence" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://rs.tdwg.org/dwc/terms/Occurrence</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#OrganismOccurrence">Organism Occurrence</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Event1">
+        <h3>
+          Event<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Event1" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#BiodiversityEvent">Biodiversity Event</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="InformationEntity">
+        <h3>
+          InformationEntity<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#InformationEntity" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Method">
+        <h3>
+          Method<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Method" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Method</code></td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#usesmethod">uses method</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Object">
+        <h3>
+          Object<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Object" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#MonitoringFacility">Monitoring Facility</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Quality">
+        <h3>
+          Quality<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Quality" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#ObservableProperty1">Observable Property</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Region">
+        <h3>
+          Region<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Region" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Concept">
+        <h3>
+          Concept<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Concept" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2004/02/skos/core#Concept</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#ObservableProperty1">Observable Property</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#OccurrenceBasis">Occurrence Basis</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#EventType">Event Type</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FeatureOfInterest">
+        <h3>
+          FeatureOfInterest<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#FeatureOfInterest" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/FeatureOfInterest</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#BioFeatureofInterest">Bio Feature of Interest</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ObservableProperty">
+        <h3>
+          ObservableProperty<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#ObservableProperty" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/ObservableProperty</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#ObservableProperty1">Observable Property</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Observation">
+        <h3>
+          Observation<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Observation" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/Observation</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#MarineObservation">Marine Observation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Platform">
+        <h3>
+          Platform<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Platform" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/Platform</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#MonitoringFacility">Monitoring Facility</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Result">
+        <h3>
+          Result<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Result" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/Result</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#ObservationValue">Observation Value</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Sample">
+        <h3>
+          Sample<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Sample" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/Sample</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#Sample1">Sample</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Sampling">
+        <h3>
+          Sampling<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Sampling" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/Sampling</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#Sampling1">Sampling</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="BioEvent">
+        <h3>
+          BioEvent<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#BioEvent" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3id.org/cenpat-gilia/bigeonto/BioEvent</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#BiodiversityEvent">Biodiversity Event</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Environment">
+        <h3>
+          Environment<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Environment" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://aphia.org/ns/attribute-trait/Environment</code></td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#hasoccurredinhabitat">has occurred in habitat</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="TaxonName">
+        <h3>
+          TaxonName<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#TaxonName" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://aphia.org/ns/taxa-name/TaxonName</code></td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#isoforganismnamedas">is of organism named as</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="TemporalEntity">
+        <h3>
+          TemporalEntity<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#TemporalEntity" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://aphia.org/ns/top-level/TemporalEntity</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Type">
+        <h3>
+          Type<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Type" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://aphia.org/ns/top-level/Type</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#EventType">Event Type</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Value">
+        <h3>
+          Value<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Value" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://aphia.org/ns/top-level/Value</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#ObservationValue">Observation Value</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#hasorganismquantity">has organism quantity</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hassize">has size</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="AbioticAssertion">
+        <h3>
+          Abiotic Assertion<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#AbioticAssertion" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/AbioticAssertion</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The class represents a specific type of assertion aimed at detecting abiotic factors, i.e. non-living components of an environment that influence the life of organisms.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#Assertion">Assertion</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="AbioticProperty">
+        <h3>
+          Abiotic Property<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#AbioticProperty" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/AbioticProperty</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The class of abiotic attributes or properties observable during an observation (marine). These are attributes that do not relate to biological aspects of living organisms. Instead, they are properties relating to the surrounding environment such as water, air, wind, etc. that can have an impact on living organisms.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#ObservableProperty1">Observable Property</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Assertion">
+        <h3>
+          Assertion<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Assertion" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/Assertion</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The class represents the action of asserting something. In the context of this ontology, assertion is a type of marine observation related to the reporting of abiotic and biotic properties. Examples include: the weight of an organism in grams, surface water temperature in Celsius, etc.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://rs.tdwg.org/dwc/terms/MeasurmentOrFact">dwc:MeasurmentOrFact</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#MarineObservation">Marine Observation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#BioticAssertion">Biotic Assertion</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#AbioticAssertion">Abiotic Assertion</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="BiodiversityEvent">
+        <h3>
+          Biodiversity Event<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#BiodiversityEvent" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/BioEvent</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This class represents specific actions that occur at a certain place and time in the context of biodiversity. The class is semantically aligned to the Event class of Darwin Core and the Bio Event class of the Bige-Onto ontology used to model data contained in public records such as GBIF and OBIS. Examples of events include: a specimen collection event, an image acquisition event, a marine trawl fishing campaign, etc.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event">dul:Event</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://rs.tdwg.org/dwc/terms/Event">dwc:Event</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3id.org/cenpat-gilia/bigeonto/BioEvent">http://www.w3id.org/cenpat-gilia/bigeonto/BioEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#issubeventof">is sub event of</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#BiodiversityEvent">Biodiversity Event</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://aphia.org/ns/top-level/hasTemporalEntity">top-level:hasTemporalEntity</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://aphia.org/ns/top-level/TemporalEntity">top-level:TemporalEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#occursin">occurs in</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="http://marineregions.org/ns/ontology#Feature">mr:Feature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasoccurredinhabitat">has occurred in habitat</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://aphia.org/ns/attribute-trait/Environment">tat:Environment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/dc/terms/identier">dct:identier</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://aphia.org/ns/top-level/hasType">top-level:hasType</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#EventType">Event Type</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/dc/terms/date">dct:date</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#Sampling1">Sampling</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#MarineObservation">Marine Observation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#issubeventof">is sub event of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasoccurredinhabitat">has occurred in habitat</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#occursin">occurs in</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#madeduringevent">made during event</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#issubeventof">is sub event of</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="BioFeatureofInterest">
+        <h3>
+          Bio Feature of Interest<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#BioFeatureofInterest" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/BioFeatureOfInterest</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The class of the things whose property is being detected or observed in the course of a Marine Observation to arrive at a final value. Examples include: an area of the sea, a river, a collection of organisms, the air, etc.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup><br/>
+                    (<a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event">dul:Event</a><sup class="sup-c" title="class">c</sup> or <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity">dul:InformationEntity</a><sup class="sup-c" title="class">c</sup> or <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object">dul:Object</a><sup class="sup-c" title="class">c</sup>)<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#Sample1">Sample</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#hasmarinefeatureofinterest">has marine feature of interest</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="BioticAssertion">
+        <h3>
+          Biotic Assertion<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#BioticAssertion" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/BioticAssertion</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The class represents a specific type of assertion aimed at detecting biotic factors, i.e., factors relating to living organisms that influence the ecosystem.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#Assertion">Assertion</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="BioticProperty">
+        <h3>
+          Biotic Property<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#BioticProperty" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/BioticProperty</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The class of biotic attributes or properties observable during an observation (marine). These are attributes referring to living organisms or something that was once alive.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#ObservableProperty1">Observable Property</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="EventType">
+        <h3>
+          Event Type<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#EventType" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/EventType</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The class of event types in the context of biodiversity. Examples include: site visit, project, biotic interaction, observation, etc.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://aphia.org/ns/top-level/Type">top-level:Type</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="MarineObservation">
+        <h3>
+          Marine Observation<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#MarineObservation" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/MarineObservation</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The class represents an observation carried out in the context of marine biodiversity. In general, an observation is defined as an activity to calculate the value of a property of a characteristic of interest according to a certain method or procedure.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#BiodiversityEvent">Biodiversity Event</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#isinthecontextof">is in the context of</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#MarineObservation">Marine Observation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasmarinefeatureofinterest">has marine feature of interest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="#BioFeatureofInterest">Bio Feature of Interest</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#madeby">made by</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#MonitoringFacility">Monitoring Facility</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasobservableproperty">has observable property</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="#ObservableProperty1">Observable Property</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasobservationvalue">has observation value</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="#ObservationValue">Observation Value</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#madeduringevent">made during event</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#BiodiversityEvent">Biodiversity Event</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#Assertion">Assertion</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#OrganismOccurrence">Organism Occurrence</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#hasobservationvalue">has observation value</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#madeby">made by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#madeduringevent">made during event</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasmarinefeatureofinterest">has marine feature of interest</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasobservableproperty">has observable property</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isinthecontextof">is in the context of</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#isinthecontextof">is in the context of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isobservablepropertyof">is observable property of</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="MonitoringFacility">
+        <h3>
+          Monitoring Facility<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#MonitoringFacility" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/MonitoringFacility</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The class of entities used as monitoring facilities to carry out (marine) observations and thus acquire data on those. In the context of this ontology, an example is the vessel/boat.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object">dul:Object</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/Platform">sosa:Platform</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#Vessel">Vessel</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#madeby">made by</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ObservableProperty1">
+        <h3>
+          Observable Property<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#ObservableProperty1" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/ObservableProperty</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The class of attributes or properties that can be observed/detected during an observation (marine). This in turn can be specialised, in the context of this ontology, into biotic and abiotic properties.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality">dul:Quality</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/ObservableProperty">sosa:ObservableProperty</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#isobservablepropertyof">is observable property of</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#MarineObservation">Marine Observation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#BioticProperty">Biotic Property</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#AbioticProperty">Abiotic Property</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#isobservablepropertyof">is observable property of</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#hasobservableproperty">has observable property</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ObservationValue">
+        <h3>
+          Observation Value<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#ObservationValue" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/ObservationValue</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The class for representing the result of the observation (marine). This may be a quantitative value expressed in a unit of measurement or a qualitative value expressed as a normal text string.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://aphia.org/ns/top-level/Value">top-level:Value</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/Result">sosa:Result</a><sup class="sup-c" title="class">c</sup><br/>
+                    (<a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object">dul:Object</a><sup class="sup-c" title="class">c</sup> or <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region">dul:Region</a><sup class="sup-c" title="class">c</sup>)<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#hasobservationvalue">has observation value</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="OccurrenceBasis">
+        <h3>
+          Occurrence Basis<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#OccurrenceBasis" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/OccurrenceBasis</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The class models the basis or nature or type of detection of the existence of a certain organism. Its individuals can be human observation, observation made with software, through sampling, based on a preserved specimen/fossil, etc.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#hasoccurrencebasis">has occurrence basis</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="OccurrenceStatus">
+        <h3>
+          Occurrence Status<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#OccurrenceStatus" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/OccurrenceStatus</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The class models the state of the occurrence of organisms. The state can take two values: present or absent.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#hasoccurrencestatus">has occurrence status</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="https://eurobis.org/ns/marine-observation/Absent">https://eurobis.org/ns/marine-observation/Absent</a><br/>
+                    <a href="https://eurobis.org/ns/marine-observation/Present">https://eurobis.org/ns/marine-observation/Present</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="OrganismOccurrence">
+        <h3>
+          Organism Occurrence<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#OrganismOccurrence" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/OrganismOccurrence</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The class represents a specific type of marine observation aimed at detecting the presence of a certain organism at a certain place and time.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#MarineObservation">Marine Observation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://rs.tdwg.org/dwc/terms/Occurrence">dwc:Occurrence</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#hasoccurrencestatus">has occurrence status</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="#OccurrenceStatus">Occurrence Status</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#isoforganismnamedas">is of organism named as</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://aphia.org/ns/taxa-name/TaxonName">taxa-name:TaxonName</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasorganismquantity">has organism quantity</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://aphia.org/ns/top-level/Value">top-level:Value</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasoccurrencebasis">has occurrence basis</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="#OccurrenceBasis">Occurrence Basis</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#hasorganismquantity">has organism quantity</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasoccurrencebasis">has occurrence basis</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isoforganismnamedas">is of organism named as</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasoccurrencestatus">has occurrence status</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Sample1">
+        <h3>
+          Sample<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Sample1" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/Sample</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The class represents the sample, i.e. a material entity representing all or part of an element of interest of the observation (marine). Samples are usually subsets or extracts of the element of interest of an observation and are used in situations where direct observations of the final element of interest cannot be made, either because the entire element cannot be observed or because it is more convenient to use a proxy. For example, a whole organism, a water sample, a marine microbial sample, etc.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://rs.tdwg.org/dwc/terms/MaterialSample">dwc:MaterialSample</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/Sample">sosa:Sample</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#BioFeatureofInterest">Bio Feature of Interest</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#hassize">has size</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://aphia.org/ns/top-level/Value">top-level:Value</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#minimumdepthinmeters">minimum depth in meters</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#issubsampleof">is sub sample of</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Sample1">Sample</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#maximumdepthinmeters">maximum depth in meters</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#maximumdepthinmeters">maximum depth in meters</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#minimumdepthinmeters">minimum depth in meters</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#issubsampleof">is sub sample of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hassize">has size</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#produces">produces</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#issubsampleof">is sub sample of</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Sampling1">
+        <h3>
+          Sampling<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Sampling1" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/Sampling</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The class represents the act of creating a sample to make an observation (marine), based on a specific method used.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#BiodiversityEvent">Biodiversity Event</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/Sampling">sosa:Sampling</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#samplingeffort">sampling effort</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">some</span> <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">rdf:PlainLiteral</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#usesmethod">uses method</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Method">dul:Method</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#samplingprotocolinstring">sampling protocol in string</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">rdf:PlainLiteral</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#produces">produces</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Sample1">Sample</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#usesmethod">uses method</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#produces">produces</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#samplingeffort">sampling effort</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#samplingprotocolinstring">sampling protocol in string</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Vessel">
+        <h3>
+          Vessel<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Vessel" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/Vessel</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The class represents a specific type of monitoring facility, i.e. a ship or large vessel, where marine observations are carried out.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#MonitoringFacility">Monitoring Facility</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#habitat">habitat</a></li>
+        <li><a href="#occurrenceStatus">occurrenceStatus</a></li>
+        <li><a href="#associatedWith">associatedWith</a></li>
+        <li><a href="#hasPart">hasPart</a></li>
+        <li><a href="#ObservableProperty">ObservableProperty</a></li>
+        <li><a href="#hasFeatureOfInterest">hasFeatureOfInterest</a></li>
+        <li><a href="#hasResult">hasResult</a></li>
+        <li><a href="#usedProcedure">usedProcedure</a></li>
+        <li><a href="#hasTemporalEntity">hasTemporalEntity</a></li>
+        <li><a href="#hasType">hasType</a></li>
+        <li><a href="#hasmarinefeatureofinterest">has marine feature of interest</a></li>
+        <li><a href="#hasobservableproperty">has observable property</a></li>
+        <li><a href="#hasobservationvalue">has observation value</a></li>
+        <li><a href="#hasoccurredinhabitat">has occurred in habitat</a></li>
+        <li><a href="#hasoccurrencebasis">has occurrence basis</a></li>
+        <li><a href="#hasoccurrencestatus">has occurrence status</a></li>
+        <li><a href="#hasorganismquantity">has organism quantity</a></li>
+        <li><a href="#hassize">has size</a></li>
+        <li><a href="#isinthecontextof">is in the context of</a></li>
+        <li><a href="#isobservablepropertyof">is observable property of</a></li>
+        <li><a href="#isoforganismnamedas">is of organism named as</a></li>
+        <li><a href="#issubeventof">is sub event of</a></li>
+        <li><a href="#issubsampleof">is sub sample of</a></li>
+        <li><a href="#madeby">made by</a></li>
+        <li><a href="#madeduringevent">made during event</a></li>
+        <li><a href="#occursin">occurs in</a></li>
+        <li><a href="#produces">produces</a></li>
+        <li><a href="#usesmethod">uses method</a></li>
+    </ul>
+    <div class="entity property" id="habitat">
+        <h3>habitat<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#habitat" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://rs.tdwg.org/dwc/iri/habitat</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="occurrenceStatus">
+        <h3>occurrenceStatus<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#occurrenceStatus" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://rs.tdwg.org/dwc/terms/occurrenceStatus</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="associatedWith">
+        <h3>associatedWith<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#associatedWith" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasPart">
+        <h3>hasPart<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasPart" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="ObservableProperty">
+        <h3>ObservableProperty<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#ObservableProperty" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/ObservableProperty</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasFeatureOfInterest">
+        <h3>hasFeatureOfInterest<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasFeatureOfInterest" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/hasFeatureOfInterest</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasResult">
+        <h3>hasResult<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasResult" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/hasResult</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="usedProcedure">
+        <h3>usedProcedure<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#usedProcedure" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/usedProcedure</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasTemporalEntity">
+        <h3>hasTemporalEntity<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasTemporalEntity" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://aphia.org/ns/top-level/hasTemporalEntity</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasType">
+        <h3>hasType<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasType" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://aphia.org/ns/top-level/hasType</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmarinefeatureofinterest">
+        <h3>has marine feature of interest<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasmarinefeatureofinterest" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/hasBioFeatureOfInterest</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property used to represent the habitat of the species.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#MarineObservation">Marine Observation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://eurobis.org/ns/marine-observation/BioFeatureOfInterest">https://eurobis.org/ns/marine-observation/BioFeatureOfInterest</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasobservableproperty">
+        <h3>has observable property<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasobservableproperty" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/hasObservableProperty</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property used to represent a specific property of the marine observation such as a biotic or abiotic property.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/hasObservableProperty">sosa:hasObservableProperty</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#isobservablepropertyof">is observable property of</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#MarineObservation">Marine Observation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://eurobis.org/ns/marine-observation/ObservableProperty">https://eurobis.org/ns/marine-observation/ObservableProperty</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasobservationvalue">
+        <h3>has observation value<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasobservationvalue" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/hasObservationValue</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property used to specify a value, be it numerical with units of measurement or qualitative of the marine observation.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#MarineObservation">Marine Observation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://eurobis.org/ns/marine-observation/ObservationValue">https://eurobis.org/ns/marine-observation/ObservationValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasoccurredinhabitat">
+        <h3>has occurred in habitat<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasoccurredinhabitat" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/hasOccurredInHabitat</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property allowing an event occurring in the biodiversity sphere to be associated with the environment/habitat in which it takes place.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://rs.tdwg.org/dwc/iri/habitat">dwciri:habitat</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#BiodiversityEvent">Biodiversity Event</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://aphia.org/ns/attribute-trait/Environment">tat:Environment</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasoccurrencebasis">
+        <h3>has occurrence basis<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasoccurrencebasis" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/hasOccurrenceBasis</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property that allows one to express the basis or nature or type of detection of the existence of a certain organism (e.g. human observation, observation made with software, through sampling, based on a preserved specimen/fossil, etc.).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">dul:associatedWith</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#OrganismOccurrence">Organism Occurrence</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://eurobis.org/ns/marine-observation/OccurrenceBasis">https://eurobis.org/ns/marine-observation/OccurrenceBasis</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasoccurrencestatus">
+        <h3>has occurrence status<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasoccurrencestatus" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/hasOccurrenceStatus</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property that allows one to express the state of the occurrence that may be absent or present at a certain location.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://rs.tdwg.org/dwc/terms/occurrenceStatus">dwc:occurrenceStatus</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#OrganismOccurrence">Organism Occurrence</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://eurobis.org/ns/marine-observation/OccurrenceStatus">https://eurobis.org/ns/marine-observation/OccurrenceStatus</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasorganismquantity">
+        <h3>has organism quantity<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasorganismquantity" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/hasOrganismQuantity</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property that allows a quantity of organisms to be represented in the detection of the presence of organisms, expressed in some unit of measurement.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">dul:associatedWith</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#OrganismOccurrence">Organism Occurrence</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://aphia.org/ns/top-level/Value">top-level:Value</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hassize">
+        <h3>has size<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hassize" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/hasSize</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property that allows the sample size to be expressed. The sample size is expressed with an object of type Value which may have a numerical value and potentially a unit of measurement. Through this property we are able to express what in darwnin core are the two properties called sample size unit (sampleSizeUnit) and sample size value (sampleSizeValue).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">dul:associatedWith</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Sample1">Sample</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://aphia.org/ns/top-level/Value">top-level:Value</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isinthecontextof">
+        <h3>is in the context of<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isinthecontextof" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/isInTheContextOf</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property used to link one marine observation to another, to represent that a certain marine observation occurs in the context of another. For example, it is possible to link the observation of an organism's neediness with certain biotic or abiotic measurements.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">dul:associatedWith</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#MarineObservation">Marine Observation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://eurobis.org/ns/marine-observation/MarineObservation">https://eurobis.org/ns/marine-observation/MarineObservation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isobservablepropertyof">
+        <h3>is observable property of<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isobservablepropertyof" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/isObservablePropertyOf</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Inverse property of ‘has observable property’ used to specify a marine observation given an observed property.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">dul:associatedWith</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#ObservableProperty1">Observable Property</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://eurobis.org/ns/marine-observation/MarineObservation">https://eurobis.org/ns/marine-observation/MarineObservation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isoforganismnamedas">
+        <h3>is of organism named as<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isoforganismnamedas" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/isOfOrganismNamedAs</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property allowing the name of the reference taxon to be specified in the observation concerning the occurrence of a certain organism.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">dul:associatedWith</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#OrganismOccurrence">Organism Occurrence</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://aphia.org/ns/taxa-name/TaxonName">taxa-name:TaxonName</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="issubeventof">
+        <h3>is sub event of<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#issubeventof" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/isSubEventOf</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property representing a possible hierarchy of events.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart">dul:hasPart</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#BiodiversityEvent">Biodiversity Event</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://eurobis.org/ns/marine-observation/BioEvent">https://eurobis.org/ns/marine-observation/BioEvent</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="issubsampleof">
+        <h3>is sub sample of<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#issubsampleof" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/isSubSampleOf</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property enabling the creation of hierarchies between samples (in the context of marine observations)</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">dul:associatedWith</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Sample1">Sample</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://eurobis.org/ns/marine-observation/Sample">https://eurobis.org/ns/marine-observation/Sample</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="madeby">
+        <h3>made by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#madeby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/madeBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property used to identify the monitoring facility that carried out the marine observation.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">dul:associatedWith</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#MarineObservation">Marine Observation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://eurobis.org/ns/marine-observation/MonitoringFacility">https://eurobis.org/ns/marine-observation/MonitoringFacility</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="madeduringevent">
+        <h3>made during event<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#madeduringevent" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/madeDuringEvent</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property used to link a marine observation to the event in which it was made.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">dul:associatedWith</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#MarineObservation">Marine Observation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://eurobis.org/ns/marine-observation/BioEvent">https://eurobis.org/ns/marine-observation/BioEvent</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="occursin">
+        <h3>occurs in<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#occursin" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/occursIn</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property that allows one to represent the location of a certain event (in the context of marine observations).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">dul:associatedWith</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#BiodiversityEvent">Biodiversity Event</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://marineregions.org/ns/ontology#Feature">mr:Feature</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="produces">
+        <h3>produces<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#produces" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/produces</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property that allows the sampling activity to be linked to the related sample created.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Sampling1">Sampling</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://eurobis.org/ns/marine-observation/Sample">https://eurobis.org/ns/marine-observation/Sample</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="usesmethod">
+        <h3>uses method<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#usesmethod" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/usesMethod</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property representing the method used in sampling (specifically in the context of marine observations).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Sampling1">Sampling</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Method">dul:Method</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="datatypeproperties">
+    <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#date">date</a></li>
+        <li><a href="#identier">identier</a></li>
+        <li><a href="#continent">continent</a></li>
+        <li><a href="#maximumDepthInMeters">maximumDepthInMeters</a></li>
+        <li><a href="#minimumDepthInMeters">minimumDepthInMeters</a></li>
+        <li><a href="#samplingEffort">samplingEffort</a></li>
+        <li><a href="#samplingProtocol">samplingProtocol</a></li>
+        <li><a href="#continentinstring">continent in string</a></li>
+        <li><a href="#maximumdepthinmeters">maximum depth in meters</a></li>
+        <li><a href="#minimumdepthinmeters">minimum depth in meters</a></li>
+        <li><a href="#samplingeffort">sampling effort</a></li>
+        <li><a href="#samplingprotocolinstring">sampling protocol in string</a></li>
+    </ul>
+    <div class="entity property" id="date">
+        <h3>date<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#date" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/date</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="identier">
+        <h3>identier<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#identier" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/identier</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="continent">
+        <h3>continent<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#continent" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://rs.tdwg.org/dwc/terms/continent</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="maximumDepthInMeters">
+        <h3>maximumDepthInMeters<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#maximumDepthInMeters" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://rs.tdwg.org/dwc/terms/maximumDepthInMeters</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="minimumDepthInMeters">
+        <h3>minimumDepthInMeters<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#minimumDepthInMeters" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://rs.tdwg.org/dwc/terms/minimumDepthInMeters</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="samplingEffort">
+        <h3>samplingEffort<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#samplingEffort" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://rs.tdwg.org/dwc/terms/samplingEffort</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="samplingProtocol">
+        <h3>samplingProtocol<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#samplingProtocol" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://rs.tdwg.org/dwc/terms/samplingProtocol</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="continentinstring">
+        <h3>continent in string<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#continentinstring" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/continentInString</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A string to represent the continent of the place where an event takes place in the context of biodiversity</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://rs.tdwg.org/dwc/terms/continent">dwc:continent</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://marineregions.org/ns/ontology#Feature">mr:Feature</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">rdf:PlainLiteral</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="maximumdepthinmeters">
+        <h3>maximum depth in meters<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#maximumdepthinmeters" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/maximumDepthInMeters</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The maximum level of a depth interval below the local surface, expressed in metres. The depth refers to where the sample was taken.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://rs.tdwg.org/dwc/terms/maximumDepthInMeters">dwc:maximumDepthInMeters</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Sample1">Sample</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="minimumdepthinmeters">
+        <h3>minimum depth in meters<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#minimumdepthinmeters" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/minimumDepthInMeters</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The minimum level of a depth interval below the local surface, expressed in metres. The depth refers to where the sample was taken.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://rs.tdwg.org/dwc/terms/minimumDepthInMeters">dwc:minimumDepthInMeters</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Sample1">Sample</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="samplingeffort">
+        <h3>sampling effort<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#samplingeffort" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/samplingEffort</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The amount of effort for sampling. Examples include: 10 observer hours, </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://rs.tdwg.org/dwc/terms/samplingEffort">dwc:samplingEffort</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Sampling1">Sampling</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">rdf:PlainLiteral</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="samplingprotocolinstring">
+        <h3>sampling protocol in string<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#samplingprotocolinstring" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://eurobis.org/ns/marine-observation/samplingProtocolInString</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A string through which to specify/describe the protocol used for sampling.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://rs.tdwg.org/dwc/terms/samplingProtocol">dwc:samplingProtocol</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Sampling1">Sampling</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">rdf:PlainLiteral</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="annotationproperties">
+    <h2>Annotation Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#creator">creator</a></li>
+        <li><a href="#description">description</a></li>
+        <li><a href="#issued">issued</a></li>
+        <li><a href="#language">language</a></li>
+        <li><a href="#license">license</a></li>
+        <li><a href="#modified">modified</a></li>
+        <li><a href="#title">title</a></li>
+        <li><a href="#qualifiedCardinality">qualifiedCardinality</a></li>
+        <li><a href="#usageNote">usageNote</a></li>
+        <li><a href="#wasDerivedFrom">wasDerivedFrom</a></li>
+        <li><a href="#wasInfluencedBy">wasInfluencedBy</a></li>
+    </ul>
+    <div class="entity property" id="creator">
+        <h3>creator<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#creator" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/creator</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="description">
+        <h3>description<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#description" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/description</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="issued">
+        <h3>issued<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#issued" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/issued</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="language">
+        <h3>language<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#language" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/language</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="license">
+        <h3>license<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#license" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/license</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="modified">
+        <h3>modified<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#modified" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/modified</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="title">
+        <h3>title<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#title" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/title</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="qualifiedCardinality">
+        <h3>qualifiedCardinality<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#qualifiedCardinality" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2002/07/owl#qualifiedCardinality</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="usageNote">
+        <h3>usageNote<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#usageNote" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2004/02/skos/core#usageNote</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="wasDerivedFrom">
+        <h3>wasDerivedFrom<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#wasDerivedFrom" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/prov#wasDerivedFrom</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="wasInfluencedBy">
+        <h3>wasInfluencedBy<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#wasInfluencedBy" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/prov#wasInfluencedBy</code></td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+  
+    <section id="namedindividuals">
+        <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+        <ul class="hlist">
+            <li><a href="#Absent">Absent</a></li>
+            <li><a href="#Present">Present</a></li>
+        </ul>
+            <div class="entity named_individual" id="Absent">
+        <h3>Absent<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://eurobis.org/ns/marine-observation/Absent
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://eurobis.org/ns/marine-observation/OccurrenceStatus">https://eurobis.org/ns/marine-observation/OccurrenceStatus</a><br/>
+            </dd>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Present">
+        <h3>Present<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://eurobis.org/ns/marine-observation/Present
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://eurobis.org/ns/marine-observation/OccurrenceStatus">https://eurobis.org/ns/marine-observation/OccurrenceStatus</a><br/>
+            </dd>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://eurobis.org/ns/marine-observation
+                </td>
+            </tr>
+        </table>
+    </div>
+    </section>
+
+  <section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>default (:)</dt>
+        <dd><code>https://eurobis.org/ns/marine-observation</code></dd>
+        <dt>brick</dt>
+        <dd><code>https://brickschema.org/schema/Brick#</code></dd>
+        <dt>csvw</dt>
+        <dd><code>http://www.w3.org/ns/csvw#</code></dd>
+        <dt>dc</dt>
+        <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
+        <dt>dcam</dt>
+        <dd><code>http://purl.org/dc/dcam/</code></dd>
+        <dt>dcat</dt>
+        <dd><code>http://www.w3.org/ns/dcat#</code></dd>
+        <dt>dcmitype</dt>
+        <dd><code>http://purl.org/dc/dcmitype/</code></dd>
+        <dt>dct</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>doap</dt>
+        <dd><code>http://usefulinc.com/ns/doap#</code></dd>
+        <dt>dul</dt>
+        <dd><code>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#</code></dd>
+        <dt>dwc</dt>
+        <dd><code>http://rs.tdwg.org/dwc/terms/</code></dd>
+        <dt>dwciri</dt>
+        <dd><code>http://rs.tdwg.org/dwc/iri/</code></dd>
+        <dt>foaf</dt>
+        <dd><code>http://xmlns.com/foaf/0.1/</code></dd>
+        <dt>geo</dt>
+        <dd><code>http://www.opengis.net/ont/geosparql#</code></dd>
+        <dt>mr</dt>
+        <dd><code>http://marineregions.org/ns/ontology#</code></dd>
+        <dt>odrl</dt>
+        <dd><code>http://www.w3.org/ns/odrl/2/</code></dd>
+        <dt>org</dt>
+        <dd><code>http://www.w3.org/ns/org#</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>prof</dt>
+        <dd><code>http://www.w3.org/ns/dx/prof/</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>qb</dt>
+        <dd><code>http://purl.org/linked-data/cube#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>sh</dt>
+        <dd><code>http://www.w3.org/ns/shacl#</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>sosa</dt>
+        <dd><code>http://www.w3.org/ns/sosa/</code></dd>
+        <dt>ssn</dt>
+        <dd><code>http://www.w3.org/ns/ssn/</code></dd>
+        <dt>tat</dt>
+        <dd><code>https://aphia.org/ns/attribute-trait/</code></dd>
+        <dt>taxa-name</dt>
+        <dd><code>https://aphia.org/ns/taxa-name/</code></dd>
+        <dt>time</dt>
+        <dd><code>http://www.w3.org/2006/time#</code></dd>
+        <dt>top-level</dt>
+        <dd><code>https://aphia.org/ns/top-level/</code></dd>
+        <dt>vann</dt>
+        <dd><code>http://purl.org/vocab/vann/</code></dd>
+        <dt>void</dt>
+        <dd><code>http://rdfs.org/ns/void#</code></dd>
+        <dt>wgs</dt>
+        <dd><code>https://www.w3.org/2003/01/geo/wgs84_pos#</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+  <section id="legend">
+      <h2>Legend</h2>
+      <table class="entity">
+          <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+          <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+          <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+          <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+          <tr><td><sup class="sup-ap" title="Annotation Properties">ap</sup></td><td>Annotation Properties</td></tr>
+          <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+          <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+      </table>
+  </section>
+</body>
+</html>
