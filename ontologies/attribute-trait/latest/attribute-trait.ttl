@@ -13,7 +13,7 @@
 <https://aphia.org/ns/attribute-trait> rdf:type owl:Ontology ;
                                         owl:versionIRI <https://aphia.org/ns/attribute-trait/0.3> ;
                                         owl:imports <https://aphia.org/ns/top-level> ;
-                                        dct:creator <https://aphia.org/resource/organisation/dv> ,
+                                        dct:creator <https://data.vlaanderen.be/id/organisatie/OVO002949 > ,
                                                     <https://ror.org/0496vr396> ,
                                                     <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab> ;
                                         dct:description "Dit is de attribuut- en eigenschapontologie van het APHIA-ontologienetwerk. Het importeert de ontologie op het hoogste niveau van het APHIA-netwerk en stelt het gebruik voor van een specifiek ontwerppatroon 'Beschrijving' om attributen, eigenschappen en hun contextinformatie te modelleren die mogelijk niet a priori bekend zijn en in de toekomst worden uitgebreid."@nl ,
@@ -448,8 +448,8 @@ foaf:Organization rdf:type owl:Class .
 #    Individuals
 #################################################################
 
-###  https://aphia.org/resource/organisation/dv
-<https://aphia.org/resource/organisation/dv> rdf:type owl:NamedIndividual ,
+###  https://data.vlaanderen.be/id/organisatie/OVO002949 
+<https://data.vlaanderen.be/id/organisatie/OVO002949 > rdf:type owl:NamedIndividual ,
                                                       foaf:Organization ;
                                              rdfs:label "Digitaal Vlaanderen"@nl ,
                                                         "Digital Flanders"@en ;

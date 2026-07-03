@@ -14,7 +14,7 @@
         <owl:versionIRI rdf:resource="https://aphia.org/ns/taxon-name/0.2"/>
         <owl:imports rdf:resource="http://www.w3.org/2008/05/skos-xl"/>
         <owl:imports rdf:resource="https://aphia.org/ns/top-level"/>
-        <dct:creator rdf:resource="https://aphia.org/resource/organisation/dv"/>
+        <dct:creator rdf:resource="https://data.vlaanderen.be/id/organisatie/OVO002949"/>
         <dct:creator rdf:resource="https://ror.org/0496vr396"/>
         <dct:creator rdf:resource="https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab"/>
         <dct:description xml:lang="it">Questa è l&apos;ontologia dei nomi dei taxon e di tutte le informazione tassonomiche, come disponibili dal sistema WoRMS. Essa importa l&apos;ontologia di primo livello top-level ed è allineata a skos-xl.</dct:description>
@@ -783,9 +783,9 @@
     
 
 
-    <!-- https://aphia.org/resource/organisation/dv -->
+    <!-- https://data.vlaanderen.be/id/organisatie/OVO002949 -->
 
-    <owl:NamedIndividual rdf:about="https://aphia.org/resource/organisation/dv">
+    <owl:NamedIndividual rdf:about="https://data.vlaanderen.be/id/organisatie/OVO002949">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
         <rdfs:label xml:lang="nl">Digitaal Vlaanderen</rdfs:label>
         <rdfs:label xml:lang="en">Digital Flanders</rdfs:label>

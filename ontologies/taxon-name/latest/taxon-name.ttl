@@ -13,7 +13,7 @@
                                         owl:imports <http://www.w3.org/2008/05/skos-xl> ,
                                                     <https://aphia.org/ns/top-level> ;
                                         dct:creator <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab> ,
-                                                    <https://aphia.org/resource/organisation/dv> ,
+                                                    <https://data.vlaanderen.be/id/organisatie/OVO002949> ,
                                                     <https://ror.org/0496vr396> ;
                                         dct:description "Questa è l'ontologia dei nomi dei taxon e di tutte le informazione tassonomiche, come disponibili dal sistema WoRMS. Essa importa l'ontologia di primo livello top-level ed è allineata a skos-xl."@it ,
                                                         "This is the ontology of taxon names and all taxonomic information, as available from the WoRMS system. It imports the top-level ontology of the APHIA network of ontologies, and is aligned to skos-xl."@en ,
@@ -545,8 +545,8 @@ dct:Location rdf:type owl:Class .
 #    Individuals
 #################################################################
 
-###  https://aphia.org/resource/organisation/dv
-<https://aphia.org/resource/organisation/dv> rdf:type owl:NamedIndividual ,
+###  https://data.vlaanderen.be/id/organisatie/OVO002949
+<https://data.vlaanderen.be/id/organisatie/OVO002949> rdf:type owl:NamedIndividual ,
                                                             foaf:Organization ;
                                                    rdfs:label "Digitaal Vlaanderen"@nl ,
                                                               "Digital Flanders"@en ;

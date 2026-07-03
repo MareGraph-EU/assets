@@ -13,7 +13,7 @@
 <https://aphia.org/ns/distribution> rdf:type owl:Ontology ;
                                      owl:versionIRI <https://aphia.org/ns/distribution/0.2> ;
                                      owl:imports <https://aphia.org/ns/top-level> ;
-                                     dct:creator <https://aphia.org/resource/organisation/dv> ,
+                                     dct:creator <https://data.vlaanderen.be/id/organisatie/OVO002949> ,
                                                  <https://ror.org/0496vr396> ,
                                                  <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab> ;
                                      dct:description "Questa è l'ontologia della distribuzione (delle specie) della rete di ontologie APHIA. Importa l'ontologia di primo livello top-level e definisce la distribuzione documentata delle specie come riportata nel database WoRMS. La distribuzione è descritta in base a diverse tipologie di informazioni: la posizione geografica, utilizzando il nome del luogo o la latitudine e la longitudine quando è possibile identificare singoli punti, la fonte da cui è documentata la distribuzione, l'origine della specie, l'invasività della specie, la presenza. È inoltre possibile indicare se la distribuzione è segnalata come 'località tipo' della specie. L'ontologia usa l'ontologia delle regioni marine per rappresentare le posizioni geografiche."@it ,
@@ -356,8 +356,8 @@ foaf:Organization rdf:type owl:Class .
 #    Individuals
 #################################################################
 
-###  https://aphia.org/resource/organisation/dv
-<https://aphia.org/resource/organisation/dv> rdf:type owl:NamedIndividual ,
+###  https://data.vlaanderen.be/id/organisatie/OVO002949
+<https://data.vlaanderen.be/id/organisatie/OVO002949> rdf:type owl:NamedIndividual ,
                                                       foaf:Organization ;
                                              rdfs:label "Digitaal Vlaanderen"@nl ,
                                                         "Digital Flanders"@en ;

@@ -13,7 +13,7 @@
     <owl:Ontology rdf:about="https://aphia.org/ns/distribution">
         <owl:versionIRI rdf:resource="https://aphia.org/ns/distribution/0.2"/>
         <owl:imports rdf:resource="https://aphia.org/ns/top-level"/>
-        <dct:creator rdf:resource="https://aphia.org/resource/organisation/dv"/>
+        <dct:creator rdf:resource="https://data.vlaanderen.be/id/organisatie/OVO002949"/>
         <dct:creator rdf:resource="https://ror.org/0496vr396"/>
         <dct:creator rdf:resource="https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab"/>
         <dct:description xml:lang="it">Questa è l&apos;ontologia della distribuzione (delle specie) della rete di ontologie APHIA. Importa l&apos;ontologia di primo livello top-level e definisce la distribuzione documentata delle specie come riportata nel database WoRMS. La distribuzione è descritta in base a diverse tipologie di informazioni: la posizione geografica, utilizzando il nome del luogo o la latitudine e la longitudine quando è possibile identificare singoli punti, la fonte da cui è documentata la distribuzione, l&apos;origine della specie, l&apos;invasività della specie, la presenza. È inoltre possibile indicare se la distribuzione è segnalata come &apos;località tipo&apos; della specie. L&apos;ontologia usa l&apos;ontologia delle regioni marine per rappresentare le posizioni geografiche.</dct:description>
@@ -504,9 +504,9 @@
 
 
 
-    <!-- https://aphia.org/resource/organisation/dv -->
+    <!-- https://data.vlaanderen.be/id/organisatie/OVO002949 -->
 
-    <owl:NamedIndividual rdf:about="https://aphia.org/resource/organisation/dv">
+    <owl:NamedIndividual rdf:about="https://data.vlaanderen.be/id/organisatie/OVO002949">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
         <rdfs:label xml:lang="nl">Digitaal Vlaanderen</rdfs:label>
         <rdfs:label xml:lang="en">Digital Flanders</rdfs:label>

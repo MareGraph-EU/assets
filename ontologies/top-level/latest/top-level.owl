@@ -18,7 +18,7 @@
     <Import>http://www.ontologydesignpatterns.org/ont/d0.owl</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:creator"/>
-        <IRI>https://aphia.org/resource/organisation/dv</IRI>
+        <IRI>https://data.vlaanderen.be/id/organisatie/OVO002949</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dct:creator"/>
@@ -163,7 +163,7 @@
         <NamedIndividual IRI=""/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="https://aphia.org/resource/organisation/dv"/>
+        <NamedIndividual IRI="https://data.vlaanderen.be/id/organisatie/OVO002949"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dct:creator"/>
@@ -326,7 +326,7 @@
     </SubClassOf>
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Organization"/>
-        <NamedIndividual IRI="https://aphia.org/resource/organisation/dv"/>
+        <NamedIndividual IRI="https://data.vlaanderen.be/id/organisatie/OVO002949"/>
     </ClassAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/hasIdentifier"/>
@@ -987,22 +987,22 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://aphia.org/resource/organisation/dv</IRI>
+        <IRI>https://data.vlaanderen.be/id/organisatie/OVO002949</IRI>
         <Literal xml:lang="nl">Digitaal Vlaanderen</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://aphia.org/resource/organisation/dv</IRI>
+        <IRI>https://data.vlaanderen.be/id/organisatie/OVO002949</IRI>
         <Literal xml:lang="en">Digital Flanders</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:name"/>
-        <IRI>https://aphia.org/resource/organisation/dv</IRI>
+        <IRI>https://data.vlaanderen.be/id/organisatie/OVO002949</IRI>
         <Literal xml:lang="nl">Digitaal Vlaanderen</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:name"/>
-        <IRI>https://aphia.org/resource/organisation/dv</IRI>
+        <IRI>https://data.vlaanderen.be/id/organisatie/OVO002949</IRI>
         <Literal xml:lang="en">Digital Flanders</Literal>
     </AnnotationAssertion>
 </Ontology>

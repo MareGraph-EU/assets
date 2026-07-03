@@ -13,7 +13,7 @@
     <owl:Ontology rdf:about="https://aphia.org/ns/media">
         <owl:versionIRI rdf:resource="https://aphia.org/ns/media/0.2"/>
         <owl:imports rdf:resource="https://aphia.org/ns/top-level"/>
-        <dct:creator rdf:resource="https://aphia.org/resource/organisation/dv"/>
+        <dct:creator rdf:resource="https://data.vlaanderen.be/id/organisatie/OVO002949"/>
         <dct:creator rdf:resource="https://ror.org/0496vr396"/>
         <dct:creator rdf:resource="https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab"/>
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-30</dct:issued>
@@ -362,9 +362,9 @@
     
 
 
-    <!-- https://aphia.org/resource/organisation/dv -->
+    <!-- https://data.vlaanderen.be/id/organisatie/OVO002949 -->
 
-    <owl:NamedIndividual rdf:about="https://aphia.org/resource/organisation/dv">
+    <owl:NamedIndividual rdf:about="https://data.vlaanderen.be/id/organisatie/OVO002949">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
         <rdfs:label xml:lang="nl">Digitaal Vlaanderen</rdfs:label>
         <rdfs:label xml:lang="en">Digital Flanders</rdfs:label>

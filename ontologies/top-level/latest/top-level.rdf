@@ -11,7 +11,7 @@
     <owl:Ontology rdf:about="https://aphia.org/ns/top-level">
         <owl:versionIRI rdf:resource="https://aphia.org/ns/top-level/0.3"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/d0.owl"/>
-        <dct:creator rdf:resource="https://aphia.org/resource/organisation/dv"/>
+        <dct:creator rdf:resource="https://data.vlaanderen.be/id/organisatie/OVO002949"/>
         <dct:creator rdf:resource="https://ror.org/0496vr396"/>
         <dct:creator rdf:resource="https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab"/>
         <dct:description xml:lang="nl">Dit is de overkoepelende ontologie van het APHIA-netwerk van ontologieën dat wordt gebruikt om alle elementen van het netwerk af te stemmen op basisbegrippen. Het importeert DUL - Dolce Ultra light en D0 bekende basisontologieën.</dct:description>
@@ -584,9 +584,9 @@
 
 
 
-    <!-- https://aphia.org/resource/organisation/dv -->
+    <!-- https://data.vlaanderen.be/id/organisatie/OVO002949 -->
 
-    <owl:NamedIndividual rdf:about="https://aphia.org/resource/organisation/dv">
+    <owl:NamedIndividual rdf:about="https://data.vlaanderen.be/id/organisatie/OVO002949">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
         <rdfs:label xml:lang="nl">Digitaal Vlaanderen</rdfs:label>
         <rdfs:label xml:lang="en">Digital Flanders</rdfs:label>
