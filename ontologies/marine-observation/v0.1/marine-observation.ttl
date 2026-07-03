@@ -47,7 +47,7 @@
 #################################################################
 
 ###  http://purl.obolibrary.org/obo/ENVO_01000739
-<http://purl.obolibrary.org/obo/ENVO_01000739> rdf:type owl:AnnotationProperty .
+#<http://purl.obolibrary.org/obo/ENVO_01000739> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/creator
@@ -87,8 +87,8 @@ skos:usageNote rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/ns/prov#wasDerivedFrom
-prov:wasDerivedFrom rdf:type owl:AnnotationProperty ;
-                    <http://purl.obolibrary.org/obo/ENVO_01000739>  .
+prov:wasDerivedFrom rdf:type owl:AnnotationProperty .
+                    #<http://purl.obolibrary.org/obo/ENVO_01000739>  .
 
 
 ###  http://www.w3.org/ns/prov#wasInfluencedBy

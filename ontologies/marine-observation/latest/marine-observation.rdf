@@ -58,8 +58,9 @@
 
 
     <!-- http://purl.obolibrary.org/obo/ENVO_01000739 -->
-
+    <!--
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ENVO_01000739"/>
+    -->
 
 
 
